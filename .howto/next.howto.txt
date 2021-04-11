@@ -1,0 +1,121 @@
+src: https://www.youtube.com/watch?v=Ke90Tje7VS0
+
+install VSCode extensions:
+simple react snippets
+prettier
+
+//install react:
+//npm install -g create-react-app
+
+
+//create app:
+//create-react-app website
+
+//run app:
+//cd website
+//npm start
+
+
+//deploy:
+//src: https://create-react-app.dev/docs/deployment/
+//install:
+//npm install -g serve
+
+//run deployed:
+//npm run build
+//serve -s build -l 80
+
+
+
+src: 
+install next:
+npx create-next-app website
+
+src: https://flaviocopes.com/nextjs-change-app-port/
+in package.json:
+replace: next dev for: next dev -p 80
+
+run app:
+cd website
+npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
