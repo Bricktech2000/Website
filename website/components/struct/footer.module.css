@@ -1,0 +1,38 @@
+.Footer {
+  width: 100%;
+  height: auto;
+  padding: calc(var(--smart-unit) * 5);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  color: var(--text);
+  font-size: min(calc(var(--smart-res-unit) * 1.75), 4vw);
+  text-align: center;
+  word-wrap: break-word;
+}
+.Footer div * {
+  display: inline-block;
+}
+.Footer div.hr {
+  padding-bottom: calc(var(--smart-unit) * 2.5);
+  width: calc(var(--smart-res-unit) * 30);
+  max-width: 75vw;
+  border-top: calc(var(--smart-unit) * 0.5) solid var(--card2-bg);
+  height: calc(var(--smart-unit) * 0.5);
+}
+.Footer div .copy {
+  font-family: sans-serif;
+}
+/*
+https://css-tricks.com/almanac/properties/f/fill/
+https://stackoverflow.com/questions/39743161/svg-fill-color-not-working
+https://stackoverflow.com/questions/28652648/how-to-use-external-svg-in-html
+yeah just using reUpdate's `yield include`
+*/
+.Footer div svg {
+  fill: var(--color);
+  margin-bottom: -0.1em;
+  height: 0.75em;
+  width: auto;
+}

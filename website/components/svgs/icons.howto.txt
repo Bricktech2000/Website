@@ -1,0 +1,9 @@
+src: https://www.flaticon.com/packs/font-awesome
+make collection of 50
+download
+unzip
+
+
+
+
+
