@@ -50,17 +50,25 @@ class Nav extends Component {
 
   render() {
     var Logo2 = React.forwardRef(({ onClick, href }, ref) => (
-      <a href={href} onClick={onClick} className="lg-hover">
+      <a href={href} onClick={onClick} className={'lg-hover'}>
         <Logo />
       </a>
     ));
     var Posts2 = React.forwardRef(({ onClick, href }, ref) => (
-      <a href={href} onClick={onClick}>
+      <a
+        href={href}
+        onClick={onClick}
+        className={this.props.highlight == 'posts' ? styles['svg-on'] : ''}
+      >
         <Posts />
       </a>
     ));
     var Search2 = React.forwardRef(({ onClick, href }, ref) => (
-      <a href={href} onClick={onClick}>
+      <a
+        href={href}
+        onClick={onClick}
+        className={this.props.highlight == 'search' ? styles['svg-on'] : ''}
+      >
         <Search />
       </a>
     ));

@@ -9,7 +9,8 @@ import Footer from '../components/struct/footer';
 export default function Home() {
   return (
     <App>
-      <Nav />
+      <Nav highlight="search" />
+      <h1 style={{ padding: 'calc(var(--smart-unit) * 5)' }}>Search</h1>
       {/*<Aside />
       <Main />
       <Footer />*/}
