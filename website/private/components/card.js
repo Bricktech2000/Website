@@ -33,7 +33,7 @@ class Card extends Component {
       </a>
     ));
     return (
-      <Link href={'/' + this.props.id}>
+      <Link href={'/' + this.props.info.id}>
         <Card2 />
       </Link>
       /*<<

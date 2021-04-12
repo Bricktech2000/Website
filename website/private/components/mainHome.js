@@ -11,7 +11,7 @@ class MainHome extends Component {
         [[Subscribe]]
         <br />
         [[Card]]
-        <Card id="search" info={getPostInfo('search')} />
+        <Card info={getPostInfo('00000')} />
         <br />
         <br />
         <h1 className="markup-h1">Projects to Try</h1>
