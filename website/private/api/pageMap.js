@@ -7,4 +7,5 @@ export default [
   'Neumorphic-Design',
   'TPU-Phone-Stand',
   'DBLess-Password-Manager',
+  'Messenger-Always-Active',
 ];

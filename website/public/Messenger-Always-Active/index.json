@@ -1,0 +1,18 @@
+{
+  "title": "Messenger Always Active",
+  "date": "2021-01-05",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "Python",
+    "Git",
+    "Web",
+    "Hacking"
+  ],
+  "btns": {
+    "Demo": "#demo",
+    "Github": ":https://github.com/Bricktech2000/Messenger-Always-Active"
+  },
+  "desc": "A simple bot to keep your Messenger activity status to <i>Active</i> all the time. Writing about how I got the idea to make such a program, and how it works."
+}
