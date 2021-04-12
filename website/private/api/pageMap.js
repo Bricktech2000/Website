@@ -8,4 +8,5 @@ export default [
   'TPU-Phone-Stand',
   'DBLess-Password-Manager',
   'Messenger-Always-Active',
+  'WebInfo',
 ];

@@ -1,0 +1,19 @@
+{
+  "title": "WebInfo",
+  "date": "2020-12-06",
+  "tags": [
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "Git",
+    "NodeJS",
+    "Web",
+    "Hacking"
+  ],
+  "btns": {
+    "Github": ":https://github.com/Bricktech2000/WebInfo",
+    "Demo": "#demo"
+  },
+  "desc": "A program to steal user information through a simple link. Telling you about what got me into making such a powerful program and showing you what information it is able to steal!"
+}
