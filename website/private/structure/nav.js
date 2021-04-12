@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import redirect from '../redirect';
 import Link from 'next/link';
 
 import styles from './nav.module.css';

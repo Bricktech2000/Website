@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import App from '../components/struct/app';
-import Nav from '../components/struct/nav';
-import Aside from '../components/struct/aside';
-import Main from '../components/struct/main';
-import Footer from '../components/struct/footer';
+import App from '../private/structure/app';
+import Nav from '../private/structure/nav';
+import Aside from '../private/structure/aside';
+import Main from '../private/structure/main';
+import Footer from '../private/structure/footer';
 
 export default function Home() {
   return (

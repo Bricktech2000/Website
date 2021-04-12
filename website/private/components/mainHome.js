@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './card';
-import getPageInfo from '../pages/api/getPageInfo';
+import getPostInfo from '../../pages/api/getPostInfo';
 
 class MainHome extends Component {
   state = {};
@@ -11,7 +11,7 @@ class MainHome extends Component {
         [[Subscribe]]
         <br />
         [[Card]]
-        <Card id="search" info={getPageInfo('search')} />
+        <Card id="search" info={getPostInfo('search')} />
         <br />
         <br />
         <h1 className="markup-h1">Projects to Try</h1>

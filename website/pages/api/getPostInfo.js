@@ -1,4 +1,5 @@
-export default function getPageInfo(id) {
+export default function getPostInfo(id) {
+  fetch('../../components/posts/');
   return {
     id: id,
     title: '[[TITLE]]',
