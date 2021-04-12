@@ -18,7 +18,6 @@ class Card extends Component {
   }
 
   render() {
-    console.log(this.props.dir);
     this.direction = this.props.dir ? 'row' : 'col';
     if (this.state.id === undefined) return '';
 

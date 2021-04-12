@@ -3,9 +3,8 @@ import Link from 'next/link';
 
 import styles from './button.module.css';
 
-class Button extends Component {
-  state = {};
-  getIcon = () => {
+var Button = (props) => {
+  var getIcon = () => {
     var icons = {
       'Try it!': '018-gamepad',
       Code: '047-coding',
@@ -21,10 +20,10 @@ class Button extends Component {
       Previous: '012-arrow-2',
     };
     for (var icon of Object.keys(icons))
-      if (this.props.label.includes(icon)) return icons[icon];
+      if (props.label.includes(icon)) return icons[icon];
   };
 
-  render() {
+  var render = () => {
     var Html2 = React.forwardRef(({ onClick, href }, ref) => (
       <a
         className={styles['button-container'] + ' lg-hover'}
@@ -35,22 +34,31 @@ class Button extends Component {
           className={
             styles.button +
             ' ' +
-            (this.props.href.startsWith('#') ? 'button-on' : '')
+            (props.href.includes('/#') ? styles['button-on'] : '')
           }
         >
-          {this.props.label}
+          {props.label}
         </div>
       </a>
     ));
-    if (this.props.href.startsWith(':')) {
-      //return this.props.href.replace(/^:/, '') target="_blank" rel="noreferrer";
+    if (props.href.includes('/:')) {
+      return (
+        <a
+          href={props.href.replaceAll('/:', '/')}
+          target="_blank"
+          rel="noreferer"
+        >
+          <Html2 />
+        </a>
+      );
     }
     return (
-      <Link href={this.props.href}>
+      <Link href={props.href}>
         <Html2 />
       </Link>
     );
-  }
-}
+  };
+  return render();
+};
 
 export default Button;

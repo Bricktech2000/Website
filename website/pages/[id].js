@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { useRouter } from 'next/router';
+import getPostInfo from './api/getPostInfo';
 
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
@@ -8,10 +10,16 @@ import Main from '../private/structure/main';
 import MainPost from '../private/components/mainPost';
 import Footer from '../private/structure/footer';
 
-export default function Post() {
+var Post = () => {
+  var router = useRouter();
+  var { id } = router.query;
+
+  //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
+  if (router.asPath === router.route) return '';
+
   return (
     <App>
-      <HeaderPost />
+      <HeaderPost info={getPostInfo(id)} />
       <Nav />
       <Aside />
       <Main>
@@ -20,4 +28,6 @@ export default function Post() {
       <Footer />
     </App>
   );
-}
+};
+
+export default Post;

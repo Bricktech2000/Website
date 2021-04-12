@@ -13,10 +13,10 @@ class MainHome extends Component {
         <br />
         [[Card]]
         <MosaicSmall>
-          <Card info={getPostInfo('TEMPL')} />
-          <Card info={getPostInfo('TEMPL')} />
-          <Card info={getPostInfo('TEMPL')} />
-          <Card info={getPostInfo('TEMPL')} />
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
         </MosaicSmall>
         <br />
         <br />
