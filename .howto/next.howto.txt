@@ -31,14 +31,24 @@ src:
 install next:
 npx create-next-app website
 
+change port:
 src: https://flaviocopes.com/nextjs-change-app-port/
 in package.json:
 replace: next dev for: next dev -p 80
 
+allow for svg imports:
+src: https://medium.com/frontend-digest/how-to-import-svgs-into-nextjs-8ec6100e613f
+create `next.config.js` file and copy code from src above
+install webpack:
+src: https://www.npmjs.com/package/@svgr/webpack
+npm install @svgr/webpack --save-dev
+to prevent removing "viewBox" attribute:
+src: https://github.com/gregberge/svgr/issues/142
+copy code from src above into `next.config.js` file
+
 run app:
 cd website
 npm run dev
-
 
 
 
