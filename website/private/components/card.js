@@ -18,25 +18,28 @@ class Card extends Component {
       //return ...;
     }
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
-      <a
-        className={styles.card + ' ' + styles.nor + ' ' + styles.row}
-        style={{ width: '30%' }}
-        href={href}
-        onClick={onClick}
-      >
-        <img src={'/' + this.state.id + '/thumbnail.jpg'} alt="" />
-        <div
-          className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
+      <React.Fragment>
+        <a
+          className={styles.card + ' ' + styles.nor + ' ' + styles.row}
+          style={{ width: '30%' }}
+          href={href}
+          onClick={onClick}
         >
-          {this.state.title}
-        </div>
-        <div className={styles.desc}>{this.state.desc}</div>
-        <div className={styles.tags}>
-          {this.state.tags.map((tag) => (
-            <Tag key={tag} label={tag} type={'auto'} mini={true} />
-          ))}
-        </div>
-      </a>
+          <img src={'/' + this.state.id + '/index.jpg'} alt="" />
+          <div
+            className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
+          >
+            {this.state.title}
+          </div>
+          <div className={styles.desc}>{this.state.desc}</div>
+          <div className={styles.tags}>
+            {this.state.tags.map((tag) => (
+              <Tag key={tag} label={tag} mini={true} />
+            ))}
+          </div>
+        </a>
+        <Tag key={'Try it Now'} label={'Try it Now'} mini={false} />
+      </React.Fragment>
     ));
     return (
       <Link href={'/' + this.state.id}>
