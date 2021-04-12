@@ -24,11 +24,12 @@ var Button = (props) => {
   };
 
   var render = () => {
-    var Html2 = React.forwardRef(({ onClick, href }, ref) => (
+    var Html2 = React.forwardRef((props2, ref) => (
       <a
         className={styles['button-container'] + ' lg-hover'}
-        href={href}
-        onClick={onClick}
+        href={props2.href}
+        onClick={props2.onClick}
+        {...props2}
       >
         <div
           className={
@@ -41,16 +42,13 @@ var Button = (props) => {
         </div>
       </a>
     ));
+
     if (props.href.includes('/:')) {
-      return (
-        <a
-          href={props.href.replace(/\/:/g, '/')}
-          target="_blank"
-          rel="noreferer"
-        >
-          <Html2 />
-        </a>
-      );
+      return React.cloneElement(<Html2 />, {
+        href: props.href.replace(/\/:/g, '/'),
+        target: '_blank',
+        rel: 'noreferer',
+      });
     }
     return (
       <Link href={props.href}>
