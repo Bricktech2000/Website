@@ -3,4 +3,5 @@ export default [
   'Notification-System',
   '3D-Printed-Tools',
   'FPV-Drone-HD-Footage',
+  'Beetleweight-Combat-Robot',
 ];
