@@ -10,7 +10,7 @@ import tagNameMap from '../api/tagNameMap';
 class MainPosts extends Component {
   state = {};
 
-  async componentDidMount() {
+  async shouldComponentUpdate() {
     this.setState({
       ids: await DatabaseSearch({
         opr: 'or',
@@ -19,13 +19,17 @@ class MainPosts extends Component {
         max: 1000,
       }),
     });
+    return true;
   }
 
   render() {
     if (this.state.ids === undefined) return <Loading height="1000vh" />;
+
     return (
       <React.Fragment>
-        <h1 className="markup-h1">{tagNameMap[this.props.tag] || 'All Projects'}</h1>
+        <h1 className="markup-h1">
+          {tagNameMap[this.props.tag] || 'All Projects'}
+        </h1>
         <TagList actives={[this.props.tag]} />
         <MosaicFull>
           {this.state.ids.map((id, i) => (
