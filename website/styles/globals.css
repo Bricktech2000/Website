@@ -15,7 +15,7 @@
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
   --lg: linear-gradient(-45deg, var(--color-l), var(--color));
   --lg-d: linear-gradient(-45deg, var(--color), var(--color-d));
-  --vh: 1.1vh;
+  --vh: 1vh;
 }
 :root {
   --smart-res-unit: calc(
