@@ -7,7 +7,7 @@ import HeaderPost from '../private/structure/headerPost';
 import Nav from '../private/structure/nav';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
-import MainPost from '../private/components/mainPost';
+import MainPost from '../private/structure/mainPost';
 import Footer from '../private/structure/footer';
 
 var Post = () => {
@@ -23,7 +23,7 @@ var Post = () => {
       <Nav />
       <Aside />
       <Main>
-        <MainPost />
+        <MainPost id={id} />
       </Main>
       <Footer />
     </App>
