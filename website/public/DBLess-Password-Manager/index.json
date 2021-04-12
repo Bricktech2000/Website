@@ -1,0 +1,18 @@
+{
+  "title": "DBLess Password Manager",
+  "date": "2021-01-20",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "Python",
+    "Git",
+    "Web",
+    "Hacking"
+  ],
+  "btns": {
+    "Try it!": "#try",
+    "Github": ":https://github.com/Bricktech2000/DBLess-Password-Manager"
+  },
+  "desc": "A hash-based, database-less password manager. Writing about how I got the idea to make this PoC, and how it works!"
+}

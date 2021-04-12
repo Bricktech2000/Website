@@ -6,4 +6,5 @@ export default [
   'Beetleweight-Combat-Robot',
   'Neumorphic-Design',
   'TPU-Phone-Stand',
+  'DBLess-Password-Manager',
 ];
