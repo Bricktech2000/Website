@@ -1,8 +1,8 @@
 export default {
     'Try it Now': 'Projects to Try',
     'Blog': 'Blog Posts',
-    'Showcase': '',
-    'Work in Progress': '',
+    'Showcase': 'Showcase Posts',
+    'Work in Progress': 'Work in Progress Posts',
     'Software': 'Software Projects',
     'Hardware': 'Hardware Projects',
     'JavaScript': 'JavaScript Projects',
