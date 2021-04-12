@@ -12,9 +12,9 @@ import MainPost from '../private/structure/mainPost';
 import MainPosts from '../private/structure/mainPosts';
 import Footer from '../private/structure/footer';
 
-var Post = () => {
+var Post = (props) => {
   var router = useRouter();
-  var { id } = router.query;
+  var { id } = router.query || props;
 
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
   if (router.asPath === router.route) return '';
@@ -43,5 +43,14 @@ var Post = () => {
     </App>
   );
 };
+
+export async function getServerSideProps(context) {
+  var { id } = context.params;
+  return {
+    props: {
+      id: id,
+    },
+  };
+}
 
 export default Post;

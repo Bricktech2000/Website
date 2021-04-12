@@ -1,5 +1,4 @@
 export default async function getPostInfo(id) {
-  var res = await fetch('/' + id + '/index.json');
-  var info = await res.json();
+  var info = await (await fetch('/' + id + '/index.json')).json();
   return { id: id, ...info };
 }
