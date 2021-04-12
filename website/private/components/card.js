@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useEffect, useState } from 'react';
 import Tag from './tag';
 import Link from 'next/link';
 
@@ -7,7 +8,12 @@ import styles from './card.module.css';
 class Card extends Component {
   state = {};
 
+  async componentDidMount() {
+    this.setState(await this.props.info);
+  }
+
   render() {
+    if (this.state.id === undefined) return '';
     if (this.props.empty) {
       //return ...;
     }
@@ -18,22 +24,22 @@ class Card extends Component {
         href={href}
         onClick={onClick}
       >
-        <img src={'/' + this.props.info.id + '/thumbnail.jpg'} alt="" />
+        <img src={'/' + this.state.id + '/thumbnail.jpg'} alt="" />
         <div
           className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
         >
-          {this.props.info.title}
+          {this.state.title}
         </div>
-        <div className={styles.desc}>{this.props.info.desc}</div>
+        <div className={styles.desc}>{this.state.desc}</div>
         <div className={styles.tags}>
-          {this.props.info.tags.map((tag) => (
+          {this.state.tags.map((tag) => (
             <Tag key={tag} label={tag} type={'auto'} mini={true} />
           ))}
         </div>
       </a>
     ));
     return (
-      <Link href={'/' + this.props.info.id}>
+      <Link href={'/' + this.state.id}>
         <Card2 />
       </Link>
       /*<<
