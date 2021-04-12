@@ -29,7 +29,7 @@ class MosaicSmall extends Component {
       );
 
     return (
-      <div className={styles.mosaic}>
+      <div className={styles.MosaicSmall}>
         <div>{func(0, 2)}</div>
         <div>{func(2, 4)}</div>
       </div>

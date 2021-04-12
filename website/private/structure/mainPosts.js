@@ -3,6 +3,7 @@ import DatabaseSearch from '../api/databaseSearch';
 import TagList from '../components/tagList';
 import Loading from '../components/loading';
 import Card from '../components/card';
+import MosaicFull from '../components/mosaicFull';
 import getPostInfo from '../../pages/api/getPostInfo';
 
 class MainPosts extends Component {
@@ -20,14 +21,28 @@ class MainPosts extends Component {
   }
 
   render() {
-    if (this.state.ids === undefined) return <Loading height="500vh" />;
+    if (this.state.ids === undefined) return <Loading height="1000vh" />;
     return (
       <React.Fragment>
         <h1 className="markup-h1">All Projects</h1>
         <TagList actives={[this.props.tag]} />
-        {this.state.ids.map((id, i) => (
-          <Card key={i} info={getPostInfo(id)} />
-        ))}
+        <MosaicFull>
+          {this.state.ids
+            .map((id, i) => <Card key={i} info={getPostInfo(id)} />)
+            .concat([
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+              <Card info={getPostInfo('Template')} />,
+            ])}
+        </MosaicFull>
       </React.Fragment>
     );
   }
