@@ -1,0 +1,31 @@
+.button-container {
+  display: inline-block;
+  color: var(--title);
+  margin: calc(var(--smart-unit) * 0.5);
+  padding: calc(var(--smart-unit) * 0.5);
+  border-radius: 100vh; /* let's gooooo */
+  box-shadow: var(--bs);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 3);
+  border-radius: inherit;
+}
+.button {
+  background: var(--bg);
+}
+.button-on {
+  background: transparent;
+}
+.button svg {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  margin: calc(var(--smart-res-unit) * 0.5);
+  margin-left: calc(var(--smart-res-unit) * 1);
+  fill: var(--title) !important;
+}
