@@ -1,4 +1,6 @@
 .Main {
+  grid-area: main;
+
   overflow-x: hidden;
   padding: calc(var(--smart-unit) * 5);
   min-height: 50vh;

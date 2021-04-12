@@ -1,4 +1,5 @@
 .Header {
+  grid-area: header;
   /*opacity: 0;
   transition: opacity 0.25s ease-in-out;*/
 }

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import HTML from '../svgs/015-logo.svg';
 import Code from '../svgs/047-coding.svg';
-import './footer.module.css';
+import styles from './footer.module.css';
 
 class Footer extends Component {
   state = {};
   render() {
     return (
-      <footer className="Footer">
+      <footer className={styles.Footer}>
         <div className="hr"></div>
         <div>
           Icons made by{' '}

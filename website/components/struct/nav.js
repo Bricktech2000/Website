@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import redirect from '../redirect';
 
-import './nav.module.css';
+import styles from './nav.module.css';
 //https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
 import Logo from '../svgs/logo.svg';
 import Posts from '../svgs/007-order.svg';
@@ -49,7 +49,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="Nav">
+      <nav className={styles.Nav}>
         <a href="/" onClick={redirect} className="lg-hover">
           <Logo />
         </a>

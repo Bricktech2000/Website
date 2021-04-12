@@ -1,4 +1,6 @@
 .Footer {
+  grid-area: footer;
+
   width: 100%;
   height: auto;
   padding: calc(var(--smart-unit) * 5);

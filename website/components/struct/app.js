@@ -6,13 +6,13 @@ import Aside from './aside';
 import Main from './main';
 import Footer from './footer';
 
-import './app.module.css';
+import styles from './app.module.css';
 
 class App extends Component {
   state = {};
   render() {
     return (
-      <div className="App">
+      <div className={styles.App}>
         <Header />
         <Nav />
         <Aside />

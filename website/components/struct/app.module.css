@@ -10,21 +10,6 @@
     'nav main aside'
     'nav footer aside';
 }
-.App .Header {
-  grid-area: header;
-}
-.App .Nav {
-  grid-area: nav;
-}
-.App .Aside {
-  grid-area: aside;
-}
-.App .Main {
-  grid-area: main;
-}
-.App .Footer {
-  grid-area: footer;
-}
 
 @media (max-aspect-ratio: 1/1) {
   .App {
