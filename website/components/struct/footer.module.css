@@ -9,7 +9,7 @@
   grid-template-rows: auto auto auto;
   justify-items: center;
   color: var(--text);
-  font-size: min(calc(var(--smart-res-unit) * 1.75), 4vw);
+  font-size: min(calc(var(--smart-res-unit) * 1.25), 4vw);
   text-align: center;
   word-wrap: break-word;
 }
@@ -18,9 +18,9 @@
 }
 .Footer div.hr {
   padding-bottom: calc(var(--smart-unit) * 2.5);
-  width: calc(var(--smart-res-unit) * 30);
+  width: calc(var(--smart-res-unit) * 25);
   max-width: 75vw;
-  border-top: calc(var(--smart-unit) * 0.5) solid var(--card2-bg);
+  border-top: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
   height: calc(var(--smart-unit) * 0.5);
 }
 .Footer div .copy {
