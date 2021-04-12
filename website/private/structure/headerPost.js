@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tag from '../components/tag';
 import Button from '../components/button';
+import Loading from '../components/loading';
 
 import styles from './headerPost.module.css';
 
@@ -12,7 +13,12 @@ class HeaderPost extends Component {
   }
 
   render() {
-    if (this.state.id === undefined) return '';
+    if (this.state.id === undefined)
+      return (
+        <header className={styles.Header}>
+          <Loading />
+        </header>
+      );
 
     return (
       <header className={styles.Header}>

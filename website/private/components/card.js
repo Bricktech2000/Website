@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { useEffect, useState } from 'react';
 import Tag from './tag';
+import Loading from './loading';
 import Link from 'next/link';
 
 import styles from './card.module.css';
@@ -19,7 +19,7 @@ class Card extends Component {
 
   render() {
     this.direction = this.props.dir ? 'row' : 'col';
-    if (this.state.id === undefined) return '';
+    if (this.state.id === undefined) return <Loading />;
 
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
       <React.Fragment>
