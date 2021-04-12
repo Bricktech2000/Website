@@ -1,1 +1,5 @@
-export default ['Template', 'Google-Calendar-Automation'];
+export default [
+  'Template',
+  'Google-Calendar-Automation',
+  'Notification-System',
+];
