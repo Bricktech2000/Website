@@ -27,21 +27,9 @@ class MainPosts extends Component {
         <h1 className="markup-h1">All Projects</h1>
         <TagList actives={[this.props.tag]} />
         <MosaicFull>
-          {this.state.ids
-            .map((id, i) => <Card key={i} info={getPostInfo(id)} />)
-            .concat([
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-              <Card info={getPostInfo('Template')} />,
-            ])}
+          {this.state.ids.map((id, i) => (
+            <Card key={i} info={getPostInfo(id)} />
+          ))}
         </MosaicFull>
       </React.Fragment>
     );
