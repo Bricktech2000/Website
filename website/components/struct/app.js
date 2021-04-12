@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
 
-import Header from './header';
-import Nav from './nav';
-import Aside from './aside';
-import Main from './main';
-import Footer from './footer';
-
 import styles from './app.module.css';
 
 class App extends Component {
@@ -47,13 +41,7 @@ class App extends Component {
           {/* End Global site tag */}
           <script>{/*console.log('Google Test 0.16');*/}</script>
         </Head>
-        <div className={styles.App}>
-          <Header />
-          <Nav />
-          <Aside />
-          <Main />
-          <Footer />
-        </div>
+        <div className={styles.App}>{this.props.children}</div>
       </React.Fragment>
     );
   }

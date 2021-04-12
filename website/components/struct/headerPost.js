@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import styles from './header.module.css';
+import styles from './headerPost.module.css';
 
-class Header extends Component {
+class HeaderPost extends Component {
   state = {};
   render() {
     return (
@@ -15,4 +15,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default HeaderPost;

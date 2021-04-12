@@ -1,0 +1,92 @@
+.Header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns:
+    min(100%, calc(var(--smart-res-unit) * 35)) calc(var(--smart-res-unit) * 15)
+    1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'container gradient gradient'
+    'button    gradient gradient';
+  width: min(100%, calc(var(--smart-res-unit) * 100));
+  padding: calc(var(--smart-unit) * 5);
+  margin: auto;
+  margin-bottom: calc(var(--smart-res-unit) * 10);
+  color: var(--text);
+}
+.Header .container {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  width: 100%;
+  padding: calc(var(--smart-res-unit) * 3);
+  text-shadow: 0 0 calc(var(--smart-unit) * 5) var(--bg);
+}
+.Header .markup-h1 {
+  width: 100%;
+  margin: 0;
+  font-size: min(22.5vw, calc(var(--smart-res-unit) * 7.5));
+  font-weight: 500;
+  line-height: 1;
+  color: var(--title);
+  word-wrap: break-word;
+}
+.Header .author {
+  width: 100%;
+}
+.Header .desc {
+  width: 100%;
+  padding: calc(var(--smart-res-unit) * 2) 0;
+  color: var(--title);
+}
+.Header .author,
+.Header .desc {
+  font-size: calc(var(--smart-res-unit) * 1.75);
+  padding-left: calc(var(--smart-res-unit) * 0.5);
+}
+.Header .button-container {
+  justify-self: baseline;
+}
+@keyframes header-gradient {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.Header .header-gradient {
+  grid-area: gradient;
+  border-radius: calc(var(--smart-unit) * 2.5);
+  box-shadow: var(--bs), var(--bs);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-d),
+    var(--color-h),
+    var(--color-d)
+  );
+  background-size: 200%;
+  /*animation: header-gradient 10s infinite steps(50);*/
+}
+@media (max-aspect-ratio: 1/1) {
+  .Header {
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      calc(var(--smart-res-unit) * 25) calc(var(--smart-res-unit) * 7.5)
+      auto;
+    grid-template-areas:
+      'gradient'
+      'gradient'
+      'button';
+    padding-left: calc(var(--smart-unit) * 2);
+    padding-right: calc(var(--smart-unit) * 2);
+    margin: 0;
+  }
+  .Header .container {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+  }
+}
