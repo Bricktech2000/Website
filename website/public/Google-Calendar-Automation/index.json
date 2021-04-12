@@ -1,0 +1,11 @@
+{
+  "title": "Google Calendar Automation",
+  "date": "2021-03-30",
+  "tags": ["Try it Now", "Showcase", "Software", "Python", "Git", "Web"],
+  "btns": {
+    "Demo Video": "#demo",
+    "Try it!": "#try",
+    "Github": ":https://github.com/Bricktech2000/Google-Calendar-Automation"
+  },
+  "desc": "A program that color-codes tasks and assignments according to their priority. Talking about how I improved my time management, and how you can too!"
+}
