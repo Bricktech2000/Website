@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            max-height: 99999999999999999px;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: var(--transition);
+        }
+        ::placeholder{
+            color: var(--neutral);
+            transition: var(--transition);
+        }
+        ::selection{
+            background: rgba(128, 128, 128, .25);
+        }
+        ::-webkit-scrollbar{
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            border-radius: 100vh;
+            background: var(--neutral);
+            transition: var(--transition);
+        }
+        ::-webkit-scrollbar-corner{
+            background: var(--bg);
+            transition: var(--transition);
+        }
+        ::-webkit-scrollbar-button{
+            display: none;
+        }
+        body{
+            background: var(--bg);
+            color: #888;
+            /*https://en.wikipedia.org/wiki/List_of_monospaced_typefaces*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+        }
+        /*https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+        .in, .out{
+            color: inherit;
+            background: var(--bg);
+            font-family: inherit;
+            border-radius: 100vh;
+        }
+        /*click, .focus, .hover{ transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out, transform .1s ease-in-out; }*/
+        .click{ cursor: pointer; }
+          .in.hover:hover, .in.focus:focus{ background: var(--in-hover); }
+        .range:hover::-webkit-slider-thumb, .out.hover:hover, .out.focus:focus{ background: var(--out-hover); transition: var(--transition); }
+        .out{ box-shadow: -3px -3px 4px var(--shadow-1), 3px 3px 4px var(--shadow-2); }
+         .in{ box-shadow: -2px -2px 3px var(--shadow-1) inset, 2px 2px 3px var(--shadow-2) inset; }
+        .out.click.clicked{ box-shadow: -2px -2px 3px var(--shadow-1), 2px 2px 3px var(--shadow-2); transition: none; transform: scale(.99); }
+         .in.click.clicked{ box-shadow: -3px -3px 4px var(--shadow-1) inset, 3px 3px 4px var(--shadow-2) inset; transition: none; transform: scale(.99); }
+              .toggle.on .out{ box-shadow: 3px 3px 4px var(--shadow-2); }
+        /*.toggle.on .out:hover{ box-shadow: 2px 2px 3px var(--shadow-2); }*/
+        
+        .button{
+            text-transform: inherit;
+            display: inline-block;
+            -webkit-appearance: none;
+            border: none;
+            height: 40px;
+            width: auto;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+        /*https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
+        .range{
+            display: inline-block;
+            -webkit-appearance: none;
+            width: 200px;
+            height: 30px;
+            margin: 20px 10px;
+        }
+        .range::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            background: var(--bg);
+            /*cursor: pointer;*/
+            width: 40px;
+            height: 40px;
+            border-radius: 100vh;
+            transition: var(--transition);
+        }
+        .range.in::-webkit-slider-thumb{
+            box-shadow: -3px -3px 6px var(--shadow-1), 3px 3px 6px var(--shadow-2);
+        }
+        .range::-webkit-slider-thumb:active{ box-shadow: -2px -2px 3px var(--shadow-1), 2px 2px 3px var(--shadow-2); }
+        .round{
+            display: inline-block;
+            -webkit-appearance: none;
+            vertical-align: top;
+            border: none;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .round > .round{
+            background: var(--bg);
+        }
+        .round.in > .round{
+            width: calc(3px * 2 + 100%);
+            height: calc(3px * 2 + 100%);
+            padding: 2px 7px;
+            margin: -3px;
+        }
+        .round.out > .round{
+            width: calc(5px * 2 + 100%);
+            height: calc(5px * 2 + 100%);
+            padding: 5px 10px;
+            margin: -5px;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+            fill: #888;
+        }
+        .bar{
+            display: inline-block;
+            height: 30px;
+            width: 300px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .bar .progress{
+            height: 100%;
+            width: 75%;
+            border-radius: 100vh;
+            background: var(--neutral);
+        }
+        .container{
+            display: inline-block;
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            text-transform: inherit;
+            overflow-x: hidden;
+        }
+        .demo-container{
+            width: 600px;
+            height: 250px;
+            padding: 0;
+        }
+        .demo-scroll-container{
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+        }
+        .demo-scroll{
+            display: inline-block;
+            height: 0;
+            width: 1000px;
+        }
+        font, label, h1, h4{
+            display: inline-block;
+            vertical-align: top;
+            height: 40px;
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+        }
+        h1, h4{
+            height: auto;
+        }
+        /*https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+        input[type=checkbox] ~ span, input[type=radio] ~ span{
+            display: inline-block;
+            vertical-align: top;
+            width: 30px;
+            height: 30px;
+            margin: -7.5px 10px;
+            margin-left: -15px;
+            padding: 5px;
+            transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out, transform .2s ease-in-out;
+            /*transition: var(--transition);*/
+        }
+        input[type=checkbox], input[type=radio]{
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+        input[type=checkbox] ~ span::before, input[type=radio] ~ span::before{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100vh;
+            background: transparent;
+            transition: var(--transition);
+        }
+        input[type=checkbox]:checked ~ span::before, input[type=radio]:checked ~ span::before{
+            background: var(--neutral);
+        }
+        input[type=checkbox]:hover ~ span.in, input[type=radio]:hover ~ span.in{
+            background: var(--in-hover);
+        }
+        input[type=checkbox]:checked:hover ~ span.in, input[type=radio]:checked:hover ~ span.in{
+            background: transparent;
+        }
+        input[type=checkbox]:hover ~ span.out, input[type=radio]:hover ~ span.out{
+            background: var(--out-hover);
+        }
+        .toggle{
+            display: inline-block;
+            text-transform: inherit;
+            height: 30px;
+            width: 60px;
+            padding: 0;
+            margin: 15px 10px;
+            /*cursor: pointer;*/
+            transition: padding-left .1s ease-in-out, box-shadow .2s ease-in-out, background-color .2s ease-in-out, transform .2s ease-in-out;
+            /*transition: var(--transition);*/
+        }
+        .toggle.on{
+            padding-left: 30px;
+            background: var(--neutral);
+        }
+        .toggle.on:hover{
+            background: var(--neutral-hover);
+        }
+        .toggle .thumb{
+            width: 30px;
+            height: 30px;
+            background: var(--bg);
+        }
+        .input{
+            text-transform: inherit;
+            display: inline-block;
+            -webkit-appearance: none;
+            border: none;
+            height: 40px;
+            width: auto;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            var toggles = document.querySelectorAll('.toggle');
+            for(var toggle of toggles){
+                toggle.addEventListener('click', function(){
+                    this.classList.toggle('on');
+                });
+            }
+            var buttons = document.querySelectorAll('.click');
+            for(var button of buttons){
+                button.addEventListener('click', function(){
+                    this.classList.add('clicked');
+                    setTimeout(() => this.classList.remove('clicked'), .1 * 1000);
+                });
+            }
+            window.switchColor();
+        });
+        window.switchColor = () => {
+            /*https://neumorphism.io/#e0e0e0*/
+            var themes = [
+                {
+                    'bg': '#eee',
+                    'hover': '#e8e8eb',
+                    'shadow-1': '#fff',
+                    'shadow-2': '#b0b0b0',
+                    'in-hover': '#e8e8e8',
+                    'out-hover': '#f4f4f4',
+                    'neutral': '#dddde2',
+                    'neutral-hover': '#d8d8e0',
+                },
+                /*{
+                    'bg': '#111',
+                    'hover': '#171714',
+                    'shadow-1': '#222',
+                    'shadow-2': '#000000',
+                    'in-hover': '#171717',
+                    'out-hover': '#0b0b0b',
+                    'neutral': '#22221d',
+                    'neutral-hover': '#27271f',
+                },*/
+                {
+                    'bg': '#111',
+                    'hover': '#141417',
+                    'shadow-2': '#000000',
+                    'shadow-1': '#222',
+                    'out-hover': '#171717',
+                    'in-hover': '#0b0b0b',
+                    'neutral': '#1d1d22',
+                    'neutral-hover': '#1f1f27',
+                },
+            ];
+            var theme = themes[this.theme ? 1 : 0];
+            for(var color in theme) document.documentElement.style.setProperty('--' + color, theme[color]);
+            this.theme = !this.theme;
+            const transition = 'box-shadow .2s ease-in-out, background-color .2s ease-in-out, transform .2s ease-in-out';
+            requestAnimationFrame(() => document.documentElement.style.setProperty('--transition', transition) );
+        }
+    </script>
+</head>
+<body>
+    <h1>Neumorphism</h1>
+    <button class="out button hover" style="margin-top: 17px;" onclick="window.switchColor()">Change Theme</button><br>
+
+    <button class="in button click hover">
+        button
+    </button>
+    <button class="out button click hover">
+        button
+    </button><br>
+
+    <input type="range" class="in range" value="25">
+    <!-- https://www.flaticon.com/free-icon/home_1946436?term=house&page=1&position=4&page=1&position=4&related_id=1946436&origin=tag -->
+    <div class="in round click hover">
+        <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m498.195312 222.695312c-.011718-.011718-.023437-.023437-.035156-.035156l-208.855468-208.847656c-8.902344-8.90625-20.738282-13.8125-33.328126-13.8125-12.589843 0-24.425781 4.902344-33.332031 13.808594l-208.746093 208.742187c-.070313.070313-.140626.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.445312 13.238281 31.277344 13.746093.480468.046876.964843.070313 1.453124.070313h8.324219v153.699219c0 30.414062 24.746094 55.160156 55.167969 55.160156h81.710938c8.28125 0 15-6.714844 15-15v-120.5c0-13.878906 11.289062-25.167969 25.167968-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969v120.5c0 8.285156 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.160156v-153.699219h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.808594 18.359375-18.371093 18.367187-48.253906.023437-66.636719zm0 0"/></svg>
+    </div>
+    <div class="out round click hover">
+        <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m498.195312 222.695312c-.011718-.011718-.023437-.023437-.035156-.035156l-208.855468-208.847656c-8.902344-8.90625-20.738282-13.8125-33.328126-13.8125-12.589843 0-24.425781 4.902344-33.332031 13.808594l-208.746093 208.742187c-.070313.070313-.140626.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.445312 13.238281 31.277344 13.746093.480468.046876.964843.070313 1.453124.070313h8.324219v153.699219c0 30.414062 24.746094 55.160156 55.167969 55.160156h81.710938c8.28125 0 15-6.714844 15-15v-120.5c0-13.878906 11.289062-25.167969 25.167968-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969v120.5c0 8.285156 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.160156v-153.699219h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.808594 18.359375-18.371093 18.367187-48.253906.023437-66.636719zm0 0"/></svg>
+    </div><br>
+
+    <div class="in bar">
+        <div class="progress">
+        </div>
+    </div>
+    <div class="out bar">
+        <div class="progress">
+        </div>
+    </div><br>
+
+    <div class="in container demo-container">
+        <div class="demo-scroll-container">
+            <div class="demo-scroll"></div>
+            <h4>container</h4><br>
+            <div style="display: inline-block; width: auto; vertical-align: top; margin-right: 50px;">
+                <div class="in toggle hover">
+                    <div class="thumb out"></div>
+                </div>
+                <div class="in round click hover">
+                    <div class="out round">
+                        s
+                    </div>
+                </div><br>
+                <div class="in on toggle hover">
+                    <div class="thumb out"></div>
+                </div>
+                <div class="out round click hover">
+                    <div class="in round">
+                        s
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: inline-block; width: auto;">
+                <label>
+                    <input type="checkbox" checked>
+                    <span class="in"></span>
+                    check 1
+                </label><br>
+                <label>
+                    <input type="checkbox">
+                    <span class="in"></span>
+                    check 2
+                </label>
+            </div>
+            <div style="display: inline-block; width: auto;">
+                <label>
+                    <input type="radio" name="radio" checked>
+                    <span class="out"></span>
+                    choice 1
+                </label><br>
+                <label>
+                    <input type="radio" name="radio">
+                    <span class="out"></span>
+                    choice 2
+                </label>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="out container">
+        <h4>form</h4>
+        <form action="" onsubmit="event.preventDefault()">
+            <input type="text" class="in input focus"><br>
+            <input type="password" class="in input focus" placeholder="password">
+            <!--<button class="out button click hover" style="padding: 0;">
+                <div style="border: 5px solid var(--neutral); border-radius: 100vh; display: inline-block; width: calc(100% - 10px); height: calc(100% - 10px); padding: 5px 20px; margin: 5px; background: var(--neutral); border: none;">
+                    <h4 style="margin-top: -8px;">go</h4>
+                </div>
+            </button>-->
+            <input type="submit" class="out button click hover">
+        </form>
+    </div>
+</body>
+</html>

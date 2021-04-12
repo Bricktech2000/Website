@@ -4,4 +4,5 @@ export default [
   '3D-Printed-Tools',
   'FPV-Drone-HD-Footage',
   'Beetleweight-Combat-Robot',
+  'Neumorphic-Design',
 ];
