@@ -25,7 +25,7 @@
     calc(100vw / var(--item-count)),
     calc(100vh / var(--item-count))
   );
-  padding: calc(calc(var(--smart-res-unit) * 7.5) * 20 / 100);
+  padding: calc(calc(var(--smart-res-unit) * 7.5) * 25 / 100);
   transition: background 0.125s ease, transform 0.125s ease;
 }
 .Nav a:nth-of-type(1) {
