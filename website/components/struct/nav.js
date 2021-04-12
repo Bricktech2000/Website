@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import redirect from '../redirect';
+import Link from 'next/link';
 
 import styles from './nav.module.css';
 //https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
@@ -48,17 +49,33 @@ class Nav extends Component {
   };
 
   render() {
+    var Logo2 = React.forwardRef(({ onClick, href }, ref) => (
+      <a href={href} onClick={onClick} className="lg-hover">
+        <Logo />
+      </a>
+    ));
+    var Posts2 = React.forwardRef(({ onClick, href }, ref) => (
+      <a href={href} onClick={onClick}>
+        <Posts />
+      </a>
+    ));
+    var Search2 = React.forwardRef(({ onClick, href }, ref) => (
+      <a href={href} onClick={onClick}>
+        <Search />
+      </a>
+    ));
     return (
+      //https://nextjs.org/docs/api-reference/next/link
       <nav className={styles.Nav}>
-        <a href="/" onClick={redirect} className="lg-hover">
-          <Logo />
-        </a>
-        <a href="/posts/" onClick={redirect}>
-          <Posts />
-        </a>
-        <a href="/search/" onClick={redirect}>
-          <Search />
-        </a>
+        <Link href="/">
+          <Logo2 />
+        </Link>
+        <Link href="/posts">
+          <Posts2 />
+        </Link>
+        <Link href="/search">
+          <Search2 />
+        </Link>
         <a
           href="https://github.com/Bricktech2000/Website"
           target="_blank"
@@ -66,7 +83,7 @@ class Nav extends Component {
         >
           <Github />
         </a>
-        <a href="/" onClick={/*this.changeTheme*/ null}>
+        <a href="/" onClick={this.changeTheme}>
           <Theme />
         </a>
       </nav>
