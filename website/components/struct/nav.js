@@ -57,31 +57,7 @@ class Nav extends Component {
     var Posts2 = React.forwardRef(({ onClick, href }, ref) => (
       <a
         href={href}
-        onClick={(e, ...args) => {
-          function cloneEvent(e) {
-            function ClonedEvent() {}
-            let clone = new ClonedEvent();
-            for (let p in e) {
-              let d = Object.getOwnPropertyDescriptor(e, p);
-              if (
-                d &&
-                (!d.writable ||
-                  !d.configurable ||
-                  !d.enumerable ||
-                  d.get ||
-                  d.set)
-              ) {
-                Object.defineProperty(clone, p, d);
-              } else {
-                clone[p] = e[p];
-              }
-            }
-            Object.setPrototypeOf(clone, e);
-            return clone;
-          }
-          window.scrollTo(0, 0);
-          setTimeout(onClick, 150, cloneEvent(e), ...args);
-        }}
+        onClick={onClick}
         className={this.props.highlight == 'posts' ? styles['svg-on'] : ''}
       >
         <Posts />
