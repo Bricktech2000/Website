@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Card from './card';
+import Card from '../components/card';
+import MosaicSmall from '../components/mosaicSmall';
 import getPostInfo from '../../pages/api/getPostInfo';
 
 class MainHome extends Component {
@@ -11,7 +12,12 @@ class MainHome extends Component {
         [[Subscribe]]
         <br />
         [[Card]]
-        <Card info={getPostInfo('TEMPL')} />
+        <MosaicSmall>
+          <Card info={getPostInfo('TEMPL')} />
+          <Card info={getPostInfo('TEMPL')} />
+          <Card info={getPostInfo('TEMPL')} />
+          <Card info={getPostInfo('TEMPL')} />
+        </MosaicSmall>
         <br />
         <br />
         <h1 className="markup-h1">Projects to Try</h1>

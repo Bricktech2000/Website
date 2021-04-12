@@ -8,20 +8,30 @@ import styles from './card.module.css';
 class Card extends Component {
   state = {};
 
+  constructor() {
+    super();
+    this.inverted = Math.random() > 0.5 ? 'inv' : 'nor';
+  }
+
   async componentDidMount() {
     this.setState(await this.props.info);
   }
 
   render() {
+    console.log(this.props.dir);
+    this.direction = this.props.dir ? 'row' : 'col';
     if (this.state.id === undefined) return '';
-    if (this.props.empty) {
-      //return ...;
-    }
+
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
       <React.Fragment>
         <a
-          className={styles.card + ' ' + styles.nor + ' ' + styles.row}
-          style={{ width: '30%' }}
+          className={
+            styles.card +
+            ' ' +
+            styles[this.inverted] +
+            ' ' +
+            styles[this.direction]
+          }
           href={href}
           onClick={onClick}
         >
@@ -38,32 +48,12 @@ class Card extends Component {
             ))}
           </div>
         </a>
-        <Tag key={'Try it Now'} label={'Try it Now'} mini={false} />
       </React.Fragment>
     ));
     return (
       <Link href={'/' + this.state.id}>
         <Card2 />
       </Link>
-      /*<<
-              if(<<<yield vars.empty>>>) return;
-              var card = document.querySelector('.card-<<<yield vars.id>>>');
-              var func = () => {
-                if(!document.body.contains(card)){
-                  window.removeEventListener('resize', func);
-                  return;
-                }
-                var forcePortrait = window.matchMedia('(max-aspect-ratio: 8/7)').matches;
-                var dir = forcePortrait ? 'row' : <<<yield JSON.stringify(params.dir)>>>;
-                var inv = <<<yield JSON.stringify(params.inv)>>> ? 'inv' : 'nor';
-                card.classList.remove('row');
-                card.classList.remove('col');
-                card.classList.add(dir);
-                card.classList.add(inv);
-              }
-              func();
-              window.addEventListener('resize', func);
-            >>*/
     );
   }
 }
