@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Offset Generator</title>
+</head>
+<body>
+    <p>music file:</p>
+    <input type="file" id="fileInput">
+    <p>bpm:</p>
+    <input type="number" id="bpmInput" value="60">
+    <p>beat count:</p>
+    <input type="number" id="beatCountInput" value="8">
+    <p>main ear:</p>
+    <input type="radio" name="radioInput" id="leftRadioInput">
+    <label for="leftRadioInput">left </label>
+    <input type="radio" name="radioInput" id="rightRadioInput" checked>
+    <label for="rightRadioInput">right</label>
+    <p>low and high volumes:</p>
+    <input type="number" id="lowVolumeInput" value="1.0">
+    <input type="number" id="highVolumeInput" value="1.0">
+    <p>delay:</p>
+    <input type="number" id="delayInput" value="5">
+    <br><br>
+    <input type="submit" id="playButton" value="play">
+    <input type="button" id="stopButton" value="stop">
+    <script>
+        var inputs= ['fileInput', 'playButton', 'stopButton', 'rightRadioInput', 'bpmInput', 'beatCountInput', 'lowVolumeInput', 'highVolumeInput', 'delayInput'];
+        inputs = inputs.reduce((acc, input) => { acc[input] = document.getElementById(input); return acc; }, {});
+        
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var file, audios = [null, null];
+        var sleep = ms => new Promise(res => setTimeout(res, ms));
+        var getElementFLoatValue = element => { return parseFloat(element.value); }
+
+        inputs.fileInput.onchange = e => {
+            file = e.target.files[0];
+            inputs.fileInput.value = null;
+        }
+        inputs.playButton.onclick = async () => {
+            await sleep(getElementFLoatValue(inputs.delayInput) * 1000);
+            var volumes = [getElementFLoatValue(inputs.lowVolumeInput), getElementFLoatValue(inputs.highVolumeInput)];
+            audios[0] = getAudio(file, volumes[!inputs.rightRadioInput.checked + 0], 0);
+            audios[1] = getAudio(file, volumes[ inputs.rightRadioInput.checked + 0], 1);
+            if(!rightRadioInput.checked) [audios[0], audios[1]] = [audios[1], audios[0]];
+            var t = getElementFLoatValue(inputs.beatCountInput)/ (getElementFLoatValue(inputs.bpmInput) / 60);
+            audios[0].play();
+            await sleep(t * 1000);
+            audios[1].play();
+        }
+        inputs.stopButton.onclick = async() => {
+            for(var audio of audios) audio.pause();
+        }
+        function getAudio(file, volume, channel = null){
+            //https://stackoverflow.com/questions/21474378/how-to-convert-mono-audio-to-stereo-audio-using-web-audio-api
+            var audio = document.createElement('audio');
+            audio.src = URL.createObjectURL(file);
+            audio.volume = volume;
+            audio.load();
+            if(channel != null){
+                var source = ctx.createMediaElementSource(audio);
+                var splitter = ctx.createChannelSplitter();
+                var merger = ctx.createChannelMerger();
+                source.connect(splitter);
+                splitter.connect(merger, 0, channel);
+                splitter.connect(merger, 1, channel);
+                merger.connect(ctx.destination);
+            }
+            return audio;
+        }
+    </script>
+</body>
+</html>
