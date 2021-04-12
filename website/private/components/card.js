@@ -8,17 +8,13 @@ import styles from './card.module.css';
 class Card extends Component {
   state = {};
 
-  constructor() {
-    super();
-    this.inverted = Math.random() > 0.5 ? 'inv' : 'nor';
-  }
-
   async componentDidMount() {
     this.setState(await this.props.info);
   }
 
   render() {
     this.direction = this.props.dir ? 'row' : 'col';
+    this.inverted = this.props.inv ? 'inv' : 'nor';
     if (this.state.id === undefined) return <Loading height="100vh" />;
 
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
