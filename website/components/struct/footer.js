@@ -9,7 +9,7 @@ class Footer extends Component {
   render() {
     return (
       <footer className={styles.Footer}>
-        <div className="hr"></div>
+        <div className={styles.hr}></div>
         <div>
           Icons made by{' '}
           <a
