@@ -12,7 +12,8 @@
 .button {
   display: flex;
   align-items: center;
-  padding: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 3);
+  padding: calc(var(--smart-unit) * 1) calc(var(--smart-unit) * 4);
+  font-size: calc(var(--smart-res-unit) * 1.25);
   border-radius: inherit;
 }
 .button {
