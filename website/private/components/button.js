@@ -44,7 +44,7 @@ var Button = (props) => {
     if (props.href.includes('/:')) {
       return (
         <a
-          href={props.href.replaceAll('/:', '/')}
+          href={props.href.replace(/\/:/g, '/')}
           target="_blank"
           rel="noreferer"
         >

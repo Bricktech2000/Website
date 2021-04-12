@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../components/card';
+import TagList from '../components/tagList';
 import MosaicSmall from '../components/mosaicSmall';
 import getPostInfo from '../../pages/api/getPostInfo';
 
@@ -11,7 +12,6 @@ class MainHome extends Component {
         <h1 className="markup-h1">Recent Projects</h1>
         [[Subscribe]]
         <br />
-        [[Card]]
         <MosaicSmall>
           <Card info={getPostInfo('Template')} />
           <Card info={getPostInfo('Template')} />
@@ -22,12 +22,17 @@ class MainHome extends Component {
         <br />
         <h1 className="markup-h1">Projects to Try</h1>
         <br />
-        [[Card]]
+        <MosaicSmall>
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
+          <Card info={getPostInfo('Template')} />
+        </MosaicSmall>
         <br />
         <br />
         <h1 className="markup-h1">Projects by Tag</h1>
         <br />
-        [[Tags]]
+        <TagList />
       </React.Fragment>
     );
   }

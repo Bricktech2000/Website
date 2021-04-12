@@ -40,9 +40,7 @@ class Tag extends Component {
     if (this.props.mini) {
       return tag;
     }
-    return (
-      <Link href={'/' + this.props.label.replaceAll(' ', '-')}>{tag}</Link>
-    );
+    return <Link href={'/' + this.props.label.replace(/ /g, '-')}>{tag}</Link>;
   }
 }
 

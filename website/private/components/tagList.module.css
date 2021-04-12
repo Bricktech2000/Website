@@ -1,0 +1,13 @@
+.TagList {
+  /*background: var(--card-bg);*/
+  margin: calc(var(--smart-unit) * 5) 7.5vw;
+  padding: calc(var(--smart-unit) * 2);
+  border-radius: calc(var(--smart-unit) * 0.5);
+  /*box-shadow: var(--bs);*/
+}
+@media (max-aspect-ratio: 1/1) {
+  .TagList {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

@@ -19,7 +19,7 @@ class Card extends Component {
 
   render() {
     this.direction = this.props.dir ? 'row' : 'col';
-    if (this.state.id === undefined) return <Loading />;
+    if (this.state.id === undefined) return <Loading height="100vh" />;
 
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
       <React.Fragment>
