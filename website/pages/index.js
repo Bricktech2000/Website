@@ -5,6 +5,7 @@ import HeaderHome from '../components/struct/headerHome';
 import Nav from '../components/struct/nav';
 import Aside from '../components/struct/aside';
 import Main from '../components/struct/main';
+import MainHome from '../components/mainHome';
 import Footer from '../components/struct/footer';
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
       <HeaderHome />
       <Nav />
       <Aside />
-      <Main />
+      <Main>
+        <MainHome />
+      </Main>
       <Footer />
     </App>
   );

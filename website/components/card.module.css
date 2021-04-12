@@ -1,0 +1,89 @@
+.card {
+  --padding: calc(var(--smart-unit) * 2.5);
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 0;
+  align-items: center;
+  position: relative;
+  top: 0;
+
+  background: var(--card-bg);
+  transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out,
+    top 0.25s ease-in-out;
+  border-radius: calc(var(--smart-unit) * 0.5);
+  text-decoration: none;
+  color: var(--text);
+  white-space: initial;
+  box-shadow: var(--bs);
+  cursor: pointer;
+  /*border: calc(var(--smart-unit) * .5) solid var(--text);*/
+}
+.card > * {
+  grid-column: span 2;
+  white-space: initial;
+  margin: var(--padding);
+}
+.date {
+  grid-column: span 1;
+}
+.card img {
+  margin: 0;
+  width: 100%;
+  border-radius: calc(var(--smart-unit) * 0.5);
+}
+.card img {
+  grid-area: img;
+  align-self: flex-start;
+}
+.title {
+  grid-area: title;
+}
+.desc {
+  grid-area: desc;
+}
+.tags {
+  grid-area: tags;
+  align-self: flex-end;
+}
+.card:hover .markup-h2 {
+  color: var(--color);
+}
+.card:hover {
+  top: calc(var(--smart-unit) * -1);
+}
+
+.card.row.nor {
+  grid-template-areas: 'img img img' 'title title title' 'desc desc desc' 'tags tags tags';
+}
+.card.row.inv {
+  grid-template-areas: 'title title title' 'desc desc desc' 'tags tags tags' 'img img img';
+}
+.card.col.nor {
+  grid-template-areas: 'img desc desc' 'img desc desc' 'img tags tags' 'title tags tags';
+}
+.card.col.inv {
+  grid-template-areas: 'desc desc img' 'desc desc img' 'tags tags img' 'tags tags title';
+}
+.card.row {
+  grid-row: span 2;
+}
+.card.col {
+  grid-column: span 2;
+}
+.card.row.inv img {
+  align-self: flex-end;
+}
+.card-empty {
+  grid-row: span 1;
+  grid-column: span 1;
+  padding: 0;
+  margin: 0;
+  padding-top: 100%;
+  background: var(--lg-d);
+  border-radius: calc(var(--smart-unit) * 2.5);
+}
+.card-empty:hover {
+  top: 0;
+  cursor: default;
+}
