@@ -5,4 +5,5 @@ export default [
   'FPV-Drone-HD-Footage',
   'Beetleweight-Combat-Robot',
   'Neumorphic-Design',
+  'TPU-Phone-Stand',
 ];
