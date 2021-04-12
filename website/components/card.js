@@ -6,19 +6,11 @@ import styles from './card.module.css';
 
 class Card extends Component {
   state = {};
-  getInfo = () => {
-    return {
-      title: '[[TITLE]]',
-      desc: '[[desc]]',
-      tags: ['t1', 't2', 't3'],
-    };
-  };
 
   render() {
     if (this.props.empty) {
       //return ...;
     }
-    var info = this.getInfo();
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
       <a
         className={styles.card + ' ' + styles.nor + ' ' + styles.row}
@@ -26,15 +18,15 @@ class Card extends Component {
         href={href}
         onClick={onClick}
       >
-        <img src={'/' + this.props.id + '/thumbnail.jpg'} alt="" />
+        <img src={'/' + this.props.info.id + '/thumbnail.jpg'} alt="" />
         <div
           className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
         >
-          {info.title}
+          {this.props.info.title}
         </div>
-        <div className={styles.desc}>{info.desc}</div>
+        <div className={styles.desc}>{this.props.info.desc}</div>
         <div className={styles.tags}>
-          {info.tags.map((tag) => (
+          {this.props.info.tags.map((tag) => (
             <Tag key={tag} label={tag} type={'auto'} mini={true} />
           ))}
         </div>
