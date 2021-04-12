@@ -39,7 +39,7 @@ class MainHome extends Component {
         <br />
         <MosaicSmall>
           {this.state.recentIds.map((id) => (
-            <Card info={getPostInfo(id)} />
+            <Card key={id} info={getPostInfo(id)} />
           ))}
         </MosaicSmall>
         <br />
@@ -48,7 +48,7 @@ class MainHome extends Component {
         <br />
         <MosaicSmall>
           {this.state.tryItNowIds.map((id) => (
-            <Card info={getPostInfo(id)} />
+            <Card key={id} info={getPostInfo(id)} />
           ))}
         </MosaicSmall>
         <br />
