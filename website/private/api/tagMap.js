@@ -1,6 +1,6 @@
 export default {
   'Try it Now': 'b',
-  '*Blog': 'b',
+  'Blog': 'b',
   'Showcase': 'b',
   'Work in Progress': 'b',
   'Software': 'b',

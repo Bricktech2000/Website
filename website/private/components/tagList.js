@@ -9,8 +9,17 @@ class TagList extends Component {
   render() {
     return (
       <div className={styles.TagList}>
+        <Tag
+          key={'All'}
+          label={'All'}
+          active={(this.props.actives || ['posts']).includes('posts')}
+        />
         {Object.keys(tagMap).map((label) => (
-          <Tag key={label} label={label} active={'off'} />
+          <Tag
+            key={label}
+            label={label}
+            active={(this.props.actives || []).includes(label)}
+          />
         ))}
       </div>
     );

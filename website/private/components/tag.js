@@ -19,6 +19,8 @@ class Tag extends Component {
           Software: 'on',
           Hardware: 'on',
         }[this.props.label] || 'off';
+    } else {
+      tagActive = tagActive ? 'on' : 'off';
     }
     var tagClassActive = styles[tagActive];
     var tag = (
@@ -40,7 +42,13 @@ class Tag extends Component {
     if (this.props.mini) {
       return tag;
     }
-    return <Link href={'/' + this.props.label.replace(/ /g, '-')}>{tag}</Link>;
+    return (
+      <Link
+        href={'/' + this.props.label.replace(/ /g, '-').replace('All', 'posts')}
+      >
+        {tag}
+      </Link>
+    );
   }
 }
 
