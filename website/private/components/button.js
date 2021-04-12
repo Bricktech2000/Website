@@ -35,7 +35,7 @@ var Button = (props) => {
           className={
             styles.button +
             ' ' +
-            (props.href.includes('/#') ? styles['button-on'] : '')
+            (props.href.includes('#') ? styles['button-on'] : '')
           }
         >
           {props.label}
@@ -43,9 +43,9 @@ var Button = (props) => {
       </a>
     ));
 
-    if (props.href.includes('/:')) {
+    if (props.blank) {
       return React.cloneElement(<Html2 />, {
-        href: props.href.replace(/\/:/g, '/'),
+        href: props.href,
         target: '_blank',
         rel: 'noreferer',
       });

@@ -33,13 +33,19 @@ class HeaderPost extends Component {
           ))}
         </div>
         <div className="btns">
-          {Object.keys(this.state.btns).map((key) => (
-            <Button
-              key={key}
-              label={key}
-              href={'/' + this.state.id + '/' + this.state.btns[key]}
-            />
-          ))}
+          {Object.keys(this.state.btns).map((key) => {
+            var href = this.state.btns[key].replace(/^:/, '');
+            return (
+              <Button
+                key={key}
+                label={key}
+                blank={this.state.btns[key].match(/^:/)}
+                href={
+                  href.match(/^[\.#]/) ? '/' + this.state.id + '/' + href : href
+                }
+              />
+            );
+          })}
         </div>
       </header>
     );
