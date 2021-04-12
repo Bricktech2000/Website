@@ -23,14 +23,7 @@ class MainPosts extends Component {
 
   //https://stackoverflow.com/questions/36486213/react-shouldcomponentupdate-is-called-even-when-props-or-state-for-that-compon
   shouldComponentUpdate(nextProps) {
-    console.log(
-      'shouldUpdate: ',
-      this.state.tag,
-      this.props.tag,
-      nextProps.tag
-    );
     if (this.state.tag !== nextProps.tag) {
-      console.log('fetch');
       this.fetchData();
       return false;
     }
@@ -38,9 +31,7 @@ class MainPosts extends Component {
   }
 
   render() {
-    console.log('render');
     if (this.state.ids === undefined) {
-      console.log('fetch');
       this.fetchData();
       return <Loading height="1000vh" />;
     }
