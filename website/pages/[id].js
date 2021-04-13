@@ -22,7 +22,7 @@ var Post = (props) => {
   if (TagMap[tag] || tag == 'posts')
     return (
       <App>
-        <Nav />
+        <Nav highlight={'posts'} id={id} />
         <Aside />
         <Main>
           <MainPosts tag={tag} />
@@ -34,7 +34,7 @@ var Post = (props) => {
   return (
     <App>
       <HeaderPost info={getPostInfo(id)} />
-      <Nav />
+      <Nav highlight={'post'} id={id} />
       <Aside />
       <Main>
         <MainPost id={id} />

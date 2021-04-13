@@ -71,6 +71,11 @@ class Nav extends Component {
         <Search />
       </a>
     ));
+    var Github2 = React.forwardRef(({ onClick, href }, ref) => (
+      <a href={href} onClick={onClick} className={styles['svg-on']}>
+        <Github />
+      </a>
+    ));
     return (
       //https://nextjs.org/docs/api-reference/next/link
       <nav className={styles.Nav}>
@@ -83,13 +88,19 @@ class Nav extends Component {
         <Link href="/search">
           <Search2 />
         </Link>
-        <a
-          href="https://github.com/Bricktech2000/Website"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Github />
-        </a>
+        {this.props.highlight == 'post' ? (
+          <Link href={'/' + this.props.id + '/'}>
+            <Github2 />
+          </Link>
+        ) : (
+          <a
+            href="https://github.com/Bricktech2000/Website"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github />
+          </a>
+        )}
         <a href="/" onClick={this.changeTheme}>
           <Theme />
         </a>
