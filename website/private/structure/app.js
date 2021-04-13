@@ -40,6 +40,7 @@ class App extends Component {
           </script>
           {/* End Global site tag */}
           <script>{/*console.log('Google Test 0.16');*/}</script>
+          <script src="/resize.js"></script>
         </Head>
         <div className={styles.App}>{this.props.children}</div>
       </React.Fragment>
