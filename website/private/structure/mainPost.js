@@ -3,15 +3,20 @@ import getPostInfo from '../../pages/api/getPostInfo';
 import databaseSearch from '../api/databaseSearch';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
+import Loading from '../components/loading';
 
 class MainPost extends Component {
-  state = {};
+  state = { id: null };
 
   async componentDidMount() {
+    this.componentDidUpdate();
+  }
+  async componentDidUpdate() {
+    if (this.state.id == this.props.id) return;
+    this.setState({ id: this.props.id });
+
     this.setState({
       text: await (await fetch('/' + this.props.id + '/index.md')).text(),
-    });
-    this.setState({
       ids: await databaseSearch({
         opr: 'like',
         tags: (await getPostInfo(this.props.id)).tags,
@@ -23,7 +28,7 @@ class MainPost extends Component {
 
   render() {
     if (this.state.text === undefined || this.state.ids === undefined)
-      return '';
+      return <Loading height="1000vh" />;
 
     return (
       <React.Fragment>

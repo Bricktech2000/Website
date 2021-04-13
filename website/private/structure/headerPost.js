@@ -6,9 +6,15 @@ import Loading from '../components/loading';
 import styles from './headerPost.module.css';
 
 class HeaderPost extends Component {
-  state = {};
+  state = { info: null };
 
   async componentDidMount() {
+    this.componentDidUpdate();
+  }
+
+  async componentDidUpdate() {
+    if (this.state.info == this.props.info) return;
+    this.setState({ info: this.props.info });
     this.setState(await this.props.info);
   }
 
