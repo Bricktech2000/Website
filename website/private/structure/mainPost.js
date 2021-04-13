@@ -5,6 +5,8 @@ import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
 import Loading from '../components/loading';
 
+import styles from './mainPost.module.css';
+
 class MainPost extends Component {
   state = { id: null };
 
@@ -31,10 +33,14 @@ class MainPost extends Component {
       return <Loading height="1000vh" />;
 
     //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
+    //https://marked.js.org/using_advanced
+    //https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown
+    //https://forum.freecodecamp.org/t/links-rendered-by-marked-js-open-in-new-tab-markdown-previewer-project/197250/4
+    //https://github.com/highlightjs/highlight.js/
     return (
       <React.Fragment>
         <p
-          className="marked"
+          className={styles['marked'] + ' marked'}
           dangerouslySetInnerHTML={{
             __html: marked(
               this.state.text.replace(
@@ -43,6 +49,23 @@ class MainPost extends Component {
               ),
               {
                 sanitize: false,
+                highlight: function (code, lang) {
+                  //const hljs = require('highlight.js');
+                  const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                  var va = hljs
+                    .highlight(
+                      code.replace(
+                        /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
+                        (a) => `~${a}~`
+                      ),
+                      { language }
+                    )
+                    .value.replace(
+                      /~([^~]{1,4})~/g,
+                      (a, b) => `<span class="hljs-operator">${b}</span>`
+                    );
+                  return va;
+                },
               }
             ).replace(/<a/g, '<a target="_blank rel="noreferer"'),
           }}

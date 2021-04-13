@@ -1,0 +1,102 @@
+.marked h2,
+.markup-h2 {
+  font-size: calc(var(--smart-res-unit) * 3);
+}
+.marked h1,
+.markup-h1 {
+  font-size: calc(var(--smart-res-unit) * 4.5);
+}
+.marked h1,
+.marked h2,
+.markup-h1,
+.markup-h2 {
+  color: var(--title);
+  font-weight: lighter;
+  margin-top: calc(var(--smart-unit) * 5);
+  margin-bottom: calc(var(--smart-unit) * 2);
+}
+.marked em {
+  font-style: italic;
+}
+.marked strong {
+  font-weight: bold;
+  color: var(--title);
+}
+.marked code,
+.marked pre code {
+  transition: background-color 0.25s ease-in-out;
+  font-family: monospace;
+  font-size: calc(var(--smart-res-unit) * 1.5);
+  background: var(--card-bg);
+  border-radius: calc(0.5 * var(--smart-unit));
+  box-shadow: var(--bs);
+}
+.marked code {
+  padding: calc(var(--vh) * 0.5) 0.5vw;
+  border-radius: calc(var(--smart-unit) * 0.5);
+}
+.marked pre code {
+  display: block;
+  padding: calc(2 * var(--smart-unit));
+  margin: calc(3 * var(--smart-unit)) 10%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.marked .hljs-keyword {
+  color: var(--color);
+  font-weight: bold;
+}
+.marked .hljs-operator,
+.marked .hljs-comment {
+  color: #555;
+  font-weight: bold;
+}
+.marked .hljs-attr,
+.marked .hljs-built_in {
+  font-weight: bold;
+}
+.marked .hljs-string,
+.marked .hljs-number {
+  color: var(--color);
+}
+.marked blockquote {
+  font-style: italic;
+  padding: calc(var(--vh) * 1) 2vw;
+  padding-left: 2.5vw;
+  border-left: 0.375vw solid var(--color);
+  margin: calc(3 * var(--smart-unit)) 10%;
+  box-shadow: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 0.5)
+    calc(var(--smart-unit) * 1) var(--black);
+}
+.marked a,
+.markup-link {
+  color: var(--color);
+  transition: color 0.125s ease-in-out;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(255, 143, 14, 0.25);
+}
+.marked a:hover,
+.markup-link:hover {
+  color: var(--title);
+}
+.marked a[name] {
+  pointer-events: none;
+  text-decoration: none;
+  position: relative;
+}
+@media (max-aspect-ratio: 1/1) {
+  .marked a[name] {
+    top: calc(var(--smart-unit) * -8);
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .marked pre code,
+  .marked blockquote {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .marked blockquote {
+    border-left-width: 0.5vw;
+  }
+}
