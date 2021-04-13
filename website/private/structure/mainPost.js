@@ -32,7 +32,10 @@ class MainPost extends Component {
 
     return (
       <React.Fragment>
-        <p className="">{this.state.text}</p>
+        <p
+          className="marked"
+          dangerouslySetInnerHTML={{ __html: marked(this.state.text) }}
+        ></p>
         <h1 className="markup-h1">Related Posts</h1>
         <br />
         <br />
