@@ -13,12 +13,14 @@ class TagList extends Component {
           key={'All'}
           label={'All'}
           active={(this.props.actives || ['posts']).includes('posts')}
+          scroll={this.props.scroll}
         />
         {Object.keys(tagMap).map((label) => (
           <Tag
             key={label}
             label={label}
             active={(this.props.actives || []).includes(label)}
+            scroll={this.props.scroll}
           />
         ))}
       </div>

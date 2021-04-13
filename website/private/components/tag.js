@@ -45,6 +45,7 @@ class Tag extends Component {
     return (
       <Link
         href={'/' + this.props.label.replace(/ /g, '-').replace('All', 'posts')}
+        scroll={this.props.scroll}
       >
         {tag}
       </Link>

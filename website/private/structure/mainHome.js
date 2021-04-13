@@ -55,7 +55,7 @@ class MainHome extends Component {
         <br />
         <h1 className="markup-h1">Projects by Tag</h1>
         <br />
-        <TagList />
+        <TagList scroll={true} />
       </React.Fragment>
     );
   }

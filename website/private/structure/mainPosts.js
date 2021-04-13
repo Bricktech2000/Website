@@ -41,7 +41,7 @@ class MainPosts extends Component {
         <h1 className="markup-h1">
           {tagNameMap[this.state.tag] || 'All Projects'}
         </h1>
-        <TagList actives={[this.state.tag]} />
+        <TagList actives={[this.state.tag]} scroll={false} />
         <MosaicFull>
           {this.state.ids.map((id, i) => (
             <Card key={id} info={getPostInfo(id)} />
