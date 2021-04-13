@@ -6,8 +6,8 @@ It is one of my friends who first got the idea for a notification system on my w
 
 ## Turning Notifications On
 
-It is very simple to activate notifications for this website. On the {home page: ../../}, under /Recent Projects/, there is a toggle called /Receive Notifications/. If you wish to receive a notification every time a new post is published, simply turn it on! As a bonus, here is a copy of this button if you do not fancy visiting the home page to do so:
-`<<<yield include('../../body/partial/subscribe.html')>>>`
+It is very simple to activate notifications for this website. On the [home page](../../), under _Recent Projects_, there is a toggle called _Receive Notifications_. If you wish to receive a notification every time a new post is published, simply turn it on! As a bonus, here is a copy of this button if you do not fancy visiting the home page to do so:
+TODO `<<<yield include('../../body/partial/subscribe.html')>>>`
 
 #code
 
@@ -23,8 +23,8 @@ service worker    ←    notification API
 
 First, the client makes an `HTTP POST` request to `/subscribe` in order to tell the server it wishes to receive notifications from my website. Then, the server receives said subscription and saves its data to a `JSON` file, which is used as a database. When the server wishes to send out a notification to the clients, it reads the list of subscriptions from disk, sends it to a [notification API](https://www.npmjs.com/package/web-push), which in turn sends it to the service worker registered on the client. The service worker finally shows a notification with the required title, description and icon using the following function:
 
-```
-self.addEventListener('push', event = > {
+```javascript
+self.addEventListener('push', (event) => {
   var data = event.data.json();
   self.registration.showNotification(data.title, data);
 });
@@ -32,11 +32,17 @@ self.addEventListener('push', event = > {
 
 For anyone interested, below is the code used to send a notification to the clients of the website. Once a a new post has been added to the website `pages != lastPages`, it requests all required information from the latest post `parsed[Object.keys(parsed)[0]]` and sends a new notification to every client in the notification database `consts.sendNotification({/*...*/})`.
 
-```
-if(pages != lastPages){
+```javascript
+if (pages != lastPages) {
   /*...*/
   var parsed = JSON.parse(pages);
-  var info = JSON.parse((await include('../../pages/' + parsed[Object.keys(parsed)[0]] + '/info.json')).text);
+  var info = JSON.parse(
+    (
+      await include(
+        '../../pages/' + parsed[Object.keys(parsed)[0]] + '/info.json'
+      )
+    ).text
+  );
   consts.sendNotification({
     title: 'New Post: ' + info.title,
     body: info.desc,
