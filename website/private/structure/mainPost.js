@@ -30,11 +30,22 @@ class MainPost extends Component {
     if (this.state.text === undefined || this.state.ids === undefined)
       return <Loading height="1000vh" />;
 
+    //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
     return (
       <React.Fragment>
         <p
           className="marked"
-          dangerouslySetInnerHTML={{ __html: marked(this.state.text) }}
+          dangerouslySetInnerHTML={{
+            __html: marked(
+              this.state.text.replace(
+                /#([^ #][^\n]+)/g,
+                (a, b) => `<a name="${b}"></a>`
+              ),
+              {
+                sanitize: false,
+              }
+            ).replace(/<a/g, '<a target="_blank rel="noreferer"'),
+          }}
         ></p>
         <h1 className="markup-h1">Related Posts</h1>
         <br />
