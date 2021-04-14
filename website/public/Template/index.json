@@ -25,6 +25,9 @@
     "Radio Controlled",
     "Tech"
   ],
-  "btns": { "Try it!": ":./Crash.js", "Code": "#code" },
+  "btns": {
+    "Github": ":https://github.com/Bricktech2000/Website",
+    "Code": "#code"
+  },
   "desc": "Desc."
 }
