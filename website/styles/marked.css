@@ -22,6 +22,9 @@
   font-weight: bold;
   color: var(--title);
 }
+.marked p {
+  margin: calc(2 * var(--smart-unit)) 0;
+}
 .marked code,
 .marked pre code {
   transition: background-color 0.25s ease-in-out;
@@ -89,12 +92,24 @@
     top: calc(var(--smart-unit) * -8);
   }
 }
+.marked img,
+.marked video {
+  display: block;
+  max-height: 100vh;
+  width: 100%;
+  padding: calc(3 * var(--smart-unit)) 10%;
+}
 
 @media (max-aspect-ratio: 1/1) {
   .marked pre code,
   .marked blockquote {
     margin-right: 0;
     margin-left: 0;
+  }
+  .marked img,
+  .marked video {
+    padding-right: 0;
+    padding-left: 0;
   }
   .marked blockquote {
     border-left-width: 0.5vw;

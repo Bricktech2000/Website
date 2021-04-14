@@ -44,8 +44,8 @@ class MainPost extends Component {
           dangerouslySetInnerHTML={{
             __html: marked(
               this.state.text.replace(
-                /#([^ #][^\n]+)/g,
-                (a, b) => `<a name="${b}"></a>`
+                /\n#([^ #][^\n]+)/g,
+                (a, b) => `\n<a name="${b}"></a>`
               ),
               {
                 sanitize: false,
@@ -67,7 +67,13 @@ class MainPost extends Component {
                   return va;
                 },
               }
-            ).replace(/<a/g, '<a target="_blank rel="noreferer"'),
+            )
+              .replace(/<a/g, '<a target="_blank rel="noreferer"')
+              .replace(
+                /<img src="(.*)" alt="video">/g,
+                (a, b) =>
+                  `<video autoplay muted loop><source src="${b}"></video>`
+              ),
           }}
         ></p>
         <h1 className="markup-h1">Related Posts</h1>
