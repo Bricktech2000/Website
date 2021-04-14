@@ -19,7 +19,7 @@
   font-style: italic;
 }
 .marked strong {
-  font-weight: bold;
+  font-weight: normal;
   color: var(--title);
 }
 .marked p {
