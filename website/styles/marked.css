@@ -43,6 +43,22 @@
   margin: calc(3 * var(--smart-unit)) 10%;
   box-shadow: var(--bs);
 }
+.marked table {
+  margin: calc(3 * var(--smart-unit)) 10%;
+}
+.marked table tbody tr {
+  display: flex;
+  flex-direction: row;
+}
+.marked table tr td {
+  display: block;
+  margin: calc(1 * var(--smart-unit));
+}
+.marked table tr td img,
+.marked table tr td iframe,
+.marked table tr td video {
+  padding: 0;
+}
 .marked code,
 .marked pre code {
   transition: background-color 0.25s ease-in-out;
@@ -125,7 +141,8 @@
 @media (max-aspect-ratio: 1/1) {
   .marked pre code,
   .marked blockquote,
-  .marked .iframe > * {
+  .marked .iframe > *,
+  .marked table {
     margin-right: 0;
     margin-left: 0;
   }
@@ -140,5 +157,8 @@
   }
   .marked blockquote {
     border-left-width: 0.5vw;
+  }
+  .marked table tbody tr {
+    flex-direction: column;
   }
 }
