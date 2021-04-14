@@ -14,18 +14,10 @@ Here are some images of the drone while I was building it:
 
 Here are some images of the drone in its fully built state:
 
-TODO <<<
-
-> var path = '/pages/98772/';
-> yield include('../../body/partial/mosaic/img.html', {
-> srcs: [
->
-> path + 'IMG_20201022_100526_7.min.jpg',
-> path + 'IMG_20201022_100533_4.min.jpg',
-> path + 'IMG_20201022_100537_8.min.jpg',
-> path + 'IMG_20201022_100546_8.min.jpg',
-> ]
-> })
+|                                    |                                    |
+| ---------------------------------- | ---------------------------------- |
+| ![](IMG_20201022_100526_7.min.jpg) | ![](IMG_20201022_100533_4.min.jpg) |
+| ![](IMG_20201022_100537_8.min.jpg) | ![](IMG_20201022_100546_8.min.jpg) |
 
 ## First Flights
 
