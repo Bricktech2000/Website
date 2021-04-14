@@ -46,18 +46,35 @@
 .marked table {
   margin: calc(3 * var(--smart-unit)) 10%;
 }
+.marked table thead {
+  display: block;
+  margin: 0 -10%;
+}
+.marked table thead tr {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(var(--smart-unit) * 30), 1fr)
+  );
+  grid-gap: calc(var(--smart-unit) * 2.5);
+  break-inside: avoid;
+}
 .marked table tbody tr {
   display: flex;
   flex-direction: row;
 }
-.marked table tr td {
+.marked table tbody td {
   display: block;
   margin: calc(1 * var(--smart-unit));
 }
-.marked table tr td img,
-.marked table tr td iframe,
-.marked table tr td video {
+.marked table img,
+.marked table iframe,
+.marked table video {
   padding: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
 }
 .marked code,
 .marked pre code {
