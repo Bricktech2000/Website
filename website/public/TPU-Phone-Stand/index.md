@@ -14,17 +14,10 @@ Here are some of its defining features:
 
 #img
 
-> TODO <<<
-> var path = '/pages/GX8AD/';
-> yield include('../../body/partial/mosaic/img.html', {
-> srcs: [
->
-> path + 'IMG_20210119_150916_5.min.jpg',
-> path + 'IMG_20210119_150856_0.min.jpg',
-> path + 'IMG_20210119_150836_3.min.jpg',
-> path + 'IMG_20210119_150812_9.min.jpg',
-> ]
-> })
+|                                    |                                    |
+| ---------------------------------- | ---------------------------------- |
+| ![](IMG_20210119_150916_5.min.jpg) | ![](IMG_20210119_150856_0.min.jpg) |
+| ![](IMG_20210119_150836_3.min.jpg) | ![](IMG_20210119_150812_9.min.jpg) |
 
 #settings
 
