@@ -73,6 +73,11 @@ class MainPost extends Component {
                 /<img src="(.*)" alt="video">/g,
                 (a, b) =>
                   `<video autoplay muted loop><source src="${b}"></video>`
+              )
+              .replace(
+                /<img src="(.*)" alt="youtube">/g,
+                (a, b) =>
+                  `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
               ),
           }}
         ></p>
