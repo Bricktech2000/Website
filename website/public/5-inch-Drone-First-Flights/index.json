@@ -1,0 +1,22 @@
+{
+  "title": "5-inch Drone First Flights",
+  "date": "2020-10-28",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": {
+    "Building Images": "#img",
+    "Flight Demo": "#demo",
+    "Previous Post": "../5-inch-Drone-Mockup/",
+    "Update Post": "../5-inch-Drone-Demo-on-6S/"
+  },
+  "desc": "Showing you images of the building process of my 5-inch drone, along with a demo of its power. Can't wait to try it out on 6S!"
+}

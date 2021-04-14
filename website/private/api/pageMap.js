@@ -9,4 +9,5 @@ export default [
   'DBLess-Password-Manager',
   'Messenger-Always-Active',
   'WebInfo',
+  '5-inch-Drone-First-Flights',
 ];
