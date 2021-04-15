@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
-import getPostInfo from './api/getPostInfo';
+//import getPostInfo from '../private/api/getPostInfo';
 import TagMap from '../private/api/tagMap';
 
 import App from '../private/structure/app';
@@ -22,7 +22,7 @@ var Post = (props) => {
   if (TagMap[tag] || tag == 'posts')
     return (
       <App>
-        <Nav highlight={'posts'} id={id} />
+        {<Nav highlight={'posts'} id={id} />}
         <Aside />
         <Main>
           <MainPosts tag={tag} />
@@ -34,7 +34,7 @@ var Post = (props) => {
   return (
     <App>
       <HeaderPost info={getPostInfo(id)} />
-      <Nav highlight={'post'} id={id} />
+      {<Nav highlight={'post'} id={id} />}
       <Aside />
       <Main>
         <MainPost id={id} />
@@ -44,13 +44,13 @@ var Post = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
+/*export async function getServerSideProps(context) {
   var { id } = context.params;
   return {
     props: {
       id: id,
     },
   };
-}
+}*/
 
 export default Post;

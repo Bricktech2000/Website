@@ -1,4 +1,16 @@
-export default async function getPostInfo(id) {
-  var info = await (await fetch('/' + id + '/index.json')).json();
-  return { id: id, ...info };
+//https://nextjs.org/docs/basic-features/data-fetching
+import { promises as fs } from 'fs';
+
+export default async function getPostInfo(req, res) {
+  //https://nextjs.org/docs/api-routes/dynamic-api-routes
+  //https://nextjs.org/docs/api-routes/response-helpers
+  var { ids } = JSON.parse(req.body);
+  var infos = {};
+  for (var id of ids) {
+    var info = JSON.parse(
+      await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
+    );
+    infos[id] = { id: id, ...info };
+  }
+  res.status(200).json(infos);
 }

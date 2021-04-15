@@ -3,35 +3,41 @@ import Card from '../components/card';
 import TagList from '../components/tagList';
 import MosaicSmall from '../components/mosaicSmall';
 import Loading from '../components/loading';
-import getPostInfo from '../../pages/api/getPostInfo';
+import getPostInfo from '../api/getPostInfo';
 import DatabaseSearch from '../api/databaseSearch';
 
 class MainHome extends Component {
   state = {};
 
   async componentDidMount() {
+    var recentIds = await DatabaseSearch({
+      opr: 'or',
+      tags: [],
+      excl: null,
+      max: 4,
+    });
+    var tryItNowIds = await DatabaseSearch({
+      opr: 'or',
+      tags: ['Try it Now'],
+      excl: null,
+      max: 4,
+    });
+
     this.setState({
-      recentIds: await DatabaseSearch({
-        opr: 'or',
-        tags: [],
-        excl: null,
-        max: 4,
-      }),
-      tryItNowIds: await DatabaseSearch({
-        opr: 'or',
-        tags: ['Try it Now'],
-        excl: null,
-        max: 4,
-      }),
+      recentIds: recentIds,
+      tryItNowIds: tryItNowIds,
+      postInfos: await getPostInfo(recentIds.concat(tryItNowIds)),
     });
   }
 
   render() {
     if (
       this.state.recentIds === undefined ||
-      this.state.tryItNowIds === undefined
+      this.state.tryItNowIds === undefined ||
+      this.state.postInfos === undefined
     )
       return <Loading height="400vh" />;
+
     return (
       <React.Fragment>
         <h1 className="markup-h1">Recent Projects</h1>
@@ -39,7 +45,7 @@ class MainHome extends Component {
         <br />
         <MosaicSmall>
           {this.state.recentIds.map((id) => (
-            <Card key={id} info={getPostInfo(id)} />
+            <Card key={id} info={this.state.postInfos[id]} />
           ))}
         </MosaicSmall>
         <br />
@@ -48,7 +54,7 @@ class MainHome extends Component {
         <br />
         <MosaicSmall>
           {this.state.tryItNowIds.map((id) => (
-            <Card key={id} info={getPostInfo(id)} />
+            <Card key={id} info={this.state.postInfos[id]} />
           ))}
         </MosaicSmall>
         <br />

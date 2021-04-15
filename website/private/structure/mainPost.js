@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getPostInfo from '../../pages/api/getPostInfo';
+import getPostInfo from '../api/getPostInfo';
 import databaseSearch from '../api/databaseSearch';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
