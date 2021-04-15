@@ -45,13 +45,13 @@ var Post = (props) => {
   );
 };
 
-/*export async function getServerSideProps(context) {
+export async function getServerSideProps(context) {
   var { id } = context.params;
   return {
     props: {
       id: id,
     },
   };
-}*/
+}
 
 export default Post;

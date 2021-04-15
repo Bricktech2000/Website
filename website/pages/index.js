@@ -21,3 +21,7 @@ export default function Home() {
     </App>
   );
 }
+
+export async function getStaticProps() {
+  return { props: {} };
+}
