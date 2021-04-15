@@ -6,9 +6,15 @@ import Link from 'next/link';
 import styles from './card.module.css';
 
 class Card extends Component {
-  state = {};
+  state = { info: null };
 
   async componentDidMount() {
+    this.componentDidUpdate();
+  }
+  async componentDidUpdate() {
+    if (this.state.info == this.props.info) return;
+    this.setState({ info: this.props.info });
+
     this.setState(await this.props.info);
   }
 
