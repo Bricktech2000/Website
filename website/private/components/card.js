@@ -32,7 +32,7 @@ class Card extends Component {
         var parentGridWidth = window
           .getComputedStyle(node.parentNode)
           .getPropertyValue('grid-template-columns')
-          .replace(' 0px', '')
+          .replace(/ ?0px ?/, '')
           .split(' ').length;
 
         if (this.lastParentGridWidth == parentGridWidth) return;
