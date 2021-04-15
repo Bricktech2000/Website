@@ -1,0 +1,34 @@
+.container {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  cursor: pointer;
+}
+.container p {
+  display: inline-block;
+  margin: calc(var(--smart-unit) * 2);
+}
+.toggle {
+  display: inline-block;
+  width: calc(var(--smart-unit) * 6);
+  height: calc(var(--smart-unit) * 3);
+  border-radius: 100vh;
+  background: var(--card2-bg);
+  box-shadow: var(--bs);
+  transition: background-color 0.125s ease-in-out;
+}
+.thumb {
+  display: inline-block;
+  width: calc(var(--smart-unit) * 3);
+  height: calc(var(--smart-unit) * 3);
+  border-radius: 100vh;
+  background: var(--title);
+  box-shadow: var(--bs);
+  transition: margin-left 0.125s ease-in-out;
+}
+.container.active .thumb {
+  margin-left: calc(var(--smart-unit) * 3);
+}
+.container.active .toggle {
+  background: var(--color-l);
+}
