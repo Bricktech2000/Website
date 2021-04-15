@@ -6,9 +6,7 @@ It is one of my friends who first got the idea for a notification system on my w
 
 ## Turning Notifications On
 
-It is very simple to activate notifications for this website. On the [home page](../../), under _Recent Projects_, there is a toggle called _Receive Notifications_. If you wish to receive a notification every time a new post is published, simply turn it on! As a bonus, here is a copy of this button if you do not fancy visiting the home page to do so:
-
-> TODO `<<<yield include('../../body/partial/subscribe.html')>>>`
+It is very simple to activate notifications for this website. On the [home page](../../), under _Recent Projects_, there is a toggle called _Receive Notifications_. If you wish to receive a notification every time a new post is published, simply turn it on!
 
 #code
 
