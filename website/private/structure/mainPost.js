@@ -17,19 +17,66 @@ class MainPost extends Component {
     if (this.state.id == this.props.id) return;
     this.setState({ id: this.props.id });
 
+    var ids = await databaseSearch({
+      opr: 'like',
+      tags: (await getPostInfo([this.props.id]))[this.props.id].tags,
+      excl: this.props.id,
+      max: 4,
+    });
     this.setState({
       text: await (await fetch('/' + this.props.id + '/index.md')).text(),
-      ids: await databaseSearch({
-        opr: 'like',
-        tags: (await getPostInfo(this.props.id)).tags,
-        excl: this.props.id,
-        max: 4,
-      }),
+      ids: ids,
+      postInfos: await getPostInfo(ids),
     });
   }
 
+  getMarkdown() {
+    return {
+      __html: marked(
+        this.state.text.replace(
+          /\n#([^ #][^\n]+)/g,
+          (a, b) => `\n<a name="${b}"></a>`
+        ),
+        {
+          sanitize: false,
+          highlight: function (code, lang) {
+            //const hljs = require('highlight.js');
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            var va = hljs
+              .highlight(
+                code.replace(
+                  /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
+                  (a) => `~${a}~`
+                ),
+                { language }
+              )
+              .value.replace(
+                /~([^~]{1,4})~/g,
+                (a, b) => `<span class="hljs-operator">${b}</span>`
+              );
+            return va;
+          },
+        }
+      )
+        .replace(/<a/g, '<a target="_blank rel="noreferer"')
+        .replace(
+          /<img src="(.*)" alt="video">/g,
+          (a, b) => `<video autoplay muted loop><source src="${b}"></video>`
+        )
+        .replace(
+          /<img src="(.*)" alt="youtube">/g,
+          (a, b) =>
+            `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+        ),
+    };
+  }
+
   render() {
-    if (this.state.text === undefined || this.state.ids === undefined)
+    if (
+      this.state.text === undefined ||
+      this.state.ids === undefined ||
+      this.state.postInfos === undefined
+    )
       return <Loading height="1000vh" />;
 
     //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
@@ -41,52 +88,14 @@ class MainPost extends Component {
       <React.Fragment>
         <p
           className={styles['marked'] + ' marked'}
-          dangerouslySetInnerHTML={{
-            __html: marked(
-              this.state.text.replace(
-                /\n#([^ #][^\n]+)/g,
-                (a, b) => `\n<a name="${b}"></a>`
-              ),
-              {
-                sanitize: false,
-                highlight: function (code, lang) {
-                  //const hljs = require('highlight.js');
-                  const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-                  var va = hljs
-                    .highlight(
-                      code.replace(
-                        /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
-                        (a) => `~${a}~`
-                      ),
-                      { language }
-                    )
-                    .value.replace(
-                      /~([^~]{1,4})~/g,
-                      (a, b) => `<span class="hljs-operator">${b}</span>`
-                    );
-                  return va;
-                },
-              }
-            )
-              .replace(/<a/g, '<a target="_blank rel="noreferer"')
-              .replace(
-                /<img src="(.*)" alt="video">/g,
-                (a, b) =>
-                  `<video autoplay muted loop><source src="${b}"></video>`
-              )
-              .replace(
-                /<img src="(.*)" alt="youtube">/g,
-                (a, b) =>
-                  `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
-              ),
-          }}
+          dangerouslySetInnerHTML={this.getMarkdown()}
         ></p>
         <h1 className="markup-h1">Related Posts</h1>
         <br />
         <br />
         <MosaicSmall>
           {this.state.ids.map((id) => (
-            <Card key={id} info={getPostInfo(id)} />
+            <Card key={id} info={this.state.postInfos[id]} />
           ))}
         </MosaicSmall>
       </React.Fragment>

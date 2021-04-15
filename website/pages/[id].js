@@ -11,6 +11,7 @@ import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
 import MainPosts from '../private/structure/mainPosts';
 import Footer from '../private/structure/footer';
+import getPostInfo from '../private/api/getPostInfo';
 
 var Post = (props) => {
   var router = useRouter();
@@ -22,7 +23,7 @@ var Post = (props) => {
   if (TagMap[tag] || tag == 'posts')
     return (
       <App>
-        {<Nav highlight={'posts'} id={id} />}
+        <Nav highlight={'posts'} id={id} />
         <Aside />
         <Main>
           <MainPosts tag={tag} />
@@ -33,8 +34,8 @@ var Post = (props) => {
 
   return (
     <App>
-      <HeaderPost info={getPostInfo(id)} />
-      {<Nav highlight={'post'} id={id} />}
+      <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
+      <Nav highlight={'post'} id={id} />
       <Aside />
       <Main>
         <MainPost id={id} />
