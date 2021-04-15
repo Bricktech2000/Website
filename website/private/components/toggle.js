@@ -11,6 +11,7 @@ class Toggle extends Component {
 
   setActive(active) {
     this.setState({ active: active });
+    return active;
   }
 
   render() {

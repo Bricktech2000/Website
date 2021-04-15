@@ -1,0 +1,4 @@
+#subscription
+/website/private/private_vapid.key
+/website/public/public_vapid.key
+/website/private/subscriptions.json

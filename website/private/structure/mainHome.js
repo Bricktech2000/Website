@@ -3,7 +3,7 @@ import Card from '../components/card';
 import TagList from '../components/tagList';
 import MosaicSmall from '../components/mosaicSmall';
 import Loading from '../components/loading';
-import Toggle from '../components/toggle';
+import ToggleSubscribe from '../components/toggleSubscribe';
 import getPostInfo from '../api/getPostInfo';
 import DatabaseSearch from '../api/databaseSearch';
 
@@ -31,11 +31,6 @@ class MainHome extends Component {
     });
   }
 
-  toggleOnClick([isActive, setActive], e) {
-    setActive(!isActive);
-    console.log(!isActive);
-  }
-
   render() {
     if (
       this.state.recentIds === undefined ||
@@ -47,7 +42,7 @@ class MainHome extends Component {
     return (
       <React.Fragment>
         <h1 className="markup-h1">Recent Projects</h1>
-        <Toggle onClick={this.toggleOnClick} active={false} />
+        <ToggleSubscribe />
         <br />
         <MosaicSmall>
           {this.state.recentIds.map((id) => (

@@ -1,0 +1,11 @@
+src: https://pusher.com/tutorials/push-notifications-node-service-workers
+npm install web-push
+
+generate keys:
+./node_modules/.bin/web-push generate-vapid-keys
+public key: copy to ./client/public_vapid.key
+private key: copy to ./server/private_vapid.key
+
+subscription system:
+create website/private/api/lastPages.js
+create website/private/api/subscriptions.json

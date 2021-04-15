@@ -1,0 +1,9 @@
+.container {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  margin: calc(var(--smart-unit) * 2) 0;
+}
+.container span {
+  width: calc(var(--smart-unit) * 2);
+}
