@@ -1,0 +1,5 @@
+src: https://www.networkworld.com/article/3489256/breaking-linux-files-into-pieces-with-the-split-command.html
+wsl
+
+split file into 50M chunks: split -b50M website/public/Useless-Box/FJVID_20200919_171456.mp4 website/public/Useless-Box/FJVID_20200919_171456.mp4.
+reassemble file: cat website/public/Useless-Box/FJVID_20200919_171456.mp4.??? > website/public/Useless-Box/FJVID_20200919_171456.mp4

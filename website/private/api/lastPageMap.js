@@ -10,4 +10,6 @@ export default [
   'Messenger-Always-Active',
   'WebInfo',
   '5-inch-Drone-First-Flights',
+  'HHO-Generator',
+  'Blackbox-Video-Exporter',
 ];
