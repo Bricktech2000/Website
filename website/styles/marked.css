@@ -113,6 +113,12 @@
 .marked .hljs-number {
   color: var(--color);
 }
+.marked sub,
+.marked sup {
+  font-size: 0.6em;
+  font-weight: bold;
+  margin-left: calc(0.1 * var(--smart-unit));
+}
 .marked ul,
 .marked ol {
   margin: calc(3 * var(--smart-unit)) 10%;
