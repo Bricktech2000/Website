@@ -32,12 +32,11 @@ var checkSubscriptions = async () => {
   var pageMap = (await import('../../private/api/pageMap')).default;
   var lastPageMap = (await import('../../private/api/lastPageMap')).default;
 
-  if (pageMap[0] != lastPageMap[0]) {
+  if (pageMap.toString() != lastPageMap.toString()) {
     //https://www.geeksforgeeks.org/node-js-fs-copyfile-function/
     fs.copyFile(
       process.cwd() + '/private/api/pageMap.js',
-      process.cwd() + '/private/api/lastPageMap.js',
-      constants.COPYFILE_FICLONE
+      process.cwd() + '/private/api/lastPageMap.js'
     );
     var info = JSON.parse(
       await fs.readFile(process.cwd() + '/public/' + pageMap[0] + '/index.json')
