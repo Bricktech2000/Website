@@ -1,0 +1,11 @@
+{
+  "title": "HHO Generator",
+  "date": "2020-10-18",
+  "tags": ["Showcase", "Hardware", "Electronics", "3D Printing", "Tech"],
+  "btns": {
+    "Parts Used": "#parts",
+    "Internals Image": "#img",
+    "Explosion Demo": "#demo"
+  },
+  "desc": "An HHO Generator takes tap water, and with the help of electricity, generates a very unstable explosive gas called \"HHO\". Showing you what it can do!"
+}
