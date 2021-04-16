@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackbox Video Exporter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    canvas, video{
+      height: 33em;
+      border: .1em solid #000;
+    }
+    ul, ol{
+      margin-left: 1em;
+    }
+    li{
+      margin-bottom: .5em;
+    }
+  </style>
+</head>
+<body>
+  <ol>
+    <li>
+      Choose the desired operation:<br>
+      <input type="radio" id="raido1" class="compileInput" name="compile" value="true">
+      <label for="raido1">Compile to WEBM</label><br>
+      <input type="radio" id="radio2" class="animateInput" name="compile" value="false" checked>
+      <label for="radio2">Render in real time</label><br>
+    </li>
+    <li>
+      Choose a betaflight blackbox CSV file:<br>
+      (<a download href="2_ESC_SENSOR_RPM_100MB.BFL.csv">click here</a> to download a sample file)<br>
+      <input type="file" accept=".csv,.xls" class="fileInput"><br>
+    </li>
+    <li>
+      Get the rendering started!<br>
+      <canvas class="canvas"></canvas><br>
+    </li>
+  </ol>
+  <hr>
+  <div class="log">
+    <h3>log:</h3>
+  </div>
+  <script>
+    window.settings = {};
+    settings.fileInput = document.querySelector('.fileInput');
+    settings.canvas = document.querySelector('.canvas');
+    settings.ctx = settings.canvas.getContext('2d');
+    settings.compileInput = document.querySelector('.compileInput');
+    settings.animateInput = document.querySelector('.animateInput');
+    settings.compile = false;
+    settings.logDiv = document.querySelector('.log');
+  </script>
+  <script src="settings.js"></script>
+  <script>
+    settings.canvas.width = settings.width;
+    settings.canvas.height = settings.height;
+  </script>
+  <script src="CSVParser.js"></script>
+  <script src="Parser.js"></script>
+  <script src="Renderer.js"></script>
+  <script src="ctxRoundRect.js"></script>
+  <script src="whammy.js"></script>
+  <script>
+    settings.compileInput.onchange = settings.animateInput.onchange = function(){
+      if(this == settings.compileInput)
+        settings.compile = true;
+      if(this == settings.animateInput)
+        settings.compile = false;
+    }
+    //https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/
+    settings.fileInput.onchange = async function(){
+      if(this.files.length != 1) throw new Error('Please only select one file.');
+      setUIDisableState(true);
+      settings.log('Reading...');
+      var reader = new FileReader();
+      reader.onload = async function(){
+        var data = await tryCatchLog(() => {
+          return Parser.parse(reader.result);
+        }, 'Error Parsing File.');
+        console.log(data);
+        await tryCatchLog(() => {
+          return animate(data, settings.compile);
+        }, 'Error Rendering Data.');
+        setUIDisableState(false);
+        settings.log('Process Successful.\n');
+      }
+      tryCatchLog(() => {
+        return reader.readAsBinaryString(this.files[0]);
+      }, 'Error Reading File.');
+      //https://stackoverflow.com/questions/3528359/html-input-type-file-file-selection-event
+      settings.fileInput.value = null;
+    }
+    function sleep(ms){
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function animate(data, compile){
+      if(!compile) settings.log('Rendering in Real Time...');
+      else settings.log('Saving Frames for Compression...');
+      //https://github.com/antimatter15/whammy
+      var encoder = new Whammy.Video(settings.fps);
+
+      var ti;
+      if(!compile) ti = performance.now();
+      else ti = data.data[0].time;
+      var dt = (data.data[data.data.length - 1].time - data.data[0].time) / 1000;
+      var tc = ti;
+      var tf = ti + dt;
+
+      for(var d = 0; d < data.data.length; ){
+        if(!compile) tc = performance.now();
+        else tc += 1000 / settings.fps;
+        Renderer.render({...data, ...movingAverage(data.data, d, Math.round(settings.movingAverageDuration * 1000 * data.data.length / dt))});
+        if(compile) encoder.add(settings.ctx);
+        d = Math.round((tc - ti) / (tf - ti) * data.data.length);
+        await sleep(0);
+      }
+
+      if(compile){
+        settings.log('Compiling to WEBM...');
+        return new Promise(function(resolve){
+          encoder.compile(false, function(output){
+            var url = URL.createObjectURL(output);
+            var video = document.createElement('video');
+            var source = document.createElement('source');
+            video.controls = true;
+            source.src = url;
+            video.appendChild(source);
+            document.body.appendChild(video);
+            resolve();
+          });
+        });
+      }
+    }
+    async function tryCatchLog(func, catchMessage){
+      try{
+        return await func();
+      }catch(e){
+        settings.log(catchMessage + ' See console for more details.');
+        settings.log('Process Halted.');
+        setUIDisableState(false);
+        throw e;
+      }
+    }
+    function movingAverage(data, index, count){
+      var dataAvg = {};
+      var lastItem = data[0];
+      for(var i = 0; i < count; i++){
+        var item = data[index + i];
+        if(item === undefined) item = lastItem;
+        else lastItem = item;
+        for(var key of Object.keys(item)){
+          if(dataAvg[key] === undefined) dataAvg[key] = 0;
+          dataAvg[key] += item[key] / count;
+        }
+      }
+      return dataAvg;
+    }
+    function setUIDisableState(state){
+      settings.fileInput.disabled = state;
+      settings.compileInput.disabled = state;
+      settings.animateInput.disabled = state;
+    }
+  </script>
+</body>
+</html>

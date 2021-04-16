@@ -11,4 +11,5 @@ export default [
   'WebInfo',
   '5-inch-Drone-First-Flights',
   'HHO-Generator',
+  'Blackbox-Video-Exporter',
 ];
