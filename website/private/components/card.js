@@ -45,14 +45,12 @@ class Card extends Component {
 
     if (this.state.info == this.props.info) return;
     this.setState({ info: this.props.info });
-
-    this.setState(await this.props.info);
   }
 
   render() {
     var direction = this.state.dir ? 'row' : 'col';
     var inverted = this.props.inv ? 'inv' : 'nor';
-    if (this.state.id === undefined) return <Loading height="100vh" />;
+    if (this.state.info === null) return <Loading height="100vh" />;
 
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
       <React.Fragment>
@@ -64,15 +62,15 @@ class Card extends Component {
           href={href}
           onClick={onClick}
         >
-          <img src={'/' + this.state.id + '/index.jpg'} alt="" />
+          <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
           <div
             className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
           >
-            {this.state.title}
+            {this.state.info.title}
           </div>
-          <div className={styles.desc}>{this.state.desc}</div>
+          <div className={styles.desc}>{this.state.info.desc}</div>
           <div className={styles.tags}>
-            {this.state.tags.map((tag) => (
+            {this.state.info.tags.map((tag) => (
               <Tag key={tag} label={tag} mini={true} />
             ))}
           </div>
@@ -80,7 +78,7 @@ class Card extends Component {
       </React.Fragment>
     ));
     return (
-      <Link href={'/' + this.state.id}>
+      <Link href={'/' + this.state.info.id}>
         <Card2 />
       </Link>
     );
