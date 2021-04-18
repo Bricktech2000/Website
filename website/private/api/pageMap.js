@@ -13,4 +13,5 @@ export default [
   'HHO-Generator',
   'Blackbox-Video-Exporter',
   'Useless-Box',
+  '5-inch-Drone-Mockup',
 ];
