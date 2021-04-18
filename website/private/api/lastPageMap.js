@@ -9,6 +9,7 @@ export default [
   'DBLess-Password-Manager',
   'Messenger-Always-Active',
   'WebInfo',
+  '5-inch-Drone-Demo-on-6S',
   '5-inch-Drone-First-Flights',
   'HHO-Generator',
   'Blackbox-Video-Exporter',

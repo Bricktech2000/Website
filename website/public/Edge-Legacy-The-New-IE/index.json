@@ -1,0 +1,7 @@
+{
+  "title": "Edge Legacy: The New IE",
+  "date": "2020-08-25",
+  "tags": ["Blog", "Software", "JavaScript", "HTML", "CSS", "Web", "Tech"],
+  "btns": { "IE Demo": "#demo-ie", "Edge Demo": "#demo-edge" },
+  "desc": "Writing about how, in my opinion, Edge Legacy will become the new Internet Explorer in a few years. Hoping that it doesn't ever happen!"
+}
