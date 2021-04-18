@@ -1,7 +1,7 @@
 .card {
   --padding: calc(var(--smart-unit) * 2.5);
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-columns: 1fr 0 1fr;
   grid-template-rows: repeat(4, auto);
   grid-gap: 0;
   align-items: center;
