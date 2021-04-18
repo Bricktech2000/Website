@@ -1,0 +1,19 @@
+{
+  "title": "5-inch Drone Demo on 6S",
+  "date": "2020-11-14",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Software",
+    "Hardware",
+    "Electronics",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": {
+    "Demo": "#demo",
+    "Previous Post": "../5-inch-Drone-First-Flights/",
+    "Update Post": "../FPV-Drone-HD-Footage/"
+  },
+  "desc": "My 5-inch drone, but now on 6S! Talking about how much more power the new battery can deliver, along with a demo video."
+}

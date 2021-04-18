@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.23.0" title="Shotcut version 20.09.27" producer="main_bin">
+  <profile description="automatic" width="2160" height="1080" progressive="0" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="2" display_aspect_den="1" frame_rate_num="30000" frame_rate_den="1000" colorspace="601"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:01:02.600">
+    <property name="length">00:01:02.633</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1.06667</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:01:02.600"/>
+  </playlist>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">frame_start.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2020-11-15T16:29:47</property>
+    <property name="shotcut:caption">frame_start.png</property>
+    <property name="shotcut:hash">050ce37711fdefac9b6ced1ac5e3e54c</property>
+    <property name="ignore_points">0</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:00:59.633">
+    <property name="length">00:00:59.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">dbe77a02-e869-4148-ba9d-cf6d370f95b8.webm</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2020-11-14T21:37:57</property>
+    <property name="shotcut:hash">ad82c4b031a1947459cad2613c529c63</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">dbe77a02-e869-4148-ba9d-cf6d370f95b8.webm</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter0" out="00:00:59.633">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fill">0</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">0 0 2160 1080 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">right</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">frame_end.png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2020-11-15T16:30:00</property>
+    <property name="shotcut:caption">frame_end.png</property>
+    <property name="shotcut:hash">5e949aa5b746d125da42f96599ca4d3f</property>
+    <property name="ignore_points">0</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:01.967"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:00:59.633"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:00.933"/>
+  </playlist>
+  <producer id="producer3" in="00:00:00.000" out="00:01:02.600">
+    <property name="length">00:01:02.633</property>
+    <property name="eof">pause</property>
+    <property name="resource">IMG_0090.MOV</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2020-11-14T21:08:21</property>
+    <property name="shotcut:hash">04ca8aecd653197343e1a6eb31b0d374</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IMG_0090.MOV</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter1" out="00:01:02.600">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fill">0</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">0 0 2160 1080 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">left</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+  </producer>
+  <playlist id="playlist1">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V2</property>
+    <entry producer="producer3" in="00:00:00.000" out="00:01:02.600"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 20.09.27" global_feed="1" in="00:00:00.000" out="00:01:02.600">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <property name="shotcut:scaleFactor">2.30997</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">1</property>
+      <property name="b_track">2</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">0</property>
+    </transition>
+  </tractor>
+</mlt>
