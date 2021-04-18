@@ -1,0 +1,17 @@
+{
+  "title": "Tinker",
+  "date": "2020-08-25",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Python",
+    "Git"
+  ],
+  "btns": {
+    "Try it!": "#try",
+    "Github": ":https://github.com/Bricktech2000/tkr/"
+  },
+  "desc": "A Python program to track ideas, issues and fixes in any project. Taking you through how I got the idea and how you can use it!"
+}

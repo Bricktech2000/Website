@@ -15,4 +15,5 @@ export default [
   'Blackbox-Video-Exporter',
   'Useless-Box',
   '5-inch-Drone-Mockup',
+  'Edge-Legacy-The-New-IE',
 ];
