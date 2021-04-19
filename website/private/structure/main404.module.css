@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  align-items: center;
+}
+
+.header {
+  margin: 0 calc(var(--smart-unit) * 5);
+  line-height: 30vw;
+  padding: 0;
+  font-family: monospace;
+  font-size: min(20vw, calc(var(--smart-unit) * 30));
+  white-space: nowrap;
+}
+
+.content {
+  display: block;
+}
+
+.buttons {
+  margin-top: calc(var(--smart-unit) * 2.5);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: initial;
+    grid-template-rows: 0 auto auto;
+  }
+  .header {
+    margin: 0;
+    justify-self: center;
+    font-size: 40vw;
+  }
+}

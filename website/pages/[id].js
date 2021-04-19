@@ -7,6 +7,7 @@ import getPostInfo from '../private/api/getPostInfo';
 
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
+import HeaderEmpty from '../private/structure/headerEmpty';
 import Nav from '../private/structure/nav';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
@@ -26,6 +27,7 @@ var Post = (props) => {
   if (tagMap[tag] || tag == 'posts')
     return (
       <App>
+        <HeaderEmpty />
         <Nav highlight={'posts'} id={id} />
         <Aside />
         <Main>
