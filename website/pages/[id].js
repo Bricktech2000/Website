@@ -21,7 +21,8 @@ var Post = (props) => {
   var { id } = router.query || props;
 
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
-  if (router.asPath === router.route) return '';
+  //if (router.asPath === router.route) return '';
+  if (!id) return '';
   var tag = id.replace(/-/g, ' ');
 
   if (tagMap[tag] || tag == 'posts')
@@ -53,13 +54,13 @@ var Post = (props) => {
   return <Error status={404} />;
 };
 
-export async function getServerSideProps(context) {
+/*export async function getServerSideProps(context) {
   var { id } = context.params;
   return {
     props: {
       id: id,
     },
   };
-}
+}*/
 
 export default Post;
