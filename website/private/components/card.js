@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useRef, useEffect } from 'react';
 import Tag from './tag';
 import Loading from './loading';
 import Link from 'next/link';
@@ -12,11 +13,16 @@ class Card extends Component {
     super(props);
 
     this.ref = React.createRef();
+    this.mounted = false;
   }
 
   async componentDidMount() {
+    this.mounted = true;
     this.setState({ dir: this.props.dir });
     this.componentDidUpdate();
+  }
+  componentWillUnmount() {
+    this.mounted = false;
   }
   async componentDidUpdate() {
     //css media query parent width
@@ -38,6 +44,7 @@ class Card extends Component {
         if (this.lastParentGridWidth == parentGridWidth) return;
         this.lastParentGridWidth = parentGridWidth;
 
+        if (!this.mounted) return;
         if (parentGridWidth == 1) this.setState({ dir: 1 });
         else this.setState({ dir: this.props.dir });
       }).observe(node.parentNode);
