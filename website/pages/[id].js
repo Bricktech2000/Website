@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
 //import getPostInfo from '../private/api/getPostInfo';
-import TagMap from '../private/api/tagMap';
+import tagMap from '../private/api/tagMap';
+import pageMap from '../private/api/pageMap';
+import getPostInfo from '../private/api/getPostInfo';
 
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
@@ -11,7 +13,7 @@ import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
 import MainPosts from '../private/structure/mainPosts';
 import Footer from '../private/structure/footer';
-import getPostInfo from '../private/api/getPostInfo';
+import Error404 from '../private/error404';
 
 var Post = (props) => {
   var router = useRouter();
@@ -20,7 +22,8 @@ var Post = (props) => {
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
   if (router.asPath === router.route) return '';
   var tag = id.replace(/-/g, ' ');
-  if (TagMap[tag] || tag == 'posts')
+
+  if (tagMap[tag] || tag == 'posts')
     return (
       <App>
         <Nav highlight={'posts'} id={id} />
@@ -32,17 +35,20 @@ var Post = (props) => {
       </App>
     );
 
-  return (
-    <App>
-      <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
-      <Nav highlight={'post'} id={id} />
-      <Aside />
-      <Main>
-        <MainPost id={id} />
-      </Main>
-      <Footer />
-    </App>
-  );
+  if (pageMap.includes(id))
+    return (
+      <App>
+        <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
+        <Nav highlight={'post'} id={id} />
+        <Aside />
+        <Main>
+          <MainPost id={id} />
+        </Main>
+        <Footer />
+      </App>
+    );
+
+  return <Error404 />;
 };
 
 export async function getServerSideProps(context) {
