@@ -16,4 +16,5 @@ export default [
   'Useless-Box',
   '5-inch-Drone-Mockup',
   'Edge-Legacy-The-New-IE',
+  'Tinker',
 ];
