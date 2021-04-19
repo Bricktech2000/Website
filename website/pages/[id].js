@@ -14,7 +14,7 @@ import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
 import MainPosts from '../private/structure/mainPosts';
 import Footer from '../private/structure/footer';
-import Error404 from '../private/error404';
+import Error from '../private/error';
 
 var Post = (props) => {
   var router = useRouter();
@@ -50,7 +50,7 @@ var Post = (props) => {
       </App>
     );
 
-  return <Error404 />;
+  return <Error status={404} />;
 };
 
 export async function getServerSideProps(context) {

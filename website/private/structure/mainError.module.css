@@ -15,6 +15,7 @@
 
 .content {
   display: block;
+  max-width: min(40vw, calc(var(--smart-unit) * 60));
 }
 
 .buttons {
@@ -30,5 +31,8 @@
     margin: 0;
     justify-self: center;
     font-size: 40vw;
+  }
+  .content {
+    max-width: unset;
   }
 }

@@ -4,10 +4,9 @@ import HeaderEmpty from './structure/headerEmpty';
 import Nav from './structure/nav';
 import Aside from './structure/aside';
 import Main from './structure/main';
-import Main404 from './structure/main404';
-import Footer from './structure/footer';
+import MainError from './structure/mainError';
 
-class Error404 extends Component {
+class Error extends Component {
   state = {};
   render() {
     return (
@@ -16,12 +15,11 @@ class Error404 extends Component {
         <Nav highlight={''} />
         <Aside />
         <Main>
-          <Main404 />
+          <MainError status={this.props.status || 400} />
         </Main>
-        {/*<Footer />*/}
       </App>
     );
   }
 }
 
-export default Error404;
+export default Error;
