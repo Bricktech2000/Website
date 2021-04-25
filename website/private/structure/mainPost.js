@@ -51,6 +51,10 @@ class MainPost extends Component {
                 { language }
               )
               .value.replace(
+                /<span class="hljs-params">(.*?)<\/span>/g,
+                (a, b) => b
+              )
+              .replace(
                 /~([^~]{1,4})~/g,
                 (a, b) => `<span class="hljs-operator">${b}</span>`
               );
