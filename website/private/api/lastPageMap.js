@@ -21,4 +21,5 @@ export default [
   'dirsize',
   'Lock-Picking',
   'Crash.js',
+  'AI-Image-Compression',
 ];

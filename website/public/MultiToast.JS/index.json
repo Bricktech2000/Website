@@ -1,0 +1,19 @@
+{
+  "title": "MultiToast.JS",
+  "date": "2020-07-13",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web"
+  ],
+  "btns": {
+    "Demo": "#demo",
+    "Github": ":https://github.com/Bricktech2000/multiToast"
+  },
+  "desc": "A highly customizable JavaScript toast library. Writing about how I got the idea to write this library, and about how you can try it out for yourself!"
+}

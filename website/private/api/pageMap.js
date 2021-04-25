@@ -22,4 +22,5 @@ export default [
   'Lock-Picking',
   'Crash.js',
   'AI-Image-Compression',
+  'MultiToast.JS',
 ];
