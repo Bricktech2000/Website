@@ -18,4 +18,5 @@ export default [
   'Edge-Legacy-The-New-IE',
   'Tinker',
   'DoS-Protection',
+  'dirsize',
 ];

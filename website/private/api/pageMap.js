@@ -19,4 +19,5 @@ export default [
   'Tinker',
   'DoS-Protection',
   'dirsize',
+  'Lock-Picking',
 ];
