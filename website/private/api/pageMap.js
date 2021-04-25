@@ -20,4 +20,5 @@ export default [
   'DoS-Protection',
   'dirsize',
   'Lock-Picking',
+  'Crash.js',
 ];
