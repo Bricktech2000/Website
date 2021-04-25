@@ -17,4 +17,5 @@ export default [
   '5-inch-Drone-Mockup',
   'Edge-Legacy-The-New-IE',
   'Tinker',
+  'DoS-Protection',
 ];
