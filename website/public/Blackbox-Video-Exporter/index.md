@@ -30,4 +30,4 @@ If you would like to try this program for yourself, you can [click here](./Black
 
 ## Conclusion
 
-Once I will have built my [5 inch drone](../5-inch-Drone-Mockup), I will certainly use this software if I ever upload freestyle footage. It will allow people to see a bunch of information, like the position of the sticks and the orientation of the drone. This program only took a few days to program, and I can't wait to try it on a real racing drone!
+Once I will have built my [5 inch drone](../5-inch-Drone-Parts/), I will certainly use this software if I ever upload freestyle footage. It will allow people to see a bunch of information, like the position of the sticks and the orientation of the drone. This program only took a few days to program, and I can't wait to try it on a real racing drone!

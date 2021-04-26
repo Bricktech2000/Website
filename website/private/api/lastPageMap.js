@@ -14,7 +14,7 @@ export default [
   'HHO-Generator',
   'Blackbox-Video-Exporter',
   'Useless-Box',
-  '5-inch-Drone-Mockup',
+  '5-inch-Drone-Parts',
   'Edge-Legacy-The-New-IE',
   'Tinker',
   'DoS-Protection',

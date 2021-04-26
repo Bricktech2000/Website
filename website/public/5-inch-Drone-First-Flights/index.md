@@ -1,4 +1,4 @@
-This post is about a [5-inch Drone](../5-inch-Drone-Mockup/) that I am building for the IB's Personnal Project. If you want more information about it, dont't forget to check out the [previous post](../5-inch-Drone-Mockup/)!
+This post is about a [5-inch Drone](../5-inch-Drone-Parts/) that I am building for the IB's Personnal Project. If you want more information about it, dont't forget to check out the [previous post](../5-inch-Drone-Parts/)!
 
 #img
 
