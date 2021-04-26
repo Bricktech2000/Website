@@ -1,4 +1,4 @@
-This post is a demo of my [5-inch drone](../5-inch-Drone-First-Flights/), which I built a few weeks ago. You can [click here](../5-inch-Drone-First-Flights/) if you would like to see how I built it!
+This post is a demo of my [5-inch drone](../5-inch-Drone-Build/), which I built a few weeks ago. You can [click here](../5-inch-Drone-Build/) if you would like to see how I built it!
 
 ## Intro
 

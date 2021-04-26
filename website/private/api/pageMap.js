@@ -10,7 +10,7 @@ export default [
   'Messenger-Always-Active',
   'WebInfo',
   '5-inch-Drone-Demo-on-6S',
-  '5-inch-Drone-First-Flights',
+  '5-inch-Drone-Build',
   'HHO-Generator',
   'Blackbox-Video-Exporter',
   'Useless-Box',
