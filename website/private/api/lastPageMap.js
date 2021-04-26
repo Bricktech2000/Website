@@ -23,4 +23,5 @@ export default [
   'Crash.js',
   'AI-Image-Compression',
   'MultiToast.JS',
+  'DIY-Grenade',
 ];

@@ -1,0 +1,19 @@
+{
+  "title": "5-inch Drone Prototype",
+  "date": "2020-06-22",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Work in Progress",
+    "Hardware",
+    "Electronics",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": {
+    "Prototype Image": "#img",
+    "Update Post": "../5-inch-Drone-Mockup/",
+    "Parts List": "#list"
+  },
+  "desc": "Ever since I made my 2-inch drone, I wanted more. Talking a about an upgraded version and showing you the virtual prototype of the drone!"
+}
