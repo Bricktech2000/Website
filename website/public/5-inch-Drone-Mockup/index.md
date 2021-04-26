@@ -1,4 +1,4 @@
-In the [previous post](../5-inch-Drone-Prototype/), I wrote about what is a Personnal Project in the [IB program](https://www.ibo.org/) and showed you the parts I will use to make this drone. Don't forget to check it out!
+In the [previous post](../5-inch-Drone-Virutal-Prototype/), I wrote about what is a Personnal Project in the [IB program](https://www.ibo.org/) and showed you the parts I will use to make this drone. Don't forget to check it out!
 
 ## The Parts
 
