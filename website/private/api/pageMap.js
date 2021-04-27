@@ -28,4 +28,5 @@ export default [
   '3D-Printer-Music',
   'Learning-the-Stock-Market',
   'Caps-Hotkeys',
+  'C++-Keylogger',
 ];

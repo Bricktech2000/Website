@@ -27,4 +27,5 @@ export default [
   '5-inch-Drone-Virtual-Prototype',
   '3D-Printer-Music',
   'Learning-the-Stock-Market',
+  'Caps-Hotkeys',
 ];

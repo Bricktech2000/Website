@@ -1,0 +1,7 @@
+{
+  "title": "C++ Keylogger",
+  "date": "2020-05-23",
+  "tags": ["Try it Now", "Showcase", "Software", "C++", "Hacking"],
+  "btns": { "Code": ":./New/main.cpp" },
+  "desc": "Want an easy way to steal passwords? Use a Keylogger! Writing about what is a keylogger, how it works under the hood and how to try it out for yourself."
+}
