@@ -24,4 +24,5 @@ export default [
   'AI-Image-Compression',
   'MultiToast.JS',
   'DIY-Grenade',
+  '5-inch-Drone-Virtual-Prototype',
 ];
