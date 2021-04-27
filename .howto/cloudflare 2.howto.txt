@@ -1,0 +1,150 @@
+log in to cloudflare
+
+add domain: emilien.ml
+update nameservers for emilien.ml
+
+go to DNS tab
+update IP address
+remove 'www' entry
+
+
+
+src: https://bytefreaks.net/applications/cloudflare-does-not-allow-port-22-usual-ssh-port-on-domain
+
+go to DNS tab
+
+add record
+type: cname
+name: ----- (secret unproxied unportmapped subdomain for admin access)
+content: emilien.ml
+TTL: auto
+Proxy status: uncheck
+
+add record
+type: cname
+name: info
+content: emilien.ml
+TTL: auto
+
+add record
+type: cname
+name: dev
+content: emilien.ml
+TTL: auto
+
+go to SSL/TLS tab
+Edge Certificates
+Always Use HTTPS: ON
+
+
+
+cloudflare open ports HTTP:
+80
+8080
+8880
+2052
+2082
+2086
+2095
+
+cloudflare open ports HTTPS:
+443
+2053
+2083
+2087
+2096
+8443
+
+
+
+src: https://community.cloudflare.com/t/portzilla-trial-is-expired-alternatives/217676/2
+workers
+manage workers
+Create a Worker
+rename: [NAME]
+paste in:
+addEventListener('fetch', event => {
+  const request = event.request;
+  var url = new URL(request.url);
+  url.host = 'emilien.ml:[PORT]';
+  //for 'dev' only: url.protocol = 'http';
+  return event.respondWith(fetch(url, request));
+});
+go back to 'workers' page
+add route
+route: [NAME].emilien.ml/*
+worker: [NAME]
+make 3 of them with the right ports (see router port forwarding.howto) and the following names: https, dev, info
+
+
+go to DNS tab
+
+add record
+type: a
+name: emilien.ml
+content: [IP]
+TTL: auto
+
+add record
+type: cname
+name: dev
+content: emilien.ml
+TTL: auto
+
+add record
+type: cname
+name: info
+content: emilien.ml
+TTL: auto
+
+add record
+type: cname
+name: admin-bricktech2000
+content: emilien.ml
+TTL: auto
+proxied: uncheck
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

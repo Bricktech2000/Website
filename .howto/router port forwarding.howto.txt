@@ -1,0 +1,83 @@
+//randomly generated ports made to work with cloudflare port mapping
+//the following ports cannot be accessed directly through cloudflare
+//use the admin login subdomain to access local-Minecraft and server-SSH-FTP
+//use emilien.ml to access server-HTTP-HTTPS
+//use info.emilien.ml to access server-WebInfo
+
+//here is an example of an HTTPS request comming from a client
+   client              -> cloudflare          -> router          -> server
+   https://emilien.ml/ -> https://<IP>:25112/ -> 192.168.1.3:443 -> ::1:443
+1. a request is sent to emilien.ml through the default 443 port
+2. cloudflare maps this request to the server public IP address with a gibberish port
+3. the router receives a request with said gibberish port, and maps it to port 443 in the local network
+4. the server receives a normal HTTPS connection through port 443, as if there was no proxying
+
+//essentially, the router listens for gibberish ports to prevent script kiddies
+//from finding my public IP address through port 80 or port 22 scans
+
+
+#	Service Name    	External Start Port     Internal Start Port     Internal IP address
+1	local-Minecraft	    14457               	25565	                192.168.1.2
+1	local-HTTP  	    46782                  	80  	                192.168.1.2
+2	server-WebInfo  	41481               	70                  	192.168.1.3
+3	server-HTTP-HTTPS	25112,51055	            80,443              	192.168.1.3
+4	server-SSH-FTP  	55521-55522             21-22                   192.168.1.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
