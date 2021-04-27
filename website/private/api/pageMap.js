@@ -26,4 +26,5 @@ export default [
   'DIY-Grenade',
   '5-inch-Drone-Virtual-Prototype',
   '3D-Printer-Music',
+  'Learning-the-Stock-Market',
 ];
