@@ -34,4 +34,5 @@ export default [
   'Game-of-Life',
   'Geometry-Ninja',
   'Encoder-2.0',
+  'Modular-Containers',
 ];

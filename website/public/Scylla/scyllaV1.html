@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="">
+      <h1>Scylla</h1>
+      <p>Scylla is a file splitting algorithm. It splits a file into several other files, but they are useless unless all of them are present. Even if only one is missing, the output file will just be unreadable gibberish.</p>
+      <p>To encode, enter the Scylla type (the number of key files that will be generated) and a file you wish to encode.</p>
+      <p>To decode, enter the Scylla type (the number of key files used) and all the key files necessary to decode.</p>
+    </div>
+    <input type="number" placeholder="Enter Scylla type">
+    <input type="file" multiple name="" value="">
+    <div class="log"></div>
+    <br>
+    <script>
+      //https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
+      num = document.getElementsByTagName('input')[0];
+      input = document.getElementsByTagName('input')[1];
+      //window.filesRead = 0;
+      function log(msg){
+        document.getElementsByClassName('log')[0].innerText += msg + '\n';
+        //innerHTML = innerHTML + '...';
+      }
+      //https://stackoverflow.com/questions/12030686/html-input-file-selection-event-not-firing-upon-selecting-the-same-file
+      input.onclick = function(){
+        //console.log('onclick');
+        this.value = null;
+      }
+      input.onchange = function(){
+        //console.log('onchange');
+        var files = this.files;
+        var operation = (files.length == 1) ? 'Encoding' : 'Decoding';
+        if(files.length == 0){
+          log('Fatal Error: No files selected.');
+          return;
+        }
+        //if(files.length == 1){
+        log(operation + '...');
+        if(num.value <= 1){
+          log('Fatal Error: Scylla type should be larger than 1.');
+          return;
+        }
+        if(operation != 'Encoding' && num.value != files.length){
+          log('Warning: Scylla type not equal to number of files.');
+        }
+        var texts = [];
+        //var name;
+        var n = 0;
+        for(file of files){
+          var reader = new FileReader();
+          reader.addEventListener('load', function(){
+          //file.text().then(function(text){
+            var text = this.result;
+            /*console.log(reader.result);
+            text = reader.result.replace(/.*\,(.*)/, function(a, b){ return b; });*/
+            //console.log(text);
+            //return;
+            n++;
+            if(operation == 'Encoding'){
+              var name = file.name.replace(/(.*)\.(.*?)/, function(a, b, c){
+                return b + '.\\sc' + num.value + '.' + c;
+              });
+              if(n != files.length) return;
+              var outs = encode(parseInt(num.value), text);
+              /*var out = decode(parseInt(num.value), outs);
+              console.log(out[0]);
+              console.log(text);
+              console.log(out[0] == text);*/
+              downloadTextFiles(outs, name);
+              //console.log(outs);
+            }else{
+              var match = false;
+              var name = file.name.replace(/(.*)\.[0-9]+sc([0-9]+).*?\.(.+?)/, function(a, b, n, c){
+                if(n == files.length) match = true;
+                else match = -1;
+                return b + '.' + c;
+              });
+              if(match == false){
+                log('Fatal Error: Invalid Key File Name: ' + file.name + '.');
+                return;
+              }else if(match == -1){
+                log('Warning: Invalid Key File Name ' + file.name + ' for Scylla type ' + files.length + '.');
+              }
+              texts.push(text);
+              if(n != files.length) return;
+              var out = decode(parseInt(num.value), texts);
+              downloadTextFiles(out, name);
+              //console.log(name);
+            }
+          });
+          //https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
+          /*reader.readAsDataURL(file);*/
+          //reader.readAsText(file);
+          reader.readAsBinaryString(file);
+        }
+        //console.log(outs);
+
+        //var text = await files[0].text();
+        //encode(text);
+        //}
+        //console.log(files);
+        function encode(num, text){
+          //https://www.google.com/search?q=javascript+fill+array+with&rlz=1C1CHBF_enCA881CA881&oq=javascript+fill+array+with&aqs=chrome..69i57j0l7.5256j0j7&sourceid=chrome&ie=UTF-8
+          var outs = (new Array(num)).fill('');
+          for(var char of text){
+            //console.log(char);
+            keys = new Array(num);
+            for(var n = 0; n < num - 1; n++) keys[n] = Math.floor(Math.random() * 256);
+            var lastKey = char.charCodeAt(0);
+            for(key of keys) lastKey = lastKey ^ key;
+            keys[num-1] = lastKey;
+            //console.log(keys);
+            for(var n = 0; n < num; n++) outs[n] += String.fromCharCode(keys[n]);
+          }
+          /*for(var n = 0; n < num; n++) outs[n] = btoa(outs[n]);*/
+          //console.log(outs);
+          //https://base64.guru/developers/javascript/btoa
+          return outs;
+        }
+        function decode(num, texts){
+          //console.log('Decoding: ' + texts);
+          var out = '';
+          //https://www.google.com/search?q=javascript+fill+array+with&rlz=1C1CHBF_enCA881CA881&oq=javascript+fill+array+with&aqs=chrome..69i57j0l7.5256j0j7&sourceid=chrome&ie=UTF-8
+          var keys = (new Array(num)).fill(0);
+          for(var text of texts){
+            var n = 0;
+            for(var char of text){
+              keys[n] = keys[n] ^ char.charCodeAt(0);
+              n++;
+            }
+          }
+          for(key of keys) out += String.fromCharCode(key);
+          return [out];
+        }
+        function downloadTextFiles(outs, name){
+          //console.log(outs);
+          //console.log(name);
+          var n = 0;
+          for(var out of outs){
+            n++;
+            //https://stackoverflow.com/questions/53560991/automatic-file-downloads-limited-to-10-files-on-chrome-browser
+            setTimeout(function(out, n){
+              //https://stackoverflow.com/questions/3916191/download-data-url-file
+              var link = document.createElement('a');
+              link.download = name.split('\\').join(n);
+              //https://stackoverflow.com/questions/23223718/failed-to-execute-btoa-on-window-the-string-to-be-encoded-contains-characte
+              //console.log(encodeURIComponent(out));
+              //https://stackoverflow.com/questions/23223718/failed-to-execute-btoa-on-window-the-string-to-be-encoded-contains-characte
+              //BTOA WORKS WITH ASCII STRINGS
+              link.href = 'data:application/octet-stream;encoding=utf-8;base64,' + btoa(out);
+              //link.href = 'data:application/octet-stream;encoding=utf-8;base64,' + btoa(out.replace(/[\u00A0-\u2666]/g, function(c) { return '&#' + c.charCodeAt(0) + ';'; }));
+              //link.href = 'data:application/octet-stream;encoding=utf-16,' + out;
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              //delete link;
+            }, n * 1000, out, n);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
