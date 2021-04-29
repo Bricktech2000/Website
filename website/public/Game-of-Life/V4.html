@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Cellular Automaton V3</title>
+  </head>
+  <body ontouchstart="">
+    <style media="screen">
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        max-height: 999999999px;
+      }
+      canvas{
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+      body{
+        background: #000;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      .controls{
+        height: 10vh;
+        width: 100vw;
+        padding: 2.5vh;
+        color: #fff;
+        font-size: 2.5vh;
+      }
+      input{
+        font-size: inherit;
+        width: 10vh;
+      }
+    </style>
+    <div class="controls">
+      Height: <input type="number" value="100" placeholder="" oninput="resize(this.value)">
+      <input type="button" value="Random Fill" style="width: 20vh;" onclick="clearCanvas(1)">
+      <input type="button" value="Clear Fill" style="width: 20vh;" onclick="clearCanvas(0)">
+      <input type="submit" value="Play" onclick="playPause(this)">
+    </div>
+    <canvas id="canvas" width="20" height="20" style="height: 90vh; width: 100vw; border: 1px solid #000;"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      var height = 0;
+      var width = 0;
+      window.onresize = function(){resize(height)};
+      function resize(val){
+        height = 1 * val;
+        width = Math.floor(height * window.innerWidth / (window.innerHeight * 90 / 100));
+        canvas.width  = width;
+        canvas.height = height;
+        clearCanvas(0);
+      }
+      var state = 1;
+      playPause();
+      function playPause(){
+        var btn = document.getElementsByTagName('input')[3];
+        state = !state;
+        if(state == 1){
+          //play
+          btn.value = 'Pause';
+          document.getElementsByTagName('input')[0].disabled = true;
+        }else{
+          //pause
+          document.getElementsByTagName('input')[0].disabled = false;
+          btn.value = 'Play';
+        }
+      }
+      var timesteps = 0;
+      var cells = [];
+      var temp = [];
+      function clearCanvas(rand){
+        //console.log('asdfasdfasdfasfd');
+        cells = [];
+        for(var x = 0; x < width; x++){
+          cells[x] = [];
+          for(var y = 0; y < height; y++)
+            cells[x][y] = (rand == 1) ? Math.floor(Math.random() * 2) : 0;//(Math.random() > .2/* || x < size * 1/4 || x > size * 3/4 || y < size * 1/4 || y > size * 3/4*/) ? Math.floor(Math.random() * 16 / 4) : 15;
+        }
+        temp = [];
+        for(var x = 0; x < width; x++){
+          temp[x] = [];
+          for(var y = 0; y < height; y++)
+            temp[x][y] = 0;
+        }
+      }
+      resize(100);
+      var w = Math.round(width / 2);
+      var h = Math.round(height / 2);
+
+      var mousedown = false;
+      document.body.onmousedown = function(){mousedown = true;}
+      document.body.onmouseup = function(){mousedown = false;}
+      document.body.onmousemove = function(e){
+        if(mousedown) toggleCells(e);//console.log('move');
+      }
+      document.body.onclick = function(e){
+        toggleCells(e);//console.log('click');
+      }
+      document.body.ontouchmove = function(e){
+        e.preventDefault();
+        var e2 = e.touches[0];
+        toggleCells(e2);
+      }
+      var lastX2 = -1;
+      var lastY2 = -1;
+      function toggleCells(e){
+        //cells[0][0] = 1;
+        //alert(e.clientX);
+        //https://stackoverflow.com/questions/3234256/find-mouse-position-relative-to-element
+        var x = e.pageX - canvas.offsetLeft;
+        var y = e.pageY - canvas.offsetTop;
+        if(y < 0) return;
+        //alert('x: ' + x + ', y: ' + y);
+        //https://stackoverflow.com/questions/11927844/get-width-in-pixels-from-element-with-style-set-with
+        var x2 = Math.floor(x * width / canvas.clientWidth);
+        var y2 = Math.floor(y * height / canvas.clientHeight);
+        if(x2 == lastX2 && y2 == lastY2) return;
+        lastX2 = x2;
+        lastY2 = y2;
+        cells[x2][y2] = !cells[x2][y2];
+      }
+      /*cells[w+0][h+0] = 0;
+      cells[w+1][h+0] = 1;
+      cells[w+2][h+0] = 1;
+      cells[w+0][h+1] = 1;
+      cells[w+1][h+1] = 1;
+      cells[w+2][h+1] = 0;
+      cells[w+0][h+2] = 0;
+      cells[w+1][h+2] = 1;
+      cells[w+2][h+2] = 0;*/
+      /*cells[w+1][h+0] = 1;
+      cells[w+3][h+1] = 1;
+      cells[w+0][h+2] = 1;
+      cells[w+1][h+2] = 1;
+      cells[w+4][h+2] = 1;
+      cells[w+6][h+2] = 1;
+      cells[w+5][h+2] = 1;*/
+      /*cells[w+0][h+0] = 1;
+      cells[w+1][h+0] = 1;
+      cells[w+2][h+0] = 1;
+      cells[w+3][h+0] = 0;
+      cells[w+4][h+0] = 1;
+      cells[w+0][h+1] = 1;
+      cells[w+1][h+1] = 0;
+      cells[w+2][h+1] = 0;
+      cells[w+3][h+1] = 0;
+      cells[w+4][h+1] = 0;
+      cells[w+0][h+2] = 0;
+      cells[w+1][h+2] = 0;
+      cells[w+2][h+2] = 0;
+      cells[w+3][h+2] = 1;
+      cells[w+4][h+2] = 1;
+      cells[w+0][h+3] = 0;
+      cells[w+1][h+3] = 1;
+      cells[w+2][h+3] = 1;
+      cells[w+3][h+3] = 0;
+      cells[w+4][h+3] = 1;
+      cells[w+0][h+4] = 1;
+      cells[w+1][h+4] = 0;
+      cells[w+2][h+4] = 1;
+      cells[w+3][h+4] = 0;
+      cells[w+4][h+4] = 1;*/
+
+
+      function draw(){
+        /*if(state == 0){
+          requestAnimationFrame(draw);
+          return;
+        }*/
+        //console.log('draw');
+
+        for(var x = 0; x < width; x++)
+          for(var y = 0; y < height; y++)
+            temp[x][y] = cells[x][y];
+
+        for(var x = 0; x < width; x++){
+          for(var y = 0; y < height; y++){
+            if(state == 1){
+              //temp[x][y] = cells[x][y];
+              var n = 0;
+              for(var xo = -1; xo <= 1; xo++)
+                for(var yo = -1; yo <= 1; yo++)
+                  if(temp[(x+xo+width)%width][(y+yo+height)%height] == 1) n++;//2 * d - (Math.abs(xo) + Math.abs(yo));
+              /*if(temp[x][y] == 1){
+                if(n-1 <= 1) cells[x][y] = 0;
+                else if(n-1 <= 3) cells[x][y] = 1;
+                else cells[x][y] = 0;
+              }
+              if(temp[x][y] == 0 && n == 3) cells[x][y] = 1;*/
+              //https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+              if(temp[x][y] == 1 && (n == 3 || n == 4))
+                ;
+              else if(temp[x][y] == 0 && n == 3)
+                cells[x][y] = 1;
+              else
+                cells[x][y] = 0;
+              //console.log(n);
+            }
+            if(cells[x][y] != temp[x][y] || timesteps == 0 || state == 0) pixel(x, y, cells[x][y]);
+          }
+        }
+        timesteps++;
+
+
+        //for(var x = 0; x < size; x++)
+        //  for(var y = 0; y < size; y++)
+        //var totalEnergy = 0;
+        //for(var x = 0; x < size; x++)
+        //  for(var y = 0; y < size; y++)
+        //    totalEnergy += cells[x][y];
+        //console.log(totalEnergy);
+        //window.setTimeout(draw, 1/*1000 / 60*/);
+        requestAnimationFrame(draw);
+      }
+      function pixel(x, y, color){
+        //console.log('pixel: ' + color);
+        //console.log(x);
+        ctx.fillStyle = 'rgba(' + color * 255 + ', ' + color * 255 + ', ' + color * 255 + ', 1)';
+        ctx.fillRect(x, y, 1, 1);
+      }
+
+      //window.setInterval(draw, 100);
+      draw();
+    </script>
+  </body>
+</html>
