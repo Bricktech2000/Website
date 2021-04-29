@@ -30,4 +30,5 @@ export default [
   'Caps-Hotkeys',
   'C++-Keylogger',
   'Raspberry-Pi-Server',
+  'Auto-Cloud-Backup',
 ];
