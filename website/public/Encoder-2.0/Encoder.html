@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Encoder 2.0</h1>
+    <p>This encoder takes plain text and encodes it into a format that is really hard to read. If you can, it means that your brain is easily able to adapt to new situations!</p>
+    <p>Here are some of the things it does to make reading the output difficult:</p>
+    <ul>
+      <li>Replaces some letters with numbers</li>
+      <li>Puts spaces in key positions in words</li>
+      <li>Changes the order of the letters in words</li>
+    </ul>
+    <textarea rows="8" cols="80" placeholder="Input Text">this is some input text and below is the encoded output</textarea>
+    <textarea rows="8" cols="80" placeholder="Encoded Output" readonly>71H5 15 5M03 1PN U7 7X37 4ND 8L3 0W 15 7H3 3CN D0 3D 07U UP7</textarea>
+    <script>
+      input = document.getElementsByTagName('textarea')[0];
+      output = document.getElementsByTagName('textarea')[1];
+
+      input.onkeyup = function(e){
+        var text = input.value;
+        //console.log(text); //log input text
+        //find word
+        text = text.replace(/\b([^ ]+?)\b/g, function(a, b){
+          //console.log(a); //log word
+          //ignore first and last chars of word
+          var text = a.replace(/(.)(.*)(.)(.+?)/g, function(a, b, c, d, e){
+            //find groups of 2 letters in word
+            var text = c.replace(/(.)(.)/g, function(a, b, c){
+              //append a space to them
+              return b + c + ' ';
+            });
+            //find groups of 2 letters in word
+            var text = (text + d).replace(/([^ ])([^ ])/g, function(a, b, c){
+              //invert the 2 letters
+              return c + b;
+            });
+            //reconstruct <first letter> + <modified word> + <last letter>
+            return b + text + e;
+          });
+          return text;
+        });
+        text = text.toUpperCase();
+        dict = {O: '0', I: '1', Z: '2', E: '3', A: '4', S: '5', T: '7', G: '6', B: '8'}
+        for(var key in dict) text = text.split(key).join(dict[key]);
+
+        //console.log(text); //log output text
+        output.value = text;
+      }
+    </script>
+  </body>
+</html>

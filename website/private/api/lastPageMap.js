@@ -32,4 +32,5 @@ export default [
   'Raspberry-Pi-Server',
   'Auto-Cloud-Backup',
   'Game-of-Life',
+  'Geometry-Ninja',
 ];
