@@ -33,4 +33,5 @@ export default [
   'Auto-Cloud-Backup',
   'Game-of-Life',
   'Geometry-Ninja',
+  'Encoder-2.0',
 ];
