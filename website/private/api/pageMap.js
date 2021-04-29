@@ -29,4 +29,5 @@ export default [
   'Learning-the-Stock-Market',
   'Caps-Hotkeys',
   'C++-Keylogger',
+  'Raspberry-Pi-Server',
 ];
