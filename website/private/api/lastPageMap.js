@@ -31,4 +31,5 @@ export default [
   'C++-Keylogger',
   'Raspberry-Pi-Server',
   'Auto-Cloud-Backup',
+  'Game-of-Life',
 ];
