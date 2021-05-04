@@ -35,4 +35,5 @@ export default [
   'Geometry-Ninja',
   'Encoder-2.0',
   'Modular-Containers',
+  'Scylla',
 ];
