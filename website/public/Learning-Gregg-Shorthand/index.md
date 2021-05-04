@@ -45,10 +45,10 @@ And Here is a list of the written material I used to do so, linked in [Google Dr
 
 After a complete day of learning, I managed to memorize all the letters of the _Gregg Alphabet_ and a few short phrases such as _the_, _is_, _I will be_, and so on. I write at about four words per minute, but I know I will get better as time goes on. Here is a picture of a [Wikipedia article](https://en.wikipedia.org/wiki/Range_of_a_projectile) I transcribed in Gregg, followed by its translation back into the roman alphabet:
 
-![](./IMG_20210504_111447_0.jpg)
+![](./IMG_20210504_111447_0.min.jpg)
 
-|                                                                                |                                  |
-| ------------------------------------------------------------------------------ | -------------------------------- |
-| ![](./original_3affa61e-261f-4062-9dbe-775f7e7e2a0f_IMG_20210504_111500_1.jpg) | ![](./IMG_20210504_111505_7.jpg) |
+|                                      |                                      |
+| ------------------------------------ | ------------------------------------ |
+| ![](./IMG_20210504_111500_1.min.jpg) | ![](./IMG_20210504_111505_7.min.jpg) |
 
 I will very likely continue using Gregg for a lot of everyday tasks, such as personnal notes and `TODO` lists. Even though I will never be able to write at [hundreds of words per minute](https://www.youtube.com/watch?v=spTN48-YCTk), I really love how cryptic this script looks and how impressive a fluent writer can be.
