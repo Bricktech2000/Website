@@ -1,0 +1,24 @@
+{
+  "title": "YouTube Channel",
+  "date": "2020-04-10",
+  "tags": [
+    "Try it Now",
+    "Blog",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Hardware",
+    "Arduino",
+    "NodeJS",
+    "Electronics",
+    "Web",
+    "Hacking",
+    "3D Printing",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": {
+    "View Channel": ":https://www.youtube.com/channel/UCGj6pfxZ0XYJU29XNwXPPxg/featured"
+  },
+  "desc": "Link to my YouTube Channel, TechnoViper. Writing about why I wanted to create a YouTube Channel, and its purpose."
+}

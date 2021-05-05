@@ -39,4 +39,5 @@ export default [
   'Scylla',
   'Hacking-a-Computer',
   'iBUS-to-Simulator-Adapter',
+  'YouTube-Channel',
 ];
