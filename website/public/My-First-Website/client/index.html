@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="description" content="Emilien Breton. Hack PSF Polyvalente St-Francois">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+	<title>Emilien Breton</title>
+	<script type="text/javascript">
+		function resizeIframe() {
+			//set iframe height depending on the inside content
+			var iframe = document.getElementsByTagName("iframe")[0];
+			iframe.style.height = iframe.contentWindow.document.getElementById('container').offsetHeight + 'px';
+			
+			//make background move => set background's style.top to match (0 - the scroll height / 5)
+			document.getElementById('BG').style.top = (0 - ((window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0))/20) + 'px';
+			
+			//repeat the function (resize iframe and make background move) each 10 ms
+			setTimeout(resizeIframe, 10);
+		}
+	</script>
+	<link rel="stylesheet" href="programs/style.css">
+	<link rel="stylesheet" href="nav.css">
+</head>
+<body ontouchstart="">
+		<div ID="BG" STYLE="background-image:url(background2.png);background-size:cover;width:100%;height:200vh;position:fixed;left:0px;"></div>
+		<iframe ID="my_frame" name="page" src="home.html" onload="resizeIframe()"></iframe>
+		<header ID="header1">
+			<h1>Emilien Breton</h1>
+		</header>
+		<header ID="header2">&copy; Copyright 2017 Emilien Breton</header>
+			<div ID="nav">
+				<div>
+				=
+				</div>
+				<ul>
+					<li><a href="home.html" target="page">Home</a></li>
+					<li><a href="virus maker.html" target="page">Virus Maker</a></li>
+					<li><a href="programs/Hacker Typer 1.0 beta 2.html">Hacker Typer</a></li>
+					<li><a href="programs/virus.html">VIRUS</a></li>
+					<!--<li><a href="hackpsf.html" target="page">Hack PSF</a></li>-->
+					<li><a href="game of life.html" target="page">Game of life</a></li>
+					<li><a href="encoder.html" target="page">Encod-R</a></li>
+					<li><a href="iosfoldercrash.html" target="page">iOS folder crash</a></li>
+					<li><a href="Sounds.html" target="page">Entendrez-vous ce son ?</a></li>
+					<li><a href="cheat.html" target="page">Tricher aux examens !?</a></li>
+					<li><a href="programs/editor/index.html" target="_blank">Editeur HTML</a></li>
+					<li><a href="programs/useless.html" target="_blank">Useless</a></li>
+				</ul>
+			</div>
+</body>
+</html>
+
+
+
+
+
+
+

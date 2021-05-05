@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Editeur HTML</title>
+<script>
+	var test_window;
+	window.onload = function(){
+		document.getElementById('input').innerText = '<html>\n<head>\n<title> </title>\n<script>\n\n<' + '/script>\n</head>\n<body>\n\n</body>\n</html>\n';
+		document.getElementById('button').addEventListener('click', function() {
+			if(test_window){test_window.close();}
+			test_window = window.open('', '_blank');
+			test_window.document.write(document.getElementById('input').value);
+			//test_window.location.reload();
+			//test_window.window.refresh();
+		})
+	}
+</script>
+</head>
+<body STYLE="background-color:black;">
+<textarea id="input" STYLE="width:100%;height:95%;color:lime;background-color:black;">
+
+</textarea>
+<input id="button" type="button" value="Test !" STYLE="width:100%;height:5%;color:lime;background-color:black;">
+</body>
+</html>

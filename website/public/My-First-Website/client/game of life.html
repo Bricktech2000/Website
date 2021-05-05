@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="programs/style.css">
+		<style>
+			table, th, td {
+				font-family:calibri;
+				font-size:1.75vw;
+				background:#555;
+				border:0.1px solid black;
+				border-collapse:collapse;}
+			table{
+				height:100vw;}
+			td {
+				width:1vw;
+				margin:0px; padding:0px; font-size:0px;}
+		</style>
+		<script>
+			var size = 100;
+			var running = 0;
+			var my_interval;
+			window.onload = function() {
+				var row, cell;
+				for (a = 0; a <= size-1; a++) {
+					row = document.getElementById("my_table").insertRow(a);
+					for (b = 0; b <= size-1; b++) {
+						cell = row.insertCell(b);
+						cell.innerHTML = "&nbsp\;"
+						cell.id = a + "," + b;
+						//cell.style.backgroundColor = "red";
+						//cell.style.color = "red";
+						cell.onclick = function(){if (this.style.backgroundColor == "") {this.style.backgroundColor = "red"; this.style.color = "red";} else {this.style.backgroundColor = ""; this.style.color = "";}};
+					}
+				}
+			}
+			function run() {
+				for (a = 0; a <= size-1; a++) {
+					for (b = 0; b <= size-1; b++) {
+						var cell = document.getElementById(a + "," + b);
+						var around = 0;
+						for (c = -1; c <= 1; c++) {
+							for (d = -1; d <= 1; d++) {
+								if (document.getElementById((a + c).toString() + "," + (b + d).toString())) {
+									if (document.getElementById((a + c).toString() + "," + (b + d).toString()).style.backgroundColor == "red") {around +=1;}
+								}
+							}
+						}
+						if (document.getElementById(a + "," + b).style.backgroundColor == "red"){
+							around -= 1;
+							if (around >= 4) {
+								document.getElementById(a + "," + b).style.color = "";
+							}
+							if (around <= 1) {
+								document.getElementById(a + "," + b).style.color = "";
+							}
+						} else {
+							if (around == 3) {
+								document.getElementById(a + "," + b).style.color = "red";
+							}
+						}
+					}
+				}
+				set();
+				if (running == 1) {
+					my_interval = setTimeout(run, 50);
+				}
+			}
+			function set() {
+				for (a = 0; a <= size-1; a++) {
+					for (b = 0; b <= size-1; b++) {
+						if (document.getElementById(a + "," + b).style.color == "red") {
+							document.getElementById(a + "," + b).style.backgroundColor = "red";
+						}
+						if (document.getElementById(a + "," + b).style.color == "") {
+							document.getElementById(a + "," + b).style.backgroundColor = "";
+						}
+					}
+				}
+			}
+			function rs() {
+				if (running == 0) {
+					running = 1;
+					run();
+				} else {
+					running = 0;
+					clearTimeout(my_interval)
+				}
+			}
+		</script>
+	</head>
+	<body ID="body" onkeypress="run()">
+		<div ID="container">
+			<h1>Game of Life</h1>
+			<input type="button" onclick="rs()" value="Run / Stop"><br><br>
+			<table ID="my_table" align="center"></table>
+		</div>
+	</body>
+</html>

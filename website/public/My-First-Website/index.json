@@ -1,0 +1,16 @@
+{
+  "title": "My First Website",
+  "date": "2020-04-07",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Web",
+    "Tech"
+  ],
+  "btns": { "View Website": ":./client/index.html", "Image": "#img" },
+  "desc": "Links to my first website. Talking about how the (very strange) page system used to work, using an iframe to load HTML code."
+}

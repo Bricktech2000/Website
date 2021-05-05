@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+	window.onload = function() {
+		var width = 650;
+		var height = 325;
+		window.resizeTo(width,height);
+		window.moveTo(screen.width/2-width/2,screen.height/2-height/2);
+		input.onkeyup = function() {run();};
+	}
+	function run() {
+		var current = 0;
+		var output_var = "";
+		var input_var = (" " + input.value.toUpperCase() + " ").split("\n").join(" \n ");
+		for(var n = 0; n < input_var.length; n++) {
+			
+			if (input_var.substr(n-1, 1) == " "){
+				output_var += input_var.substr(n, 1);
+				while (input_var.substr(n, 1) != " " && input_var.substr(n+1, 1) != " " && input_var.substr(n+2, 1) != " " && input_var.substr(n+3, 1) != " ") {
+					output_var += input_var.substr(n+2, 1) + input_var.substr(n+1, 1);
+					n += 2;
+					if (input_var.substr(n+2, 1) != " ") {
+						output_var += " "
+					}
+				}
+				current = 1;
+			} else if (input_var.substr(n, 1) == " "){
+				output_var += input_var.substr(n, 1);
+			} else if (input_var.substr(n+1, 1) == " "){
+				output_var += input_var.substr(n, 1);
+			} else if (input_var.substr(n+2, 1) == " "){
+				output_var += input_var.substr(n, 1);
+			}
+		}
+		
+		
+		output_var = output_var.split("O").join("0").split("I").join("1").split("Z").join("2").split("L").join("1").split("E").join("3").split("A").join("4").split("S").join("5").split("T").join("7").split("B").join("8")
+		output.value = output_var;
+	}
+</script>
+<!--
+<style>
+	body {
+		color:lime;
+		background-color:black;}
+	textarea {
+		width:100%;
+		height:45%;
+		overflow-x:auto;
+		color:lime;
+		background-color:black;}
+	input {
+		width:100%;
+		color:lime;
+		background-color:black;}
+</style>-->
+	<link rel="stylesheet" href="programs/style.css">
+<style>
+	textarea {
+		width:62.5vw;
+		height: calc(62.5vw/2);
+		overflow-x:auto;
+		font-size:2vh;}
+	input {
+		width:100%;}
+</style>
+</head>
+	<body>
+		<div ID="container">
+			<h1>Encod-R</h1>
+			<p>Tapez du texte dans la partie du haut et Encod-R le transformera en un language très difficile à lire !<br>
+			Si vous y parvenez, vous êtes plus intelligent que la moyenne !</p>
+			<textarea ID="input" wrap="off" title="Enter text to encode !"></textarea><br>
+			<!--<input ID="encode" type="submit" value="Encode in a very hard to read language !">--><br>
+			<textarea ID="output" wrap="off" title=""></textarea>
+		</div>
+	</body>
+</html>

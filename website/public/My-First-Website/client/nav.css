@@ -1,0 +1,36 @@
+#nav {
+	position:fixed;top:15vh;left:0px;
+	text-align:left;
+	background-color:#222;
+	font-size:5vh;
+	color:#FFF;
+	border-radius:0vh 0vh 1vh 0vh;}
+#nav div {
+	height:5vh;
+	width:3vh;}
+#nav ul {
+	height:0px;
+	position:relative;top:0px;left:-300px;
+	list-style-type:none;
+	display:block;
+	padding:0px;
+	margin:0px;
+	-webkit-transition:left 0.25s;}
+#nav ul li:hover {
+	background-color:#333;
+	-webkit-transition:0.25s;
+	border-radius:0vh 1vh 1vh 0vh;}
+#nav ul li a {
+	text-decoration:none;
+	color:#FFF;
+	font-family:calibri;
+	display:block;
+	font-size:3vh;
+	padding:1vh;
+	margin:0px;}
+#nav div:hover + ul, #nav ul:hover {
+	display:block;
+	left:0px;
+	height:auto;}
+#nav div:hover {
+	cursor:pointer;}
