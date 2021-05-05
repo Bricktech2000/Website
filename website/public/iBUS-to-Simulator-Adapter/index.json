@@ -1,0 +1,15 @@
+{
+  "title": "iBUS to Simulator Adapter",
+  "date": "2020-04-10",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Hardware",
+    "Arduino",
+    "Electronics",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": { "Demo Video": "#demo", "Image": "#img" },
+  "desc": "Full tutorial on how to connect any FlySky transmitter to a PC wirelessly!"
+}

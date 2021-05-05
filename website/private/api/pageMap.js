@@ -38,4 +38,5 @@ export default [
   'Modular-Containers',
   'Scylla',
   'Hacking-a-Computer',
+  'iBUS-to-Simulator-Adapter',
 ];
