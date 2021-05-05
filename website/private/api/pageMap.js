@@ -37,4 +37,5 @@ export default [
   'Encoder-2.0',
   'Modular-Containers',
   'Scylla',
+  'Hacking-a-Computer',
 ];
