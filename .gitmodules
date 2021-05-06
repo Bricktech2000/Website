@@ -1,0 +1,3 @@
+[submodule "website/public/Markdown-Inline-Formatter/Markdown-Inline-Formatter"]
+	path = website/public/Markdown-Inline-Formatter/Markdown-Inline-Formatter
+	url = https://github.com/Bricktech2000/Markdown-Inline-Formatter.git
