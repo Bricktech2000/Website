@@ -43,4 +43,5 @@ export default [
   'YouTube-Channel',
   'My-First-Website',
   'MiniML',
+  'Spider-Robot',
 ];

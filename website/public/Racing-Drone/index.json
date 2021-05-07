@@ -1,0 +1,14 @@
+{
+  "title": "Racing Drone",
+  "date": "2019-12-12",
+  "tags": [
+    "Work in Progress",
+    "Software",
+    "Hardware",
+    "Electronics",
+    "Radio Controlled",
+    "Tech"
+  ],
+  "btns": { "Demo Video": "#demo", "Image": "#img", "Parts List": "#list" },
+  "desc": "Writing about how I got started into drone racing. Parts list to build my first drone, first test flight comming soon!"
+}
