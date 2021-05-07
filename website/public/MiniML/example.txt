@@ -1,0 +1,36 @@
+MiniML 1.0
+//Copyright Emilien Breton
+
+
+//Comment line
+
+First Level Heading
+===================
+
+Second Level Heading
+--------------------
+
+	This is an indentation
+
+""This is a quote / definition""
+
+	* This is a
+	* bullet point
+	* list
+
+This is *Bold Text*
+This is /Italic Text/
+This is [Inline Code]
+
+	[[
+	This is a code block.
+	It spans multiple lines.
+	]]
+
+{This is a link: ./empty.jpg}
+{This link opens in a new tab:: ./empty.jpg}
+This is a raw file include:
+	{{./empty.jpg}}
+
+This is another raw file include:
+{{./example.txt}}

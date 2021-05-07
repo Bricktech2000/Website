@@ -42,4 +42,5 @@ export default [
   'iBUS-to-Simulator-Adapter',
   'YouTube-Channel',
   'My-First-Website',
+  'MiniML',
 ];

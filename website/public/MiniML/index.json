@@ -1,0 +1,16 @@
+{
+  "title": "MiniML",
+  "date": "2020-04-06",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Web",
+    "Tech"
+  ],
+  "btns": { "View Page Source": ":./index.md" },
+  "desc": "How were the pages in this blog created? Using a custom markup language called 'MiniML'! Showing how it works."
+}
