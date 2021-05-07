@@ -1,4 +1,5 @@
 export default [
+  'Markdown-Inline-Formatter',
   'Learning-Gregg-Shorthand',
   'Google-Calendar-Automation',
   'Notification-System',

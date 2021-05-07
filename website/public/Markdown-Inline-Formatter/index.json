@@ -1,0 +1,20 @@
+{
+  "title": "Markdown Inline Formatter",
+  "date": "2021-05-06",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web"
+  ],
+  "btns": {
+    "Try It!": ":./Markdown-Inline-Formatter/index.html",
+    "Github": ":https://github.com/Bricktech2000/Markdown-Inline-Formatter",
+    "Screenshot": "#screenshot"
+  },
+  "desc": "A program that formats markdown code straight inside the text editor itself. Discussing how it works and how you can try it for yourself!"
+}
