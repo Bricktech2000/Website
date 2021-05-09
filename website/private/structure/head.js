@@ -39,6 +39,8 @@ class Head extends Component {
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         {/* https://highlightjs.org/download/ */}
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script src="./marked.min.js"></script>
+        <script src="./highlight.min.js"></script>
       </NextHead>
     );
   }
