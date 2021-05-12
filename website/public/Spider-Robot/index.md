@@ -33,7 +33,7 @@ This is ideal, but it means that a special _LiPo_ charger is necessary to charge
 
 ![](arduino_m.jpg)
 
-The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./sketch_nov01a.html), which is a total of `886` lines of code.
+The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./13_sketch_mar04a.html), which is a total of `886` lines of code.
 
 ![](servo.jpg)
 
@@ -43,7 +43,7 @@ The servomotors are like muscles: their job is to transform the signals received
 
 This is a very good question. if you want to make your own spider robot, you need to know electronics, soldering and _arduino_ programming. Here are some links for the code and the 3D parts, which you need to 3D-print yourself:
 
-- [The Program](./sketch_nov01a.html)
+- [The Program](./13_sketch_mar04a.html)
 - [The Tibia Piece](Tibia%205%20v2.stl) - You need 6 of them
 - [The Femur Piece](Femur%203%20v8.stl) - You need 6 of them
 - [The Hip Piece](Hip%203%20v12.stl) - You guessed it, 6 of them
