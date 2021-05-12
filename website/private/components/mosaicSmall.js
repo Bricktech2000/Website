@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import generator from '../api/rand';
 
 import styles from './mosaicSmall.module.css';
 
@@ -7,7 +8,8 @@ class MosaicSmall extends Component {
 
   constructor() {
     super();
-    this.firstIsRow = Math.random() > 0.5;
+    this.rand = generator();
+    this.firstIsRow = this.rand() > 0.5;
     this.secondIsRow = !this.firstIsRow;
   }
 
@@ -24,7 +26,7 @@ class MosaicSmall extends Component {
         React.cloneElement(child, {
           key: i,
           dir: directions[start + i],
-          inv: Math.random() > 0.5,
+          inv: this.rand() > 0.5,
         })
       );
 

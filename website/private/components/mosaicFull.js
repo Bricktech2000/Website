@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
+import generator from '../api/rand';
 
 import styles from './mosaicFull.module.css';
 
 class MosaicFull extends Component {
   state = {};
+
+  constructor() {
+    super();
+    this.rand = generator();
+  }
+
   render() {
     return (
       <div className={styles.MosaicFull}>
         {this.props.children.map((child, i) =>
           React.cloneElement(child, {
-            dir: Math.random() > 0.5,
-            inv: Math.random() > 0.5,
+            dir: this.rand() > 0.5,
+            inv: this.rand() > 0.5,
           })
         )}
       </div>

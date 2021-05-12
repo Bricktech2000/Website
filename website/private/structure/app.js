@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Head from './head';
 
 import styles from './app.module.css';
+import { init } from '../api/rand';
+init();
 
 class App extends Component {
   state = {};
