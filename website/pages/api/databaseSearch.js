@@ -29,12 +29,22 @@ export default async function databaseSearch(req, res) {
   var scores = [];
   for (var id of ids) {
     var score = opr == 'and' ? 1 : 0;
-    var infoText = await fs.readFile(
-      process.cwd() + '/public/' + id + '/index.json'
-    );
-    var indexText = await fs.readFile(
-      process.cwd() + '/public/' + id + '/index.json'
-    );
+    try {
+      var infoText = await fs.readFile(
+        process.cwd() + '/public/' + id + '/index.json'
+      );
+      var indexText = await fs.readFile(
+        process.cwd() + '/public/' + id + '/index.json'
+      );
+    } catch (e) {
+      id = 'Project-404';
+      var infoText = await fs.readFile(
+        process.cwd() + '/public/' + id + '/index.json'
+      );
+      var indexText = await fs.readFile(
+        process.cwd() + '/public/' + id + '/index.json'
+      );
+    }
     var info = JSON.parse(infoText);
     for (var paramTag of tags) {
       var match = false;

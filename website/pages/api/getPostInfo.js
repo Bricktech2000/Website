@@ -7,9 +7,16 @@ export default async function getPostInfo(req, res) {
   var { ids } = JSON.parse(req.body);
   var infos = {};
   for (var id of ids) {
-    var info = JSON.parse(
-      await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
-    );
+    try {
+      var info = JSON.parse(
+        await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
+      );
+    } catch (e) {
+      var id = 'Project-404';
+      var info = JSON.parse(
+        await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
+      );
+    }
     infos[id] = { id: id, ...info };
   }
   res.status(200).json(infos);
