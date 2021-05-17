@@ -37,7 +37,7 @@ export default async function databaseSearch(req, res) {
         process.cwd() + '/public/' + id + '/index.json'
       );
     } catch (e) {
-      id = 'Project-404';
+      id = 'Post-404';
       var infoText = await fs.readFile(
         process.cwd() + '/public/' + id + '/index.json'
       );

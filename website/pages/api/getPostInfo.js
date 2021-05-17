@@ -12,7 +12,7 @@ export default async function getPostInfo(req, res) {
         await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
       );
     } catch (e) {
-      var id = 'Project-404';
+      var id = 'Post-404';
       var info = JSON.parse(
         await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
       );
