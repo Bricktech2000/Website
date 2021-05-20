@@ -1,4 +1,5 @@
 export default [
+  'FPV-Drone-Freestyle-Frame',
   'Markdown-Inline-Formatter',
   'Learning-Gregg-Shorthand',
   'Google-Calendar-Automation',

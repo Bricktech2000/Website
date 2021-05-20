@@ -44,4 +44,5 @@ export default [
   'My-First-Website',
   'MiniML',
   'Spider-Robot',
+  'Racing-Drone',
 ];
