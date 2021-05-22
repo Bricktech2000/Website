@@ -27,6 +27,7 @@
   );
   padding: calc(calc(var(--smart-res-unit) * 7.5) * 25 / 100);
   transition: background 0.125s ease, transform 0.125s ease;
+  cursor: pointer;
 }
 .Nav a:nth-of-type(1) {
   transition: border 0.125s ease;
