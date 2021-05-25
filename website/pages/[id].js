@@ -25,7 +25,7 @@ var Post = (props) => {
   if (!id) return '';
   var tag = id.replace(/-/g, ' ');
 
-  if (tagMap[tag] || tag == 'posts')
+  if (tag in tagMap || tag == 'posts')
     return (
       <App>
         <HeaderEmpty />
