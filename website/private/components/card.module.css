@@ -75,7 +75,10 @@
   align-self: flex-end;
 }
 
-.card.software {
+.card {
+  background: var(--card-bg);
+}
+/*.card.software {
   border-color: var(--color);
 }
 .card.software .markup-h2 {
@@ -89,4 +92,4 @@
 }
 .card.blog {
   border-color: var(--card2-bg);
-}
+}*/
