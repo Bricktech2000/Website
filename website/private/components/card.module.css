@@ -8,7 +8,6 @@
   position: relative;
   top: 0;
 
-  background: var(--card-bg);
   transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out,
     top 0.25s ease-in-out;
   border-radius: calc(var(--smart-unit) * 0.5);
@@ -17,7 +16,7 @@
   white-space: initial;
   box-shadow: var(--bs);
   cursor: pointer;
-  background: var(--TODO);
+  border: calc(var(--smart-unit) * 0.15) solid transparent;
   /*border: calc(var(--smart-unit) * .5) solid var(--text);*/
 }
 .card > * {
@@ -75,16 +74,19 @@
 .card.row.inv img {
   align-self: flex-end;
 }
-.card-empty {
-  grid-row: span 1;
-  grid-column: span 1;
-  padding: 0;
-  margin: 0;
-  padding-top: 100%;
-  background: var(--lg-d);
-  border-radius: calc(var(--smart-unit) * 2.5);
+
+.card.software {
+  border-color: var(--color);
 }
-.card-empty:hover {
-  top: 0;
-  cursor: default;
+.card.software .markup-h2 {
+  color: var(--color);
+}
+.card.software:hover .markup-h2 {
+  color: var(--title);
+}
+.card.hardware {
+  border-color: var(--title);
+}
+.card.blog {
+  border-color: var(--card2-bg);
 }

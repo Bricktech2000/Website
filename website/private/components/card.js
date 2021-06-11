@@ -64,7 +64,15 @@ class Card extends Component {
         <a
           ref={this.ref}
           className={
-            styles.card + ' ' + styles[inverted] + ' ' + styles[direction]
+            styles.card +
+            ' ' +
+            styles[inverted] +
+            ' ' +
+            styles[direction] +
+            ' ' +
+            styles[
+              ['software', 'hardware', 'blog'][Math.floor(Math.random() * 3)]
+            ]
           }
           href={href}
           onClick={onClick}
