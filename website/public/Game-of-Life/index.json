@@ -1,6 +1,7 @@
 {
   "title": "Game of Life",
   "date": "2020-05-02",
+  "type": "software",
   "tags": ["Try it Now", "Showcase", "Software", "JavaScript", "HTML", "Web"],
   "btns": { "Try it!": ":./V4.html", "Demo": "#demo" },
   "desc": "Complex behavior can emerge from very simple rules. The game of live is a great example of this. Talking about how it works and how you can try it out!"

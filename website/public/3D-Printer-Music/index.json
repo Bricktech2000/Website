@@ -1,6 +1,7 @@
 {
   "title": "3D Printer Music",
   "date": "2020-06-20",
+  "type": "hardware",
   "tags": ["Try it Now", "Showcase", "Software", "Hacking", "3D Printing"],
   "btns": { "Demo": "#demo", "Try it!": "#try" },
   "desc": "Ever wanted to compose music using your 3D printer? Yeah no me neither lol. Writing a useless post about it all!"

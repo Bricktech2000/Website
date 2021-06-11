@@ -70,9 +70,7 @@ class Card extends Component {
             ' ' +
             styles[direction] +
             ' ' +
-            styles[
-              ['software', 'hardware', 'blog'][Math.floor(Math.random() * 3)]
-            ]
+            styles[this.state.info.type]
           }
           href={href}
           onClick={onClick}

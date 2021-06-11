@@ -1,6 +1,7 @@
 {
   "title": "HHO Generator",
   "date": "2020-10-18",
+  "type": "hardware",
   "tags": ["Showcase", "Hardware", "Electronics", "3D Printing", "Tech"],
   "btns": {
     "Parts Used": "#parts",

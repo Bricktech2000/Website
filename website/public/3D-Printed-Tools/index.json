@@ -1,6 +1,7 @@
 {
   "title": "3D Printed Tools",
   "date": "2021-03-15",
+  "type": "hardware",
   "tags": ["Try it Now", "Blog", "Showcase", "Hardware", "3D Printing"],
   "btns": { "Download STLs": ":./Tools2.zip" },
   "desc": "Turns out 3D printers are very good at printing useful tools! Showcasing 3 of my favorite ones, mainly designed to measure more complex geometry."

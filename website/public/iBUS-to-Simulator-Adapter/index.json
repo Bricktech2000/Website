@@ -1,6 +1,7 @@
 {
   "title": "iBUS to Simulator Adapter",
   "date": "2020-04-10",
+  "type": "hardware",
   "tags": [
     "Try it Now",
     "Showcase",

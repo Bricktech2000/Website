@@ -1,6 +1,7 @@
 {
   "title": "Learning the Stock Market",
   "date": "2020-06-08",
+  "type": "blog",
   "tags": ["Blog", "Work in Progress", "Software"],
   "btns": { "Profit Image": "#img" },
   "desc": "Taking you through my go at learning the stock market! This post will be updated whenever I learn something new!"

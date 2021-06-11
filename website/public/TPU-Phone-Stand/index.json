@@ -1,6 +1,7 @@
 {
   "title": "TPU Phone Stand",
   "date": "2021-01-20",
+  "type": "hardware",
   "tags": ["Blog", "Showcase", "Hardware", "3D Printing", "Tech"],
   "btns": {
     "Demo Images": "#img",
