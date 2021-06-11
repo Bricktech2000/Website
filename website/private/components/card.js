@@ -78,7 +78,7 @@ class Card extends Component {
           <div className={styles.desc}>{this.state.info.desc}</div>
           <div className={styles.tags}>
             {this.state.info.tags.map((tag) => (
-              <Tag key={tag} label={tag} mini={true} />
+              <Tag key={tag} label={tag} />
             ))}
           </div>
         </a>

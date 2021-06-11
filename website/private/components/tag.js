@@ -8,7 +8,6 @@ class Tag extends Component {
   state = {};
   render() {
     var tagClassType = styles[tagMap[this.props.label]];
-    var tagClassMini = this.props.mini ? styles.mini : '';
     var tagLabel = this.props.label;
     var tagActive = this.props.active;
 
@@ -23,32 +22,10 @@ class Tag extends Component {
       tagActive = tagActive ? 'on' : 'off';
     }
     var tagClassActive = styles[tagActive];
-    var tag = (
-      <div
-        className={
-          styles.tag +
-          ' ' +
-          tagClassType +
-          ' ' +
-          tagClassMini +
-          ' ' +
-          tagClassActive
-        }
-      >
+    return (
+      <div className={styles.tag + ' ' + tagClassType + ' ' + tagClassActive}>
         {tagLabel}
       </div>
-    );
-
-    if (this.props.mini) {
-      return tag;
-    }
-    return (
-      <Link
-        href={'/' + this.props.label.replace(/ /g, '-').replace('All', 'posts')}
-        scroll={this.props.scroll}
-      >
-        {tag}
-      </Link>
     );
   }
 }
