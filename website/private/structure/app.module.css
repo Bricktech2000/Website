@@ -5,8 +5,8 @@
     );
   grid-template-rows: calc(var(--smart-res-unit) * 7.5) auto auto auto;
   grid-template-areas:
-    'nav header aside'
-    'nav header aside'
+    'header header header'
+    'header header header'
     'nav main aside'
     'nav footer aside';
 }

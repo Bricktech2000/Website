@@ -11,7 +11,6 @@ import HeaderEmpty from '../private/structure/headerEmpty';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
-import MainPosts from '../private/structure/mainPosts';
 import Footer from '../private/structure/footer';
 import Error from '../private/error';
 
@@ -22,19 +21,6 @@ var Post = (props) => {
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
   //if (router.asPath === router.route) return '';
   if (!id) return '';
-  var tag = id.replace(/-/g, ' ');
-
-  if (tag in tagMap || tag == 'posts')
-    return (
-      <App>
-        <HeaderEmpty />
-        <Aside />
-        <Main>
-          <MainPosts tag={tag} />
-        </Main>
-        <Footer />
-      </App>
-    );
 
   if (pageMap.includes(id))
     return (

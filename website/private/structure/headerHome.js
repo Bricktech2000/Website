@@ -8,19 +8,16 @@ class HeaderHome extends Component {
   render() {
     return (
       <header className={styles.Header}>
-        <div className={styles['header-gradient']}></div>
-        <div className={styles.container}>
-          <div className={styles['markup-h1']}>
-            Techno
-            <wbr />
-            Viper
-          </div>
-          <div className={styles.author}>by Emilien Breton</div>
+        <div className={styles.color}></div>
+        <div className={styles.image}></div>
+        <div className={styles.about}>about</div>
+        <div className={styles.overlay}>
+          <div className={styles.title}>Let me show you what I can do.</div>
           <div className={styles.desc}>
-            A website for sharing my projects and blogging about tech-related
-            stuff!
+            I'm Emilien Breton, and I love [TODO]
           </div>
-          <Button label="View All Posts" href="/posts"></Button>
+          <div className={styles.cta}>View Projects</div>
+          <div className={styles.arrow}>V</div>
         </div>
       </header>
     );

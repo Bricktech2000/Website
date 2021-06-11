@@ -13,7 +13,7 @@ export default function Home() {
       <HeaderHome />
       <Aside />
       <Main>
-        <MainHome />
+        <MainHome tag="posts" />
       </Main>
       <Footer />
     </App>

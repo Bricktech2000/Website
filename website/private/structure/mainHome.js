@@ -1,73 +1,58 @@
 import React, { Component } from 'react';
-import Card from '../components/card';
-import CardTypes from '../components/cardTypes';
+import databaseSearch from '../api/databaseSearch';
 import TagList from '../components/tagList';
-import MosaicSmall from '../components/mosaicSmall';
 import Loading from '../components/loading';
-import ToggleSubscribe from '../components/toggleSubscribe';
+import Card from '../components/card';
+import MosaicFull from '../components/mosaicFull';
 import getPostInfo from '../api/getPostInfo';
-import DatabaseSearch from '../api/databaseSearch';
+import tagNameMap from '../api/tagNameMap';
 
-class MainHome extends Component {
+class MainPosts extends Component {
   state = {};
 
-  async componentDidMount() {
-    var recentIds = await DatabaseSearch({
+  fetchData = async () => {
+    var ids = await databaseSearch({
       opr: 'or',
-      tags: [],
-      excl: null,
-      max: 4,
+      tags: [this.props.tag],
+      excl: this.props.tag == 'posts' ? null : 'zero',
+      max: 1000,
     });
-    var tryItNowIds = await DatabaseSearch({
-      opr: 'or',
-      tags: ['Try it Now'],
-      excl: null,
-      max: 4,
-    });
-
     this.setState({
-      recentIds: recentIds,
-      tryItNowIds: tryItNowIds,
-      postInfos: await getPostInfo(recentIds.concat(tryItNowIds)),
+      tag: this.props.tag,
+      ids: ids,
+      postInfos: await getPostInfo(ids),
     });
+  };
+
+  //https://stackoverflow.com/questions/36486213/react-shouldcomponentupdate-is-called-even-when-props-or-state-for-that-compon
+  shouldComponentUpdate(nextProps) {
+    if (this.state.tag !== nextProps.tag) {
+      this.fetchData();
+      return false;
+    }
+    return true;
   }
 
   render() {
-    if (
-      this.state.recentIds === undefined ||
-      this.state.tryItNowIds === undefined ||
-      this.state.postInfos === undefined
-    )
-      return <Loading height="400vh" />;
+    if (this.state.ids === undefined) {
+      this.fetchData();
+      return <Loading height="1000vh" />;
+    }
 
     return (
       <React.Fragment>
-        <h1 className="markup-h1">Recent Projects</h1>
-        <ToggleSubscribe />
-        <CardTypes />
-        <br />
-        <MosaicSmall>
-          {this.state.recentIds.map((id) => (
+        <h1 className="markup-h1">
+          {tagNameMap[this.state.tag] || 'All Projects'}
+        </h1>
+        <TagList actives={[this.state.tag]} scroll={false} />
+        <MosaicFull>
+          {this.state.ids.map((id, i) => (
             <Card key={id} info={this.state.postInfos[id]} />
           ))}
-        </MosaicSmall>
-        <br />
-        <br />
-        <h1 className="markup-h1">Projects to Try</h1>
-        <br />
-        <MosaicSmall>
-          {this.state.tryItNowIds.map((id) => (
-            <Card key={id} info={this.state.postInfos[id]} />
-          ))}
-        </MosaicSmall>
-        <br />
-        <br />
-        <h1 className="markup-h1">Projects by Tag</h1>
-        <br />
-        <TagList scroll={true} />
+        </MosaicFull>
       </React.Fragment>
     );
   }
 }
 
-export default MainHome;
+export default MainPosts;
