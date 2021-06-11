@@ -1,0 +1,123 @@
+# Website Redesign
+
+---
+
+## Best Practices
+* **find a purpose** for the website and put it right on the homepage
+
+## Ideas and Stuff
+* use `HSL `colors
+* no nav bar
+* probably a floating _back_ arrow with `box-shadow`
+* animations?
+  * a
+* stop using tags for sorting posts
+* card styles:
+  * software: solid gray with `box-shadow`
+  * hardware: light gray outline (maybe with `box-shadow`?)
+  * blog posts: gradient `--color-primary` with `box-shadow` and `text-shadow`
+* display the date at which posts were written
+
+## Structure
+* make a story, guide the user
+1. landing page
+  * fullscreen with picture on the right
+  * _Let me show you what I can do._
+  * animated _scrool down_ arrow
+  * _I'm Emilien, a lorem ipsum._
+  * buttons: _email_, _messenger_, _github_, _linkedin_, _resume?_,
+2. _a bit more about myself_ (self-taught programmer, since when, learned electronics, 3d printing, etc.)
+3. featured posts (maybe?)
+4. posts with **new card styles**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

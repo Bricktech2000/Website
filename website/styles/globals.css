@@ -8,6 +8,8 @@
   --text: #aaa;
   --title: #fff;
 
+  --TODO: #f00;
+
   --smart-pixel-ratio: 3; /*the importance of the screen resolution in the scaling of items*/
   --smart-unit: var(--vh);
 

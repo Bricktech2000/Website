@@ -17,6 +17,7 @@
   white-space: initial;
   box-shadow: var(--bs);
   cursor: pointer;
+  background: var(--TODO);
   /*border: calc(var(--smart-unit) * .5) solid var(--text);*/
 }
 .card > * {

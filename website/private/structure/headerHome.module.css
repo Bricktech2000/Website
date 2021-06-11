@@ -14,6 +14,7 @@
   margin: auto;
   margin-bottom: calc(var(--smart-res-unit) * 10);
   color: var(--text);
+  background: var(--TODO);
 }
 .Header .container {
   grid-row: 1 / 2;
