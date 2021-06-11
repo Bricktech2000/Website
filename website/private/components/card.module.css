@@ -16,9 +16,22 @@
   white-space: initial;
   box-shadow: var(--bs);
   cursor: pointer;
-  border: calc(var(--smart-unit) * 0.15) solid transparent;
-  /*border: calc(var(--smart-unit) * .5) solid var(--text);*/
+  /*border: calc(var(--smart-unit) * 0.15) solid transparent;*/
 }
+
+.software {
+  background: var(--card-bg);
+  border: none;
+}
+.hardware {
+  background: var(--bg);
+  border: calc(var(--smart-unit) * 0.15) solid var(--text);
+}
+.blog {
+  background: var(--bg);
+  border: none;
+}
+
 .card > * {
   grid-column: span 2;
   white-space: initial;
@@ -75,9 +88,6 @@
   align-self: flex-end;
 }
 
-.card {
-  background: var(--card-bg);
-}
 /*.card.software {
   border-color: var(--color);
 }

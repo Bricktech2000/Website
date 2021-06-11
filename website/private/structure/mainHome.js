@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../components/card';
+import CardTypes from '../components/cardTypes';
 import TagList from '../components/tagList';
 import MosaicSmall from '../components/mosaicSmall';
 import Loading from '../components/loading';
@@ -43,6 +44,7 @@ class MainHome extends Component {
       <React.Fragment>
         <h1 className="markup-h1">Recent Projects</h1>
         <ToggleSubscribe />
+        <CardTypes />
         <br />
         <MosaicSmall>
           {this.state.recentIds.map((id) => (

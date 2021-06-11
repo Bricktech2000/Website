@@ -1,0 +1,9 @@
+.fieldset {
+  position: relative;
+  display: inline-block;
+  padding: calc(var(--smart-unit) * 1.5) calc(var(--smart-unit) * 2.5);
+  margin: 0 calc(var(--smart-unit) * 0.5);
+
+  border-radius: calc(var(--smart-unit) * 0.5);
+  box-shadow: var(--bs);
+}
