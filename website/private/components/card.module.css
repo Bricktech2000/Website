@@ -10,7 +10,6 @@
 
   transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out,
     top 0.25s ease-in-out;
-  border-radius: calc(var(--smart-unit) * 0.5);
   text-decoration: none;
   color: var(--text);
   white-space: initial;
@@ -20,12 +19,12 @@
 }
 
 .software {
-  background: var(--card-bg);
+  background: var(--card2-bg);
   border: none;
 }
 .hardware {
-  background: var(--bg);
-  border: calc(var(--smart-unit) * 0.15) solid var(--text);
+  background: var(--card-bg);
+  border: none;
 }
 .blog {
   background: var(--bg);
