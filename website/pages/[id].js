@@ -8,7 +8,6 @@ import getPostInfo from '../private/api/getPostInfo';
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
 import HeaderEmpty from '../private/structure/headerEmpty';
-import Nav from '../private/structure/nav';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
@@ -29,7 +28,6 @@ var Post = (props) => {
     return (
       <App>
         <HeaderEmpty />
-        <Nav highlight={'posts'} id={id} />
         <Aside />
         <Main>
           <MainPosts tag={tag} />
@@ -42,7 +40,6 @@ var Post = (props) => {
     return (
       <App>
         <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
-        <Nav highlight={'post'} id={id} />
         <Aside />
         <Main>
           <MainPost id={id} />

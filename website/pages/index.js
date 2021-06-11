@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import App from '../private/structure/app';
 import HeaderHome from '../private/structure/headerHome';
-import Nav from '../private/structure/nav';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
 import MainHome from '../private/structure/mainHome';
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <App>
       <HeaderHome />
-      <Nav />
       <Aside />
       <Main>
         <MainHome />
