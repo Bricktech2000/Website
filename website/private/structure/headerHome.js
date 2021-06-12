@@ -20,7 +20,9 @@ class HeaderHome extends Component {
     [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
       parallax((current, value) => {
         value = Math.min(value * 1.5, 1);
-        current.style.transform = `translateY(${Math.pow(1 - value, 3) * 15}%)`;
+        current.style.transform = `translateY(calc(var(--smart-unit) * ${
+          Math.pow(1 - value, 3) * 15
+        }))`;
         current.style.opacity = value;
       });
   }
@@ -33,7 +35,7 @@ class HeaderHome extends Component {
         <div className={styles.about} ref={this.parallaxRef}>
           <h1 className="markup-h1">A Bit More About Me</h1>
           <img src="/icon.png" />
-          <p ref={this.parallaxRefDesc}>
+          <p>
             Minim nulla id eiusmod ea quis exercitation in deserunt. Non
             excepteur exercitation ullamco consectetur Lorem officia. Occaecat
             est do et ex dolor consequat sit sunt laboris do aliquip nisi. Sit
