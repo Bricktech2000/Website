@@ -111,7 +111,7 @@
   0%,
   25% {
     opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * -3));
+    transform: translateX(-2%);
   }
   100% {
     opacity: 1;
