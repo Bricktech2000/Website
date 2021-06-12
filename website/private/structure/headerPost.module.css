@@ -27,21 +27,7 @@
   box-shadow: var(--bs), var(--bs);
 }
 
-@keyframes fade-left-animation {
-  0% {
-    opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * 3));
-  }
-  25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fade-right-animation {
+@keyframes fade-right-animation-1 {
   0%,
   25% {
     opacity: 0;
@@ -52,16 +38,37 @@
     transform: translateX(0%);
   }
 }
-
-.Header .markup-h1,
-.Header p {
-  animation: fade-right-animation 1s ease-out;
+@keyframes fade-right-animation-2 {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translateX(calc(var(--smart-unit) * -1.5));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes fade-right-animation-3 {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/*.Header .tags,
+.Header .markup-h1 {
+  animation: fade-right-animation-1 1s ease-out;
+}
+.Header p {
+  animation: fade-right-animation-2 1s ease-out;
+}
+.Header .tags,
 .Header .buttons {
-  animation: fade-left-animation 1s ease-out;
-}*/
+  animation: fade-right-animation-3 1s ease-out;
+}
 
 @media (max-aspect-ratio: 2/1) {
   .Header {
