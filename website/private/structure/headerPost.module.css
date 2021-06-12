@@ -26,6 +26,41 @@
   border-radius: calc(var(--smart-unit) * 2.5);
   box-shadow: var(--bs), var(--bs);
 }
+
+@keyframes fade-up-animation {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translateY(calc(var(--smart-unit) * 3));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-right-animation {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translateX(calc(var(--smart-unit) * -3));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.Header .markup-h1,
+.Header p {
+  animation: fade-right-animation 1s ease-out;
+}
+
+.Header .tags,
+.Header .buttons {
+  animation: fade-up-animation 1s ease-out;
+}
+
 @media (max-aspect-ratio: 2/1) {
   .Header {
     padding-right: calc(var(--smart-unit) * 5);

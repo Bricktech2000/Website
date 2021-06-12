@@ -33,12 +33,12 @@ class HeaderPost extends Component {
           {this.state.title}
         </div>
         <p>{this.state.desc}</p>
-        <div className="tags">
+        <div className={styles.tags}>
           {this.state.tags.map((tag) => (
             <Tag key={tag} label={tag} />
           ))}
         </div>
-        <div className="btns">
+        <div className={styles.buttons}>
           {Object.keys(this.state.btns).map((key) => {
             var href = this.state.btns[key].replace(/^:/, '');
             return (
