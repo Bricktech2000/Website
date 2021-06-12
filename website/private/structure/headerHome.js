@@ -17,7 +17,7 @@ class HeaderHome extends Component {
             I'm Emilien Breton, and I love [TODO]
           </div>
           <div className={styles.cta}>View Projects</div>
-          <div className={styles.arrow}>V</div>
+          <div className={styles.arrow}>╲╱</div>
         </div>
       </header>
     );

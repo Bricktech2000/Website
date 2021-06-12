@@ -15,8 +15,13 @@
 }
 
 .Header .image {
+  /*https://pixabay.com/photos/work-typing-computer-notebook-731198/*/
   grid-area: image;
-  background: var(--color);
+  /*https://stackoverflow.com/questions/26621513/darken-css-background-image*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/headerHomeImage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Header .about {
@@ -45,19 +50,48 @@
 }
 
 .Header .title {
-  height: 100%;
-  width: 100%;
   grid-area: title;
+  padding: calc(var(--smart-res-unit) * 2);
+  padding-right: 30vw;
+
+  color: var(--title);
+  line-height: 1;
+  letter-spacing: -0.08ch;
+  font-size: calc(var(--smart-res-unit) * 12);
+  font-weight: lighter;
+  text-shadow: 0 0 calc(var(--smart-unit) * 2) var(--black);
 }
 
 .Header .desc {
   grid-area: desc;
+  padding: calc(var(--smart-res-unit) * 2);
+
+  color: var(--title);
+  font-size: calc(var(--smart-res-unit) * 3);
+  font-weight: lighter;
 }
 
 .Header .cta {
   grid-area: cta;
+  justify-self: right;
+  align-self: center;
+  padding: calc(var(--smart-res-unit) * 2);
+
+  color: var(--color-l);
+  font-weight: lighter;
+  font-size: calc(var(--smart-res-unit) * 3);
 }
 
 .Header .arrow {
   grid-area: arrow;
+  justify-self: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: calc(var(--smart-res-unit) * 1.5);
+
+  color: var(--color-l);
+  font-weight: lighter;
+  font-size: calc(var(--smart-res-unit) * 3);
+  letter-spacing: -0.1ch;
 }
