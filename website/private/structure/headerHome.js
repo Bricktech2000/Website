@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AutoType from '../components/autoType';
+import parallax from '../api/parallax';
 
 import styles from './headerHome.module.css';
 
@@ -9,28 +10,16 @@ class HeaderHome extends Component {
   constructor(props) {
     super(props);
 
-    this.titleRef = React.createRef();
+    [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
+      parallax(
+        [this.componentDidMount, this.componentDidUnmount],
+        (current, value) => {
+          value = Math.min(value * 2, 1);
+          current.style.transform = `translateY(${(1 - value) * 50}%)`;
+          current.style.opacity = Math.pow(value * 2, 4);
+        }
+      );
   }
-
-  componentDidMount = () => {
-    document.addEventListener('scroll', this.scrollHandler);
-  };
-  componentDidUnmount = () => {
-    document.removeEventListener('scroll', this.scrollHandler);
-  };
-  scrollHandler = () => {
-    if (!this.titleRef.current) return;
-    var percentage =
-      1 -
-      this.titleRef.current.getBoundingClientRect().top /
-        document.documentElement.clientHeight;
-    percentage = Math.min(Math.max(percentage, 0), 0.5);
-
-    this.titleRef.current.style.transform = `translateY(${
-      (percentage - 0.5) * -50
-    }%)`;
-    this.titleRef.current.style.opacity = Math.pow(percentage * 2, 4);
-  };
 
   render() {
     return (
@@ -38,7 +27,7 @@ class HeaderHome extends Component {
         <div className={styles.color}></div>
         <div className={styles.image}></div>
         <div className={styles.about}>
-          <h1 className="markup-h1" ref={this.titleRef}>
+          <h1 className="markup-h1" ref={this.parallaxRef}>
             A Bit More About Me
           </h1>
           <img src="/icon.png" />
