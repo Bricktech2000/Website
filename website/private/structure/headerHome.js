@@ -6,8 +6,8 @@ import styles from './headerHome.module.css';
 
 ////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
 import Mail from '../svgs/043-mail.svg';
-import Facebook from '../svgs/025-facebook.svg';
 import Github from '../svgs/009-github-1.svg';
+import Facebook from '../svgs/025-facebook.svg';
 import LinkedIn from '../svgs/037-linkedin.svg';
 import Document from '../svgs/008-document.svg';
 
@@ -48,14 +48,14 @@ class HeaderHome extends Component {
             >
               <Mail />
             </a>
+            <a target="_blank" href="https://github.com/Bricktech2000/">
+              <Github />
+            </a>
             <a
               target="_blank"
               href="https://www.facebook.com/emilien.breton.71"
             >
               <Facebook />
-            </a>
-            <a target="_blank" href="https://github.com/Bricktech2000/">
-              <Github />
             </a>
           </div>
         </div>
