@@ -49,6 +49,18 @@
   grid-template-rows: 1fr auto auto 1fr auto;
 }
 
+@keyframes fade-up-animation {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translateX(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 .Header .title {
   grid-area: title;
   padding: calc(var(--smart-res-unit) * 2);
@@ -60,6 +72,8 @@
   font-size: calc(var(--smart-res-unit) * 12);
   font-weight: lighter;
   text-shadow: 0 0 calc(var(--smart-unit) * 2) var(--black);
+
+  animation: fade-up-animation 1s ease-out;
 }
 
 .Header .desc {
@@ -69,6 +83,8 @@
   color: var(--title);
   font-size: calc(var(--smart-res-unit) * 3);
   font-weight: lighter;
+
+  animation: fade-up-animation 1s ease-out;
 }
 
 .Header .cta {
