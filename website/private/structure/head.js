@@ -11,7 +11,7 @@ class Head extends Component {
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0"
         />
-        <title>TechnoViper Official Website - by Emilien Breton</title>
+        <title>Emilien Breton | Project Portfolio</title>
         <meta
           name="description"
           content="A website for sharing my projects and blogging about tech-related stuff!"
