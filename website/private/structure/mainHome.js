@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import databaseSearch from '../api/databaseSearch';
-import TagList from '../components/tagList';
 import Loading from '../components/loading';
 import Card from '../components/card';
 import MosaicFull from '../components/mosaicFull';
