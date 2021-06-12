@@ -20,6 +20,7 @@ class HeaderHome extends Component {
             ></AutoType>
           </div>
           <div className={styles.cta}>View Projects</div>
+          {/*https://en.wikipedia.org/wiki/Box-drawing_character*/}
           <div className={styles.arrow}>╲╱</div>
         </div>
       </header>
