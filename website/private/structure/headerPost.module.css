@@ -27,15 +27,17 @@
   box-shadow: var(--bs), var(--bs);
 }
 
-@keyframes fade-up-animation {
-  0%,
+@keyframes fade-left-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(var(--smart-unit) * 3));
+  }
   25% {
     opacity: 0;
-    transform: translateY(calc(var(--smart-unit) * 3));
   }
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -56,10 +58,10 @@
   animation: fade-right-animation 1s ease-out;
 }
 
-.Header .tags,
+/*.Header .tags,
 .Header .buttons {
-  animation: fade-up-animation 1s ease-out;
-}
+  animation: fade-left-animation 1s ease-out;
+}*/
 
 @media (max-aspect-ratio: 2/1) {
   .Header {
