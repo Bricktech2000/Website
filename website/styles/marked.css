@@ -1,10 +1,12 @@
 .marked h2,
 .markup-h2 {
   font-size: calc(var(--smart-res-unit) * 3.5);
+  letter-spacing: -0.08ch;
 }
 .marked h1,
 .markup-h1 {
   font-size: calc(var(--smart-res-unit) * 5);
+  letter-spacing: -0.08ch;
 }
 .marked h1,
 .marked h2,
