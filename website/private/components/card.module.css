@@ -13,12 +13,13 @@
   text-decoration: none;
   color: var(--text);
   white-space: initial;
+  background: var(--card-bg);
   box-shadow: var(--bs);
   cursor: pointer;
   /*border: calc(var(--smart-unit) * 0.15) solid transparent;*/
 }
 
-.software {
+/*.software {
   background: var(--card2-bg);
   border: none;
 }
@@ -29,7 +30,7 @@
 .blog {
   background: var(--bg);
   border: none;
-}
+}*/
 
 .card > * {
   grid-column: span 2;
