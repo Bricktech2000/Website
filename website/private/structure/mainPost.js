@@ -4,13 +4,26 @@ import databaseSearch from '../api/databaseSearch';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
 import Loading from '../components/loading';
+import parallax from '../api/parallax';
 
 import styles from './mainPost.module.css';
 
 class MainPost extends Component {
   state = { id: null };
 
+  constructor(props) {
+    super(props);
+
+    [this.componentDidMount2, this.componentDidUnmount, this.parallaxRef] =
+      parallax((current, value) => {
+        current.style.transform = `translateY(calc(var(--smart-unit) * ${
+          (value - 0.25) * -20
+        }))`;
+      });
+  }
+
   async componentDidMount() {
+    this.componentDidMount2();
     this.componentDidUpdate();
   }
   async componentDidUpdate() {
@@ -91,6 +104,7 @@ class MainPost extends Component {
     return (
       <React.Fragment>
         <p
+          ref={this.parallaxRef}
           className={styles['marked'] + ' marked'}
           dangerouslySetInnerHTML={this.getMarkdown()}
         ></p>

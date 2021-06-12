@@ -3,7 +3,7 @@
   column-width: calc(var(--smart-res-unit) * 50);
   column-gap: calc(var(--smart-unit) * 10);
   column-rule: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
-  padding: calc(var(--smart-unit) * 5) 7.5vw;
+  margin: calc(var(--smart-unit) * 5) 7.5vw;
 }
 @media (max-aspect-ratio: 1/1) {
   .marked {
