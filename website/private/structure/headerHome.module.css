@@ -26,9 +26,41 @@
 
 .Header .about {
   grid-area: about;
+
+  display: grid;
+  grid-template-areas: 'title title' 'image paragraph' 'image icons';
+  grid-template-columns: calc(var(--smart-res-unit) * 15) 1fr;
   background: var(--card-bg);
   box-shadow: var(--bs);
-  height: calc(var(--smart-unit) * 20);
+  padding: calc(var(--smart-unit) * 7.5);
+  padding-right: calc(var(--smart-unit) * 20);
+}
+.Header .about h1 {
+  grid-area: title;
+
+  margin: 0;
+  padding-bottom: calc(var(--smart-unit) * 6);
+}
+.Header .about p {
+  grid-area: paragraph;
+
+  font-size: calc(var(--smart-res-unit) * 2.5);
+  font-weight: lighter;
+  padding-left: calc(var(--smart-unit) * 6);
+  text-align: justify;
+}
+.Header .about .icons {
+  grid-area: icons;
+  text-align: right;
+
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: calc(var(--smart-res-unit) * 4);
+  color: var(--color-l);
+}
+.Header .about img {
+  grid-area: image;
+  width: 100%;
 }
 
 .Header .overlay {
