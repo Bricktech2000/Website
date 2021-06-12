@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '../components/button';
+import AutoType from '../components/autoType';
 
 import styles from './headerHome.module.css';
 
@@ -14,7 +14,10 @@ class HeaderHome extends Component {
         <div className={styles.overlay}>
           <div className={styles.title}>Let me show you what I can do.</div>
           <div className={styles.desc}>
-            I'm Emilien Breton, and I love [TODO]
+            I'm Emilien Breton, and I love{' '}
+            <AutoType
+              keywords={['programming', 'electronics', 'robotics']}
+            ></AutoType>
           </div>
           <div className={styles.cta}>View Projects</div>
           <div className={styles.arrow}>╲╱</div>

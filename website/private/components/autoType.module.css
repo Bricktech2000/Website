@@ -1,0 +1,22 @@
+.container {
+  display: inline-block;
+  vertical-align: 10%;
+  padding: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 1);
+
+  background: var(--card2-bg);
+  border-radius: calc(var(--smart-unit) * 1);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: calc(var(--smart-res-unit) * 2);
+}
+.cursor {
+  display: inline;
+  color: var(--color-l);
+  animation: blink-animation 0.5s step-start 0s infinite;
+}
+
+/*https://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations*/
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
