@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   changeTheme = (e) => {
-    console.log('a');
     e.preventDefault();
     //https://stackoverflow.com/questions/49411796/how-do-i-detect-i-am-on-server-vs-client-in-next-js
     if (!process.browser) return;
