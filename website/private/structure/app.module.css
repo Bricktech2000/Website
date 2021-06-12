@@ -1,9 +1,9 @@
 .App {
   display: grid;
-  grid-template-columns: calc(var(--smart-res-unit) * 7.5) 1fr calc(
-      var(--smart-res-unit) * 7.5
+  grid-template-columns: calc(var(--smart-res-unit) * 0) 1fr calc(
+      var(--smart-res-unit) * 0
     );
-  grid-template-rows: calc(var(--smart-res-unit) * 7.5) auto auto auto;
+  grid-template-rows: calc(var(--smart-res-unit) * 0) auto auto auto;
   grid-template-areas:
     'header header header'
     'header header header'

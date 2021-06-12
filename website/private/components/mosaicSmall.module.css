@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(calc(var(--smart-res-unit) * 45), 1fr)
+    minmax(calc(var(--smart-res-unit) * 60), 1fr)
   );
   grid-gap: calc(var(--smart-unit) * 2.5);
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout*/
@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc(var(--smart-res-unit) * 22.5), 1fr)
+    minmax(calc(var(--smart-res-unit) * 30), 1fr)
   );
   grid-template-rows: auto auto;
   grid-gap: calc(var(--smart-unit) * 2.5);
