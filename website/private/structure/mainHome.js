@@ -42,9 +42,9 @@ class MainPosts extends Component {
     return (
       <React.Fragment>
         <h1 className="markup-h1">
-          {tagNameMap[this.state.tag] || 'All Projects'}
+          {tagNameMap[this.state.tag] || 'My Projects'}
         </h1>
-        <TagList actives={[this.state.tag]} scroll={false} />
+        <br />
         <MosaicFull>
           {this.state.ids.map((id, i) => (
             <Card key={id} info={this.state.postInfos[id]} />
