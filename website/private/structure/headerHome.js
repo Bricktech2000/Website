@@ -4,6 +4,13 @@ import parallax from '../api/parallax';
 
 import styles from './headerHome.module.css';
 
+////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
+import Mail from '../svgs/043-mail.svg';
+import Facebook from '../svgs/025-facebook.svg';
+import Github from '../svgs/009-github-1.svg';
+import LinkedIn from '../svgs/037-linkedin.svg';
+import Document from '../svgs/008-document.svg';
+
 class HeaderHome extends Component {
   state = {};
 
@@ -33,7 +40,24 @@ class HeaderHome extends Component {
             adipisicing nostrud proident velit commodo proident qui cillum
             aliquip qui sunt et incididunt.
           </p>
-          <div className={styles.icons}>O O O O</div>
+          <div className={styles.icons}>
+            {/*https://css-tricks.com/snippets/html/mailto-links/*/}
+            <a
+              target="_blank"
+              href="mailto:bricktech2000@gmail.com?subject=I'm%20interested%20in%20your%20work!"
+            >
+              <Mail />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/emilien.breton.71"
+            >
+              <Facebook />
+            </a>
+            <a target="_blank" href="https://github.com/Bricktech2000/">
+              <Github />
+            </a>
+          </div>
         </div>
         <div className={styles.overlay}>
           <div className={styles.title}>Let me show you what I can do.</div>
