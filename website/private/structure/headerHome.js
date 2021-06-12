@@ -11,7 +11,7 @@ class HeaderHome extends Component {
         <div className={styles.color}></div>
         <div className={styles.image}></div>
         <div className={styles.about}>
-          <h1 className="markup-h1">A bit more about myself</h1>
+          <h1 className="markup-h1">A Bit More About Me</h1>
           <img src="/icon.png" />
           <p>
             Minim nulla id eiusmod ea quis exercitation in deserunt. Non
