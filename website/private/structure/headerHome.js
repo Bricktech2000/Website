@@ -11,14 +11,11 @@ class HeaderHome extends Component {
     super(props);
 
     [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
-      parallax(
-        [this.componentDidMount, this.componentDidUnmount],
-        (current, value) => {
-          value = Math.min(value * 2, 1);
-          current.style.transform = `translateY(${(1 - value) * 50}%)`;
-          current.style.opacity = Math.pow(value * 2, 4);
-        }
-      );
+      parallax((current, value) => {
+        value = Math.min(value * 1.5, 1);
+        current.style.transform = `translateY(${Math.pow(1 - value, 3) * 15}%)`;
+        current.style.opacity = value;
+      });
   }
 
   render() {
@@ -26,12 +23,10 @@ class HeaderHome extends Component {
       <header className={styles.Header}>
         <div className={styles.color}></div>
         <div className={styles.image}></div>
-        <div className={styles.about}>
-          <h1 className="markup-h1" ref={this.parallaxRef}>
-            A Bit More About Me
-          </h1>
+        <div className={styles.about} ref={this.parallaxRef}>
+          <h1 className="markup-h1">A Bit More About Me</h1>
           <img src="/icon.png" />
-          <p>
+          <p ref={this.parallaxRefDesc}>
             Minim nulla id eiusmod ea quis exercitation in deserunt. Non
             excepteur exercitation ullamco consectetur Lorem officia. Occaecat
             est do et ex dolor consequat sit sunt laboris do aliquip nisi. Sit

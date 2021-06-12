@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-export default function parallax(
-  [componentDidMount, componentDidUnmount],
-  callback
-) {
+export default function parallax(callback) {
   var parallaxRef = React.createRef();
 
   var scrollHandler = () => {
