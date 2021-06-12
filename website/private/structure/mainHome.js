@@ -4,7 +4,6 @@ import Loading from '../components/loading';
 import Card from '../components/card';
 import MosaicFull from '../components/mosaicFull';
 import getPostInfo from '../api/getPostInfo';
-import tagNameMap from '../api/tagNameMap';
 
 class MainPosts extends Component {
   state = {};
@@ -12,8 +11,8 @@ class MainPosts extends Component {
   fetchData = async () => {
     var ids = await databaseSearch({
       opr: 'or',
-      tags: [this.props.tag],
-      excl: this.props.tag == 'posts' ? null : 'zero',
+      tags: ['posts'],
+      excl: null,
       max: 1000,
     });
     this.setState({
@@ -40,9 +39,7 @@ class MainPosts extends Component {
 
     return (
       <React.Fragment>
-        <h1 className="markup-h1">
-          {tagNameMap[this.state.tag] || 'My Projects'}
-        </h1>
+        <h1 className="markup-h1">My Projects</h1>
         <br />
         <MosaicFull>
           {this.state.ids.map((id, i) => (
