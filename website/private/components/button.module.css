@@ -3,7 +3,7 @@
   color: var(--title);
   margin: calc(var(--smart-unit) * 0.5);
   padding: calc(var(--smart-unit) * 0.5);
-  border-radius: 100vh; /* let's gooooo */
+  border-radius: calc(var(--smart-unit) * 0.5);
   box-shadow: var(--bs);
   text-decoration: none;
   font-weight: 500;
