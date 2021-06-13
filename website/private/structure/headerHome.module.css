@@ -200,4 +200,18 @@
     width: 100%;
     text-align: center;
   }
+
+  .Header .about {
+    grid-template-areas: 'title' 'image' 'paragraph' 'icons';
+    grid-template-columns: 1fr;
+    padding: calc(var(--smart-unit) * 5);
+  }
+  .Header .about img {
+    width: calc(100% - 10vw - 10vw);
+    margin: 0 10vw;
+  }
+  .Header .about p {
+    padding: calc(var(--smart-unit) * 5) 0;
+    font-size: calc(var(--smart-res-unit) * 2);
+  }
 }
