@@ -36,11 +36,19 @@ class HeaderHome extends Component {
           <h1 className="markup-h1">A Bit More About Me</h1>
           <img src="/icon.png" />
           <p>
-            Minim nulla id eiusmod ea quis exercitation in deserunt. Non
-            excepteur exercitation ullamco consectetur Lorem officia. Occaecat
-            est do et ex dolor consequat sit sunt laboris do aliquip nisi. Sit
-            adipisicing nostrud proident velit commodo proident qui cillum
-            aliquip qui sunt et incididunt.
+            {/*
+            programming portfolio examples
+            https://www.freecodecamp.org/news/15-web-developer-portfolios-to-inspire-you-137fb1743cae/
+            https://www.dejan.works/about/
+            https://www.dejan.works/files/Dejan_Markovic_CV.pdf
+            */}
+            Problem solving and critical thinking are two of my most prominent
+            skills. I love exploring new hobbies and interests to find out where
+            they take me. Despite this, I often become unmotivated when not
+            challenged; I can't stand inefficiency. In my opinion, coming up
+            with creative ideas isn't sufficient. Acting on them and reflecting
+            on the outcome is where the learning and self-improvement really
+            takes place.
           </p>
           <div className={styles.icons}>
             {/*https://css-tricks.com/snippets/html/mailto-links/*/}

@@ -40,6 +40,7 @@
 
   margin: 0;
   padding-bottom: calc(var(--smart-unit) * 6);
+  line-height: 1;
 }
 .Header .about p {
   grid-area: paragraph;
@@ -207,8 +208,8 @@
     padding: calc(var(--smart-unit) * 5);
   }
   .Header .about img {
-    width: calc(100% - 10vw - 10vw);
-    margin: 0 10vw;
+    width: calc(100% - 20vw - 20vw);
+    margin: 0 20vw;
   }
   .Header .about p {
     padding: calc(var(--smart-unit) * 5) 0;
