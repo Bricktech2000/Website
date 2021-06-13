@@ -182,7 +182,7 @@
     padding-right: calc(var(--smart-unit) * 7.5);
   }
   .Header .desc {
-    font-size: calc(var(--smart-unit) * 3);
+    font-size: calc(var(--smart-unit) * 3.5);
   }
   .Header .overlay {
     grid-template-areas:
