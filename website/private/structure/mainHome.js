@@ -34,7 +34,7 @@ class MainPosts extends Component {
   render() {
     if (this.state.ids === undefined) {
       this.fetchData();
-      return <Loading height="1000vh" />;
+      return <Loading height="10000vh" />;
     }
 
     return (
