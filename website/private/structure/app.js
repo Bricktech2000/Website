@@ -49,7 +49,7 @@ class App extends Component {
         <Head
           title={'Emilien Breton | ' + this.props.title}
           description={this.props.description}
-          image={'https://emilien.ml/' + this.props.image}
+          image={'https://emilien.ca/' + this.props.image}
         />
         <div className={styles.App}>{this.props.children}</div>
       </React.Fragment>

@@ -1,7 +1,7 @@
 log in to cloudflare
 
-add domain: emilien.ml
-update nameservers for emilien.ml
+add domain: emilien.ca
+update nameservers for emilien.ca
 
 go to DNS tab
 update IP address
@@ -16,20 +16,20 @@ go to DNS tab
 add record
 type: cname
 name: ----- (secret unproxied unportmapped subdomain for admin access)
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 Proxy status: uncheck
 
 add record
 type: cname
 name: info
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 
 add record
 type: cname
 name: dev
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 
 go to SSL/TLS tab
@@ -66,41 +66,48 @@ paste in:
 addEventListener('fetch', event => {
   const request = event.request;
   var url = new URL(request.url);
-  url.host = 'emilien.ml:[PORT]';
+  url.host = 'emilien.ca:[PORT]';
   //for 'dev' only: url.protocol = 'http';
   return event.respondWith(fetch(url, request));
 });
 go back to 'workers' page
 add route
-route: [NAME].emilien.ml/*
+route: [NAME].emilien.ca/*
 worker: [NAME]
 make 3 of them with the right ports (see router port forwarding.howto) and the following names: https, dev, info
+
+
+follow these steps to create a redirect from emilien.ml to emilien.ca: https://support.cloudflare.com/hc/en-us/articles/200172286-Configuring-URL-forwarding-or-redirects-with-Cloudflare-Page-Rules
+
+
+
+
 
 
 go to DNS tab
 
 add record
 type: a
-name: emilien.ml
+name: emilien.ca
 content: [IP]
 TTL: auto
 
 add record
 type: cname
 name: dev
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 
 add record
 type: cname
 name: info
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 
 add record
 type: cname
 name: admin-bricktech2000
-content: emilien.ml
+content: emilien.ca
 TTL: auto
 proxied: uncheck
 

@@ -21,13 +21,13 @@ sudo certbot certonly --standalone
 enter email address
 Y
 N (you wish I would)
-emilien.ml -----.emilien.ml
+emilien.ca -----.emilien.ca
 /home/server/server/Website/src/client/
 //if a file not found error occurs, check previous line, ensure port forwarding is setup properly and make sure no other HTTP servers are listening
 
 edit server cert and key for:
-/etc/letsencrypt/live/emilien.ml/fullchain.pem
-/etc/letsencrypt/live/emilien.ml/privkey.pem
+/etc/letsencrypt/live/emilien.ca/fullchain.pem
+/etc/letsencrypt/live/emilien.ca/privkey.pem
 
 make sure certificate is from letsencrypt (in chrome)
 
