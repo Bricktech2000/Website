@@ -48,7 +48,7 @@ class HeaderHome extends Component {
             challenged; I can't stand inefficiency. In my opinion, coming up
             with creative ideas isn't sufficient. Acting on them and reflecting
             on the outcome is where the learning and self-improvement really
-            takes place.
+            take place.
           </p>
           <div className={styles.icons}>
             {/*https://css-tricks.com/snippets/html/mailto-links/*/}
