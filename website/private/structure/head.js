@@ -11,12 +11,12 @@ class Head extends Component {
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0"
         />
+        <meta property="og:title" content={this.props.title} />
+        <meta property="og:description" content={this.props.description} />
+        <meta property="og:image" content={this.props.image} />
+
         <title>{this.props.title}</title>
         <meta name="description" content={this.props.description} />
-        <meta name="og:description" content={this.props.description} />
-        <meta name="og:image" content={this.props.image} />
-        <meta name="og:title" content={this.props.title} />
-
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-title" content="TechnoViper" />
         {/* https://stackoverflow.com/questions/2208933/how-do-i-force-a-favicon-refresh */}

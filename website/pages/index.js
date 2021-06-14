@@ -12,7 +12,7 @@ export default function Home() {
     <App
       title="Project Portfolio"
       description="A website for sharing my projects and blogging about tech-related stuff!"
-      image="/icon.png"
+      image="icon.png"
     >
       <HeaderHome />
       <Aside />
