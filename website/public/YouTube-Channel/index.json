@@ -2,22 +2,7 @@
   "title": "YouTube Channel",
   "date": "2020-04-10",
   "type": "blog",
-  "tags": [
-    "Try it Now",
-    "Blog",
-    "Showcase",
-    "Work in Progress",
-    "Software",
-    "Hardware",
-    "Arduino",
-    "NodeJS",
-    "Electronics",
-    "Web",
-    "Hacking",
-    "3D Printing",
-    "Radio Controlled",
-    "Tech"
-  ],
+  "tags": ["Blog", "Web", "Outdated"],
   "btns": {
     "View Channel": ":https://www.youtube.com/channel/UCGj6pfxZ0XYJU29XNwXPPxg/featured"
   },

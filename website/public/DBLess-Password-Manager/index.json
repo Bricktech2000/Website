@@ -3,13 +3,15 @@
   "date": "2021-01-20",
   "type": "software",
   "tags": [
-    "Try it Now",
-    "Showcase",
     "Software",
     "Python",
     "Git",
     "Web",
-    "Hacking"
+    "Hacking",
+    "Security",
+    "Hashing",
+    "Data Processing",
+    "Scripting"
   ],
   "btns": {
     "Try it!": "#try",

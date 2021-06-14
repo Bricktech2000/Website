@@ -2,7 +2,14 @@
   "title": "HHO Generator",
   "date": "2020-10-18",
   "type": "hardware",
-  "tags": ["Showcase", "Hardware", "Electronics", "3D Printing", "Tech"],
+  "tags": [
+    "Demo",
+    "Hardware",
+    "Electronics",
+    "3D Design",
+    "3D Printing",
+    "Explosives"
+  ],
   "btns": {
     "Parts Used": "#parts",
     "Internals Image": "#img",

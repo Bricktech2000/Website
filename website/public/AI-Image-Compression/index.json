@@ -2,7 +2,18 @@
   "title": "AI Image Compression",
   "date": "2020-07-19",
   "type": "software",
-  "tags": ["Showcase", "Software", "Python", "Git"],
+  "tags": [
+    "Software",
+    "Demo",
+    "Python",
+    "Git",
+    "Tensorflow",
+    "Keras",
+    "Artificial Intelligence",
+    "Mutliprocessing",
+    "Data Processing",
+    "Scripting"
+  ],
   "btns": { "Demo": "#demo", "Code": "./AI%20Image%20Compression.py" },
   "desc": "Showing you how a machine learning program made in 5 days can compress images! This is my second AI program, but one of my best ever!"
 }

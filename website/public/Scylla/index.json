@@ -2,16 +2,7 @@
   "title": "Scylla",
   "date": "2020-04-14",
   "type": "software",
-  "tags": [
-    "Try it Now",
-    "Showcase",
-    "Software",
-    "JavaScript",
-    "HTML",
-    "Web",
-    "Hacking",
-    "Tech"
-  ],
+  "tags": ["Showcase", "Software", "JavaScript", "HTML", "Encryption"],
   "btns": { "Try it!": ":./scyllaV1.html" },
   "desc": "Writing about Scylla, a program to split a secret file into many key files, all of which are needed to reconstruct the secret file!"
 }

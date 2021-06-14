@@ -4,15 +4,13 @@
   "type": "hardware",
   "tags": [
     "Blog",
-    "Showcase",
     "Software",
     "Hardware",
-    "JavaScript",
-    "HTML",
-    "CSS",
+    "Raspberry Pi",
     "NodeJS",
     "Web",
-    "3D Printing"
+    "3D Printing",
+    "Outdated"
   ],
   "btns": {
     "Image": "#img",

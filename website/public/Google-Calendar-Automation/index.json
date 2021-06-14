@@ -2,7 +2,14 @@
   "title": "Google Calendar Automation",
   "date": "2021-03-30",
   "type": "software",
-  "tags": ["Try it Now", "Showcase", "Software", "Python", "Git", "Web"],
+  "tags": [
+    "Software",
+    "Python",
+    "Git",
+    "Web",
+    "Google Calendar API",
+    "Scripting"
+  ],
   "btns": {
     "Demo Video": "#demo",
     "Try it!": "#try",

@@ -3,16 +3,14 @@
   "date": "2020-04-30",
   "type": "software",
   "tags": [
-    "Try it Now",
     "Showcase",
     "Software",
-    "Hardware",
     "JavaScript",
     "HTML",
     "CSS",
     "Java",
-    "App",
-    "Web"
+    "Android App",
+    "Android Studio"
   ],
   "btns": {
     "Try it!": ":./index2.html",

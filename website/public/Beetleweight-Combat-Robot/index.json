@@ -4,13 +4,14 @@
   "type": "hardware",
   "tags": [
     "Blog",
-    "Work in Progress",
     "Hardware",
+    "Work in Progress",
     "Arduino",
     "Electronics",
+    "3D Design",
+    "3D Rendering",
     "3D Printing",
-    "Radio Controlled",
-    "Tech"
+    "Physics Calculations"
   ],
   "btns": {
     "First Version Photo": "#first",

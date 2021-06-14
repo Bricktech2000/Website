@@ -2,13 +2,7 @@
   "title": "FPV Drone Freestyle Frame",
   "date": "2021-05-20",
   "type": "hardware",
-  "tags": [
-    "Showcase",
-    "Work in Progress",
-    "Hardware",
-    "Electronics",
-    "Radio Controlled"
-  ],
+  "tags": ["Work in Progress", "Hardware", "Electronics", "Drone", "Demo"],
   "btns": {
     "Frame Image": "#img",
     "Building Images": "#build",

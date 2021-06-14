@@ -2,7 +2,7 @@
   "title": "Crash.js",
   "date": "2020-07-22",
   "type": "software",
-  "tags": ["Try it Now", "Showcase", "Software", "JavaScript", "Hacking"],
+  "tags": ["Software", "JavaScript", "Hacking"],
   "btns": { "Try it!": ":./Crash.js", "Code": "#code" },
   "desc": "Just a simple program that crashes any computer you run it on... Explaining in-depth how it all works and how to try it out!"
 }

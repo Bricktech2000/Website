@@ -2,7 +2,7 @@
   "title": "FPV Drone HD Footage",
   "date": "2021-03-10",
   "type": "hardware",
-  "tags": ["Blog", "Showcase", "Hardware", "Radio Controlled", "Tech"],
+  "tags": ["Demo", "Hardware", "3D Printing", "Drone"],
   "btns": {
     "Demo Footage": "#demo",
     "Parts List": "#parts",

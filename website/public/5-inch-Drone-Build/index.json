@@ -2,17 +2,7 @@
   "title": "5-inch Drone Build",
   "date": "2020-10-28",
   "type": "hardware",
-  "tags": [
-    "Blog",
-    "Showcase",
-    "Work in Progress",
-    "Software",
-    "Hardware",
-    "Electronics",
-    "3D Printing",
-    "Radio Controlled",
-    "Tech"
-  ],
+  "tags": ["Blog", "Hardware", "Electronics", "Soldering", "3D Printing"],
   "btns": {
     "Building Images": "#img",
     "Flight Demo": "#demo",

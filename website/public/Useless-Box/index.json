@@ -3,14 +3,15 @@
   "date": "2020-09-22",
   "type": "hardware",
   "tags": [
-    "Showcase",
+    "Demo",
     "Software",
     "Hardware",
     "C++",
     "Arduino",
     "Electronics",
+    "3D Design",
     "3D Printing",
-    "Tech"
+    "Modular"
   ],
   "btns": {
     "Demo": "#demo",

@@ -2,15 +2,7 @@
   "title": "5-inch Drone Parts",
   "date": "2020-08-30",
   "type": "hardware",
-  "tags": [
-    "Blog",
-    "Showcase",
-    "Work in Progress",
-    "Hardware",
-    "Electronics",
-    "Radio Controlled",
-    "Tech"
-  ],
+  "tags": ["Blog", "Hardware", "Electronics"],
   "btns": {
     "Mockup Images": "#img",
     "Previous Post": "../5-inch-Drone-Virtual-Prototype/",

@@ -2,7 +2,15 @@
   "title": "Encoder 2.0",
   "date": "2020-04-24",
   "type": "software",
-  "tags": ["Try it Now", "Showcase", "Software", "JavaScript", "HTML", "Web"],
+  "tags": [
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "Web",
+    "RegExp",
+    "Scripting"
+  ],
   "btns": { "Try it!": ":./Encoder.html", "Demo": "#demo" },
   "desc": "Want to verify if you are more intelligent than average? This encoder encodes text to make it really hard to read. See if you are still able to!"
 }

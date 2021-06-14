@@ -3,15 +3,13 @@
   "date": "2020-10-08",
   "type": "software",
   "tags": [
-    "Try it Now",
-    "Showcase",
-    "Work in Progress",
     "Software",
+    "Showcase",
     "JavaScript",
     "HTML",
     "Git",
-    "Electronics",
-    "Radio Controlled"
+    "Data Processing",
+    "Scripting"
   ],
   "btns": {
     "Try it!": "#try",

@@ -2,7 +2,15 @@
   "title": "Auto Cloud Backup",
   "date": "2020-05-18",
   "type": "software",
-  "tags": ["Showcase", "Software", "Python", "Web"],
+  "tags": [
+    "Software",
+    "Python",
+    "Web",
+    "Google Drive API",
+    "Multithreading",
+    "Watchdog",
+    "Scripting"
+  ],
   "btns": { "Demo Image": "#img" },
   "desc": "Who likes making backups? No one! Writing about how I created AutoCloudBackup, a script which automatically backs up your files to the cloud."
 }

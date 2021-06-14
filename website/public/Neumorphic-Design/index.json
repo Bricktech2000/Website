@@ -3,14 +3,13 @@
   "date": "2021-01-15",
   "type": "software",
   "tags": [
-    "Try it Now",
     "Showcase",
     "Software",
     "JavaScript",
     "HTML",
     "CSS",
     "Git",
-    "Web"
+    "UI Design"
   ],
   "btns": {
     "Try it!": ":./Neumorphic-Design/neumorphism.html",

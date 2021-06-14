@@ -3,13 +3,15 @@
   "date": "2021-01-05",
   "type": "software",
   "tags": [
-    "Try it Now",
     "Showcase",
     "Software",
     "Python",
     "Git",
     "Web",
-    "Hacking"
+    "Hacking",
+    "Selenium",
+    "Xvfb",
+    "Scripting"
   ],
   "btns": {
     "Demo": "#demo",

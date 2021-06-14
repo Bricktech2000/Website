@@ -3,14 +3,14 @@
   "date": "2020-07-13",
   "type": "software",
   "tags": [
-    "Try it Now",
     "Showcase",
     "Software",
     "JavaScript",
     "HTML",
     "CSS",
     "Git",
-    "Web"
+    "Scripting",
+    "Modular"
   ],
   "btns": {
     "Demo": "#demo",

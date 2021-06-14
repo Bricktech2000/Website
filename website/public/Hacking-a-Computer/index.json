@@ -3,7 +3,7 @@
   "date": "2020-04-11",
   "type": "hardware",
   "tags": [
-    "Showcase",
+    "Demo",
     "Software",
     "Hardware",
     "JavaScript",
@@ -13,11 +13,8 @@
     "Arduino",
     "NodeJS",
     "Electronics",
-    "Web",
     "Hacking",
-    "3D Printing",
-    "Radio Controlled",
-    "Tech"
+    "3D Printing"
   ],
   "btns": {
     "Demo Video": "#demo",
