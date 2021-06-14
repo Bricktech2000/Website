@@ -9,7 +9,11 @@ import Footer from '../private/structure/footer';
 
 export default function Home() {
   return (
-    <App>
+    <App
+      title="Project Portfolio"
+      description="A website for sharing my projects and blogging about tech-related stuff!"
+      image="/icon.png"
+    >
       <HeaderHome />
       <Aside />
       <Main>

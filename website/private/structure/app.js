@@ -46,7 +46,11 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Head />
+        <Head
+          title={'Emilien Breton | ' + this.props.title}
+          description={this.props.description}
+          image={'https://emilien.ml/' + this.props.image}
+        />
         <div className={styles.App}>{this.props.children}</div>
       </React.Fragment>
     );

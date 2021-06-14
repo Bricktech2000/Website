@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
-//import getPostInfo from '../private/api/getPostInfo';
-import tagMap from '../private/api/tagMap';
 import pageMap from '../private/api/pageMap';
 import getPostInfo from '../private/api/getPostInfo';
 
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
-import HeaderEmpty from '../private/structure/headerEmpty';
 import Aside from '../private/structure/aside';
 import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
@@ -24,7 +21,11 @@ var Post = (props) => {
 
   if (pageMap.includes(id))
     return (
-      <App>
+      <App
+        title={props.ogTitle}
+        description={props.ogDescription}
+        image={props.ogImage}
+      >
         <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
         <Aside />
         <Main>
@@ -45,5 +46,23 @@ var Post = (props) => {
     },
   };
 }*/
+
+//https://nextjs.org/docs/basic-features/data-fetching
+import { promises as fs } from 'fs';
+
+export async function getServerSideProps({ params }) {
+  var id = params.id;
+  var info = JSON.parse(
+    await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
+  );
+
+  return {
+    props: {
+      ogTitle: info.title,
+      ogDescription: info.desc,
+      ogImage: `${id}/index.jpg`,
+    },
+  };
+}
 
 export default Post;
