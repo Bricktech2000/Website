@@ -17,7 +17,7 @@ class HeaderHome extends Component {
   constructor(props) {
     super(props);
 
-    [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
+    [this.componentDidMount, this.componentWillUnmount, this.parallaxRef] =
       parallax((current, value) => {
         value = Math.min(value * 1.5, 1);
         current.style.transform = `translateY(calc(var(--smart-unit) * ${

@@ -14,7 +14,7 @@ class MainPost extends Component {
   constructor(props) {
     super(props);
 
-    [this.componentDidMount2, this.componentDidUnmount, this.parallaxRef] =
+    [this.componentDidMount2, this.componentWillUnmount, this.parallaxRef] =
       parallax((current, value) => {
         current.style.transform = `translateY(calc(var(--smart-unit) * ${
           (value - 0.25) * -20

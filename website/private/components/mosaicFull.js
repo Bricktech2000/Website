@@ -11,7 +11,7 @@ class MosaicFull extends Component {
     super(props);
     this.rand = generator();
 
-    [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
+    [this.componentDidMount, this.componentWillUnmount, this.parallaxRef] =
       parallax((current, value) => {
         current.style.transform = `translateY(calc(var(--smart-unit) * ${
           (value - 0.25) * -20

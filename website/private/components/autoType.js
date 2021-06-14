@@ -9,6 +9,10 @@ class AutoType extends Component {
     this.update();
   };
 
+  componentWillUnmount = () => {
+    clearTimeout(this.timeout);
+  };
+
   update = () => {
     var keyword = this.props.keywords[this.state.currentKeyword];
 
@@ -18,7 +22,7 @@ class AutoType extends Component {
         currentKeyword:
           (this.state.currentKeyword + 1) % this.props.keywords.length,
       });
-      return setTimeout(this.update);
+      return (this.timeout = setTimeout(this.update));
     }
     this.setState({
       currentLength: this.state.currentLength + 1,
@@ -29,13 +33,13 @@ class AutoType extends Component {
       ), // + '\xa0', //&nbsp;
     });
 
-    setTimeout(
+    return (this.timeout = setTimeout(
       this.update,
       100 -
         75 * (this.state.currentLength > keyword.length) +
         750 * (this.state.currentLength == keyword.length) +
         100 * (this.state.currentLength == 0)
-    );
+    ));
   };
 
   render() {

@@ -16,9 +16,9 @@ export default function parallax(callback) {
   var componentDidMount = () => {
     document.addEventListener('scroll', scrollHandler);
   };
-  var componentDidUnmount = () => {
+  var componentWillUnmount = () => {
     document.removeEventListener('scroll', scrollHandler);
   };
 
-  return [componentDidMount, componentDidUnmount, parallaxRef];
+  return [componentDidMount, componentWillUnmount, parallaxRef];
 }
