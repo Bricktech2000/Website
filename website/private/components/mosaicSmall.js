@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import generator from '../api/rand';
+import parallax from '../api/parallax';
 
 import styles from './mosaicSmall.module.css';
 
@@ -11,6 +12,13 @@ class MosaicSmall extends Component {
     this.rand = generator();
     this.firstIsRow = this.rand() > 0.5;
     this.secondIsRow = !this.firstIsRow;
+
+    [this.componentDidMount, this.componentDidUnmount, this.parallaxRef] =
+      parallax((current, value) => {
+        current.style.transform = `translateY(calc(var(--smart-unit) * ${
+          (value - 0.25) * -20
+        }))`;
+      });
   }
 
   render() {
@@ -31,7 +39,7 @@ class MosaicSmall extends Component {
       );
 
     return (
-      <div className={styles.MosaicSmall}>
+      <div className={styles.MosaicSmall} ref={this.parallaxRef}>
         <div>{func(0, 2)}</div>
         <div>{func(2, 4)}</div>
       </div>
