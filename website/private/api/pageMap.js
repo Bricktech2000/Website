@@ -1,4 +1,5 @@
 export default [
+  'Sequre-SQ-D60',
   'FPV-Drone-Freestyle-Frame',
   'Markdown-Inline-Formatter',
   'Learning-Gregg-Shorthand',
