@@ -2,7 +2,7 @@ const https = false;
 const dev = false;
 
 const { createServer } = require(https ? 'https' : 'http');
-if(https) const http = require('http');
+if (https) var http = require('http');
 const { parse } = require('url');
 const next = require('next');
 const fs = require('fs');
