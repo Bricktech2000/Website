@@ -37,7 +37,7 @@ export default [
   'Auto-Cloud-Backup',
   'Game-of-Life',
   'Geometry-Ninja',
-  'Encoder-2.0',
+  'Encoder-2-0',
   'Modular-Containers',
   'Scylla',
   'Hacking-a-Computer',
