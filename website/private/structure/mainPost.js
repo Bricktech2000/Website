@@ -19,6 +19,7 @@ class MainPost extends Component {
         current.style.transform = `translateY(calc(var(--smart-unit) * ${
           (value - 0.25) * -20
         }))`;
+        current.style.opacity = Math.max(value * 2 - 0.5, 0);
       });
   }
 

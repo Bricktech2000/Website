@@ -4,6 +4,8 @@
   column-gap: calc(var(--smart-unit) * 10);
   column-rule: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
   margin: calc(var(--smart-unit) * 5) 7.5vw;
+
+  opacity: 0;
 }
 @media (max-aspect-ratio: 1/1) {
   .marked {
