@@ -26,7 +26,7 @@ export default [
   'Lock-Picking',
   'Crash-js',
   'AI-Image-Compression',
-  'MultiToast.JS',
+  'MultiToast-JS',
   'DIY-Grenade',
   '5-inch-Drone-Virtual-Prototype',
   '3D-Printer-Music',
