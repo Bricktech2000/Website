@@ -16,7 +16,7 @@
   background: var(--card-bg);
   box-shadow: var(--bs);
   cursor: pointer;
-  /*border: calc(var(--smart-unit) * 0.15) solid transparent;*/
+  /* ;border: calc(var(--smart-unit) * 0.25) solid var(--card2-bg); */
 }
 
 /*.software {
@@ -31,6 +31,9 @@
   background: var(--bg);
   border: none;
 }*/
+.blog {
+  background: var(--bg);
+}
 
 .card > * {
   grid-column: span 2;
