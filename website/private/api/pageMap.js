@@ -24,7 +24,7 @@ export default [
   'DoS-Protection',
   'dirsize',
   'Lock-Picking',
-  'Crash.js',
+  'Crash-js',
   'AI-Image-Compression',
   'MultiToast.JS',
   'DIY-Grenade',
