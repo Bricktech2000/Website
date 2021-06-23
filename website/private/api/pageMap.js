@@ -1,4 +1,5 @@
 export default [
+  'Spider-Robot-V3-1',
   'Sequre-SQ-D60',
   'FPV-Drone-Freestyle-Frame',
   'Markdown-Inline-Formatter',
