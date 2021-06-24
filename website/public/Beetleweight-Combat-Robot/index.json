@@ -14,8 +14,8 @@
     "Physics Calculations"
   ],
   "btns": {
-    "First Version Photo": "#first",
-    "Second Version Photo": "#second",
+    "Version 1 Render": "#first",
+    "Version 2 Render": "#second",
     "Parts List": "#parts"
   },
   "desc": "Taking you through the design and build process of my 3lb combat robot! Even though it is only CAD, I plan on building it in the near future..."
