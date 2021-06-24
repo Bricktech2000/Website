@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
 import tagMap from '../api/tagMap';
 
 import styles from './tag.module.css';
