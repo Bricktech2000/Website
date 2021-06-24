@@ -50,7 +50,7 @@ var Post = (props) => {
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   var id = params.id;
   var info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
@@ -62,6 +62,21 @@ export async function getServerSideProps({ params }) {
       ogDescription: info.desc,
       ogImage: `${id}/index.jpg`,
     },
+  };
+}
+
+//next js scroll restoration not working with getserversideprops
+//https://github.com/vercel/next.js/issues/12530
+
+export async function getStaticPaths() {
+  var paths = pageMap.map((id) => ({
+    params: {
+      id: id,
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
   };
 }
 
