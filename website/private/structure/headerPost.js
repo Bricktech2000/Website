@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tag from '../components/tag';
+import Date from '../components/date';
 import Button from '../components/button';
 import Loading from '../components/loading';
 
@@ -13,13 +14,12 @@ class HeaderPost extends Component {
   }
 
   async componentDidUpdate() {
-    if (this.state.info == this.props.info) return;
-    this.setState({ info: this.props.info });
-    this.setState(await this.props.info);
+    if (this.state.info == (await this.props.info)) return;
+    this.setState({ info: await this.props.info });
   }
 
   render() {
-    if (this.state.id === undefined)
+    if (this.state.info === undefined || this.state.info === null)
       return (
         <header className={styles.Header}>
           <Loading />
@@ -28,26 +28,29 @@ class HeaderPost extends Component {
 
     return (
       <header className={styles.Header}>
-        <img src={'/' + this.state.id + '/index.jpg'} alt="" />
+        <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
         <div className={styles['markup-h1'] + ' markup-h1'}>
-          {this.state.title}
+          {this.state.info.title}
         </div>
-        <p>{this.state.desc}</p>
+        <p>{this.state.info.desc}</p>
         <div className={styles.tags}>
-          {this.state.tags.map((tag) => (
+          <Date date={this.state.info.date} />
+          {this.state.info.tags.map((tag) => (
             <Tag key={tag} label={tag} />
           ))}
         </div>
         <div className={styles.buttons}>
-          {Object.keys(this.state.btns).map((key) => {
-            var href = this.state.btns[key].replace(/^:/, '');
+          {Object.keys(this.state.info.btns).map((key) => {
+            var href = this.state.info.btns[key].replace(/^:/, '');
             return (
               <Button
                 key={key}
                 label={key}
-                blank={this.state.btns[key].match(/^:/)}
+                blank={this.state.info.btns[key].match(/^:/)}
                 href={
-                  href.match(/^[\.#]/) ? '/' + this.state.id + '/' + href : href
+                  href.match(/^[\.#]/)
+                    ? '/' + this.state.info.id + '/' + href
+                    : href
                 }
               />
             );
