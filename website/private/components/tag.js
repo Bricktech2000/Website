@@ -10,16 +10,7 @@ class Tag extends Component {
     var tagLabel = this.props.label;
     var tagActive = this.props.active;
 
-    if (tagActive === undefined) {
-      tagActive =
-        {
-          Blog: 'on',
-          Software: 'on',
-          Hardware: 'on',
-        }[this.props.label] || 'off';
-    } else {
-      tagActive = tagActive ? 'on' : 'off';
-    }
+    tagActive = tagActive ? 'on' : 'off';
     var tagClassActive = styles[tagActive];
     return (
       <div className={styles.tag + ' ' + tagClassType + ' ' + tagClassActive}>

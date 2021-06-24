@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { useRef, useEffect } from 'react';
 import Tag from './tag';
+import Date from './date';
 import Loading from './loading';
 import Link from 'next/link';
 
@@ -83,6 +84,7 @@ class Card extends Component {
           </div>
           <div className={styles.desc}>{this.state.info.desc}</div>
           <div className={styles.tags}>
+            <Date date={this.state.info.date} />
             {this.state.info.tags.map((tag) => (
               <Tag key={tag} label={tag} />
             ))}
