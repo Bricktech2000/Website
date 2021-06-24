@@ -15,6 +15,7 @@ export default function parallax(callback) {
   };
   var componentDidMount = () => {
     document.addEventListener('scroll', scrollHandler);
+    scrollHandler();
   };
   var componentWillUnmount = () => {
     document.removeEventListener('scroll', scrollHandler);
