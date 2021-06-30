@@ -1,4 +1,4 @@
-<img src="ICON.png" align="right">
+<img src="ICON.png" height="140" align="right">
 
 # Website
 
