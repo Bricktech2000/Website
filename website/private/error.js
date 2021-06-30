@@ -12,17 +12,18 @@ import errorDescMap from './api/errorDescMap';
 class Error extends Component {
   state = {};
   render() {
+    var status = this.props.status || 400;
     return (
       <App
-        title={errorTitleMap[this.props.status || 400]}
-        description={errorDescMap[this.props.status || 400]}
+        title={errorTitleMap[status]}
+        description={errorDescMap[status]}
         image="icon.png"
       >
         <HeaderEmpty />
         <Aside />
         <Nav />
         <Main>
-          <MainError status={this.props.status || 400} />
+          <MainError status={status} />
         </Main>
       </App>
     );
