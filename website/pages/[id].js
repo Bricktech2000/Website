@@ -6,6 +6,7 @@ import getPostInfo from '../private/api/getPostInfo';
 import App from '../private/structure/app';
 import HeaderPost from '../private/structure/headerPost';
 import Aside from '../private/structure/aside';
+import Nav from '../private/structure/nav';
 import Main from '../private/structure/main';
 import MainPost from '../private/structure/mainPost';
 import Footer from '../private/structure/footer';
@@ -28,6 +29,7 @@ var Post = (props) => {
       >
         <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
         <Aside />
+        <Nav />
         <Main>
           <MainPost id={id} />
         </Main>
