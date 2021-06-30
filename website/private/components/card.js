@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useRef, useEffect } from 'react';
 import Tag from './tag';
 import Date from './date';
 import Loading from './loading';
