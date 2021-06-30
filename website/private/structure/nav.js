@@ -13,7 +13,7 @@ export default function Nav() {
     <div
       className={styles.Nav}
       onClick={() =>
-        typeof window !== 'undefined' && window.history.state.idx == 0
+        typeof window !== 'undefined' && window.history.length <= 2
           ? router.push('/')
           : router.back()
       }
