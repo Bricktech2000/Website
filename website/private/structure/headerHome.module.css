@@ -205,7 +205,7 @@
   .Header .about {
     grid-template-areas: 'title' 'image' 'paragraph' 'icons';
     grid-template-columns: 1fr;
-    padding: calc(var(--smart-unit) * 5);
+    padding: calc(var(--smart-unit) * 3);
   }
   .Header .about img {
     width: calc(100% - 20vw - 20vw);
