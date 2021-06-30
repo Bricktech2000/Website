@@ -16,20 +16,10 @@ class MainPosts extends Component {
       max: 1000,
     });
     this.setState({
-      tag: this.props.tag,
       ids: ids,
       postInfos: await getPostInfo(ids),
     });
   };
-
-  //https://stackoverflow.com/questions/36486213/react-shouldcomponentupdate-is-called-even-when-props-or-state-for-that-compon
-  shouldComponentUpdate(nextProps) {
-    if (this.state.tag !== nextProps.tag) {
-      this.fetchData();
-      return false;
-    }
-    return true;
-  }
 
   render() {
     if (this.state.ids === undefined) {
