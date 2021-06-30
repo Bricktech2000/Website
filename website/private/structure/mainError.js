@@ -12,11 +12,13 @@ class MainError extends Component {
     return (
       <div className={styles.container}>
         <div />
-        <h1 className={styles.header}>{this.props.status}</h1>
+        <h1 className={styles.header + ' fade-right-3'}>{this.props.status}</h1>
         <div className={styles.content}>
-          <h1 className="markup-h1">{errorTitleMap[this.props.status]}</h1>
-          <p>{errorDescMap[this.props.status]}</p>
-          <div className={styles.buttons}>
+          <h1 className={'markup-h1' + ' fade-right-1'}>
+            {errorTitleMap[this.props.status]}
+          </h1>
+          <p className={'fade-right-2'}>{errorDescMap[this.props.status]}</p>
+          <div className={styles.buttons + ' fade-right-3'}>
             <Button href="/" label="Go Home" />
           </div>
         </div>
