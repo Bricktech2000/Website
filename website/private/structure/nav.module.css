@@ -20,9 +20,20 @@
   --shadow: drop-shadow(0 0 calc(var(--smart-unit) * 1) rgba(0, 0, 0, 1));
   filter: var(--shadow) var(--shadow);
 
+  animation: fade-in 0.5s ease-out;
   transition: fill 0.125s ease;
 }
 
 .Nav:hover svg {
   fill: var(--color);
+}
+
+@keyframes fade-in {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
