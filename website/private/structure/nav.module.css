@@ -26,13 +26,3 @@
 .Nav:hover svg {
   fill: var(--color);
 }
-
-.Nav .arrow {
-  display: none;
-  color: var(--color-l);
-  font-weight: bolder;
-  font-size: calc(var(--smart-res-unit) * 5);
-  letter-spacing: -0.1ch;
-
-  text-shadow: var(--bs), var(--bs), var(--bs);
-}
