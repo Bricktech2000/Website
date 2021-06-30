@@ -1,5 +1,6 @@
 const https = false;
 const dev = false;
+const domain = 'emilien.ca';
 
 const { createServer } = require(https ? 'https' : 'http');
 if (https) var http = require('http');
@@ -10,7 +11,7 @@ const fs = require('fs');
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-var p = '/etc/letsencrypt/live/emilien.ca/';
+var p = '/etc/letsencrypt/live/' + domain + '/';
 var credentials = {
   key: https && fs.readFileSync(p + 'privkey.pem'),
   cert: https && fs.readFileSync(p + 'fullchain.pem'),
