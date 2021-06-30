@@ -28,49 +28,6 @@
   box-shadow: var(--bs), var(--bs);
 }
 
-@keyframes fade-right-animation-1 {
-  0%,
-  25% {
-    opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * -3));
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes fade-right-animation-2 {
-  0%,
-  25% {
-    opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * -1.5));
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes fade-right-animation-3 {
-  0%,
-  25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.Header .markup-h1 {
-  animation: fade-right-animation-1 1s ease-out;
-}
-.Header p {
-  animation: fade-right-animation-2 1s ease-out;
-}
-.Header .tags,
-.Header .buttons {
-  animation: fade-right-animation-3 1s ease-out;
-}
-
 @media (max-aspect-ratio: 2/1) {
   .Header {
     padding-right: calc(var(--smart-unit) * 5);

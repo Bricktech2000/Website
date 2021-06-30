@@ -29,17 +29,17 @@ class HeaderPost extends Component {
     return (
       <header className={styles.Header}>
         <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
-        <div className={styles['markup-h1'] + ' markup-h1'}>
+        <div className={styles['markup-h1'] + ' markup-h1' + ' fade-right-1'}>
           {this.state.info.title}
         </div>
-        <p>{this.state.info.desc}</p>
-        <div className={styles.tags}>
+        <p className={'fade-right-2'}>{this.state.info.desc}</p>
+        <div className={styles.tags + ' fade-right-3'}>
           <Date date={this.state.info.date} />
           {this.state.info.tags.map((tag) => (
             <Tag key={tag} label={tag} />
           ))}
         </div>
-        <div className={styles.buttons}>
+        <div className={styles.buttons + ' fade-right-3'}>
           {Object.keys(this.state.info.btns).map((key) => {
             var href = this.state.info.btns[key].replace(/^:/, '');
             return (
