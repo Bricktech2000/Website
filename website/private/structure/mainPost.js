@@ -76,7 +76,7 @@ class MainPost extends Component {
           },
         }
       )
-        .replace(/<a/g, '<a target="_blank rel="noreferer"')
+        .replace(/<a/g, '<a target="_blank" rel="noreferer"')
         .replace(
           /<img src="(.*)" alt="video">/g,
           (a, b) => `<video autoplay muted loop><source src="${b}"></video>`
