@@ -149,11 +149,7 @@
   pointer-events: none;
   text-decoration: none;
   position: relative;
-}
-@media (max-aspect-ratio: 1/1) {
-  .marked a[name] {
-    top: calc(var(--smart-unit) * -8);
-  }
+  top: calc(var(--smart-unit) * -8);
 }
 .marked img,
 .marked video {
