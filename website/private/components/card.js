@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tag from './tag';
 import Date from './date';
 import Loading from './loading';
+import Marked from './marked';
 import Link from 'next/link';
 
 import styles from './card.module.css';
@@ -81,7 +82,9 @@ class Card extends Component {
           >
             {this.state.info.title}
           </div>
-          <div className={styles.desc}>{this.state.info.desc}</div>
+          <div className={styles.desc}>
+            <Marked source={this.state.info.desc} />
+          </div>
           <div className={styles.tags}>
             <Date date={this.state.info.date} />
             {this.state.info.tags.map((tag) => (

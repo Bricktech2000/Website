@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tag from '../components/tag';
 import Date from '../components/date';
 import Button from '../components/button';
+import Marked from '../components/marked';
 import Loading from '../components/loading';
 
 import styles from './headerPost.module.css';
@@ -32,7 +33,9 @@ class HeaderPost extends Component {
         <div className={styles['markup-h1'] + ' markup-h1' + ' fade-right-1'}>
           {this.state.info.title}
         </div>
-        <p className={'fade-right-2'}>{this.state.info.desc}</p>
+        <p className={'fade-right-2'}>
+          <Marked source={this.state.info.desc} />
+        </p>
         <div className={styles.tags + ' fade-right-3'}>
           <Date date={this.state.info.date} />
           {this.state.info.tags.map((tag) => (
