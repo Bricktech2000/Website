@@ -56,11 +56,6 @@ class MainPost extends Component {
     )
       return <Loading height="1000vh" />;
 
-    //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
-    //https://marked.js.org/using_advanced
-    //https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown
-    //https://forum.freecodecamp.org/t/links-rendered-by-marked-js-open-in-new-tab-markdown-previewer-project/197250/4
-    //https://github.com/highlightjs/highlight.js/
     return (
       <React.Fragment>
         <div ref={this.parallaxRef} className={styles['marked']}>
