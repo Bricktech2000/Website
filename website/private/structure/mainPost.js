@@ -3,6 +3,7 @@ import getPostInfo from '../api/getPostInfo';
 import databaseSearch from '../api/databaseSearch';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
+import Marked from '../components/marked';
 import Loading from '../components/loading';
 import parallax from '../api/parallax';
 
@@ -14,13 +15,16 @@ class MainPost extends Component {
   constructor(props) {
     super(props);
 
-    [this.componentDidMount2, this.componentWillUnmount, this.parallaxRef] =
-      parallax((current, value) => {
-        current.style.transform = `translateY(calc(var(--smart-unit) * ${
-          (value - 0.25) * -20
-        }))`;
-        current.style.opacity = Math.max(value * 2 - 0.5, 0);
-      });
+    [
+      this.componentDidMount2,
+      this.componentWillUnmount,
+      this.parallaxRef,
+    ] = parallax((current, value) => {
+      current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
+        0.25) *
+        -20}))`;
+      current.style.opacity = Math.max(value * 2 - 0.5, 0);
+    });
   }
 
   async componentDidMount() {
@@ -44,51 +48,6 @@ class MainPost extends Component {
     });
   }
 
-  getMarkdown() {
-    return {
-      __html: marked(
-        this.state.text.replace(
-          /\n#([^ #][^\n]+)/g,
-          (a, b) => `\n<a name="${b}"></a>`
-        ),
-        {
-          sanitize: false,
-          highlight: function (code, lang) {
-            //const hljs = require('highlight.js');
-            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-            var va = hljs
-              .highlight(
-                code.replace(
-                  /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
-                  (a) => `~${a}~`
-                ),
-                { language }
-              )
-              .value.replace(
-                /<span class="hljs-params">(.*?)<\/span>/g,
-                (a, b) => b
-              )
-              .replace(
-                /~([^~]{1,4})~/g,
-                (a, b) => `<span class="hljs-operator">${b}</span>`
-              );
-            return va;
-          },
-        }
-      )
-        .replace(/<a/g, '<a target="_blank" rel="noreferer"')
-        .replace(
-          /<img src="(.*)" alt="video">/g,
-          (a, b) => `<video autoplay muted loop><source src="${b}"></video>`
-        )
-        .replace(
-          /<img src="(.*)" alt="youtube">/g,
-          (a, b) =>
-            `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
-        ),
-    };
-  }
-
   render() {
     if (
       this.state.text === undefined ||
@@ -104,11 +63,9 @@ class MainPost extends Component {
     //https://github.com/highlightjs/highlight.js/
     return (
       <React.Fragment>
-        <p
-          ref={this.parallaxRef}
-          className={styles['marked'] + ' marked'}
-          dangerouslySetInnerHTML={this.getMarkdown()}
-        ></p>
+        <div ref={this.parallaxRef} className={styles['marked']}>
+          <Marked source={this.state.text} />
+        </div>
         <h1 className="markup-h1">Related Posts</h1>
         <br />
         <br />
