@@ -4,5 +4,5 @@
   "type": "blog",
   "tags": ["Demo", "Software", "JavaScript", "HTML", "CSS", "Web", "Outdated"],
   "btns": { "View Website": ":./client/index.html", "Image": "#img" },
-  "desc": "Links to my first website. Talking about how the (very strange) page system used to work, using an iframe to load HTML code."
+  "desc": "Links to my first website. Talking about how the (very strange) page system used to work, using an `iframe` to load HTML code."
 }
