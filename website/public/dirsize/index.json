@@ -4,5 +4,5 @@
   "type": "software",
   "tags": ["Software", "Python", "Recursion", "Scripting"],
   "btns": { "Try it!": ":./dirsize.py", "Code": "#code" },
-  "desc": "Have you ever noticed that you cannot sort folders by size in windows? I certainly have. Writing about how the \"dirsize\" command works and how you can try it out!"
+  "desc": "Have you ever noticed that you cannot sort folders by size in windows? I certainly have. Writing about how the `dirsize` command works and how you can try it out!"
 }
