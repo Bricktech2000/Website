@@ -12,5 +12,5 @@
     "Outdated"
   ],
   "btns": { "View Page Source": ":./index.md" },
-  "desc": "How were the pages in this blog created? Using a custom markup language called 'MiniML'! Showing how it works."
+  "desc": "How were the pages in this blog created? Using a custom markup language called _MiniML_! Showing how it works."
 }
