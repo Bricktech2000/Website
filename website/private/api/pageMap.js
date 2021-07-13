@@ -1,4 +1,5 @@
 export default [
+  'Combat-Robot-Design-Update',
   'Spider-Robot-V3-1',
   'Sequre-SQ-D60',
   'FPV-Drone-Freestyle-Frame',
