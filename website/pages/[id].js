@@ -22,7 +22,7 @@ var Post = (props) => {
   const [info, updateInfo] = useState();
   useEffect(() => {
     const getInfo = async () => {
-      updateInfo((await dbGet('exact', id))[id]);
+      updateInfo(await dbGet('exact', id));
     };
     getInfo();
   }, []);
@@ -48,9 +48,9 @@ var Post = (props) => {
         image={props.ogImage}
       >
         <Page>
-          <PostHeader info={info} />
-          <PostMain info={info} />
-          <PostRelated info={info} />
+          <PostHeader info={info[id]} />
+          <PostMain info={info[id]} />
+          <PostRelated info={info[id]} />
         </Page>
       </App>
     );

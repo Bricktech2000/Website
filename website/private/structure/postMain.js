@@ -34,12 +34,4 @@ class PostMain extends Component {
   }
 }
 
-// <h1 className="markup-h1">Related Posts</h1>
-// <br />
-// <br />
-// <MosaicSmall>
-//   {this.state.ids.map((id) => (
-//     <Card key={id} info={this.state.postInfos[id]} />
-//   ))}
-// </MosaicSmall>;
 export default PostMain;
