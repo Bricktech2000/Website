@@ -10,13 +10,11 @@ import parallax from '../api/parallax';
 import styles from './postMain.module.css';
 
 class PostMain extends Component {
-  state = { id: null };
-
   constructor(props) {
     super(props);
 
     [
-      this.componentDidMount2,
+      this.componentDidMount,
       this.componentWillUnmount,
       this.parallaxRef,
     ] = parallax((current, value) => {
@@ -27,53 +25,21 @@ class PostMain extends Component {
     });
   }
 
-  async componentDidMount() {
-    this.componentDidMount2();
-    this.componentDidUpdate();
-  }
-  async componentDidUpdate() {
-    if (this.state.id == this.props.id) return;
-    this.setState({ id: this.props.id });
-
-    var ids = await databaseSearch({
-      opr: 'like',
-      tags: (await getPostInfo([this.props.id]))[this.props.id].tags,
-      excl: this.props.id,
-      max: 4,
-    });
-    this.setState({
-      text: await (await fetch('/' + this.props.id + '/index.md')).text(),
-      ids: ids,
-      postInfos: await getPostInfo(ids),
-    });
-  }
-
   render() {
-    return 'PostMain' + JSON.stringify(this.props.info);
-    /*
-    if (
-      this.state.text === undefined ||
-      this.state.ids === undefined ||
-      this.state.postInfos === undefined
-    )
-      return <Loading height="1000vh" />;
-
     return (
-      <React.Fragment>
-        <div ref={this.parallaxRef} className={styles['marked']}>
-          <Marked source={this.state.text} />
-        </div>
-        <h1 className="markup-h1">Related Posts</h1>
-        <br />
-        <br />
-        <MosaicSmall>
-          {this.state.ids.map((id) => (
-            <Card key={id} info={this.state.postInfos[id]} />
-          ))}
-        </MosaicSmall>
-      </React.Fragment>
-    );*/
+      <div ref={this.parallaxRef} className={styles['marked']}>
+        <Marked source={this.props.info.source} />
+      </div>
+    );
   }
 }
 
+// <h1 className="markup-h1">Related Posts</h1>
+// <br />
+// <br />
+// <MosaicSmall>
+//   {this.state.ids.map((id) => (
+//     <Card key={id} info={this.state.postInfos[id]} />
+//   ))}
+// </MosaicSmall>;
 export default PostMain;

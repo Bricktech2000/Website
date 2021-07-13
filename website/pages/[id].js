@@ -13,12 +13,9 @@ import Error from '../private/error';
 import Loading from '../private/components/loading';
 import dbGet from '../private/api/dbGet';
 
-//https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
-//if (router.asPath === router.route) return '';
-//if (!id) return '';
-
 var Post = (props) => {
-  var router = useRouter();
+  //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
+  const router = useRouter();
   var { id } = router.query || props;
 
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
@@ -30,7 +27,18 @@ var Post = (props) => {
     getInfo();
   }, []);
 
-  if (typeof info === 'undefined') return <Loading height="1000vh" />;
+  if (typeof info === 'undefined')
+    return (
+      <App
+        title={props.ogTitle}
+        description={props.ogDescription}
+        image={props.ogImage}
+      >
+        <Page>
+          <Loading height="1000vh" />
+        </Page>
+      </App>
+    );
 
   if (pageMap.includes(id))
     return (

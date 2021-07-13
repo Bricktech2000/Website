@@ -23,7 +23,9 @@ async function get(id) {
   var info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
   );
-  var source = await fs.readFile(process.cwd() + '/public/' + id + '/index.md');
+  var source = (
+    await fs.readFile(process.cwd() + '/public/' + id + '/index.md')
+  ).toString();
   return { id, source, ...info };
 }
 
