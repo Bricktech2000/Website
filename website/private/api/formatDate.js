@@ -3,6 +3,7 @@ export default function formatDate(date) {
   //output format: DD MMM YYYY
 
   var months = [
+    '000',
     'JAN',
     'FEB',
     'MAR',
@@ -17,5 +18,5 @@ export default function formatDate(date) {
     'DEC',
   ];
   var [year, month, day] = date.split('-');
-  return `${parseInt(day)} ${months[parseInt(month) - 1]} ${parseInt(year)}`;
+  return `${parseInt(day)} ${months[parseInt(month)]} ${parseInt(year)}`;
 }
