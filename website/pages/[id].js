@@ -25,9 +25,9 @@ var Post = (props) => {
       updateInfo(await dbGet('exact', id));
     };
     getInfo();
-  }, []);
+  }, [props]);
 
-  if (typeof info === 'undefined')
+  if (typeof info === 'undefined' || typeof info[id] === 'undefined')
     return (
       <App
         title={props.ogTitle}
@@ -40,22 +40,20 @@ var Post = (props) => {
       </App>
     );
 
-  if (pageMap.includes(id))
-    return (
-      <App
-        title={props.ogTitle}
-        description={props.ogDescription}
-        image={props.ogImage}
-      >
-        <Page>
-          <PostHeader info={info[id]} />
-          <PostMain info={info[id]} />
-          <PostRelated info={info[id]} />
-        </Page>
-      </App>
-    );
-
-  return <Error status={404} />;
+  if (!pageMap.includes(id)) return <Error status={404} />;
+  return (
+    <App
+      title={props.ogTitle}
+      description={props.ogDescription}
+      image={props.ogImage}
+    >
+      <Page>
+        <PostHeader info={info[id]} />
+        <PostMain info={info[id]} />
+        <PostRelated info={info[id]} />
+      </Page>
+    </App>
+  );
 };
 
 //https://nextjs.org/docs/basic-features/data-fetching
