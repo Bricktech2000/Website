@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import pageMap from '../private/api/pageMap';
 
@@ -9,6 +10,9 @@ import PostMain from '../private/structure/postMain';
 import PostRelated from '../private/structure/postRelated';
 import Error from '../private/error';
 
+import Loading from '../private/components/loading';
+import dbGet from '../private/api/dbGet';
+
 //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
 //if (router.asPath === router.route) return '';
 //if (!id) return '';
@@ -16,6 +20,17 @@ import Error from '../private/error';
 var Post = (props) => {
   var router = useRouter();
   var { id } = router.query || props;
+
+  //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
+  const [info, updateInfo] = useState();
+  useEffect(() => {
+    const getInfo = async () => {
+      updateInfo(await dbGet(id));
+    };
+    getInfo();
+  }, []);
+
+  if (typeof info === 'undefined') return <Loading height="1000vh" />;
 
   if (pageMap.includes(id))
     return (
@@ -25,9 +40,9 @@ var Post = (props) => {
         image={props.ogImage}
       >
         <Page>
-          <PostHeader info={null} />
-          <PostMain info={null} />
-          <PostRelated info={null} />
+          <PostHeader info={info} />
+          <PostMain info={info} />
+          <PostRelated info={info} />
         </Page>
       </App>
     );

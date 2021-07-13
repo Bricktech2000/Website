@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getPostInfo from '../api/getPostInfo';
+//import getPostInfo from '../api/dbGet';
 import databaseSearch from '../api/databaseSearch';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
@@ -49,7 +49,7 @@ class PostMain extends Component {
   }
 
   render() {
-    return 'PostMain';
+    return 'PostMain' + JSON.stringify(this.props.info);
     /*
     if (
       this.state.text === undefined ||

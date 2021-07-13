@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import pageMap from '../../private/api/pageMap';
 
 export default async function databaseSearch(req, res) {
+  throw 'outdated';
   //see getPostInfo
   //import fetch from 'node-fetch';
   //const fetch = require('node-fetch');
@@ -89,7 +90,7 @@ export default async function databaseSearch(req, res) {
     scores.push({ id: id, score: score });
     //yield await include(incl, param);
   }
-  var sortedScores = scores.sort(function (element1, element2) {
+  var sortedScores = scores.sort(function(element1, element2) {
     if (element1.score == element2.score) return 0;
     else return element1.score < element2.score ? 1 : -1;
   });

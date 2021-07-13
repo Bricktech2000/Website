@@ -20,7 +20,7 @@ class PostHeader extends Component {
   }
 
   render() {
-    return 'PostHeader';
+    return 'PostHeader' + JSON.stringify(this.props.info);
     /*
     if (this.state.info === undefined || this.state.info === null)
       return (

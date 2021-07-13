@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class PostRelated extends Component {
   state = {};
   render() {
-    return 'PostRelated';
+    return 'PostRelated' + JSON.stringify(this.props.info);
   }
 }
 

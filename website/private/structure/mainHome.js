@@ -3,7 +3,7 @@ import databaseSearch from '../api/databaseSearch';
 import Loading from '../components/loading';
 import Card from '../components/card';
 import MosaicFull from '../components/mosaicFull';
-import getPostInfo from '../api/getPostInfo';
+import dbGet from '../api/dbGet';
 
 class MainPosts extends Component {
   state = {};
