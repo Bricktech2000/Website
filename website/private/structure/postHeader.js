@@ -8,53 +8,34 @@ import Loading from '../components/loading';
 import styles from './postHeader.module.css';
 
 class PostHeader extends Component {
-  state = { info: null };
-
-  async componentDidMount() {
-    this.componentDidUpdate();
-  }
-
-  async componentDidUpdate() {
-    if (this.state.info == (await this.props.info)) return;
-    this.setState({ info: await this.props.info });
-  }
-
   render() {
-    return 'PostHeader' + JSON.stringify(this.props.info);
-    /*
-    if (this.state.info === undefined || this.state.info === null)
-      return (
-        <header className={styles.Header}>
-          <Loading />
-        </header>
-      );
-
+    console.log(this.props.info);
     return (
       <header className={styles.Header}>
-        <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
+        <img src={'/' + this.props.info.id + '/index.jpg'} alt="" />
         <div className={styles['markup-h1'] + ' markup-h1' + ' fade-right-1'}>
-          {this.state.info.title}
+          {this.props.info.title}
         </div>
         <p className={'fade-right-2'}>
-          <Marked source={this.state.info.desc} />
+          <Marked source={this.props.info.desc} />
         </p>
         <div className={styles.tags + ' fade-right-3'}>
-          <Date date={this.state.info.date} />
-          {this.state.info.tags.map((tag) => (
+          <Date date={this.props.info.date} />
+          {this.props.info.tags.map((tag) => (
             <Tag key={tag} label={tag} />
           ))}
         </div>
         <div className={styles.buttons + ' fade-right-3'}>
-          {Object.keys(this.state.info.btns).map((key) => {
-            var href = this.state.info.btns[key].replace(/^:/, '');
+          {Object.keys(this.props.info.btns).map((key) => {
+            var href = this.props.info.btns[key].replace(/^:/, '');
             return (
               <Button
                 key={key}
                 label={key}
-                blank={this.state.info.btns[key].match(/^:/)}
+                blank={this.props.info.btns[key].match(/^:/)}
                 href={
                   href.match(/^[\.#]/)
-                    ? '/' + this.state.info.id + '/' + href
+                    ? '/' + this.props.info.id + '/' + href
                     : href
                 }
               />
@@ -62,7 +43,7 @@ class PostHeader extends Component {
           })}
         </div>
       </header>
-    );*/
+    );
   }
 }
 

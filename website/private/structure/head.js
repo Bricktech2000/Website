@@ -37,11 +37,11 @@ class Head extends Component {
         <script>{/*console.log('Google Test 0.16');*/}</script>
         <script src="/resize.js"></script>
         {/* https://github.com/markedjs/marked */}
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        {/* <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> */}
         {/* https://highlightjs.org/download/ */}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-        <script src="/marked.min.js"></script>
-        <script src="/highlight.min.js"></script>
+        {/* <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script> */}
+        {/* <script src="/marked.min.js"></script> */}
+        {/* <script src="/highlight.min.js"></script> */}
       </NextHead>
     );
   }
