@@ -9,7 +9,6 @@ import styles from './postHeader.module.css';
 
 class PostHeader extends Component {
   render() {
-    console.log(this.props.info);
     return (
       <header className={styles.Header}>
         <img src={'/' + this.props.info.id + '/index.jpg'} alt="" />
