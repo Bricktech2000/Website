@@ -47,8 +47,8 @@ var Post = (props) => {
       description={props.ogDescription}
       image={props.ogImage}
     >
+      <PostHeader info={info[id]} />
       <Page>
-        <PostHeader info={info[id]} />
         <PostMain info={info[id]} />
         <PostRelated info={info[id]} />
       </Page>
