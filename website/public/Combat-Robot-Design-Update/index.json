@@ -14,6 +14,7 @@
     "Robotics"
   ],
   "btns": {
+    "Previous Post": "../Beetleweight-Combat-Robot/",
     "Robot Renders": "#renders",
     "Wheel Design": "#wheels",
     "Scale Model Picture": "#scale"
