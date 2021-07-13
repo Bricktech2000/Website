@@ -25,7 +25,7 @@ var Post = (props) => {
   const [info, updateInfo] = useState();
   useEffect(() => {
     const getInfo = async () => {
-      updateInfo((await dbGet(id))[id]);
+      updateInfo((await dbGet('exact', id))[id]);
     };
     getInfo();
   }, []);

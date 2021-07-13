@@ -1,7 +1,7 @@
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
 
-export default async function getExact(req, res) {
+export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes
   //https://nextjs.org/docs/api-routes/response-helpers
   var { id } = JSON.parse(req.body);
