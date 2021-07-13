@@ -35,6 +35,13 @@ export default async function dbGet(req, res) {
           .slice(0, count)
       );
       break;
+    case 'all':
+      if (typeof id === 'undefined') {
+        for (var id2 of pageMap) {
+          response[id2] = await getSafe(id2);
+        }
+      } else response[id] = await getSafe('Post-404');
+      break;
     default:
       response[id] = await getSafe('Post-404');
       break;
