@@ -5,9 +5,9 @@ import Button from '../components/button';
 import Marked from '../components/marked';
 import Loading from '../components/loading';
 
-import styles from './headerPost.module.css';
+import styles from './postHeader.module.css';
 
-class HeaderPost extends Component {
+class PostHeader extends Component {
   state = { info: null };
 
   async componentDidMount() {
@@ -20,6 +20,8 @@ class HeaderPost extends Component {
   }
 
   render() {
+    return 'PostHeader';
+    /*
     if (this.state.info === undefined || this.state.info === null)
       return (
         <header className={styles.Header}>
@@ -60,8 +62,8 @@ class HeaderPost extends Component {
           })}
         </div>
       </header>
-    );
+    );*/
   }
 }
 
-export default HeaderPost;
+export default PostHeader;

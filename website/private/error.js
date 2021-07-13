@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import App from './structure/app';
-import HeaderEmpty from './structure/headerEmpty';
-import Aside from './structure/aside';
-import Nav from './structure/nav';
-import Main from './structure/main';
+import Page from './structure/page';
 import MainError from './structure/mainError';
 
 import errorTitleMap from './api/errorTitleMap';
@@ -19,12 +16,9 @@ class Error extends Component {
         description={errorDescMap[status]}
         image="icon.png"
       >
-        <HeaderEmpty />
-        <Aside />
-        <Nav />
-        <Main>
+        <Page>
           <MainError status={status} />
-        </Main>
+        </Page>
       </App>
     );
   }

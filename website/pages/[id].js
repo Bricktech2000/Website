@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
 import pageMap from '../private/api/pageMap';
-import getPostInfo from '../private/api/getPostInfo';
 
 import App from '../private/structure/app';
-import HeaderPost from '../private/structure/headerPost';
-import Aside from '../private/structure/aside';
-import Nav from '../private/structure/nav';
-import Main from '../private/structure/main';
-import MainPost from '../private/structure/mainPost';
-import Footer from '../private/structure/footer';
+import Page from '../private/structure/page';
+import PostHeader from '../private/structure/postHeader';
+import PostMain from '../private/structure/postMain';
+import PostRelated from '../private/structure/postRelated';
 import Error from '../private/error';
+
+//https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
+//if (router.asPath === router.route) return '';
+//if (!id) return '';
 
 var Post = (props) => {
   var router = useRouter();
   var { id } = router.query || props;
-
-  //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
-  //if (router.asPath === router.route) return '';
-  if (!id) return '';
 
   if (pageMap.includes(id))
     return (
@@ -27,27 +24,16 @@ var Post = (props) => {
         description={props.ogDescription}
         image={props.ogImage}
       >
-        <HeaderPost info={(async () => (await getPostInfo([id]))[id])()} />
-        <Aside />
-        <Nav />
-        <Main>
-          <MainPost id={id} />
-        </Main>
-        <Footer />
+        <Page>
+          <PostHeader info={null} />
+          <PostMain info={null} />
+          <PostRelated info={null} />
+        </Page>
       </App>
     );
 
   return <Error status={404} />;
 };
-
-/*export async function getServerSideProps(context) {
-  var { id } = context.params;
-  return {
-    props: {
-      id: id,
-    },
-  };
-}*/
 
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';

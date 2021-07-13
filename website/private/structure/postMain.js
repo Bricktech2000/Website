@@ -7,9 +7,9 @@ import Marked from '../components/marked';
 import Loading from '../components/loading';
 import parallax from '../api/parallax';
 
-import styles from './mainPost.module.css';
+import styles from './postMain.module.css';
 
-class MainPost extends Component {
+class PostMain extends Component {
   state = { id: null };
 
   constructor(props) {
@@ -49,6 +49,8 @@ class MainPost extends Component {
   }
 
   render() {
+    return 'PostMain';
+    /*
     if (
       this.state.text === undefined ||
       this.state.ids === undefined ||
@@ -70,8 +72,8 @@ class MainPost extends Component {
           ))}
         </MosaicSmall>
       </React.Fragment>
-    );
+    );*/
   }
 }
 
-export default MainPost;
+export default PostMain;
