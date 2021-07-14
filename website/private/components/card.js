@@ -61,42 +61,40 @@ class Card extends Component {
     if (this.state.info === null) return <Loading height="100vh" />;
 
     var Card2 = React.forwardRef(({ onClick, href }, ref) => (
-      <React.Fragment>
-        <a
-          ref={this.ref}
-          className={
-            styles.card +
-            ' ' +
-            styles[inverted] +
-            ' ' +
-            styles[direction] +
-            ' ' +
-            styles[this.state.info.type]
-          }
-          href={href}
-          onClick={onClick}
+      <a
+        ref={this.ref}
+        className={
+          styles.card +
+          ' ' +
+          styles[inverted] +
+          ' ' +
+          styles[direction] +
+          ' ' +
+          styles[this.state.info.type]
+        }
+        href={href}
+        onClick={onClick}
+      >
+        <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
+        <div
+          className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
         >
-          <img src={'/' + this.state.info.id + '/index.jpg'} alt="" />
-          <div
-            className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}
-          >
-            {this.state.info.title}
-          </div>
-          <div className={styles.desc}>
-            <Marked source={this.state.info.desc} />
-          </div>
-          <div className={styles.tags}>
-            <Date date={this.state.info.date} />
-            {this.state.info.tags.map((tag) => (
-              <Tag key={tag} label={tag} />
-            ))}
-          </div>
-        </a>
-      </React.Fragment>
+          {this.state.info.title}
+        </div>
+        <div className={styles.desc}>
+          <Marked source={this.state.info.desc} />
+        </div>
+        <div className={styles.tags}>
+          <Date date={this.state.info.date} />
+          {this.state.info.tags.map((tag) => (
+            <Tag key={tag} label={tag} />
+          ))}
+        </div>
+      </a>
     ));
     return (
       <Link href={'/' + this.state.info.id}>
-        <Card2 />
+        <Card2 href={'/' + this.state.info.id} />
       </Link>
     );
   }
