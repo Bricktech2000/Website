@@ -4,7 +4,7 @@ import App from '../private/structure/App';
 import HomeHero from '../private/structure/HomeHero';
 import Aside from '../private/structure/Aside';
 import Main from '../private/structure/Main';
-import HomePostList from '../private/structure/homePostList';
+import HomePostList from '../private/structure/HomePostList';
 import Footer from '../private/structure/Footer';
 
 export default function Home() {
