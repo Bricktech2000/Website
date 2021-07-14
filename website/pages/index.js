@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import App from '../private/structure/app';
-import HomeHero from '../private/structure/homeHero';
-import Aside from '../private/structure/aside';
-import Main from '../private/structure/main';
+import App from '../private/structure/App';
+import HomeHero from '../private/structure/HomeHero';
+import Aside from '../private/structure/Aside';
+import Main from '../private/structure/Main';
 import HomePostList from '../private/structure/homePostList';
-import Footer from '../private/structure/footer';
+import Footer from '../private/structure/Footer';
 
 export default function Home() {
   return (

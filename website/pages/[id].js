@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import pageMap from '../private/lib/pageMap';
 
-import App from '../private/structure/app';
-import Page from '../private/structure/page';
-import PostHeader from '../private/structure/postHeader';
-import PostMain from '../private/structure/postMain';
-import PostRelated from '../private/structure/postRelated';
+import App from '../private/structure/App';
+import Page from '../private/structure/Page';
+import PostHeader from '../private/structure/PostHeader';
+import PostMain from '../private/structure/PostMain';
+import PostRelated from '../private/structure/PostRelated';
 import Error from '../private/error';
 
-import Loading from '../private/components/loading';
+import Loading from '../private/components/Loading';
 import dbGet from '../private/lib/dbGet';
 
 var Post = (props) => {

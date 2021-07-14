@@ -1,4 +1,4 @@
-.MosaicFull {
+.MosaicLarge {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
@@ -10,7 +10,7 @@
 }
 /*Portrait*/
 @media (max-aspect-ratio: 1/1) {
-  .MosaicFull {
+  .MosaicLarge {
     grid-template-columns: 1fr;
   }
 }

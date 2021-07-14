@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
 import dbGet from '../lib/dbGet';
-import MosaicFull from '../components/mosaicFull';
-import Card from '../components/card';
-import Loading from '../components/loading';
+import MosaicLarge from '../components/MosaicLarge';
+import Card from '../components/Card';
+import Loading from '../components/Loading';
 
 export default function HomePostList(props) {
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
@@ -22,11 +22,11 @@ export default function HomePostList(props) {
       <h1 className="markup-h1">My Projects</h1>
       <br />
       <br />
-      <MosaicFull>
+      <MosaicLarge>
         {Object.keys(info).map((id) => (
           <Card key={id} info={info[id]} />
         ))}
-      </MosaicFull>
+      </MosaicLarge>
     </React.Fragment>
   );
 }

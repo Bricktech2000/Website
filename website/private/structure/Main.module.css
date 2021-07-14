@@ -1,0 +1,15 @@
+.Main {
+  grid-area: main;
+
+  overflow-x: hidden;
+  padding: calc(var(--smart-unit) * 5);
+  min-height: 50vh;
+  /*opacity: 0;
+  transition: opacity 0.25s ease-in-out;*/
+}
+@media (max-aspect-ratio: 1/1) {
+  .Main {
+    padding-left: calc(var(--smart-unit) * 2);
+    padding-right: calc(var(--smart-unit) * 2);
+  }
+}

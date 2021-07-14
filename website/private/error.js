@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import App from './structure/app';
-import Page from './structure/page';
-import ErrorMain from './structure/errorMain';
+import App from './structure/App';
+import Page from './structure/Page';
+import ErrorMain from './structure/ErrorMain';
 
 import errorTitleMap from './lib/errorTitleMap';
 import errorDescMap from './lib/errorDescMap';

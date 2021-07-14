@@ -1,6 +1,6 @@
 //the following is ment to create a PRNG that generates the exact same numbers for a URL unless the webpage or web app is refreshed
 //it is ideal for UI that is to be generated randomly but that is still required look the exact same when the browser's `back` button is pressed, for example
-//in this website, it is currently used to generate a mosaic of project cards (structure/mosaicFull.js and structure/mosaicSmall.js)
+//in this website, it is currently used to generate a mosaic of project cards (structure/mosaicLarge.js and structure/mosaicSmall.js)
 
 //once per page load, call the `init` function (called within structure/app.js in this case)
 //inside a component's constructor, write the following to create a random number generator: `this.rand = generator()`
@@ -14,14 +14,14 @@ function xmur3(str) {
   for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
     (h = Math.imul(h ^ str.charCodeAt(i), 3432918353)),
       (h = (h << 13) | (h >>> 19));
-  return function () {
+  return function() {
     h = Math.imul(h ^ (h >>> 16), 2246822507);
     h = Math.imul(h ^ (h >>> 13), 3266489909);
     return (h ^= h >>> 16) >>> 0;
   };
 }
 function mulberry32(a) {
-  return function () {
+  return function() {
     var t = (a += 0x6d2b79f5);
     t = Math.imul(t ^ (t >>> 15), t | 1);
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);

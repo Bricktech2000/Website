@@ -1,0 +1,22 @@
+.App {
+  display: grid;
+  grid-template-columns: calc(var(--smart-res-unit) * 0) 1fr calc(
+      var(--smart-res-unit) * 0
+    );
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    'header header header'
+    'nav main aside'
+    'nav main aside'
+    'nav footer aside';
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .App {
+    grid-template-areas:
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'footer footer footer';
+  }
+}

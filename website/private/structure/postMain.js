@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Marked from '../components/marked';
+import Marked from '../components/Marked';
 import parallax from '../lib/parallax';
 
-import styles from './postMain.module.css';
+import styles from './PostMain.module.css';
 
 class PostMain extends Component {
   constructor(props) {

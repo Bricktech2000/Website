@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import generator from '../lib/rand';
+import Marked from '../components/Marked';
 import parallax from '../lib/parallax';
 
-import styles from './mosaicFull.module.css';
+import styles from './PostMain.module.css';
 
-class MosaicFull extends Component {
-  state = {};
-
+class PostMain extends Component {
   constructor(props) {
     super(props);
-    this.rand = generator();
 
     [
       this.componentDidMount,
@@ -19,21 +16,17 @@ class MosaicFull extends Component {
       current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
         0.25) *
         -20}))`;
+      current.style.opacity = Math.max(value * 2 - 0.5, 0);
     });
   }
 
   render() {
     return (
-      <div className={styles.MosaicFull} ref={this.parallaxRef}>
-        {this.props.children.map((child, i) =>
-          React.cloneElement(child, {
-            dir: this.rand() > 0.5,
-            inv: this.rand() > 0.5,
-          })
-        )}
+      <div ref={this.parallaxRef} className={styles['marked']}>
+        <Marked source={this.props.info.source} />
       </div>
     );
   }
 }
 
-export default MosaicFull;
+export default PostMain;
