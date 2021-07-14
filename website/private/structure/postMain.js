@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-//import getPostInfo from '../api/dbGet';
-import databaseSearch from '../api/databaseSearch';
-import MosaicSmall from '../components/mosaicSmall';
-import Card from '../components/card';
 import Marked from '../components/marked';
-import Loading from '../components/loading';
 import parallax from '../api/parallax';
 
 import styles from './postMain.module.css';
