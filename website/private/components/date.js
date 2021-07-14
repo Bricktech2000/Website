@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tag from './tag';
 
-import formatDate from '../api/formatDate.js';
+import formatDate from '../lib/formatDate.js';
 
 class Date extends Component {
   state = {};

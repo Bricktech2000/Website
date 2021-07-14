@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Button from '../components/button';
 
-import styles from './mainError.module.css';
-import errorTitleMap from '../api/errorTitleMap';
-import errorDescMap from '../api/errorDescMap';
+import styles from './errorMain.module.css';
+import errorTitleMap from '../lib/errorTitleMap';
+import errorDescMap from '../lib/errorDescMap';
 
 //https://www.google.com/search?q=404+error+page&sxsrf=ALeKk02OhUGx_72KKVvWMhcLf36Nj0OOJw:1618849064091&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjOy6Pb2orwAhUKY8AKHcWTCI4Q_AUoAXoECAEQAw&biw=1872&bih=1007#imgrc=pEPgPbeNV1OloM
 class MainError extends Component {

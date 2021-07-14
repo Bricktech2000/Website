@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import AutoType from '../components/autoType';
-import parallax from '../api/parallax';
+import parallax from '../lib/parallax';
 
-import styles from './headerHome.module.css';
+import styles from './homeHero.module.css';
 
 ////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
 import Mail from '../svgs/043-mail.svg';
@@ -17,14 +17,18 @@ class HeaderHome extends Component {
   constructor(props) {
     super(props);
 
-    [this.componentDidMount, this.componentWillUnmount, this.parallaxRef] =
-      parallax((current, value) => {
-        value = Math.min(value * 1.5, 1);
-        current.style.transform = `translateY(calc(var(--smart-unit) * ${
-          Math.pow(1 - value, 3) * 15
-        }))`;
-        current.style.opacity = value;
-      });
+    [
+      this.componentDidMount,
+      this.componentWillUnmount,
+      this.parallaxRef,
+    ] = parallax((current, value) => {
+      value = Math.min(value * 1.5, 1);
+      current.style.transform = `translateY(calc(var(--smart-unit) * ${Math.pow(
+        1 - value,
+        3
+      ) * 15}))`;
+      current.style.opacity = value;
+    });
   }
 
   render() {

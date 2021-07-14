@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Marked from '../components/marked';
-import parallax from '../api/parallax';
+import parallax from '../lib/parallax';
 
 import styles from './postMain.module.css';
 

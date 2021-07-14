@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import tagMap from '../api/tagMap';
+import tagMap from '../lib/tagMap';
 
 import styles from './tag.module.css';
 

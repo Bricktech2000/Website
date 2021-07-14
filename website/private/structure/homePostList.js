@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
-import dbGet from '../api/dbGet';
+import dbGet from '../lib/dbGet';
 import MosaicFull from '../components/mosaicFull';
 import Card from '../components/card';
 import Loading from '../components/loading';

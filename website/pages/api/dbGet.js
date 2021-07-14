@@ -1,6 +1,6 @@
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
-import pageMap from '../../private/api/pageMap';
+import pageMap from '../../private/lib/pageMap';
 
 export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes

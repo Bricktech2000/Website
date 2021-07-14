@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import App from './structure/app';
 import Page from './structure/page';
-import MainError from './structure/mainError';
+import ErrorMain from './structure/errorMain';
 
-import errorTitleMap from './api/errorTitleMap';
-import errorDescMap from './api/errorDescMap';
+import errorTitleMap from './lib/errorTitleMap';
+import errorDescMap from './lib/errorDescMap';
 
 class Error extends Component {
   state = {};
@@ -17,7 +17,7 @@ class Error extends Component {
         image="icon.png"
       >
         <Page>
-          <MainError status={status} />
+          <ErrorMain status={status} />
         </Page>
       </App>
     );

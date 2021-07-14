@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Head from './head';
 
 import styles from './app.module.css';
-import { init } from '../api/rand';
+import { init } from '../lib/rand';
 init();
 
 class App extends Component {
