@@ -40,10 +40,10 @@ export default async function dbGet(req, res) {
         for (var id2 of pageMap) {
           response[id2] = await getSafe(id2);
         }
-      } else response[id] = await getSafe('Post-404');
+      } else response[id] = await getSafe('502');
       break;
     default:
-      response[id] = await getSafe('Post-404');
+      response[id] = await getSafe('502');
       break;
   }
 
@@ -64,6 +64,6 @@ async function getSafe(id) {
   try {
     return await get(id);
   } catch (e) {
-    return await get('Post-404');
+    return await get('502');
   }
 }

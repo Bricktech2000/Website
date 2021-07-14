@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Error from '../private/error';
+import Error from '../private/structure/Error';
 
 //https://nextjs.org/docs/advanced-features/custom-error-page
 

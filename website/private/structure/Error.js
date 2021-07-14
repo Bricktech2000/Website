@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import App from './structure/App';
-import Page from './structure/Page';
-import ErrorMain from './structure/ErrorMain';
+import App from './App';
+import Page from './Page';
+import ErrorMain from './ErrorMain';
 
-import errorTitleMap from './lib/errorTitleMap';
-import errorDescMap from './lib/errorDescMap';
+import errorTitleMap from '../lib/errorTitleMap';
+import errorDescMap from '../lib/errorDescMap';
 
 class Error extends Component {
   state = {};

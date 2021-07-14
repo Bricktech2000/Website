@@ -8,7 +8,7 @@ import Page from '../private/structure/Page';
 import PostHeader from '../private/structure/PostHeader';
 import PostMain from '../private/structure/PostMain';
 import PostRelated from '../private/structure/PostRelated';
-import Error from '../private/error';
+import Error from '../private/structure/Error';
 
 import Loading from '../private/components/Loading';
 import dbGet from '../private/lib/dbGet';
@@ -27,18 +27,7 @@ var Post = (props) => {
     getInfo();
   }, [props]);
 
-  if (typeof info === 'undefined' || typeof info[id] === 'undefined')
-    return (
-      <App
-        title={props.ogTitle}
-        description={props.ogDescription}
-        image={props.ogImage}
-      >
-        <Page>
-          <Loading height="1000vh" />
-        </Page>
-      </App>
-    );
+  var loading = typeof info === 'undefined' || typeof info[id] === 'undefined';
 
   if (!pageMap.includes(id)) return <Error status={404} />;
   return (
@@ -47,17 +36,25 @@ var Post = (props) => {
       description={props.ogDescription}
       image={props.ogImage}
     >
-      <PostHeader info={info[id]} />
-      <Page>
-        <PostMain info={info[id]} />
-        <PostRelated info={info[id]} />
-      </Page>
+      {loading ? (
+        <Page>
+          <Loading height="1000vh" />
+        </Page>
+      ) : (
+        <React.Fragment>
+          <PostHeader info={info[id]} />
+          <Page>
+            <PostMain info={info[id]} />
+            <PostRelated info={info[id]} />
+          </Page>
+        </React.Fragment>
+      )}
     </App>
   );
 };
 
 //https://nextjs.org/docs/basic-features/data-fetching
-import { promises as fs } from 'fs';
+/*import { promises as fs } from 'fs';
 
 export async function getStaticProps({ params }) {
   var id = params.id;
@@ -87,6 +84,6 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+}*/
 
 export default Post;

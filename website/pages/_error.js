@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Error from '../private/error';
+import Error from '../private/structure/Error';
 
 //https://nextjs.org/docs/advanced-features/custom-error-page
 
@@ -8,8 +8,8 @@ function _Error({ status }) {
 }
 
 Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
-  return { statusCode };
+  const status = res ? res.statusCode : err ? err.statusCode : 404;
+  return { status };
 };
 
 export default _Error;
