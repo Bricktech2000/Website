@@ -29,14 +29,14 @@ var checkSubscriptions = async () => {
   };
 
   //https://nextjs.org/docs/advanced-features/dynamic-import
-  var pageMap = (await import('../../private/api/pageMap')).default;
-  var lastPageMap = (await import('../../private/api/lastPageMap')).default;
+  var pageMap = (await import('../../private/lib/pageMap')).default;
+  var lastPageMap = (await import('../../private/lib/lastPageMap')).default;
 
   if (pageMap.toString() != lastPageMap.toString()) {
     //https://www.geeksforgeeks.org/node-js-fs-copyfile-function/
     fs.copyFile(
-      process.cwd() + '/private/api/pageMap.js',
-      process.cwd() + '/private/api/lastPageMap.js'
+      process.cwd() + '/private/lib/pageMap.js',
+      process.cwd() + '/private/lib/lastPageMap.js'
     );
     var info = JSON.parse(
       await fs.readFile(process.cwd() + '/public/' + pageMap[0] + '/index.json')
