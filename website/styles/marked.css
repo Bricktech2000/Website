@@ -155,7 +155,7 @@
 .marked video {
   display: block;
   object-fit: contain;
-  max-height: 100vh;
+  max-height: 75vh;
   width: 100%;
   padding: calc(3 * var(--smart-unit)) 10%;
 }
