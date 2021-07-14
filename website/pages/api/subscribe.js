@@ -29,24 +29,24 @@ var checkSubscriptions = async () => {
   };
 
   //https://nextjs.org/docs/advanced-features/dynamic-import
-  var pageMap = (await import('../../private/lib/pageMap')).default;
-  var lastPageMap = (await import('../../private/lib/lastPageMap')).default;
+  var postMap = (await import('../../private/lib/postMap')).default;
+  var lastPostMap = (await import('../../private/lib/lastPostMap')).default;
 
-  if (pageMap.toString() != lastPageMap.toString()) {
+  if (postMap.toString() != lastPostMap.toString()) {
     //https://www.geeksforgeeks.org/node-js-fs-copyfile-function/
     fs.copyFile(
-      process.cwd() + '/private/lib/pageMap.js',
-      process.cwd() + '/private/lib/lastPageMap.js'
+      process.cwd() + '/private/lib/postMap.js',
+      process.cwd() + '/private/lib/lastPostMap.js'
     );
     var info = JSON.parse(
-      await fs.readFile(process.cwd() + '/public/' + pageMap[0] + '/index.json')
+      await fs.readFile(process.cwd() + '/public/' + postMap[0] + '/index.json')
     );
     sendNotification({
       title: 'New Post: ' + info.title,
       body: info.desc,
       icon: '/icon.png',
       click_action: 'https://google.com/',
-      tag: pageMap[0],
+      tag: postMap[0],
     });
   }
 };
