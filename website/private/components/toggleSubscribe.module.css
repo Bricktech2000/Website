@@ -1,9 +1,0 @@
-.ToggleSubscribe {
-  display: inline-flex;
-  width: auto;
-  align-items: center;
-  margin: calc(var(--smart-unit) * 2) 0;
-}
-.ToggleSubscribe span {
-  width: calc(var(--smart-unit) * 2);
-}
