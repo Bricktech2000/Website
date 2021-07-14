@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AutoType from '../components/AutoType';
 import parallax from '../lib/parallax';
 
-import styles from './homeHero.module.css';
+import styles from './HomeHero.module.css';
 
 ////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
 import Mail from '../svgs/043-mail.svg';
