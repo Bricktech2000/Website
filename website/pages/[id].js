@@ -80,7 +80,12 @@ export async function getStaticProps({ params }) {
 //https://github.com/vercel/next.js/issues/12530
 
 export async function getStaticPaths() {
-  var paths = postMap.concat(errorMap).map((id) => ({
+  //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+  //necessary to prevent ``Conflicting paths returned from getStaticPaths`` error
+  var errorMapModified = errorMap.filter(
+    (item) => !['404', '500'].includes(item)
+  );
+  var paths = postMap.concat(errorMapModified).map((id) => ({
     params: {
       id: id,
     },
