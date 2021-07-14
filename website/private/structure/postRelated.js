@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import dbGet from '../api/dbGet';
 import MosaicSmall from '../components/mosaicSmall';
 import Card from '../components/card';
+import Loading from '../components/loading';
 
 export default function PostRelated(props) {
   var id = props.info.id;
@@ -15,7 +16,7 @@ export default function PostRelated(props) {
     getInfo();
   }, []);
 
-  if (typeof info === 'undefined') return '';
+  if (typeof info === 'undefined') return <Loading height="400vh" />;
 
   return (
     <React.Fragment>

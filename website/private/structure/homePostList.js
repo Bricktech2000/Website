@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import dbGet from '../api/dbGet';
 import MosaicFull from '../components/mosaicFull';
 import Card from '../components/card';
+import Loading from '../components/loading';
 
 export default function HomePostList(props) {
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
@@ -14,7 +15,7 @@ export default function HomePostList(props) {
     getInfo();
   }, []);
 
-  if (typeof info === 'undefined') return '';
+  if (typeof info === 'undefined') return <Loading height="1000vh" />;
 
   return (
     <React.Fragment>
