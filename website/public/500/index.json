@@ -1,0 +1,8 @@
+{
+  "title": "Server Error",
+  "date": "0000-00-00",
+  "type": "",
+  "tags": [],
+  "btns": { "Go Home": "/" },
+  "desc": "An unexpected server error occured. Try refreshing the page while we work on a fix."
+}

@@ -1,8 +1,8 @@
 {
-  "title": "502 Post Not Found",
+  "title": "Post Not Found",
   "date": "0000-00-00",
   "type": "",
   "tags": [],
-  "btns": {},
-  "desc": "The post you are looking for doesn't seem to exist anymore. Some information about it was missing or corrupt, meaning it cannot be displayed properly."
+  "btns": { "Go Home": "/" },
+  "desc": "Some information about this post is missing or corrupt, meaning it cannot be displayed properly."
 }

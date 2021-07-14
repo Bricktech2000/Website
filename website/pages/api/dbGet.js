@@ -1,6 +1,6 @@
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
-import pageMap from '../../private/lib/pageMap';
+import postMap from '../../private/lib/postMap';
 
 export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes
@@ -15,7 +15,7 @@ export default async function dbGet(req, res) {
     case 'like':
       var tags = (await getSafe(id)).tags;
       var output = {};
-      for (var id2 of pageMap) {
+      for (var id2 of postMap) {
         output[id2] = await getSafe(id2);
 
         //https://stackoverflow.com/questions/1885557/simplest-code-for-array-intersection-in-javascript
@@ -37,7 +37,7 @@ export default async function dbGet(req, res) {
       break;
     case 'all':
       if (typeof id === 'undefined') {
-        for (var id2 of pageMap) {
+        for (var id2 of postMap) {
           response[id2] = await getSafe(id2);
         }
       } else response[id] = await getSafe('502');

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import pageMap from '../private/lib/pageMap';
+import postMap from '../private/lib/postMap';
+import errorMap from '../private/lib/errorMap';
 
 import App from '../private/structure/App';
 import Page from '../private/structure/Page';
@@ -18,6 +19,12 @@ var Post = (props) => {
   const router = useRouter();
   var { id } = router.query || props;
 
+  var isError = errorMap.includes(id);
+  var isPost = postMap.includes(id);
+
+  if (isError) return <Error status={id} />;
+  if (!isPost && !isError) return <Error status={'404'} />;
+
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
   const [info, updateInfo] = useState();
   useEffect(() => {
@@ -28,8 +35,6 @@ var Post = (props) => {
   }, [props]);
 
   var loading = typeof info === 'undefined' || typeof info[id] === 'undefined';
-
-  if (!pageMap.includes(id)) return <Error status={404} />;
   return (
     <App
       title={props.ogTitle}
@@ -54,7 +59,7 @@ var Post = (props) => {
 };
 
 //https://nextjs.org/docs/basic-features/data-fetching
-/*import { promises as fs } from 'fs';
+import { promises as fs } from 'fs';
 
 export async function getStaticProps({ params }) {
   var id = params.id;
@@ -75,7 +80,7 @@ export async function getStaticProps({ params }) {
 //https://github.com/vercel/next.js/issues/12530
 
 export async function getStaticPaths() {
-  var paths = pageMap.map((id) => ({
+  var paths = postMap.concat(errorMap).map((id) => ({
     params: {
       id: id,
     },
@@ -84,6 +89,6 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}*/
+}
 
 export default Post;
