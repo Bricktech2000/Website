@@ -72,10 +72,10 @@
 .marked table img,
 .marked table iframe,
 .marked table video {
-  padding: 0;
+  margin: 0;
+  max-width: unset;
   width: 100%;
-  height: auto;
-  min-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .marked code,
@@ -156,8 +156,9 @@
   display: block;
   object-fit: contain;
   max-height: 75vh;
-  width: 100%;
-  padding: calc(3 * var(--smart-unit)) 10%;
+  max-width: 80%;
+  margin: calc(3 * var(--smart-unit)) 10%;
+  border-radius: calc(var(--smart-unit) * 0.5);
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -170,8 +171,9 @@
   }
   .marked img,
   .marked video {
-    padding-right: 0;
-    padding-left: 0;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
   .marked .iframe {
     width: 100%;
