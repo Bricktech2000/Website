@@ -177,6 +177,7 @@
   max-width: 80%;
   margin: calc(3 * var(--smart-unit)) 10%;
   border-radius: calc(var(--smart-unit) * 0.5);
+  box-shadow: var(--bs), var(--bs);
 }
 
 @media (max-aspect-ratio: 1/1) {
