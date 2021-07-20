@@ -87,7 +87,7 @@
   width: 100%;
 
   border-radius: 100vh;
-  border: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
+  border: calc(var(--smart-unit) * 0.25) solid var(--color-d);
 }
 
 .HomeHero .overlay {
