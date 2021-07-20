@@ -14,18 +14,21 @@
 .Nav svg {
   width: 100%;
   height: 100%;
-  fill: var(--color-l);
+  fill: var(--color);
   /* box-shadow: var(--bs); */
   /* https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */
   --shadow: drop-shadow(0 0 calc(var(--smart-unit) * 1) rgba(0, 0, 0, 1));
   filter: var(--shadow) var(--shadow);
 
   animation: fade-in 0.5s ease-out;
-  transition: fill 0.125s ease;
+  transition: fill 0.25s ease, top 0.25s ease;
+  position: relative;
+  top: 0;
 }
 
 .Nav:hover svg {
-  fill: var(--color);
+  fill: var(--color-l);
+  top: calc(var(--smart-unit) * -0.5);
 }
 
 @keyframes fade-in {
