@@ -10,10 +10,10 @@ class App extends Component {
   constructor() {
     super();
     this.count = 0;
-    this.changeTheme({ preventDefault: () => {} });
+    this.changePalette({ preventDefault: () => {} });
   }
 
-  changeTheme = (e) => {
+  changePalette = (e) => {
     e.preventDefault();
     //https://stackoverflow.com/questions/49411796/how-do-i-detect-i-am-on-server-vs-client-in-next-js
     if (!process.browser) return;
