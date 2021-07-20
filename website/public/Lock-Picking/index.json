@@ -3,6 +3,10 @@
   "date": "2020-07-24",
   "type": "blog",
   "tags": ["Blog", "Learning", "Hardware"],
-  "btns": { "Demo": "#demo" },
+  "btns": {
+    "Lock Pick Set Image": "#img",
+    "Demo Video": "#demo",
+    "Buy Lock Pick Set": ":https://www.banggood.com/DANIU-Transparent-Practice-Padlocks-with-12pcs-Unlocking-Lock-Pick-Set-Key-Extractor-Tool-Lock-Pick-Tools-p-1168495.html?rmmds=myorder&cur_warehouse=USA"
+  },
   "desc": "Ever wanted to be able to pick locks? I certainly did, which is why I learned how to do it! Explaining how I first started and how it works."
 }
