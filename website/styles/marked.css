@@ -148,8 +148,8 @@
   display: block;
   content: '';
   width: 0%;
-  margin-top: calc(var(--smart-res-unit) * -0.5);
-  height: calc(var(--smart-res-unit) * 0.15);
+  margin-top: -0.25em;
+  height: 0.075em;
   background: var(--color);
   transition: background 0.125s ease, width 0.125s ease;
 }
