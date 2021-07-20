@@ -54,23 +54,29 @@ class HomeHero extends Component {
             on the outcome is where the learning and self-improvement really
             take place.
           </p>
-          <div className={styles.icons}>
+          <div className={styles.contact}>
+            <div className={styles.text}>
+              <p>Get In Touch</p>
+              <p className={styles.vr}>│</p>
+            </div>
             {/*https://css-tricks.com/snippets/html/mailto-links/*/}
-            <a
-              target="_blank"
-              href="mailto:bricktech2000@gmail.com?subject=I'm%20interested%20in%20your%20work!"
-            >
-              <Mail />
-            </a>
-            <a target="_blank" href="https://github.com/Bricktech2000/">
-              <Github />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.facebook.com/emilien.breton.71"
-            >
-              <Facebook />
-            </a>
+            <div className={styles.icons}>
+              <a
+                target="_blank"
+                href="mailto:bricktech2000@gmail.com?subject=I'm%20interested%20in%20your%20work!"
+              >
+                <Mail />
+              </a>
+              <a target="_blank" href="https://github.com/Bricktech2000/">
+                <Github />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/emilien.breton.71"
+              >
+                <Facebook />
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles.overlay}>
