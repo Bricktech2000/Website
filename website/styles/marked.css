@@ -136,15 +136,33 @@
 }
 .marked a,
 .markup-link {
+  display: inline-block;
   color: var(--color);
-  transition: color 0.125s ease-in-out;
-  text-decoration: underline;
+  transition: color 0.125s ease;
+  text-decoration: none;
   -webkit-tap-highlight-color: rgba(255, 143, 14, 0.25);
+}
+/*https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline*/
+.marked a::after,
+.markup-link::after {
+  display: block;
+  content: '';
+  width: 0%;
+  margin-top: calc(var(--smart-res-unit) * -0.5);
+  height: calc(var(--smart-res-unit) * 0.15);
+  background: var(--color);
+  transition: background 0.125s ease, width 0.125s ease;
 }
 .marked a:hover,
 .markup-link:hover {
-  color: var(--title);
+  color: var(--color-l);
 }
+.marked a:hover::after,
+.markup-link:hover::after {
+  background: var(--color-l);
+  width: 100%;
+}
+
 .marked a[name] {
   pointer-events: none;
   text-decoration: none;
