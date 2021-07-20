@@ -19,12 +19,12 @@ class App extends Component {
     if (!process.browser) return;
 
     var colorHue;
-    var defaultHue = '25'; //orange
-    var storageHue = JSON.parse(localStorage.getItem('colorHue'));
+    var defaultHue = '216'; //greenish blue
+    var storageHue = localStorage.getItem('colorHue');
     if (this.count === 0) colorHue = storageHue || defaultHue;
-    else if (this.count === 1 && JSON.parse(storageHue) !== defaultHue)
+    else if (this.count === 1 && storageHue !== defaultHue)
       colorHue = defaultHue;
-    else colorHue = Math.floor(Math.random() * 360);
+    else colorHue = '' + Math.floor(Math.random() * 360);
 
     var cssColors = {
       '--color-l': `hsl(${colorHue}, 75%, 60%)`,
@@ -37,7 +37,7 @@ class App extends Component {
       document.documentElement.style.setProperty(cssName, cssColors[cssName]);
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => (this.count = 1), 1000);
-    localStorage.setItem('lastColorHue', JSON.stringify(colorHue));
+    localStorage.setItem('lastColorHue', colorHue);
     this.count++;
   };
 
