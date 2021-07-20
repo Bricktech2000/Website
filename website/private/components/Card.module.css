@@ -8,8 +8,7 @@
   position: relative;
   top: 0;
 
-  transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out,
-    top 0.25s ease-in-out;
+  transition: top 0.25s ease;
   text-decoration: none;
   color: var(--text);
   white-space: initial;
@@ -54,6 +53,7 @@
 }
 .title {
   grid-area: title;
+  transition: color 0.125s ease;
 }
 .desc {
   grid-area: desc;
