@@ -2,13 +2,12 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "_type": "module",
   "scripts": {
     "_dev1": "https://nextjs.org/docs/advanced-features/debugging",
     "_dev2": "https://stackoverflow.com/questions/53948521/node-options-is-not-recognized-as-an-internal-or-external-command",
     "dev": "cross-env NODE_OPTIONS='--trace-warnings' next dev -p 80",
     "build": "next build",
-    "start": "node server.mjs"
+    "start": "node server.js"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

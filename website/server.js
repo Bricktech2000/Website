@@ -1,14 +1,15 @@
 const https = false;
 const dev = false;
-import { domain } from './private/lib/consts.mjs';
+//import { domain } from './private/lib/consts.js';
+const domain = 'emilien.ca';
 
-import * as http from 'http';
-import * as _https from 'https';
+const http = require('http');
+const _https = require('https');
 const createServer = (https ? _https : http).createServer;
-import { parse } from 'url';
-import next from 'next';
-import fs from 'fs';
-
+const { parse } = require('url');
+const next = require('next');
+const fs = require('fs');
+//const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
