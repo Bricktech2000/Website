@@ -2,6 +2,8 @@
 
 A few days ago, I watched [a video](https://www.youtube.com/watch?v=tO5Ym6-H2Ac) from [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) on YouTube. It showcases various useful tools that can be 3D printed in a matter of minutes. While most of them seemed quite useless, some of them caught my attention. The following blog post will discuss **3 of my favorites**. Don't forget that you can download all the tools featured in this post by [clicking here](./Tools2.zip)!
 
+#tool1
+
 ## Screw Measuring Device
 
 ![](./IMG_20210315_170932_4.min.jpg)
@@ -13,6 +15,8 @@ The first tool I really liked was a _screw measuring device_. It allows one to m
 | ![](IMG_20210315_170725_8.min.jpg) | ![](IMG_20210315_170801_5.min.jpg) |
 | ![](IMG_20210315_170817_1.min.jpg) | ![](IMG_20210315_170834_9.min.jpg) |
 
+#tool2
+
 ## Center Finder
 
 ![](./IMG_20210315_171003_6.min.jpg)
@@ -22,6 +26,8 @@ The second tool I chose is a _center finder_. It makes finding **the center of a
 |                                    |                                    |
 | ---------------------------------- | ---------------------------------- |
 | ![](IMG_20210315_171106_7.min.jpg) | ![](IMG_20210315_171234_2.min.jpg) |
+
+#tool3
 
 ## Fillet Gauge
 
