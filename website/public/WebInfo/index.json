@@ -16,7 +16,8 @@
   ],
   "btns": {
     "Github": ":https://github.com/Bricktech2000/WebInfo",
-    "Demo": "#demo"
+    "Demo": "#demo",
+    "Example Log": "#log"
   },
   "desc": "A program to steal user information through a simple link. Telling you about what got me into making such a powerful program and showing you what information it is able to steal!"
 }

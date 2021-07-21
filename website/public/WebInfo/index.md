@@ -22,6 +22,8 @@ Below is an example link. Once you click on it, you will be redirected to [examp
 
 Once a victim opens up such a link, [WebInfo](https://github.com/Bricktech2000/WebInfo) will try to grab as much information as it can. It will then produce a log file, which looks something like this:
 
+#log
+
 ```
 general
 	datetimeClient: 2020-12-06, 17:15:38
