@@ -32,7 +32,7 @@ class App extends Component {
       '--color-d': `hsl(${colorHue}, 75%, 40%)`,
       '--color-h': `hsl(${colorHue + 30}, 75%, 50%)`,
     };
-    //}
+
     for (var cssName in cssColors)
       document.documentElement.style.setProperty(cssName, cssColors[cssName]);
     clearTimeout(this.timeout);
