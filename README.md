@@ -56,7 +56,7 @@ sudo certbot certonly --standalone
 
 > If an error occurs, ensure port forwarding is setup properly on your network and make sure no other programs are listening on port 80.
 
-Then, once the certificates have been generated successfully, edit the following parameters under `website/server.mjs`:
+Then, once the certificates have been generated successfully, edit the following parameters under `website/server.js`:
 
 ```javascript
 const https = true;
