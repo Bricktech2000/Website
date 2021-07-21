@@ -14,8 +14,8 @@
   ],
   "btns": {
     "Try it!": ":./index2.html",
-    "Download": ":./app-release Geometry Ninja 6.apk",
-    "Demo": "#demo"
+    "Download APK": ":./app-release Geometry Ninja 6.apk",
+    "Demo Video": "#demo"
   },
   "desc": "Cut glowing geometric shapes to earn points! Writing about my first android game and how you can try it out for yourself!"
 }
