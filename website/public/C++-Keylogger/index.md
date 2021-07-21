@@ -30,6 +30,7 @@ if(keyState == -32767){
 It loops through every key on the keyboard and verifies if it has been pressed using the [`GetAsyncKeyState`](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getasynckeystate) function. If the function returns `-32767`, it means that the key that was passed in as a parameter was pressed once since the last call to the function. However, this only allows us to know the `key code` of the key.
 
 Second, the keylogger needs to take the `key code` of the key that was pressed and transform it into the corresponding [`ASCII`](http://www.asciitable.com/) character, so that we can see which character was typed insted of its `key code`. In order to do so, the keylogger uses the following code:
+#code
 
 ```C++
 int ret = ToAsciiEx(k, MapVirtualKeyEx(k, 0, keyboardLayout), keyboardState, buffer, 0, keyboardLayout);
