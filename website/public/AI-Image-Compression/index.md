@@ -52,6 +52,8 @@ Essentially, an encoder takes an input (the source image), which then goes throu
 
 However, there are a few problems with this approach. First, a neural network can only have fixed-size inputs and outputs, which means that only one image size could be used. This is easily remedied by breaking up the input and output images into `16 x 16` chunks for the `red`, `green` and `blue` channels, which are also way more efficient to train with. Second, the number of neurons in the _latent_ part cannot really be modified either, which means that the [compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) has to be fixed. This is why I created a new way of training autoencoders which allows us to modify the [compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) on-the-fly! For each training step, do the following:
 
+#code
+
 > with `inp` as an input value...  
 > initialize a `global loss` variable to `0`  
 > set `enc` to the encoder prediction using `inp`  
