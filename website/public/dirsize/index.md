@@ -1,7 +1,7 @@
 ## The Idea
 
 Yesterday, I opened up the properties of my `Documents` folder to see how large it was. When I saw it had exceeded the `100 GB` mark, I wasn't even impressed. However, figured I should still try to remove some of the larger folders in order to save a few gigabytes... And this is when I remembered that windows can't sort folders by size. This is why I created the `dirsize` command: it sorts folders by size and shows you how large each one is. Here is an example of the output of the command:
-
+#img
 ![](./screenshot.png)
 
 As you can see, it is very easy to see which folders take up alot of space. My `Documents` folder (represented by a `.`) is `124.97 GB` is size, and it contains other folders such as `Virtual Machies` and `Virtual Box`, which take up `33.24 GB` and `31.52 GB` respectively. With this command, it is way easier to remove unnecessarily large files or folders to save disk space. If you want to download the source code, simply [click here](./dirsize.py)!
