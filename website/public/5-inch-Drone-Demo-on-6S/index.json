@@ -4,7 +4,7 @@
   "type": "hardware",
   "tags": ["Blog", "Demo"],
   "btns": {
-    "Demo": "#demo",
+    "6S Demo": "#demo",
     "Previous Post": "../5-inch-Drone-Build/",
     "Update Post": "../FPV-Drone-HD-Footage/"
   },
