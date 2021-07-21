@@ -33,36 +33,30 @@ class Footer extends Component {
           </a>
         </div>
         <div>
-          <p>Created with&nbsp;</p>
+          Created with{' '}
           <a
             href="https://en.wikipedia.org/wiki/HTML5"
             target="_blank"
             rel="noreferrer"
           >
             <HTML />
-          </a>
-          &nbsp;
+          </a>{' '}
           <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
             <Code />
+          </a>{' '}
+          by{' '}
+          <a
+            className="markup-link"
+            href="https://github.com/Bricktech2000/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Emilien Breton
           </a>
-          <p>
-            &nbsp;by{' '}
-            <a
-              className="markup-link"
-              href="https://github.com/Bricktech2000/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Emilien Breton
-            </a>
-          </p>
           <br />
         </div>
         <div>
-          <p>
-            Copyright <font className="copy">&copy;</font>{' '}
-            {new Date().getFullYear()}
-          </p>
+          <p>Copyright &copy; {new Date().getFullYear()}</p>
         </div>
       </footer>
     );
