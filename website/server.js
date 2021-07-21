@@ -1,9 +1,11 @@
 const https = false;
 const dev = false;
-import { domain } from './private/lib/consts';
+//import { domain } from './private/lib/consts.js';
+const domain = 'emilien.ca';
 
-const { createServer } = require(https ? 'https' : 'http');
-if (https) var http = require('http');
+const http = require('http');
+const _https = require('https');
+const createServer = (https ? _https : http).createServer;
 const { parse } = require('url');
 const next = require('next');
 const fs = require('fs');
@@ -11,7 +13,7 @@ const fs = require('fs');
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-var p = '/etc/letsencrypt/live/' + domain + '/';
+var p = `/etc/letsencrypt/live/${domain}/`;
 var credentials = {
   key: https && fs.readFileSync(p + 'privkey.pem'),
   cert: https && fs.readFileSync(p + 'fullchain.pem'),
@@ -21,7 +23,7 @@ var credentials = {
 if (https) {
   var httpServer = http.createServer(function(req, res) {
     res.writeHead(301, {
-      Location: 'https://' + req.headers['host'] + req.url,
+      Location: `https://${req.headers['host']}${req.url}`,
     });
     res.end();
   });
