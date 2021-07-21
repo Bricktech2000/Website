@@ -44,14 +44,14 @@ The servomotors are like muscles: their job is to transform the signals received
 This is a very good question. if you want to make your own spider robot, you need to know electronics, soldering and _arduino_ programming. Here are some links for the code and the 3D parts, which you need to 3D-print yourself:
 
 - [The Program](./13_sketch_mar04a.html)
-- [The Tibia Piece](Tibia%205%20v2.stl) - You need 6 of them
-- [The Femur Piece](Femur%203%20v8.stl) - You need 6 of them
-- [The Hip Piece](Hip%203%20v12.stl) - You guessed it, 6 of them
-- [The Upper Body Piece](Body%20Cover%202%20v30.stl) - You only need 1
-- [The Lower Body Piece](Body%206%20v22.stl) - You also only need 1
+- `6x` [Tibia Piece](Tibia%205%20v2.stl)
+- `6x` [Femur Piece](Femur%203%20v8.stl)
+- `6x` [Hip Piece](Hip%203%20v12.stl)
+- `1x` [Upper Body Piece](Body%20Cover%202%20v30.stl)
+- `1x` [Lower Body Piece](Body%206%20v22.stl)
 
 It is still recommended to contact me if you want to build an exact replica of my robot, since no schematics or wiring diagrams are available yet.
 
 ## Conclusion
 
-This project is one of the most advanced I have ever done to date. It has thought me many essential skills in _programming_, _3d design_ and _electronics_. I strongly recommend you try to make such projects, because it will also teach you essential skills such as _problem solving_, which will be useful during your entire life.
+This project is one of the most advanced I have ever done to date. It has thought me many essential skills in _programming_, _3d design_ and _electronics_. I strongly recommend you try to make such projects, because it will also teach you essential skills such as _problem solving_, which will be useful all the way through life.
