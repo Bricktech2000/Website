@@ -35,6 +35,8 @@ In order to work, this machine uses 2 [servo motors](https://en.wikipedia.org/wi
 [//]: # 'box, cover, lid'
 [//]: # 'battery'
 
+#parts
+
 | ![](switch_m.jpg) | ![](servo_m.jpg) | ![](arduino_m.jpg) | ![](jumpers.jpg) | ![](black_filament_m.jpg) | ![](battery_holder_m.jpg) |
 | ----------------- | ---------------- | ------------------ | ---------------- | ------------------------- | ------------------------- |
 |                   |                  |                    |                  |                           |                           |

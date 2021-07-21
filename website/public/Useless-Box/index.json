@@ -14,7 +14,8 @@
     "Modular"
   ],
   "btns": {
-    "Demo": "#demo",
+    "Parts List": "#parts",
+    "Demo Video": "#demo",
     "Download Code": ":./Useless_Box_1.zip",
     "Download STLs": ":./Useless Box STLs.zip"
   },
