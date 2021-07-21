@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> This website now uses a custom version of Markdown for its posts instead of MiniML. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## What is MiniML?
 
 MiniML is a custom-built markup language, which was used to create this webpage. [See the page's source code](./index.md).
@@ -33,9 +41,10 @@ So as you can see, there are many benifits to creating a custom markup language.
 _MiniML_ consists of only one function in one `Javascript` file, which is about 50 lines long. [See MiniML's source code](./../MiniML%20Compiler.js). It compiles down to `HTML` code, and then applies some classes to elements to allow custom styling for the end-user.
 
 For example, here is the part of MiniML that parses links:
+#code
 
 ```javascript
-out = out.replace(/\{(.+?)\:(.*?)\}/g, function (a, b, c) {
+out = out.replace(/\{(.+?)\:(.*?)\}/g, function(a, b, c) {
   return '<a class="markup-link" href="' + c + '">' + b + '</a>';
 });
 ```
