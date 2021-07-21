@@ -3,6 +3,7 @@ import AutoType from '../components/AutoType';
 import parallax from '../lib/parallax';
 
 import styles from './HomeHero.module.css';
+import { social } from '../lib/consts';
 
 ////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
 import Mail from '../svgs/043-mail.svg';
@@ -63,17 +64,14 @@ class HomeHero extends Component {
             <div className={styles.icons}>
               <a
                 target="_blank"
-                href="mailto:bricktech2000@gmail.com?subject=I'm%20interested%20in%20your%20work!"
+                href={`mailto:${social.mail}?subject=I'm%20interested%20in%20your%20work!`}
               >
                 <Mail />
               </a>
-              <a target="_blank" href="https://github.com/Bricktech2000/">
+              <a target="_blank" href={social.github}>
                 <Github />
               </a>
-              <a
-                target="_blank"
-                href="https://www.facebook.com/emilien.breton.71"
-              >
+              <a target="_blank" href={social.facebook}>
                 <Facebook />
               </a>
             </div>
