@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> This website is now hosted on an old HP laptop rather than on a Raspberry Pi and uses Next JS as a backend framework instead of NodeJS. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## What is a Raspberry Pi Server?
 
 A Raspberry Pi server is simply a server running off of a Raspberry Pi.
@@ -7,7 +15,6 @@ A Raspberry Pi server is simply a server running off of a Raspberry Pi.
 > [Wikipedia](https://en.wikipedia.org/wiki/Raspberry_Pi)
 
 For this server, I decided to use a _Raspberry Pi Zero W_ because it is cheap, small and portable. Here's a picture of me holding it while it is running:
-
 #img
 
 ![](IMG_20200508_175632_3.jpg)
