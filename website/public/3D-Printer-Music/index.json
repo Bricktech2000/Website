@@ -3,6 +3,6 @@
   "date": "2020-06-20",
   "type": "hardware",
   "tags": ["Software", "3D Printing", "G-code", "MIDI"],
-  "btns": { "Demo": "#demo", "Try it!": "#try" },
+  "btns": { "Demo Video": "#demo", "DIY Tutorial": "#try" },
   "desc": "Ever wanted to compose music using your 3D printer? Yeah no me neither lol. Writing a useless post about it all!"
 }
