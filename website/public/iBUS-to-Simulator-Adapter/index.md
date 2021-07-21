@@ -12,7 +12,7 @@ And here's how the finished adapter looks:
 
 #img
 
-![](thumbnail.jpg)
+![](index.jpg)
 
 ## How to build it
 
