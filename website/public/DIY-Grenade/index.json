@@ -11,6 +11,11 @@
     "3D Rendering",
     "Explosives"
   ],
-  "btns": { "Prototype Demo": "#demo" },
+  "btns": {
+    "First Prototype": "#prototype1",
+    "Second Prototype": "#prototype2",
+    "Third Prototype": "#prototype3",
+    "Ignition System Demo": "#demo"
+  },
   "desc": "Taking you through the 3 prototypes I made for my DIY grenade, and sharing my thought process with you!"
 }

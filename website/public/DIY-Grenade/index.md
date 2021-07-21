@@ -6,6 +6,8 @@ Unfortunately, I couldn't find any remanence of the first design I made. The onl
 
 ## The First Prototype
 
+#prototype1
+
 ![](./IMG_20200625_162209_0.jpg)
 
 Above is a photo of the first concrete prototype I made, about 4 months ago. How it worked is very simple. It consists of the following components:
@@ -17,6 +19,8 @@ Above is a photo of the first concrete prototype I made, about 4 months ago. How
 Long story short, after one throws the grenade, it hits the floor, at which point the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch) around the steel sphere hit the shell, which makes a spark, which makes the explosive gas detonate, which makes the whole thing explode. However, one problem killed the whole design: the explosive gas slowly leaked from the grenade, which was not completely airtight since it was [3D-printed](https://en.wikipedia.org/wiki/3D_printing).
 
 ## The Second Prototype
+
+#prototype2
 
 ![](./IMG_20200621_150824_3.jpg)
 
@@ -42,6 +46,8 @@ And here's a macro photo of the insides after the "explosion" (if you can even c
 ![](./IMG_20200621_155247_9.jpg)
 
 ## The Third Prototype
+
+#prototype3
 
 ![](./IMG_20200625_191507_1.jpg)
 
