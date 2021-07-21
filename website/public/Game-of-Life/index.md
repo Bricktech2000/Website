@@ -21,6 +21,7 @@ This, as stated in the introduction, is a cellular automaton.
 > [Wikipedia](https://en.wikipedia.org/wiki/Cellular_automaton)
 
 It consists of a 2D grid of cells which can be in one of two states: _alive_ or _dead_. In the program, the grid of cells is implemented by an `HTML canvas` for the best performance. By looking at the states of its _neighbors_ (a 3x3 square around a cell), it can modify its own state according to 4 simple rules. They are the following:
+#rules
 
 > - Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 > - Any live cell with two or three live neighbours lives on to the next generation.
