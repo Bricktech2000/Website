@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Head from './Head';
 
+import { domain } from '../lib/consts';
 import styles from './App.module.css';
 import { init } from '../lib/rand';
 init();
@@ -45,9 +46,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Head
-          title={'Emilien Breton | ' + this.props.title}
+          title={`Emilien Breton | ${this.props.title}`}
           description={this.props.description}
-          image={'https://emilien.ca/' + this.props.image}
+          image={`https://${domain}/${this.props.image}`}
         />
         <div className={styles.App}>{this.props.children}</div>
       </React.Fragment>

@@ -1,6 +1,6 @@
 const https = false;
 const dev = false;
-const domain = 'emilien.ca';
+import { domain } from './private/lib/consts';
 
 const { createServer } = require(https ? 'https' : 'http');
 if (https) var http = require('http');
@@ -19,7 +19,7 @@ var credentials = {
 
 //start an HTTP redirect server
 if (https) {
-  var httpServer = http.createServer(function (req, res) {
+  var httpServer = http.createServer(function(req, res) {
     res.writeHead(301, {
       Location: 'https://' + req.headers['host'] + req.url,
     });
