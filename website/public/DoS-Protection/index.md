@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> This website now uses Cloudflare as a proxy and DDoS protection layer instead of a NodeJS library. Moreover, it is now hosted on an old HP laptop rather than on a Raspberry Pi and uses a custom version of Markdown for its posts instead of MiniML. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## The Problem
 
 When I ported this website to a Raspberry Pi (which you can see a post about [here](../Raspberry-Pi-Server/)), I noticed that sometimes, an internal function I made called `MiniMLCompile` would take a fairly long time to execute. Because of that, I put in place a warning displayed in the client console when the function took more than `500 ms` to execute... and it turns out that it pretty much always does:
@@ -39,9 +47,6 @@ app.use(ddos.express);
 Essentially, it uses a [DoS protecion library](https://www.npmjs.com/package/ddos) which limits the amount of requests that can be performed from each host. When too many requests are performed by a single _IP address_ in a very short amount of time, it blocks the machine until the requests stop during `10 seconds` and displays an error message.
 
 #try
-
-[//]: # 'TODO'
-
 You can try it out by spamming the `F5` key to refresh this page as quickly as you can. After a few refreshes, you will get a `429 Too Many Requests` error and will have to wait a few seconds without refreshing the page to get off the list of blocked hosts.
 
 ## Conclusion
