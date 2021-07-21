@@ -18,6 +18,7 @@ After a few re-designs and many failed attempts due to incorrect tolerances, I f
 ![](FJIMG_20200420_145646.jpg)
 
 If you want to know more about how they were made, you can watch [this video](https://www.youtube.com/watch?v=k7jLqC3cGUY) on my [YouTube Channel](https://www.youtube.com/channel/UCGj6pfxZ0XYJU29XNwXPPxg/featured).
+#video
 
 ![youtube](https://www.youtube.com/embed/k7jLqC3cGUY)
 

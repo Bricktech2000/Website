@@ -10,6 +10,10 @@
     "3D Printing",
     "Modular"
   ],
-  "btns": { "Image": "#img", "Download STL's": ":./Modular Drawers STLs.zip" },
+  "btns": {
+    "Container Image": "#img",
+    "Video": "#video",
+    "Download STLs": ":./Modular Drawers STLs.zip"
+  },
   "desc": "Talking about how I improved the sorting of my electronics!"
 }
