@@ -1,8 +1,12 @@
 ## About Neumorphism
 
 While modern design focuses on _floating_ containers, neumorphic design tries to make containers **extrude** out of the background. The following picture from [UX Design](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6) demonstrates that perfectly.
+
 ![](./modern%20vs%20neumorphism.jpeg)
+
+#inspiration
 When I first saw it, I got hooked instantly. I looked up [inspiration on Google](https://www.google.com/search?q=neumorphism&tbm=isch#imgrc=iRoyzjKXJ5iv2M) and found the following image, which I based [my design](./Neumorphic-Design/neumorphism.html) on:
+
 ![](./neumorphism-ui-design.png)
 
 ## My Design
