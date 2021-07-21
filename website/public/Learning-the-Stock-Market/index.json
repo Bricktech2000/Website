@@ -3,6 +3,6 @@
   "date": "2020-06-08",
   "type": "blog",
   "tags": ["Blog", "Learning", "Software", "Finances", "Data Analysis"],
-  "btns": { "Profit Image": "#img" },
+  "btns": {},
   "desc": "Taking you through my go at learning the stock market! This post will be updated whenever I learn something new!"
 }

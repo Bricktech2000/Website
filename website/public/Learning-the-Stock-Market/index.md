@@ -134,8 +134,6 @@ Today, nothing too interesting happened. I made a few hundred dollars in 45 minu
 
 Yesterday night, I wanted to try to plot the revenue I make in a graph to be able to visualize it. Here it is:
 
-#img
-
 ![](./graph.png)
 
 As you can see, the losses I make (below the red line) are usually smaller than the gains I make (above the red line). However, today was a very bad day and I was only able to make about `75$` in 45 minutes on `ERI`, `SAVE` and `UGAZ`. If you look from `15` to `27` on the `x` axis, representing the trades I made today, you will see that the losses I made were almost as large as the gains. This means that I lost about as much as I made, meaning I didn't make a very big profit.
