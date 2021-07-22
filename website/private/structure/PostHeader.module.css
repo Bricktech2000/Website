@@ -15,7 +15,7 @@
 }
 .PostHeader > * {
   width: 100%;
-  margin: calc(var(--smart-unit) * 1) 0;
+  margin: calc(var(--smart-unit) * 3) 0;
   break-inside: avoid;
 }
 .PostHeader .markup-h1 {
@@ -24,6 +24,7 @@
 .PostHeader img {
   width: 100%;
   height: auto;
+  margin-top: 0;
   border-radius: calc(var(--smart-unit) * 0.5);
   box-shadow: var(--bs), var(--bs);
 }
