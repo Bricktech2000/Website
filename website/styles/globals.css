@@ -63,3 +63,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--lg-d);
 }
+
+::selection {
+  background: var(--color-d);
+  color: var(--title);
+}
