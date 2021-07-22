@@ -1,4 +1,5 @@
 export default [
+  'Mini-DIY-Flamethrower',
   'Combat-Robot-Design-Update',
   'Spider-Robot-V3-1',
   'Sequre-SQ-D60',

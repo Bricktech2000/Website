@@ -1,0 +1,12 @@
+{
+  "title": "Mini DIY Flamethrower",
+  "date": "2021-07-22",
+  "type": "",
+  "tags": ["Showcase", "Hardware", "Demo", "Explosives"],
+  "btns": {
+    "Flamethrower Image": "#img",
+    "Demo Video": "#demo",
+    "Parts List": "#parts"
+  },
+  "desc": "What more can I say? I built a mini flamethrower! Explaining how it works and showing you a demo of it in action!"
+}
