@@ -35,4 +35,4 @@ For anyone interested, here is a parts list for this flamethrower:
 After this long and tedious build process, I was left with an **awesome** mini flamethrower. What's more, I spent only `30$` on the whole thing and had a lot of fun designing it. I still haven't been able to get the explosives required to finalize my [DIY Grenade](../DIY-Grenade/), so I guess this makes up for it. Below is a video of the flamethrower in action!
 #demo
 
-![youtube](https://www.youtube.com/embed/dQw4w9WgXcQ)
+![youtube](https://www.youtube.com/embed/JaKBsS16rn8)
