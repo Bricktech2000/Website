@@ -31,7 +31,7 @@ class App extends Component {
       '--color-l': `hsl(${colorHue}, 75%, 60%)`,
       '--color': `hsl(${colorHue}, 75%, 50%)`,
       '--color-d': `hsl(${colorHue}, 75%, 40%)`,
-      '--color-h': `hsl(${colorHue + 30}, 75%, 50%)`,
+      '--color-h': `hsl(${parseInt(colorHue) + 15}, 75%, 50%)`,
     };
 
     for (var cssName in cssColors)
