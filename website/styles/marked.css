@@ -126,6 +126,9 @@
 .marked ol {
   margin: calc(3 * var(--smart-unit)) 10%;
 }
+.marked ::marker {
+  color: var(--title);
+}
 .marked blockquote {
   font-style: italic;
   padding: calc(var(--vh) * 1) 2vw;
