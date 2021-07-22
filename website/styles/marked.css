@@ -140,7 +140,7 @@
   color: var(--color);
   transition: color 0.125s ease;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(255, 143, 14, 0.25);
+  -webkit-tap-highlight-color: transparent;
 }
 /*https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline*/
 .marked a::after,
