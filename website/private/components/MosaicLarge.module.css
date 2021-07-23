@@ -8,6 +8,12 @@
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout*/
   grid-auto-flow: dense;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*Portrait*/
 @media (max-aspect-ratio: 1/1) {
   .MosaicLarge {
