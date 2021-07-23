@@ -32,8 +32,7 @@
   grid-template-columns: calc(var(--smart-res-unit) * 15) 1fr;
   background: var(--card-bg);
   box-shadow: var(--bs);
-  padding: calc(var(--smart-unit) * 7.5);
-  padding-right: calc(var(--smart-unit) * 20);
+  padding: calc(var(--smart-unit) * 7.5) 10vw;
 }
 .HomeHero .about > h1 {
   grid-area: title;
