@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import App from '../private/structure/App';
 import Page from '../private/structure/Page';
 import PostMain from '../private/structure/PostMain';
+import PageHeader from '../private/structure/PageHeader';
 
 import Loading from '../private/components/Loading';
 import dbGet from '../private/lib/dbGet';
@@ -31,6 +32,7 @@ export default function Legal(props) {
         </Page>
       ) : (
         <React.Fragment>
+          <PageHeader info={info[id]} />
           <Page>
             <PostMain info={info[id]} />
           </Page>

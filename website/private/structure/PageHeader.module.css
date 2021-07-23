@@ -1,0 +1,32 @@
+.PageHeader {
+  grid-area: header;
+
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto auto auto;
+
+  padding: calc(var(--smart-unit) * 5) 7.5vw;
+  padding-left: 15vw;
+
+  color: var(--text);
+}
+.PageHeader > * {
+  width: auto;
+  margin: 0 calc(var(--smart-unit) * 1);
+  break-inside: avoid;
+}
+.PageHeader .markup-h1 {
+  margin-top: 0;
+}
+@media (max-aspect-ratio: 1/1) {
+  .PageHeader {
+    padding-left: calc(var(--smart-unit) * 1);
+    padding-right: calc(var(--smart-unit) * 1);
+
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+}
