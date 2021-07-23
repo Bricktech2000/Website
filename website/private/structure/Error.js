@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 import errorMap from '../../private/lib/errorMap';
 
 import App from '../../private/structure/App';
-import Page from '../../private/structure/Page';
+import Aside from '../../private/structure/Aside';
+import Nav from '../../private/structure/Nav';
+import Main from '../../private/structure/Main';
 import ErrorMain from '../../private/structure/ErrorMain';
 
 import Loading from '../../private/components/Loading';
@@ -28,13 +30,15 @@ var Error = (props) => {
     typeof info === 'undefined' || typeof info[status] === 'undefined';
   return (
     <App title={'Error'} description={''} image={''}>
-      <Page>
+      <Aside />
+      <Nav />
+      <Main>
         {loading ? (
           <Loading height="1000vh" />
         ) : (
           <ErrorMain info={info[status]} />
         )}
-      </Page>
+      </Main>
     </App>
   );
 };
