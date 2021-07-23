@@ -24,7 +24,6 @@ class MosaicLarge extends Component {
 
   render() {
     this.rand = generator();
-    console.log(this.state.clickCount);
     return (
       <div className={styles.container}>
         <div className={styles.MosaicLarge} ref={this.parallaxRef}>
