@@ -35,7 +35,7 @@ var Button = (props) => {
           className={
             styles.button +
             ' ' +
-            (props.href.includes('#') ? styles['button-on'] : '')
+            (props.href && props.href.includes('#') ? styles['button-on'] : '')
           }
         >
           {props.label}
@@ -43,6 +43,11 @@ var Button = (props) => {
       </a>
     ));
 
+    if (props.onClick) {
+      return React.cloneElement(<Html2 />, {
+        onClick: props.onClick,
+      });
+    }
     if (props.blank) {
       return React.cloneElement(<Html2 />, {
         href: props.href,
