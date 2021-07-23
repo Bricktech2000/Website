@@ -35,7 +35,7 @@
   padding: calc(var(--smart-unit) * 7.5);
   padding-right: calc(var(--smart-unit) * 20);
 }
-.HomeHero .about h1 {
+.HomeHero .about > h1 {
   grid-area: title;
 
   margin: 0;
@@ -50,58 +50,16 @@
   padding-left: calc(var(--smart-unit) * 6);
   text-align: justify;
 }
-.HomeHero .about .contact {
+.HomeHero .GetInTouch {
   grid-area: icons;
-  text-align: right;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-.HomeHero .about .contact .icons {
-  white-space: nowrap;
-}
-.HomeHero .about .contact .icons svg {
   width: 100%;
-  height: 100%;
-  fill: var(--color);
-  transition: fill 0.25s ease-in-out;
 }
-.HomeHero .about .contact .icons a {
-  display: inline-block;
-  position: relative;
-  top: 0;
-
-  margin: calc(var(--smart-unit) * 2);
-  height: calc(var(--smart-res-unit) * 4);
-  width: calc(var(--smart-res-unit) * 4);
-  transition: top 0.25s ease-in-out;
-}
-.HomeHero .about .icons a:hover {
-  top: calc(var(--smart-unit) * -0.5);
-}
-.HomeHero .about .icons a:hover svg {
-  fill: var(--color-l);
-}
-.HomeHero .about .contact .text {
-  color: var(--color-l);
-  white-space: nowrap;
-}
-.HomeHero .about .contact .text p {
-  display: inline-block;
-  align-self: center;
-  padding: 0;
-}
-.HomeHero .about .contact .text .vr {
-  margin: 0 calc(var(--smart-unit) * 2);
-  padding-bottom: calc(var(--smart-res-unit) * 0.25);
-
-  font-weight: lighter;
-  font-size: calc(var(--smart-res-unit) * 3);
+.HomeHero .GetInTouch > * {
+  justify-content: flex-end;
+  font-size: calc(var(--smart-res-unit) * 2);
 }
 
-.HomeHero .about img {
+.HomeHero .about > img {
   grid-area: image;
   width: 100%;
 
@@ -226,11 +184,11 @@
     grid-template-columns: 1fr;
     padding: calc(var(--smart-unit) * 3);
   }
-  .HomeHero .about img {
+  .HomeHero .about > img {
     width: calc(100% - 20vw - 20vw);
     margin: 0 20vw;
   }
-  .HomeHero .about p {
+  .HomeHero .about > p {
     padding: calc(var(--smart-unit) * 5) 0;
     font-size: calc(var(--smart-res-unit) * 2);
   }

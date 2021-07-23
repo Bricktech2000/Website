@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import AutoType from '../components/AutoType';
 import parallax from '../lib/parallax';
+import GetInTouch from '../components/GetInTouch';
 
 import styles from './HomeHero.module.css';
-import { social } from '../lib/consts';
-
-////https://stackoverflow.com/questions/42296499/how-to-display-svg-icons-svg-files-in-ui-using-react-component
-import Mail from '../svgs/043-mail.svg';
-import Github from '../svgs/009-github-1.svg';
-import Facebook from '../svgs/025-facebook.svg';
-import LinkedIn from '../svgs/037-linkedin.svg';
-import Document from '../svgs/008-document.svg';
 
 class HomeHero extends Component {
   state = {};
@@ -55,26 +48,8 @@ class HomeHero extends Component {
             on the outcome is where the learning and self-improvement really
             take place.
           </p>
-          <div className={styles.contact}>
-            <div className={styles.text}>
-              <p>Get In Touch</p>
-              <p className={styles.vr}>│</p>
-            </div>
-            {/*https://css-tricks.com/snippets/html/mailto-links/*/}
-            <div className={styles.icons}>
-              <a
-                target="_blank"
-                href={`mailto:${social.mail}?subject=I'm%20interested%20in%20your%20work!`}
-              >
-                <Mail />
-              </a>
-              <a target="_blank" href={social.github}>
-                <Github />
-              </a>
-              <a target="_blank" href={social.facebook}>
-                <Facebook />
-              </a>
-            </div>
+          <div className={styles.GetInTouch}>
+            <GetInTouch />
           </div>
         </div>
         <div className={styles.overlay}>
