@@ -32,7 +32,7 @@ Your access to and use of the Service is also conditioned on Your acceptance of 
 
 ## Copyright Notices
 
-Website design, content and logo subject to **copyright &copy; 2021 | Emilien Breton**
+Website design, content and logo subject to **copyright &copy; 2021 Emilien Breton**
 
 Website [source code](https://github.com/Bricktech2000/Website) licensed under the [GNU General Public License v3.0](https://raw.githubusercontent.com/Bricktech2000/Website/master/LICENSE)
 
