@@ -13,7 +13,7 @@ class Page extends Component {
         <Aside />
         <Nav />
         <Main>{this.props.children}</Main>
-        <Footer />
+        <Footer github={this.props.github} />
       </React.Fragment>
     );
   }
