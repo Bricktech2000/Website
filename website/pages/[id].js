@@ -42,13 +42,13 @@ var Post = (props) => {
       image={props.ogImage}
     >
       {loading ? (
-        <Page>
+        <Page github={`public/${id}`}>
           <Loading height="1000vh" />
         </Page>
       ) : (
         <React.Fragment>
           <PostHeader info={info[id]} />
-          <Page>
+          <Page github={`public/${id}`}>
             <PostMain info={info[id]} />
             <PostRelated info={info[id]} />
           </Page>

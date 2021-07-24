@@ -19,7 +19,7 @@ export default function Home() {
       <Main>
         <HomePostList />
       </Main>
-      <Footer />
+      <Footer github="pages/index.js" />
     </App>
   );
 }
