@@ -1,30 +1,45 @@
 .Footer {
   grid-area: footer;
 
-  width: 100%;
-  height: auto;
-  padding: calc(var(--smart-unit) * 5);
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-areas: 'center vr contact';
+  grid-gap: calc(var(--smart-unit) * 2);
+  align-items: center;
+
+  width: 100%;
+  padding: calc(var(--smart-unit) * 5) 10%;
+  /* display: grid; */
+  grid-template-columns: 3fr auto 3fr;
+  grid-template-rows: auto;
   justify-items: center;
-  color: var(--text);
   font-size: min(calc(var(--smart-res-unit) * 1.25), 4vw);
-  text-align: center;
+  white-space: pre-wrap;
   word-wrap: break-word;
 }
-.Footer div * {
+.Footer .center * {
   display: inline-block;
 }
-.Footer div.hr {
-  padding-bottom: calc(var(--smart-unit) * 2.5);
-  width: calc(var(--smart-res-unit) * 25);
-  max-width: 75vw;
-  border-top: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
-  height: calc(var(--smart-unit) * 0.5);
+.Footer .center svg {
+  vertical-align: middle;
 }
-.Footer div .copy {
-  font-family: sans-serif;
+.Footer .vr {
+  grid-area: vr;
+
+  background: var(--card2-bg);
+  width: calc(var(--smart-unit) * 0.25);
+  height: 100%;
+}
+.Footer .issue {
+  text-align: right;
+  margin: 0 0.75em;
+  color: var(--title);
+}
+.Footer .center {
+  grid-area: center;
+  text-align: center;
+}
+.Footer .contact {
+  grid-area: contact;
 }
 /*
 https://css-tricks.com/almanac/properties/f/fill/
@@ -33,8 +48,20 @@ https://stackoverflow.com/questions/28652648/how-to-use-external-svg-in-html
 yeah just using reUpdate's `yield include`
 */
 .Footer div svg {
-  fill: var(--color);
-  margin-bottom: -0.1em;
-  height: 0.75em;
-  width: auto;
+  fill: var(--title);
+  width: 1.25em;
+  height: auto;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .Footer {
+    grid-template-areas: 'vr' 'center' 'contact';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .Footer .vr {
+    width: 75%;
+    height: calc(var(--smart-unit) * 0.25);
+    margin-bottom: calc(var(--smart-unit) * 3);
+  }
 }

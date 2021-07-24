@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
+import { /*React, */ Component } from 'react';
+import GetInTouch from '../components/GetInTouch';
+import Link from 'next/link';
+import { github } from '../lib/consts';
 
-import HTML from '../svgs/015-logo.svg';
-import Code from '../svgs/047-coding.svg';
+import React from '../svgs/000-react.svg';
+import NextJS from '../svgs/000-next-js.svg';
+import NodeJS from '../svgs/000-nodejs.svg';
+import Ubuntu from '../svgs/000-ubuntu.svg';
+import Cloudflare from '../svgs/000-cloudflare.svg';
 import styles from './Footer.module.css';
 
 class Footer extends Component {
@@ -9,54 +15,36 @@ class Footer extends Component {
   render() {
     return (
       <footer className={styles.Footer}>
-        <div className={styles.hr}></div>
-        <div>
-          Icons made by{' '}
-          <a
-            className="markup-link"
-            href="https://www.flaticon.com/authors/dave-gandy"
-            target="_blank"
-            rel="noreferrer"
-            title="Dave Gandy"
-          >
-            Dave Gandy
-          </a>{' '}
-          from{' '}
-          <a
-            className="markup-link"
-            href="https://www.flaticon.com/"
-            target="_blank"
-            rel="noreferrer"
-            title="Flaticon"
-          >
-            www.flaticon.com
-          </a>
-        </div>
-        <div>
-          Created with{' '}
-          <a
-            href="https://en.wikipedia.org/wiki/HTML5"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <HTML />
-          </a>{' '}
-          <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-            <Code />
-          </a>{' '}
-          by{' '}
-          <a
-            className="markup-link"
-            href="https://github.com/Bricktech2000/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Emilien Breton
-          </a>
+        <div className={styles.vr}></div>
+        <div className={styles.center}>
+          <div>
+            Created with <React /> <NextJS /> <NodeJS /> by Emilien Breton
+          </div>
           <br />
+          <div>
+            Powered and protected by <Ubuntu /> <Cloudflare />
+          </div>
+          <br />
+          <div>
+            &copy; {new Date().getFullYear()} Emilien Breton
+          </div> &#8212;{' '}
+          <Link href="/legal/">
+            <a className="markup-link">Legal</a>
+          </Link>
         </div>
-        <div>
-          <p>Copyright &copy; {new Date().getFullYear()}</p>
+        <div className={styles.contact}>
+          <GetInTouch />
+          <div className={styles.issue}>
+            Find an issue with this page?{' '}
+            <a
+              href={github + '/tree/master/website/' + this.props.github}
+              target="_blank"
+              rel="noreferrer"
+              className="markup-link"
+            >
+              Fix it on Github
+            </a>
+          </div>
         </div>
       </footer>
     );
