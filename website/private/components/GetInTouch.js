@@ -15,7 +15,7 @@ class GetInTouch extends Component {
     return (
       <div className={styles.GetInTouch}>
         <div className={styles.text}>
-          <p>Get In Touch</p>
+          <p>Get in Touch</p>
           <p className={styles.vr}>│</p>
         </div>
         {/*https://css-tricks.com/snippets/html/mailto-links/*/}
