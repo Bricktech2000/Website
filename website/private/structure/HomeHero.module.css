@@ -54,7 +54,6 @@
   width: 100%;
 }
 .HomeHero .GetInTouch > * {
-  justify-content: flex-end;
   font-size: calc(var(--smart-res-unit) * 2);
 }
 
