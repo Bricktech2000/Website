@@ -4,7 +4,7 @@ For a few years now, I've been [lock picking](https://en.wikipedia.org/wiki/Lock
 
 #img
 
-![](https://imgaz3.staticbg.com/thumb/large/oaupload/banggood/images/11/BA/5db24a5f-1a0b-4508-b02c-0bd5b0b48ce4.jpg.webp)
+![](./backup_banggoodSet.jpg)
 
 According to [The LockPickingLawyer](https://www.youtube.com/channel/UCm9K6rby98W8JigLoZOh6FQ), the only downside of this kit was the _tension wrenches_, which bent really easily. Fortunately, it turned out that the [one I ordered](https://www.banggood.com/DANIU-Transparent-Practice-Padlocks-with-12pcs-Unlocking-Lock-Pick-Set-Key-Extractor-Tool-Lock-Pick-Tools-p-1168495.html?rmmds=myorder&cur_warehouse=USA) was a bit different, so I ended up receiving thick metal tension wrenches with my lock picking kit instead of the low-quality ones he got.
 
