@@ -6,13 +6,13 @@ import parallax from '../lib/parallax';
 import styles from './MosaicLarge.module.css';
 
 class MosaicLarge extends Component {
-  state = { clickCount: 3 };
+  state = {};
 
   constructor(props) {
     super(props);
 
     [
-      this.componentDidMount,
+      this.componentDidMount2,
       this.componentWillUnmount,
       this.parallaxRef,
     ] = parallax((current, value) => {
@@ -20,6 +20,15 @@ class MosaicLarge extends Component {
         0.25) *
         -20}))`;
     });
+  }
+
+  componentDidMount() {
+    //this is the most hacky solution ever
+    //modifying a property on an import to keep track of a value... can't get much worse than that
+
+    generator.clickCount = generator.clickCount || 3;
+    this.setState({ clickCount: generator.clickCount });
+    this.componentDidMount2();
   }
 
   render() {
@@ -39,9 +48,11 @@ class MosaicLarge extends Component {
         {Math.pow(2, this.state.clickCount) < this.props.children.length && (
           <Button
             label="Load More"
-            onClick={() =>
-              this.setState({ clickCount: this.state.clickCount + 1 })
-            }
+            onClick={() => {
+              this.setState({ clickCount: this.state.clickCount + 1 });
+              generator.clickCount++;
+              console.log(generator.clickCount);
+            }}
           />
         )}
       </div>
