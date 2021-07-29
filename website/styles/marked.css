@@ -124,6 +124,10 @@
 }
 .marked ul,
 .marked ol {
+  margin-left: calc(5 * var(--smart-unit));
+}
+.marked > ul,
+.marked > ol {
   margin: calc(3 * var(--smart-unit)) 10%;
 }
 .marked ::marker {
@@ -191,6 +195,10 @@
   .marked table {
     margin-right: 0;
     margin-left: 0;
+  }
+  .marked > ul,
+  .marked > ol {
+    margin: calc(3 * var(--smart-unit)) 2ch;
   }
   .marked img,
   .marked video {
