@@ -60,5 +60,7 @@ export default {
   'Raspberry Pi': 'u',
   Encryption: 'u',
   Robotics: 'u',
+  Linux: 'u',
+  Bash: 'u',
   Outdated: 'b',
 };
