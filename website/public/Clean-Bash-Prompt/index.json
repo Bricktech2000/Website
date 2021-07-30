@@ -1,0 +1,23 @@
+{
+  "title": "Clean Bash Prompt",
+  "date": "2021-07-30",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "Git",
+    "Demo",
+    "Scripting",
+    "UI Design",
+    "Linux",
+    "Bash"
+  ],
+  "btns": {
+    "Github": ":https://github.com/Bricktech2000/Clean-Bash-Prompt",
+    "Screenshot": "#screenshot",
+    "View Code": "#code",
+    "Try it!": "#try"
+  },
+  "desc": "A clean custom bash prompt designed for maximum efficiency. Showcasing the key features of this prompt and explaining how in works in-depth."
+}

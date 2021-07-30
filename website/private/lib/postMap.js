@@ -1,4 +1,5 @@
 export default [
+  'Clean-Bash-Prompt',
   'Mini-DIY-Flamethrower',
   'Combat-Robot-Design-Update',
   'Spider-Robot-V3-1',
