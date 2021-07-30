@@ -11,7 +11,8 @@
     "Hacking",
     "Selenium",
     "Xvfb",
-    "Scripting"
+    "Scripting",
+    "Linux"
   ],
   "btns": {
     "Demo": "#demo",
