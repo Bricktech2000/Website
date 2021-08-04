@@ -26,7 +26,7 @@ In this minimal example, `\u` represents the current username and `>` is simply 
 After iterating on this idea for a few hours, I came up with [this very Bash prompt](https://github.com/Bricktech2000/Clean-Bash-Prompt). In my opinion, it is the best balance between cleanliness and efficiency. If anyone is feeling like reading gibberish, below is its source code:
 
 ```bash
-export PS1='`status=$?; running=$({ pgrep -x $CLEAN_PROMPT_CHECK_PROC; } | wc -l); if [[ $UID -eq 0 ]]; then printf "\[\033[38;5;044m\]\`whoami\`\U0001F48E"; else printf "\[\033[38;5;008m\]\`whoami\`\U0001F517"; fi; printf "\[\033[00m\]"; if [[ $status -gt 0 ]]; then printf "\[\033[91m\]"; else printf "\[\033[94m\]"; fi; printf "\`pwd | rev | cut -d '/' -f 2 | rev\`/\`pwd | rev | cut -d '/' -f 1 | rev\`\[\033[00m\]"; git branch --show-current &> /dev/null; if [[ $? -eq 0 ]]; then status=$(git status 2> /dev/null); if [[ $status =~ Changes\ not\ staged\ for\ commit: ]] || [[ $status =~ Untracked\ files: ]]; then printf "\[\033[33m\]"; elif [[ $status =~ Changes\ to\ be\ committed: ]]; then printf "\[\033[32m\]"; else printf "\[\033[94m\]"; fi; printf " ($(git branch --show-current))"; elif [[ running -gt 0 ]]; then printf " \[\033[94m\][live]\[\033[00m\]"; fi; if [[ running -eq 0 ]]; then printf " \[\033[91m\][down]\[\033[00m\]"; fi; printf "\[\033[00m\] "`' && export PS2=' ' && export LS_COLORS='ow=01;34;40'
+export PS1='`status=$?; running=$({ pgrep -x $CLEAN_PROMPT_CHECK_PROC; } | wc -l); if [[ $UID -eq 0 ]]; then printf "\r\[\033[38;5;044m\]\`whoami\`\U0001F48E"; else printf "\r\[\033[38;5;008m\]\`whoami\`\U0001F517"; fi; printf "\[\033[00m\]"; if [[ $status -gt 0 ]]; then printf "\[\033[91m\]"; else printf "\[\033[94m\]"; fi; printf "\`pwd | rev | cut -d '/' -f 2 | rev\`/\`pwd | rev | cut -d '/' -f 1 | rev\`\[\033[00m\]"; git branch --show-current &> /dev/null; if [[ $? -eq 0 ]]; then status=$(git status 2> /dev/null); if [[ $status =~ Changes\ not\ staged\ for\ commit: ]] || [[ $status =~ Untracked\ files: ]]; then printf "\[\033[33m\]"; elif [[ $status =~ Changes\ to\ be\ committed: ]]; then printf "\[\033[32m\]"; else printf "\[\033[94m\]"; fi; printf " ($(git branch --show-current))"; elif [[ running -gt 0 ]]; then printf " \[\033[94m\][live]\[\033[00m\]"; fi; if [[ running -eq 0 ]]; then printf " \[\033[91m\][down]\[\033[00m\]"; fi; printf "\[\033[00m\] "`' && export PS2=' ' && export LS_COLORS='ow=01;34;40'
 ```
 
 However, for everyone else, below is a commented version of the `PS1` environment variable exported in the command above. This is the script that creates the Bash prompt itself, including the text displayed and the colors used.
@@ -36,8 +36,8 @@ However, for everyone else, below is a commented version of the `PS1` environmen
 status=$?; #get exit code of last command
 running=$({ pgrep -x $CLEAN_PROMPT_CHECK_PROC; } | wc -l); #check if process CLEAN_PROMPT_CHECK_PROC is running
 if [[ $UID -eq 0 ]]; #if root
-    then printf "\[\033[38;5;044m\]\`whoami\`\U0001F48E"; #then print the current user in cyan followed by a gem stone emoji
-    else printf "\[\033[38;5;008m\]\`whoami\`\U0001F517"; #otherwise, print the current user in gray followed by a link emoji
+    then printf "\r\[\033[38;5;044m\]\`whoami\`\U0001F48E"; #then print the current user in cyan followed by a gem stone emoji
+    else printf "\r\[\033[38;5;008m\]\`whoami\`\U0001F517"; #otherwise, print the current user in gray followed by a link emoji
 fi;
 printf "\[\033[00m\]"; #reset color styles
 if [[ $status -gt 0 ]]; #if the previous command returned a non-zero exit code (error)
