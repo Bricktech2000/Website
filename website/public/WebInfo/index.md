@@ -1,4 +1,4 @@
-## How it all started
+## How it All Started
 
 One night, I was casually watching a YouTube video... when sudently, it started buffering. I didn't think too much of what had just happened. However, a few minutes later, my whole WiFi network started to lag very badly. The router was working fine, the internet connection was randomly dropping, the _ping_ command was timing out from time to time... After a bit of investigation, I finally figured out what was going on: someone was running a [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack on me.
 
@@ -10,7 +10,7 @@ A few minutes later, a friend of mine finally confessed... However, what impress
 
 This really stuck with me. No, not because she got my IP address. It was the fact that I clicked on that link without suspecting anything. This is what made me realize the power of this type of [phishing attack](https://en.wikipedia.org/wiki/Phishing); the very next morning, I had already started working on this very program.
 
-## The program itslef
+## The Program Itslef
 
 [WebInfo](https://github.com/Bricktech2000/WebInfo) is a needlessly complex program to acheive a very simple task: stealing a victim's information using a very quick website redirect. You can [click here](https://github.com/Bricktech2000/WebInfo) if you wish to see its github page!
 
