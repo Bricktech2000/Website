@@ -27,13 +27,13 @@ export default function Legal(props) {
       <br />
       <br />
       {loading ? (
-        <Page github={`public/${id}`}>
+        <Page github={`public/${id}/index.md`}>
           <Loading height="1000vh" />
         </Page>
       ) : (
         <React.Fragment>
           <PageHeader info={info[id]} />
-          <Page github={`public/${id}`}>
+          <Page github={`public/${id}/index.md`}>
             <PostMain info={info[id]} />
           </Page>
         </React.Fragment>
