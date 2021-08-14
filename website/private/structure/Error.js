@@ -11,22 +11,21 @@ import ErrorMain from '../../private/structure/ErrorMain';
 import Loading from '../../private/components/Loading';
 import dbGet from '../../private/lib/dbGet';
 
-var Error = (props) => {
+const Error = (props) => {
   var { status } = props || '400';
 
-  var isError = errorMap.includes(status);
+  const isError = errorMap.includes(status);
   if (!isError) status = '400';
 
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
   const [info, updateInfo] = useState();
   useEffect(() => {
-    const getInfo = async () => {
+    (async () => {
       updateInfo(await dbGet('exact', status));
-    };
-    getInfo();
-  }, [props]);
+    })();
+  }, [status]);
 
-  var loading =
+  const loading =
     typeof info === 'undefined' || typeof info[status] === 'undefined';
   return (
     <App title={'Error'} description={''} image={''}>
