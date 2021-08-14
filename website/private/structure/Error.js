@@ -23,7 +23,7 @@ const Error = (props) => {
     (async () => {
       updateInfo(await dbGet('exact', status));
     })();
-  }, [status]);
+  }, [props]);
 
   const loading =
     typeof info === 'undefined' || typeof info[status] === 'undefined';
