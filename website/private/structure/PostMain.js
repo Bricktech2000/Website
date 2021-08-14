@@ -4,29 +4,19 @@ import parallax from '../lib/parallax';
 
 import styles from './PostMain.module.css';
 
-class PostMain extends Component {
-  constructor(props) {
-    super(props);
+const PostMain = (props) => {
+  const parallaxRef = parallax((current, value) => {
+    current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
+      0.25) *
+      -20}))`;
+    current.style.opacity = Math.max(value * 2 - 0.5, 0);
+  });
 
-    // [
-    //   this.componentDidMount,
-    //   this.componentWillUnmount,
-    //   this.parallaxRef,
-    // ] = parallax((current, value) => {
-    //   current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
-    //     0.25) *
-    //     -20}))`;
-    //   current.style.opacity = Math.max(value * 2 - 0.5, 0);
-    // });
-  }
-
-  render() {
-    return (
-      <div ref={this.parallaxRef} className={styles['marked']}>
-        <Marked source={this.props.info.source} />
-      </div>
-    );
-  }
-}
+  return (
+    <div ref={parallaxRef} className={styles['marked']}>
+      <Marked source={props.info.source} />
+    </div>
+  );
+};
 
 export default PostMain;
