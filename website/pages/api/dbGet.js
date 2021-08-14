@@ -5,7 +5,7 @@ import postMap from '../../private/lib/postMap';
 export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes
   //https://nextjs.org/docs/api-routes/response-helpers
-  var { type, id } = JSON.parse(req.body);
+  const { type, id } = JSON.parse(req.body);
   var response = {};
 
   switch (type) {
@@ -13,7 +13,7 @@ export default async function dbGet(req, res) {
       response[id] = await getSafe(id);
       break;
     case 'like':
-      var tags = (await getSafe(id)).tags;
+      const tags = (await getSafe(id)).tags;
       var output = {};
       for (var id2 of postMap) {
         output[id2] = await getSafe(id2);
@@ -51,10 +51,10 @@ export default async function dbGet(req, res) {
 }
 
 async function get(id) {
-  var info = JSON.parse(
+  const info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
   );
-  var source = (
+  const source = (
     await fs.readFile(process.cwd() + '/public/' + id + '/index.md')
   ).toString();
   return { id, source, ...info };
