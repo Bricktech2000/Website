@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 import styles from './Button.module.css';
 
-var Button = (props) => {
-  var getIcon = () => {
-    var icons = {
+const Button = (props) => {
+  const getIcon = () => {
+    const icons = {
       'Try it!': '018-gamepad',
       Code: '047-coding',
       Demo: '019-play',
@@ -23,45 +23,42 @@ var Button = (props) => {
       if (props.label.includes(icon)) return icons[icon];
   };
 
-  var render = () => {
-    var Html2 = React.forwardRef((props2, ref) => (
-      <a
-        className={styles['button-container'] + ' lg-hover'}
-        href={props2.href}
-        onClick={props2.onClick}
-        {...props2}
+  const Html2 = React.forwardRef((props2, ref) => (
+    <a
+      className={styles['button-container'] + ' lg-hover'}
+      href={props2.href}
+      onClick={props2.onClick}
+      {...props2}
+    >
+      <div
+        className={
+          styles.button +
+          ' ' +
+          (props.href && props.href.includes('#') ? styles['button-on'] : '')
+        }
       >
-        <div
-          className={
-            styles.button +
-            ' ' +
-            (props.href && props.href.includes('#') ? styles['button-on'] : '')
-          }
-        >
-          {props.label}
-        </div>
-      </a>
-    ));
+        {props.label}
+      </div>
+    </a>
+  ));
 
-    if (props.onClick) {
-      return React.cloneElement(<Html2 />, {
-        onClick: props.onClick,
-      });
-    }
-    if (props.blank) {
-      return React.cloneElement(<Html2 />, {
-        href: props.href,
-        target: '_blank',
-        rel: 'noreferer',
-      });
-    }
-    return (
-      <Link href={props.href}>
-        <Html2 />
-      </Link>
-    );
-  };
-  return render();
+  if (props.onClick) {
+    return React.cloneElement(<Html2 />, {
+      onClick: props.onClick,
+    });
+  }
+  if (props.blank) {
+    return React.cloneElement(<Html2 />, {
+      href: props.href,
+      target: '_blank',
+      rel: 'noreferer',
+    });
+  }
+  return (
+    <Link href={props.href}>
+      <Html2 />
+    </Link>
+  );
 };
 
 export default Button;
