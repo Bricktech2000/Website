@@ -14,13 +14,13 @@ import Error from '../private/structure/Error';
 import Loading from '../private/components/Loading';
 import dbGet from '../private/lib/dbGet';
 
-var Post = (props) => {
+const Post = (props) => {
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
   const router = useRouter();
-  var { id } = router.query || props;
+  const { id } = router.query || props;
 
-  var isError = errorMap.includes(id);
-  var isPost = postMap.includes(id);
+  const isError = errorMap.includes(id);
+  const isPost = postMap.includes(id);
 
   if (isError) return <Error status={id} />;
   if (!isPost && !isError) return <Error status={'404'} />;
@@ -28,13 +28,13 @@ var Post = (props) => {
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
   const [info, updateInfo] = useState();
   useEffect(() => {
-    const getInfo = async () => {
+    (async () => {
       updateInfo(await dbGet('exact', id));
-    };
-    getInfo();
+    })();
   }, [props]);
 
-  var loading = typeof info === 'undefined' || typeof info[id] === 'undefined';
+  const loading =
+    typeof info === 'undefined' || typeof info[id] === 'undefined';
   return (
     <App
       title={props.ogTitle}
@@ -62,8 +62,8 @@ var Post = (props) => {
 import { promises as fs } from 'fs';
 
 export async function getStaticProps({ params }) {
-  var id = params.id;
-  var info = JSON.parse(
+  const id = params.id;
+  const info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
   );
 
@@ -82,10 +82,10 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
   //necessary to prevent ``Conflicting paths returned from getStaticPaths`` error
-  var errorMapModified = errorMap.filter(
+  const errorMapModified = errorMap.filter(
     (item) => !['404', '500'].includes(item)
   );
-  var paths = postMap.concat(errorMapModified).map((id) => ({
+  const paths = postMap.concat(errorMapModified).map((id) => ({
     params: {
       id: id,
     },
