@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
-import { useState, useEffect } from 'react';
-import dbGet from '../lib/dbGet';
+import useDbGet from '../lib/useDbGet';
 import MosaicLarge from '../components/MosaicLarge';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
 
 const HomePostList = (props) => {
-  //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
-  const [info, updateInfo] = useState();
-  useEffect(() => {
-    (async () => {
-      updateInfo(await dbGet('all'));
-    })();
-  }, []);
+  const info = useDbGet('all');
 
   if (typeof info === 'undefined') return <Loading height="1000vh" />;
 

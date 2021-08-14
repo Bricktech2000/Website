@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import postMap from '../private/lib/postMap';
 import errorMap from '../private/lib/errorMap';
@@ -12,7 +11,7 @@ import PostRelated from '../private/structure/PostRelated';
 import Error from '../private/structure/Error';
 
 import Loading from '../private/components/Loading';
-import dbGet from '../private/lib/dbGet';
+import useDbGet from '../private/lib/useDbGet';
 
 const Post = (props) => {
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render
@@ -25,13 +24,7 @@ const Post = (props) => {
   if (isError) return <Error status={id} />;
   if (!isPost && !isError) return <Error status={'404'} />;
 
-  //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
-  const [info, updateInfo] = useState();
-  useEffect(() => {
-    (async () => {
-      updateInfo(await dbGet('exact', id));
-    })();
-  }, [props]);
+  const info = useDbGet('exact', id);
 
   const loading =
     typeof info === 'undefined' || typeof info[id] === 'undefined';

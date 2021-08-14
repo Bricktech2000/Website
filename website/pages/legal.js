@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useState, useEffect } from 'react';
 
 import App from '../private/structure/App';
 import Page from '../private/structure/Page';
@@ -7,17 +6,11 @@ import PostMain from '../private/structure/PostMain';
 import PageHeader from '../private/structure/PageHeader';
 
 import Loading from '../private/components/Loading';
-import dbGet from '../private/lib/dbGet';
+import useDbGet from '../private/lib/useDbGet';
 
 const Legal = (props) => {
   const id = 'legal';
-  //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
-  const [info, updateInfo] = useState();
-  useEffect(() => {
-    (async () => {
-      updateInfo(await dbGet('exact', id));
-    })();
-  }, [props]);
+  const info = useDbGet('exact', id);
 
   const loading =
     typeof info === 'undefined' || typeof info[id] === 'undefined';
