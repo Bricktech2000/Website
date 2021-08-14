@@ -5,18 +5,15 @@ import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
 
-class Page extends Component {
-  state = {};
-  render() {
-    return (
-      <React.Fragment>
-        <Aside />
-        <Nav />
-        <Main>{this.props.children}</Main>
-        <Footer github={this.props.github} />
-      </React.Fragment>
-    );
-  }
-}
+const Page = (props) => {
+  return (
+    <React.Fragment>
+      <Aside />
+      <Nav />
+      <Main>{props.children}</Main>
+      <Footer github={props.github} />
+    </React.Fragment>
+  );
+};
 
 export default Page;
