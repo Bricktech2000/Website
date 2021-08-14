@@ -7,7 +7,7 @@ import Main from '../private/structure/Main';
 import HomePostList from '../private/structure/HomePostList';
 import Footer from '../private/structure/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <App
       title="Project Portfolio"
@@ -22,8 +22,10 @@ export default function Home() {
       <Footer github="pages/index.js" />
     </App>
   );
-}
+};
 
 /*export async function getStaticProps() {
   return { props: {} };
 }*/
+
+export default Home;
