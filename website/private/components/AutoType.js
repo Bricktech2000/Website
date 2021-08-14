@@ -1,66 +1,61 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 
 import styles from './AutoType.module.css';
 
-class AutoType extends Component {
-  state = { currentKeyword: 0, currentLength: 0 };
+const AutoType = (props) => {
+  const [string, setString] = useState('');
 
-  componentDidMount = () => {
-    this.update();
-  };
+  useEffect(() => {
+    var timeout;
+    var currentKeyword = 0;
+    var currentLength = 0;
+    const update = () => {
+      const keyword = props.keywords[currentKeyword];
 
-  componentWillUnmount = () => {
-    clearTimeout(this.timeout);
-  };
+      if (currentLength >= 2 * (keyword.length + 2)) {
+        currentLength = 0;
+        currentKeyword++;
+        currentKeyword %= props.keywords.length;
+        return (timeout = setTimeout(update, 0));
+      }
 
-  update = () => {
-    var keyword = this.props.keywords[this.state.currentKeyword];
+      currentLength++;
+      setString(
+        keyword.substr(
+          0,
+          keyword.length - Math.abs(currentLength - keyword.length)
+        ) // + '\xa0', //&nbsp;
+      );
 
-    if (this.state.currentLength >= 2 * (keyword.length + 2)) {
-      this.setState({
-        currentLength: 0,
-        currentKeyword:
-          (this.state.currentKeyword + 1) % this.props.keywords.length,
-      });
-      return (this.timeout = setTimeout(this.update));
-    }
-    this.setState({
-      currentLength: this.state.currentLength + 1,
-      string: keyword.substr(
-        0,
-        keyword.length -
-          Math.abs(this.state.currentLength - (keyword.length - 1))
-      ), // + '\xa0', //&nbsp;
-    });
+      return (timeout = setTimeout(
+        update,
+        100 -
+          75 * (currentLength > keyword.length) +
+          750 * (currentLength == keyword.length) +
+          100 * (currentLength == 0)
+      ));
+    };
 
-    return (this.timeout = setTimeout(
-      this.update,
-      100 -
-        75 * (this.state.currentLength > keyword.length) +
-        750 * (this.state.currentLength == keyword.length) +
-        100 * (this.state.currentLength == 0)
-    ));
-  };
+    update();
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
-  render() {
-    return (
-      <div
-        className={styles.container}
-        style={{
-          width:
-            this.props.keywords.reduce(
-              (acc, curr) => Math.max(curr.length, acc),
-              0
-            ) +
-            2 +
-            'ch',
-        }}
-      >
-        {this.state.string}
-        <div className={styles.cursor}>|</div>
-      </div>
-    );
-  }
-}
+  return (
+    <div
+      className={styles.container}
+      style={{
+        width:
+          props.keywords.reduce((acc, curr) => Math.max(curr.length, acc), 0) +
+          2 +
+          'ch',
+      }}
+    >
+      {string}
+      <div className={styles.cursor}>|</div>
+    </div>
+  );
+};
 
 export default AutoType;
