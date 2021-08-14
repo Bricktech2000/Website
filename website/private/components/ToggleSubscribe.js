@@ -3,25 +3,19 @@ import Toggle from './Toggle';
 
 import styles from './ToggleSubscribe.module.css';
 
-class ToggleSubscribe extends Component {
-  state = {};
+const ToggleSubscribe = () => {
+  vapidDetails = {};
+  (async () => {
+    vapidDetails.public = (
+      await (await fetch('/public_vapid.key')).text()
+    ).trim();
+  })();
 
-  constructor(props) {
-    super(props);
-
-    (async () => {
-      this.vapidDetails = {};
-      this.vapidDetails.public = (
-        await (await fetch('/public_vapid.key')).text()
-      ).trim();
-    })();
-  }
-
-  toggleOnClick = async ([isActive, setActive], e) => {
+  const toggleOnClick = async ([isActive, setActive], e) => {
     isActive = !isActive;
 
     //https://pusher.com/tutorials/push-notifications-node-service-workers
-    var urlBase64ToUint8Array = (base64String) => {
+    const urlBase64ToUint8Array = (base64String) => {
       const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
       const base64 = (base64String + padding)
         .replace(/-/g, '+')
@@ -45,11 +39,9 @@ class ToggleSubscribe extends Component {
           .then(async (register) => {
             //https://stackoverflow.com/questions/39624676/uncaught-in-promise-domexception-subscription-failed-no-active-service-work/39673915
             if (!register.active) return;
-            var subscription = await register.pushManager.subscribe({
+            const subscription = await register.pushManager.subscribe({
               userVisibleOnly: true,
-              applicationServerKey: urlBase64ToUint8Array(
-                this.vapidDetails.public
-              ),
+              applicationServerKey: urlBase64ToUint8Array(vapidDetails.public),
             });
             await fetch('/api/subscribe/', {
               method: 'POST',
@@ -60,7 +52,7 @@ class ToggleSubscribe extends Component {
         //unsubscribe
         if ('serviceWorker' in navigator) {
           //https://love2dev.com/blog/how-to-uninstall-a-service-worker/
-          var registrations = await navigator.serviceWorker.getRegistrations();
+          const registrations = await navigator.serviceWorker.getRegistrations();
           registrations[0].unregister();
         }
       }
@@ -70,18 +62,16 @@ class ToggleSubscribe extends Component {
     setActive(isActive);
   };
 
-  render() {
-    return (
-      <div className={styles.ToggleSubscribe}>
-        <Toggle
-          onClick={this.toggleOnClick}
-          active={localStorage.getItem('subscription') == 'true'}
-        />
-        <span></span>
-        Receive Notifications
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.ToggleSubscribe}>
+      <Toggle
+        onClick={toggleOnClick}
+        active={localStorage.getItem('subscription') == 'true'}
+      />
+      <span></span>
+      Receive Notifications
+    </div>
+  );
+};
 
 export default ToggleSubscribe;
