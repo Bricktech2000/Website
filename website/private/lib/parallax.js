@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useRef } from 'react';
 
-export default function parallax(callback) {
-  var parallaxRef = React.createRef();
+const parallax = (callback) => {
+  const parallaxRef = useRef(null);
 
-  var scrollHandler = () => {
+  const scrollHandler = () => {
+    console.log('scrol', parallaxRef);
+
     if (!parallaxRef.current) return;
     var percentage =
       1 -
@@ -13,13 +15,16 @@ export default function parallax(callback) {
 
     callback(parallaxRef.current, percentage);
   };
-  var componentDidMount = () => {
+
+  useEffect(() => {
     document.addEventListener('scroll', scrollHandler);
     scrollHandler();
-  };
-  var componentWillUnmount = () => {
-    document.removeEventListener('scroll', scrollHandler);
-  };
+    return () => {
+      document.removeEventListener('scroll', scrollHandler);
+    };
+  }, []);
 
-  return [componentDidMount, componentWillUnmount, parallaxRef];
-}
+  return parallaxRef;
+};
+
+export default parallax;

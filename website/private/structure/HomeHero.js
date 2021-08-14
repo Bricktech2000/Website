@@ -11,18 +11,18 @@ class HomeHero extends Component {
   constructor(props) {
     super(props);
 
-    [
-      this.componentDidMount,
-      this.componentWillUnmount,
-      this.parallaxRef,
-    ] = parallax((current, value) => {
-      value = Math.min(value * 1.5, 1);
-      current.style.transform = `translateY(calc(var(--smart-unit) * ${Math.pow(
-        1 - value,
-        3
-      ) * 15}))`;
-      current.style.opacity = value;
-    });
+    // [
+    //   this.componentDidMount,
+    //   this.componentWillUnmount,
+    //   this.parallaxRef,
+    // ] = parallax((current, value) => {
+    //   value = Math.min(value * 1.5, 1);
+    //   current.style.transform = `translateY(calc(var(--smart-unit) * ${Math.pow(
+    //     1 - value,
+    //     3
+    //   ) * 15}))`;
+    //   current.style.opacity = value;
+    // });
   }
 
   render() {
