@@ -5,14 +5,13 @@ import MosaicLarge from '../components/MosaicLarge';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
 
-export default function HomePostList(props) {
+const HomePostList = (props) => {
   //https://stackoverflow.com/questions/53819864/how-to-async-await-in-react-render-function
   const [info, updateInfo] = useState();
   useEffect(() => {
-    const getInfo = async () => {
+    (async () => {
       updateInfo(await dbGet('all'));
-    };
-    getInfo();
+    })();
   }, []);
 
   if (typeof info === 'undefined') return <Loading height="1000vh" />;
@@ -29,4 +28,6 @@ export default function HomePostList(props) {
       </MosaicLarge>
     </React.Fragment>
   );
-}
+};
+
+export default HomePostList;
