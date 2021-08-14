@@ -4,50 +4,34 @@ import parallax from '../lib/parallax';
 
 import styles from './MosaicSmall.module.css';
 
-class MosaicSmall extends Component {
-  state = {};
+const MosaicSmall = (props) => {
+  const parallaxRef = parallax((current, value) => {
+    current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
+      0.25) *
+      -20}))`;
+  });
 
-  constructor() {
-    super();
-    this.rand = generator();
-    this.firstIsRow = this.rand() > 0.5;
-    this.secondIsRow = !this.firstIsRow;
+  const rand = generator();
+  const firstIsRow = rand() > 0.5;
+  const secondIsRow = !firstIsRow;
 
-    [
-      this.componentDidMount,
-      this.componentWillUnmount,
-      this.parallaxRef,
-    ] = parallax((current, value) => {
-      current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
-        0.25) *
-        -20}))`;
-    });
-  }
-
-  render() {
-    var directions = [
-      this.firstIsRow,
-      this.firstIsRow,
-      this.secondIsRow,
-      this.secondIsRow,
-    ];
-    //https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
-    var func = (start, end) =>
-      this.props.children.slice(start, end).map((child, i) =>
-        React.cloneElement(child, {
-          key: i,
-          dir: directions[start + i],
-          inv: this.rand() > 0.5,
-        })
-      );
-
-    return (
-      <div className={styles.MosaicSmall} ref={this.parallaxRef}>
-        <div>{func(0, 2)}</div>
-        <div>{func(2, 4)}</div>
-      </div>
+  const directions = [firstIsRow, firstIsRow, secondIsRow, secondIsRow];
+  //https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
+  const func = (start, end) =>
+    props.children.slice(start, end).map((child, i) =>
+      React.cloneElement(child, {
+        key: i,
+        dir: directions[start + i],
+        inv: rand() > 0.5,
+      })
     );
-  }
-}
+
+  return (
+    <div className={styles.MosaicSmall} ref={parallaxRef}>
+      <div>{func(0, 2)}</div>
+      <div>{func(2, 4)}</div>
+    </div>
+  );
+};
 
 export default MosaicSmall;
