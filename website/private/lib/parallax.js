@@ -4,8 +4,6 @@ const parallax = (callback) => {
   const parallaxRef = useRef(null);
 
   const scrollHandler = () => {
-    console.log('scrol', parallaxRef);
-
     if (!parallaxRef.current) return;
     var percentage =
       1 -
