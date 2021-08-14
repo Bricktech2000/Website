@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import AutoType from '../components/AutoType';
-import parallax from '../lib/parallax';
+import useParallax from '../lib/useParallax';
 import GetInTouch from '../components/GetInTouch';
 
 import styles from './HomeHero.module.css';
 
 const HomeHero = () => {
-  const parallaxRef = parallax((current, value) => {
+  const parallaxRef = useParallax((current, value) => {
     value = Math.min(value * 1.5, 1);
     current.style.transform = `translateY(calc(var(--smart-unit) * ${Math.pow(
       1 - value,

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import generator from '../lib/rand';
-import parallax from '../lib/parallax';
+import useParallax from '../lib/useParallax';
 
 import styles from './MosaicSmall.module.css';
 
 const MosaicSmall = (props) => {
-  const parallaxRef = parallax((current, value) => {
+  const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
       0.25) *
       -20}))`;

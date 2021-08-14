@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useRef } from 'react';
 
-const parallax = (callback) => {
+const useParallax = (callback) => {
   const parallaxRef = useRef(null);
 
   const scrollHandler = () => {
@@ -25,4 +25,4 @@ const parallax = (callback) => {
   return parallaxRef;
 };
 
-export default parallax;
+export default useParallax;

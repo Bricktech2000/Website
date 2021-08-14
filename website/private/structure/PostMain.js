@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Marked from '../components/Marked';
-import parallax from '../lib/parallax';
+import useParallax from '../lib/useParallax';
 
 import styles from './PostMain.module.css';
 
 const PostMain = (props) => {
-  const parallaxRef = parallax((current, value) => {
+  const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
       0.25) *
       -20}))`;
