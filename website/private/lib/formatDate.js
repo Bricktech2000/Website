@@ -2,7 +2,7 @@ export default function formatDate(date) {
   //input format:  YYYY-MM-DD
   //output format: DD MMM YYYY
 
-  var months = [
+  const months = [
     '000',
     'JAN',
     'FEB',
@@ -17,6 +17,6 @@ export default function formatDate(date) {
     'NOV',
     'DEC',
   ];
-  var [year, month, day] = date.split('-');
+  const [year, month, day] = date.split('-');
   return `${parseInt(day)} ${months[parseInt(month)]} ${parseInt(year)}`;
 }
