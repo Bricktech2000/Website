@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import marked from '../../public/marked.min.js';
 import hljs from '../../public/highlight.min.js';
 
-class Marked extends Component {
-  state = {};
-
-  getMarkdown(text) {
+const Marked = (props) => {
+  const getMarkdown = (text) => {
     //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
     //https://marked.js.org/using_advanced
     //https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown
@@ -19,7 +17,7 @@ class Marked extends Component {
           highlight: function(code, lang) {
             //const hljs = require('highlight.js');
             const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-            var va = hljs
+            const va = hljs
               .highlight(
                 code.replace(
                   /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
@@ -50,16 +48,14 @@ class Marked extends Component {
             `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
         ),
     };
-  }
+  };
 
-  render() {
-    return (
-      <span
-        className={'marked'}
-        dangerouslySetInnerHTML={this.getMarkdown(this.props.source)}
-      ></span>
-    );
-  }
-}
+  return (
+    <span
+      className={'marked'}
+      dangerouslySetInnerHTML={getMarkdown(props.source)}
+    ></span>
+  );
+};
 
 export default Marked;
