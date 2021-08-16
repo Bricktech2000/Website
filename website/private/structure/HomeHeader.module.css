@@ -1,0 +1,4 @@
+.HomeHeader {
+  grid-area: header;
+  width: 100%;
+}

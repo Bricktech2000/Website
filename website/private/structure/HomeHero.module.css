@@ -1,12 +1,11 @@
 .HomeHero {
   position: relative;
-  width: 100vw;
-  grid-area: header;
+  width: 100%;
 
   display: grid;
-  grid-template-areas: 'color color image' 'about about about';
+  grid-template-areas: 'color color image';
   grid-template-columns: 1fr 10vw 1fr;
-  grid-template-rows: 100vh auto;
+  grid-template-rows: 100vh;
 }
 
 .HomeHero .color {
@@ -22,47 +21,6 @@
     url('/headerHomeImage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.HomeHero .about {
-  grid-area: about;
-
-  display: grid;
-  grid-template-areas: 'title title' 'image paragraph' 'icons icons';
-  grid-template-columns: calc(var(--smart-res-unit) * 15) 1fr;
-  background: var(--card-bg);
-  box-shadow: var(--bs);
-  padding: calc(var(--smart-unit) * 7.5) 10vw;
-}
-.HomeHero .about > h1 {
-  grid-area: title;
-
-  margin: 0;
-  padding-bottom: calc(var(--smart-unit) * 6);
-  line-height: 1;
-}
-.HomeHero .about > p {
-  grid-area: paragraph;
-
-  font-size: calc(var(--smart-res-unit) * 2.5);
-  font-weight: lighter;
-  padding-left: calc(var(--smart-unit) * 6);
-  text-align: justify;
-}
-.HomeHero .GetInTouch {
-  grid-area: icons;
-  width: 100%;
-}
-.HomeHero .GetInTouch > * {
-  font-size: calc(var(--smart-res-unit) * 2);
-}
-
-.HomeHero .about > img {
-  grid-area: image;
-  width: 100%;
-
-  border-radius: 100vh;
-  border: calc(var(--smart-unit) * 0.25) solid var(--color-d);
 }
 
 .HomeHero .overlay {
@@ -149,9 +107,9 @@
 
 @media (max-aspect-ratio: 1/1) {
   .HomeHero {
-    grid-template-areas: 'image image image' 'color color color' 'about about about';
+    grid-template-areas: 'image image image' 'color color color';
     grid-template-columns: 1fr 10vw 1fr;
-    grid-template-rows: 50vh 50vh auto;
+    grid-template-rows: 50vh 50vh;
   }
   .HomeHero .title {
     font-size: calc(var(--smart-unit) * 8);
@@ -175,19 +133,5 @@
   .HomeHero .arrow {
     width: 100%;
     text-align: center;
-  }
-
-  .HomeHero .about {
-    grid-template-areas: 'title' 'image' 'paragraph' 'icons';
-    grid-template-columns: 1fr;
-    padding: calc(var(--smart-unit) * 3);
-  }
-  .HomeHero .about > img {
-    width: calc(100% - 20vw - 20vw);
-    margin: 0 20vw;
-  }
-  .HomeHero .about > p {
-    padding: calc(var(--smart-unit) * 5) 0;
-    font-size: calc(var(--smart-res-unit) * 2);
   }
 }

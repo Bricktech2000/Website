@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import App from '../private/structure/App';
-import HomeHero from '../private/structure/HomeHero';
+import HomeHeader from '../private/structure/HomeHeader';
 import Aside from '../private/structure/Aside';
 import Main from '../private/structure/Main';
 import HomePostList from '../private/structure/HomePostList';
@@ -14,7 +14,7 @@ const Home = () => {
       description="A website for sharing my projects and blogging about tech-related stuff!"
       image="icon.png"
     >
-      <HomeHero />
+      <HomeHeader />
       <Aside />
       <Main>
         <HomePostList />
