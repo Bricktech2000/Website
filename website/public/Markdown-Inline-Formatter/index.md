@@ -11,7 +11,7 @@ Every post in this very website is programmed in `markdown`. It allows for very 
 #screenshot
 
 However, [Markdown Inine Formatter](https://github.com/Bricktech2000/Markdown-Inline-Formatter) is different to other editors because it formats the code in the editor itself as opposed to using a second intervace to do so. You can [click here](./Markdown-Inline-Formatter/index.html) to try it out for yourself! For anyone interested, here is a screenshot of some inline-formatted `markdown` code that I used to get a general overview of a school assignment:
-![](./screenshot.png)
+![formatted markdown code for school assignment](./screenshot.png)
 
 ## How it Works
 
