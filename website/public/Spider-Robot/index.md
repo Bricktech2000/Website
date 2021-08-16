@@ -1,4 +1,4 @@
-![](Complete.jpg)
+![render of 3d printed hexapod spider robot](Complete.jpg)
 
 ## Demo Video
 
@@ -21,7 +21,7 @@ When making this hexapod robot, I had a few goals in mind which I wanted to resp
 
 This robot works in 4 stages.
 
-![](battery_m.jpeg)
+![750 mah battery](battery_m.jpeg)
 
 Everything begins with the battery of the spider, which is used to give power to every component. It is a _LiPo battery_, which means that can deliver a lot of current without sagging too much.
 
@@ -31,11 +31,11 @@ Everything begins with the battery of the spider, which is used to give power to
 
 This is ideal, but it means that a special _LiPo_ charger is necessary to charge up the battery. Since it packs so much power in such a small volume, it can catch on fire if it is punctured, so we need to be very careful with it.
 
-![](arduino_m.jpg)
+![arduino nano](arduino_m.jpg)
 
 The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./13_sketch_mar04a.html), which is a total of `886` lines of code.
 
-![](servo.jpg)
+![9g servo](servo.jpg)
 
 The servomotors are like muscles: their job is to transform the signals received from the _microcontroller_ into actual movements that allow the spider to move. They are cheap (about `$1` per motor), but still have an okay performance. These motors aren't like normal motors, they are _servomotors_. This means that when the _micrcontroller_ tells it to go to a specific angle (or _position_), it does so and tries to keep the same angle the whole time, until it is sent another command from the _microcontroller_.
 
