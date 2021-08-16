@@ -16,7 +16,7 @@ If you intend to use this software on a Windows computer, you can directly downl
 
 It is very simple: hold down the `CAPS LOCK` key and press on one of the following keys:
 
-![](./keyboard.jpg)
+![hotkey pattern on keyboard](./keyboard.jpg)
 
 They are separated in a few categories. First, the **red** category is the for the well-known arrow keys. Second, the **green** category is for navigation: the green arrows allow you to navigate faster, just like if you held down the `control` key. Third, the **blue** category is for various other keys :`LINE` selects a line, `WORD` selects a word and `DEL` is the `delete` key. It might not seem like much, but these simple shortcuts make you save a bunch of time when writing, and even more so when programming.
 
