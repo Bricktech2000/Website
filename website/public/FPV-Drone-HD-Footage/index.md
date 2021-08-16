@@ -8,9 +8,9 @@ A few weeks ago, I installed an FPV camera to my 5-inch drone.
 
 Essentially, the FPV camera on the drone sends live video to VR-like goggles on your head, with a latency ranging from `22 - 35 ms`. Unfortunately, since it is very low, image quality must be sacrificed. Here is an example image from a gopro followed by the image from an FPV camera:
 
-|                    |                  |
-| ------------------ | ---------------- |
-| ![](gopro.min.jpg) | ![](dvr.min.jpg) |
+|                                          |                                                 |
+| ---------------------------------------- | ----------------------------------------------- |
+| ![clear image from gopro](gopro.min.jpg) | ![blurry and noisy image from dvr](dvr.min.jpg) |
 
 #parts
 
@@ -23,10 +23,10 @@ On a side note, here is a list of the parts I used to install an FPV system on [
 
 As soon as I saw how amazing it was to fly, I immediately ordered an action camera similar to the [Gopro Session](https://gopro.com/en/us/update/hero_session), the [Caddx Orca](https://www.banggood.com/Caddx-Orca-4K-HD-Recording-Mini-FPV-Camera-FOV-160-Degree-WiFi-Anti-Shake-DVR-Action-Cam-for-Outdoor-Photography-RC-Racing-Drone-Airplane-p-1590162.html?cur_warehouse=CN&rmmds=search), to be able to get high definition footage from the drone. I also designed a `3D-printed` mount and attached it to the drone using zip ties. Here is are some pictures of them:
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210310_185350_5.min.jpg) | ![](IMG_20210310_185247_8.min.jpg) |
-| ![](IMG_20210310_185720_6.min.jpg) | ![](IMG_20210310_185705_8.min.jpg) |
+|                                                                           |                                                                       |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![caddx orca camera](IMG_20210310_185350_5.min.jpg)                       | ![caddx orca mount on frame top plate](IMG_20210310_185247_8.min.jpg) |
+| ![close up of caddx orca mounted on drone](IMG_20210310_185720_6.min.jpg) | ![caddx orca mounted on drone](IMG_20210310_185705_8.min.jpg)         |
 
 [//]: # 'https://stackoverflow.com/questions/4823468/comments-in-markdown'
 [//]: # 'Finally, I created {a special program:: ./Music Offset Generator/index.html} which allows me to fly the drone synchronized to the music. To do so, it plays the music [8 beats] earlier in the left ear, meaning I can predict what the music will sound like.'
