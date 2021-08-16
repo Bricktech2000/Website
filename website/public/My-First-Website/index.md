@@ -3,7 +3,7 @@
 I started programming a few years ago, and one of the first things I made was [this website](./client/index.html). It looks something like this:
 #img
 
-![](./screenshot.jpg)
+![screenshot of gray website with large bold font](./screenshot.jpg)
 
 I used to think that this website looked awesome, and that the design was great. However, when I look at it today, I see a **disgusting font** way too large for the screen, **ugly colors**, a **blury background image**... I remember showing it to my friends and they thought it was the most awesome thing ever. However, now that I'm looking at it, its design is about as horrible as it gets.
 
