@@ -45,7 +45,7 @@ const Marked = (props) => {
         .replace(
           /<img src="(.*)" alt="youtube">/g,
           (a, b) =>
-            `<div class="iframe"><iframe width="560" height="315" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+            `<div class="iframe"><iframe width="560" height="315" title="youtube video" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
         ),
     };
   };
