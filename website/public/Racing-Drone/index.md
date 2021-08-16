@@ -17,7 +17,7 @@ Here's a demo video on my [youtube channel](https://www.youtube.com/channel/UCGj
 And here's a picture of it (even if one motor is missing):
 #img
 
-![](received_478290836137906_m.jpeg)
+![2-inch drone with a missing motor](received_478290836137906_m.jpeg)
 
 It actually flew, but one motor was defective, and so the inner windings melted together. This rendered it useless, so I am currently waiting on a spare. However, because of `COVID-19`, the shipping was delayed.
 
