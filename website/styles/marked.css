@@ -145,8 +145,7 @@
 .marked a,
 .markup-link {
   display: inline-block;
-  color: var(--color);
-  transition: color 0.125s ease;
+  color: var(--color-l);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -160,10 +159,6 @@
   height: 0.075em;
   background: var(--color);
   transition: background 0.125s ease, width 0.125s ease;
-}
-.marked a:hover,
-.markup-link:hover {
-  color: var(--color-l);
 }
 .marked a:hover::after,
 .markup-link:hover::after {

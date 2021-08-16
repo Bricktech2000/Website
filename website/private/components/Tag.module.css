@@ -22,7 +22,7 @@
 .on {
   background: var(--bg);
   border-color: var(--color);
-  color: var(--color);
+  color: var(--color-l);
   font-weight: lighter;
 }
 
