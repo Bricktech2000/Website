@@ -1,14 +1,14 @@
 ## Discovering Shorthand Systems
 
 Yesterday, I stubled upon the following video from [Artifexian](https://www.youtube.com/channel/UCeh-pJYRZTBJDXMNZeWSUVA):
-![](./vid-screenshot.png)
+![screenshot of video from Artifexian](./vid-screenshot.png)
 
 In this video of his, [Artifexian](https://www.youtube.com/channel/UCeh-pJYRZTBJDXMNZeWSUVA) talks about choosing a _type of script_, a _writing medium_ and a set of _orthographic rules_ to create an interesting writing system for [conlangs](https://en.wikipedia.org/wiki/Constructed_language). At `3:25`, mentions the following very briefly:
 
 > But what happens to a cursive script when speed is the most important factor?
 
 As he does, he shows the following picture for only a few short seconds:
-![](./shorthand-vid-screenshot.png)
+![sytem groote shorthand](./shorthand-vid-screenshot.png)
 
 As soon as I saw this script, I was amazed at how awesome it looked. I knew had to research this _shorthand_ mystery futher, and so that's exactly what I did.
 
@@ -45,10 +45,10 @@ And Here is a list of the written material I used to do so, linked in [Google Dr
 
 After a complete day of learning, I managed to memorize all the letters of the _Gregg Alphabet_ and a few short phrases such as _the_, _is_, _I will be_, and so on. I write at about four words per minute, but I know I will get better as time goes on. Here is a picture of a [Wikipedia article](https://en.wikipedia.org/wiki/Range_of_a_projectile) I transcribed in Gregg, followed by its translation back into the roman alphabet:
 
-![](./IMG_20210504_111447_0.min.jpg)
+![wikipedia article in gregg shorthand](./IMG_20210504_111447_0.min.jpg)
 
-|                                      |                                      |
-| ------------------------------------ | ------------------------------------ |
-| ![](./IMG_20210504_111500_1.min.jpg) | ![](./IMG_20210504_111505_7.min.jpg) |
+|                                                                                      |                                                                                       |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| ![wikipedia article translated from greg shorthand](./IMG_20210504_111500_1.min.jpg) | ![wikipedia article translated from gregg shorthand](./IMG_20210504_111505_7.min.jpg) |
 
 I will very likely continue using Gregg for a lot of everyday tasks, such as personnal notes and `TODO` lists. Even though I will never be able to write at [hundreds of words per minute](https://www.youtube.com/watch?v=spTN48-YCTk), I really love how cryptic this script looks and how impressive a fluent writer can be.
