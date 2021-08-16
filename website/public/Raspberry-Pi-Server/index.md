@@ -17,12 +17,12 @@ A Raspberry Pi server is simply a server running off of a Raspberry Pi.
 For this server, I decided to use a _Raspberry Pi Zero W_ because it is cheap, small and portable. Here's a picture of me holding it while it is running:
 #img
 
-![](IMG_20200508_175632_3.jpg)
+![raspberry pi zero w running in 3d printed case](IMG_20200508_175632_3.jpg)
 
 ## A Bit More About it
 
 Here's a picture of a Raspberry Pi Zero W without any case on:
-![](<Raspberry_Pi_Zero_W_(33209067455).jpg>)
+![bare raspberry pi zero w](<Raspberry_Pi_Zero_W_(33209067455).jpg>)
 
 As you can see, it is a single-board computer, meaning that all the necessary components are on one PCB. It is 66mm long by 30.5mm wide. Impressively, it is only 5mm thick!
 
