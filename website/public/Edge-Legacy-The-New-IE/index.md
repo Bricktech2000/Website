@@ -14,7 +14,7 @@ The next few days, you spend about twice as much time trying to make your websit
 > [Open in Edge](<javascript:void(0)>)
 
 However, if you bypass the message and manage to see the website, it will look something like this:
-![](./ie-screenshot.png)
+![broken website on internet explorer](./ie-screenshot.png)
 No comments.
 
 ## What About Edge Legacy?
@@ -24,7 +24,7 @@ No comments.
 #demo-edge
 
 For example, here is how this website looks on it:
-![](./edge-legacy-screenshot.png)
+![semi-broken website on edge](./edge-legacy-screenshot.png)
 It looks heaps more promising than on [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer), but the [Home page](/) is still not displaying properly. I spent about an hour tracking down the root cause of this problem, and eventually found that [Edge Legacy doesn't support `Asynchronous Generator Functions`](https://github.com/microsoft/ChakraCore/issues/2720), which are the building blocks of this very website. Unfortunately, I will not be adding support for [Edge Legacy](<https://en.wikipedia.org/wiki/Microsoft_Edge#Spartan_(2014%E2%80%932019)>), since it would require a full rewrite of the code in order to make it work. As you can see, websites are already starting to break on this browser, and I feel like it will get worse as time goes on.
 
 ## Moving Forward
