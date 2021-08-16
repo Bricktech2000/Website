@@ -8,7 +8,7 @@ Unfortunately, I couldn't find any remanence of the first design I made. The onl
 
 #prototype1
 
-![](./IMG_20200625_162209_0.jpg)
+![first grenade prototype](./IMG_20200625_162209_0.jpg)
 
 Above is a photo of the first concrete prototype I made, about 4 months ago. How it worked is very simple. It consists of the following components:
 
@@ -22,7 +22,7 @@ Long story short, after one throws the grenade, it hits the floor, at which poin
 
 #prototype2
 
-![](./IMG_20200621_150824_3.jpg)
+![second grenade prototype](./IMG_20200621_150824_3.jpg)
 
 Above is a photo of the second grenade prototype I made a few days ago (without the steel sphere or the explosive). This prototype consists of the following:
 
@@ -43,13 +43,13 @@ The idea is that the [flash powder](https://en.wikipedia.org/wiki/Flash_powder) 
 
 And here's a macro photo of the insides after the "explosion" (if you can even call it that):
 
-![](./IMG_20200621_155247_9.jpg)
+![second grenade prototype after explosion](./IMG_20200621_155247_9.jpg)
 
 ## The Third Prototype
 
 #prototype3
 
-![](./IMG_20200625_191507_1.jpg)
+![third grenade prototype](./IMG_20200625_191507_1.jpg)
 
 Above is a photo of the third prototype I made (without the steel sphere or the explosive). It is very similar to the second one, consisting of the following:
 
@@ -59,6 +59,6 @@ Above is a photo of the third prototype I made (without the steel sphere or the 
 
 The advantage of this prototype over the second one I made is that the steel sphere can freely move inside the grenade (inside the inner plastic sphere). The steel sphere is not in direct contact to the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch), but that is not a problem since the inner plastic sphere is very thin and flexible. When the steel sphere hits the inner plastic sphere, it sets off one of the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch), which in turn sets off the explosive powder. I also did a test by replacing the explosive for match heads, and it worked perfectly! Here is a picture of the grenade after it had caught fire:
 
-![](./IMG_20200627_201009_3.jpg)
+![third grenade prototype after it caught fire](./IMG_20200627_201009_3.jpg)
 
 Unfortunately, I have not decided which explosive powder I will use yet. As soon as I figure it out, I will make an update to this post so you can see the grenade explode for real! See you there!
