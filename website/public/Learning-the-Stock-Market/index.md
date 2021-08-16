@@ -8,7 +8,7 @@ A few months ago, I was watching videos of people talking about strategies for t
 
 _Support_ and _resistance_ lines look something like this in a chart:
 
-![](./support-resistance.jpg)
+![stock support and resistance lines](./support-resistance.jpg)
 
 They are incredibly useful because they tell you where the price is likely going to bouce back, and if the price doesn't do so and crosses the lines instead, it is very likely that it will continue going in the same direction for a little while. However, I couldn't for the life of me figure out how to put these lines at the correct places in a trading chart. But this morning, everything changed: I don't know how, but I was actually able to easily identify the [support and resistance](https://en.wikipedia.org/wiki/Support_and_resistance) lines in a chart! This is the moment I decided I would learn more about the stock market.
 
@@ -18,7 +18,7 @@ Today, I practiced trading in my head. To do so, I went on the 1-minute chart on
 
 This evening, I opened up a [Google Sheets](https://sheets.google.com) spreadsheet to take note of all my buy and sell decisions. To my surprise, I was actually making a (very small) profit!
 
-![](./spreadsheet1.png)
+![spreadsheet of profit from stock market](./spreadsheet1.png)
 
 ## June 10th
 
@@ -31,7 +31,7 @@ show stocks where Average Day Range(20) is largest
 ```
 
 After a few seconds, I was greeted with 5 of the most volatile stocks in the last 20 days! I used these stocks to do the trading instead of using random ones, and it made a huge difference! Here are my results, with `10000$` as a starting budget (look at the number in bold to see my profits!):
-![](./spreadsheet2.png)
+![spreadsheet of profit from volatile stocks](./spreadsheet2.png)
 
 ## June 11th
 
@@ -87,7 +87,7 @@ At 15:15 today, I got a notification telling me that the `NKLA` stock went up by
 
 This morning, in exactly 9 minutes, I made `262.35$` of profit, which represents `2.5%` of my account value. This is one of the best trades I ever made! To explain better, here's a screenshot of the `NKLA` stock from the _Webull_ app:
 
-![](./screenshot1.png)
+![buy and sell prices from nkla stock](./screenshot1.png)
 
 Unfortunately, since I tuned in at 9:49 (clever me thought that taking a shower at 9:20 was a good idea), I missed the big dip (thick white line in the image above). If I had sold short on the top of that line, I would've certainly made way more profit, but oh well...
 
@@ -134,7 +134,7 @@ Today, nothing too interesting happened. I made a few hundred dollars in 45 minu
 
 Yesterday night, I wanted to try to plot the revenue I make in a graph to be able to visualize it. Here it is:
 
-![](./graph.png)
+![graph of profits from stock market](./graph.png)
 
 As you can see, the losses I make (below the red line) are usually smaller than the gains I make (above the red line). However, today was a very bad day and I was only able to make about `75$` in 45 minutes on `ERI`, `SAVE` and `UGAZ`. If you look from `15` to `27` on the `x` axis, representing the trades I made today, you will see that the losses I made were almost as large as the gains. This means that I lost about as much as I made, meaning I didn't make a very big profit.
 
