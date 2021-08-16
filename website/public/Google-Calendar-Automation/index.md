@@ -12,7 +12,7 @@ This program has **two inputs** and **one output**. It uses the current progress
 
 Below is example of my schedule, which is color coded automatically using this program. As you can see, the assignment called _PE reflexion_ is colored red because it is due today and is currently `0%` completed (oops), and the assignment called _C2 math chap trig_ is colored purple because I feel like I am `75%` ready for it, even though it is going to take place more than in two weeks time. There are also some greyed out assignments, which basically means I am already done with them.
 
-![](./Screenshot%202021-03-30%20144710.png)
+![screenshot of different colors of assignments on google calendar](./Screenshot%202021-03-30%20144710.png)
 
 As you can clearly see, by using this program, it is way easier to see which tasks I need to complete first with only a very quick glance at my calendar.
 
