@@ -24,7 +24,7 @@ Here is an example image, used as a source:
 
 The AI can then take this source image as an input, and compress it to a seemingly garbage-filled file, which looks nothing like the original image, but contains critical information. Then, it takes this file, which can be up to `16 times` smaller in size, and tries to reconstruct the image it started with as best as it can. Here are various [compression ratios](https://en.wikipedia.org/wiki/Data_compression_ratio) applied to the source image (compressed `256x, 128x, 64x, 32x, 16x, 8x, 4x, 2x and 1x` respectively):
 
-[//]: # '![](./7.predicted36.1@0.0%25.png)'
+[//]: # '![image compressed to 0%](./7.predicted36.1@0.0%25.png)'
 
 |     |                                                                        |     |
 | --- | ---------------------------------------------------------------------- | --- |
