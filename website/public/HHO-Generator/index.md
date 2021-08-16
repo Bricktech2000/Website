@@ -23,7 +23,7 @@ Then, when a tiny amount of energy is transfered to this [HHO](https://en.wikipe
 
 In order to understand better, here is a picture of the inside of the generator:
 
-![](./internals.jpg)
+![hho generator internals](./internals.jpg)
 
 Almost all of it is made out of _stainless steel_ or _aluminum_, so that it doesn't [oxidize](https://en.wikipedia.org/wiki/Rust). However, I counldn't find stainless washers at the hardware store, so I had to use steel ones. Unfortunately, this means that they were vulnerable to [oxidization](https://en.wikipedia.org/wiki/Rust), which explains why they rusted. At least, since they are not ment to be in electrical contact with the water, this is not that big of a deal at all.
 
