@@ -6,36 +6,36 @@ A few days ago, I watched [a video](https://www.youtube.com/watch?v=tO5Ym6-H2Ac)
 
 ## Screw Measuring Device
 
-![](./IMG_20210315_170932_4.min.jpg)
+![screw measuring device](./IMG_20210315_170932_4.min.jpg)
 
 The first tool I really liked was a _screw measuring device_. It allows one to measure both **the diameter and the length of metric screws** in only a few seconds. Here are a few examples using different size screws:
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210315_170725_8.min.jpg) | ![](IMG_20210315_170801_5.min.jpg) |
-| ![](IMG_20210315_170817_1.min.jpg) | ![](IMG_20210315_170834_9.min.jpg) |
+|                                                          |                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| ![screw measuring device](IMG_20210315_170725_8.min.jpg) | ![screw measuring device](IMG_20210315_170801_5.min.jpg) |
+| ![screw measuring device](IMG_20210315_170817_1.min.jpg) | ![screw measuring device](IMG_20210315_170834_9.min.jpg) |
 
 #tool2
 
 ## Center Finder
 
-![](./IMG_20210315_171003_6.min.jpg)
+![center finder](./IMG_20210315_171003_6.min.jpg)
 
 The second tool I chose is a _center finder_. It makes finding **the center of a circle or of a rectangle** incredibly easy because of its clever design. Here is an example of what it can do:
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210315_171106_7.min.jpg) | ![](IMG_20210315_171234_2.min.jpg) |
+|                                                 |                                                 |
+| ----------------------------------------------- | ----------------------------------------------- |
+| ![center finder](IMG_20210315_171106_7.min.jpg) | ![center finder](IMG_20210315_171234_2.min.jpg) |
 
 #tool3
 
 ## Fillet Gauge
 
-![](./IMG_20210315_171500_5.min.jpg)
+![fillet gauge](./IMG_20210315_171500_5.min.jpg)
 
 The third tool I found very useful is a _fillet gauge_. While it is very easy to measure distances with some [callipers](https://en.wikipedia.org/wiki/Calipers), it is way harder to use them to measure **the radius of a fillet**. For this reason, this tool was created. Here are a few instances in which a fillet gauge can prove incredibly useful:
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210315_171554_4.min.jpg) | ![](IMG_20210315_171624_5.min.jpg) |
-| ![](IMG_20210315_171701_4.min.jpg) | ![](IMG_20210315_171758_2.min.jpg) |
+|                                                |                                                |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![fillet gauge](IMG_20210315_171554_4.min.jpg) | ![fillet gauge](IMG_20210315_171624_5.min.jpg) |
+| ![fillet gauge](IMG_20210315_171701_4.min.jpg) | ![fillet gauge](IMG_20210315_171758_2.min.jpg) |
