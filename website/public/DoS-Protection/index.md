@@ -10,7 +10,7 @@
 
 When I ported this website to a Raspberry Pi (which you can see a post about [here](../Raspberry-Pi-Server/)), I noticed that sometimes, an internal function I made called `MiniMLCompile` would take a fairly long time to execute. Because of that, I put in place a warning displayed in the client console when the function took more than `500 ms` to execute... and it turns out that it pretty much always does:
 
-![](./warnings.png)
+![chrome console showing performance warnings](./warnings.png)
 
 I ignored the fact that it took that long to load pages because I figured the traffic on the website was low enough that it wouldn't cause any problems. I knew that a [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack could be performed very easily, but I was too lazy to implement a protection.
 
