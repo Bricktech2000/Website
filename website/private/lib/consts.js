@@ -1,3 +1,4 @@
+export const language = 'en';
 export const domain = 'emilien.ca';
 export const github = 'https://github.com/Bricktech2000/Website';
 export const social = {

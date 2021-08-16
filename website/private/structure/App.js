@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import Head from './Head';
 
-import { domain } from '../lib/consts';
+import { language, domain } from '../lib/consts';
 import styles from './App.module.css';
 import { init } from '../lib/rand';
 init();
@@ -11,6 +11,11 @@ const App = (props) => {
 
   useEffect(() => {
     changePalette({ preventDefault: () => {} });
+  }, []);
+
+  //https://stackoverflow.com/questions/61310847/how-to-set-html-lang-attribute-dynamically-on-nextjs-document
+  useEffect(() => {
+    document.documentElement.lang = language;
   }, []);
 
   const changePalette = (e) => {
