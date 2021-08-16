@@ -12,7 +12,7 @@ And here's how the finished adapter looks:
 
 #img
 
-![](index.jpg)
+![arduino nano with flysky receiver](index.jpg)
 
 ## How to build it
 
