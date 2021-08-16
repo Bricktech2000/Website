@@ -37,7 +37,7 @@ const Marked = (props) => {
           },
         }
       )
-        .replace(/<a/g, '<a target="_blank" rel="noreferer"')
+        .replace(/<a href=/g, '<a target="_blank" rel="noreferrer" href=')
         .replace(
           /<img src="(.*)" alt="video">/g,
           (a, b) => `<video autoplay muted loop><source src="${b}"></video>`
