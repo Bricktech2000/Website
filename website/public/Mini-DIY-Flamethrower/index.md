@@ -11,7 +11,7 @@ This is when I started brainstorming for a way to create a [mini DIY flamethrowe
 After spending a few hours roaming around hardware stores, I had a pretty good idea of how I wanted to build my flame thrower. At first, I was planning on using [ABS pipes](https://www.google.com/search?q=abs+pipe&source=lnms&tbm=isch&sa=X) to make the frame of the flamethrower. However, since I wanted to use a [butane refill can](https://www.google.com/search?q=butane+refill+can&tbm=isch&sa=X) as a fuel source, it would be next to impossible to depress its nozzle through a trigger. For this reason, I had to use the can itself as a frame.
 #img
 
-![](./index.jpg)
+![image of the flame thrower](./index.jpg)
 
 I came up with a fairly clever design for the gas dispenser. As can see in the image above, the flamethrower uses a [barbecue lighter](https://www.google.com/search?q=barbecue+lighter&&source=lnms&tbm=isch&sa=X) to ignite the butane coming out of the [refill can](https://www.google.com/search?q=butane+refill+can&tbm=isch&sa=X). However, it is only attached to the can's nozzle and can slide freely through the handle. This way, a 3 step procedure takes place when one presses the flamethrower's trigger:
 
