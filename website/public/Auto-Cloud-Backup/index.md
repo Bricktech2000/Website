@@ -36,7 +36,7 @@ Finally, the custom functions receive the paths of the files that have been modi
 
 #img
 
-![](./screenshot.jpg)
+![autocloudbackup running in the terminal](./screenshot.jpg)
 
 ## Thank Got it's Over!
 

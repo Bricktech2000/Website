@@ -18,25 +18,25 @@ There are many advantages for using [Machine Learning](https://en.wikipedia.org/
 
 Here is an example image, used as a source:
 
-|     |              |     |
-| --- | ------------ | --- |
-|     | ![](./7.png) |     |
+|     |                                |     |
+| --- | ------------------------------ | --- |
+|     | ![uncompressed image](./7.png) |     |
 
 The AI can then take this source image as an input, and compress it to a seemingly garbage-filled file, which looks nothing like the original image, but contains critical information. Then, it takes this file, which can be up to `16 times` smaller in size, and tries to reconstruct the image it started with as best as it can. Here are various [compression ratios](https://en.wikipedia.org/wiki/Data_compression_ratio) applied to the source image (compressed `256x, 128x, 64x, 32x, 16x, 8x, 4x, 2x and 1x` respectively):
 
 [//]: # '![](./7.predicted36.1@0.0%25.png)'
 
-|     |                                                   |     |
-| --- | ------------------------------------------------- | --- |
-|     | `256x` <br>![](./7.predicted36.1@0.390625%25.png) |     |
-|     | `128x` <br>![](./7.predicted36.1@0.781250%25.png) |     |
-|     | `64x` <br>![](./7.predicted36.1@1.5625%25.png)    |     |
-|     | `32x` <br>![](./7.predicted36.1@3.125%25.png)     |     |
-|     | `16x` <br>![](./7.predicted36.1@6.25%25.png)      |     |
-|     | `8x` <br>![](./7.predicted36.1@12.5%25.png)       |     |
-|     | `4x` <br>![](./7.predicted36.1@25.0%25.png)       |     |
-|     | `2x` <br>![](./7.predicted36.1@50.0%25.png)       |     |
-|     | `1x` <br>![](./7.predicted36.1@100.0%25.png)      |     |
+|     |                                                                        |     |
+| --- | ---------------------------------------------------------------------- | --- |
+|     | `256x` <br>![image compressed 256x](./7.predicted36.1@0.390625%25.png) |     |
+|     | `128x` <br>![image compressed 128x](./7.predicted36.1@0.781250%25.png) |     |
+|     | `64x` <br>![image compressed 64x](./7.predicted36.1@1.5625%25.png)     |     |
+|     | `32x` <br>![image compressed 32x](./7.predicted36.1@3.125%25.png)      |     |
+|     | `16x` <br>![image compressed 16x](./7.predicted36.1@6.25%25.png)       |     |
+|     | `8x` <br>![image compressed 8x](./7.predicted36.1@12.5%25.png)         |     |
+|     | `4x` <br>![image compressed 4x](./7.predicted36.1@25.0%25.png)         |     |
+|     | `2x` <br>![image compressed 2x](./7.predicted36.1@50.0%25.png)         |     |
+|     | `1x` <br>![image compressed 1x](./7.predicted36.1@100.0%25.png)        |     |
 
 ## How it Works
 
@@ -48,7 +48,7 @@ This AI is a type of neural network called an _Autoencoder_.
 
 Essentially, an encoder takes an input (the source image), which then goes through some kind of a _bottleneck_ (the compressed file), before passing this _latent representation_ to a decoder, which tries to reconstruct the original input as best as it can (the uncompressed image). Here is how it looks, visualized:
 
-![](./autoencoder.jpg)
+![handwriting autoencoder](./autoencoder.jpg)
 
 However, there are a few problems with this approach. First, a neural network can only have fixed-size inputs and outputs, which means that only one image size could be used. This is easily remedied by breaking up the input and output images into `16 x 16` chunks for the `red`, `green` and `blue` channels, which are also way more efficient to train with. Second, the number of neurons in the _latent_ part cannot really be modified either, which means that the [compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) has to be fixed. This is why I created a new way of training autoencoders which allows us to modify the [compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) on-the-fly! For each training step, do the following:
 
