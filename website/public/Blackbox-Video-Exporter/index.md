@@ -14,7 +14,7 @@ However, this approach has a few problems:
 
 Solving this problem was pretty easy. I found a way to take a `BFL` file from the drone itself, and export it to a `CSV` file, which is way easier to work with. Just [click here](./Blackbox%20Video%20Exporter/2_ESC_SENSOR_RPM_100MB.BFL.csv) to see the file for yourself! It looks a bit like this, at over `350 000` lines long:
 
-![](./screenshot.png)
+![screenshot of csv exported file](./screenshot.png)
 
 [The program](https://github.com/Bricktech2000/Blackbox-Video-Exporter) I made can then take this file, and generate a video file from it. It contains a lot of information, like the `stick positions`, the `voltage`, the `power` used, the current `orientation`... The video it exports is thin but tall, which means that it can easily be added on the sides of the Gopro footage. Here is a demo showing what video it can produce:
 
