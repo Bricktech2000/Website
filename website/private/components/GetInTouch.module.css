@@ -23,6 +23,13 @@
   width: 2em;
   transition: top 0.25s ease-in-out;
 }
+.GetInTouch .icons a span {
+  /* https://stackoverflow.com/questions/5300714/how-do-i-hide-anchor-text-without-hiding-the-anchor */
+  /* used to remove lighthouse accessibility issue */
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
 .GetInTouch .icons a:hover {
   top: calc(var(--smart-unit) * -0.5);
 }
