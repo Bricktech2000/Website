@@ -14,10 +14,10 @@ Here are some of its defining features:
 
 #img
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210119_150916_5.min.jpg) | ![](IMG_20210119_150856_0.min.jpg) |
-| ![](IMG_20210119_150836_3.min.jpg) | ![](IMG_20210119_150812_9.min.jpg) |
+|                                                                 |                                                                |
+| --------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![phone in tpu stand front view](IMG_20210119_150916_5.min.jpg) | ![phone in tpu stand side view](IMG_20210119_150856_0.min.jpg) |
+| ![phone in tpu stand top view](IMG_20210119_150836_3.min.jpg)   | ![tpu phone stand](IMG_20210119_150812_9.min.jpg)              |
 
 #settings
 
