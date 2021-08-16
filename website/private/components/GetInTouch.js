@@ -22,13 +22,14 @@ const GetInTouch = () => {
         <a
           target="_blank"
           href={`mailto:${social.mail}?subject=I'm%20interested%20in%20your%20work!`}
+          rel="noreferrer"
         >
           <Mail />
         </a>
-        <a target="_blank" href={social.github}>
+        <a target="_blank" href={social.github} rel="noreferrer">
           <Github />
         </a>
-        <a target="_blank" href={social.facebook}>
+        <a target="_blank" href={social.facebook} rel="noreferrer">
           <Facebook />
         </a>
       </div>
