@@ -2,7 +2,7 @@
 
 My electronics drawer has been looking like this for way too long now:
 
-![](IMG_20200304_075310_0.jpg)
+![messy electronics drawer](IMG_20200304_075310_0.jpg)
 
 And so recently, I wondered:
 
@@ -15,7 +15,7 @@ And this is when I began this project.
 #img
 
 After a few re-designs and many failed attempts due to incorrect tolerances, I finally managed to get them to fit together! Here's how they look when fully assembled:
-![](FJIMG_20200420_145646.jpg)
+![electronics drawer sorted with containers](FJIMG_20200420_145646.jpg)
 
 If you want to know more about how they were made, you can watch [this video](https://www.youtube.com/watch?v=k7jLqC3cGUY) on my [YouTube Channel](https://www.youtube.com/channel/UCGj6pfxZ0XYJU29XNwXPPxg/featured).
 #video
