@@ -9,7 +9,7 @@ This program is a simple script to change the Bash prompt on your terminal.
 Below is a a screenshot showcasing the key features of [this prompt](https://github.com/Bricktech2000/Clean-Bash-Prompt): the current username, the working directory and some extra info.
 #screenshot
 
-![](./screenshot.png)
+![screenshot of the key features of the program](./screenshot.png)
 
 ## How it Works
 
@@ -21,7 +21,7 @@ export PS1="\u> "
 
 In this minimal example, `\u` represents the current username and `>` is simply some ascii text to append to the end of it. In my case, since my username is _brick_, I get the following prompt:
 
-![](./screenshot2.png)
+![example of a bash prompt](./screenshot2.png)
 
 After iterating on this idea for a few hours, I came up with [this very Bash prompt](https://github.com/Bricktech2000/Clean-Bash-Prompt). In my opinion, it is the best balance between cleanliness and efficiency. If anyone is feeling like reading gibberish, below is its source code:
 
