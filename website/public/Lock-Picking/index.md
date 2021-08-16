@@ -4,7 +4,7 @@ For a few years now, I've been [lock picking](https://en.wikipedia.org/wiki/Lock
 
 #img
 
-![](./backup_banggoodSet.jpg)
+![lock picking set from banggood](./backup_banggoodSet.jpg)
 
 According to [The LockPickingLawyer](https://www.youtube.com/channel/UCm9K6rby98W8JigLoZOh6FQ), the only downside of this kit was the _tension wrenches_, which bent really easily. Fortunately, it turned out that the [one I ordered](https://www.banggood.com/DANIU-Transparent-Practice-Padlocks-with-12pcs-Unlocking-Lock-Pick-Set-Key-Extractor-Tool-Lock-Pick-Tools-p-1168495.html?rmmds=myorder&cur_warehouse=USA) was a bit different, so I ended up receiving thick metal tension wrenches with my lock picking kit instead of the low-quality ones he got.
 
@@ -19,7 +19,7 @@ There are many types of _picks_, but they can be organized in two basic categori
 
 #demo
 
-![](Txh5y.gif)
+![gif lock picking demo](Txh5y.gif)
 
 In this animation, the _tension wrench_ is the `L`-shaped tool on the bottom, and the _pick_ is the curved tool on the top. In essence, because of tiny [manufacturing defects](https://en.wikipedia.org/wiki/Glossary_of_locksmithing_terms#shear_line) in the lock, only a single pin at a time is receiving all the torque created by the _tension wrench_ (represented by an orange zigzag line in the animation). It just a matter of finding that pin, then lifting it to the right height until it **clicks**, and moving on to the next one. After every pin clears the [shear line](https://en.wikipedia.org/wiki/Glossary_of_locksmithing_terms#shear_line), nothing is holding the core from turning and the lock opens!
 
