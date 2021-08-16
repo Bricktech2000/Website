@@ -15,7 +15,7 @@ Here's a video demo of me playing the game:
 ## How to play
 
 When you open up the app, you will be greated with the following title screen:
-![](Screenshot_20200430-124153.jpg)
+![screenshot of the game geometry ninja](Screenshot_20200430-124153.jpg)
 
 It contains the following things:
 
