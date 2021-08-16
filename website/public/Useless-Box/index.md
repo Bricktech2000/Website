@@ -37,9 +37,9 @@ In order to work, this machine uses 2 [servo motors](https://en.wikipedia.org/wi
 
 #parts
 
-| ![](switch_m.jpg) | ![](servo_m.jpg) | ![](arduino_m.jpg) | ![](jumpers.jpg) | ![](black_filament_m.jpg) | ![](battery_holder_m.jpg) |
-| ----------------- | ---------------- | ------------------ | ---------------- | ------------------------- | ------------------------- |
-|                   |                  |                    |                  |                           |                           |
+| ![toggle switch](switch_m.jpg) | ![9g servo](servo_m.jpg) | ![arduono nano](arduino_m.jpg) | ![jumper cables](jumpers.jpg) | ![roll of black pla filament](black_filament_m.jpg) | ![aaa battery case](battery_holder_m.jpg) |
+| ------------------------------ | ------------------------ | ------------------------------ | ----------------------------- | --------------------------------------------------- | ----------------------------------------- |
+|                                |                          |                                |                               |                                                     |                                           |
 
 The software side of this box is pretty simple, but very clever (in my opinion at least). When the program detects that the switch was flipped, it runs the following code:
 
