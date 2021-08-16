@@ -2,7 +2,7 @@
 
 This morning, I was scrolling through my YouTube recommended when I stumbled upon [the following video](https://www.youtube.com/watch?v=Bdf9NHAuO0w) by [Make Anything](https://www.youtube.com/channel/UCVc6AHfGw9b2zOE_ZGfmsnw):
 
-![](./video.jpg)
+![I Taught My 3D Printer How to Sing from Make Anything](./video.jpg)
 
 In [this video](https://www.youtube.com/watch?v=Bdf9NHAuO0w), Devin teaches us how to encode music notes into a `.gcode` file to play it on a 3D printer! As soon as I saw this video, I knew I had to do it for myself. And this is how it all began!
 
