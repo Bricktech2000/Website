@@ -54,7 +54,10 @@ const Card = (props) => {
       href={href}
       onClick={onClick}
     >
-      <img src={'/' + props.info.id + '/index.jpg'} alt="" />
+      <img
+        src={'/' + props.info.id + '/index.jpg'}
+        alt={props.info.title + ' thumbnail image'}
+      />
       <div className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}>
         {props.info.title}
       </div>

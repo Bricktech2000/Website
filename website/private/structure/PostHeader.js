@@ -9,7 +9,10 @@ import styles from './PostHeader.module.css';
 const PostHeader = (props) => {
   return (
     <header className={styles.PostHeader}>
-      <img src={'/' + props.info.id + '/index.jpg'} alt="" />
+      <img
+        src={'/' + props.info.id + '/index.jpg'}
+        alt={props.info.title + ' thumbnail image'}
+      />
       <div className={styles['markup-h1'] + ' markup-h1' + ' fade-right-1'}>
         {props.info.title}
       </div>
