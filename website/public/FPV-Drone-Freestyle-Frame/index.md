@@ -15,7 +15,7 @@ I had three criteria for the new frame I wanted to buy. In order to fit my needs
 After comparing a few options, I decided to go with a clone of the [ImpulseRC Apex](https://impulserc.com/collections/apex/products/apex-fpv-frame) on banggood. Here is a [link to it](https://www.banggood.com/STEELE-5-220mm-Wheelbase-5mm-Arm-Thickness-Carbon-Fiber-X-Type-5-Inch-Freestyle-Frame-Kit-Support-Caddx-Vista-HD-System-for-RC-Drone-FPV-Racing-p-1720420.html?cur_warehouse=CN&rmmds=search). By choosing such a clone, I knew I would get a good-looking and proven design while still paying a low price. Moreover, the _Apex_ is designed for a top-mounted battery, which is perfect for my needs. Here is a picture of the frame I chose:
 
 #img
-![](./apex-clone.png)
+![apex frame clone from banggood](./apex-clone.png)
 
 ## Transfering the Electronics Over
 
@@ -23,9 +23,9 @@ The next step was to transfer all the electronics from the previous frame to the
 
 #build
 
-| ![](IMG_20210517_172605_7.min.jpg) | ![](IMG_20210517_183522_1.min.jpg) | ![](IMG_20210517_192527_2.min.jpg) | ![](IMG_20210517_185134_7.min.jpg) | ![](IMG_20210519_100658_7.min.jpg) |
-| ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- |
-|                                    |                                    |                                    |                                    |                                    |
+| ![electronics outside of frame](IMG_20210517_172605_7.min.jpg) | ![electronics inside new frame](IMG_20210517_183522_1.min.jpg) | ![comparaison between old frame and new frame](IMG_20210517_192527_2.min.jpg) | ![close-up of drone in new frame](IMG_20210517_185134_7.min.jpg) | ![drone in new frame with caddx orca](IMG_20210519_100658_7.min.jpg) |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------- |
+|                                                                |                                                                |                                                                               |                                                                  |                                                                      |
 
 ## Some Flight Demos
 
