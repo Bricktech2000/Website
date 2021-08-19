@@ -27,17 +27,10 @@ const PostHeader = (props) => {
       </div>
       <div className={styles.buttons + ' fade-right-3'}>
         {Object.keys(props.info.btns).map((key) => {
-          const href = props.info.btns[key].replace(/^:/, '');
-          return (
-            <Button
-              key={key}
-              label={key}
-              blank={props.info.btns[key].match(/^:/)}
-              href={
-                href.match(/^[\.#]/) ? '/' + props.info.id + '/' + href : href
-              }
-            />
-          );
+          var href = props.info.btns[key];
+          const blank = !href.match(/^[\.#]/);
+          if (!blank) href = '/' + props.info.id + '/' + href;
+          return <Button key={key} label={key} blank={blank} href={href} />;
         })}
       </div>
     </header>
