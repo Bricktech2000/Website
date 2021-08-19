@@ -4,7 +4,7 @@
   "type": "hardware",
   "tags": ["Blog", "3D Printing"],
   "btns": {
-    "Download STLs": ":./Tools2.zip",
+    "Download STLs": "./Tools2.zip",
     "Screw Measuring Device": "#tool1",
     "Center Finder": "#tool2",
     "Fillet Gauge": "#tool3"

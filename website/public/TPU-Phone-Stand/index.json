@@ -6,7 +6,7 @@
   "btns": {
     "Demo Images": "#img",
     "Printer Settings": "#settings",
-    "Download STLs": ":./Phone Holder 2 v2.stl"
+    "Download STLs": "./Phone Holder 2 v2.stl"
   },
   "desc": "An incredibly simple device to... stand a phone. Talking about its defining features and telling you how to 3D print your own!"
 }

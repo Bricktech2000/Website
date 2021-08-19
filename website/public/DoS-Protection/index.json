@@ -15,7 +15,7 @@
   "btns": {
     "Try it!": "#try",
     "Code Sample": "#code",
-    "Download DoS Program": ":./Website%20DoS.js"
+    "Download DoS Program": "Website%20DoS.js"
   },
   "desc": "This website has been vulnerable to DoS attacks for way too long now. Explaining why this is a problem and how I solved it!"
 }

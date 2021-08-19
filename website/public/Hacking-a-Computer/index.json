@@ -19,8 +19,8 @@
   ],
   "btns": {
     "Demo Video": "#demo",
-    "Download STL": ":./Case 4 v9.stl",
-    "Buy Digisparks": ":https://www.ebay.com/itm/Digispark-Kickstarter-ATTINY85-General-Micro-USB-Development-Board-Sale/173925228046?hash=item287ec05e0e:g:hQIAAOSwTuJYpT~p"
+    "Download STL": "./Case 4 v9.stl",
+    "Buy Digisparks": "https://www.ebay.com/itm/Digispark-Kickstarter-ATTINY85-General-Micro-USB-Development-Board-Sale/173925228046?hash=item287ec05e0e:g:hQIAAOSwTuJYpT~p"
   },
   "desc": "Talking about how this USB key can literally take control of a computer wirelessly, from a cell phone!"
 }

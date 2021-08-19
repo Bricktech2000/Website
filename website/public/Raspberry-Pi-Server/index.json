@@ -15,7 +15,7 @@
   ],
   "btns": {
     "Server Image": "#img",
-    "Download STLs": ":https://www.thingiverse.com/thing:2962386"
+    "Download STLs": "https://www.thingiverse.com/thing:2962386"
   },
   "desc": "What is the server that makes this website work? You may be surprised to know that it is only `7cm` by `3cm`! Writing about Raspberry Pi's and how they work."
 }

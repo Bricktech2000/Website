@@ -11,7 +11,7 @@
     "Cellular Automaton"
   ],
   "btns": {
-    "Try it!": ":./V4.html",
+    "Try it!": "V4.html",
     "Demo Video": "#demo",
     "Automaton Rules": "#rules"
   },

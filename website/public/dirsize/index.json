@@ -4,7 +4,7 @@
   "type": "software",
   "tags": ["Software", "Python", "Recursion", "Scripting"],
   "btns": {
-    "Try it!": ":./dirsize.py",
+    "Download Program": "./dirsize.py",
     "Sample Output": "#img",
     "Program Pseudocode": "#code"
   },

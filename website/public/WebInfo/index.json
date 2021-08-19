@@ -15,7 +15,7 @@
     "Data Analysis"
   ],
   "btns": {
-    "Github": ":https://github.com/Bricktech2000/WebInfo",
+    "Github": "https://github.com/Bricktech2000/WebInfo",
     "Demo": "#demo",
     "Example Log": "#log"
   },

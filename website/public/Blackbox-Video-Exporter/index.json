@@ -14,7 +14,7 @@
   "btns": {
     "Try it!": "#try",
     "Demo": "#demo",
-    "Github": ":https://github.com/Bricktech2000/Blackbox-Video-Exporter"
+    "Github": "https://github.com/Bricktech2000/Blackbox-Video-Exporter"
   },
   "desc": "A program that turns a Betaflight blackbox file into a video file. Talking about how I solved the timeless Stick Cam problem, and how you can too!"
 }

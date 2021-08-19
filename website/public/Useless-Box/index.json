@@ -16,8 +16,8 @@
   "btns": {
     "Parts List": "#parts",
     "Demo Video": "#demo",
-    "Download Code": ":./Useless_Box_1.zip",
-    "Download STLs": ":./Useless Box STLs.zip"
+    "Download Code": "Useless_Box_1.zip",
+    "Download STLs": "Useless Box STLs.zip"
   },
   "desc": "Showcasing my new project: a useless box. Talking about how I got the idea to build one, and how it works."
 }

@@ -3,6 +3,6 @@
   "date": "2020-04-07",
   "type": "blog",
   "tags": ["Demo", "Software", "JavaScript", "HTML", "CSS", "Web", "Outdated"],
-  "btns": { "View Website": ":./client/index.html", "Website Image": "#img" },
+  "btns": { "View Website": "client/index.html", "Website Image": "#img" },
   "desc": "Links to my first website. Talking about how the (very strange) page system used to work, using an `iframe` to load HTML code."
 }

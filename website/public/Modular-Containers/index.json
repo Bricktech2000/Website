@@ -13,7 +13,7 @@
   "btns": {
     "Container Image": "#img",
     "Video": "#video",
-    "Download STLs": ":./Modular Drawers STLs.zip"
+    "Download STLs": "./Modular Drawers STLs.zip"
   },
   "desc": "Talking about how I improved the sorting of my electronics!"
 }

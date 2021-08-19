@@ -16,7 +16,7 @@
   ],
   "btns": {
     "Demo": "#demo",
-    "Github": ":https://github.com/Bricktech2000/Messenger-Always-Active"
+    "Github": "https://github.com/Bricktech2000/Messenger-Always-Active"
   },
   "desc": "A simple bot to keep your Messenger activity status to _Active_ all the time. Writing about how I got the idea to make such a program, and how it works."
 }

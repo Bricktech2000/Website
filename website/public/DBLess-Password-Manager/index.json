@@ -15,7 +15,7 @@
   ],
   "btns": {
     "Try it!": "#try",
-    "Github": ":https://github.com/Bricktech2000/DBLess-Password-Manager"
+    "Github": "https://github.com/Bricktech2000/DBLess-Password-Manager"
   },
   "desc": "A hash-based, database-less password manager. Writing about how I got the idea to make this PoC, and how it works!"
 }
