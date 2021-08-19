@@ -35,11 +35,23 @@ const Head = (props) => {
       <script>{/*console.log('Google Test 0.16');*/}</script>
       <script src="/resize.js"></script>
       {/* https://github.com/markedjs/marked */}
-      {/* <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> */}
       {/* https://highlightjs.org/download/ */}
-      {/* <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script> */}
-      {/* <script src="/marked.min.js"></script> */}
-      {/* <script src="/highlight.min.js"></script> */}
+
+      {/* https://fonts.google.com/specimen/Roboto?category=Sans+Serif */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+      ></link>
+
+      {/* https://fonts.google.com/specimen/Inconsolata?category=Monospace */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      ></link>
     </NextHead>
   );
 };

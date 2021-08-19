@@ -8,7 +8,7 @@
   margin: 0 calc(var(--smart-unit) * 5);
   line-height: 30vw;
   padding: 0;
-  font-family: monospace;
+  font-family: var(--mono);
   font-size: min(20vw, calc(var(--smart-unit) * 30));
   white-space: nowrap;
 }

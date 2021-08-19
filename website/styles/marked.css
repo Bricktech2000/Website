@@ -82,7 +82,8 @@
 .marked code,
 .marked pre code {
   transition: background-color 0.25s ease-in-out;
-  font-family: monospace;
+  font-family: var(--mono);
+  font-weight: normal;
   font-size: calc(var(--smart-res-unit) * 1.5);
   background: var(--card-bg);
   border-radius: calc(0.5 * var(--smart-unit));

@@ -5,7 +5,7 @@
 
   background: var(--card2-bg);
   border-radius: calc(var(--smart-unit) * 1);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--mono);
   font-size: 0.666em;
 }
 .cursor {

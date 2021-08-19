@@ -11,19 +11,18 @@
   -webkit-tap-highlight-color: var(--color-d);
 
   font-size: calc(var(--smart-res-unit) * 1);
+  font-weight: inherit;
   margin: calc(var(--smart-res-unit) * 0.2);
   padding: calc(var(--smart-res-unit) * 0.075) calc(var(--smart-res-unit) * 0.5);
 }
 .off {
   background: var(--bg);
   color: var(--text);
-  font-weight: lighter;
 }
 .on {
   background: var(--bg);
   border-color: var(--color);
   color: var(--color-l);
-  font-weight: lighter;
 }
 
 .u {
