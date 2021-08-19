@@ -44,7 +44,7 @@ const App = (props) => {
     timeout = setTimeout(() => {
       setCount(1);
     }, 1000);
-    localStorage.setItem('lastColorHue', colorHue);
+    localStorage.setItem('colorHue', colorHue);
     setCount((c) => c + 1);
   };
 
