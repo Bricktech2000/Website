@@ -136,12 +136,11 @@
 }
 .marked blockquote {
   font-style: italic;
-  padding: calc(var(--vh) * 1) 2vw;
-  padding-left: 2.5vw;
-  border-left: 0.375vw solid var(--color);
+  font-weight: normal;
+  padding: 0 2vw;
+  padding-left: 1.5vw;
+  border-left: calc(.5 * var(--smart-unit)) solid var(--color);
   margin: calc(3 * var(--smart-unit)) 10%;
-  box-shadow: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 0.5)
-    calc(var(--smart-unit) * 1) var(--black);
 }
 .marked a,
 .markup-link {
