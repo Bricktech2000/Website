@@ -39,7 +39,7 @@ const Card = (props) => {
   const direction = dir ? 'row' : 'col';
   const inverted = props.inv ? 'inv' : 'nor';
 
-  const Card2 = React.forwardRef(({ onClick, href }, ref) => (
+  const CardHtml = React.forwardRef((props2, ref) => (
     <a
       ref={linkRef}
       className={
@@ -51,8 +51,7 @@ const Card = (props) => {
         ' ' +
         styles[props.info.type]
       }
-      href={href}
-      onClick={onClick}
+      {...props2}
     >
       <img
         src={'/' + props.info.id + '/index.jpg'}
@@ -75,7 +74,7 @@ const Card = (props) => {
 
   return (
     <Link href={'/' + props.info.id}>
-      <Card2 href={'/' + props.info.id} />
+      <CardHtml href={'/' + props.info.id} />
     </Link>
   );
 };
