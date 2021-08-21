@@ -18,7 +18,7 @@
 .HomeAbout > p {
   grid-area: paragraph;
 
-  font-size: calc(var(--smart-res-unit) * 2.5);
+  font-size: calc(var(--smart-res-unit) * 2.25);
   font-weight: lighter;
   padding-left: calc(var(--smart-unit) * 6);
   text-align: justify;
