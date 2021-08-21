@@ -60,11 +60,11 @@ body {
   /*background-clip: content-box;*/
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--lg);
+  background: var(--color);
   border-radius: 0.5vh;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--lg-d);
+  background: var(--color-l);
 }
 
 ::selection {

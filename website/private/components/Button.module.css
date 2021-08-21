@@ -8,7 +8,17 @@
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
+
+  transition: background-color 0.25s ease-in-out, top 0.25s ease-in-out;
+  position: relative;
+  top: 0;
+  background: var(--color);
 }
+.button-container:hover {
+  background: var(--color-l);
+  top: calc(var(--smart-unit) * -0.5);
+}
+
 .button {
   display: flex;
   align-items: center;

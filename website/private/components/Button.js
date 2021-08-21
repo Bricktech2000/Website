@@ -24,7 +24,7 @@ const Button = (props) => {
   };
 
   const ButtonHtml = React.forwardRef((props2, ref) => (
-    <a className={styles['button-container'] + ' lg-hover'} {...props2}>
+    <a className={styles['button-container']} {...props2}>
       <div
         className={
           styles.button + ' ' + (props.blank ? '' : styles['button-on'])
