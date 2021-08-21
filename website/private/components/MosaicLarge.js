@@ -5,6 +5,9 @@ import useParallax from '../lib/useParallax';
 
 import styles from './MosaicLarge.module.css';
 
+//https://www.emgoto.com/storing-values-with-useref/
+var globalClickCount = 3;
+
 const MosaicLarge = (props) => {
   const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
@@ -12,11 +15,7 @@ const MosaicLarge = (props) => {
       -20}))`;
   });
 
-  //this is the most hacky solution ever
-  //modifying a property on an import to keep track of a value... can't get much worse than that
-  generator.clickCount = generator.clickCount || 3;
-  const [clickCount, setClickCount] = useState(generator.clickCount);
-
+  const [clickCount, setClickCount] = useState(globalClickCount);
   const rand = generator();
 
   return (
@@ -34,7 +33,7 @@ const MosaicLarge = (props) => {
           label="Load More"
           onClick={() => {
             setClickCount((c) => c + 1);
-            generator.clickCount++;
+            globalClickCount++;
           }}
         />
       )}
