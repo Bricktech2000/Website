@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useEffect, useState, useRef } from 'react';
 import Tag from './Tag';
 import Date from './Date';
 import Loading from './Loading';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 import styles from './Card.module.css';
 
 const Card = (props) => {
-  const linkRef = React.createRef();
+  const linkRef = useRef();
   const [dir, setDir] = useState(props.dir);
 
   useEffect(() => {
@@ -19,12 +19,11 @@ const Card = (props) => {
     //https://stackoverflow.com/questions/36209432/how-to-dynamically-add-a-class-to-manual-class-nameshttps://stackoverflow.com/questions/36209432/how-to-dynamically-add-a-class-to-manual-class-namesS
     //https://stackoverflow.com/questions/6492683/how-to-detect-divs-dimension-changed
     //https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/unobserve
-    const node = linkRef.current;
-    if (node !== null) {
+    if (linkRef.current !== null) {
       const observer = new ResizeObserver(() => {
-        if (node.parentNode === null) return;
+        if (linkRef.current.parentNode === null) return;
         const parentGridWidth = window
-          .getComputedStyle(node.parentNode)
+          .getComputedStyle(linkRef.current.parentNode)
           .getPropertyValue('grid-template-columns')
           .replace(/ ?0px ?/, '')
           .split(' ').length;
@@ -32,7 +31,7 @@ const Card = (props) => {
         if (parentGridWidth == 1) setDir(1);
         else setDir(props.dir);
       });
-      observer.observe(node.parentNode);
+      observer.observe(linkRef.current.parentNode);
     }
   }, []);
 
