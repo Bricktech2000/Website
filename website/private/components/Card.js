@@ -21,7 +21,8 @@ const Card = (props) => {
     //https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/unobserve
     if (linkRef.current !== null) {
       const observer = new ResizeObserver(() => {
-        if (linkRef.current.parentNode === null) return;
+        if (linkRef.current === null || linkRef.current.parentNode === null)
+          return;
         const parentGridWidth = window
           .getComputedStyle(linkRef.current.parentNode)
           .getPropertyValue('grid-template-columns')
