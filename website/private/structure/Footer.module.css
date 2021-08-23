@@ -36,10 +36,12 @@
 }
 .Footer .center {
   grid-area: center;
+  display: block;
   text-align: center;
 }
 .Footer .contact {
   grid-area: contact;
+  flex-direction: column;
 }
 /*
 https://css-tricks.com/almanac/properties/f/fill/
