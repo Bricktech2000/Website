@@ -1,3 +1,11 @@
+.marked,
+.marked * {
+  display: block;
+}
+.marked {
+  overflow: hidden;
+}
+
 .marked h2,
 .markup-h2 {
   font-size: calc(var(--smart-res-unit) * 3.5);
@@ -19,9 +27,11 @@
   margin-bottom: calc(var(--smart-unit) * 2);
 }
 .marked em {
+  display: inline-block;
   font-style: italic;
 }
 .marked strong {
+  display: inline-block;
   font-weight: normal;
   color: var(--title);
 }
@@ -29,7 +39,6 @@
   margin: calc(2 * var(--smart-unit)) 0;
 }
 .marked .iframe {
-  display: block;
   position: relative;
   width: 80%;
   margin: calc(3 * var(--smart-unit)) 10%;
@@ -50,7 +59,6 @@
   margin: calc(3 * var(--smart-unit)) 10%;
 }
 .marked table thead {
-  display: block;
   margin: 0 -10%;
 }
 .marked table thead tr {
@@ -67,7 +75,6 @@
   flex-direction: row;
 }
 .marked table tbody td {
-  display: block;
   margin: calc(1 * var(--smart-unit));
 }
 .marked table img,
@@ -90,7 +97,8 @@
   box-shadow: var(--bs);
 }
 .marked code {
-  padding: calc(var(--vh) * 0.5) 0.5vw;
+  display: inline-block;
+  padding: calc(var(--smart-unit) * 0.25) calc(var(--smart-unit) * 1);
   border-radius: calc(var(--smart-unit) * 0.5);
 }
 .marked pre code {
@@ -99,6 +107,9 @@
   margin: calc(3 * var(--smart-unit)) 10%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+.marked pre code * {
+  display: inline;
 }
 .marked .hljs-keyword {
   color: var(--color);
@@ -131,6 +142,9 @@
 .marked > ol {
   margin: calc(3 * var(--smart-unit)) 10%;
 }
+.marked li {
+  display: list-item;
+}
 .marked ::marker {
   color: var(--title);
 }
@@ -139,7 +153,7 @@
   font-weight: normal;
   padding: 0 2vw;
   padding-left: 1.5vw;
-  border-left: calc(.5 * var(--smart-unit)) solid var(--color);
+  border-left: calc(0.5 * var(--smart-unit)) solid var(--color);
   margin: calc(3 * var(--smart-unit)) 10%;
 }
 .marked a,
