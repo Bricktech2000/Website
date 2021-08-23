@@ -1,9 +1,9 @@
 .button-container {
   display: inline-block;
   color: var(--title);
-  margin: calc(var(--smart-unit) * 0.5);
-  padding: calc(var(--smart-unit) * 0.5);
-  border-radius: calc(var(--smart-unit) * 0.5);
+  margin: 0.25em;
+  padding: 0.25em;
+  border-radius: 0.25em;
   box-shadow: var(--bs);
   text-decoration: none;
   font-weight: 500;
@@ -16,14 +16,14 @@
 }
 .button-container:hover {
   background: var(--color-l);
-  top: calc(var(--smart-unit) * -0.5);
+  top: -0.25em;
 }
 
 .button {
   display: flex;
   align-items: center;
-  padding: calc(var(--smart-unit) * 1) calc(var(--smart-unit) * 4);
-  font-size: calc(var(--smart-res-unit) * 1.25);
+  padding: 0.5em 2em;
+  font-size: 0.66em;
   border-radius: inherit;
 }
 .button {
@@ -36,7 +36,7 @@
   display: inline-block;
   height: 1em;
   width: auto;
-  margin: calc(var(--smart-res-unit) * 0.5);
-  margin-left: calc(var(--smart-res-unit) * 1);
+  margin: 0.25em;
+  margin-left: 0.5em;
   fill: var(--title) !important;
 }
