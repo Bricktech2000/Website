@@ -95,9 +95,6 @@
 .HomeHero .arrow {
   grid-area: arrow;
   justify-self: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
   padding: calc(var(--smart-res-unit) * 1.5);
 
   color: var(--color-l);
@@ -132,7 +129,6 @@
   }
   .HomeHero .cta,
   .HomeHero .arrow {
-    width: 100%;
-    text-align: center;
+    justify-self: center;
   }
 }
