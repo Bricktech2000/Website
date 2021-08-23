@@ -1,5 +1,5 @@
 .card {
-  --padding: calc(var(--smart-unit) * 2.5);
+  --padding: 0.75em;
   display: grid;
   grid-template-columns: 1fr 0 1fr;
   grid-template-rows: repeat(4, auto);
@@ -15,7 +15,6 @@
   background: var(--card-bg);
   box-shadow: var(--bs);
   cursor: pointer;
-  /* ;border: calc(var(--smart-unit) * 0.25) solid var(--card2-bg); */
 }
 
 /*.software {
@@ -45,7 +44,7 @@
 .card img {
   margin: 0;
   width: 100%;
-  border-radius: calc(var(--smart-unit) * 0.5);
+  border-radius: 0.25em;
 }
 .card img {
   grid-area: img;
@@ -55,6 +54,10 @@
   grid-area: title;
   transition: color 0.125s ease;
 }
+.title .markup-h2 {
+  margin: 0;
+}
+
 .desc {
   grid-area: desc;
 }
@@ -67,7 +70,7 @@
   color: var(--color);
 }
 .card:hover {
-  top: calc(var(--smart-unit) * -1);
+  top: -0.25em;
 }
 
 .card.row.nor {

@@ -57,8 +57,10 @@ const Card = (props) => {
         src={'/' + props.info.id + '/index.jpg'}
         alt={props.info.title + ' thumbnail image'}
       />
-      <div className={styles.title + ' ' + styles['markup-h2'] + ' markup-h2'}>
-        {props.info.title}
+      <div className={styles.title}>
+        <div className={styles['markup-h2'] + ' markup-h2'}>
+          {props.info.title}
+        </div>
       </div>
       <div className={styles.desc}>
         <Marked source={props.info.desc} />
