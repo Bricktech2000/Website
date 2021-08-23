@@ -37,7 +37,6 @@
 }
 .GetInTouch .text {
   display: flex;
-  color: var(--color-l);
   white-space: nowrap;
 }
 .GetInTouch .text p {
@@ -49,8 +48,8 @@
 }
 .GetInTouch .text .vr {
   margin: 0;
-  padding-bottom: 0.25em;
+  padding-bottom: 0.1em;
 
   font-weight: lighter;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }

@@ -32,7 +32,6 @@
 .Footer .issue {
   text-align: right;
   margin: 0 0.75em;
-  color: var(--title);
 }
 .Footer .center {
   grid-area: center;
