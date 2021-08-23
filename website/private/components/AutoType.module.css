@@ -2,10 +2,10 @@
   display: inline-block;
   vertical-align: 10%;
   align-items: center;
-  padding: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 1);
+  padding: 0.25em 0.5em;
 
   background: var(--card2-bg);
-  border-radius: calc(var(--smart-unit) * 1);
+  border-radius: 0.25em;
   font-family: var(--mono);
   font-size: 0.666em;
 }
