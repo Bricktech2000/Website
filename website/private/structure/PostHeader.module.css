@@ -1,14 +1,15 @@
 .PostHeader {
   grid-area: header;
+  display: block;
 
   width: 100%;
+  max-width: calc(var(--smart-unit) * 200);
+  justify-self: center;
   height: auto;
-  /*display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: calc(var(--smart-unit) * 5);*/
+
   column-width: calc(var(--smart-unit) * 55);
   column-gap: calc(var(--smart-unit) * 5);
-  /*column-rule: calc(var(--smart-unit) * .5) solid var(--card2-bg);*/
+  column-count: 2;
 
   padding: calc(var(--smart-unit) * 5) 7.5vw;
   color: var(--text);
@@ -27,6 +28,10 @@
   margin-top: 0;
   border-radius: calc(var(--smart-unit) * 0.5);
   box-shadow: var(--bs), var(--bs);
+}
+.PostHeader .tags,
+.PostHeader .buttons {
+  flex-wrap: wrap;
 }
 
 @media (max-aspect-ratio: 2/1) {
