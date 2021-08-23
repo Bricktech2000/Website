@@ -38,6 +38,10 @@
 html {
   scroll-behavior: smooth;
 }
+html *:not(head *):not(script):not(style) {
+  /* https://www.youtube.com/watch?v=bngsrbFI2UY&t=120s */
+  display: flex;
+}
 body {
   width: 100%;
   overflow-x: hidden;
