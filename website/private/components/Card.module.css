@@ -61,6 +61,7 @@
 .tags {
   grid-area: tags;
   align-self: flex-end;
+  flex-wrap: wrap;
 }
 .card:hover .markup-h2 {
   color: var(--color);
