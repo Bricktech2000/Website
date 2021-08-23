@@ -48,7 +48,7 @@ const AutoType = (props) => {
       style={{
         width:
           props.keywords.reduce((acc, curr) => Math.max(curr.length, acc), 0) +
-          2 +
+          3 +
           'ch',
       }}
     >
