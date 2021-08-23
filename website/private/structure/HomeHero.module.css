@@ -71,6 +71,7 @@
 
 .HomeHero .desc {
   grid-area: desc;
+  display: block;
   padding: calc(var(--smart-res-unit) * 2);
 
   color: var(--title);

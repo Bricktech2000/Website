@@ -1,4 +1,5 @@
 .HomeHeader {
   grid-area: header;
+  flex-direction: column;
   width: 100%;
 }
