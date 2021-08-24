@@ -10,10 +10,7 @@
 
   --TODO: #f00;
 
-  --smart-pixel-ratio: 3; /*the importance of the screen resolution in the scaling of items*/
-  --smart-unit: var(--vh);
-
-  --bs: 0 0 calc(var(--smart-unit) * 1) var(--black);
+  --bs: 0 0 0.5em var(--black);
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
   --lg: linear-gradient(-45deg, var(--color-l), var(--color));
   --lg-d: linear-gradient(-45deg, var(--color), var(--color-d));
@@ -21,11 +18,6 @@
 
   --sans: Roboto, sans-serif;
   --mono: Inconsolata, monospace;
-}
-:root {
-  --smart-res-unit: calc(
-    var(--smart-unit) + calc(1px * var(--smart-pixel-ratio))
-  );
 }
 * {
   padding: 0;
@@ -47,7 +39,7 @@ body {
   overflow-x: hidden;
   /*https://www.hostinger.com/tutorials/best-html-web-fonts*/
   font-family: var(--sans);
-  font-size: calc(var(--smart-res-unit) * 2);
+  font-size: 1.75rem;
   font-weight: 300;
   line-height: 1.6;
   color: var(--text);
@@ -55,8 +47,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: var(--smart-unit);
-  height: var(--smart-unit);
+  width: 0.25em;
+  height: 0.25em;
 }
 ::-webkit-scrollbar-track {
   background: inherit;
