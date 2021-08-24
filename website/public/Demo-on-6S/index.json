@@ -4,9 +4,7 @@
   "type": "hardware",
   "tags": ["Blog", "Demo"],
   "btns": {
-    "6S Demo": "#demo",
-    "Previous Post": "../5-inch-Drone-Build/",
-    "Update Post": "../FPV-Drone-HD-Footage/"
+    "6S Demo": "#demo"
   },
   "desc": "My 5-inch drone, but now on 6S! Talking about how much more power the new battery can deliver, along with a demo video.",
   "parent": "FPV-Racing-Drone"

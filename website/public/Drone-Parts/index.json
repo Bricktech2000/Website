@@ -4,9 +4,7 @@
   "type": "hardware",
   "tags": ["Blog", "Hardware", "Electronics"],
   "btns": {
-    "Mockup Images": "#img",
-    "Previous Post": "../5-inch-Drone-Virtual-Prototype/",
-    "Update Post": "../5-inch-Drone-Build/"
+    "Mockup Images": "#img"
   },
   "desc": "I just received the parts for my 5-inch racing drone! Showing you pictures of the parts themselves and of a mockup of the drone.",
   "parent": "FPV-Racing-Drone"
