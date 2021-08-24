@@ -39,7 +39,7 @@ body {
   overflow-x: hidden;
   /*https://www.hostinger.com/tutorials/best-html-web-fonts*/
   font-family: var(--sans);
-  font-size: 1.75rem;
+  font-size: min(1.75rem, calc(calc(100vh + 100vw) / 50));
   font-weight: 300;
   line-height: 1.6;
   color: var(--text);
