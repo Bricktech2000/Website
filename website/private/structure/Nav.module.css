@@ -3,9 +3,9 @@
   top: 0;
   z-index: 1;
 
-  margin: calc(var(--smart-unit) * 2);
-  width: calc(var(--smart-unit) * 7.5);
-  height: calc(var(--smart-unit) * 7.5);
+  margin: 1em;
+  width: 3em;
+  height: 3em;
 
   border-radius: 100vh;
   cursor: pointer;
@@ -17,7 +17,7 @@
   fill: var(--color);
   /* box-shadow: var(--bs); */
   /* https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */
-  --shadow: drop-shadow(0 0 calc(var(--smart-unit) * 1) rgba(0, 0, 0, 1));
+  --shadow: drop-shadow(0 0 0.5em rgba(0, 0, 0, 1));
   filter: var(--shadow) var(--shadow);
 
   animation: fade-in 0.5s ease-out;
@@ -28,7 +28,7 @@
 
 .Nav:hover svg {
   fill: var(--color-l);
-  top: calc(var(--smart-unit) * -0.5);
+  top: -0.25em;
 }
 
 @keyframes fade-in {
