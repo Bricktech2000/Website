@@ -8,17 +8,18 @@
   align-items: center;
   grid-template-columns: 1fr auto auto auto;
 
-  padding: calc(var(--smart-unit) * 5) 7.5vw;
+  padding: 3em 7.5vw;
   padding-left: 15vw;
 
   color: var(--text);
 }
 .PageHeader > * {
   width: auto;
-  margin: 0 calc(var(--smart-unit) * 1);
+  margin: 0 0.5em;
   break-inside: avoid;
 }
 .PageHeader .markup-h1 {
+  margin: 0 0.125em;
   margin-top: 0;
   font-weight: bold;
   text-transform: uppercase;
@@ -26,8 +27,8 @@
 }
 @media (max-aspect-ratio: 1/1) {
   .PageHeader {
-    padding-left: calc(var(--smart-unit) * 1);
-    padding-right: calc(var(--smart-unit) * 1);
+    padding-left: 1em;
+    padding-right: 1em;
 
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
