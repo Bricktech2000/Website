@@ -6,12 +6,12 @@
 }
 .Toggle p {
   display: inline-block;
-  margin: calc(var(--smart-unit) * 2);
+  margin: 1em;
 }
 .child {
   display: inline-block;
-  width: calc(var(--smart-unit) * 6);
-  height: calc(var(--smart-unit) * 3);
+  width: 3em;
+  height: 1.5em;
   border-radius: 100vh;
   background: var(--card2-bg);
   box-shadow: var(--bs);
@@ -19,15 +19,15 @@
 }
 .thumb {
   display: inline-block;
-  width: calc(var(--smart-unit) * 3);
-  height: calc(var(--smart-unit) * 3);
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 100vh;
   background: var(--title);
   box-shadow: var(--bs);
   transition: margin-left 0.125s ease-in-out;
 }
 .Toggle.active .thumb {
-  margin-left: calc(var(--smart-unit) * 3);
+  margin-left: 1.5em;
 }
 .Toggle.active .child {
   background: var(--color-l);
