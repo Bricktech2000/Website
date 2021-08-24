@@ -78,7 +78,7 @@ const Card = (props) => {
   ));
 
   return (
-    <Link href={'/' + (props.info.child || props.info.id)} scroll={!props.mini}>
+    <Link href={'/' + (props.info.child || props.info.id)}>
       <CardHtml href={'/' + (props.info.child || props.info.id)} />
     </Link>
   );

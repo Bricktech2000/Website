@@ -18,18 +18,6 @@ const PostHeader = (props) => {
 
   return (
     <header className={styles.PostHeader}>
-      {props.info.parent && (
-        <div className={styles.PostParentHeader}>
-          <MosaicMini>
-            {Object.keys(info).map((id) => (
-              <Card
-                key={id}
-                info={{ ...info[id], type: props.info.id == id ? 'blog' : '' }}
-              />
-            ))}
-          </MosaicMini>
-        </div>
-      )}
       <div className={styles.PostDataHeader}>
         <img
           src={'/' + props.info.id + '/index.jpg'}
@@ -56,6 +44,18 @@ const PostHeader = (props) => {
           })}
         </div>
       </div>
+      {props.info.parent && (
+        <div className={styles.PostParentHeader}>
+          <MosaicMini>
+            {Object.keys(info).map((id) => (
+              <Card
+                key={id}
+                info={{ ...info[id], type: props.info.id == id ? 'blog' : '' }}
+              />
+            ))}
+          </MosaicMini>
+        </div>
+      )}
     </header>
   );
 };
