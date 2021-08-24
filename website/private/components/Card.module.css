@@ -78,8 +78,8 @@
 .card.mini .markup-h2 {
   font-size: 1em;
 }
-.card.mini .tags {
-  font-size: 0.75em;
+.card.mini .tags > *:not(:nth-child(1)) {
+  display: none;
 }
 
 .card.row.nor {

@@ -69,7 +69,7 @@ const Card = (props) => {
         <Marked source={props.info.desc} />
       </div>
       <div className={styles.tags}>
-        <Date date={props.info.date} />
+        <Date date={props.info.date} className={styles.date} />
         {props.info.tags.map((tag) => (
           <Tag key={tag} label={tag} />
         ))}
