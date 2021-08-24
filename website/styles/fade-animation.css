@@ -2,7 +2,7 @@
   0%,
   25% {
     opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * -3));
+    transform: translateX(-2rem);
   }
   100% {
     opacity: 1;
@@ -13,7 +13,7 @@
   0%,
   25% {
     opacity: 0;
-    transform: translateX(calc(var(--smart-unit) * -1.5));
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
