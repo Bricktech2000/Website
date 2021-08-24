@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.PostParentHeader {
+  display: block;
+  width: 100%;
+  padding: 2em;
+}
+
 .PostDataHeader {
   display: block;
   justify-self: center;
@@ -48,5 +54,9 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     column-count: 1;
+  }
+  .PostParentHeader {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }

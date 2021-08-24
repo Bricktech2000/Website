@@ -20,7 +20,7 @@ const MosaicLarge = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.MosaicLarge} ref={parallaxRef}>
-        {props.children.slice(0, Math.pow(2, clickCount)).map((child, i) =>
+        {props.children.slice(0, Math.pow(2, clickCount)).map((child) =>
           React.cloneElement(child, {
             dir: rand() > 0.5,
             inv: rand() > 0.5,

@@ -3,16 +3,33 @@ import Tag from '../components/Tag';
 import Date from '../components/Date';
 import Button from '../components/Button';
 import Marked from '../components/Marked';
+import Loading from '../components/Loading';
+import Card from '../components/Card';
+import MosaicMini from '../components/MosaicMini';
 
 import styles from './PostHeader.module.css';
+import useDbGet from '../lib/useDbGet';
 
 const PostHeader = (props) => {
+  var info = null;
+  if (props.info.parent) info = useDbGet('child', props.info.parent);
+
+  if (typeof info === 'undefined') return <Loading height="1000vh" />;
+
   return (
     <header className={styles.PostHeader}>
-      <div className={styles.PostParentHeader}>
-        <h1>Parent Header</h1>
-        aoeuaOEUaoeu
-      </div>
+      {props.info.parent && (
+        <div className={styles.PostParentHeader}>
+          <MosaicMini>
+            {Object.keys(info).map((id) => (
+              <Card
+                key={id}
+                info={{ ...info[id], type: props.info.id == id ? 'blog' : '' }}
+              />
+            ))}
+          </MosaicMini>
+        </div>
+      )}
       <div className={styles.PostDataHeader}>
         <img
           src={'/' + props.info.id + '/index.jpg'}

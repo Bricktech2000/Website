@@ -19,7 +19,6 @@ const MosaicSmall = (props) => {
   const func = (start, end) =>
     props.children.slice(start, end).map((child, i) =>
       React.cloneElement(child, {
-        key: i,
         dir: directions[start + i],
         inv: rand() > 0.5,
       })

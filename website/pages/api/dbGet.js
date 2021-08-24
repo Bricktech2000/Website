@@ -42,6 +42,12 @@ export default async function dbGet(req, res) {
         }
       } else response[id] = await getSafe('502');
       break;
+    case 'child':
+      for (var id2 of postMap) {
+        const child = await getSafe(id2);
+        if (child.parent == id) response[id2] = child;
+      }
+      break;
     default:
       response[id] = await getSafe('502');
       break;
