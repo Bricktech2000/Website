@@ -1,4 +1,5 @@
 export default [
+  'FPV-Racing-Drone',
   'User-Tracker',
   'Clean-Bash-Prompt',
   'Mini-DIY-Flamethrower',

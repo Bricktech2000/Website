@@ -1,0 +1,17 @@
+{
+  "title": "FPV Racing Drone",
+  "date": "2021-05-20",
+  "type": "hardware",
+  "tags": [
+    "Work in Progress",
+    "Photo Editing",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Drone",
+    "Demo"
+  ],
+  "btns": {},
+  "desc": "Desc.",
+  "child": "FPV-Drone-Freestyle-Frame"
+}

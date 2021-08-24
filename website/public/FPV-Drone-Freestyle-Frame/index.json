@@ -8,5 +8,6 @@
     "Building Images": "#build",
     "Demo Videos": "#demo"
   },
-  "desc": "Writing about the reason why I decided to buy a new frame for my FPV drone. Showing you a few pictures and some flight footage along the way!"
+  "desc": "Writing about the reason why I decided to buy a new frame for my FPV drone. Showing you a few pictures and some flight footage along the way!",
+  "parent": "FPV-Racing-Drone"
 }

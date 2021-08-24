@@ -8,5 +8,6 @@
     "Parts List": "#parts",
     "Previous Post": "../5-inch-Drone-Demo-on-6S/"
   },
-  "desc": "FPV is awesome! Talking about how I added FPV to my 5-inch drone and showcasing some footage taken from a Caddx Orca."
+  "desc": "FPV is awesome! Talking about how I added FPV to my 5-inch drone and showcasing some footage taken from a Caddx Orca.",
+  "parent": "FPV-Racing-Drone"
 }

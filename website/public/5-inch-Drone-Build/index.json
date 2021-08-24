@@ -9,5 +9,6 @@
     "Previous Post": "../5-inch-Drone-Parts/",
     "Update Post": "../5-inch-Drone-Demo-on-6S/"
   },
-  "desc": "Showing you images of the building process of my 5-inch drone, along with a demo of its power. Can't wait to try it out on 6S!"
+  "desc": "Showing you images of the building process of my 5-inch drone, along with a demo of its power. Can't wait to try it out on 6S!",
+  "parent": "FPV-Racing-Drone"
 }
