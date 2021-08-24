@@ -33,7 +33,6 @@ const Head = (props) => {
       </script>
       {/* End Global site tag */}
       <script>{/*console.log('Google Test 0.16');*/}</script>
-      <script src="/resize.js"></script>
       {/* https://github.com/markedjs/marked */}
       {/* https://highlightjs.org/download/ */}
 
