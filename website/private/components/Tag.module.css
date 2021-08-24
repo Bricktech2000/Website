@@ -3,17 +3,15 @@
   display: inline-block;
   text-decoration: none;
   white-space: nowrap;
-  margin: calc(var(--smart-res-unit) * 0.4);
-  border-radius: calc(var(--smart-res-unit) * 0.4);
-  border: calc(var(--smart-unit) * 0.15) solid var(--card2-bg);
+  border: 0.125em solid var(--card2-bg);
   transition: color 0.125s ease-in-out, border-color 0.125s ease-in-out,
     transform 0.125s ease-in-out;
   -webkit-tap-highlight-color: var(--color-d);
 
-  font-size: calc(var(--smart-res-unit) * 1);
+  font-size: 0.5em;
   font-weight: inherit;
-  margin: calc(var(--smart-res-unit) * 0.2);
-  padding: calc(var(--smart-res-unit) * 0.075) calc(var(--smart-res-unit) * 0.5);
+  margin: 0.25em;
+  padding: 0.0625em 0.5em;
 }
 .off {
   background: var(--bg);
