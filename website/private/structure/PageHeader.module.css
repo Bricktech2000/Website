@@ -27,8 +27,8 @@
 }
 @media (max-aspect-ratio: 1/1) {
   .PageHeader {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
