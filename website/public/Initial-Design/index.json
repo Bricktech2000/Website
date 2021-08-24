@@ -1,0 +1,23 @@
+{
+  "title": "Initial Design",
+  "date": "2021-03-09",
+  "type": "hardware",
+  "tags": [
+    "Blog",
+    "Hardware",
+    "Work in Progress",
+    "Arduino",
+    "Electronics",
+    "3D Design",
+    "3D Rendering",
+    "3D Printing",
+    "Physics Calculations"
+  ],
+  "btns": {
+    "Version 1 Render": "#first",
+    "Version 2 Render": "#second",
+    "Parts List": "#parts"
+  },
+  "desc": "Taking you through the design and build process of my 3lb combat robot! Even though it is only CAD, I plan on building it in the near future...",
+  "parent": "Beetleweight-Combat-Robot"
+}

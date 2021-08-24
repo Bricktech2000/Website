@@ -1,5 +1,5 @@
 {
-  "title": "Combat Robot Design Update",
+  "title": "Design Update",
   "date": "2021-07-12",
   "type": "hardware",
   "tags": [
@@ -14,10 +14,10 @@
     "Robotics"
   ],
   "btns": {
-    "Previous Post": "../Beetleweight-Combat-Robot/",
     "Robot Renders": "#renders",
     "Wheel Design": "#wheels",
     "Scale Model Picture": "#scale"
   },
-  "desc": "Writing about how I modified the whole design of my beetleweight combat robot, from its wheels to its chassis and its weapon. Can't wait to build it in real life!"
+  "desc": "Writing about how I modified the whole design of my beetleweight combat robot, from its wheels to its chassis and its weapon. Can't wait to build it in real life!",
+  "parent": "Beetleweight-Combat-Robot"
 }

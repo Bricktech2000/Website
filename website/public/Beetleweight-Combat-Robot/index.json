@@ -1,23 +1,19 @@
 {
   "title": "Beetleweight Combat Robot",
-  "date": "2021-03-09",
+  "date": "2021-07-12",
   "type": "hardware",
   "tags": [
     "Blog",
-    "Hardware",
     "Work in Progress",
-    "Arduino",
+    "Hardware",
     "Electronics",
+    "3D Printing",
     "3D Design",
     "3D Rendering",
-    "3D Printing",
-    "Physics Calculations"
+    "Physics Calculations",
+    "Robotics"
   ],
-  "btns": {
-    "Update Post": "../Combat-Robot-Design-Update/",
-    "Version 1 Render": "#first",
-    "Version 2 Render": "#second",
-    "Parts List": "#parts"
-  },
-  "desc": "Taking you through the design and build process of my 3lb combat robot! Even though it is only CAD, I plan on building it in the near future..."
+  "btns": {},
+  "desc": "Full build documentation of my 5-inch racing drone, from a virtual prototype to the completion of the project!",
+  "child": "Design-Update"
 }
