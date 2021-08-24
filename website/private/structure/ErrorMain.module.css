@@ -5,21 +5,21 @@
 }
 
 .header {
-  margin: 0 calc(var(--smart-unit) * 5);
+  margin: 0 0.125em;
   line-height: 30vw;
   padding: 0;
   font-family: var(--mono);
-  font-size: min(20vw, calc(var(--smart-unit) * 30));
+  font-size: min(20vw, 12.5em);
   white-space: nowrap;
 }
 
 .content {
   display: block;
-  max-width: min(40vw, calc(var(--smart-unit) * 60));
+  max-width: min(40vw, 25em);
 }
 
 .buttons {
-  margin-top: calc(var(--smart-unit) * 2.5);
+  margin-top: 1em;
 }
 
 @media (max-width: 1000px) {
@@ -29,7 +29,7 @@
   }
   .header {
     margin: 0;
-    margin-top: calc(var(--smart-unit) * 10);
+    margin-top: 0.5em;
     justify-self: center;
     font-size: 40vw;
   }
