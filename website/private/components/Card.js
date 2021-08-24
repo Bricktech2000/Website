@@ -38,6 +38,7 @@ const Card = (props) => {
 
   const direction = dir ? 'row' : 'col';
   const inverted = props.inv ? 'inv' : 'nor';
+  const mini = props.mini ? 'mini' : '';
 
   const CardHtml = React.forwardRef((props2, ref) => (
     <a
@@ -49,7 +50,9 @@ const Card = (props) => {
         ' ' +
         styles[direction] +
         ' ' +
-        styles[props.info.type]
+        styles[props.info.type] +
+        ' ' +
+        styles[mini]
       }
       {...props2}
     >
@@ -75,7 +78,7 @@ const Card = (props) => {
   ));
 
   return (
-    <Link href={'/' + (props.info.child || props.info.id)}>
+    <Link href={'/' + (props.info.child || props.info.id)} scroll={!props.mini}>
       <CardHtml href={'/' + (props.info.child || props.info.id)} />
     </Link>
   );

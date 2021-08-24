@@ -72,6 +72,15 @@
 .card:hover {
   top: -0.25em;
 }
+.card.mini .desc {
+  display: none;
+}
+.card.mini .markup-h2 {
+  font-size: 1em;
+}
+.card.mini .tags {
+  font-size: 0.75em;
+}
 
 .card.row.nor {
   grid-template-areas: 'img img img' 'title title title' 'desc desc desc' 'tags tags tags';
