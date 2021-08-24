@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import postMap from '../private/lib/postMap';
 import errorMap from '../private/lib/errorMap';
@@ -26,8 +26,9 @@ const Post = (props) => {
 
   const info = useDbGet('exact', id);
 
-  const loading =
-    typeof info === 'undefined' || typeof info[id] === 'undefined';
+  const loading = typeof info === 'undefined';
+  const currentId = !loading && Object.keys(info)[0];
+
   return (
     <App
       title={props.ogTitle}
@@ -35,15 +36,15 @@ const Post = (props) => {
       image={props.ogImage}
     >
       {loading ? (
-        <Page github={`public/${id}/index.md`}>
+        <Page github={`public/${currentId}/index.md`}>
           <Loading height="1000vh" />
         </Page>
       ) : (
         <React.Fragment>
-          <PostHeader info={info[id]} />
-          <Page github={`public/${id}/index.md`}>
-            <PostMain info={info[id]} />
-            <PostRelated info={info[id]} />
+          <PostHeader info={info[currentId]} />
+          <Page github={`public/${currentId}/index.md`}>
+            <PostMain info={info[currentId]} />
+            <PostRelated info={info[currentId]} />
           </Page>
         </React.Fragment>
       )}
