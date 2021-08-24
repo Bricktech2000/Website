@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-columns: calc(0 1fr 0);
+  grid-template-columns: 0 1fr 0;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     'header header header'
