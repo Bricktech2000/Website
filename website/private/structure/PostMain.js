@@ -1,8 +1,11 @@
 import React, { Component, useEffect } from 'react';
 import Marked from '../components/Marked';
 import useParallax from '../lib/useParallax';
+import Loading from '../components/Loading';
+import Card from '../components/Card';
 
 import styles from './PostMain.module.css';
+import useDbGet from '../lib/useDbGet';
 
 const PostMain = (props) => {
   const parallaxRef = useParallax((current, value) => {
@@ -27,10 +30,20 @@ const PostMain = (props) => {
     }, 0);
   }, [props.info.source, window.location.hash]);
 
+  // var childrenInfo = [];
+  // if (props.info.children) childrenInfo = useDbGet('child', props.info.id);
+
+  // if (typeof childrenInfo === 'undefined') return <Loading height="1000vh" />;
+
   return (
+    // <React.Fragment>
+    //   {Object.keys(childrenInfo).map((id) => (
+    //     <Card key={id} info={childrenInfo[id]} />
+    //   ))}
     <div ref={parallaxRef} className={styles.PostMain}>
       <Marked source={props.info.source} />
     </div>
+    // </React.Fragment>
   );
 };
 
