@@ -1,5 +1,3 @@
-This post is a demo of my [5-inch drone](../5-inch-Drone-Build/), which I built a few weeks ago. You can [click here](../5-inch-Drone-Build/) if you would like to see how I built it!
-
 ## Intro
 
 A few days ago, I received the _6S_ battery I had ordered for my drone. I used to fly it on _4S_ pack, since two of the cells on my older battery had puffed. Mathematically, the new battery should have `150%` the power of the older one, but in practice it's even more. Because of something called [battery sag](https://en.wikipedia.org/wiki/Voltage_sag), the drone has about twice the power with the new battery.
