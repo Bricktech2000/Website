@@ -3,32 +3,29 @@
 
   display: grid;
   grid-template-areas: 'title title' 'image paragraph' 'icons icons';
-  grid-template-columns: calc(var(--smart-res-unit) * 15) 1fr;
+  grid-template-columns: 7.5em 1fr;
   background: var(--card-bg);
   box-shadow: var(--bs);
-  padding: calc(var(--smart-unit) * 7.5) 10vw;
+  padding: 3em 10vw;
 }
 .HomeAbout > h1 {
   grid-area: title;
 
   margin: 0;
-  padding-bottom: calc(var(--smart-unit) * 6);
+  padding-bottom: 0.75em;
   line-height: 1;
 }
 .HomeAbout > p {
   grid-area: paragraph;
 
-  font-size: calc(var(--smart-res-unit) * 2.25);
+  font-size: 1.125em;
   font-weight: lighter;
-  padding-left: calc(var(--smart-unit) * 6);
+  padding-left: 2em;
   text-align: justify;
 }
 .HomeAbout .GetInTouch {
   grid-area: icons;
   justify-content: flex-end;
-}
-.HomeAbout .GetInTouch > * {
-  font-size: calc(var(--smart-res-unit) * 2);
 }
 
 .HomeAbout > img {
@@ -36,21 +33,21 @@
   width: 100%;
 
   border-radius: 100vh;
-  border: calc(var(--smart-unit) * 0.25) solid var(--color-d);
+  border: 0.1em solid var(--color-d);
 }
 
 @media (max-aspect-ratio: 1/1) {
   .HomeAbout {
     grid-template-areas: 'title' 'image' 'paragraph' 'icons';
     grid-template-columns: 1fr;
-    padding: calc(var(--smart-unit) * 3);
+    padding: 1em;
   }
   .HomeAbout > img {
     width: calc(100% - 20vw - 20vw);
     margin: 0 20vw;
   }
   .HomeAbout > p {
-    padding: calc(var(--smart-unit) * 5) 0;
-    font-size: calc(var(--smart-res-unit) * 2);
+    padding: 2em 0;
+    font-size: 1em;
   }
 }

@@ -7,7 +7,7 @@ import styles from './HomeAbout.module.css';
 const HomeAbout = () => {
   const parallaxRef = useParallax((current, value) => {
     value = Math.min(value * 1.5, 1);
-    current.style.transform = `translateY(calc(var(--smart-unit) * ${Math.pow(
+    current.style.transform = `translateY(calc(0.5em * ${Math.pow(
       1 - value,
       3
     ) * 15}))`;
