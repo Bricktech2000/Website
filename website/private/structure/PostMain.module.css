@@ -1,14 +1,16 @@
-.marked {
+.PostMain {
   overflow-x: hidden;
-  column-width: calc(var(--smart-res-unit) * 50);
-  column-gap: calc(var(--smart-unit) * 10);
-  column-rule: calc(var(--smart-unit) * 0.25) solid var(--card2-bg);
-  margin: calc(var(--smart-unit) * 5) 7.5vw;
-
+  margin: 3em 7.5vw;
   opacity: 0;
 }
+.PostMain > span {
+  column-width: 50em;
+  column-gap: 7.5em;
+  column-rule: 0.1em solid var(--card2-bg);
+}
+
 @media (max-aspect-ratio: 1/1) {
-  .marked {
+  .PostMain {
     margin-left: 0;
     margin-right: 0;
   }

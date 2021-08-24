@@ -6,8 +6,7 @@ import styles from './PostMain.module.css';
 
 const PostMain = (props) => {
   const parallaxRef = useParallax((current, value) => {
-    current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
-      0.25) *
+    current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
       -20}))`;
     current.style.opacity = Math.max(value * 2 - 0.5, 0);
   });
@@ -29,7 +28,7 @@ const PostMain = (props) => {
   }, [props.info.source, window.location.hash]);
 
   return (
-    <div ref={parallaxRef} className={styles['marked']}>
+    <div ref={parallaxRef} className={styles.PostMain}>
       <Marked source={props.info.source} />
     </div>
   );
