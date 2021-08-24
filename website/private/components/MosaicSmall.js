@@ -6,8 +6,7 @@ import styles from './MosaicSmall.module.css';
 
 const MosaicSmall = (props) => {
   const parallaxRef = useParallax((current, value) => {
-    current.style.transform = `translateY(calc(var(--smart-unit) * ${(value -
-      0.25) *
+    current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
       -20}))`;
   });
 

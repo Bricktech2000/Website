@@ -1,21 +1,15 @@
 .MosaicSmall {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(calc(var(--smart-res-unit) * 60), 1fr)
-  );
-  grid-gap: calc(var(--smart-unit) * 2.5);
+  grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+  grid-gap: 1em;
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout*/
   grid-auto-flow: dense;
 }
 .MosaicSmall > div {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(calc(var(--smart-res-unit) * 30), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(12.5em, 1fr));
   grid-template-rows: auto auto;
-  grid-gap: calc(var(--smart-unit) * 2.5);
+  grid-gap: 1em;
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout*/
   grid-auto-flow: dense;
 }

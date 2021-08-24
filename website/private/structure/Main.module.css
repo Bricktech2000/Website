@@ -2,7 +2,7 @@
   grid-area: main;
   flex-direction: column;
 
-  overflow-x: hidden;
+  overflow: hidden;
   padding: calc(var(--smart-unit) * 5);
   min-height: 50vh;
 }
