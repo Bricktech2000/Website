@@ -13,26 +13,24 @@ export default async function dbGet(req, res) {
       response[id] = await getSafe(id);
       break;
     case 'like':
-      const tags = (await getSafe(id)).tags;
+      const info = await getSafe(id);
       var output = {};
       for (var id2 of postMap) {
         output[id2] = await getSafe(id2);
 
         //https://stackoverflow.com/questions/1885557/simplest-code-for-array-intersection-in-javascript
         output[id2].score = output[id2].tags.filter((value) =>
-          tags.includes(value)
+          info.tags.includes(value)
         ).length;
       }
 
-      const count = 4;
-      delete output[id]; //ignore the current post to find only different similar ones
+      delete output[id]; //ignore the current post
+      delete output[info.parent]; //ignore the parent post if it exists
       //https://stackoverflow.com/questions/11792158/optimized-javascript-code-to-find-3-largest-element-and-its-indexes-in-array
       //https://stackoverflow.com/questions/1069666/sorting-object-property-by-values
 
       response = Object.fromEntries(
-        Object.entries(output)
-          .sort(([, a], [, b]) => b.score - a.score)
-          .slice(0, count)
+        Object.entries(output).sort(([, a], [, b]) => b.score - a.score)
       );
       break;
     case 'all':

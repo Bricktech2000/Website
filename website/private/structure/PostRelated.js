@@ -16,9 +16,12 @@ const PostRelated = (props) => {
       <br />
       <br />
       <MosaicSmall>
-        {Object.keys(info).map((id) => (
-          <Card key={id} info={info[id]} />
-        ))}
+        {Object.keys(info)
+          .filter((id) => !info[id].parent)
+          .slice(0, 4)
+          .map((id) => (
+            <Card key={id} info={info[id]} />
+          ))}
       </MosaicSmall>
     </React.Fragment>
   );
