@@ -31,7 +31,7 @@ export default [
   'Tinker',
   'DoS-Protection',
   'dirsize',
-  'Lock-Picking',
+  'Learning-Lock-Picking',
   'Crash-js',
   'AI-Image-Compression',
   'MultiToast-JS',
