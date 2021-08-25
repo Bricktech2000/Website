@@ -1,22 +1,28 @@
 {
   "title": "Spider Robot",
-  "date": "2019-12-14",
+  "date": "2021-06-23",
   "type": "hardware",
   "tags": [
-    "Demo",
+    "Showcase",
     "Software",
     "Hardware",
     "C++",
     "Arduino",
     "Electronics",
-    "Robotics",
     "3D Design",
-    "3D Printing"
+    "3D Printing",
+    "Demo",
+    "Data Processing",
+    "Modular",
+    "Robotics"
   ],
   "btns": {
     "Demo Video": "#demo",
-    "Update Post": "../Spider-Robot-V3-1/",
-    "View Code": "13_sketch_mar04a.html"
+    "Previous Post": "../Spider-Robot/",
+    "Buy Voltage Regulator": "https://www.banggood.com/DD2712SA-3_5A-Mini-5V-27V-to-3_7V-5V-12V-DC-DC-Step-Down-Buck-Power-Converter-Module-Voltage-Regulator-p-1651953.html?rmmds=myorder&cur_warehouse=CN&ID=519957",
+    "Download Code": "./13_sketch_mar04a/13_sketch_mar04a.ino",
+    "Download STLs": "./STLs.zip"
   },
-  "desc": "The most complex project I have done to date? Definetly this spider robot. Talking about how I got to build it, and how it works."
+  "desc": "Taking you through the different versions of my hexapod robot and explaining how it works.",
+  "child": "Version-3-1"
 }

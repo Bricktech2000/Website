@@ -5,7 +5,8 @@ export default [
   'Mini-DIY-Flamethrower',
   'Beetleweight-Combat-Robot',
   'Design-Update',
-  'Spider-Robot-V3-1',
+  'Version-3-1',
+  'Spider-Robot',
   'Sequre-SQ-D60',
   'Frame-Upgrade',
   'Markdown-Inline-Formatter',
@@ -52,6 +53,6 @@ export default [
   'YouTube-Channel',
   'My-First-Website',
   'MiniML',
-  'Spider-Robot',
+  'Version-3-0',
   'Racing-Drone',
 ];

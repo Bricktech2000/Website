@@ -1,57 +1,32 @@
-![render of 3d printed hexapod spider robot](Complete.jpg)
+## The Problem
 
-## Demo Video
+Version 3 of my spider robot (which you can learn more about [here](../Spider-Robot/)) had many issues. Here are a few:
 
-Here's a demo video that shows the movements the spider can do:
+- It was **very twichy**: the `servo motors` were constantly vibrating all over the place
+- Its behavior was **very inconsistent**: as the current demand rose, the battery voltage was sagging way too much.
+- The motors **kept breaking**: as soon as I kept the robot running for more than a few minutes, one of the motors always died for no apparent reason.
+
+My first thought was that the voltage supplied to the motors was slightly too high, and so I ordered [a random 5V voltage regulator](https://www.banggood.com/DD2712SA-3_5A-Mini-5V-27V-to-3_7V-5V-12V-DC-DC-Step-Down-Buck-Power-Converter-Module-Voltage-Regulator-p-1651953.html?rmmds=myorder&cur_warehouse=CN&ID=519957) on _Banggood_, hoping it would help me fix some of the issues mentionned above. When I finally received it, I simply threw it in my _electronics_ drawer and completely forgot about it. However, during a boring physics class last week, I figured I would install it onto [the robot](../Spider-Robot/) just to see what would happen. Let me tell you:
+
+> I did not expect this tiny modification to solve so many issues.
+
+## How Everything Unfolded
+
+As soon as I got the regulator installed, a massive difference was visible in the twichiness of the robot. The cheap servo motors were rated for `5V`, but the voltage of the LiPo battery ranged from `6.6V` when totally dischanrged to `8.4V` when fully charged. This meant three things:
+
+- When the battery was fully charged, the servos caused the robot to be **way too twichy** because their low-quality controller couldn't handle such a higher voltage.
+- When the battery was close to fully discharged, the robot was not as twichy, but its behavior was **very inconsistend** because of the caracteristic LiPo battery sag near `3.3V/cell`.
+- The large voltage delta caused the low-quality servo controllers to burn out after a few minutes, meaning the motors **kept breaking** seemingly randomly.
+
+At this point, anyone that has any experience with electronics would scream at me:
+
+> Just feed the motors constant voltage!
+
+And, as it turns out, this is exactly what a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator) is ment to achieve.
+
+## The New Version
 
 #demo
-![youtube](https://www.youtube.com/embed/ugNsAqfCqrk)
+Below is a demo of version `V3.1` of my hexapod robot, which uses the voltage regulator along with some replacement servos. Enjoy!
 
-## Inspiration
-
-I got most of my inspiration from YouTube videos. Here are a few that have inspired me to create this hexapod robot:
-
-- [Smallp Tsai](https://www.youtube.com/watch?v=To2Y6Mhu-CE) - a compact, micro-servo based hexapod
-- [Zenta](https://www.youtube.com/watch?v=rAeQn5QnyXo) - an agile, organic-looking hexapod robot
-- [Hari Wiguna](https://www.youtube.com/watch?v=9Pos9pE8xwU) - a simple, SG90-based spider robot
-
-When making this hexapod robot, I had a few goals in mind which I wanted to respect: it needed to be cheap, compact and not move like a stereotyped robot. I think this robot is exactly that: its total cost is about `$50`, all the electronics have been chosen for maximum space efficiency and its movements are fairly organic-looking.
-
-## How does it work?
-
-This robot works in 4 stages.
-
-![750 mah battery](battery_m.jpeg)
-
-Everything begins with the battery of the spider, which is used to give power to every component. It is a _LiPo battery_, which means that can deliver a lot of current without sagging too much.
-
-> These batteries provide higher specific energy than other lithium battery types and are used in applications where weight is a critical feature, like mobile devices and radio-controlled aircraft.
->
-> [Wikipedia](https://en.wikipedia.org/wiki/Lithium_polymer_battery)
-
-This is ideal, but it means that a special _LiPo_ charger is necessary to charge up the battery. Since it packs so much power in such a small volume, it can catch on fire if it is punctured, so we need to be very careful with it.
-
-![arduino nano](arduino_m.jpg)
-
-The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./13_sketch_mar04a.html), which is a total of `886` lines of code.
-
-![9g servo](servo.jpg)
-
-The servomotors are like muscles: their job is to transform the signals received from the _microcontroller_ into actual movements that allow the spider to move. They are cheap (about `$1` per motor), but still have an okay performance. These motors aren't like normal motors, they are _servomotors_. This means that when the _micrcontroller_ tells it to go to a specific angle (or _position_), it does so and tries to keep the same angle the whole time, until it is sent another command from the _microcontroller_.
-
-> And How do I Make my Own?
-
-This is a very good question. if you want to make your own spider robot, you need to know electronics, soldering and _arduino_ programming. Here are some links for the code and the 3D parts, which you need to 3D-print yourself:
-
-- [The Program](./13_sketch_mar04a.html)
-- `6x` [Tibia Piece](Tibia%205%20v2.stl)
-- `6x` [Femur Piece](Femur%203%20v8.stl)
-- `6x` [Hip Piece](Hip%203%20v12.stl)
-- `1x` [Upper Body Piece](Body%20Cover%202%20v30.stl)
-- `1x` [Lower Body Piece](Body%206%20v22.stl)
-
-It is still recommended to contact me if you want to build an exact replica of my robot, since no schematics or wiring diagrams are available yet.
-
-## Conclusion
-
-This project is one of the most advanced I have ever done to date. It has thought me many essential skills in _programming_, _3d design_ and _electronics_. I strongly recommend you try to make such projects, because it will also teach you essential skills such as _problem solving_, which will be useful all the way through life.
+![youtube](https://www.youtube.com/embed/dVLcFW495Oo)
