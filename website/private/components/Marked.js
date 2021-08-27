@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import marked from '../../public/marked.min.js';
 import hljs from '../../public/highlight.min.js';
 
+import styles from './Marked.module.css';
+
 const Marked = (props) => {
   const getMarkdown = (text) => {
     //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
@@ -45,14 +47,14 @@ const Marked = (props) => {
         .replace(
           /<img src="(.*)" alt="youtube">/g,
           (a, b) =>
-            `<div class="iframe"><iframe width="560" height="315" title="youtube video" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+            `<section><iframe width="560" height="315" title="youtube video" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>`
         ),
     };
   };
 
   return (
     <span
-      className={'marked'}
+      className={styles.Marked}
       dangerouslySetInnerHTML={getMarkdown(props.source)}
     ></span>
   );
