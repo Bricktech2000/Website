@@ -9,6 +9,7 @@ import NodeJS from '../svgs/000-nodejs.svg';
 import Ubuntu from '../svgs/000-ubuntu.svg';
 import Cloudflare from '../svgs/000-cloudflare.svg';
 import styles from './Footer.module.css';
+import { Marked as marked } from '../components/Marked.module.css';
 
 const Footer = (props) => {
   return (
@@ -25,7 +26,7 @@ const Footer = (props) => {
         <br />
         <div>&copy; {new Date().getFullYear()} Emilien Breton</div> &#8212;{' '}
         <Link href="/legal/">
-          <a className="markup-link">Legal</a>
+          <a className={marked}>Legal</a>
         </Link>
       </div>
       <div className={styles.contact}>
@@ -36,7 +37,7 @@ const Footer = (props) => {
             href={github + '/tree/master/website/' + props.github}
             target="_blank"
             rel="noreferrer"
-            className="markup-link"
+            className={marked}
           >
             Fix it on Github
           </a>
