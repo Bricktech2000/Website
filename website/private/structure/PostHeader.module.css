@@ -28,7 +28,7 @@
   margin: 1em 0;
   break-inside: avoid;
 }
-.PostDataHeader .markup-h1 {
+.PostDataHeader h1 {
   margin-top: 0;
 }
 .PostDataHeader img {

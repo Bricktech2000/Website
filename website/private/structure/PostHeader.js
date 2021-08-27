@@ -8,6 +8,7 @@ import Card from '../components/Card';
 import MosaicMini from '../components/MosaicMini';
 
 import styles from './PostHeader.module.css';
+import { Marked as marked } from '../components/Marked.module.css';
 import useDbGet from '../lib/useDbGet';
 
 const PostHeader = (props) => {
@@ -23,9 +24,7 @@ const PostHeader = (props) => {
           src={'/' + props.info.id + '/index.jpg'}
           alt={props.info.title + ' thumbnail image'}
         />
-        <div className={styles['markup-h1'] + ' markup-h1' + ' fade-right-1'}>
-          {props.info.title}
-        </div>
+        <h1 className={marked + ' fade-right-1'}>{props.info.title}</h1>
         <p className={'fade-right-2'}>
           <Marked source={props.info.desc} />
         </p>
