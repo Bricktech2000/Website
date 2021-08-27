@@ -4,6 +4,8 @@ import MosaicSmall from '../components/MosaicSmall';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
 
+import { Marked as marked } from '../components/Marked.module.css';
+
 const PostRelated = (props) => {
   const id = props.info.id;
   const info = useDbGet('like', id);
@@ -12,7 +14,7 @@ const PostRelated = (props) => {
 
   return (
     <React.Fragment>
-      <h1 className="markup-h1">Related Posts</h1>
+      <h1 className={marked}>Related Posts</h1>
       <br />
       <br />
       <MosaicSmall>
