@@ -16,12 +16,6 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-.Footer .center * {
-  display: inline-block;
-}
-.Footer .center svg {
-  vertical-align: middle;
-}
 .Footer .vr {
   grid-area: vr;
 
@@ -33,10 +27,13 @@
   text-align: right;
   margin: 0 0.75em;
 }
+.Footer span {
+  display: block;
+}
 .Footer .center {
   grid-area: center;
-  display: block;
-  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
 .Footer .contact {
   grid-area: contact;
