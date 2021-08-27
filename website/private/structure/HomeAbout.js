@@ -3,6 +3,7 @@ import GetInTouch from '../components/GetInTouch';
 import useParallax from '../lib/useParallax';
 
 import styles from './HomeAbout.module.css';
+import { Marked as marked } from '../components/Marked.module.css';
 
 const HomeAbout = () => {
   const parallaxRef = useParallax((current, value) => {
@@ -16,7 +17,7 @@ const HomeAbout = () => {
 
   return (
     <div className={styles.HomeAbout} ref={parallaxRef}>
-      <h1 className="markup-h1">A Bit More About Me</h1>
+      <h1 className={marked}>A Bit More About Me</h1>
       <img src="/icon.png" alt="author profile picture" />
       <p>
         {/*
