@@ -54,7 +54,7 @@
   grid-area: title;
   transition: color 0.125s ease;
 }
-.title .markup-h2 {
+.title h2 {
   margin: 0;
 }
 
@@ -66,7 +66,7 @@
   align-self: flex-end;
   flex-wrap: wrap;
 }
-.card:hover .markup-h2 {
+.card:hover h2 {
   color: var(--color);
 }
 .card:hover {
@@ -75,7 +75,7 @@
 .card.mini .desc {
   display: none;
 }
-.card.mini .markup-h2 {
+.card.mini h2 {
   font-size: 1em;
 }
 .card.mini .tags > *:not(:nth-child(1)) {
@@ -107,10 +107,10 @@
 /*.card.software {
   border-color: var(--color);
 }
-.card.software .markup-h2 {
+.card.software h2 {
   color: var(--color);
 }
-.card.software:hover .markup-h2 {
+.card.software:hover h2 {
   color: var(--title);
 }
 .card.hardware {

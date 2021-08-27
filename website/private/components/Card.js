@@ -6,6 +6,7 @@ import Marked from './Marked';
 import Link from 'next/link';
 
 import styles from './Card.module.css';
+import { Marked as marked } from './Marked.module.css';
 
 const Card = (props) => {
   const linkRef = useRef();
@@ -61,9 +62,7 @@ const Card = (props) => {
         alt={props.info.title + ' thumbnail image'}
       />
       <div className={styles.title}>
-        <div className={styles['markup-h2'] + ' markup-h2'}>
-          {props.info.title}
-        </div>
+        <h2 className={marked}>{props.info.title}</h2>
       </div>
       <div className={styles.desc}>
         <Marked source={props.info.desc} />
