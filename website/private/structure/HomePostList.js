@@ -4,6 +4,8 @@ import MosaicLarge from '../components/MosaicLarge';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
 
+import { Marked as marked } from '../components/Marked.module.css';
+
 const HomePostList = (props) => {
   const info = useDbGet('all');
 
@@ -11,7 +13,7 @@ const HomePostList = (props) => {
 
   return (
     <React.Fragment>
-      <h1 className="markup-h1">My Projects</h1>
+      <h1 className={marked}>My Projects</h1>
       <br />
       <br />
       <MosaicLarge>
