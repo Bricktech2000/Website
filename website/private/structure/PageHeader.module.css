@@ -18,7 +18,7 @@
   margin: 0 0.5em;
   break-inside: avoid;
 }
-.PageHeader .markup-h1 {
+.PageHeader h1 {
   margin: 0 0.125em;
   margin-top: 0;
   font-weight: bold;
