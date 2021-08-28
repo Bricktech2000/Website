@@ -13,7 +13,7 @@ const HomeHero = () => {
         <div className={styles.desc}>
           I'm Emilien Breton, and I love{' '}
           <AutoType
-            keywords={['programming', 'electronics', 'robotics']}
+            keywords={['programming', 'electronics', 'engineering']}
           ></AutoType>
         </div>
         <div className={styles.cta}>View Projects</div>
