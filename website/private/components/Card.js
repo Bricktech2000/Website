@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState, useRef } from 'react';
 import Tag from './Tag';
 import Date from './Date';
-import Loading from './Loading';
 import Marked from './Marked';
 import Link from 'next/link';
 
