@@ -3,8 +3,9 @@ import Head from './Head';
 
 import { language, domain } from '../lib/consts';
 import styles from './App.module.css';
-import { init } from '../lib/rand';
-init();
+import RandContext from '../lib/RandContext';
+import init from '../lib/rand';
+const generator = init();
 
 const App = (props) => {
   const [count, setCount] = useState(0);
@@ -49,14 +50,14 @@ const App = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <RandContext.Provider value={generator}>
       <Head
         title={`Emilien Breton | ${props.title}`}
         description={props.description}
         image={`https://${domain}/${props.image}`}
       />
       <div className={styles.App}>{props.children}</div>
-    </React.Fragment>
+    </RandContext.Provider>
   );
 };
 

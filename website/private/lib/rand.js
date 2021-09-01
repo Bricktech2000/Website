@@ -3,8 +3,9 @@
 //in this website, it is currently used to generate a mosaic of project cards (structure/mosaicLarge.js and structure/mosaicSmall.js)
 
 //once per page load, call the `init` function (called within structure/app.js in this case)
-//inside a component's constructor, write the following to create a random number generator: `this.rand = generator()`
-//to then generate a random number inside said component, call `this.rand()`
+//pass the PRNG generator returned from the `init` function as props to all components that could need it
+//then, to extract the PRNG, call the following from within a component: `const rand = props.generator()`
+//finally, to generate a pseudo-random number, call `rand()`
 
 //https://github.com/vercel/next.js/discussions/12348
 import { Router } from 'next/router';
@@ -30,7 +31,8 @@ function mulberry32(a) {
 }
 
 //note: this function is called within structure/app.js
-export function init() {
+export default function init() {
+  var seed;
   //generate a random 32-bit number on every page refresh
   const refreshSeed = Math.floor(Math.random() * Math.pow(2, 32));
   var generateSeed = (url) => {
@@ -38,14 +40,11 @@ export function init() {
     const routeSeed = xmur3(url)();
     //create a 32-bit seed by XORing the refresh seed and the route seed together
     //this has the effect of creating the same seed every time a URL is visited, but generating a completely different set of seeds when the page is refreshed
-    seed[0] = refreshSeed ^ routeSeed;
+    seed = refreshSeed ^ routeSeed;
   };
+
   Router.events.on('routeChangeStart', generateSeed);
   generateSeed('/');
-}
 
-var seed = [0x00];
-
-export default function generator() {
-  return mulberry32(seed[0]);
+  return () => mulberry32(seed);
 }
