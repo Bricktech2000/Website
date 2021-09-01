@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
-import generator from '../lib/rand';
+import React, { Component, useState, useContext } from 'react';
 import useParallax from '../lib/useParallax';
 
 import styles from './MosaicSmall.module.css';
+import RandContext from '../lib/RandContext';
 
 const MosaicSmall = (props) => {
+  const rand = useContext(RandContext)();
+
   const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
       -20}))`;
   });
 
-  const rand = generator();
   const firstIsRow = rand() > 0.5;
   const secondIsRow = !firstIsRow;
 
