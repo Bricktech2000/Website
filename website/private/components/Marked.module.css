@@ -125,6 +125,10 @@ sup.Marked {
   font-weight: bold;
 }
 .Marked ul,
+ul.Marked {
+  list-style-type: square;
+}
+.Marked ul,
 .Marked ol,
 ul.Marked,
 ol.Marked {
