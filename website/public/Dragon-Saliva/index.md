@@ -12,7 +12,7 @@ However, he didn't realize how ridiculously expensive these _pepper extracts_ re
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Scoville_scale)
 
-As soon as my father shared his observation with me, I **immediately** jumped onboard. _We were going to make one of the world's most spicy hot sauces._
+As soon as my father shared his observation with me, I **immediately** jumped onboard. _We were going to make one of the world's most spicy hot sauce._
 
 ## The Plan
 
@@ -34,9 +34,13 @@ Below is a picture of one said extractor.
 
 Once we received both the soxhlet extractor we had ordered along with a few pounds of cheap chili pepper powder, the extraction phase started. We closely followed the procedure [Nile Red](https://www.youtube.com/channel/UCFhXFikryT4aFcLkLw2LBLA) had documented in a [Youtube video](https://www.youtube.com/watch?v=cQIMLEwQWL0) of his. Below are a few pictures I took during the extraction process followed by a video of the extractor running. I would love to explain in depth [how a soxhlet extractor works](https://en.wikipedia.org/wiki/Soxhlet_extractor#Operation), but it is beyond the scope of this post.
 
+#img
+
 | ![empty soxhlet extractor](IMG_20201122_125247_5.min.jpg) | ![bain-marie under the extractor](IMG_20201122_125254_4.min.jpg) | ![extractor containing chili pepper powder](IMG_20201122_130512_4.min.jpg) | ![extractor containing chili pepper powder and acetone](IMG_20201122_130952_6.min.jpg) | ![extractor with condensation chamber installed](IMG_20201122_131150_5.min.jpg) | ![closeup of extraction chamber](IMG_20201122_133217_3.min.jpg) |
 | --------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 |                                                           |                                                                  |                                                                            |                                                                                        |                                                                                 |                                                                 |  |
+
+#vid
 
 |                                   |                                                                     |
 | --------------------------------- | ------------------------------------------------------------------- |
@@ -70,7 +74,7 @@ After some research, my father stumbled upon a chemical called [nonivamide](http
 
 Even though nonivamide is only at `9.2 million` on the Scoville scale as opposed to `16 million` in the case of capsaicin, it costs a fraction of the price. This way, we would still be able to create one of the world's most spicy sauce for very cheap.
 
-After a dissolving a few grams of nonivamide in our chili pepper extract using the [soxhlet extractor](https://en.wikipedia.org/wiki/Soxhlet_extractor), we were left with a thick black goo that was impressively spicy! I ran some numbers and estimated that the sauce we had created was around `4.2 million` on the Scoville scale, which was more than enough to call this project a success.
+After a dissolving a few grams of nonivamide in our chili pepper extract using the [soxhlet extractor](https://en.wikipedia.org/wiki/Soxhlet_extractor), we were left with a thick black goo that was impressively spicy. I ran some numbers and estimated that the sauce we had created was around `4.2 million` on the Scoville scale, which was more than enough to call this project a success!
 
 ## Updates Coming Soon!
 
