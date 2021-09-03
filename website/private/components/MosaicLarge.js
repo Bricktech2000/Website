@@ -6,7 +6,7 @@ import styles from './MosaicLarge.module.css';
 import RandContext from '../lib/RandContext';
 
 //https://www.emgoto.com/storing-values-with-useref/
-var globalClickCount = 3;
+var globalClickCount = 4;
 
 const MosaicLarge = (props) => {
   const rand = useContext(RandContext)();
