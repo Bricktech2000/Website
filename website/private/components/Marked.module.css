@@ -25,6 +25,7 @@ h2.Marked {
   font-weight: lighter;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+  overflow: visible;
 }
 .Marked em,
 em.Marked {
