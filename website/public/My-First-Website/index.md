@@ -9,7 +9,7 @@ I used to think that this website looked awesome, and that the design was great.
 
 ## The Page System
 
-The system that handles the pages of the website is quite peculiar: when you request a page on the website, it is loaded and displayed in an `iframe`, which is normally used to embed a whole other webpage within another website. Using this technique caused many bugs that were hard to track down, partly due to my lack of knowledge about `CSS` and `HTML` quirks. Since I didn't know of any [backend frameworks](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks) at the time, this was the only way I could think of to create a header and footer would persist throughout the website.
+The system that handles the pages of the website is quite peculiar: when you request a page on the website, it is loaded and displayed in an `iframe`, which is normally used to embed a whole other webpage within another website. Using this technique caused many bugs that were hard to track down, partly due to my lack of knowledge of `CSS` and `HTML` quirks. Since I didn't know of any [backend frameworks](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks) at the time, this was the only way I could think of to create a header and footer that would persist throughout the website.
 
 ## Conclusion
 
