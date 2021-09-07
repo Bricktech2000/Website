@@ -21,14 +21,14 @@
   filter: var(--shadow) var(--shadow);
 
   animation: fade-in 0.5s ease-out;
-  transition: fill 0.25s ease, top 0.25s ease;
+  transition: fill 0.25s ease, left 0.25s ease;
   position: relative;
-  top: 0;
+  left: 0;
 }
 
 .Nav:hover svg {
   fill: var(--color-l);
-  top: -0.25em;
+  left: -0.25em;
 }
 
 @keyframes fade-in {
