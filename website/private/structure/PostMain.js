@@ -7,7 +7,7 @@ import styles from './PostMain.module.css';
 const PostMain = (props) => {
   const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
-      -20}))`;
+      -16}))`;
     current.style.opacity = Math.max(value * 2 - 0.5, 0);
   });
 

@@ -9,7 +9,7 @@ const MosaicSmall = (props) => {
 
   const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
-      -20}))`;
+      -16}))`;
   });
 
   const firstIsRow = rand() > 0.5;

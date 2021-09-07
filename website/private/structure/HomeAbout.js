@@ -11,7 +11,7 @@ const HomeAbout = () => {
     current.style.transform = `translateY(calc(0.5em * ${Math.pow(
       1 - value,
       3
-    ) * 15}))`;
+    ) * 16}))`;
     current.style.opacity = value;
   });
 
