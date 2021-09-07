@@ -44,6 +44,8 @@
 .card img {
   margin: 0;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 0.25em;
 }
 .card img {
