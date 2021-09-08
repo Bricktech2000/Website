@@ -6,5 +6,5 @@ export const social = {
   facebook: 'https://www.facebook.com/emilien.breton.71',
   github: 'https://github.com/Bricktech2000/',
   mail: 'bricktech2000@gmail.com',
-  discord: '/discord/',
+  discord: '/discord.html',
 };
