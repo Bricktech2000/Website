@@ -36,8 +36,6 @@ Website design, content and logo subject to **copyright &copy; 2021 Emilien Bret
 
 Website [source code](https://github.com/Bricktech2000/Website) licensed under the [GNU General Public License v3.0](https://raw.githubusercontent.com/Bricktech2000/Website/master/LICENSE)
 
-Website icons made by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy) from [www.flaticon.com](https://www.flaticon.comwww.flaticon.com)
-
 ## "AS IS" Disclaimer
 
 The Authors provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
