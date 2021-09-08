@@ -18,7 +18,7 @@ const HomeHero = () => {
         </div>
         <div className={styles.cta}>View Projects</div>
         <div className={styles.arrow}>
-          <i class="fa fa-2x fa-angle-double-down"></i>
+          <i className="fa fa-2x fa-angle-double-down"></i>
         </div>
       </div>
     </div>
