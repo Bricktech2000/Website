@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { useRouter } from 'next/router';
 
 import styles from './Nav.module.css';
-import BackArrow from '../svgs/012-arrow-2.svg';
 
 const Nav = () => {
   const router = useRouter();
@@ -18,7 +17,7 @@ const Nav = () => {
           : router.back()
       }
     >
-      <BackArrow />
+      <i class="fa fa-4x fa-angle-double-left"></i>
     </div>
   );
 };

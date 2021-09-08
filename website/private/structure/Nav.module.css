@@ -2,33 +2,30 @@
   position: fixed;
   top: 0;
   z-index: 1;
-
   margin: 1em;
-  width: 3em;
-  height: 3em;
+  margin-top: 0.25em;
 
-  border-radius: 100vh;
   cursor: pointer;
 }
 
-.Nav svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--color);
+.Nav i {
+  color: var(--color);
   /* box-shadow: var(--bs); */
   /* https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */
-  --shadow: drop-shadow(0 0 0.5em rgba(0, 0, 0, 1));
-  filter: var(--shadow) var(--shadow);
+  /* --shadow: drop-shadow(0 0 0.5em rgba(0, 0, 0, 1)); */
+  /* filter: var(--shadow) var(--shadow); */
+  /* https://stackoverflow.com/questions/54426177/how-can-i-add-shadow-to-a-fontawesome-svg-icons */
+  text-shadow: var(--bs), var(--bs), var(--bs);
 
   animation: fade-in 0.5s ease-out;
-  transition: fill 0.25s ease, left 0.25s ease;
+  transition: color 0.25s ease, left 0.25s ease;
   position: relative;
   left: 0;
 }
 
-.Nav:hover svg {
-  fill: var(--color-l);
-  left: -0.25em;
+.Nav:hover i {
+  color: var(--color-l);
+  left: -0.05em;
 }
 
 @keyframes fade-in {
