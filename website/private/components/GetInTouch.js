@@ -14,15 +14,23 @@ const GetInTouch = () => {
       <div className={styles.icons}>
         <a target="_blank" href={`mailto:${social.mail}`} rel="noreferrer">
           <span>Mail</span>
-          <i className="fa fa-lg fa-envelope"></i>
+          <i className="fas fa-lg fa-envelope"></i>
         </a>
         <a target="_blank" href={social.github} rel="noreferrer">
           <span>Github</span>
-          <i className="fa fa-lg fa-github-square"></i>
+          <i className="fab fa-lg fa-github"></i>
         </a>
         <a target="_blank" href={social.facebook} rel="noreferrer">
           <span>Facebook</span>
-          <i className="fa fa-lg fa-facebook-square"></i>
+          <i className="fab fa-lg fa-facebook-f"></i>
+        </a>
+        <a target="_blank" href={social.discord} rel="noreferrer">
+          <span>Facebook</span>
+          <i className="fab fa-lg fa-discord"></i>
+        </a>
+        <a target="_blank" href={social.snapchat} rel="noreferrer">
+          <span>Facebook</span>
+          <i className="fab fa-lg fa-snapchat-ghost"></i>
         </a>
       </div>
     </div>
