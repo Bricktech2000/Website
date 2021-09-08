@@ -1,5 +1,6 @@
 export default [
   'Dragon-Saliva',
+  'Packaging-Design',
   'Making-the-Sauce',
   'FPV-Racing-Drone',
   'User-Tracker',
