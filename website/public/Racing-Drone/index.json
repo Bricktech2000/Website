@@ -3,10 +3,6 @@
   "date": "2019-12-12",
   "type": "hardware",
   "tags": ["Demo", "Work in Progress", "Hardware", "Electronics", "Drone"],
-  "btns": {
-    "Demo Video": "#demo",
-    "Drone Image": "#img",
-    "Parts List": "#list"
-  },
+  "btns": {},
   "desc": "Writing about how I got started into drone racing. Parts list to build my first drone, first test flight coming soon!"
 }
