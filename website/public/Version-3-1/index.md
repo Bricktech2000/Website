@@ -1,6 +1,6 @@
 ## The Problem
 
-Version 3 of my spider robot (which you can learn more about [here](../Spider-Robot/)) had many issues. Here are a few:
+Version 3 of my spider robot (which you can learn more about [here](../Version-3-0/)) had many issues. Here are a few:
 
 - It was **very twichy**: the `servo motors` were constantly vibrating all over the place
 - Its behavior was **very inconsistent**: as the current demand rose, the battery voltage was sagging way too much.
