@@ -25,11 +25,11 @@ const GetInTouch = () => {
           <i className="fab fa-lg fa-facebook-f"></i>
         </a>
         <a target="_blank" href={social.discord} rel="noreferrer">
-          <span>Facebook</span>
+          <span>Discord</span>
           <i className="fab fa-lg fa-discord"></i>
         </a>
         <a target="_blank" href={social.snapchat} rel="noreferrer">
-          <span>Facebook</span>
+          <span>Snapchat</span>
           <i className="fab fa-lg fa-snapchat-ghost"></i>
         </a>
       </div>

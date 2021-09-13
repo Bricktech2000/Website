@@ -14,7 +14,6 @@ const Head = (props) => {
       <meta property="og:image" content={props.image} />
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
-      <meta name="theme-color" content="#000000" />
       <meta name="apple-mobile-web-app-title" content="TechnoViper" />
       {/* https://stackoverflow.com/questions/2208933/how-do-i-force-a-favicon-refresh */}
       <link rel="shortcut icon" href="/icon.png?v=4" />
