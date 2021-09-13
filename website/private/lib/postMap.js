@@ -1,4 +1,5 @@
 export default [
+  'Edgie',
   'Dragon-Saliva',
   'Packaging-Design',
   'Making-the-Sauce',

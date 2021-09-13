@@ -1,0 +1,22 @@
+{
+  "title": "Edgie",
+  "date": "2021-09-13",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web",
+    "Demo",
+    "UI Design"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Edgie",
+    "View Live Project": "https://edgie.emilien.ca/"
+  },
+  "desc": "A simple webpage to share my social media links. Explaining the motivation behind it and why I believe it's a great first project for aspiring developers."
+}
