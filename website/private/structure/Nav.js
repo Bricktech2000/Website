@@ -17,7 +17,7 @@ const Nav = () => {
           : router.back()
       }
     >
-      <i class="fas fa-3x fa-angle-double-left"></i>
+      <i className="fas fa-3x fa-angle-double-left"></i>
     </div>
   );
 };
