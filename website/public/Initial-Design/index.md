@@ -64,9 +64,9 @@ Because of this robust chassis and its powerful weapon, I believe that this bot 
 - [2Pcs HS 18301 1/18 Scale Wheel](https://www.banggood.com/2Pcs-HS-18301-18302-18311-18312-RC-Car-Wheel-For-1-or-18-Crawler-RC-Car-p-1351106.html?akmClientCountry=CA&cur_warehouse=CN)
 - 2x [2PCS 6806-2RS 30x42x7mm ball bearings](https://www.ebay.ca/itm/1-10pcs-6800-2RS-to-6810-2RS-RS-2RS-Rubber-Sealed-Deep-Groove-Ball-Bearing/402183454980?var=672114177279)
 - 2x _Bottom plate_, `3D printed PLA`
-- 2x _Side plate_, `Laser cut aluminium`
+- 2x _Side plate_, `Laser cut 6040 aluminium`
 - 1x _Accessories_, `3D printed PLA`
-- `35 x 42 x 160 mm` _aluminium pipe_
+- `35 x 42 x 160 mm` _7075 aluminium pipe_
 - 4x [M3x4 Countersunk Screws](https://www.banggood.com/Suleve-MXCH10-1060Pcs-M2-M3-M4-M5-Carbon-Steel-Flat-Head-Countersunk-Hex-Socket-Screw-Hex-Screw-Metric-10_9-Grade-p-1659457.html?akmClientCountry=CA&)
 - 8x [M3x12 Countersunk Screws](https://www.banggood.com/Suleve-MXCH10-1060Pcs-M2-M3-M4-M5-Carbon-Steel-Flat-Head-Countersunk-Hex-Socket-Screw-Hex-Screw-Metric-10_9-Grade-p-1659457.html?akmClientCountry=CA&)
 - 24x [M5x6 Socket Head Screws](https://www.banggood.com/Suleve-M5CH3-50Pcs-M5-12_9-Grade-Carbon-Steel-Hex-Socket-Cap-Head-Screw-8-30mm-Optional-Length-p-1333415.html?akmClientCountry=CA&cur_warehouse=CN&ID=41225)
