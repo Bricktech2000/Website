@@ -1,0 +1,24 @@
+{
+  "title": "Discord Assistant",
+  "date": "2021-09-21",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "Git",
+    "NodeJS",
+    "Web",
+    "Data Analysis",
+    "Data Processing",
+    "Discord Bot",
+    "Wolfram|Alpha API"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Discord-Assistant",
+    "Try It!": "#try",
+    "Demo Screenshots": "#demo"
+  },
+  "desc": "A Discord bot that automatically answers technical questions using the Wolfram|Alpha API. Explaining how it works and how you can add it to your own server!"
+}

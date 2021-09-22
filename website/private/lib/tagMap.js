@@ -63,4 +63,6 @@ export default {
   Linux: 'u',
   Bash: 'u',
   Outdated: 'b',
+  'Discord Bot': 'u',
+  'Wolfram|Alpha API': 'u',
 };

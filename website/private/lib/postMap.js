@@ -1,4 +1,5 @@
 export default [
+  'Discord-Assistant',
   'Edgie',
   'Dragon-Saliva',
   'Packaging-Design',
