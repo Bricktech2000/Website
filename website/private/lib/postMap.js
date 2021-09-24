@@ -7,7 +7,6 @@ export default [
   'Clean-Bash-Prompt',
   'Mini-DIY-Flamethrower',
   'Beetleweight-Combat-Robot',
-  'Version-3-1',
   'Spider-Robot',
   'Sequre-SQ-D60',
   'Markdown-Inline-Formatter',
@@ -48,6 +47,5 @@ export default [
   'YouTube-Channel',
   'My-First-Website',
   'MiniML',
-  'Version-3-0',
   'Racing-Drone',
 ];

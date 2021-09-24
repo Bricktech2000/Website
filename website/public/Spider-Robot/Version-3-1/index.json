@@ -22,6 +22,5 @@
     "Download Code": "./13_sketch_mar04a/13_sketch_mar04a.ino",
     "Download STLs": "./STLs.zip"
   },
-  "desc": "The newest version of my hexapod robot! Talking about how I drastically improved the feel of the robot and showing you what it can do.",
-  "parent": "Spider-Robot"
+  "desc": "The newest version of my hexapod robot! Talking about how I drastically improved the feel of the robot and showing you what it can do."
 }

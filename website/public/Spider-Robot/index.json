@@ -18,5 +18,5 @@
   ],
   "btns": {},
   "desc": "Taking you through the different versions of my hexapod robot and explaining how it works.",
-  "child": "Version-3-1"
+  "children": ["Version-3-1", "Version-3-0"]
 }
