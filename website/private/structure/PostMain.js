@@ -35,6 +35,7 @@ const PostMain = (props) => {
           .reverse()
           .map((child) => (
             <React.Fragment key={child.id}>
+              <div className={styles.spacer}></div>
               <PageHeader info={child} />
               <Marked source={child.source} />
             </React.Fragment>
