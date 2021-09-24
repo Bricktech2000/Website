@@ -47,5 +47,5 @@ export default [
   'YouTube-Channel',
   'My-First-Website',
   'MiniML',
-  'Racing-Drone',
+  '2-inch-Racing-Drone',
 ];
