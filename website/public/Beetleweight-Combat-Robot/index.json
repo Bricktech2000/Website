@@ -15,5 +15,5 @@
   ],
   "btns": {},
   "desc": "Full build documentation of my beetleweight combat robot, from the CAD to the completion of the project!",
-  "child": "Design-Update"
+  "children": ["Design-Update", "Initial-Design"]
 }
