@@ -28,7 +28,7 @@ Instead, my father and I opted for a vastly more efficient method: the use of a 
 
 Below is a picture of one said extractor.
 
-![photo of a soxhlet extractor](0003315_extractors-soxhlet-micro.jpeg)
+![photo of a soxhlet extractor](Making-the-Sauce/0003315_extractors-soxhlet-micro.jpeg)
 
 ## Extracting Spiciness
 
@@ -36,15 +36,15 @@ Once we received both the soxhlet extractor we had ordered along with a few poun
 
 #img
 
-| ![empty soxhlet extractor](IMG_20201122_125247_5.min.jpg) | ![bain-marie under the extractor](IMG_20201122_125254_4.min.jpg) | ![extractor containing chili pepper powder](IMG_20201122_130512_4.min.jpg) | ![extractor containing chili pepper powder and acetone](IMG_20201122_130952_6.min.jpg) | ![extractor with condensation chamber installed](IMG_20201122_131150_5.min.jpg) | ![closeup of extraction chamber](IMG_20201122_133217_3.min.jpg) |
-| --------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-|                                                           |                                                                  |                                                                            |                                                                                        |                                                                                 |                                                                 |  |
+| ![empty soxhlet extractor](Making-the-Sauce/IMG_20201122_125247_5.min.jpg) | ![bain-marie under the extractor](Making-the-Sauce/IMG_20201122_125254_4.min.jpg) | ![extractor containing chili pepper powder](Making-the-Sauce/IMG_20201122_130512_4.min.jpg) | ![extractor containing chili pepper powder and acetone](Making-the-Sauce/IMG_20201122_130952_6.min.jpg) | ![extractor with condensation chamber installed](Making-the-Sauce/IMG_20201122_131150_5.min.jpg) | ![closeup of extraction chamber](Making-the-Sauce/IMG_20201122_133217_3.min.jpg) |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+|                                                                            |                                                                                   |                                                                                             |                                                                                                         |                                                                                                  |                                                                                  |  |
 
 #vid
 
-|                                   |                                                                     |
-| --------------------------------- | ------------------------------------------------------------------- |
-| ![video](VID_20201122_134120.mp4) | ![dark red pepper extract in beaker](IMG_20201122_172423_9.min.jpg) |
+|                                                    |                                                                                      |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| ![video](Making-the-Sauce/VID_20201122_134120.mp4) | ![dark red pepper extract in beaker](Making-the-Sauce/IMG_20201122_172423_9.min.jpg) |
 
 Once the chili powder had become colorless, we were left with a few milliliters of concentrated pepper extract dissolved in [acetone](https://en.wikipedia.org/wiki/Acetone), our solvent of choice. We left the solution in a well-ventilated area for about a week to let the acetone evaporate, after which we were faced with an unexpected complication: **it was barely spicy**.
 

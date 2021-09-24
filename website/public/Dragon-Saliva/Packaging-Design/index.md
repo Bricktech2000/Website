@@ -8,10 +8,10 @@ Since I have some experience in UI design, I figured I would try and create **a 
 
 Below are two screenshots and two photos of the packaging I designed using [Figma](https://www.figma.com/) and produced using [Vistaprint](https://www.vistaprint.ca/).
 
-|                                                                      |                                                                |
-| -------------------------------------------------------------------- | -------------------------------------------------------------- |
-| ![screenshot of the packaging](Screenshot%202021-09-06%20191844.png) | ![photo of the packaging](IMG_20210602_205542_5-pixlr.min.jpg) |
-| ![screenshot of the sticker](Screenshot%202021-09-07%20104617.png)   | ![photo of the sticker](IMG_20210602_205704_0.min-pixlr.jpg)   |
+|                                                                                       |                                                                                 |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![screenshot of the packaging](Packaging-Design/Screenshot%202021-09-06%20191844.png) | ![photo of the packaging](Packaging-Design/IMG_20210602_205542_5-pixlr.min.jpg) |
+| ![screenshot of the sticker](Packaging-Design/Screenshot%202021-09-07%20104617.png)   | ![photo of the sticker](Packaging-Design/IMG_20210602_205704_0.min-pixlr.jpg)   |
 
 I chose to use a dark background along with _red-orange_ hues to intensify the fact that this sauce is incredibly spicy. It uses a simple _sans-serif_ font and has a white interior to give it a clean and modern look. On the rear side of the paper cover, I inserted a [dynamic QR code](https://www.qr-code-generator.com/solutions/dynamic-url-qr-code/) so that I can change where it points even after printing it permanently on paper.
 
@@ -29,13 +29,13 @@ Legally, this product isn't hot sauce. It is simply _chili extract_ packaged in 
 
 The only thing left to do was to find a way to hold the bottle inside the _paper cover_. I wanted to use a non-permanent solution so that it could be I used as a stand for the bottle instead of simply getting thrown away. Here is what I came up with:
 
-![3D model of the logo with a bottle clip](Screenshot%202021-09-08%20123614.png)
+![3D model of the logo with a bottle clip](Packaging-Design/Screenshot%202021-09-08%20123614.png)
 
 Since the greater part of the design is only `0.6 mm` thick, the whole thing prints in under 15 minutes on my 3D printer, the [Ender 3](https://www.creality3d.shop/products/creality3d-ender-3-pro-high-precision-3d-printer). This was essential because, as everyone knows, the shorter the printing time, the larger the volume we can produce. After gluing it on the inside of the _paper cover_, I inserted the bottle in the 3D printed clip. Below are two photos of the final result.
 
-|                                                                       |                                                                               |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![bottle inside paper cover, top view](IMG_20210602_205603_3.min.jpg) | ![bottle inside paper cover, perspective view](IMG_20210602_205555_0.min.jpg) |
+|                                                                                        |                                                                                                |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![bottle inside paper cover, top view](Packaging-Design/IMG_20210602_205603_3.min.jpg) | ![bottle inside paper cover, perspective view](Packaging-Design/IMG_20210602_205555_0.min.jpg) |
 
 ## What's Next?
 
