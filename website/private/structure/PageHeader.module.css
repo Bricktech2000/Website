@@ -20,7 +20,6 @@
 .PageHeader h1 {
   margin: 0 0.25em;
   margin-top: 0;
-  letter-spacing: 0.1ch;
 }
 .PageHeader p {
   max-width: 40ch;
