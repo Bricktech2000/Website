@@ -4,9 +4,9 @@ In the [previous post](../5-inch-Drone-Virutal-Prototype/), I wrote about what i
 
 A few days ago, I received almost all the parts necessary to build my 5-inch drone. This includes the **frame**, the **stack**, the **motors**, the **props**, and a bunch of zip ties. Of course, a few more parts need to arrive before I can start the assembly, notably the **receiver** and the **LiPo battery**. Here are a few photos of the parts I have received:
 
-|                                                              |                                                                |
-| ------------------------------------------------------------ | -------------------------------------------------------------- |
-| ![drone parts in their boxes](IMG_20200827_182520_3.min.jpg) | ![drone parts in exploded view](IMG_20200827_184808_8.min.jpg) |
+|                                                                          |                                                                            |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| ![drone parts in their boxes](Drone-Parts/IMG_20200827_182520_3.min.jpg) | ![drone parts in exploded view](Drone-Parts/IMG_20200827_184808_8.min.jpg) |
 
 ## The Mockup
 
@@ -14,6 +14,6 @@ Since I had received all of the main parts needed, I decided I would build a moc
 
 #img
 
-| ![5-inch drone](IMG_20200828_183908_4.min.jpg) | ![5-inch drone](IMG_20200828_183933_3.min.jpg) | ![5-inch drone](IMG_20200828_184500_9.min.jpg) | ![5-inch drone](IMG_20200828_185331_5.min.jpg) | ![5-inch drone](IMG_20200828_185559_2.min.jpg) |
-| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-|                                                |                                                |                                                |                                                |                                                |
+| ![5-inch drone](Drone-Parts/IMG_20200828_183908_4.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_183933_3.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_184500_9.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_185331_5.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_185559_2.min.jpg) |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+|                                                            |                                                            |                                                            |                                                            |                                                            |

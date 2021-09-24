@@ -8,7 +8,7 @@ May 26th, I had the idea to try to make a virtual prototype of the drone in an [
 
 #img
 
-![drone virtual prototype](<./Drone%20(3).png>)
+![drone virtual prototype](<./Virtual-Prototype/Drone%20(3).png>)
 
 #list
 
