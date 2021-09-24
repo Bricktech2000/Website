@@ -76,8 +76,8 @@ const Card = (props) => {
   ));
 
   return (
-    <Link href={'/' + (props.info.child || props.info.id)} replace={props.mini}>
-      <CardHtml href={'/' + (props.info.child || props.info.id)} />
+    <Link href={'/' + props.info.id} replace={props.mini}>
+      <CardHtml href={'/' + props.info.id} />
     </Link>
   );
 };

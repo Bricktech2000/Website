@@ -29,6 +29,9 @@ const PostMain = (props) => {
 
   return (
     <div ref={parallaxRef} className={styles.PostMain}>
+      {Object.keys(props.info.children).map(
+        (child) => props.info.children[child].title
+      )}
       <Marked source={props.info.source} />
     </div>
   );

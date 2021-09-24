@@ -11,6 +11,14 @@ export default async function dbGet(req, res) {
   switch (type) {
     case 'exact':
       response[id] = await getSafe(id);
+      const children = response[id].children;
+
+      if (children !== undefined) {
+        response[id].children = {};
+        for (var id2 of children) {
+          response[id].children[id2] = await getSafe(`${id}/${id2}`);
+        }
+      }
       break;
     case 'like':
       const info = await getSafe(id);
@@ -25,7 +33,6 @@ export default async function dbGet(req, res) {
       }
 
       delete output[id]; //ignore the current post
-      delete output[info.parent]; //ignore the parent post if it exists
       //https://stackoverflow.com/questions/11792158/optimized-javascript-code-to-find-3-largest-element-and-its-indexes-in-array
       //https://stackoverflow.com/questions/1069666/sorting-object-property-by-values
 
@@ -39,12 +46,6 @@ export default async function dbGet(req, res) {
           response[id2] = await getSafe(id2);
         }
       } else response[id] = await getSafe('502');
-      break;
-    case 'child':
-      for (var id2 of postMap) {
-        const child = await getSafe(id2);
-        if (child.parent == id) response[id2] = child;
-      }
       break;
     default:
       response[id] = await getSafe('502');

@@ -17,11 +17,9 @@ const HomePostList = (props) => {
       <br />
       <br />
       <MosaicLarge>
-        {Object.keys(info)
-          .filter((id) => !info[id].parent)
-          .map((id) => (
-            <Card key={id} info={info[id]} />
-          ))}
+        {Object.keys(info).map((id) => (
+          <Card key={id} info={info[id]} />
+        ))}
       </MosaicLarge>
     </React.Fragment>
   );
