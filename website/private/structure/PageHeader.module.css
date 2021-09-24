@@ -3,34 +3,32 @@
 
   width: 100%;
   height: auto;
-
-  display: grid;
   align-items: center;
-  grid-template-columns: 1fr auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  padding: 3em 7.5vw;
-  padding-left: 15vw;
+  padding: 3em 5vw;
+  padding-left: 7.5vw;
 
   color: var(--text);
 }
 .PageHeader > * {
   width: auto;
-  margin: 0 0.5em;
+  margin: 0 1em;
   break-inside: avoid;
 }
 .PageHeader h1 {
-  margin: 0 0.125em;
+  margin: 0 0.25em;
   margin-top: 0;
-  font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 0.1ch;
+}
+.PageHeader p {
+  max-width: 40ch;
+  text-align: justify;
 }
 @media (max-aspect-ratio: 1/1) {
   .PageHeader {
     padding-left: 0.5em;
     padding-right: 0.5em;
-
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
   }
 }

@@ -9,7 +9,6 @@ const PageHeader = (props) => {
   return (
     <header className={styles.PageHeader}>
       <h1 className={marked + ' fade-right-1'}>{props.info.title}</h1>
-      <div></div>
       <p className={'fade-right-2'}>
         <Marked source={props.info.desc} />
       </p>

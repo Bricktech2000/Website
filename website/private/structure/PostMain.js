@@ -1,4 +1,5 @@
 import React, { Component, useEffect } from 'react';
+import PageHeader from '../structure/PageHeader';
 import Marked from '../components/Marked';
 import useParallax from '../lib/useParallax';
 
@@ -29,9 +30,15 @@ const PostMain = (props) => {
 
   return (
     <div ref={parallaxRef} className={styles.PostMain}>
-      {Object.keys(props.info.children).map(
-        (child) => props.info.children[child].title
-      )}
+      {props.info.children !== undefined &&
+        Object.values(props.info.children)
+          .reverse()
+          .map((child) => (
+            <React.Fragment key={child.id}>
+              <PageHeader info={child} />
+              <Marked source={child.source} />
+            </React.Fragment>
+          ))}
       <Marked source={props.info.source} />
     </div>
   );
