@@ -26,6 +26,12 @@
 .Footer .issue {
   text-align: right;
   margin: 0 0.75em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Footer .issue,
+.Footer .issue a {
+  white-space: pre-wrap;
 }
 .Footer span {
   display: block;
