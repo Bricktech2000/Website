@@ -1,4 +1,5 @@
 export default [
+  'Double-Pendulum',
   'Discord-Assistant',
   'Edgie',
   'Dragon-Saliva',

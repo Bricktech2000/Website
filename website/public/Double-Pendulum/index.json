@@ -1,0 +1,18 @@
+{
+  "title": "Double Pendulum",
+  "date": "202l-09-30",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Hardware",
+    "G-code",
+    "3D Printing",
+    "Demo",
+    "3D Design"
+  ],
+  "btns": {
+    "Download STLs": "./Double-Pendulum.zip",
+    "Demo Video": "#demo"
+  },
+  "desc": "A mesmerizing physical example of chaotic motion. Talking about how I got the idea to build a double pendulum and explaining how you can make one yourself."
+}
