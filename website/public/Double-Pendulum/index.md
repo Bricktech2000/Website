@@ -30,7 +30,7 @@ Once I was done 3D printing [all the parts](./Double-Pendulum.zip), it was time 
 I also 3D printed [a special part](./Double-Pendulum.zip) to mount the pendulum directly onto the wall, which worked surprisingly well. After assembling the whole thing, it functioned perfectly! Below is a quick video showcasing the final result.
 
 #demo
-![video](VID_20210930_164927_2.mp4)
+![video](VID_20210930_164927_2-freeconvert%4030%25.mp4)
 
 ## Final Words
 
