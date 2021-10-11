@@ -32,6 +32,10 @@ const GetInTouch = () => {
           <span>Snapchat</span>
           <i className="fab fa-lg fa-snapchat-ghost"></i>
         </a>
+        <a target="_blank" href={social.linkedin} rel="noreferrer">
+          <span>LinkedIn</span>
+          <i className="fab fa-lg fa-linkedin"></i>
+        </a>
       </div>
     </div>
   );
