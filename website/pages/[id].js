@@ -21,10 +21,10 @@ const Post = (props) => {
   const isError = errorMap.includes(id);
   const isPost = postMap.includes(id);
 
+  const info = useDbGet('exact', id);
+
   if (isError) return <Error status={id} />;
   if (!isPost && !isError) return <Error status={'404'} />;
-
-  const info = useDbGet('exact', id);
 
   const loading = typeof info === 'undefined';
   const currentId = !loading && Object.keys(info)[0];
