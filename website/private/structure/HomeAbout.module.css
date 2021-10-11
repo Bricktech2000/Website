@@ -8,11 +8,12 @@
   box-shadow: var(--bs);
   padding: 3em 10vw;
 }
-.HomeAbout > h1 {
+.HomeAbout h1 {
   grid-area: title;
 
   margin: 0;
   padding-bottom: 0.75em;
+  margin-top: 0.5em;
   line-height: 1;
 }
 .HomeAbout > p {

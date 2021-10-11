@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import GetInTouch from '../components/GetInTouch';
 import useParallax from '../lib/useParallax';
 
-import styles from './HomeAbout.module.css';
 import { Marked as marked } from '../components/Marked.module.css';
+import styles from './HomeAbout.module.css';
 
 const HomeAbout = () => {
   const parallaxRef = useParallax((current, value) => {
