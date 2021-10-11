@@ -28,7 +28,7 @@ const App = (props) => {
     var timeout;
     const defaultHue = '216'; //greenish blue
     const storageHue = localStorage.getItem('colorHue');
-    if (count == 0) colorHue = storageHue || defaultHue;
+    if (count == 0) colorHue = storageHue ?? defaultHue;
     else if (count == 1 && storageHue !== defaultHue) colorHue = defaultHue;
     else colorHue = '' + Math.floor(Math.random() * 360);
 

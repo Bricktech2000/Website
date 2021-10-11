@@ -51,9 +51,9 @@ const Card = (props) => {
         ' ' +
         styles[direction] +
         ' ' +
-        (styles[type] || '') +
+        (styles[type] ?? '') +
         ' ' +
-        (styles[mini] || '')
+        (styles[mini] ?? '')
       }
       {...props2}
     >
