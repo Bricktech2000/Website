@@ -39,6 +39,7 @@ const Card = (props) => {
   const direction = dir ? 'row' : 'col';
   const inverted = props.inv ? 'inv' : 'nor';
   const mini = props.mini ? 'mini' : '';
+  const type = props.info.type;
 
   const CardHtml = React.forwardRef((props2, ref) => (
     <a
@@ -50,9 +51,9 @@ const Card = (props) => {
         ' ' +
         styles[direction] +
         ' ' +
-        styles[props.info.type] +
+        (styles[type] || '') +
         ' ' +
-        styles[mini]
+        (styles[mini] || '')
       }
       {...props2}
     >

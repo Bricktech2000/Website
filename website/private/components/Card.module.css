@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-/*.software {
+/* .software {
   background: var(--card2-bg);
   border: none;
 }
@@ -105,19 +105,3 @@
 .card.row.inv img {
   align-self: flex-end;
 }
-
-/*.card.software {
-  border-color: var(--color);
-}
-.card.software h2 {
-  color: var(--color);
-}
-.card.software:hover h2 {
-  color: var(--title);
-}
-.card.hardware {
-  border-color: var(--title);
-}
-.card.blog {
-  border-color: var(--card2-bg);
-}*/
