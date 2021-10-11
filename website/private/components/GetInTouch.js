@@ -12,13 +12,17 @@ const GetInTouch = () => {
       </div>
       {/*https://css-tricks.com/snippets/html/mailto-links/*/}
       <div className={styles.icons}>
-        <a target="_blank" href={`mailto:${social.mail}`} rel="noreferrer">
-          <span>Mail</span>
-          <i className="fas fa-lg fa-envelope"></i>
-        </a>
         <a target="_blank" href={social.github} rel="noreferrer">
           <span>Github</span>
           <i className="fab fa-lg fa-github"></i>
+        </a>
+        <a target="_blank" href={social.linkedin} rel="noreferrer">
+          <span>LinkedIn</span>
+          <i className="fab fa-lg fa-linkedin"></i>
+        </a>
+        <a target="_blank" href={`mailto:${social.mail}`} rel="noreferrer">
+          <span>Mail</span>
+          <i className="fas fa-lg fa-envelope"></i>
         </a>
         <a target="_blank" href={social.facebook} rel="noreferrer">
           <span>Facebook</span>
@@ -31,10 +35,6 @@ const GetInTouch = () => {
         <a target="_blank" href={social.snapchat} rel="noreferrer">
           <span>Snapchat</span>
           <i className="fab fa-lg fa-snapchat-ghost"></i>
-        </a>
-        <a target="_blank" href={social.linkedin} rel="noreferrer">
-          <span>LinkedIn</span>
-          <i className="fab fa-lg fa-linkedin"></i>
         </a>
       </div>
     </div>
