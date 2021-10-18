@@ -25,7 +25,7 @@ Then, I made a hole large enough for the camera lens through the car's body and 
 After connecting the cables together, it worked flawlessly! This is slightly beside the point of this post, but I thought I'd include this tip for anyone looking to buy this car: **locking the center differential drastically improves its performance.** Anyways, below is a demo video of me driving it around on campus through the newly installed FPV system!
 
 #demo
-![youtube](https://youtube.com)
+![youtube](https://youtube.com/embed/lyMior4Can0)
 
 ## The Limits
 
