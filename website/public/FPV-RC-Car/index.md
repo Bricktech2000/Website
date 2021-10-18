@@ -14,11 +14,13 @@ Then, one morning, I remembered I had an extra drone [camera and VTX combo](http
 
 Counterintuitively, adding FPV to an RC car is surprisingly easy. I used the [Eachine TX02](https://www.banggood.com/Eachine-TX03-NTSC-Super-Mini-0-or-25mW-or-50mW-or-200mW-Switchable-AIO-5_8G-72CH-VTX-600TVL-1-or-3-Cmos-FPV-Camera-p-1104884.html?cur_warehouse=CN&rmmds=search), which includes both a camera and a video transmitter. This way, all it neads to function is a `5V` constant voltage supply, and, as it turns out, pretty much all hobby-grade RC cars use a `5V` receiver. With this in mind, I cut a servo cable to length and I plugged it straight into my RC car's receiver:
 
-![]()
+![](IMG_20211018_132641_2.min.jpg)
 
 Then, I made a hole large enough for the camera lens through the car's body and I used some high-quality [double-sided tape](https://www.scotchbrand.com/3M/en_US/scotch-brand/products/catalog/~/Scotch-Mount-Clear-Double-Sided-Mounting-Tape/?N=4335+3289430110+3294529207&rt=rud) to stick it in place. Here's how that looks:
 
-![]()
+|                                    |                                    |
+| ---------------------------------- | ---------------------------------- |
+| ![](IMG_20211018_132739_0.min.jpg) | ![](IMG_20211018_132824_4.min.jpg) |
 
 After connecting the cables together, it worked flawlessly! This is slightly beside the point of this post, but I thought I'd include this tip for anyone looking to buy this car: **locking the center differential drastically improves its performance.** Anyways, below is a demo video of me driving it around on campus through the newly installed FPV system!
 
