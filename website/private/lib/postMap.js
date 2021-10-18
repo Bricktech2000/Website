@@ -1,4 +1,5 @@
 export default [
+  'FPV-RC-Car',
   'Double-Pendulum',
   'Discord-Assistant',
   'Edgie',

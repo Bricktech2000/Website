@@ -65,4 +65,5 @@ export default {
   Outdated: 'b',
   'Discord Bot': 'u',
   'Wolfram|Alpha API': 'u',
+  RC: 'u',
 };
