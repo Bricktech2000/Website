@@ -17,6 +17,20 @@
   /*https://pixabay.com/photos/work-typing-computer-notebook-731198/*/
   overflow: hidden;
   grid-area: image;
+  position: relative;
+}
+.HomeHero .image::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.HomeHero .image > * {
+  align-self: center;
+  justify-self: center;
 }
 
 .HomeHero .overlay {

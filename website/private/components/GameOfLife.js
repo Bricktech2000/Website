@@ -40,8 +40,11 @@ const GameOfLife = (props) => {
         else this.nextAlive = false;
       };
       draw = () => {
+        const style = getComputedStyle(document.documentElement);
         if (this.alive != this.nextAlive) {
-          ctx.fillStyle = this.nextAlive ? '#fff' : '#000';
+          ctx.fillStyle = this.nextAlive
+            ? style.getPropertyValue('--color')
+            : style.getPropertyValue('--black');
           ctx.fillRect(this.x, this.y, this.s, this.s);
         }
         this.alive = this.nextAlive;
@@ -73,7 +76,7 @@ const GameOfLife = (props) => {
     grid.forEach((row) => row.forEach((cell) => cell.draw()));
   };
   useEffect(() => {
-    const interval = setInterval(draw, 100);
+    const interval = setInterval(draw, 1000 / 20);
     // draw();
     return () => {
       clearInterval(interval);
