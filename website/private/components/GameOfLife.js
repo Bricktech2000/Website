@@ -26,8 +26,8 @@ const GameOfLife = (props) => {
         this.x = x;
         this.y = y;
         this.s = s;
-        this.alive = Math.floor(Math.random() * 3);
-        this.nextAlive = 0;
+        this.alive = 0;
+        this.nextAlive = (Math.random() < 1 / 8) * 2;
         this.neighbours = neighbours;
       };
       update = () => {
@@ -74,8 +74,8 @@ const GameOfLife = (props) => {
   });
 
   const draw = () => {
-    grid.forEach((row) => row.forEach((cell) => cell.update()));
     grid.forEach((row) => row.forEach((cell) => cell.draw()));
+    grid.forEach((row) => row.forEach((cell) => cell.update()));
   };
   useEffect(() => {
     const interval = setInterval(draw, 1000 / 20);
