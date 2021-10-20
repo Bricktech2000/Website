@@ -26,7 +26,7 @@ const GameOfLife = (props) => {
         this.x = x;
         this.y = y;
         this.s = s;
-        this.alive = Math.floor(Math.random() * 3);
+        this.alive = (Math.random() > 0.5) + 0;
         this.nextAlive = 0;
         this.neighbours = neighbours;
       };
@@ -34,18 +34,18 @@ const GameOfLife = (props) => {
         const states = 2;
         // https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Variations
         const count =
-          this.neighbours.reduce((acc, n) => acc + (n.alive == states), 0) -
-          (this.alive == states);
+          this.neighbours.reduce((acc, n) => acc + !!n.alive, 0) - !!this.alive;
         // https://spicyyoghurt.com/tutorials/javascript/conways-game-of-life-canvas
-        if (count == 2) this.nextAlive = (this.alive == states) * states;
-        else if (count == 3) this.nextAlive = states;
-        else this.nextAlive = Math.max(0, this.alive - 1);
+        if (count == 2)
+          this.nextAlive = this.alive ? Math.min(states, this.alive + 1) : 0;
+        else if (count == 3) this.nextAlive = 1;
+        else this.nextAlive = 0;
       };
       draw = () => {
         const style = getComputedStyle(document.documentElement);
         if (this.alive != this.nextAlive) {
           ctx.fillStyle = style.getPropertyValue(
-            ['--black', '--color-d', '--color-l'][this.nextAlive]
+            ['--black', '--color-l', '--color-d'][this.nextAlive]
           );
           ctx.fillRect(this.x, this.y, this.s, this.s);
         }
