@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AutoType from '../components/AutoType';
+import GameOfLife from '../components/GameOfLife';
 
 import styles from './HomeHero.module.css';
 
@@ -7,7 +8,9 @@ const HomeHero = () => {
   return (
     <div className={styles.HomeHero}>
       <div className={styles.color}></div>
-      <div className={styles.image}></div>
+      <div className={styles.image}>
+        <GameOfLife size={100} />
+      </div>
       <div className={styles.overlay}>
         <div className={styles.title}>Let me show you what I can do.</div>
         <div className={styles.desc}>

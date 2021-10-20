@@ -15,12 +15,8 @@
 
 .HomeHero .image {
   /*https://pixabay.com/photos/work-typing-computer-notebook-731198/*/
+  overflow: hidden;
   grid-area: image;
-  /*https://stackoverflow.com/questions/26621513/darken-css-background-image*/
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/headerHomeImage.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .HomeHero .overlay {
