@@ -17,15 +17,21 @@ const Footer = (props) => {
       <div className={styles.vr}></div>
       <div className={styles.center}>
         <div>
-          Created with <React />
-          <span> </span>
+          Created with
+          <span>&nbsp;&nbsp;</span>
+          <React />
+          <span>&nbsp;&nbsp;</span>
           <NextJS />
-          <span> </span>
-          <NodeJS /> by Emilien Breton
+          <span>&nbsp;&nbsp;</span>
+          <NodeJS />
+          <span>&nbsp;&nbsp;</span>
+          by Emilien Breton
         </div>
         <div>
-          Powered and protected by <Ubuntu />
-          <span> </span>
+          Powered and protected by
+          <span>&nbsp;&nbsp;</span>
+          <Ubuntu />
+          <span>&nbsp;&nbsp;</span>
           <Cloudflare />
         </div>
         <div>
