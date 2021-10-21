@@ -27,10 +27,10 @@
   border-radius: inherit;
 }
 .button {
-  background: var(--bg);
+  /* background: var(--bg); */
 }
 .button-on {
-  background: transparent;
+  /* background: transparent; */
 }
 .button svg {
   display: inline-block;
