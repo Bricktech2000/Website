@@ -7,7 +7,7 @@
 .PostMain > span {
   column-width: 50em;
   column-gap: 7.5em;
-  column-rule: 0.1em solid var(--card2-bg);
+  column-rule: 0.1em solid var(--card-bg-l);
 }
 .PostMain .spacer {
   height: 5em;

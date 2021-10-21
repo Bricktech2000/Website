@@ -19,7 +19,7 @@
 .Footer .vr {
   grid-area: vr;
 
-  background: var(--card2-bg);
+  background: var(--card-bg-l);
   width: 0.1em;
   height: 100%;
 }

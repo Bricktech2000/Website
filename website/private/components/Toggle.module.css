@@ -13,7 +13,7 @@
   width: 3em;
   height: 1.5em;
   border-radius: 100vh;
-  background: var(--card2-bg);
+  background: var(--card-bg-l);
   box-shadow: var(--bs);
   transition: background-color 0.125s ease-in-out;
 }
