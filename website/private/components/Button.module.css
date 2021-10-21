@@ -9,7 +9,7 @@
   font-weight: 500;
   cursor: pointer;
 
-  transition: background-color 0.25s ease-in-out, top 0.25s ease-in-out;
+  transition: background-color 0.125s ease-in-out, top 0.25s ease-in-out;
   position: relative;
   top: 0;
   background: var(--color);

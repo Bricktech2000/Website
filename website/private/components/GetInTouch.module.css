@@ -8,7 +8,7 @@
 }
 .GetInTouch .icons i {
   color: var(--color);
-  transition: color 0.25s ease-in-out;
+  transition: color 0.125s ease-in-out;
 }
 .GetInTouch .icons a {
   display: inline-block;
