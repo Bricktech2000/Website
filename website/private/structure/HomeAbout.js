@@ -8,17 +8,16 @@ import styles from './HomeAbout.module.css';
 const HomeAbout = () => {
   const parallaxRef = useParallax((current, value) => {
     value = Math.min(value * 1.5, 1);
-    current.style.transform = `translateY(calc(0.5em * ${Math.pow(
-      1 - value,
-      3
-    ) * 16}))`;
+    current.style.transform = `translateY(calc(0.5em * ${
+      Math.pow(1 - value, 3) * 16
+    }))`;
     current.style.opacity = value;
   });
 
   return (
     <div className={styles.HomeAbout} ref={parallaxRef}>
       <h1 className={marked}>A Bit More About Me</h1>
-      <img src="/icon.png" alt="author profile picture" />
+      <img src="/picture.png" alt="author profile picture" />
       <p>
         {/*
             programming portfolio examples
