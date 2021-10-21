@@ -9,6 +9,7 @@
   top: 0;
 
   transition: background-color 0.125s ease-in-out, top 0.25s ease-in-out;
+  border-radius: 0.25em;
   text-decoration: none;
   color: var(--text);
   white-space: initial;
@@ -87,15 +88,19 @@
 
 .card.row.nor {
   grid-template-areas: 'img img img' 'title title title' 'desc desc desc' 'tags tags tags';
+  /* border-radius: 0.25em 0.25em 0 0; */
 }
 .card.row.inv {
   grid-template-areas: 'title title title' 'desc desc desc' 'tags tags tags' 'img img img';
+  /* border-radius: 0 0 0.25em 0.25em; */
 }
 .card.col.nor {
   grid-template-areas: 'img desc desc' 'img desc desc' 'img tags tags' 'title tags tags';
+  /* border-radius: 0.25em 0 0 0; */
 }
 .card.col.inv {
   grid-template-areas: 'desc desc img' 'desc desc img' 'tags tags img' 'tags tags title';
+  /* border-radius: 0 0.25em 0 0; */
 }
 .card.row {
   grid-row: span 2;
