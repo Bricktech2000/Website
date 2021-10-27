@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> I decided to learn Vim key bindings, meaning I don't use Caps Hotkeys anymore. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## Intro
 
 This quote summarizes very well how useless the `CAPS LOCK` really is:

@@ -2,7 +2,7 @@
   "title": "Caps Hotkeys",
   "date": "2020-06-05",
   "type": "software",
-  "tags": ["Software", "C++", "Windows API", "Scripting"],
+  "tags": ["Software", "C++", "Windows API", "Scripting", "Outdated"],
   "btns": {
     "Download Executable": "./Caps Hotkeys V2.1.exe",
     "Github": "https://github.com/Bricktech2000/Caps-Hotkeys-V2"
