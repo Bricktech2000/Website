@@ -1,4 +1,12 @@
-## What got me into this
+> **This post is outdated**
+>
+> Because of the internet bandwidth required for making frequent backups in the cloud, I decided to switch to a physical backup solution instead. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
+## What Got Me Into This
 
 There is a quote I really like. Here goes:
 

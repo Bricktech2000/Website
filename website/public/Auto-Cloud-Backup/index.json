@@ -9,7 +9,8 @@
     "Google Drive API",
     "Multithreading",
     "Watchdog",
-    "Scripting"
+    "Scripting",
+    "Outdated"
   ],
   "btns": { "Sample Log": "#img", "Download Code": "lol.html" },
   "desc": "Who likes making backups? No one! Writing about how I created AutoCloudBackup, a script which automatically backs up your files to the cloud."
