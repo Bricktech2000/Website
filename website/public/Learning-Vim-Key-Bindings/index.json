@@ -1,0 +1,10 @@
+{
+  "title": "Learning Vim Key Bindings",
+  "date": "2021-10-27",
+  "type": "blog",
+  "tags": ["Blog", "Work in Progress", "Software", "Scripting", "Learning"],
+  "btns": {
+    "Resources Used": "#res"
+  },
+  "desc": "_I would never go back._ Walking you through my journey of learning Vim key bindings, from discovering the essence of Vim to."
+}

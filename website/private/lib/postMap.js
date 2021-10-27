@@ -1,4 +1,5 @@
 export default [
+  'Learning-Vim-Key-Bindings',
   'FPV-RC-Car',
   'Double-Pendulum',
   'Discord-Assistant',
