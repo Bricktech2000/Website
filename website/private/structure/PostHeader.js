@@ -12,6 +12,7 @@ const PostHeader = (props) => {
     <header className={styles.PostHeader}>
       <div className={styles.PostDataHeader}>
         <img
+          className={'fade-right-3'}
           src={'/' + props.info.id + '/index.jpg'}
           alt={props.info.title + ' thumbnail image'}
         />
