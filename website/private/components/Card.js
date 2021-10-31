@@ -53,7 +53,8 @@ const Card = (props) => {
         ' ' +
         (styles[type] ?? '') +
         ' ' +
-        (styles[mini] ?? '')
+        (styles[mini] ?? '') +
+        ' fade-right-3'
       }
       {...props2}
     >
