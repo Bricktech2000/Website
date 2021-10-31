@@ -7,9 +7,9 @@ import styles from './PostMain.module.css';
 
 const PostMain = (props) => {
   const parallaxRef = useParallax((current, value) => {
-    current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
-      -16}))`;
-    current.style.opacity = Math.max(value * 2 - 0.5, 0);
+    current.style.transform = `translateY(calc(0.5em * ${
+      (value - 0.25) * -16
+    }))`;
   });
 
   //https://stackoverflow.com/questions/9757625/jquery-how-to-scroll-to-certain-anchor-div-on-page-load
@@ -29,7 +29,7 @@ const PostMain = (props) => {
   }, [props.info.source, window.location.hash]);
 
   return (
-    <div ref={parallaxRef} className={styles.PostMain}>
+    <div ref={parallaxRef} className={styles.PostMain + ' fade-right-3'}>
       {props.info.children !== undefined &&
         Object.values(props.info.children)
           .reverse()

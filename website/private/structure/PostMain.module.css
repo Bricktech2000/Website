@@ -2,7 +2,6 @@
   flex-direction: column;
   overflow-x: hidden;
   margin: 3em 7.5vw;
-  opacity: 0;
 }
 .PostMain > span {
   column-width: 50em;
