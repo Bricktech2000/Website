@@ -1,4 +1,5 @@
 export default [
+  'Programming-my-Resume',
   'Learning-Vim-Key-Bindings',
   'FPV-RC-Car',
   'Double-Pendulum',

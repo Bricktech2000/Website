@@ -1,0 +1,20 @@
+{
+  "title": "Programming my Resume",
+  "date": "2021-11-03",
+  "type": "software",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web",
+    "Modular",
+    "UI Design"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Resume"
+  },
+  "desc": "So I decided to program my resume, obviously. Writing about the motivation behind this decision and explaining why markup languages are awesome!"
+}
