@@ -17,7 +17,7 @@ const HomeAbout = () => {
   return (
     <div className={styles.HomeAbout} ref={parallaxRef}>
       <h1 className={marked}>A Bit More About Me</h1>
-      <img src="/picture.png" alt="author profile picture" />
+      <img src="/picture.jpg" alt="author profile picture" />
       <p>
         {/*
             programming portfolio examples

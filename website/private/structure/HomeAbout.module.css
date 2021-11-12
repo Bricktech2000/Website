@@ -34,7 +34,7 @@
   width: 100%;
 
   border-radius: 100vh;
-  border: 0.1em solid var(--color-d);
+  box-shadow: var(--bs);
   /* https://stackoverflow.com/questions/23490320/gap-between-border-and-image-when-border-radius-is-added */
   background: var(--color-d);
   background-clip: border-box;
