@@ -2,9 +2,6 @@
 .Marked * {
   display: block;
 }
-.Marked {
-  overflow: hidden;
-}
 
 .Marked h2,
 h2.Marked {
@@ -153,8 +150,11 @@ blockquote.Marked {
 .Marked a,
 a.Marked {
   display: inline-block;
+  position: relative;
+  top: 0;
   color: var(--color-l);
   text-decoration: none;
+  transition: top 0.25s ease-in-out;
   -webkit-tap-highlight-color: transparent;
 }
 /*https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline*/
@@ -162,16 +162,25 @@ a.Marked {
 a.Marked::after {
   display: block;
   content: '';
-  width: 0%;
-  margin-top: -0.25em;
-  height: 0.075em;
-  background: var(--color);
-  transition: background 0.125s ease, width 0.125s ease;
+  position: absolute;
+  top: -0.125em;
+  right: -0.75em;
+  bottom: -0.125em;
+  left: -0.75em;
+  border-radius: 0.25em;
+  z-index: -1;
+
+  opacity: 0;
+  background: var(--color-l);
+  transition: opacity 0.125s ease-in-out;
+}
+.Marked a:hover,
+a.Marked:hover {
+  top: -0.125em;
 }
 .Marked a:hover::after,
 a.Marked:hover::after {
-  background: var(--color-l);
-  width: 100%;
+  opacity: 0.25;
 }
 
 .Marked a[name] {
