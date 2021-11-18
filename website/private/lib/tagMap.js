@@ -66,4 +66,5 @@ export default {
   'Discord Bot': 'u',
   'Wolfram|Alpha API': 'u',
   RC: 'u',
+  Philosophy: '',
 };
