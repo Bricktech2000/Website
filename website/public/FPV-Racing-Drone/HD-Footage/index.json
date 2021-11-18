@@ -2,7 +2,7 @@
   "title": "HD Footage",
   "date": "2021-03-10",
   "type": "hardware",
-  "tags": ["Demo", "Hardware", "3D Printing", "Drone"],
+  "tags": ["Demo", "Hardware", "3D Printing", "Drone", "RC"],
   "btns": {
     "Demo Footage": "#demo",
     "Parts List": "#parts"

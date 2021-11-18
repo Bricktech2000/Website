@@ -2,7 +2,7 @@
   "title": "Drone Build",
   "date": "2020-10-28",
   "type": "hardware",
-  "tags": ["Blog", "Hardware", "Electronics", "Soldering", "3D Printing"],
+  "tags": ["Blog", "Hardware", "Electronics", "Soldering", "3D Printing", "RC"],
   "btns": {
     "Building Images": "#img",
     "Flight Demo": "#demo"

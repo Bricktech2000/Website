@@ -2,7 +2,7 @@
   "title": "Virutal Prototype",
   "date": "2020-06-22",
   "type": "hardware",
-  "tags": ["Blog", "Photo Editing"],
+  "tags": ["Blog", "Photo Editing", "RC"],
   "btns": {
     "Prototype Image": "#img",
     "Parts List": "#list"

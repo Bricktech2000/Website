@@ -2,7 +2,7 @@
   "title": "Demo on 6S",
   "date": "2020-11-14",
   "type": "hardware",
-  "tags": ["Blog", "Demo"],
+  "tags": ["Blog", "Demo", "RC"],
   "btns": {
     "6S Demo": "#demo"
   },
