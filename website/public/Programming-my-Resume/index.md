@@ -1,6 +1,6 @@
 ## The Idea
 
-Up until about a month ago, my resume was tailored primarily for teenager jobs. However, to stand any chance of getting employed as a fresh Computer Science student at [uOttawa](https://www2.uottawa.ca/en), I knew I would have to design a brand new resume from scratch.
+Up until about a month ago, my resume was tailored primarily for teenage jobs. However, to stand any chance of getting employed as a fresh Computer Science student at [uOttawa](https://www2.uottawa.ca/en), I knew I would have to design a brand new resume from scratch.
 
 After a [bit](https://www.youtube.com/watch?v=r_Wf532f5X4) [of](https://www.youtube.com/watch?v=Tt08KmFfIYQ) [research](https://www.youtube.com/watch?v=BYUy1yvjHxE) about what content to include or leave out of a resume, I was faced with a dilemma:
 
@@ -19,7 +19,7 @@ A sensible person would likely use something along the lines of [Google Docs](ht
 There are numerous advantages of using a markup language to design a resume as opposed to using a UI-based program like [Google Docs](https://www.google.ca/docs/about/) or [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word). Here are a few:
 
 - Any text editor can be used to edit markup files since they are nothing more than normal text files
-- Global presentation can be changed in a few seconds by modifying the stylesheet directly
+- The global presentation can be changed in a few seconds by modifying the stylesheet directly
 - They can be parsed by text processing tools such as version control software
 
 [//]: # 'https://dev.to/practicalprogramming/advantages-of-document-markup-languages-vs-wysiwyg-editors-9f6'
@@ -30,4 +30,4 @@ In a nutshell, markup languages are way more **powerful** and **flexible** than 
 
 Since markup files are supported by version control software, every change I make to my resume will be recorded through `git commit`s. As it is currently [hosted publicly on Github](https://github.com/Bricktech2000/Resume), anyone can view every version of my resume, all the way back to when it was an entirely empty document!
 
-I have a feeling that using `HTML` to design a resume is one of those great ideas that turn out not to be so great when I eventually realize that a superior technology already exists. Only time will tell...
+I have a feeling that using `HTML` to design a resume is one of those great ideas that turn out not to be so great when I eventually realize that superior technology already exists. Only time will tell...
