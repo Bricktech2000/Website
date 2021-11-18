@@ -2,7 +2,14 @@
   "title": "2-inch Racing Drone",
   "date": "2019-12-12",
   "type": "hardware",
-  "tags": ["Demo", "Work in Progress", "Hardware", "Electronics", "Drone"],
+  "tags": [
+    "Demo",
+    "Work in Progress",
+    "Hardware",
+    "Electronics",
+    "Drone",
+    "RC"
+  ],
   "btns": {
     "Demo Video": "#demo",
     "Drone Image": "#img",
