@@ -29,12 +29,12 @@ h2.Marked {
 }
 .Marked em,
 em.Marked {
-  display: inline-block;
+  display: inline;
   font-style: italic;
 }
 .Marked strong,
 strong.Marked {
-  display: inline-block;
+  display: inline;
   font-weight: normal;
   color: var(--title);
 }
