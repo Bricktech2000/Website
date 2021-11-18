@@ -31,7 +31,8 @@ Somehow, that's the truth. All the stars just happened to be aligned. I can't ex
 - Drinking alcohol &mdash; I just can't seem to understand the point of it
 - Browsing social media &mdash; I find it's such a waste of my time
 - Eating junk food &mdash; Eating healthy is easier than I thought
-- Listening to music &mdash; It makes no difference on my ability to focus
+- Listening to music &mdash; It doesn't really improve my ability to focus
+- Playing video games &mdash; I rarely ever spend the time to play games
 
 I hadn't realized that before, but I seem to unconsciously lower my dopamine baseline by not engaging in those types of highly-stimulating behaviors. And, as explained in the previous section, I believe that a lower dopamine baseline directly correlates with higher levels of motivation and focus.
 
