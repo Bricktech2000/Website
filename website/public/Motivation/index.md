@@ -51,4 +51,6 @@ However, it is crucial to understand that lowering your dopamine base level can'
 
 ## Final Thoughts
 
-This post discussed my opinion on motivation. Nevertheless, committing to this lifestyle without a thorough understanding of what it implies isn't a great idea. Do your own research, and take the decisions you believe are best for you.
+I've seen many people use artificial sources of motivation such as the [Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) or giving themselves treats after having been productive. However, I seek motivation the other way around: I try and eliminate all unnecessary stimuli from my life, allowing me to feel naturally motivated to do tasks that would otherwise feel dull.
+
+This post discussed my opinion on motivation. Nevertheless, committing to this lifestyle without a thorough understanding of what it implies isn't a great idea. Do your own research, and make the decisions you believe are best for you.
