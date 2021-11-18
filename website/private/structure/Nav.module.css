@@ -25,7 +25,7 @@
 
 .Nav:hover i {
   color: var(--color-l);
-  left: -0.05em;
+  left: -0.0625em;
 }
 
 @keyframes fade-in {
