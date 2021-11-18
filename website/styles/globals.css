@@ -43,7 +43,7 @@ body {
   font-size: clamp(
     calc(calc(100vh + 100vw) / 125),
     1.75rem,
-    calc(calc(100vh + 100vw) / 50)
+    calc(calc(100vh + 100vw) / 55)
   );
   font-weight: 300;
   line-height: 1.6;
