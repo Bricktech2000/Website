@@ -45,6 +45,10 @@
   grid-area: contact;
   flex-direction: column;
 }
+/* prevent GetInTouch from wrapping */
+.Footer .contact > * {
+  flex-wrap: nowrap;
+}
 /*
 https://css-tricks.com/almanac/properties/f/fill/
 https://stackoverflow.com/questions/39743161/svg-fill-color-not-working
