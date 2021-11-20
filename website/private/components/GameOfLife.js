@@ -21,7 +21,7 @@ const GameOfLife = (props) => {
 
   const canvasRef = useCanvas(([canvas, ctx]) => {
     const style = getComputedStyle(document.documentElement);
-    ctx.fillStyle = style.getPropertyValue('--black');
+    ctx.fillStyle = style.getPropertyValue('--bg');
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     class Cell {
@@ -48,7 +48,7 @@ const GameOfLife = (props) => {
       draw = () => {
         if (this.alive != this.nextAlive) {
           ctx.fillStyle = style.getPropertyValue(
-            ['--black', '--color-d', '--color-l'][this.nextAlive]
+            ['--bg', '--color-d', '--color-l'][this.nextAlive]
           );
           ctx.fillRect(this.x, this.y, this.s, this.s);
         }
