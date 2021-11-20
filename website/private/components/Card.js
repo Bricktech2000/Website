@@ -19,7 +19,9 @@ const Card = (props) => {
 
   useEffect(() => {
     linkRef.current.addEventListener('touchstart', touchStartHandler);
+    linkRef.current.addEventListener('mouseenter', touchStartHandler);
     document.body.addEventListener('touchend', touchEndHandler);
+    linkRef.current.addEventListener('mouseleave', touchEndHandler);
     return () => {
       document.body.removeEventListener('touchend', touchEndHandler);
     };

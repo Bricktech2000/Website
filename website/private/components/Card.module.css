@@ -62,20 +62,17 @@
   margin: var(--padding);
 }
 
-.card:hover,
 .card.hover {
   top: -0.25em;
   z-index: 1;
   border-radius: 0.25em 0.25em 0 0;
   background: var(--card-bg-l);
 }
-.card:hover .popup,
 .card.hover .popup {
   opacity: 1;
   box-shadow: var(--bs);
   background: var(--card-bg-l);
 }
-.card:hover .title,
 .card.hover .title {
   z-index: 2;
   border-radius: 0;
