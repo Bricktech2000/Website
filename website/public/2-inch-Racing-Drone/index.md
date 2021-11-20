@@ -28,10 +28,10 @@ In order to build such a machine, _soldering_ and _problem-solving_ skills are a
 #list
 Here is a parts list of the components used:
 
-- [Avan 2" Propellers](https://www.banggood.com/6-Pairs-Emax-AVAN-Micro-2-Inch-4-blade-RC-Drone-FPV-Racing-Propeller-Red-for-11XX-4500-6500KV-Motor-p-1277598.html?rmmds=search&ID=228&cur_warehouse=CN) &#8212; `6 pairs`
+- [Avan 2" Propellers](https://www.banggood.com/6-Pairs-Emax-AVAN-Micro-2-Inch-4-blade-RC-Drone-FPV-Racing-Propeller-Red-for-11XX-4500-6500KV-Motor-p-1277598.html?rmmds=search&ID=228&cur_warehouse=CN) &mdash; `6 pairs`
 - [GepRC Hummingbird frame, 110mm](https://www.banggood.com/GEPRC-GEP-HX2-Hummingbird-110mm-Micro-FPV-Racing-X-Frame-Carbon-Fiber-Supports-Runcam-Micro-Swift-p-1200219.html?rmmds=search)
-- [Eachine 7500kv 1104 brushless motors](https://www.banggood.com/4X-Eachine-1104-7500KV-2S-Brushless-Motor-For-Eachine-Aurora-90-100-Mini-FPV-Racer-p-1187167.html?rmmds=search&cur_warehouse=CN) &#8212; `4x`
-- [Aniversary Special Eachine Minicube Flytower](https://www.banggood.com/Anniversary-Special-Edition-Eachine-Minicube-Flytower-20x20mm-Compatible-Frsky-Flysky-DSM-RX-F3-ESC-p-1179553.html?rmmds=search&ID=529570&cur_warehouse=CN) &#8212; which includes a _Flight Controller_, a _Receiver_ and a `4-in-1` _ESC_
+- [Eachine 7500kv 1104 brushless motors](https://www.banggood.com/4X-Eachine-1104-7500KV-2S-Brushless-Motor-For-Eachine-Aurora-90-100-Mini-FPV-Racer-p-1187167.html?rmmds=search&cur_warehouse=CN) &mdash; `4x`
+- [Aniversary Special Eachine Minicube Flytower](https://www.banggood.com/Anniversary-Special-Edition-Eachine-Minicube-Flytower-20x20mm-Compatible-Frsky-Flysky-DSM-RX-F3-ESC-p-1179553.html?rmmds=search&ID=529570&cur_warehouse=CN) &mdash; which includes a _Flight Controller_, a _Receiver_ and a `4-in-1` _ESC_
 - [Gaoneng 750mAh 2S Lipo Battery](https://www.banggood.com/Gaoneng-GNB-7_4V-750mAh-80C160C-2S-Lipo-Battery-XT30-Plug-for-RC-Model-p-1293407.html?rmmds=search&cur_warehouse=CN)
 
 In the next post, we will make it fly for the first time on camera. See you there!

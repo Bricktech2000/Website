@@ -12,7 +12,7 @@ There is a quote I really like. Here goes:
 
 > Many backup because they have seen the dark side of failing to do so, blessed are those that backup who have not seen!
 >
-> &#8212; T.E. Ronneberg
+> &mdash; T.E. Ronneberg
 
 I never liked making backups. However, the day I lost _gigabytes_ of data because of a hard drive failure, I decided I would make backups of everything I do in the digital world. As soon as I program something... **Make a backup**. Whenever I do a school assignment... **Again, backup**. Because of that, I quickly ran into an annoying issue: my backups were all over the place: in USB sticks, in the cloud, in external hard drives... It was a mess. This is when I started looking for _cloud backup_ solutions.
 

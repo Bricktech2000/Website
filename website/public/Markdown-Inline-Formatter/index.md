@@ -24,7 +24,7 @@ This program is fairly simple. In order to allow the user to edit the formatted 
 > - Very crappy `undo` and `redo` shortcuts
 > - Extremely buggy user interface
 >
-> &#8212; From the project's `readme`
+> &mdash; From the project's `readme`
 
 ## Moving Forward
 

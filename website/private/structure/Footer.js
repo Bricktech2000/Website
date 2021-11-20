@@ -35,7 +35,7 @@ const Footer = (props) => {
           <Cloudflare />
         </div>
         <div>
-          &copy; {new Date().getFullYear()} Emilien Breton &#8212;{' '}
+          &copy; {new Date().getFullYear()} Emilien Breton &mdash;{' '}
           <Link href="/legal/">
             <a className={marked}>Legal</a>
           </Link>

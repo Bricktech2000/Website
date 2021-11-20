@@ -25,10 +25,10 @@ For anyone interested, here is a parts list for this flamethrower:
 - 1 Steel M4 nut
 - 2 `2"` Stainless Steel Hose Clamp
 - 1 `3"` Stainless Steel Hose Clamp
-- 1 [Butane Refill Can](https://www.amazon.ca/Ronson-Multi-Fill-Butane-165-Gram/dp/B00QL5DW3A/) &#8212; `165g`
-- 1 [Barbecue Lighter](https://www.homedepot.ca/product/grillpro-mini-barbecue-and-utility-lighters-3-pack-/1000724000) &#8212; hard shaft
+- 1 [Butane Refill Can](https://www.amazon.ca/Ronson-Multi-Fill-Butane-165-Gram/dp/B00QL5DW3A/) &mdash; `165g`
+- 1 [Barbecue Lighter](https://www.homedepot.ca/product/grillpro-mini-barbecue-and-utility-lighters-3-pack-/1000724000) &mdash; hard shaft
 - 1 `2"` PVC cap
-- 1 `1.5"` ABS pipe &#8212; `110 mm` long
+- 1 `1.5"` ABS pipe &mdash; `110 mm` long
 
 ## The Outcome
 

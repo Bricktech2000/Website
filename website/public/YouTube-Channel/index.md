@@ -11,10 +11,10 @@ I really wanted to start sharing everything I do with the internet, and YouTube 
 
 As I said previously, I will share a bunch of my projects on my YouTube channel. This includes the following:
 
-- **RC stuff** &#8212; _drones, cars, boats_
-- **3D designing and printing** &#8212; _time lapses, tutorials_
-- **Programming** &#8212; _arduinos, websites..._
-- **Electronics** &#8212; _robotics, circuits, PCBs_
+- **RC stuff** &mdash; _drones, cars, boats_
+- **3D designing and printing** &mdash; _time lapses, tutorials_
+- **Programming** &mdash; _arduinos, websites..._
+- **Electronics** &mdash; _robotics, circuits, PCBs_
 - Anything else I feel like sharing!
 
 A few posts on this website will have a corresponding video on my YouTube channel, don't forget to [check it out](https://www.youtube.com/channel/UCGj6pfxZ0XYJU29XNwXPPxg/featured)!

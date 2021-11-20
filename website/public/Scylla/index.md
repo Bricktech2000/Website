@@ -31,7 +31,7 @@ Here are some errors and warnings and how to fix them:
 
 > Many backup because they have seen the dark side of failing to do so, blessed are those that backup who have not seen!
 >
-> &#8212; T.E. Ronneberg
+> &mdash; T.E. Ronneberg
 
 Even if it might seem like it, just remember that Scylla is... _How would I say_... not a great way to backup files. Unless you want to increase the probability of losing all your files, don't use Scylla to make backups!
 

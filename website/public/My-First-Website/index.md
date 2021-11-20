@@ -17,6 +17,6 @@ A quote I really like goes as follows:
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
 >
-> &#8212; Harold Abelson
+> &mdash; Harold Abelson
 
 Despite that, my first website is just a jumbled mess of unreadable code. Looking back however, it was simply a stepping stone into the right direction. Who knows... maybe one day, I will look back at [this very website](https://github.com/Bricktech2000/Website) the same way I look back at [my first website](./client/index.html).
