@@ -38,6 +38,7 @@
   margin: 0;
 }
 .popupContainer {
+  top: -1px;
   position: relative;
   padding: 0;
 }
