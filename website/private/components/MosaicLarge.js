@@ -3,17 +3,15 @@ import Button from './Button';
 import useParallax from '../lib/useParallax';
 
 import styles from './MosaicLarge.module.css';
-import RandContext from '../lib/RandContext';
 
 //https://www.emgoto.com/storing-values-with-useref/
 var globalClickCount = 4;
 
 const MosaicLarge = (props) => {
-  const rand = useContext(RandContext)();
-
   const parallaxRef = useParallax((current, value) => {
-    current.style.transform = `translateY(calc(0.5em * ${(value - 0.25) *
-      -16}))`;
+    current.style.transform = `translateY(calc(0.5em * ${
+      (value - 0.25) * -16
+    }))`;
   });
 
   const [clickCount, setClickCount] = useState(globalClickCount);
@@ -21,12 +19,9 @@ const MosaicLarge = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.MosaicLarge} ref={parallaxRef}>
-        {props.children.slice(0, Math.pow(2, clickCount)).map((child) =>
-          React.cloneElement(child, {
-            dir: rand() > 0.5,
-            inv: rand() > 0.5,
-          })
-        )}
+        {props.children
+          .slice(0, Math.pow(2, clickCount))
+          .map((child) => React.cloneElement(child))}
       </div>
       {Math.pow(2, clickCount) < props.children.length && (
         <Button
