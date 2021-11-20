@@ -28,6 +28,8 @@
   border-radius: 0.25em;
 }
 .title {
+  flex: 1;
+  align-items: center;
   border-radius: 0.25em;
   background: var(--card-bg);
   transition: background-color 0.125s ease-in-out;
