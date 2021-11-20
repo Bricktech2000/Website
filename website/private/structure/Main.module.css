@@ -2,7 +2,6 @@
   grid-area: main;
   flex-direction: column;
 
-  overflow: hidden;
   padding: 1.5em;
   min-height: 50vh;
 }

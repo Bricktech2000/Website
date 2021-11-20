@@ -10,8 +10,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10em;
-}
-.container > *:not(.MosaicLarge) {
-  z-index: 0;
 }
