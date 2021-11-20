@@ -10,6 +10,21 @@ import { Marked as marked } from './Marked.module.css';
 const Card = (props) => {
   const linkRef = useRef();
 
+  const touchStartHandler = () => {
+    linkRef.current.classList.add(styles.hover);
+  };
+  const touchEndHandler = () => {
+    linkRef.current.classList.remove(styles.hover);
+  };
+
+  useEffect(() => {
+    linkRef.current.addEventListener('touchstart', touchStartHandler);
+    document.body.addEventListener('touchend', touchEndHandler);
+    return () => {
+      document.body.removeEventListener('touchend', touchEndHandler);
+    };
+  }, []);
+
   const CardHtml = React.forwardRef((props2, ref) => (
     <a ref={linkRef} className={styles.card + ' fade-right-3'} {...props2}>
       <img
