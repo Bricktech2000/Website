@@ -6,10 +6,10 @@ import Loading from '../components/Loading';
 
 import { Marked as marked } from '../components/Marked.module.css';
 
-const HomePostList = (props) => {
+const HomePostList = () => {
   const info = useDbGet('all');
 
-  if (typeof info === 'undefined') return <Loading height="1000vh" />;
+  if (typeof info === 'undefined') return <Loading height="10000vh" />;
 
   return (
     <React.Fragment>
