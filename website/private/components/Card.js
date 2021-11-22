@@ -10,21 +10,18 @@ import { Marked as marked } from './Marked.module.css';
 const Card = (props) => {
   const linkRef = useRef();
 
-  const touchStartHandler = () => {
-    linkRef.current.classList.add(styles.hover);
-  };
-  const touchEndHandler = () => {
-    linkRef.current.classList.remove(styles.hover);
-  };
+  const touchStartHandler = () => linkRef.current.classList.add(styles.hover);
+  const touchEndHandler = () => linkRef.current.classList.remove(styles.hover);
 
   useEffect(() => {
+    touchEndHandler();
     linkRef.current.addEventListener('touchstart', touchStartHandler);
     linkRef.current.addEventListener('mouseenter', touchStartHandler);
-    document.body.addEventListener('touchend', touchEndHandler);
     linkRef.current.addEventListener('mouseleave', touchEndHandler);
-    return () => {
-      document.body.removeEventListener('touchend', touchEndHandler);
-    };
+  }, [linkRef.current]);
+  useEffect(() => {
+    document.body.addEventListener('touchend', touchEndHandler);
+    return () => document.body.removeEventListener('touchend', touchEndHandler);
   }, []);
 
   const CardHtml = React.forwardRef((props2, ref) => (
