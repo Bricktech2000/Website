@@ -1,4 +1,5 @@
 export default [
+  'FPV-Racing-Drone',
   'Motivation',
   'Programming-my-Resume',
   'Learning-Vim-Key-Bindings',
@@ -7,7 +8,6 @@ export default [
   'Discord-Assistant',
   'Edgie',
   'Dragon-Saliva',
-  'FPV-Racing-Drone',
   'User-Tracker',
   'Clean-Bash-Prompt',
   'Mini-DIY-Flamethrower',

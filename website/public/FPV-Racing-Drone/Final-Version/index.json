@@ -1,0 +1,19 @@
+{
+  "title": "Final Version",
+  "date": "2021-11-25",
+  "type": "hardware",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Drone",
+    "RC"
+  ],
+  "btns": {
+    "Final Version Photo": "#img",
+    "Parts List": "#list"
+  },
+  "desc": ""
+}
