@@ -67,7 +67,9 @@
     "Outdated",
     "Discord Bot",
     "Wolfram|Alpha API",
-    "RC"
+    "RC",
+    "SSH",
+    "SFTP"
   ],
   "btns": {
     "Github": "https://github.com/Bricktech2000/Website",

@@ -1,0 +1,24 @@
+{
+  "title": "FileSync",
+  "date": "2021-11-26",
+  "type": "software",
+  "tags": [
+    "Showcase",
+    "Software",
+    "Hardware",
+    "Git",
+    "Web",
+    "Watchdog",
+    "Security",
+    "Scripting",
+    "Bash",
+    "Linux",
+    "SSH",
+    "SFTP"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/FileSync",
+    "How it Works": "#works"
+  },
+  "desc": "A symmetrical decentralized file syncing system. Explaining how this program allows me to synchronize my files accross different machines anywhere in the world."
+}

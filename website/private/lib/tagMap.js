@@ -46,6 +46,7 @@ export default {
   'Android Studio': 'u',
   Scripting: 'b',
   Powershell: '',
+  Bash: '',
   vJoySerialFeeder: 'u',
   Learning: 'b',
   Finances: '',
@@ -67,4 +68,6 @@ export default {
   'Wolfram|Alpha API': 'u',
   RC: 'u',
   Philosophy: '',
+  SSH: 'u',
+  SFTP: 'u',
 };

@@ -1,4 +1,5 @@
 export default [
+  'FileSync',
   'FPV-Racing-Drone',
   'Motivation',
   'Programming-my-Resume',
