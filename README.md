@@ -2,7 +2,7 @@
 
 # Website
 
-My personal website, for sharing my projects and blogging about tech-related stuff!
+A portfolio for sharing various projects
 
 ## Overview
 

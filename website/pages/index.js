@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <App
       title="Project Portfolio"
-      description="A website for sharing my projects and blogging about tech-related stuff!"
+      description="A portfolio for sharing various projects"
       image="picture.jpg"
     >
       <HomeHeader />
