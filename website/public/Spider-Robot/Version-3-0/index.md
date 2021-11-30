@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> The program and STL files below have been updated on version 3.1 of this spider robot. If you want to build it yourself, use the updated parts list in the next post instead. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ![render of 3d printed hexapod spider robot](Version-3-0/Complete.jpg)
 
 ## Demo Video
@@ -47,7 +55,7 @@ This is a very good question. if you want to make your own spider robot, you nee
 - `6x` [Tibia Piece](Version-3-0/Tibia%205%20v2.stl)
 - `6x` [Femur Piece](Version-3-0/Femur%203%20v8.stl)
 - `6x` [Hip Piece](Version-3-0/Hip%203%20v12.stl)
-- `1x` [Upper Body Piece](Version-3-0/Body%20Cover%202%20v30.stl)
+- `1x` [Upper Body Piece](Version-3-0/Body%20Cover%202%20v32.stl)
 - `1x` [Lower Body Piece](Version-3-0/Body%206%20v22.stl)
 
 It is still recommended to contact me if you want to build an exact replica of my robot, since no schematics or wiring diagrams are available yet.
