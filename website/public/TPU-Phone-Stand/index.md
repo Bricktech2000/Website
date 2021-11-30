@@ -23,4 +23,4 @@ Here are some of its defining features:
 
 ## How to get one
 
-If you wish to print one for yourself, here are the [STL files](./Phone%20Holder%202%20v2.stl). It is ment to be printed in a rather stiff TPU filament in order to be both flexible and rigid. I also used `60%` infill in order to get an even stiffer print than with the default `20%` infill percentage. Don't even attempt to print it in _PLA_ as it is simply not going to work.
+If you wish to print one for yourself, here are the [STL files](./Phone%20Holder%202%20v2.stl). It is meant to be printed in a rather stiff TPU filament in order to be both flexible and rigid. I also used `60%` infill in order to get an even stiffer print than with the default `20%` infill percentage. Don't even attempt to print it in _PLA_ as it is simply not going to work.

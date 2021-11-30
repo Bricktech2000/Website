@@ -14,7 +14,7 @@ Above is a photo of the first concrete prototype I made, about 4 months ago. How
 
 - A hollow `20-face` shell (an _icosahedron_) which is made to rip apart into 20 sharp triangles when the explosive detonates.
 - A `15mm` steel sphere with [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch) all around it that make a spark when they hit the outer shell.
-- Some explosive gas (i.e. _hydrogen_) that fills the shell, which is ment to explode whenever the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch) make a spark.
+- Some explosive gas (i.e. _hydrogen_) that fills the shell, which is menat to explode whenever the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch) make a spark.
 
 Long story short, after one throws the grenade, it hits the floor, at which point the [gun caps](https://www.google.ca/search?q=paper+gun+caps&safe=strict&tbm=isch) around the steel sphere hit the shell, which makes a spark, which makes the explosive gas detonate, which makes the whole thing explode. However, one problem killed the whole design: the explosive gas slowly leaked from the grenade, which was not completely airtight since it was [3D-printed](https://en.wikipedia.org/wiki/3D_printing).
 

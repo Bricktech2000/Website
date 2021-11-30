@@ -25,7 +25,7 @@ In order to understand better, here is a picture of the inside of the generator:
 
 ![hho generator internals](./internals.jpg)
 
-Almost all of it is made out of _stainless steel_ or _aluminum_, so that it doesn't [oxidize](https://en.wikipedia.org/wiki/Rust). However, I counldn't find stainless washers at the hardware store, so I had to use steel ones. Unfortunately, this means that they were vulnerable to [oxidization](https://en.wikipedia.org/wiki/Rust), which explains why they rusted. At least, since they are not ment to be in electrical contact with the water, this is not that big of a deal at all.
+Almost all of it is made out of _stainless steel_ or _aluminum_, so that it doesn't [oxidize](https://en.wikipedia.org/wiki/Rust). However, I counldn't find stainless washers at the hardware store, so I had to use steel ones. Unfortunately, this means that they were vulnerable to [oxidization](https://en.wikipedia.org/wiki/Rust), which explains why they rusted. At least, since they are not meant to be in electrical contact with the water, this is not that big of a deal at all.
 
 In order for this generator to work, three of the screws are connected to the positive end of a battery, and the three other ones are connected to the negative side. Using screws is a very clever way to build such a powerful generator: they have about twice the surface area of metal rods because of their threads. Once I connect a very powerful battery to both terminals, the [_electrolysis_](https://en.wikipedia.org/wiki/Electrolysis_of_water) can start!
 

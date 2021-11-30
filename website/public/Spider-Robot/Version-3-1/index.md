@@ -22,7 +22,7 @@ At this point, anyone that has any experience with electronics would scream at m
 
 > Just feed the motors constant voltage!
 
-And, as it turns out, this is exactly what a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator) is ment to achieve.
+And, as it turns out, this is exactly what a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator) is meant to achieve.
 
 ## The New Version
 
