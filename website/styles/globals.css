@@ -41,7 +41,7 @@ body {
   /*https://www.hostinger.com/tutorials/best-html-web-fonts*/
   font-family: var(--sans);
   font-size: clamp(
-    calc(calc(100vh + 100vw) / 125),
+    calc(calc(100vh + 100vw) / 140),
     1.75rem,
     calc(calc(100vh + 100vw) / 55)
   );
