@@ -1,4 +1,5 @@
 export default [
+  'Conceptual-Note-Taking',
   'FileSync',
   'FPV-Racing-Drone',
   'Motivation',

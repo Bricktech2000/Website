@@ -1,0 +1,23 @@
+{
+  "title": "Conceptual Note-Taking",
+  "date": "2021-12-12",
+  "type": "Blog",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Git",
+    "Web",
+    "Demo",
+    "Learning",
+    "Markdown",
+    "Modular",
+    "Notion",
+    "Organization"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Notes",
+    "Notes on Notion": "https://www.notion.so/Notes-a61f38520e91467e8d968fa8795f3b5a",
+    "Notes on Github": "https://github.com/Bricktech2000/Notes/blob/master/Notes/Notes%20a61f38520e91467e8d968fa8795f3b5a.md"
+  },
+  "desc": "A better way to take notes. Writing about conceptual notes, and the strategies I use to take class notes efficiently."
+}

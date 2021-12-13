@@ -46,7 +46,6 @@ export default {
   'Android Studio': 'u',
   Scripting: 'b',
   Powershell: '',
-  Bash: '',
   vJoySerialFeeder: 'u',
   Learning: 'b',
   Finances: '',
@@ -70,4 +69,6 @@ export default {
   Philosophy: '',
   SSH: 'u',
   SFTP: 'u',
+  Notion: 'i',
+  Organization: '',
 };
