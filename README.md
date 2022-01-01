@@ -19,10 +19,10 @@ To get started with this website, first run the development server:
 ```bash
 cd website/
 npm install
-npm run dev
+npm run dev -- -p 3000
 ```
 
-Then, navigate to [http://localhost:80](http://localhost:80) to see the live website.
+Then, navigate to [http://localhost:3000](http://localhost:3000) to see the live website.
 
 ## Deployment
 
@@ -32,8 +32,10 @@ To deploy the website, build the project and run the server:
 cd website/
 npm install
 npm run build
-npm start
+npm start -- -p 3000
 ```
+
+Then, navigate to [http://localhost:3000](http://localhost:3000) to see the live website.
 
 ## Upgrading to HTTPS
 
