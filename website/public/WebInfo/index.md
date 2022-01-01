@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> WebInfo was taken down on January 1st, 2022 as alternatives such as [Grabify](https://grabify.link/) are easier and quicker to set up. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## How it All Started
 
 One night, I was casually watching a YouTube video... when sudently, it started buffering. I didn't think too much of what had just happened. However, a few minutes later, my whole WiFi network started to lag very badly. The router was working fine, the internet connection was randomly dropping, the _ping_ command was timing out from time to time... After a bit of investigation, I finally figured out what was going on: someone was running a [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack on me.
