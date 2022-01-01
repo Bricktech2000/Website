@@ -1,6 +1,4 @@
 const https = false;
-const dev = false;
-//import { domain } from './private/lib/consts.js';
 const domain = 'emilien.ca';
 
 const http = require('http');
@@ -10,7 +8,7 @@ const { parse } = require('url');
 const next = require('next');
 const fs = require('fs');
 //const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
 var p = `/etc/letsencrypt/live/${domain}/`;

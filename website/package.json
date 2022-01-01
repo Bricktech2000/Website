@@ -7,8 +7,8 @@
     "_dev2": "https://stackoverflow.com/questions/53948521/node-options-is-not-recognized-as-an-internal-or-external-command",
     "_dev3": "https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "next build",
-    "start": "node server.js"
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
