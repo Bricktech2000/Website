@@ -56,9 +56,11 @@ https://stackoverflow.com/questions/28652648/how-to-use-external-svg-in-html
 yeah just using reUpdate's `yield include`
 */
 .Footer div svg {
-  fill: var(--title);
   width: 1.25em;
   height: auto;
+}
+.Footer div svg path[fill='#000000'] {
+  fill: #dddddd;
 }
 
 @media (max-aspect-ratio: 1/1) {

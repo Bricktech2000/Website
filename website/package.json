@@ -5,7 +5,8 @@
   "scripts": {
     "_dev1": "https://nextjs.org/docs/advanced-features/debugging",
     "_dev2": "https://stackoverflow.com/questions/53948521/node-options-is-not-recognized-as-an-internal-or-external-command",
-    "dev": "cross-env NODE_OPTIONS='--trace-warnings' next dev -p 80",
+    "_dev3": "https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "next build",
     "start": "node server.js"
   },
@@ -18,9 +19,10 @@
     "web-push": "^3.4.4"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.1.2",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.2"
+    "eslint-config-next": "^11.1.2",
+    "webpack": "^5.65.0"
   }
 }

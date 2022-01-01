@@ -1,4 +1,5 @@
-//https://medium.com/frontend-digest/how-to-import-svgs-into-nextjs-8ec6100e613f
+// https://medium.com/frontend-digest/how-to-import-svgs-into-nextjs-8ec6100e613f
+// https://stackoverflow.com/questions/64376001/pass-options-to-the-builtin-svgo-from-svgr-webpack
 
 module.exports = {
   webpack(config) {
@@ -9,9 +10,7 @@ module.exports = {
           loader: '@svgr/webpack',
           options: {
             svgoConfig: {
-              plugins: {
-                removeViewBox: false,
-              },
+              plugins: [{ name: 'removeViewBox', active: false }],
             },
           },
         },
@@ -20,6 +19,6 @@ module.exports = {
 
     return config;
   },
-  //https://nextjs.org/docs/api-reference/next.config.js/trailing-slash
+  // https://nextjs.org/docs/api-reference/next.config.js/trailing-slash
   trailingSlash: true,
 };

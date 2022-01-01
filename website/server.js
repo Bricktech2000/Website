@@ -21,7 +21,7 @@ var credentials = {
 
 //start an HTTP redirect server
 if (https) {
-  var httpServer = http.createServer(function(req, res) {
+  var httpServer = http.createServer(function (req, res) {
     res.writeHead(301, {
       Location: `https://${req.headers['host']}${req.url}`,
     });
