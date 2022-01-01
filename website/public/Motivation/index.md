@@ -25,7 +25,7 @@ Consequently, I believe people are less motivated because **they have gotten use
 
 > I was lucky.
 
-Somehow, that's the truth. All the stars just happened to be aligned. I can't explain why, but I don't enjoy the things that usually release an excess of dopamine. These include:
+Somehow, that's the truth. All the stars just happened to be aligned. I can't explain why, but I don't enjoy low-effort habits that usually release an excess of dopamine. These include:
 
 - Drinking coffee &mdash; I deliberately chose not to consume caffeine
 - Drinking alcohol &mdash; I just can't seem to understand the point of it
@@ -34,7 +34,7 @@ Somehow, that's the truth. All the stars just happened to be aligned. I can't ex
 - Listening to music &mdash; It doesn't really improve my ability to focus
 - Playing video games &mdash; I rarely ever spend the time to play games
 
-I hadn't realized that before, but I seem to unconsciously lower my dopamine baseline by not engaging in those types of highly-stimulating behaviors. And, as explained in the previous section, I believe that a lower dopamine baseline directly correlates with higher levels of motivation and focus.
+I hadn't realized that before, but I seem to unconsciously lower my dopamine baseline by not engaging in those types of highly stimulating, low-effort behaviors. And, as explained in the previous section, I believe that a lower dopamine baseline directly correlates with higher levels of motivation and focus.
 
 [//]: # "One could say I live in a world in which I don't really have to look for motivation, as it just finds me; a world in which I don't really have to put in any effort, as I just enjoy what I do."
 
