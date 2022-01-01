@@ -8,7 +8,8 @@
     "_dev3": "https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
