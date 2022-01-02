@@ -1,0 +1,21 @@
+{
+  "title": "Stack-Based CPU",
+  "date": "2022-01-02",
+  "type": "Software",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Rust",
+    "Git",
+    "Demo",
+    "Cellular Automaton",
+    "Learning",
+    "Low-level"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Stack-Based-CPU",
+    "Demo Screenshots": "#demo"
+  },
+  "desc": "A custom stack-based CPU architecture. Explaining the motivation behind the project and discussing design decisions."
+}
