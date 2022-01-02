@@ -74,7 +74,8 @@
     "SSH",
     "SFTP",
     "Notion",
-    "Organization"
+    "Organization",
+    "Low-level"
   ],
   "btns": {
     "Button": "https://github.com/Bricktech2000/Website"

@@ -10,6 +10,7 @@ export default {
   HTML: 'i',
   CSS: 'i',
   'C++': 'i',
+  Rust: 'i',
   Python: 'i',
   Java: 'i',
   Git: 'i',
@@ -71,4 +72,5 @@ export default {
   SFTP: 'u',
   Notion: 'i',
   Organization: '',
+  'Low-level': 'i',
 };
