@@ -83,12 +83,12 @@ p.Marked {
 .Marked pre code,
 code.Marked,
 pre.Marked code {
-  transition: background-color 0.25s ease-in-out;
   font-family: var(--mono);
   font-weight: normal;
-  font-size: 0.66em;
-  background: var(--card-bg);
-  border-radius: 0.25em;
+  font-size: 0.66em; /* 2/3 of normal */
+  border: var(--border);
+  border-radius: var(--border-radius);
+  border-width: 0.075em; /* divided by (2/3) */
   box-shadow: var(--bs);
 }
 .Marked code,
@@ -96,7 +96,7 @@ code.Marked {
   display: inline-block;
   vertical-align: middle;
   padding: 0.125em 0.75em;
-  border-radius: 0.25em;
+  border-radius: var(--border-radius);
 }
 .Marked pre code,
 pre.Marked code {
@@ -139,7 +139,7 @@ blockquote.Marked {
   font-style: italic;
   font-weight: normal;
   padding-left: 1em;
-  border-left: 0.25em solid var(--color);
+  border-left: 0.1em solid var(--color);
   margin: 2em 10%;
 }
 .Marked a,
@@ -162,11 +162,12 @@ a.Marked::after {
   right: -0.75em;
   bottom: -0.125em;
   left: -0.75em;
-  border-radius: 0.25em;
+  border-radius: var(--border-radius);
   z-index: -1;
 
   opacity: 0;
-  background: var(--color-l);
+  border: var(--border);
+  border-color: var(--color);
   transition: opacity 0.125s ease-in-out;
 }
 .Marked a:hover,
@@ -175,7 +176,7 @@ a.Marked:hover {
 }
 .Marked a:hover::after,
 a.Marked:hover::after {
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 .Marked a[name] {
@@ -193,7 +194,7 @@ video.Marked {
   max-height: 75vh;
   max-width: 80%;
   margin: 1em 10%;
-  border-radius: 0.25em;
+  border-radius: var(--border-radius);
   box-shadow: var(--bs), var(--bs);
 }
 

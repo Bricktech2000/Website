@@ -4,8 +4,6 @@
   display: grid;
   grid-template-areas: 'title title' 'image paragraph' 'icons icons';
   grid-template-columns: 7.5em 1fr;
-  background: var(--card-bg);
-  box-shadow: var(--bs);
   padding: 3em 10vw;
 }
 .HomeAbout h1 {
@@ -44,7 +42,8 @@
   .HomeAbout {
     grid-template-areas: 'title' 'image' 'paragraph' 'icons';
     grid-template-columns: 1fr;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   .HomeAbout > img {
     width: calc(100% - 20vw - 20vw);

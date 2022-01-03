@@ -9,13 +9,12 @@
 }
 
 .Nav i {
-  color: var(--color);
+  color: var(--bg);
   /* box-shadow: var(--bs); */
   /* https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */
   /* --shadow: drop-shadow(0 0 0.5em rgba(0, 0, 0, 1)); */
   /* filter: var(--shadow) var(--shadow); */
   /* https://stackoverflow.com/questions/54426177/how-can-i-add-shadow-to-a-fontawesome-svg-icons */
-  text-shadow: var(--bs), var(--bs), var(--bs);
 
   animation: fade-in 0.5s ease-out;
   transition: color 0.125s ease-in-out, left 0.25s ease-in-out;

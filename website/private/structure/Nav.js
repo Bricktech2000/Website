@@ -10,7 +10,7 @@ const Nav = () => {
   //https://nextjs.org/docs/api-reference/next/router
   return (
     <div
-      className={styles.Nav}
+      className={'outline ' + styles.Nav}
       onClick={() =>
         typeof window !== 'undefined' && window.history.length <= 2
           ? router.push('/')

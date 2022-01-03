@@ -31,14 +31,13 @@ const HomeHero = () => {
       <div className={styles.overlay}>
         <div className={styles.title}>Let me show you what I can do.</div>
         <div className={styles.desc}>
-          I'm Emilien Breton, and I love{' '}
+          I'm <div className={styles.emphasis}>Emilien Breton</div>, and I love{' '}
           <AutoType
             keywords={['programming', 'electronics', 'engineering']}
           ></AutoType>
         </div>
-        <div className={styles.cta}>View Projects</div>
-        <div className={styles.arrow}>
-          <i className="fas fa-2x fa-angle-down"></i>
+        <div className={'outline ' + styles.arrow}>
+          <i className="fas fa-3x fa-angle-down"></i>
         </div>
       </div>
     </div>

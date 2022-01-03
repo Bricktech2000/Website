@@ -12,10 +12,8 @@
   --TODO: #f00;
 
   --bs: 0 0 0.5em var(--black);
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
-  --lg: linear-gradient(-45deg, var(--color-l), var(--color));
-  --lg-d: linear-gradient(-45deg, var(--color), var(--color-d));
-  --vh: 1vh;
+  --border: 0.05em solid var(--card-bg-l);
+  --border-radius: 0.25em;
 
   --sans: Roboto, sans-serif;
   --mono: Inconsolata, monospace;
@@ -71,4 +69,25 @@ body {
 ::selection {
   background: var(--color-d);
   color: var(--title);
+}
+
+.outline {
+  /* https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+  /* sometimes, I just wonder: why? */
+  --shadow: var(--color-l) 0 0 0.05em;
+  text-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
+    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow);
+  color: var(--bg);
+  -webkit-font-smoothing: antialiased;
 }

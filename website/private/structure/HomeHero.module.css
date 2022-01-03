@@ -90,15 +90,9 @@
   animation: fade-right-animation 1s ease-out;
 }
 
-.HomeHero .cta {
-  grid-area: cta;
-  justify-self: right;
-  align-self: center;
-  padding: 0.5em;
-
-  color: var(--color-l);
-  font-weight: lighter;
-  font-size: 1.5em;
+.HomeHero .emphasis {
+  display: inline;
+  /* color: var(--color-l); */
 }
 
 .HomeHero .arrow {
@@ -107,7 +101,6 @@
   align-self: center;
   padding: 0.5em;
 
-  color: var(--color-l);
   font-weight: lighter;
   font-size: 1em;
   letter-spacing: -0.1ch;
@@ -115,9 +108,9 @@
 
 @media (max-aspect-ratio: 1/1) {
   .HomeHero {
-    grid-template-areas: 'image image image' 'color color color';
+    grid-template-areas: 'color color color' 'image image image';
     grid-template-columns: 1fr 10vw 1fr;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 60vh 40vh;
   }
   .HomeHero .title {
     font-size: 3em;
@@ -135,6 +128,7 @@
       'cta cta cta'
       'arrow arrow arrow';
     grid-template-columns: 1fr 20vw 1fr;
+    grid-template-rows: 0.25fr auto auto 1.75fr auto auto;
     height: 95vh; /*browser navbar*/
   }
   .HomeHero .cta,

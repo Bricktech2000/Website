@@ -4,8 +4,8 @@
   align-items: center;
   padding: 0.25em 0.5em;
 
-  background: var(--card-bg-l);
-  border-radius: 0.25em;
+  border: var(--border);
+  border-radius: var(--border-radius);
   font-family: var(--mono);
   font-size: 0.666em;
 }
