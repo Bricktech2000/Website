@@ -4,6 +4,7 @@
   justify-content: flex-end;
 }
 .GetInTouch .icons {
+  padding: 0 0.25em;
   white-space: nowrap;
 }
 .GetInTouch .icons i {
@@ -43,8 +44,8 @@
   padding: 0;
 }
 .GetInTouch .text .vr {
-  margin: 0;
-
-  font-weight: lighter;
-  font-size: 1.25em;
+  margin: 0.75em 0;
+  background: var(--card-bg-l);
+  align-self: stretch;
+  width: 0.1em;
 }
