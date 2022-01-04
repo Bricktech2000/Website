@@ -5,6 +5,7 @@ import HomeHeader from '../private/structure/HomeHeader';
 import Aside from '../private/structure/Aside';
 import Main from '../private/structure/Main';
 import HomePostList from '../private/structure/HomePostList';
+import HomePinned from '../private/structure/HomePinned';
 import Footer from '../private/structure/Footer';
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <HomeHeader />
       <Aside />
       <Main>
+        <HomePinned />
         <HomePostList />
       </Main>
       <Footer github="pages/index.js" />

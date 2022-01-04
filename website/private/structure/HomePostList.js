@@ -13,7 +13,11 @@ const HomePostList = () => {
 
   return (
     <React.Fragment>
-      <h1 className={marked}>My Projects</h1>
+      <h1 className={marked}>All Projects</h1>
+      <em className={marked}>
+        Most projects I worked on since the creation of this portfolio
+      </em>
+      <br />
       <br />
       <br />
       <MosaicLarge>

@@ -1,6 +1,7 @@
 //https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
 import postMap from '../../private/lib/postMap';
+import pinnedMap from '../../private/lib/pinnedMap';
 
 export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes
@@ -44,6 +45,14 @@ export default async function dbGet(req, res) {
       if (typeof id === 'undefined') {
         for (var id2 of postMap) {
           response[id2] = await getSafe(id2);
+        }
+      } else response[id] = await getSafe('502');
+      break;
+    case 'pinned':
+      if (typeof id === 'undefined') {
+        for (var id2 of Object.keys(pinnedMap)) {
+          response[id2] = await getSafe(id2);
+          response[id2].pinned = pinnedMap[id2];
         }
       } else response[id] = await getSafe('502');
       break;

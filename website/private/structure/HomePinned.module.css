@@ -1,0 +1,8 @@
+.Pair {
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr));
+  grid-auto-columns: 0;
+  grid-gap: 1em;
+}
