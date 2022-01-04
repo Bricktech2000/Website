@@ -2,7 +2,7 @@
   width: 100%;
 
   display: grid;
-  grid-template-areas: 'title title' 'image paragraph' 'icons icons';
+  grid-template-areas: 'title title' 'image paragraph' 'about about' 'contact contact';
   grid-template-columns: 7.5em 1fr;
   padding: 3em 10vw;
 }
@@ -17,14 +17,31 @@
 .HomeAbout > p {
   grid-area: paragraph;
 
-  font-size: 1.125em;
-  font-weight: lighter;
   padding-left: 2em;
   text-align: justify;
 }
+.HomeAbout .about {
+  grid-area: about;
+  display: block;
+}
+.HomeAbout .about .languagesToolsSkills {
+  padding: 1em 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.HomeAbout .about .languagesToolsSkills > div {
+  display: block;
+  flex-direction: column;
+  flex: 1;
+}
+.HomeAbout .about .languagesToolsSkills h2 {
+  white-space: nowrap;
+}
 .HomeAbout .GetInTouch {
-  grid-area: icons;
+  grid-area: contact;
   justify-content: flex-end;
+  padding-top: 1em;
 }
 
 .HomeAbout > img {
@@ -40,7 +57,7 @@
 
 @media (max-aspect-ratio: 1/1) {
   .HomeAbout {
-    grid-template-areas: 'title' 'image' 'paragraph' 'icons';
+    grid-template-areas: 'title' 'image' 'paragraph' 'about' 'contact';
     grid-template-columns: 1fr;
     padding-left: 1em;
     padding-right: 1em;
