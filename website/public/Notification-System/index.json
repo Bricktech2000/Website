@@ -10,7 +10,8 @@
     "NodeJS",
     "Web",
     "Web-push",
-    "Service Worker"
+    "Service Worker",
+    "VS Code"
   ],
   "btns": { "Turn On Notifications": "#on", "Example Code": "#code" },
   "desc": "Notifications are a simple and convenient way to stay up-to-date on the internet. Writing about how the notification system for this website was implemented and how you can turn it on."

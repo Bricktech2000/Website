@@ -15,7 +15,11 @@
     "Data Processing",
     "Modular",
     "Robotics",
-    "RC"
+    "RC",
+    "Fusion 360",
+    "Cura",
+    "Arduino IDE",
+    "Assembly"
   ],
   "btns": {},
   "desc": "Taking you through the different versions of my hexapod robot and explaining how it works.",

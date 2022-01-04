@@ -8,7 +8,9 @@
     "G-code",
     "3D Printing",
     "Demo",
-    "3D Design"
+    "3D Design",
+    "Fusion 360",
+    "Cura"
   ],
   "btns": {
     "Download STLs": "./Double-Pendulum.zip",

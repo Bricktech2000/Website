@@ -2,7 +2,18 @@
   "title": "FPV RC Car",
   "date": "2021-10-17",
   "type": "hardware",
-  "tags": ["Showcase", "Hardware", "Electronics", "Demo", "RC"],
+  "tags": [
+    "Showcase",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Demo",
+    "Soldering",
+    "RC",
+    "Fusion 360",
+    "Cura",
+    "FPV"
+  ],
   "btns": {
     "Demo": "#demo",
     "Buy Camera VTX combo": "https://www.banggood.com/Eachine-TX03-NTSC-Super-Mini-0-or-25mW-or-50mW-or-200mW-Switchable-AIO-5_8G-72CH-VTX-600TVL-1-or-3-Cmos-FPV-Camera-p-1104884.html?cur_warehouse=CN&rmmds=search"

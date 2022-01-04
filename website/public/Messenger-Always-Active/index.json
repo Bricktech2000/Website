@@ -12,8 +12,10 @@
     "Selenium",
     "Xvfb",
     "Scripting",
-    "Linux"
+    "Linux",
+    "VS Code"
   ],
+
   "btns": {
     "Demo": "#demo",
     "Github": "https://github.com/Bricktech2000/Messenger-Always-Active"

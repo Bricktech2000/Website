@@ -2,7 +2,16 @@
   "title": "Tinker",
   "date": "2020-08-25",
   "type": "software",
-  "tags": ["Showcase", "Software", "Python", "Git", "Scripting", "Watchdog"],
+  "tags": [
+    "Showcase",
+    "Software",
+    "Python",
+    "Git",
+    "Scripting",
+    "Watchdog",
+    "VS Code",
+    "JSON"
+  ],
   "btns": {
     "Try it!": "#try",
     "Github": "https://github.com/Bricktech2000/tkr/"

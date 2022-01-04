@@ -9,7 +9,7 @@
     "Electronics",
     "Drone",
     "vJoySerialFeeder",
-    "RC"
+    "Arduino IDE"
   ],
   "btns": { "Demo Video": "#demo", "Adapter Image": "#img" },
   "desc": "Full tutorial on how to connect any FlySky transmitter to a PC wirelessly!"

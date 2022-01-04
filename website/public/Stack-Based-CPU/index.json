@@ -11,7 +11,9 @@
     "Demo",
     "Cellular Automaton",
     "Learning",
-    "Low-level"
+    "Low-level",
+    "VS Code",
+    "Assembly"
   ],
   "btns": {
     "Github": "https://github.com/Bricktech2000/Stack-Based-CPU",

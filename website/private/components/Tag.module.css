@@ -19,14 +19,14 @@
   color: var(--color-l);
 }
 
-.u {
+.skill {
   text-decoration: none;
   font-variant: small-caps;
   font-weight: 400;
 }
-.b {
+.category {
   font-weight: 500;
 }
-.i {
+.technology {
   font-style: italic;
 }

@@ -8,7 +8,9 @@
     "Electronics",
     "3D Design",
     "3D Printing",
-    "Modular"
+    "Modular",
+    "Fusion 360",
+    "Cura"
   ],
   "btns": {
     "Container Image": "#img",

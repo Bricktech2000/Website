@@ -10,7 +10,10 @@
     "3D Printing",
     "Drone",
     "Demo",
-    "RC"
+    "RC",
+    "Fusion 360",
+    "Cura",
+    "Betaflight"
   ],
   "btns": {},
   "desc": "Full build documentation of my 5-inch racing drone, from a virtual prototype to the completion of the project!",

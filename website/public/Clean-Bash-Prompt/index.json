@@ -11,7 +11,9 @@
     "Scripting",
     "UI Design",
     "Linux",
-    "Bash"
+    "Bash",
+    "VS Code",
+    "Vim"
   ],
   "btns": {
     "Github": "https://github.com/Bricktech2000/Clean-Bash-Prompt",

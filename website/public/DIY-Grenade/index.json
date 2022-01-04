@@ -9,7 +9,9 @@
     "3D Design",
     "3D Printing",
     "3D Rendering",
-    "Explosives"
+    "Explosives",
+    "Fusion 360",
+    "Cura"
   ],
   "btns": {
     "First Prototype": "#prototype1",

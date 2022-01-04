@@ -8,7 +8,10 @@
     "Electronics",
     "3D Design",
     "3D Printing",
-    "Explosives"
+    "Explosives",
+    "Fusion 360",
+    "Cura",
+    "Chemistry"
   ],
   "btns": {
     "Parts Used": "#parts",

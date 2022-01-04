@@ -2,7 +2,7 @@
   "title": "3D Printed Tools",
   "date": "2021-03-15",
   "type": "hardware",
-  "tags": ["Blog", "3D Printing"],
+  "tags": ["Blog", "Hardware", "3D Printing", "G-code", "Cura"],
   "btns": {
     "Download STLs": "./Tools2.zip",
     "Screw Measuring Device": "#tool1",

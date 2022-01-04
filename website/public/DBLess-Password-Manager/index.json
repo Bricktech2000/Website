@@ -11,7 +11,9 @@
     "Security",
     "Hashing",
     "Data Processing",
-    "Scripting"
+    "Scripting",
+    "VS Code",
+    "Cryptography"
   ],
   "btns": {
     "Try it!": "#try",

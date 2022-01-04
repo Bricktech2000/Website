@@ -9,7 +9,10 @@
     "HTML",
     "Git",
     "Data Processing",
-    "Scripting"
+    "Scripting",
+    "VS Code",
+    "Betaflight",
+    "CSV"
   ],
   "btns": {
     "Try it!": "#try",

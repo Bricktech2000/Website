@@ -9,7 +9,8 @@
     "HTML",
     "Web",
     "RegExp",
-    "Scripting"
+    "Scripting",
+    "VS Code"
   ],
   "btns": { "Try it!": "Encoder.html", "Encoded Challenge": "#demo" },
   "desc": "Want to verify if you are more intelligent than average? This encoder encodes text to make it really hard to read. See if you are still able to!"

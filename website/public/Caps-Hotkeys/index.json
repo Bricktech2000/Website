@@ -8,7 +8,9 @@
     "Windows API",
     "Scripting",
     "Outdated",
-    "Low-level"
+    "Low-level",
+    "VS Code",
+    "Key Bindings"
   ],
   "btns": {
     "Download Executable": "./Caps Hotkeys V2.1.exe",

@@ -6,13 +6,16 @@
     "Blog",
     "Software",
     "Hardware",
+    "Git",
     "Raspberry Pi",
     "NodeJS",
     "Web",
     "3D Printing",
     "Linux",
+    "Bash",
     "SSH",
-    "Outdated"
+    "Outdated",
+    "VS Code"
   ],
   "btns": {
     "Server Image": "#img",

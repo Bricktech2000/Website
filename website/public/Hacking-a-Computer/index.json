@@ -15,7 +15,11 @@
     "Electronics",
     "Hacking",
     "3D Printing",
-    "Powershell"
+    "Powershell",
+    "VS Code",
+    "Arduino IDE",
+    "Fusion 360",
+    "Cura"
   ],
   "btns": {
     "Demo Video": "#demo",

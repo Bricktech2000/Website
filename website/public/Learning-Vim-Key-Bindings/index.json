@@ -2,7 +2,16 @@
   "title": "Learning Vim Key Bindings",
   "date": "2021-10-27",
   "type": "blog",
-  "tags": ["Blog", "Work in Progress", "Software", "Scripting", "Learning"],
+  "tags": [
+    "Blog",
+    "Work in Progress",
+    "Software",
+    "Scripting",
+    "Learning",
+    "VS Code",
+    "Vim",
+    "Key Bindings"
+  ],
   "btns": {
     "Resources Used": "#res"
   },

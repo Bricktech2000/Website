@@ -2,7 +2,15 @@
   "title": "TPU Phone Stand",
   "date": "2021-01-20",
   "type": "hardware",
-  "tags": ["Blog", "Showcase", "Hardware", "3D Design", "3D Printing"],
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Hardware",
+    "3D Design",
+    "3D Printing",
+    "Fusion 360",
+    "Cura"
+  ],
   "btns": {
     "Demo Images": "#img",
     "Printer Settings": "#settings",

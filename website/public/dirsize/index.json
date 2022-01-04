@@ -2,7 +2,7 @@
   "title": "dirsize",
   "date": "2020-07-30",
   "type": "software",
-  "tags": ["Software", "Python", "Recursion", "Scripting"],
+  "tags": ["Software", "Python", "Recursion", "Scripting", "VS Code"],
   "btns": {
     "Download Program": "./dirsize.py",
     "Sample Output": "#img",
