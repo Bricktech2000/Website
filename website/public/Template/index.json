@@ -75,7 +75,24 @@
     "SFTP",
     "Notion",
     "Organization",
-    "Low-level"
+    "Low-level",
+    "NextJS",
+    "VS Code",
+    "Vim",
+    "CSV",
+    "LaTeX",
+    "JSON",
+    "Fusion 360",
+    "Cura",
+    "Figma",
+    "Wolfram Alpha",
+    "Arduino IDE",
+    "Assembly",
+    "Betaflight",
+    "Key Bindings",
+    "FPV",
+    "Cryptography",
+    "Chemistry"
   ],
   "btns": {
     "Button": "https://github.com/Bricktech2000/Website"
