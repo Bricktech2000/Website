@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> This post represents my experience on paper trading stocks back in June of 2020. The methods used are very risky and naive as I didn't have a proper understanding of investing back then. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## June 8th
 
 A few months ago, I was watching videos of people talking about strategies for the stock market. I got very intrigued because of how easy it looked to buy and sell shares at the right time. A recurring theme in those videos was the _support_ and _resistance_ lines:
