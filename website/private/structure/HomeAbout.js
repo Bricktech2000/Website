@@ -42,7 +42,7 @@ const HomeAbout = () => {
           I am currently a <strong>Computer Science student</strong> at the
           University of Ottawa. I come from the province of Quebec in Canada
           and, due to differences in educational institutions, I was allowed to
-          enroll in university one year sooner. I've always had difficulty
+          enroll in university one year early. I've always had difficulty
           dealing with the rate at which students are expected to learn, and so
           this leap proved very helpful.
         </p>
@@ -58,7 +58,7 @@ const HomeAbout = () => {
           </li>
           <li>
             I use Notion for time management, which allows me to organize tasks
-            and deadlines very clearly;
+            and deadlines in a clear and straightforward manner;
           </li>
           <li>
             My tools and supplies are sorted in parts organizers and storage
