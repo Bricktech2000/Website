@@ -1,0 +1,24 @@
+{
+  "title": "Turing Complete Mentions",
+  "date": "2022-01-11",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "Git",
+    "NodeJS",
+    "Demo",
+    "RegExp",
+    "Discord Bot",
+    "VS Code",
+    "Vim"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Turing-Complete-Mentions",
+    "Try It!": "#try",
+    "Demo Screenshots": "#demo"
+  },
+  "desc": "A Discord bot that allows for Turing-Complete mentions. Discussing some design decisions and writing about what I learned building it."
+}

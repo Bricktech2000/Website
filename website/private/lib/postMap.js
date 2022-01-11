@@ -1,4 +1,5 @@
 export default [
+  'Turing-Complete-Mentions',
   'Stack-Based-CPU',
   'Conceptual-Note-Taking',
   'FileSync',
