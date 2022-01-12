@@ -124,9 +124,8 @@ const HomeAbout = () => {
             <Tag label={'Cura'} />
             <Tag label={'Figma'} />
             <Tag label={'Raspberry Pi'} />
-            <Tag label={'Wolfram Alpha'} />
-            <Tag label={'Arduino'} />
             <Tag label={'Assembly'} />
+            <Tag label={'Arduino'} />
           </div>
         </div>
       </div>
