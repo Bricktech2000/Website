@@ -1,6 +1,6 @@
 ## The Goal
 
-Usually, when I want to learn a new programming language, I prefer naturally using that language in a project that needs it over coming up with a project that could be a good fit for that language. I have been wanting to lear [Rust](https://www.rust-lang.org/) for a little while now, but didn't have any projects I could use it in.
+Usually, when I want to learn a new programming language, I prefer naturally using that language in a project that needs it over coming up with a project that could be a good fit for that language. I have been wanting to learn [Rust](https://www.rust-lang.org/) for a little while now, but didn't have any projects I could use it in.
 
 About a month ago, I helped [a friend](https://github.com/exclusive-and/) work on an assembler in Python for an [educational CPU](https://github.com/exclusive-and/epu) he wrote.
 
