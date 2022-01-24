@@ -5,6 +5,7 @@ import Card from '../components/Card';
 import Loading from '../components/Loading';
 
 import { Marked as marked } from '../components/Marked.module.css';
+import styles from './HomePinned.module.css';
 
 const HomePinned = () => {
   const info = useDbGet('pinned');
@@ -12,13 +13,11 @@ const HomePinned = () => {
   if (typeof info === 'undefined') return <Loading height="400vh" />;
 
   return (
-    <React.Fragment>
+    <div className={styles['HomePinned']}>
       <h1 className={marked}>Pinned Projects</h1>
       <em className={marked}>
         Some larger scale projects to show what I'm capable of
       </em>
-      <br />
-      <br />
       <br />
       <MosaicSmall>
         {Object.keys(info)
@@ -27,7 +26,7 @@ const HomePinned = () => {
             <Card key={id} info={info[id]} />
           ))}
       </MosaicSmall>
-    </React.Fragment>
+    </div>
   );
 };
 

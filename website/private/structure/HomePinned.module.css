@@ -1,4 +1,8 @@
-.Pair {
+.HomePinned {
+  flex-direction: column;
+}
+
+.HomePinned .Pair {
   grid-column: span 2;
 
   display: grid;

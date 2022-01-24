@@ -10,7 +10,7 @@ var globalClickCount = 4;
 const MosaicLarge = (props) => {
   const parallaxRef = useParallax((current, value) => {
     current.style.transform = `translateY(calc(0.5em * ${
-      (value - 0.25) * -16
+      (value - 0.75) * -16
     }))`;
   });
 

@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useRef } from 'react';
 
-const useParallax = (callback) => {
+const useParallax = (callback, constrain = true) => {
   const parallaxRef = useRef(null);
 
   const scrollHandler = () => {
@@ -9,7 +9,7 @@ const useParallax = (callback) => {
       1 -
       parallaxRef.current.getBoundingClientRect().top /
         document.documentElement.clientHeight;
-    percentage = Math.min(Math.max(percentage, 0), 1);
+    if (constrain) percentage = Math.min(Math.max(percentage, 0), 1);
 
     callback(parallaxRef.current, percentage);
   };
