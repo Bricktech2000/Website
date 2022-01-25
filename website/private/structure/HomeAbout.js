@@ -46,32 +46,18 @@ const HomeAbout = () => {
         <p className={marked}>
           Even though this seems to be a rarity among university students, I
           view myself as <strong>organized</strong> &mdash; maybe even to the
-          point of minimalism. As a few examples,
+          point of minimalism. As a few examples, I take{' '}
+          <a href="Conceptual-Note-Taking">class notes conceptually</a> to
+          prevent them from becoming unorganized, and I use Notion for time
+          management, which allows me to lay out tasks and deadlines in a clear
+          and straightforward manner.
         </p>
-        <ul className={marked}>
-          <li>
-            My class notes are taken conceptually, which means that they cannot
-            possibly become unorganized;
-          </li>
-          <li>
-            I use Notion for time management, which allows me to organize tasks
-            and deadlines in a clear and straightforward manner;
-          </li>
-          <li>
-            My tools and supplies are sorted in parts organizers and storage
-            cabinets for efficient access;
-          </li>
-          <li>
-            I have a clearly defined folder structure for all my files, allowing
-            me to find them quickly.
-          </li>
-        </ul>
         <p className={marked}>
-          One of my long-term goals includes getting to work in a high-paying
-          job in the field of <strong>software engineering</strong>. I also want
-          to learn to manage money wisely and to take advantage of the
-          exponential growth of <strong>long-term investments</strong> through
-          compound interest.
+          I would say one of my long-term goals includes getting to work in a
+          high-paying job in the field of <strong>software engineering</strong>.
+          I also want to learn to manage money wisely and to take advantage of
+          the exponential growth of <strong>long-term investments</strong>{' '}
+          through compound interest.
         </p>
         <h2 className={marked}>Interests</h2>
         <p className={marked}>
