@@ -20,5 +20,5 @@
     "Download Code": "./AI%20Image%20Compression.py",
     "Dynamic Compression Pseudocode": "#code"
   },
-  "desc": "Showing you how a machine learning program made in 5 days can compress images! This is my second AI program, but one of my best ever!"
+  "desc": "Showcasing how a machine learning program made in 5 days can compress images through a custom autoencoder architecture."
 }
