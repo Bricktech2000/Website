@@ -103,7 +103,7 @@ const HomeAbout = () => {
             <Tag label={'JSON'} />
             <Tag label={'C'} />
             <Tag label={'Notion'} />
-            <Tag label={'Fusionn 360'} />
+            <Tag label={'Fusion 360'} />
             <Tag label={'Cura'} />
             <Tag label={'Figma'} />
             <Tag label={'Raspberry Pi'} />
