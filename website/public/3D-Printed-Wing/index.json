@@ -1,0 +1,24 @@
+{
+  "title": "3D-Printed Wing",
+  "date": "2022-01-26",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Soldering",
+    "Demo",
+    "3D Design",
+    "RC",
+    "Cura",
+    "FPV"
+  ],
+  "btns": {
+    "Building Images": "#img",
+    "Parts List": "#parts",
+    "Demo Video": "#demo"
+  },
+  "desc": "An entirely 3D-printed flying wing. Writing about both the planning and building phases that ultimately lead to the final product!"
+}
