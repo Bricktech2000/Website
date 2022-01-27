@@ -6,13 +6,13 @@ That's when I decided I would build an RC wing.
 
 ## Planning
 
-After looking around the internet for a 3D design, I stumbled upon the [Eclipson Blackwing Sport](https://www.eclipson-airplanes.com/blackwingsport). My initial goal was to build a `0$` wing using junk parts I had laying around, but after seeing such a great design, I figured I would at least try to honor it by using higher-end parts.
+After looking around the internet for a decent 3D design, I stumbled upon the [Eclipson Blackwing Sport](https://www.eclipson-airplanes.com/blackwingsport). My initial goal was to build a `0$` wing using junk parts I had laying around, but after seeing such a great design, I figured I would at least try to honor it by using higher-end parts.
 
-With the `0$` budget having received an XP boost, I ordered a proper `40A 6S` ESC and high-performance Racerstar metal gear servos instead of using low-quality `SG90` ones. I also had to order an extra roll of black PLA filament as the whole wing requires at least `300g` of plastic, which I didn't have at that point.
+With the `0$` budget having received an XP boost, I ordered a proper `40A 6S` ESC and high-performance Racerstar metal gear servos instead of using low-quality `SG90` ones. I also had to order an extra roll of black PLA filament as the whole wing requires at least `300g` of plastic, which I didn't have at the time.
 
 ## Building
 
-While the electronic parts were being shipped, I started 3D printing the wing using my [Ender 3](https://www.creality3dofficial.com/products/official-creality-ender-3-3d-printer). After all the parts were printed, I used [Gorilla Glue](https://www.gorillatough.com/product/clear-gorilla-glue/) to assemble them together according to [Eclipson's official assembly guide](https://www.eclipson-airplanes.com/blackwingsport). Then, when I received all necessary electronic parts, I soldered them together and was left with a fully functionnal wing! Below are some pictures of the building process (which went surprisingly smoothly) followed by a comprehensive parts list for this wing build.
+While the electronic parts were in the mail, I started 3D printing the wing using my [Ender 3](https://www.creality3dofficial.com/products/official-creality-ender-3-3d-printer). After all the parts were printed, I used [Gorilla Glue](https://www.gorillatough.com/product/clear-gorilla-glue/) to assemble them together according to [Eclipson's official assembly guide](https://www.eclipson-airplanes.com/blackwingsport). Then, when I received all necessary electronic parts, I soldered them together and was left with a fully functionnal wing! Below are some pictures of the building process (which went surprisingly smoothly) followed by a comprehensive parts list for this wing build.
 
 #img
 
