@@ -25,7 +25,7 @@ const Card = (props) => {
   }, []);
 
   const CardHtml = React.forwardRef((props2, ref) => (
-    <a ref={linkRef} className={styles.card + ' fade-right-3'} {...props2}>
+    <a ref={linkRef} className={styles.card} {...props2}>
       <img
         src={'/' + props.info.id + '/index.jpg'}
         alt={props.info.title + ' thumbnail image'}

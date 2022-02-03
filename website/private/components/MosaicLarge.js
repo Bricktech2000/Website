@@ -1,11 +1,11 @@
-import React, { Component, useState, useContext } from 'react';
-import Button from './Button';
+import React, { Component, useState, useRef, useEffect } from 'react';
 import useParallax from '../lib/useParallax';
+import useOnScreen from '../lib/useOnScreen';
 
 import styles from './MosaicLarge.module.css';
 
 //https://www.emgoto.com/storing-values-with-useref/
-var globalClickCount = 4;
+var globalClickCount = 3;
 
 const MosaicLarge = (props) => {
   const parallaxRef = useParallax((current, value) => {
@@ -16,22 +16,30 @@ const MosaicLarge = (props) => {
 
   const [clickCount, setClickCount] = useState(globalClickCount);
 
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+  const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => setHasTimeElapsed(true), 100);
+    return () => clearTimeout(timeout);
+  }, [isVisible]);
+
+  if (isVisible && hasTimeElapsed) {
+    setHasTimeElapsed(false);
+    setClickCount((c) => c + 1);
+    globalClickCount++;
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.MosaicLarge} ref={parallaxRef}>
         {props.children
-          .slice(0, Math.pow(2, clickCount))
+          .slice(0, Math.pow(1.5, clickCount))
           .map((child) => React.cloneElement(child))}
       </div>
-      {Math.pow(2, clickCount) < props.children.length && (
-        <Button
-          label="Load More"
-          onClick={() => {
-            setClickCount((c) => c + 1);
-            globalClickCount++;
-          }}
-        />
-      )}
+      <p ref={ref}>
+        {Math.pow(1.5, clickCount) < props.children.length && 'Loading more...'}
+      </p>
     </div>
   );
 };
