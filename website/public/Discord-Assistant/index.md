@@ -11,11 +11,11 @@ When I saw that, I knew I had to build some kind of program that could take full
 [Discord Assistant](https://github.com/Bricktech2000/Discord-Assistant) &mdash; creative, I know &mdash; is a bot that can automatically answer technical questions on Discord. To give you an idea of its capabilities, below are a few examples showing the kind of questions it is able to answer.
 #demo
 
-|                                           |                                           |
-| ----------------------------------------- | ----------------------------------------- |
-| ![](Screenshot%202021-09-21%20204257.png) | ![](Screenshot%202021-09-21%20204452.png) |
-| ![](Screenshot%202021-09-21%20204341.png) | ![](Screenshot%202021-09-21%20204606.png) |
-| ![](Screenshot%202021-09-21%20145935.png) | ![](Screenshot%202021-09-21%20150036.png) |
+|                                                               |                                                               |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![query and response 1](Screenshot%202021-09-21%20204257.png) | ![query and response 2](Screenshot%202021-09-21%20204452.png) |
+| ![query and response 3](Screenshot%202021-09-21%20204341.png) | ![query and response 4](Screenshot%202021-09-21%20204606.png) |
+| ![query and response 5](Screenshot%202021-09-21%20145935.png) | ![query and response 6](Screenshot%202021-09-21%20150036.png) |
 
 ## How it Works
 

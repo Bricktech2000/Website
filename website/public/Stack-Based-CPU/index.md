@@ -18,11 +18,11 @@ The project is divided into two main parts: the **assembler** and the **emulator
 
 #demo
 
-|                                |                                |
-| ------------------------------ | ------------------------------ |
-| ![](ksnip_20220102-152835.png) | ![](ksnip_20220102-152919.png) |
+|                                                                    |                                                         |
+| ------------------------------------------------------------------ | ------------------------------------------------------- |
+| ![long screenshot of assembly language](ksnip_20220102-152835.png) | ![screenshot of binary data](ksnip_20220102-152919.png) |
 
-![](ksnip_20220102-154204.png)
+![screenshot of the CPU running Conway's game of life](ksnip_20220102-154204.png)
 
 Even though it runs at approximately 1 frame per second, it still proves that the CPU is [Turing Complete](https://en.wikipedia.org/wiki/Turing_completeness). Moreover, this test program implements a few fairly complex subroutines:
 

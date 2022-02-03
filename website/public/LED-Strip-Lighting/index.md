@@ -25,9 +25,9 @@ As I didn't fancy blinding colors, I focused on getting bright white high-densit
 #result
 After mounting the strips and the channels with some [Gorilla mounting tape](https://www.gorillatough.com/product/tough-and-clear-mounting-tape/), I was done! Below are a few pictures of the finalized installation, which I took when it was pitch-black outside.
 
-![](20220203_003544.min.jpg)
-![](20220203_003602.min.jpg)
-![](20220203_003638.min.jpg)
+![bright picture of my room](20220203_003544.min.jpg)
+![bright picture of my room](20220203_003602.min.jpg)
+![bright picture of my drone and of my hexapod](20220203_003638.min.jpg)
 
 ## Final Thoughts
 

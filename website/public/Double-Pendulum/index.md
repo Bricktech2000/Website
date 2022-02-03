@@ -22,10 +22,10 @@ After a few design iterations in [Fusion 360](https://www.autodesk.ca/en/product
 
 Once I was done 3D printing [all the parts](./Double-Pendulum.zip), it was time to assemble them. However, before doing so, it is essential to soak the ball bearings in some isopropyl alcohol to remove any heavy grease from the factory. Then, I let them dry off and I lubricated them with `WD-40`, a lighter lubricant. Below are some photos of this process.
 
-|                                    |                                    |
-| ---------------------------------- | ---------------------------------- |
-| ![](IMG_20210929_163901_0.min.jpg) | ![](IMG_20210929_164407_6.min.jpg) |
-| ![](IMG_20210929_164420_7.min.jpg) | ![](IMG_20210929_164612_9.min.jpg) |
+|                                                           |                                                                    |
+| --------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![two bearings on a table](IMG_20210929_163901_0.min.jpg) | ![two bearings with covers removed](IMG_20210929_164407_6.min.jpg) |
+| ![closeup of a bearing](IMG_20210929_164420_7.min.jpg)    | ![two bearings soaking in alcohol](IMG_20210929_164612_9.min.jpg)  |
 
 I also 3D printed [a special part](./Double-Pendulum.zip) to mount the pendulum directly onto the wall, which worked surprisingly well. After assembling the whole thing, it functioned perfectly! Below is a quick video showcasing the final result.
 
