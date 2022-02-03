@@ -1,0 +1,24 @@
+{
+  "title": "LED Strip Lighting",
+  "date": "2022-02-02",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Soldering",
+    "3D Design",
+    "3D Rendering",
+    "Modular",
+    "Fusion 360",
+    "Cura"
+  ],
+  "btns": {
+    "Download STL": "LED%20Strip%20Channel%20v19.stl",
+    "Buy LED Strips": "https://www.banggood.com/5M-Non-Waterproof-Cool-White-3528-SMD-300-LED-Strip-Light-DC12V-for-DIY-Indoor-Home-Car-Christmas-Decorations-Clearance-Christmas-Lights-p-77079.html?rmmds=myorder&cur_warehouse=CN",
+    "Buy Mounting Tape": "https://www.gorillatough.com/product/tough-and-clear-mounting-tape/",
+    "Final Result": "#result"
+  },
+  "desc": "The right way to build a practical LED strip installation! Walking you through how I came up with the idea for this setup and what the final result looks like."
+}
