@@ -79,6 +79,7 @@ export default {
   SFTP: 'tool',
   Notion: 'tool',
   Organization: 'skill',
+  Productivity: 'skill',
   'Low-level': 'skill',
   NextJS: 'technology',
   'VS Code': 'tool',
