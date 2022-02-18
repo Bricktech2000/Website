@@ -1,0 +1,28 @@
+{
+  "title": "Lecture Speedup",
+  "date": "2022-02-17",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web",
+    "Hacking",
+    "Demo",
+    "Scripting",
+    "Productivity",
+    "Low-level",
+    "VS Code",
+    "Vim"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Lecture-Speedup",
+    "Demo Video": "#demo",
+    "Try it!": "#try"
+  },
+  "desc": "Writing about the script I wrote to make watching recorded lectures less painful, and sharing a speedrun that beat the official world record."
+}

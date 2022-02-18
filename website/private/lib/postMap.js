@@ -1,4 +1,5 @@
 export default [
+  'Lecture-Speedup',
   'LED-Strip-Lighting',
   '3D-Printed-Wing',
   'Turing-Complete-Mentions',
