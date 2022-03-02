@@ -2,21 +2,7 @@
   "title": "Beetleweight Combat Robot",
   "date": "2021-07-12",
   "type": "hardware",
-  "tags": [
-    "Blog",
-    "Work in Progress",
-    "Hardware",
-    "Electronics",
-    "3D Printing",
-    "3D Design",
-    "3D Rendering",
-    "Physics Calculations",
-    "Robotics",
-    "RC",
-    "Fusion 360",
-    "Cura",
-    "Wolfram Alpha"
-  ],
+  "tags": [],
   "btns": {},
   "desc": "Full build documentation of my beetleweight combat robot, from the CAD to the completion of the project!",
   "children": ["Design-Update", "Initial-Design"]

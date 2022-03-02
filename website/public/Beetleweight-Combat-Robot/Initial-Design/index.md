@@ -8,7 +8,7 @@ I used to think that _combat robots_ were enourmous machines that cost thousands
 
 ## The First Design
 
-#first
+#initial-first
 
 The design goal of the first version of the robot was very simple: **maximize mobility**. Here is a `3D render` of it:
 ![render of first version of combat robot](Initial-Design/Assembly_1_2021-Feb-02_03-24-59PM-000_CustomizedView22055540780_png.png)
@@ -23,7 +23,7 @@ This first version looked very promising, but the design was flawed in many ways
 
 ## The Second Design
 
-#second
+#initial-second
 
 The design goals of this second version were completely different from the initial ones: **use a simple and robust chassis to support a huge weapon**. Here is that second version:
 
@@ -49,7 +49,7 @@ All of the required components were then encapsulated within a very robust chass
 
 ![render of second version top view without cover](Initial-Design/869d4e23-790c-478a-9c14-9575de76ab20.PNG)
 
-#parts
+#initial-parts
 
 Because of this robust chassis and its powerful weapon, I believe that this bot has a good chance of winning some matches! For anyone interested, here is a parts list for this version of the robot:
 

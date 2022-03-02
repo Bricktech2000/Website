@@ -15,9 +15,9 @@
     "RC"
   ],
   "btns": {
-    "Robot Renders": "#renders",
-    "Wheel Design": "#wheels",
-    "Scale Model Picture": "#scale"
+    "Updated Robot Renders": "#updated-renders",
+    "Updated Wheel Design": "#updated-wheels",
+    "Scale Model Picture": "#updated-scale"
   },
   "desc": "Writing about how I modified the whole design of my beetleweight combat robot, from its wheels to its chassis and its weapon. Can't wait to build it in real life!"
 }

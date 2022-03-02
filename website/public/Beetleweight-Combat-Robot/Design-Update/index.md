@@ -14,14 +14,14 @@ A few days later, I stumbled upon [a video](https://youtu.be/U-_xxI6qvlg) from [
 ## Redesigning the Robot
 
 Since I was no longer limited to specific dimensions, I could now design the wheels **exactly** how I wanted them. I decided to make them slightly smaller, which made the whole robot thinner and narrower, thereby improving its durability. Here is a render of the [older design](../Beetleweight-Combat-Robot/) followed by a render of the newer one:
-#renders
+#updated-renders
 
 |                                                          |                                                          |
 | -------------------------------------------------------- | -------------------------------------------------------- |
 | ![old combat robot design](Design-Update/old-design.png) | ![new combat robot design](Design-Update/new-design.png) |
 
 In addition, the wheels were designed in a way that prevents the tires from peeling away from the hubs. Here is a render of said hub followed by a render of the tire itself and by a cross section of the wheel assembly:
-#wheels
+#updated-wheels
 
 |                                                        |                                                      |                                                                                  |
 | ------------------------------------------------------ | ---------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ After having redesigned most of the robot's chassis, I figured I would 3D print 
 > But why did you chose a 60% scale?
 
 I had to run some very complex math to figure all of this out. First, I divided `3` by `5`, which equals exactly `60%`. That's... that's it. Basically, this means all the `M5` screws on the robot would be replaced by `M3` screws on the replica. Enough talking, here is the final product:
-#scale
+#updated-scale
 ![red scale replica of new robot](Design-Update/scale-replica.jpg)
 
 ## Conclusion
