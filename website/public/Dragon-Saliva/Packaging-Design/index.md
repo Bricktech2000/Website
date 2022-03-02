@@ -6,6 +6,7 @@ Since I have some experience in UI design, I figured I would try and create **a 
 
 ## Graphic Design
 
+#packaging-design
 Below are two screenshots and two photos of the packaging I designed using [Figma](https://www.figma.com/) and produced using [Vistaprint](https://www.vistaprint.ca/).
 
 |                                                                                       |                                                                                 |
@@ -32,6 +33,7 @@ The only thing left to do was to find a way to hold the bottle inside the _paper
 ![3D model of the logo with a bottle clip](Packaging-Design/Screenshot%202021-09-08%20123614.png)
 
 Since the greater part of the design is only `0.6 mm` thick, the whole thing prints in under 15 minutes on my 3D printer, the [Ender 3](https://www.creality3d.shop/products/creality3d-ender-3-pro-high-precision-3d-printer). This was essential because, as everyone knows, the shorter the printing time, the larger the volume we can produce. After gluing it on the inside of the _paper cover_, I inserted the bottle in the 3D printed clip. Below are two photos of the final result.
+#packaging-img
 
 |                                                                                        |                                                                                                |
 | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |

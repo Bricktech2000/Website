@@ -4,8 +4,8 @@
   "type": "hardware",
   "tags": ["Blog", "Showcase"],
   "btns": {
-    "Video of the Extraction": "#vid",
-    "Pictures": "#img"
+    "Video of the Extraction": "#making-vid",
+    "Pictures of the Extraction": "#making-img"
   },
   "desc": "One of the world's most spicy hot sauce. Writing about how my father and I created it and how we solved the many problems we faced."
 }

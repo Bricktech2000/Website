@@ -3,6 +3,9 @@
   "date": "2021-09-08",
   "type": "hardware",
   "tags": ["Blog", "3D Printing", "3D Design", "3D Rendering", "UI Design"],
-  "btns": {},
+  "btns": {
+    "Graphic Design Image": "#packaging-design",
+    "Final Packaging Picture": "#packaging-img"
+  },
   "desc": "Writing about how I designed the packaging for one of the world's most spicy hot sauce and explaining the design decisions behind it"
 }
