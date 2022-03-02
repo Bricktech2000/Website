@@ -12,7 +12,7 @@ A few days ago, I received almost all the parts necessary to build my 5-inch dro
 
 Since I had received all of the main parts needed, I decided I would build a mockup of the drone. In order to do so, I layed them down one on top of each other to have an idea of what it would look like. I was surprised when I saw it for the first time: it was way larger than I thought it would be, measuring almost `30 cm` in length! Here are some photos of it, the last one comparing it to my [2-inch drone](../2-inch-Racing-Drone/) (which you can read about [here](../2-inch-Racing-Drone/)!):
 
-#img
+#parts-img
 
 | ![5-inch drone](Drone-Parts/IMG_20200828_183908_4.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_183933_3.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_184500_9.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_185331_5.min.jpg) | ![5-inch drone](Drone-Parts/IMG_20200828_185559_2.min.jpg) |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |

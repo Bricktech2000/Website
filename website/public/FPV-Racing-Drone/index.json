@@ -2,19 +2,7 @@
   "title": "FPV Racing Drone",
   "date": "2021-05-20",
   "type": "hardware",
-  "tags": [
-    "Work in Progress",
-    "Photo Editing",
-    "Hardware",
-    "Electronics",
-    "3D Printing",
-    "Drone",
-    "Demo",
-    "RC",
-    "Fusion 360",
-    "Cura",
-    "Betaflight"
-  ],
+  "tags": [],
   "btns": {},
   "desc": "Full build documentation of my 5-inch racing drone, from a virtual prototype to the completion of the project!",
   "children": [

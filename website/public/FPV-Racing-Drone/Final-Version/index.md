@@ -4,10 +4,10 @@ About one and a half years ago, I started building my [FPV racing drone](../FPV-
 
 ## The Final Version
 
-#img
+#final-img
 ![image of the final version of the drone](./Final-Version/20211125_143549.min.jpg)
 
-#list
+#final-list
 Above is a picture of the final version of my FPV drone, and below is a list of all the parts, tools and supplies that were used to build it. Note that replacement parts and custom 3D-printed parts have not been included.
 
 - [(4x) Emax Eco Series 2207 1700KV 3-6S](https://www.banggood.com/4PCS-Emax-ECO-Series-2207-1700KV-3-6S-Brushless-Motor-for-RC-Drone-FPV-Racing-p-1582953.html?akmClientCountry=CA&rmmds=cart_middle_products&cur_warehouse=CN)

@@ -4,7 +4,7 @@
   "type": "hardware",
   "tags": ["Blog", "Demo", "RC"],
   "btns": {
-    "6S Demo": "#demo"
+    "6S Flight Demo": "#6s-demo"
   },
   "desc": "My 5-inch drone, but now on 6S! Talking about how much more power the new battery can deliver, along with a demo video."
 }

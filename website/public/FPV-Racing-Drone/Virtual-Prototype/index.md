@@ -6,11 +6,11 @@ During the last year of high school in the [IB program](https://www.ibo.org/) (a
 
 May 26th, I had the idea to try to make a virtual prototype of the drone in an [image editing software](https://pixlr.com/x/). Since I had already found all the necessary sources, I had a good idea of the pieces I would use for the drone. And so I started editing using [Paint 3D](https://www.microsoft.com/en-us/p/paint-3d/9nblggh5fv99), but I quickly gave up because of the lack of functionnality of the software like the incapacity of working with images that have a trasparent backgorund. I ended up starting from scratch on an online editor called _[Pixlr](https://pixlr.com/x/)_, and it was way easier from then on. After 3 hours, I was done! Here's the prototype:
 
-#img
+#prototype-img
 
 ![drone virtual prototype](<./Virtual-Prototype/Drone%20(3).png>)
 
-#list
+#prototype-list
 
 ## The Parts Used
 

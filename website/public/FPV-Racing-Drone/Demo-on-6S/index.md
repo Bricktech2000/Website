@@ -8,7 +8,7 @@ When I first tried it out, I immediately remembered what my friend Nicolas told 
 
 Now that I have received the new battery, I'm constantly asking myself the same thing. I can't raise the throttle for more than `1 second` or I would loose sight of it because it gains altitude so quickly. I also noticed that the power of my drone is the same both when the battery is full and when it is empty, which makes it way easier to fly.
 
-#demo
+#6s-demo
 
 ## Demo
 

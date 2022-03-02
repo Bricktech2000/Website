@@ -12,7 +12,7 @@ Essentially, the FPV camera on the drone sends live video to VR-like goggles on 
 | --------------------------------------------------- | ---------------------------------------------------------- |
 | ![clear image from gopro](HD-Footage/gopro.min.jpg) | ![blurry and noisy image from dvr](HD-Footage/dvr.min.jpg) |
 
-#parts
+#hd-parts
 
 On a side note, here is a list of the parts I used to install an FPV system on [my 5-inch drone](../98772/):
 
@@ -35,7 +35,7 @@ As soon as I saw how amazing it was to fly, I immediately ordered an action came
 
 Using the `3D-printed` camera mount and the [Caddx Orca](https://www.banggood.com/Caddx-Orca-4K-HD-Recording-Mini-FPV-Camera-FOV-160-Degree-WiFi-Anti-Shake-DVR-Action-Cam-for-Outdoor-Photography-RC-Racing-Drone-Airplane-p-1590162.html?cur_warehouse=CN&rmmds=search), I managed to record some pretty awesome footage. Just ignore the two crashes right into snow...
 
-#demo
+#hd-demo
 ![youtube](https://www.youtube.com/embed/KpCdQ5Hc82w)
 
 ## Final Words

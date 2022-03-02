@@ -11,9 +11,9 @@
     "RC"
   ],
   "btns": {
-    "Frame Image": "#img",
-    "Building Images": "#build",
-    "Demo Videos": "#demo"
+    "Frame Upgrade Image": "#frame-img",
+    "Build Process Images": "#frame-build",
+    "FPV Demo Videos": "#frame-demo"
   },
   "desc": "Writing about the reason why I decided to buy a new frame for my FPV drone. Showing you a few pictures and some flight footage along the way!"
 }

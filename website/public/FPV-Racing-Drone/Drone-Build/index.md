@@ -1,6 +1,6 @@
 ## Building Images
 
-#img
+#build-img
 Here are some images of the drone while I was building it:
 
 | ![flight stack](Drone-Build/IMG_20201020_123835_1.min.jpg) | ![frame and arms](Drone-Build/IMG_20201020_124230_4.min.jpg) | ![frame and stack](Drone-Build/IMG_20201020_135410_2.min.jpg) | ![frame, stack and motors](Drone-Build/IMG_20201020_140346_2.min.jpg) | ![xt60 connector](Drone-Build/IMG_20201020_153649_6.min.jpg) | ![xt60 connector with heat shrink](Drone-Build/IMG_20201020_153935_7.min.jpg) | ![motor wires](Drone-Build/IMG_20201020_155702_2.min.jpg) | ![motor wires soldered on stack](Drone-Build/IMG_20201020_160416_4.min.jpg) | ![all motor wires solderd on stack](Drone-Build/IMG_20201020_162751_5.min.jpg) | ![capacitor soldered on stack](Drone-Build/IMG_20201020_164236_7.min.jpg) | ![receiver solderd to stack](Drone-Build/IMG_20201020_170452_5.min.jpg) | ![aluminum side plates on stack](Drone-Build/IMG_20201021_172430_6.min.jpg) | ![receiver antennas on top plate](Drone-Build/IMG_20201021_172438_9.min.jpg) | ![top plate screwed on stack](Drone-Build/IMG_20201021_175222_4.min.jpg) | ![motor wires held by zip ties](Drone-Build/IMG_20201021_175224_1.min.jpg) | ![battery pad](Drone-Build/IMG_20201021_180740_8.min.jpg) | ![arm protector](Drone-Build/IMG_20201021_193042_7.min.jpg) | ![arm protector installed on frame arm](Drone-Build/IMG_20201021_192300_9.min.jpg) |
@@ -22,7 +22,7 @@ Here is a short video of the drone performing its maiden flight (with no sound, 
 
 ![youtube](https://www.youtube.com/embed/EDZ0F5PxoHg)
 
-#demo
+#build-demo
 
 ![youtube](https://www.youtube.com/embed/yyGEHibcRVo)
 

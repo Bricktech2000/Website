@@ -4,8 +4,8 @@
   "type": "hardware",
   "tags": ["Demo", "Hardware", "3D Printing", "Drone", "RC"],
   "btns": {
-    "Demo Footage": "#demo",
-    "Parts List": "#parts"
+    "First HD Footage": "#hd-demo",
+    "FPV Parts List": "#hd-parts"
   },
   "desc": "FPV is awesome! Talking about how I added FPV to my 5-inch drone and showcasing some footage taken from a Caddx Orca."
 }

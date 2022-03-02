@@ -4,8 +4,8 @@
   "type": "hardware",
   "tags": ["Blog", "Photo Editing", "RC"],
   "btns": {
-    "Prototype Image": "#img",
-    "Parts List": "#list"
+    "Prototype Image": "#prototype-img",
+    "Initial Parts List": "#prototype-list"
   },
   "desc": "Ever since I made my 2-inch drone, I wanted more. Talking about an upgraded version and showing you the virtual prototype of the drone!"
 }

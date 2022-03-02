@@ -12,8 +12,8 @@
     "RC"
   ],
   "btns": {
-    "Final Version Photo": "#img",
-    "Parts List": "#list"
+    "Final Version Photo": "#final-img",
+    "Final Parts List": "#final-list"
   },
   "desc": ""
 }

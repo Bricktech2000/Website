@@ -14,14 +14,14 @@ I had three criteria for the new frame I wanted to buy. In order to fit my needs
 
 After comparing a few options, I decided to go with a clone of the [ImpulseRC Apex](https://impulserc.com/collections/apex/products/apex-fpv-frame) on banggood. Here is a [link to it](https://www.banggood.com/STEELE-5-220mm-Wheelbase-5mm-Arm-Thickness-Carbon-Fiber-X-Type-5-Inch-Freestyle-Frame-Kit-Support-Caddx-Vista-HD-System-for-RC-Drone-FPV-Racing-p-1720420.html?cur_warehouse=CN&rmmds=search). By choosing such a clone, I knew I would get a good-looking and proven design while still paying a low price. Moreover, the _Apex_ is designed for a top-mounted battery, which is perfect for my needs. Here is a picture of the frame I chose:
 
-#img
+#frame-img
 ![apex frame clone from banggood](./Frame-Upgrade/apex-clone.png)
 
 ## Transfering the Electronics Over
 
 The next step was to transfer all the electronics from the previous frame to the new one. However, since it is slimer and longer than the frame I was using before, I had to mount the [VTX](https://www.banggood.com/Eachine-TX805-5_8G-40CH-25-or-200-or-600-or-800mW-FPV-Transmitter-TX-LED-Display-Support-OSD-or-Pitmode-or-Smart-Audio-p-1333984.html?rmmds=search&ID=512671&cur_warehouse=USA) and the [receiver](https://www.banggood.com/1_7g-Fli1414CH-Mini-Receiver-Compatible-Flysky-AFHDS-2A-w-RSSI-Output-for-FS-i6-FS-i10-Turnigy-I6S-p-1302715.html?akmClientCountry=CA&rmmds=cart_middle_products&cur_warehouse=CN) to the rear of the drone instead of on the top of the stack. I then had to _design and 3D print_ a new antenna mount, which was way easier for this second frame than for [the first](../5-inch-Drone-Build/) one. Below are some pictures of the drone.
 
-#build
+#frame-build
 
 | ![electronics outside of frame](Frame-Upgrade/IMG_20210517_172605_7.min.jpg) | ![electronics inside new frame](Frame-Upgrade/IMG_20210517_183522_1.min.jpg) | ![comparaison between old frame and new frame](Frame-Upgrade/IMG_20210517_192527_2.min.jpg) | ![close-up of drone in new frame](Frame-Upgrade/IMG_20210517_185134_7.min.jpg) | ![drone in new frame with caddx orca](Frame-Upgrade/IMG_20210519_100658_7.min.jpg) |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
@@ -31,9 +31,9 @@ The next step was to transfer all the electronics from the previous frame to the
 
 Along with the frame, I also received the `4` LiPo batteries I had ordered. For this reason, I decided to go back to my town's primary school to take some shots during the golden hour. Below is a short flight of my drone on this new frame followed by a few accidental crashes... enjoy!
 
-#demo
+#frame-demo
 ![youtube](https://youtube.com/embed/B63fg_lCqNA)
-#crash
+#frame-crash
 ![youtube](https://youtube.com/embed/oxRzuhUiJCs)
 
 ## Moving Forward
