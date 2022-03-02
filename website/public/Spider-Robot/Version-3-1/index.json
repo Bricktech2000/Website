@@ -18,10 +18,10 @@
     "RC"
   ],
   "btns": {
-    "Demo Video": "#demo",
-    "Buy Voltage Regulator": "https://www.banggood.com/DD2712SA-3_5A-Mini-5V-27V-to-3_7V-5V-12V-DC-DC-Step-Down-Buck-Power-Converter-Module-Voltage-Regulator-p-1651953.html?rmmds=myorder&cur_warehouse=CN&ID=519957",
-    "Download Code": "./Version-3-1/13_sketch_mar04a/13_sketch_mar04a.ino",
-    "Download STLs": "./Version-3-1/STLs.zip"
+    "V3.1 Demo Video": "#3-1-demo",
+    "Voltage Regulator Link": "https://www.banggood.com/DD2712SA-3_5A-Mini-5V-27V-to-3_7V-5V-12V-DC-DC-Step-Down-Buck-Power-Converter-Module-Voltage-Regulator-p-1651953.html?rmmds=myorder&cur_warehouse=CN&ID=519957",
+    "Download V3.1 Code": "Version-3-1/13_sketch_mar04a/13_sketch_mar04a.ino",
+    "Download STLs": "Version-3-1/STLs.zip"
   },
   "desc": "The newest version of my hexapod robot! Talking about how I drastically improved the feel of the robot and showing you what it can do."
 }

@@ -12,7 +12,7 @@
 
 Here's a demo video that shows the movements the spider can do:
 
-#demo
+#3-0-demo
 ![youtube](https://www.youtube.com/embed/ugNsAqfCqrk)
 
 ## Inspiration
