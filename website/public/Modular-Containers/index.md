@@ -1,3 +1,7 @@
+> **This post is outdated**
+>
+> This initial version of my modular containers has served me well, but I recently came up with an [updated design](../Modular-Containers-2-0). This post was preserved nonetheless.
+
 ## The Problem
 
 My electronics drawer has been looking like this for way too long now:

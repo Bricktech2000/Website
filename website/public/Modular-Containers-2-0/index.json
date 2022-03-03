@@ -1,0 +1,22 @@
+{
+  "title": "Modular Containers 2.0",
+  "date": "2022-03-02",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Hardware",
+    "3D Printing",
+    "Demo",
+    "3D Design",
+    "Modular",
+    "Organization",
+    "Fusion 360",
+    "Cura"
+  ],
+  "btns": {
+    "Download STLs": "Modular%20Containers%202.0.zip",
+    "Design Screenshots": "#design",
+    "Finished Product Pictures": "#img"
+  },
+  "desc": "The new system I now use to sort parts. Walking you through the issues with my previous system and explaining the design decisions leading to the final result."
+}
