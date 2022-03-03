@@ -12,14 +12,6 @@ export default async function dbGet(req, res) {
   switch (type) {
     case 'exact':
       response[id] = await getSafe(id);
-      const children = response[id].children;
-
-      if (children !== undefined) {
-        response[id].children = {};
-        for (var id2 of children) {
-          response[id].children[id2] = await getSafe(`${id}/${id2}`);
-        }
-      }
       break;
     case 'like':
       const info = await getSafe(id);
@@ -64,14 +56,29 @@ export default async function dbGet(req, res) {
   res.status(200).json(response);
 }
 
-async function get(id) {
+async function getRaw(id) {
   const info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
   );
   const source = (
     await fs.readFile(process.cwd() + '/public/' + id + '/index.md')
   ).toString();
+
   return { id, source, ...info };
+}
+
+async function get(id) {
+  const data = await getRaw(id);
+  const children = data.children;
+
+  if (children !== undefined) {
+    data.children = {};
+    for (var id2 of children) {
+      data.children[id2] = await getSafe(`${id}/${id2}`);
+    }
+  }
+
+  return data;
 }
 
 async function getSafe(id) {

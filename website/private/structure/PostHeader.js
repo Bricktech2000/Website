@@ -8,6 +8,7 @@ import styles from './PostHeader.module.css';
 import { Marked as marked } from '../components/Marked.module.css';
 
 const PostHeader = (props) => {
+  // copied to Card.js
   if (props.info.children !== undefined) {
     const tag_union = [
       ...new Set([
