@@ -44,7 +44,7 @@ For example, here is the part of MiniML that parses links:
 #code
 
 ```javascript
-out = out.replace(/\{(.+?)\:(.*?)\}/g, function(a, b, c) {
+out = out.replace(/\{(.+?)\:(.*?)\}/g, function (a, b, c) {
   return '<a class="markup-link" href="' + c + '">' + b + '</a>';
 });
 ```
