@@ -4,7 +4,7 @@ I recently posted [a video](https://www.youtube.com/watch?v=vo7N044aZvU) on my [
 
 #demo
 
-![youtube](https://www.youtube.com/embed/vo7N044aZvU)
+![youtube](vo7N044aZvU)
 
 Essentially, when you plug the USB key in a PC, it types commands to give control of your computer to the attacker. Once a computer is infected, you will be able to control it by going to a website from another computer or even from a cell phone!
 

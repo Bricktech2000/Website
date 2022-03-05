@@ -42,4 +42,4 @@ As some of the 3D-printed parts and the program were modified in this new versio
 
 Here is a demo of version `V3.1` of my hexapod robot, which uses the new voltage regulator along with some replacement servos. Enjoy!
 
-![youtube](https://www.youtube.com/embed/dVLcFW495Oo)
+![youtube](dVLcFW495Oo)

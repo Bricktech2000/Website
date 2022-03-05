@@ -12,7 +12,7 @@ Here's a demo video on my [youtube channel](https://www.youtube.com/channel/UCGj
 
 #demo
 
-![youtube](https://www.youtube.com/embed/LSlYsI8gjaY)
+![youtube](LSlYsI8gjaY)
 
 And here's a picture of it (even if one motor is missing):
 #img

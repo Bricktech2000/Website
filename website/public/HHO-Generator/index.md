@@ -2,7 +2,7 @@
 
 A few weeks ago, I was browsing my _YouTube recommended feed_, trying to find new stuff to learn. Then, I stumbled upon this video:
 
-![youtube](https://www.youtube.com/embed/kfYiQVzB3Cg)
+![youtube](kfYiQVzB3Cg)
 It showcases a very simple _HHO Generator_, which uses screws to [electrolize](https://en.wikipedia.org/wiki/Electrolysis_of_water) water. This very simple contraption can generate `100 ml` of explosive [_HHO_](https://en.wikipedia.org/wiki/Oxyhydrogen) gas per minute.
 
 When I saw this video for the first time, I new I had to build one. I immediately got to work thinking about how I would make my own. After a few trips to the hardware store and `30 $` well spent, I was ready to start building!
@@ -55,7 +55,7 @@ For anyone wondering, here is a list of the parts I used to make this generator:
 
 Here is a demo of the explosion of a small cup containing [HHO](https://en.wikipedia.org/wiki/Oxyhydrogen) gas, which was made using my generator:
 
-![youtube](https://www.youtube.com/embed/uue630WiYNA)
+![youtube](uue630WiYNA)
 
 ## Conclusion
 

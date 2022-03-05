@@ -14,7 +14,7 @@ Now that I have received the new battery, I'm constantly asking myself the same 
 
 Here is a demo of the drone on a 6S battery, with a [blackbox preview](../Blackbox-Video-Exporter/) on the side:
 
-![youtube](https://www.youtube.com/embed/mtHC_svNsn8)
+![youtube](mtHC_svNsn8)
 
 ## Conclusion
 

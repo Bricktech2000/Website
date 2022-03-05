@@ -36,7 +36,7 @@ As soon as I saw how amazing it was to fly, I immediately ordered an action came
 Using the `3D-printed` camera mount and the [Caddx Orca](https://www.banggood.com/Caddx-Orca-4K-HD-Recording-Mini-FPV-Camera-FOV-160-Degree-WiFi-Anti-Shake-DVR-Action-Cam-for-Outdoor-Photography-RC-Racing-Drone-Airplane-p-1590162.html?cur_warehouse=CN&rmmds=search), I managed to record some pretty awesome footage. Just ignore the two crashes right into snow...
 
 #hd-demo
-![youtube](https://www.youtube.com/embed/KpCdQ5Hc82w)
+![youtube](KpCdQ5Hc82w)
 
 ## Final Words
 

@@ -20,11 +20,11 @@ Here are some images of the drone in its fully built state:
 
 Here is a short video of the drone performing its maiden flight (with no sound, unfortunately) followed by a demo of its performance on a 4S LiPo:
 
-![youtube](https://www.youtube.com/embed/EDZ0F5PxoHg)
+![youtube](EDZ0F5PxoHg)
 
 #build-demo
 
-![youtube](https://www.youtube.com/embed/yyGEHibcRVo)
+![youtube](yyGEHibcRVo)
 
 ## Conclusion
 

@@ -16,7 +16,7 @@ const Marked = (props) => {
         text.replace(/\n#([^ #][^\n]+)/g, (a, b) => `\n<a name="${b}"></a>`),
         {
           sanitize: false,
-          highlight: function(code, lang) {
+          highlight: function (code, lang) {
             //const hljs = require('highlight.js');
             const language = hljs.getLanguage(lang) ? lang : 'plaintext';
             const va = hljs
@@ -47,7 +47,7 @@ const Marked = (props) => {
         .replace(
           /<img src="(.*)" alt="youtube">/g,
           (a, b) =>
-            `<section><iframe width="560" height="315" title="youtube video" src="${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>`
+            `<section><iframe width="560" height="315" title="youtube video" src="https://www.youtube.com/embed/${b}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>`
         ),
     };
   };

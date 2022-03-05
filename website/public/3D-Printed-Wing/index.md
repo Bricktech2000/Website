@@ -39,7 +39,7 @@ While the electronic parts were in the mail, I started 3D printing the wing usin
 #demo
 As it is currently winter in Canada, I decided not to fly my brand new wing for the moment. However, here's a quick demo video for the time being:
 
-![youtube](https://www.youtube.com/embed/HnKADfM29kY)
+![youtube](HnKADfM29kY)
 
 ## Updates Coming Soon!
 

@@ -2,7 +2,7 @@
 
 Ever since I got interested in FPV drones, I loved watching freestyle videos on the internet. However, it was really hard to know what the pilot was doing with the sticks, and I had no idea how most tricks were performed. There have been solutions to this problem, like sticking a [GoPro to record a video of your transmitter](https://youtu.be/OFnPqIaliqg?t=57), or using some editing magic to overlay the sticks using the [Betaflight Blackbox Explorer](https://github.com/betaflight/blackbox-log-viewer/releases):
 
-![youtube](https://www.youtube.com/embed/t2FTDpKMfw8)
+![youtube](t2FTDpKMfw8)
 
 However, this approach has a few problems:
 
@@ -20,7 +20,7 @@ Solving this problem was pretty easy. I found a way to take a `BFL` file from th
 
 #demo
 
-![youtube](https://www.youtube.com/embed/ZwEiSLSOzwo)
+![youtube](ZwEiSLSOzwo)
 
 #try
 

@@ -32,9 +32,9 @@ The next step was to transfer all the electronics from the previous frame to the
 Along with the frame, I also received the `4` LiPo batteries I had ordered. For this reason, I decided to go back to my town's primary school to take some shots during the golden hour. Below is a short flight of my drone on this new frame followed by a few accidental crashes... enjoy!
 
 #frame-demo
-![youtube](https://youtube.com/embed/B63fg_lCqNA)
+![youtube](B63fg_lCqNA)
 #frame-crash
-![youtube](https://youtube.com/embed/oxRzuhUiJCs)
+![youtube](oxRzuhUiJCs)
 
 ## Moving Forward
 

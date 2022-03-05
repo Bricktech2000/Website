@@ -6,7 +6,7 @@ Many years ago, I wanted to make a machine called a [Useles Box](https://en.wiki
 
 To better understand, here is a video showcasing such a machine:
 
-![youtube](https://www.youtube.com/embed/oP8u0PQOMes)
+![youtube](oP8u0PQOMes)
 
 I wanted to use a wooden box and metal hinges to make it work, but I quickly realised that it would be way too complicated to make, so I abandoned the project. However, recently, a friend of mine showed me a video of such a machine, and I told him about my faild attempt at creating one. He then told me something along the lines of:
 
@@ -20,7 +20,7 @@ Here is a demo video of the [useless machine](https://en.wikipedia.org/wiki/Usel
 
 #demo
 
-![youtube](https://www.youtube.com/embed/8sc6o9nVoc0)
+![youtube](8sc6o9nVoc0)
 
 Through clever code, it has **60 different ways** to turn the switch back off once someone flips it on!
 

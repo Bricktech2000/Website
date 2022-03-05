@@ -6,7 +6,7 @@ Below is a video from my [YouTube Channel](https://www.youtube.com/channel/UCGj6
 
 #demo
 
-![youtube](https://www.youtube.com/embed/W75Hf516KTA)
+![youtube](W75Hf516KTA)
 
 And here's how the finished adapter looks:
 

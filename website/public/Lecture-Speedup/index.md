@@ -27,4 +27,4 @@ If all that sounds appealing, you can give [Lecture Speedup](https://github.com/
 #demo
 As a quick demo of the script, below is a video of me blazing through a lecture recording and taking notes on the material covered. Enjoy!
 
-![youtube](https://www.youtube.com/embed/cnkFpbtklAU)
+![youtube](cnkFpbtklAU)

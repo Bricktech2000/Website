@@ -39,7 +39,7 @@ The idea is that the [flash powder](https://en.wikipedia.org/wiki/Flash_powder) 
 
 #demo
 
-![youtube](https://www.youtube.com/embed/KWI7b-ATx7Q)
+![youtube](KWI7b-ATx7Q)
 
 And here's a macro photo of the insides after the "explosion" (if you can even call it that):
 

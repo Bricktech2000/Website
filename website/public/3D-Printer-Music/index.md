@@ -12,7 +12,7 @@ After a bunch of hassle, I managed to get a song to work! Here's a short video o
 
 #demo
 
-![youtube](https://www.youtube.com/embed/hEUc-tUa53M)
+![youtube](hEUc-tUa53M)
 
 ## How it is Done
 
