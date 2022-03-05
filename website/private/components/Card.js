@@ -26,7 +26,6 @@ const Card = (props) => {
 
   // copied from PostHeader.js
   if (props.info.children !== undefined) {
-    console.log('before', props.info.tags);
     const tag_union = [
       ...new Set([
         ...Object.values(props.info.children)
@@ -43,8 +42,6 @@ const Card = (props) => {
 
     props.info.tags = tag_union;
     props.info.btns = button_union;
-
-    console.log('after', props.info.tags);
   }
 
   const CardHtml = React.forwardRef((props2, ref) => (
