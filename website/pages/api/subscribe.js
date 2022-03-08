@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import { setFlagsFromString } from 'v8';
 import webPush from 'web-push';
 
 const webPushInit = async () => {
@@ -29,25 +30,16 @@ const checkSubscriptions = async () => {
       });
   };
 
-  //https://nextjs.org/docs/advanced-features/dynamic-import
-  await fs.writeFile(process.cwd() + '/private/lib/lastPostMap.js', '', {
-    flag: 'a+',
-  });
+  const lastPostMap = await getLastPostMap();
   const postMap = (await import('../../private/lib/postMap')).default;
-  const lastPostMap = (await import('../../private/lib/lastPostMap')).default;
 
   if (postMap[0] != lastPostMap[0]) {
-    //https://www.geeksforgeeks.org/node-js-fs-copyfile-function/
-    fs.copyFile(
-      process.cwd() + '/private/lib/postMap.js',
-      process.cwd() + '/private/lib/lastPostMap.js'
-    );
+    await setLastPostMap(postMap);
 
     const info = JSON.parse(
       await fs.readFile(process.cwd() + '/public/' + postMap[0] + '/index.json')
     );
 
-    console.log(info.title);
     sendNotification({
       title: `New Post: ${info.title}`,
       body: info.desc,
@@ -57,29 +49,47 @@ const checkSubscriptions = async () => {
   }
 };
 
-const getSubscriptions = async () => {
+const readJSON = async (path) => {
   //https://stackoverflow.com/questions/12899061/creating-a-file-only-if-it-doesnt-exist-in-node-js
-  await fs.writeFile(process.cwd() + '/private/subscriptions.json', '', {
+  await fs.writeFile(`${process.cwd()}/${path}`, '', {
     flag: 'a+',
   });
 
   return JSON.parse(
-    (
-      await fs.readFile(process.cwd() + '/private/subscriptions.json')
-    ).toString() || '{}'
+    (await fs.readFile(`${process.cwd()}/${path}`)).toString() || '{}'
   );
 };
 
-const setSusbscriptions = async (subscriptions) => {
+const setJSON = async (path, data) => {
   //https://stackoverflow.com/questions/12899061/creating-a-file-only-if-it-doesnt-exist-in-node-js
+  await fs.writeFile(`${process.cwd()}/${path}`, '', {
+    flag: 'a+',
+  });
+
   fs.writeFile(
-    process.cwd() + '/private/subscriptions.json',
-    JSON.stringify(subscriptions),
+    `${process.cwd()}/${path}`,
+    JSON.stringify(data),
     { flag: 'w' },
     (err) => {
       if (err) console.log(err);
     }
   );
+};
+
+const getLastPostMap = async () => {
+  return await readJSON('private/lib/lastPostMap.json');
+};
+
+const setLastPostMap = async (data) => {
+  return await setJSON('private/lib/lastPostMap.json', data);
+};
+
+const getSubscriptions = async () => {
+  return await readJSON('private/subscriptions.json');
+};
+
+const setSusbscriptions = async (data) => {
+  await setJSON('private/subscriptions.json', data);
 };
 
 export default async function subscribe(req, res) {

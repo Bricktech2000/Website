@@ -2,4 +2,4 @@
 /website/private/private_vapid.key
 /website/public/public_vapid.key
 /website/private/subscriptions.json
-/website/private/lib/lastPostMap.js
+/website/private/lib/lastPostMap.json2
