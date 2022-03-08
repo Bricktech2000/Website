@@ -13,7 +13,7 @@ const HomePinned = () => {
   if (typeof info === 'undefined') return <Loading height="400vh" />;
 
   return (
-    <div className={styles['HomePinned']}>
+    <div className={styles.HomePinned}>
       <h1 className={marked}>Pinned Projects</h1>
       <em className={marked}>
         Some larger scale projects to show what I'm capable of

@@ -26,8 +26,11 @@ const Home = () => {
   );
 };
 
-/*export async function getStaticProps() {
+import subscribe from './api/subscribe';
+
+export async function getServerSideProps() {
+  subscribe();
   return { props: {} };
-}*/
+}
 
 export default Home;

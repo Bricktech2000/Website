@@ -1,9 +1,12 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 
 import styles from './Toggle.module.css';
 
 const Toggle = (props) => {
-  const [active, setActive] = useState(props.active);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    setActive(props.active);
+  }, [props.active]);
 
   return (
     <div

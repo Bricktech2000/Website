@@ -1,8 +1,8 @@
-import { promises as fs, constants } from 'fs';
+import { promises as fs } from 'fs';
 import webPush from 'web-push';
 
-var webPushInit = async () => {
-  var vapidDetails = {
+const webPushInit = async () => {
+  const vapidDetails = {
     public: (await fs.readFile(process.cwd() + '/public/public_vapid.key'))
       .toString()
       .trim(),
@@ -17,45 +17,52 @@ var webPushInit = async () => {
     vapidDetails.private
   );
 };
-var checkSubscriptions = async () => {
-  var sendNotification = async (data) => {
-    var subscriptions = await getSubscriptions();
-    var payload = JSON.stringify(data);
+
+const checkSubscriptions = async () => {
+  const sendNotification = async (data) => {
+    const subscriptions = await getSubscriptions();
+    const payload = JSON.stringify(data);
 
     for (var key of Object.keys(subscriptions))
       webPush.sendNotification(subscriptions[key], payload).catch((err) => {
-        //console.log(err);
+        // console.log(err);
       });
   };
 
   //https://nextjs.org/docs/advanced-features/dynamic-import
-  var postMap = (await import('../../private/lib/postMap')).default;
-  var lastPostMap = (await import('../../private/lib/lastPostMap')).default;
+  await fs.writeFile(process.cwd() + '/private/lib/lastPostMap.js', '', {
+    flag: 'a+',
+  });
+  const postMap = (await import('../../private/lib/postMap')).default;
+  const lastPostMap = (await import('../../private/lib/lastPostMap')).default;
 
-  if (postMap.toString() != lastPostMap.toString()) {
+  if (postMap[0] != lastPostMap[0]) {
     //https://www.geeksforgeeks.org/node-js-fs-copyfile-function/
     fs.copyFile(
       process.cwd() + '/private/lib/postMap.js',
       process.cwd() + '/private/lib/lastPostMap.js'
     );
-    var info = JSON.parse(
+
+    const info = JSON.parse(
       await fs.readFile(process.cwd() + '/public/' + postMap[0] + '/index.json')
     );
+
+    console.log(info.title);
     sendNotification({
-      title: 'New Post: ' + info.title,
+      title: `New Post: ${info.title}`,
       body: info.desc,
-      icon: '/icon.png',
-      click_action: 'https://google.com/',
-      tag: postMap[0],
+      icon: `/icon.png`,
+      id: postMap[0],
     });
   }
 };
 
-var getSubscriptions = async () => {
+const getSubscriptions = async () => {
   //https://stackoverflow.com/questions/12899061/creating-a-file-only-if-it-doesnt-exist-in-node-js
   await fs.writeFile(process.cwd() + '/private/subscriptions.json', '', {
     flag: 'a+',
   });
+
   return JSON.parse(
     (
       await fs.readFile(process.cwd() + '/private/subscriptions.json')
@@ -63,7 +70,7 @@ var getSubscriptions = async () => {
   );
 };
 
-var setSusbscriptions = async (subscriptions) => {
+const setSusbscriptions = async (subscriptions) => {
   //https://stackoverflow.com/questions/12899061/creating-a-file-only-if-it-doesnt-exist-in-node-js
   fs.writeFile(
     process.cwd() + '/private/subscriptions.json',
@@ -77,12 +84,17 @@ var setSusbscriptions = async (subscriptions) => {
 
 export default async function subscribe(req, res) {
   await webPushInit();
+
+  try {
+    const subscription = JSON.parse(req.body);
+    const subscriptions = await getSubscriptions();
+    subscriptions[subscription.keys.auth] = subscription;
+    setSusbscriptions(subscriptions);
+
+    res.status(201).json({});
+  } catch (e) {
+    res && res.status(500).json({});
+  }
+
   await checkSubscriptions();
-
-  var subscription = JSON.parse(req.body);
-  var subscriptions = await getSubscriptions();
-  subscriptions[subscription.keys.auth] = subscription;
-  setSusbscriptions(subscriptions);
-
-  res.status(201).json({});
 }
