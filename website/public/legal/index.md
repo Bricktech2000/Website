@@ -36,7 +36,7 @@ Website [source code](https://github.com/Bricktech2000/Website) licensed under t
 
 ## "AS IS" Disclaimer
 
-The Authors provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+The Authors provide no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
 
 ## Links to Other Websites
 
