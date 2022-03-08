@@ -4,8 +4,9 @@ self.addEventListener('push', (event) => {
 });
 
 //https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event
+// https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications
 self.onnotificationclick = function (event) {
-  const { id } = event.notification;
+  const { data } = event.notification;
 
   // This looks to see if the current is already open and
   // focuses if it is
@@ -17,10 +18,10 @@ self.onnotificationclick = function (event) {
       .then(function (clientList) {
         for (var i = 0; i < clientList.length; i++) {
           const client = clientList[i];
-          if (client.url == '/' + id + '/' && 'focus' in client)
+          if (client.url == '/' + data.id + '/' && 'focus' in client)
             return client.focus();
         }
-        if (clients.openWindow) return clients.openWindow('/' + id + '/');
+        if (clients.openWindow) return clients.openWindow('/' + data.id + '/');
       })
   );
 };

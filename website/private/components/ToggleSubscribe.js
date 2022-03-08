@@ -74,7 +74,8 @@ const ToggleSubscribe = () => {
           //https://love2dev.com/blog/how-to-uninstall-a-service-worker/
           const registrations =
             await navigator.serviceWorker.getRegistrations();
-          registrations[0].unregister();
+          for (const registration of registrations)
+            await registration.unregister();
         } catch (e) {}
 
         isActive = !isActive;

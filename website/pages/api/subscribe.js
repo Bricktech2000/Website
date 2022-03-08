@@ -43,7 +43,9 @@ const checkSubscriptions = async () => {
       title: `New Post: ${info.title}`,
       body: info.desc,
       icon: `/icon.png`,
-      id: postMap[0],
+      data: {
+        id: postMap[0],
+      },
     });
   }
 };
