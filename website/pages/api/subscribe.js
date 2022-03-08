@@ -1,5 +1,4 @@
 import { promises as fs } from 'fs';
-import { setFlagsFromString } from 'v8';
 import webPush from 'web-push';
 
 const webPushInit = async () => {
