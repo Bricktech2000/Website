@@ -1,9 +1,15 @@
 .ToggleSubscribe {
-  display: inline-flex;
-  width: auto;
-  align-items: center;
+  flex-direction: column;
   margin: 1em 0;
+  gap: 1em;
 }
-.ToggleSubscribe span {
-  width: 1em;
+
+.toggleContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.errorContainer {
+  display: inline-block;
 }
