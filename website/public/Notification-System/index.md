@@ -6,7 +6,7 @@ It is one of my friends who first got the idea for a notification system on my w
 
 ## Turning Notifications On
 
-It is very simple to activate notifications for this website. On the [home page](../../), under _Recent Projects_, there is a toggle called _Receive Notifications_. If you wish to receive a notification every time a new post is published, simply turn it on!
+It is very simple to activate notifications for this website. On the [home page](../), under _All Projects_, there is a toggle called _Receive Notifications_. If you wish to receive a notification every time a new post is published, simply turn it on!
 
 #code
 
