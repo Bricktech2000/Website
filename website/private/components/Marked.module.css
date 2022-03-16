@@ -90,17 +90,17 @@ code.Marked,
 pre.Marked code {
   font-family: var(--mono);
   font-weight: normal;
-  font-size: 0.66em; /* 2/3 of normal */
+  font-size: 0.6em; /* 3/5 of normal */
   border: var(--border);
   border-radius: var(--border-radius);
-  border-width: 0.075em; /* divided by (2/3) */
+  border-width: 0.08333em; /* divided by (3/5) */
   box-shadow: var(--bs);
 }
 .Marked code,
 code.Marked {
   display: inline-block;
   vertical-align: middle;
-  padding: 0.125em 0.75em;
+  padding: 0.25em 1em;
   border-radius: var(--border-radius);
 }
 .Marked pre code,

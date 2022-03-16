@@ -16,7 +16,7 @@
   --border-radius: 0.25em;
 
   --sans: Roboto, sans-serif;
-  --mono: Inconsolata, monospace;
+  --mono: 'Fira Code', monospace;
 }
 * {
   padding: 0;

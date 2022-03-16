@@ -7,7 +7,7 @@
   border: var(--border);
   border-radius: var(--border-radius);
   font-family: var(--mono);
-  font-size: 0.666em;
+  font-size: 0.6em; /* 3/5 of normal */
 }
 .cursor {
   display: inline;

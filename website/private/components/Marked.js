@@ -22,7 +22,7 @@ const Marked = (props) => {
             const va = hljs
               .highlight(
                 code.replace(
-                  /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]|<<|>>/g,
+                  /[\[\]\+\-=%\?\^\(\)\[\]\!;<>]+/g,
                   (a) => `~${a}~`
                 ),
                 { language }
@@ -32,7 +32,7 @@ const Marked = (props) => {
                 (a, b) => b
               )
               .replace(
-                /~([^~]{1,4})~/g,
+                /~([^~]{1,6})~/g,
                 (a, b) => `<span class="hljs-operator">${b}</span>`
               );
             return va;
