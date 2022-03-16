@@ -1,33 +1,33 @@
 ## The idea
 
-I first had the idea for [this password manager](https://github.com/Bricktech2000/DBLess-Password-Manager) when I heard about a website that stores secret information client-side, using the password as an symmetric encryption key.
+I first had the idea to create [this password manager](https://github.com/Bricktech2000/DBLess-Password-Manager) when I heard about a website that stored secret information using a user-provided password as a symmetric encryption key.
 
 > A password manager is a computer program that allows users to store, generate, and manage their passwords for local applications and online services. A password manager assists in generating and retrieving complex passwords, storing such passwords in an encrypted database or calculating them on demand.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Password_manager)
 
-This website sends encrypted data to the user, which can only be decrypted client-side using the key, which happens to be the password that protects the document. A few days later, I decided to create this _password manager_.
+This website stored the user's secret information on the server side in an encrypted form. When the information is requested by the client, it is sent encrypted and must be decrypted using the same key that was used to encrypt it in the first place. This is where it gets interesting: the key was derived directly from the user-provided password, meaning storing the password was totally unnecessary. A few days later, I decided to create a password manager based on the same idea.
 
 ## How it works
 
-The way this password manager works is very simple. It works on the premise that no database is needed to store your passwords. Your passwords are not stored; they are calculated on-the-fly by the program. This has multiple advantages:
+This password manager uses simple cryptography to generate website passwords on demand. This means that that no database is required to store them, which has many advantages:
 
-- There are absolutely no security risks
-- No internet connection is required
-- No harware device is required
+- All generated passwords are totally different from one website to another and are very hard to brute force
+- No trust is put on a third-party password manager's security infrastructure
+- A plain-text database leak has virtually no chances of exposing your master password
 
 At this point, you are probably wondering:
 
 > And how does it do such a thing?
 
-Turns out, it is fairly simple. It takes in 3 parameters as an input: the website `domain name`, the `username` used and your `master password`.
+It turns out that it is fairly simple. The password manager takes in 3 parameters as an input: the `Service` to log into, the `Username` used and your `Master Password`.
 
-- First, the program asks for user input. For this example, the domain name will be **_gmail.com_**, the username will be **_my.email@gmail.com_** and the master password will be **_Password123_**.
-- Second, they are concatenated into a single long string, which looks like the following: **gmail.com%my.email@gmail.com%Password123**.
-- Third, it gets hashed using `SHA256` in order to obtain raw binary data, which looks like this: **f46cbae1ee0533b574657355934f28f587c1159e61f0977e3f027ad6326f841b**.
-- Fourth, it is mutaed through a [Base-85](https://en.wikipedia.org/wiki/Ascii85) encoder before being copied to the user's clipboard. The final password will look something like this: **Lza$)GCzOBy/I[LtrR1HRTZ%vEPRjklueZgh?\*+**.
+1. The program asks for user input. For this example, the service to log into will be **_google_**, the username used will be **_my.email@gmail.com_** and the master password will be **_Password123_**.
+2. Each of the three values inputted is individually hashed using `SHA-1` before being `XOR`ed together. This step of the process is not meant to be cryptographically secure and is only used to "join" the different values together. In this example, it would produce the following 160-bit digtest: `366961a34cec4a950f8421aa142fea417573f4c3`.
+3. The previously generated digest is then hashed again using `SHA-256`, a cryptographically secure hashing algorithm, which would produce the following output when represented as hexadecimal: `9b2d09310b3bf6ba822bc898a4d562334a7c513c6d330a5c758d0dd87c80f2e7`.
+4. The newly generated digest is mutated through a [Base-85](https://en.wikipedia.org/wiki/Ascii85) encoder to reduce its length before being copied to the user's clipboard. The final password would look something like this: **N>j}33P[6[F?a{fQ$5{gn{<F#z8hJ7B=u<.E1p!J**.
 
-As you can clearly see, the generated password is derived from well-known data and a secret. For this reason, it will be different for every website and for every username. The generated password will be completely wrong if even a single character of the **master password** is not the same, which makes this algorithm very secure.
+As you can clearly see, the generated password is derived from well-known data and a secret. For this reason, it will be different for every service and for every username used. The generated password will be completely wrong if the **master password** isn't exactly the same, which is ideal in this scenario.
 
 #try
 
@@ -35,4 +35,4 @@ If you would like to try this program for yourself, refer to the `README` on the
 
 ## Conclusion
 
-Even if this password manager has a long way to go, I think it is perfect as a simple demo of the power of hashing. I also learned that programming a proof of concept is way easier than making a production-ready program, which requires a **nice UI**, **good UX** and **a lot of polish**. Can't wait for the day [Quantum Computers](https://en.wikipedia.org/wiki/Quantum_computing) will [break everything](https://en.wikipedia.org/wiki/Shor%27s_algorithm)...
+This password manager definitely has a long way to go, but it is still a good proof-of-concept that uses cryptography to greatly reduce the amount of potential weak links in a system. Even though I currently use it as my main password manager, I don't plan on making it production-ready as that would require building a **nice UI**, **good UX** and **a lot of polishing**. Let's just hope [Quantum Computers](https://en.wikipedia.org/wiki/Quantum_computing) don't [break everything](https://en.wikipedia.org/wiki/Shor%27s_algorithm) too soon...

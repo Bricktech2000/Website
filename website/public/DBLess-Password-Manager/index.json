@@ -1,6 +1,6 @@
 {
   "title": "DBLess Password Manager",
-  "date": "2021-01-20",
+  "date": "2022-03-16",
   "type": "software",
   "tags": [
     "Software",
@@ -13,6 +13,7 @@
     "Data Processing",
     "Scripting",
     "VS Code",
+    "Vim",
     "Cryptography"
   ],
   "btns": {

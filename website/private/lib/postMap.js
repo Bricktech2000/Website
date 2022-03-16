@@ -1,4 +1,5 @@
 export default [
+  'DBLess-Password-Manager',
   'Modular-Containers-2-0',
   'Lecture-Speedup',
   'LED-Strip-Lighting',
@@ -29,7 +30,6 @@ export default [
   '3D-Printed-Tools',
   'Neumorphic-Design',
   'TPU-Phone-Stand',
-  'DBLess-Password-Manager',
   'Messenger-Always-Active',
   'WebInfo',
   'HHO-Generator',
