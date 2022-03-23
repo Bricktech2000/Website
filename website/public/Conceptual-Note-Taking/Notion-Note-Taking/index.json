@@ -1,0 +1,24 @@
+{
+  "title": "Notion Note-Taking",
+  "date": "2021-12-12",
+  "type": "blog",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Git",
+    "Web",
+    "Demo",
+    "Learning",
+    "Markdown",
+    "Modular",
+    "Notion",
+    "Organization",
+    "Productivity",
+    "LaTeX",
+    "Key Bindings"
+  ],
+  "btns": {
+    "Notes on Notion": "https://www.notion.so/Notes-a61f38520e91467e8d968fa8795f3b5a"
+  },
+  "desc": "Writing about the way I take conceptual notes using Notion"
+}

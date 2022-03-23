@@ -1,0 +1,30 @@
+{
+  "title": "VS Code Note-Taking",
+  "date": "2022-03-22",
+  "type": "blog",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Software",
+    "CSS",
+    "Git",
+    "Demo",
+    "Learning",
+    "Markdown",
+    "Linux",
+    "Bash",
+    "Organization",
+    "Productivity",
+    "VS Code",
+    "Vim",
+    "LaTeX",
+    "Key Bindings"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/Notes",
+    "Notes on Github": "https://github.com/Bricktech2000/Notes/blob/master/notes/index.md",
+    "Note Tree View": "#tree",
+    "Markdown Preview Screenshot": "#img"
+  },
+  "desc": "Writing about the way I switched to VS Code to take my conceptual notes"
+}

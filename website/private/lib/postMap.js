@@ -1,4 +1,5 @@
 export default [
+  'Conceptual-Note-Taking',
   'DBLess-Password-Manager',
   'Modular-Containers-2-0',
   'Lecture-Speedup',
@@ -6,7 +7,6 @@ export default [
   '3D-Printed-Wing',
   'Turing-Complete-Mentions',
   'Stack-Based-CPU',
-  'Conceptual-Note-Taking',
   'FileSync',
   'FPV-Racing-Drone',
   'Motivation',
