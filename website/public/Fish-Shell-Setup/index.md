@@ -14,21 +14,21 @@ I used a powerline-style prompt for my shell called [bobthefish](https://github.
 
 Finally, I have [Vim bindings](../Learning-Vim-Key-Bindings/) all accross my shell on `normal` mode by default, which allow me to quickly navigate through my command history and efficiently edit a previous command.
 
-![](2022-04-05-20-41-34.png)
+![shell with powerline-style prompt](2022-04-05-20-41-34.png)
 
 ## Z
 
 I use [z](https://github.com/jethrokuan/z) to allow me to quickly jump around directories and quickly open files. It tracks the frequency at which directories are visited and manages to jump to the correct one without having to write out its full path. Below is an example of how I use it.
 
-![](2022-04-05-20-40-02.png)
+![sample usage of z](2022-04-05-20-40-02.png)
 
 ## The Fuck
 
 I use [The Fuck](https://github.com/nvbn/thefuck) for those frustrating moments in which a typo or permission error is preventing a command from running. _The Fuck_ is a command line tool that suggests fixes to the previous command when running `fuck` and that runs the most likely fix straight away when running `fuck --yeah`. Below are some examples to better understand what it does.
 
-![](2022-04-05-20-45-29.png)
+![fixing `apt install vim` with `fuck`](2022-04-05-20-45-29.png)
 
-![](2022-04-05-20-46-02.png)
+![fixing `puthon` with `fuck --yeah`](2022-04-05-20-46-02.png)
 
 ## Conclusion
 
