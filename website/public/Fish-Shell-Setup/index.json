@@ -10,7 +10,8 @@
     "Linux",
     "Productivity",
     "VS Code",
-    "Vim"
+    "Vim",
+    "Key Bindings"
   ],
   "btns": {
     "Tmux Howto": "tmux.howto.txt",
