@@ -1,0 +1,28 @@
+{
+  "title": "RateMyProf Extension",
+  "date": "2022-04-05",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web",
+    "Hacking",
+    "Scripting",
+    "VS Code",
+    "Vim",
+    "JSON",
+    "Key Bindings",
+    "Chrome Extension"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/RateMyProf-Extension",
+    "Extension Screenshots": "#img"
+  },
+  "desc": "A Chromium extension to automatically underline professor names with their Rate My Professor ratings!"
+}
