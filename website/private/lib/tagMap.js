@@ -98,4 +98,5 @@ export default {
   FPV: 'skill',
   Cryptography: '',
   Chemistry: '',
+  'Chrome Extension': '',
 };
