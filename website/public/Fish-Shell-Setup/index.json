@@ -1,0 +1,20 @@
+{
+  "title": "Fish Shell Setup",
+  "date": "2022-04-02",
+  "type": "blog",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Software",
+    "Learning",
+    "Linux",
+    "Productivity",
+    "VS Code",
+    "Vim"
+  ],
+  "btns": {
+    "Tmux Howto": "tmux.howto.txt",
+    "Fish Shell Howto": "fish%20shell.howto.txt"
+  },
+  "desc": "My current shell setup for productivity. Showcasing what it can do and explaining the motivation behind the decisions I took."
+}

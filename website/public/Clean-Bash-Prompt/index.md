@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> Since writing this post, I switched to a custom setup using [Fish Shell](../Fish-Shell-Setup/) instead of Bash. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## Overview
 
 This program is a simple script to change the Bash prompt on your terminal.

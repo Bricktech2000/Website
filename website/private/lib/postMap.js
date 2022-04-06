@@ -1,4 +1,5 @@
 export default [
+  'Fish-Shell-Setup',
   'Conceptual-Note-Taking',
   'DBLess-Password-Manager',
   'Modular-Containers-2-0',
