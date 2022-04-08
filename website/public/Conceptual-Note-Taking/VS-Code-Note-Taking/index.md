@@ -23,125 +23,146 @@ After a few days of experimenting with different extensions, I decided to settle
 - [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
 - [Markdown yaml Preamble](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-preamble)
 - [md-graph](https://marketplace.visualstudio.com/items?itemName=ianjsikes.md-graph)
+- [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
 
 > **settings.json**
 
-```js
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // open link with gd
-    {
-      "before": ["g", "d"],
-      "commands": ["editor.action.openLink"]
-    },
-    {
-      "before": ["g", "p"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["g", "r"],
-      "commands": [
-        "fileutils.removeFile",
-        //focus current editor
-        "workbench.action.openPreviousRecentlyUsedEditor",
-        "workbench.action.openNextRecentlyUsedEditor"
-      ]
-    },
-    { "before": ["g", "z"], "commands": ["workbench.action.toggleZenMode"] }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    // Bind p in visual mode to paste without overriding the current register
-    {
-      "before": ["p"],
-      "after": ["p", "g", "v", "y"]
-    }
-  ],
+```jsx
+"vim.normalModeKeyBindingsNonRecursive": [
+  {
+    "before": ["g", "d"],
+    "commands": ["editor.action.openLink"]
+  },
+  {
+    "before": ["g", "p"],
+    "commands": ["workbench.action.quickOpen"]
+  },
+  {
+    "before": ["g", "P"],
+    "commands": ["workbench.action.showCommands"]
+  },
+  { "before": ["g", "z"], "commands": ["workbench.action.toggleZenMode"] }
+],
+"vim.visualModeKeyBindingsNonRecursive": [
+  // Bind p in visual mode to paste without overriding the current register
+  // -- VS Code Vim extension
+  {
+    "before": ["p"],
+    "after": ["p", "g", "v", "y"]
+  }
+],
 
-  "md-graph.autoStart": true,
-  "MarkdownPaste.silence": true,
-  "md-graph.graph.defaultMode": "FOCUS",
-  "md-graph.graph.focusNeighborDepth": 2,
-  "md-graph.showColumn": "active",
-  "md-graph.openColumn": "three",
-  "workbench.editor.enablePreview": false,
-  "memo.links.rules": [
-    {
-      "rule": "",
-      "folder": "$CURRENT_FILE_DIRECTORY"
-    }
-  ],
-  "markdown.styles": [
-    "https://use.fontawesome.com/releases/v5.7.1/css/all.css", // mermaid
-    // https://www.dropboxforum.com/t5/Dropbox-files-folders/public-links-to-raw-files/td-p/110391
-    // .github-markdown-body, .github-markdown-content { background-color: #000000; }
-    // .github-markdown-body code { font-family: 'Fira Code'; }
-    "https://dl.dropbox.com/s/4g49nwbn2w0pxoj/markdown.css?dl=0"
-  ],
-  "cSpell.allowCompoundWords": true,
-  "cSpell.useGitignore": false,
-  "cSpell.logLevel": "Information",
-  "cSpell.ignoreWords": [
-    "srcs",
-    "extremum",
-    "biconditional",
-    "karnaugh",
-    "hasselbalch",
-    "println",
-    "implicant",
-    "implicants",
-    "atreum",
-    "bipyramid",
-    "bipyramidal",
-    "instanceof",
-    "phosphite",
-    "analyte"
-  ],
-  "cSpell.ignoreRegExpList": [
-    "/\\\\[\\{\\}a-z]+/gi", // latex commands including { and }
-    "/\\b[A-Z]{3,5}s?\\b/g" // acronyms including possible s
-  ],
+"md-graph.autoStart": true,
+"MarkdownPaste.silence": true,
+"md-graph.graph.defaultMode": "FOCUS",
+"md-graph.graph.focusNeighborDepth": 2,
+"md-graph.showColumn": "active",
+"md-graph.openColumn": "three",
+"workbench.editor.enablePreview": false,
+"memo.links.rules": [
+  {
+    "rule": "",
+    "folder": "$CURRENT_FILE_DIRECTORY"
+  }
+],
+"markdown.styles": [
+  "https://use.fontawesome.com/releases/v5.7.1/css/all.css", // mermaid
+  // https://www.dropboxforum.com/t5/Dropbox-files-folders/public-links-to-raw-files/td-p/110391
+  // .github-markdown-body, .github-markdown-content { background-color: #000000; }
+  // .github-markdown-body code { font-family: 'Fira Code'; }
+  "https://dl.dropbox.com/s/4g49nwbn2w0pxoj/markdown.css?dl=0"
+],
+// https://latex.vercel.app/
+// https://github.com/yzane/vscode-markdown-pdf/issues/21
+// https://stackoverflow.com/questions/1664049/can-i-force-a-page-break-in-html-printing
+// https://stackoverflow.com/questions/22601053/pagebreak-in-markdown-while-creating-pdf
+// https://stackoverflow.com/questions/14051715/markdown-native-text-alignment
+"markdown-pdf.styles": [
+  "https://use.fontawesome.com/releases/v5.7.1/css/all.css", // mermaid
+  "https://latex.vercel.app/style.css"
+],
+"markdown-pdf.margin.left": "0",
+"markdown-pdf.margin.right": "0",
+"markdown-pdf.includeDefaultStyles": false,
+"markdown-pdf.headerTemplate": "",
+"markdown-pdf.footerTemplate": "",
+"cSpell.allowCompoundWords": true,
+"cSpell.useGitignore": false,
+"cSpell.logLevel": "Information",
+"cSpell.ignoreWords": [
+  "srcs",
+  "extremum",
+  "biconditional",
+  "karnaugh",
+  "hasselbalch",
+  "println",
+  "implicant",
+  "implicants",
+  "atreum",
+  "bipyramid",
+  "bipyramidal",
+  "instanceof",
+  "phosphite",
+  "analyte",
+  "eigenspace",
+  "tiktok",
+  "fira"
+],
+"cSpell.ignoreRegExpList": [
+  "/\\\\[\\{\\}a-z]+/gi", // latex commands including { and }
+  "/\\b[A-Z]{3,5}s?\\b/g" // acronyms including possible s
+],
 ```
 
 > **keybindings.json**
 
-```js
-[
-  // navigation
-  {
-    key: 'down',
-    command: 'workbench.action.closeActiveEditor',
-    when: 'editorTextFocus',
-  },
-  {
-    key: 'right',
-    command: 'workbench.action.nextEditorInGroup',
-    when: 'editorTextFocus',
-  },
-  {
-    key: 'left',
-    command: 'workbench.action.previousEditor',
-    when: 'editorTextFocus',
-  },
-  {
-    key: 'up',
-    command: 'workbench.action.reopenClosedEditor',
-    when: 'editorTextFocus',
-  },
-  {
-    key: 'shift+left',
-    command: 'workbench.action.moveEditorLeftInGroup',
-    when: 'editorTextFocus',
-  },
-  {
-    key: 'shift+right',
-    command: 'workbench.action.moveEditorRightInGroup',
-    when: 'editorTextFocus',
-  },
-];
+```jsx
+{
+  "key": "down",
+  "command": "workbench.action.closeActiveEditor",
+  "when": "editorTextFocus"
+},
+{
+  "key": "right",
+  "command": "workbench.action.nextEditorInGroup",
+  "when": "editorTextFocus"
+},
+{
+  "key": "left",
+  "command": "workbench.action.previousEditor",
+  "when": "editorTextFocus"
+},
+
+{
+  "key": "shift+down",
+  "command": "fileutils.removeFile",
+  "when": "editorTextFocus"
+},
+{
+  "key": "up",
+  "command": "workbench.action.files.newUntitledFile",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+left",
+  "command": "workbench.action.moveEditorLeftInGroup",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+right",
+  "command": "workbench.action.moveEditorRightInGroup",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+up",
+  "command": "workbench.action.reopenClosedEditor",
+  "when": "editorTextFocus"
+}
 ```
 
 ## The Result
 
-All of the above extensions and settings work together to make note-taking more efficient and more powerful. For instance, I can paste an image or a link straight from my clipboard and it will be inserted into the markdown document automatically. I can also use the `g` key to quickly navigate through files, with `gd` to open a note from its link, `gp` to search for a note, `gr` to delete a note, and so on.
+All of the above extensions and settings work together to make note-taking more efficient and more powerful. For instance, I can paste an image or a link straight from my clipboard and it will be inserted into the markdown document automatically. I can also use the `g` key to quickly navigate through files, with `gd` to open a note from its link, `gp` to search for a note, and so on.
 
 The markdown preview on VS Code is also extended to support full `LaTeX`, `mermaid`, and `Chart.JS`. Below are some screenshots of it.
 #img
