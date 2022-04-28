@@ -33,7 +33,7 @@ function bobthefish_colors -S -d 'Define a custom bobthefish color scheme'
   set -x color_initial_segment_private black white --bold
 
   set -x color_vi_mode_insert grey black
-end 
+end
 
 
 // https://www.reddit.com/r/fishshell/comments/knoig1/how_to_change_the_fish_color_scheme/
@@ -47,6 +47,10 @@ fisher install jethrokuan/z
 // https://github.com/nvbn/thefuck
 // other - https://wiki.termux.com/wiki/FAQ
 pip install thefuck
+fuck
+fuck
+//or
+apt install thefuck
 fuck
 fuck
 
