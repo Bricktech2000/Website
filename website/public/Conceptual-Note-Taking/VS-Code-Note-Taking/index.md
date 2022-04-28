@@ -31,7 +31,7 @@ After a few days of experimenting with different extensions, I decided to settle
 "vim.normalModeKeyBindingsNonRecursive": [
   {
     "before": ["g", "d"],
-    "commands": ["editor.action.openLink"]
+    "commands": ["editor.action.openLink", "editor.action.revealDefinition"]
   },
   {
     "before": ["g", "p"],
@@ -57,7 +57,6 @@ After a few days of experimenting with different extensions, I decided to settle
 "md-graph.graph.defaultMode": "FOCUS",
 "md-graph.graph.focusNeighborDepth": 2,
 "md-graph.showColumn": "active",
-"md-graph.openColumn": "three",
 "workbench.editor.enablePreview": false,
 "memo.links.rules": [
   {
@@ -84,8 +83,8 @@ After a few days of experimenting with different extensions, I decided to settle
 "markdown-pdf.margin.left": "0",
 "markdown-pdf.margin.right": "0",
 "markdown-pdf.includeDefaultStyles": false,
-"markdown-pdf.headerTemplate": "",
-"markdown-pdf.footerTemplate": "",
+"markdown-pdf.headerTemplate": "&nbsp;",
+"markdown-pdf.footerTemplate": "&nbsp;",
 "cSpell.allowCompoundWords": true,
 "cSpell.useGitignore": false,
 "cSpell.logLevel": "Information",
@@ -113,8 +112,6 @@ After a few days of experimenting with different extensions, I decided to settle
   "/\\b[A-Z]{3,5}s?\\b/g" // acronyms including possible s
 ],
 ```
-
-> **keybindings.json**
 
 ```jsx
 {
