@@ -54,6 +54,18 @@ After a few days of experimenting with different extensions, I decided to settle
 
 "md-graph.autoStart": true,
 "MarkdownPaste.silence": true,
+"MarkdownPaste.rules": [
+  {
+    "regex": "^(?:https?://)?(?:(?:(?:www\\.?)?youtube\\.com(?:/(?:(?:watch\\?.*?v=([^&\\s]+).*)|))?))",
+    "options": "g",
+    "replace": "[![](https://img.youtube.com/vi/$1/0.jpg)](https://www.youtube.com/watch?v=$1)"
+  },
+  {
+    "regex": "^(https?://.*)",
+    "options": "ig",
+    "replace": "<$1>"
+  }
+],
 "md-graph.graph.defaultMode": "FOCUS",
 "md-graph.graph.focusNeighborDepth": 2,
 "md-graph.showColumn": "active",
@@ -73,9 +85,11 @@ After a few days of experimenting with different extensions, I decided to settle
 ],
 // https://latex.vercel.app/
 // https://github.com/yzane/vscode-markdown-pdf/issues/21
+// https://www.mathjax.org/cdn-shutting-down/
 // https://stackoverflow.com/questions/1664049/can-i-force-a-page-break-in-html-printing
 // https://stackoverflow.com/questions/22601053/pagebreak-in-markdown-while-creating-pdf
 // https://stackoverflow.com/questions/14051715/markdown-native-text-alignment
+// https://stackoverflow.com/questions/21316313/how-can-i-indent-all-text-in-a-paragraph-except-the-first-line
 "markdown-pdf.styles": [
   "https://use.fontawesome.com/releases/v5.7.1/css/all.css", // mermaid
   "https://latex.vercel.app/style.css"
@@ -88,7 +102,7 @@ After a few days of experimenting with different extensions, I decided to settle
 "cSpell.allowCompoundWords": true,
 "cSpell.useGitignore": false,
 "cSpell.logLevel": "Information",
-"cSpell.ignoreWords": [
+"cSpell.userWords": [
   "srcs",
   "extremum",
   "biconditional",
@@ -105,13 +119,18 @@ After a few days of experimenting with different extensions, I decided to settle
   "analyte",
   "eigenspace",
   "tiktok",
-  "fira"
+  "fira",
+  "diagonalizable",
+  "monoid",
+  "convolutional"
 ],
 "cSpell.ignoreRegExpList": [
   "/\\\\[\\{\\}a-z]+/gi", // latex commands including { and }
   "/\\b[A-Z]{3,5}s?\\b/g" // acronyms including possible s
 ],
 ```
+
+> **keybindings.json**
 
 ```jsx
 {
