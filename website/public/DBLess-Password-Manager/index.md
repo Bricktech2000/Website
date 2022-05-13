@@ -20,12 +20,12 @@ At this point, you are probably wondering:
 
 > And how does it do such a thing?
 
-It turns out that it is fairly simple. The password manager takes in 3 parameters as an input: the `Service` to log into, the `Username` used and your `Master Password`.
+It turns out that it is fairly simple. The password manager takes in 4 parameters as an input: the `Service` to log into, the `Username` used, your `Master Password` and a token file.
 
-1. The program asks for user input. For this example, the service to log into will be **_google_**, the username used will be **_my.email@gmail.com_** and the master password will be **_Password123_**.
-2. Each of the three values inputted is individually hashed using `SHA-1` before being `XOR`ed together. This step of the process is not meant to be cryptographically secure and is only used to "join" the different values together. In this example, it would produce the following 160-bit digtest: `366961a34cec4a950f8421aa142fea417573f4c3`.
-3. The previously generated digest is then hashed again using `SHA-256`, a cryptographically secure hashing algorithm, which would produce the following output when represented as hexadecimal: `9b2d09310b3bf6ba822bc898a4d562334a7c513c6d330a5c758d0dd87c80f2e7`.
-4. The newly generated digest is mutated through a [Base-85](https://en.wikipedia.org/wiki/Ascii85) encoder to reduce its length before being copied to the user's clipboard. The final password would look something like this: **N>j}33P[6[F?a{fQ$5{gn{<F#z8hJ7B=u<.E1p!J**.
+1. The program asks for user input. For this example, the service to log into will be **_google_**, the username used will be **_my.email@gmail.com_**, the master password will be **_Password123_** and the token file will be empty.
+2. Each of the three values inputted is individually hashed using `SHA-1` before being `XOR`ed together. This step of the process is not meant to be cryptographically secure and is only used to "join" the different values together. In this example, it would produce the following 160-bit digtest: `ec50c24d128701983dd19e45814ff2d1daabf3ca`.
+3. The previously generated digest is then hashed again using `SHA-256`, a cryptographically secure hashing algorithm, which would produce the following output when represented as hexadecimal: `d1c3f43bb4fc0727fff731e1e3d30199994b6f7db7484b547c712776f65440da`.
+4. The newly generated digest is mutated through a [Base-85](https://en.wikipedia.org/wiki/Ascii85) encoder to reduce its length before being copied to the user's clipboard. The final password would look something like this: **zLPrWepdR%mXnb<i[3%Nm?EDW[6d>D#QJS{eBrh**.
 
 As you can clearly see, the generated password is derived from well-known data and a secret. For this reason, it will be different for every service and for every username used. The generated password will be completely wrong if the **master password** isn't exactly the same, which is ideal in this scenario.
 
