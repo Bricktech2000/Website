@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> I decided to switch to [Syncthing](https://syncthing.net/) to sync files across all my devices, meaning I don't use FileSync anymore. This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 Have you ever wanted to have access to all your files from **anywhere** in the world, all the while keeping local copies synced together **seamlessly**?
 
 Now that I say it out loud, probably not. However, in the last few weeks, there were many times where I wanted to show something to a friend just to realize I didn't have my laptop with me.
