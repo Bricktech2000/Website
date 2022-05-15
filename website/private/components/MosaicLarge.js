@@ -16,15 +16,23 @@ const MosaicLarge = (props) => {
 
   const [clickCount, setClickCount] = useState(globalClickCount);
 
+  const loadCount = Math.pow(1.5, clickCount);
+  const allLoaded = loadCount >= props.children.length;
+
   const ref = useRef();
   const isVisible = useOnScreen(ref);
   const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
   useEffect(() => {
+    console.log('a');
+    if (allLoaded) return;
+
     if (isVisible && hasTimeElapsed) {
+      console.log('b');
       setHasTimeElapsed(false);
       setClickCount((c) => c + 1);
       globalClickCount++;
     } else if (isVisible) {
+      console.log('c');
       const timeout = setTimeout(() => setHasTimeElapsed(true), 100);
       return () => clearTimeout(timeout);
     }
@@ -34,12 +42,10 @@ const MosaicLarge = (props) => {
     <div className={styles.container}>
       <div className={styles.MosaicLarge} ref={parallaxRef}>
         {props.children
-          .slice(0, Math.pow(1.5, clickCount))
+          .slice(0, loadCount)
           .map((child) => React.cloneElement(child))}
       </div>
-      <p ref={ref}>
-        {Math.pow(1.5, clickCount) < props.children.length && 'Loading more...'}
-      </p>
+      <p ref={ref}>{!allLoaded && 'Loading more...'}</p>
     </div>
   );
 };
