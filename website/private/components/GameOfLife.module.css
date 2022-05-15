@@ -1,4 +1,8 @@
 .GameOfLife {
+  object-fit: cover;
+  /* styles to prevent weird 1014px width and height */
+  width: 100% !important;
+  height: 100% !important;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }

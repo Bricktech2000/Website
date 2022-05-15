@@ -82,7 +82,7 @@ const GameOfLife = (props) => {
   };
   useEffect(() => {
     const interval = setInterval(draw, 1000 / 20);
-    // draw();
+
     return () => {
       clearInterval(interval);
     };
