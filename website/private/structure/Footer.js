@@ -44,7 +44,7 @@ const Footer = (props) => {
       <div className={styles.contact}>
         <GetInTouch />
         <div className={styles.issue}>
-          Find an issue with this page?{' '}
+          Find an issue with this page?&nbsp;
           <a
             href={github + '/tree/master/website/' + props.github}
             target="_blank"

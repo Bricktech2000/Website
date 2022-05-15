@@ -47,6 +47,8 @@
 .HomeAbout > img {
   grid-area: image;
   width: 100%;
+  justify-self: center;
+  max-width: 7.5em;
 
   border-radius: 100vh;
   box-shadow: var(--bs);
@@ -61,10 +63,6 @@
     grid-template-columns: 1fr;
     padding-left: 1em;
     padding-right: 1em;
-  }
-  .HomeAbout > img {
-    width: calc(100% - 20vw - 20vw);
-    margin: 0 20vw;
   }
   .HomeAbout > p {
     padding: 2em 0;
