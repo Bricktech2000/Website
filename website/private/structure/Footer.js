@@ -32,7 +32,7 @@ const Footer = (props) => {
           <span>&nbsp;&nbsp;</span>
           <Ubuntu />
           <span>&nbsp;&nbsp;</span>
-          <Cloudflare />
+          <Cloudflare height="200px" />
         </div>
         <div>
           &copy; {new Date().getFullYear()} Emilien Breton &mdash;{' '}
