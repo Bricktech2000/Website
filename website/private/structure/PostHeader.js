@@ -8,26 +8,6 @@ import styles from './PostHeader.module.css';
 import { Marked as marked } from '../components/Marked.module.css';
 
 const PostHeader = (props) => {
-  // copied to Card.js
-  if (props.info.children !== undefined) {
-    const tag_union = [
-      ...new Set([
-        ...Object.values(props.info.children)
-          .reverse()
-          .map((child) => child.tags)
-          .reduce((acc, cur) => acc.concat(cur), []),
-      ]),
-    ];
-
-    const button_union = Object.values(props.info.children)
-      .reverse()
-      .map((child) => child.btns)
-      .reduce((acc, cur) => ({ ...acc, ...cur }), {});
-
-    props.info.tags = tag_union;
-    props.info.btns = button_union;
-  }
-
   return (
     <header className={styles.PostHeader}>
       <div className={styles.PostDataHeader}>

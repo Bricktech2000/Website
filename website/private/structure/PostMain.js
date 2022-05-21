@@ -30,7 +30,7 @@ const PostMain = (props) => {
 
   return (
     <div ref={parallaxRef} className={styles.PostMain + ' fade-right-3'}>
-      {props.info.children !== undefined &&
+      {typeof props.info.children !== 'undefined' &&
         Object.values(props.info.children)
           .reverse()
           .map((child) => (

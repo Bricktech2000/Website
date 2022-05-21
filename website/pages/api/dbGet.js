@@ -69,13 +69,33 @@ async function getRaw(id) {
 
 async function get(id) {
   const data = await getRaw(id);
-  const children = data.children;
 
-  if (children !== undefined) {
-    data.children = {};
-    for (var id2 of children) {
-      data.children[id2] = await getSafe(`${id}/${id2}`);
-    }
+  if (typeof data.children !== 'undefined') {
+    data.children = Object.fromEntries(
+      await Promise.all(
+        data.children.map(async (childId) => [
+          childId,
+          await getSafe(`${id}/${childId}`),
+        ])
+      )
+    );
+
+    const tag_union = [
+      ...new Set([
+        ...Object.values(data.children)
+          .reverse()
+          .map((child) => child.tags)
+          .reduce((acc, cur) => acc.concat(cur), []),
+      ]),
+    ];
+
+    const button_union = Object.values(data.children)
+      .reverse()
+      .map((child) => child.btns)
+      .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+
+    data.tags = tag_union;
+    data.btns = button_union;
   }
 
   return data;

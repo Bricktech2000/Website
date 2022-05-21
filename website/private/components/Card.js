@@ -24,26 +24,6 @@ const Card = (props) => {
     return () => document.body.removeEventListener('touchend', touchEndHandler);
   }, []);
 
-  // copied from PostHeader.js
-  if (props.info.children !== undefined) {
-    const tag_union = [
-      ...new Set([
-        ...Object.values(props.info.children)
-          .reverse()
-          .map((child) => child.tags)
-          .reduce((acc, cur) => acc.concat(cur), []),
-      ]),
-    ];
-
-    const button_union = Object.values(props.info.children)
-      .reverse()
-      .map((child) => child.btns)
-      .reduce((acc, cur) => ({ ...acc, ...cur }), {});
-
-    props.info.tags = tag_union;
-    props.info.btns = button_union;
-  }
-
   const CardHtml = React.forwardRef((props2, ref) => (
     <a ref={linkRef} className={styles.card} {...props2}>
       <img
