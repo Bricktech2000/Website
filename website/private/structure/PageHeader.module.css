@@ -23,7 +23,6 @@
 }
 .PageHeader p {
   max-width: 40ch;
-  text-align: justify;
 }
 @media (max-aspect-ratio: 1/1) {
   .PageHeader {

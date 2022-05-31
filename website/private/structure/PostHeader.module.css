@@ -36,12 +36,12 @@
   break-inside: avoid;
 }
 .PostDataHeader .container h1 {
-  text-align: left;
   margin-top: 0;
 }
 .PostDataHeader .container .tags,
 .PostDataHeader .container .buttons {
   flex-wrap: wrap;
+  margin: 0.5em 0;
 }
 
 @media (max-aspect-ratio: 2/1) {
