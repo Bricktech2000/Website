@@ -71,7 +71,7 @@
   color: var(--title);
   line-height: 1;
   letter-spacing: -0.08ch;
-  font-size: 9vw;
+  font-size: 8vw;
   font-weight: lighter;
   text-shadow: 0 0 0.125em var(--black), 0 0 0.125em var(--black);
 
@@ -84,7 +84,7 @@
   padding: 0.5em;
 
   color: var(--title);
-  font-size: 2.25vw;
+  font-size: 2vw;
   font-weight: lighter;
 
   animation: fade-right-animation 1s ease-out;

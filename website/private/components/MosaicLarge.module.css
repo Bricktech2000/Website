@@ -1,8 +1,8 @@
 .MosaicLarge {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   grid-auto-columns: 0;
-  grid-gap: 1em;
+  grid-gap: 2em;
   align-self: stretch;
   z-index: 1;
 }

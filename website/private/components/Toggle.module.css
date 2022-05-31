@@ -9,25 +9,23 @@
   margin: 1em;
 }
 .child {
-  display: inline-block;
-  width: 3em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 1.25em;
   border-radius: 100vh;
   background: var(--card-bg-l);
   box-shadow: var(--bs);
   transition: background-color 0.125s ease-in-out;
 }
 .thumb {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.25em;
+  height: 1.25em;
   border-radius: 100vh;
   background: var(--title);
   box-shadow: var(--bs);
   transition: margin-left 0.125s ease-in-out;
 }
 .Toggle.active .thumb {
-  margin-left: 1.5em;
+  margin-left: 1.25em;
 }
 .Toggle.active .child {
   background: var(--color-l);

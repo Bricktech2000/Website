@@ -20,7 +20,7 @@
   grid-area: vr;
 
   background: var(--card-bg-l);
-  width: 0.1em;
+  width: 0.05em;
   height: 100%;
 }
 .Footer .issue {
@@ -72,7 +72,7 @@ yeah just using reUpdate's `yield include`
   }
   .Footer .vr {
     width: 75%;
-    height: 0.1em;
+    height: 0.05em;
     margin-bottom: 2em;
   }
 }

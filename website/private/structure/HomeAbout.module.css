@@ -18,7 +18,6 @@
   grid-area: paragraph;
 
   padding-left: 2em;
-  text-align: justify;
 }
 .HomeAbout .about {
   grid-area: about;

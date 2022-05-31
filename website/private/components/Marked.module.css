@@ -1,6 +1,7 @@
 .Marked,
 .Marked * {
   display: block;
+  text-align: justify;
 }
 
 .Marked h2,

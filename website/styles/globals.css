@@ -40,7 +40,7 @@ body {
   font-family: var(--sans);
   font-size: clamp(
     calc(calc(100vh + 100vw) / 140),
-    1.75rem,
+    1.5rem,
     calc(calc(100vh + 100vw) / 55)
   );
   font-weight: 300;
