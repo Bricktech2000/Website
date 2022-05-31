@@ -23,27 +23,24 @@
   padding: 2em 7.5vw;
   color: var(--text);
 }
-.PostDataHeader > * {
-  width: 100%;
-  margin: 1em 0;
-  break-inside: avoid;
-}
-.PostDataHeader h1 {
-  margin-top: 0;
-}
-.PostDataHeader p {
-  text-align: justify;
-}
 .PostDataHeader img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-top: 0;
+  margin-bottom: 2em;
   border-radius: 0.25em;
   box-shadow: var(--bs), var(--bs);
 }
-.PostDataHeader .tags,
-.PostDataHeader .buttons {
+.PostDataHeader .container {
+  flex-direction: column;
+  break-inside: avoid;
+}
+.PostDataHeader .container h1 {
+  text-align: left;
+  margin-top: 0;
+}
+.PostDataHeader .container .tags,
+.PostDataHeader .container .buttons {
   flex-wrap: wrap;
 }
 

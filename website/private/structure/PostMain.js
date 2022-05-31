@@ -1,5 +1,5 @@
 import React, { Component, useEffect } from 'react';
-import PageHeader from '../structure/PageHeader';
+import PostSubHeader from '../structure/PostSubHeader';
 import Marked from '../components/Marked';
 import useParallax from '../lib/useParallax';
 
@@ -36,7 +36,7 @@ const PostMain = (props) => {
           .map((child) => (
             <React.Fragment key={child.id}>
               <div className={styles.spacer}></div>
-              <PageHeader info={child} />
+              <PostSubHeader info={child} />
               <Marked source={child.source} />
             </React.Fragment>
           ))}

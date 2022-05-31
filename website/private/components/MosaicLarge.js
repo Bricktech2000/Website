@@ -23,16 +23,13 @@ const MosaicLarge = (props) => {
   const isVisible = useOnScreen(ref);
   const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
   useEffect(() => {
-    console.log('a');
     if (allLoaded) return;
 
     if (isVisible && hasTimeElapsed) {
-      console.log('b');
       setHasTimeElapsed(false);
       setClickCount((c) => c + 1);
       globalClickCount++;
     } else if (isVisible) {
-      console.log('c');
       const timeout = setTimeout(() => setHasTimeElapsed(true), 100);
       return () => clearTimeout(timeout);
     }

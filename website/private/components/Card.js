@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState, useRef } from 'react';
+import React, { Component, useEffect, useRef } from 'react';
 import Tag from './Tag';
 import Date from './Date';
 import Marked from './Marked';

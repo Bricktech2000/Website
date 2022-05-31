@@ -1,0 +1,21 @@
+.PostSubHeader {
+  grid-area: header;
+
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 1em;
+
+  color: var(--text);
+}
+.PostSubHeader p {
+  max-width: 40ch;
+  text-align: justify;
+}
+@media (max-aspect-ratio: 1/1) {
+  .PostSubHeader {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
