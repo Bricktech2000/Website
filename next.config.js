@@ -21,4 +21,8 @@ module.exports = {
   },
   // https://nextjs.org/docs/api-reference/next.config.js/trailing-slash
   trailingSlash: true,
+  // https://mmazzarolo.com/blog/2021-04-10-nextjs-scroll-restoration/
+  experimental: {
+    scrollRestoration: true,
+  },
 };
