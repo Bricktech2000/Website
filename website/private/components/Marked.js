@@ -32,7 +32,7 @@ const Marked = (props) => {
                 (a, b) => b
               )
               .replace(
-                /~([^~]{1,6})~/g,
+                /~([^~]+)~/g,
                 (a, b) => `<span class="hljs-operator">${b}</span>`
               );
             return va;
