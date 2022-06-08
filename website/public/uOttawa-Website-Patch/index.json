@@ -1,0 +1,31 @@
+{
+  "title": "uOttawa Website Patch",
+  "date": "2022-05-15",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Showcase",
+    "Software",
+    "JavaScript",
+    "CSS",
+    "Git",
+    "NodeJS",
+    "Web",
+    "Hacking",
+    "Demo",
+    "RegExp",
+    "Scripting",
+    "Modular",
+    "Linux",
+    "Bash",
+    "Productivity",
+    "VS Code",
+    "Vim"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/uOttawa-Website-Patch",
+    "Live Website": "https://uottawa.emilien.ca/",
+    "Comparison Screenshots": "#img"
+  },
+  "desc": "A proxy to uOttawa's new website, patching requests to make their website actually usable."
+}

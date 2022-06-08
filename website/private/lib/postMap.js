@@ -1,4 +1,5 @@
 export default [
+  'uOttawa-Website-Patch',
   'RateMyProf-Extension',
   'Fish-Shell-Setup',
   'Conceptual-Note-Taking',
