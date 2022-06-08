@@ -24,17 +24,9 @@ const GetInTouch = () => {
           <span>Mail</span>
           <i className="fas fa-lg fa-envelope"></i>
         </a>
-        <a target="_blank" href={social.facebook} rel="noreferrer">
-          <span>Facebook</span>
-          <i className="fab fa-lg fa-facebook-f"></i>
-        </a>
         <a target="_blank" href={social.discord} rel="noreferrer">
           <span>Discord</span>
           <i className="fab fa-lg fa-discord"></i>
-        </a>
-        <a target="_blank" href={social.snapchat} rel="noreferrer">
-          <span>Snapchat</span>
-          <i className="fab fa-lg fa-snapchat-ghost"></i>
         </a>
       </div>
     </div>
