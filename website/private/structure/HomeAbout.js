@@ -25,7 +25,7 @@ const HomeAbout = () => {
           https://www.dejan.works/about/
           https://www.dejan.works/files/Dejan_Markovic_CV.pdf
         */}
-        <strong>Problem solving</strong> and <strong>critical thinking</strong>{' '}
+        <strong>Problem-solving</strong> and <strong>critical thinking</strong>{' '}
         are two of my most prominent skills. I love exploring new hobbies and
         interests to find out where they take me. Despite this, I often become
         unmotivated when not challenged; I can't stand inefficiency. In my

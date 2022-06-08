@@ -15,9 +15,6 @@ const HomePinned = () => {
   return (
     <div className={styles.HomePinned}>
       <h1 className={marked}>Pinned Projects</h1>
-      <em className={marked}>
-        Some larger scale projects to show what I'm capable of
-      </em>
       <br />
       <MosaicSmall>
         {Object.keys(info)

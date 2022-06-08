@@ -17,9 +17,6 @@ const HomePostList = () => {
     <div className={styles.HomePostList}>
       <div className={styles.header}></div>
       <h1 className={marked}>All Projects</h1>
-      <em className={marked}>
-        Most projects I worked on since the creation of this portfolio
-      </em>
       <ToggleSubscribe />
 
       <br />

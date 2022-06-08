@@ -42,7 +42,7 @@ const MosaicLarge = (props) => {
           .slice(0, loadCount)
           .map((child) => React.cloneElement(child))}
       </div>
-      <p ref={ref}>{!allLoaded && 'Loading more...'}</p>
+      <p ref={ref}>{!allLoaded && ''}</p>
     </div>
   );
 };

@@ -75,7 +75,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
-  //necessary to prevent ``Conflicting paths returned from getStaticPaths`` error
+  //necessary to prevent `Conflicting paths returned from getStaticPaths` error
   const errorMapModified = errorMap.filter(
     (item) => !['404', '500'].includes(item)
   );
