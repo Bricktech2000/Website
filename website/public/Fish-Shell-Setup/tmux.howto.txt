@@ -2,6 +2,16 @@
 // https://www.youtube.com/watch?v=KKxhf50FIPI&ab_channel=devaslife
 // https://www.youtube.com/watch?v=sSOfr2MtRU8&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=11&ab_channel=devaslife
 // https://snippets.aktagon.com/snippets/553-tmux-default-key-bindings
+// https://gist.github.com/MohamedAlaa/2961058
+// https://superuser.com/questions/879190/how-does-one-swap-two-panes-in-tmux
+// https://superuser.com/questions/1079462/tmux-keybinding-to-swap-pane-left-or-right
+
+// https://github.com/alacritty/alacritty/issues/2688
+// tmux not receiving ctrl shift
+// https://superuser.com/questions/1601268/tab-key-is-splitting-the-screen-horizontally-in-tmux-even-when-there-is-no-key-b
+// https://unix.stackexchange.com/questions/563469/conflict-ctrl-i-with-tab-in-normal-mode
+// https://unix.stackexchange.com/questions/213848/why-arent-ctrlm-and-ctrlq-used-in-bash-shortcuts/213851#213851
+// https://github.com/gpakosz/.tmux/issues/182
 
 // settings not updating:
 // https://unix.stackexchange.com/questions/66606/tmux-not-sourcing-my-tmux-conf
