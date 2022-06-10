@@ -31,7 +31,8 @@ const HomeHero = () => {
       <div className={styles.overlay}>
         <div className={styles.title}>Let me show you what I can do.</div>
         <div className={styles.desc}>
-          I'm <div className={styles.emphasis}>Emilien Breton</div>, and I love{' '}
+          I&apos;m <div className={styles.emphasis}>Emilien Breton</div>, and I
+          love{' '}
           <AutoType
             keywords={['programming', 'electronics', 'engineering']}
           ></AutoType>

@@ -28,9 +28,9 @@ const HomeAbout = () => {
         <strong>Problem-solving</strong> and <strong>critical thinking</strong>{' '}
         are two of my most prominent skills. I love exploring new hobbies and
         interests to find out where they take me. Despite this, I often become
-        unmotivated when not challenged; I can't stand inefficiency. In my
-        opinion, coming up with creative ideas isn't sufficient. Acting on them
-        and reflecting on the outcome is where the{' '}
+        unmotivated when not challenged; I can&apos;t stand inefficiency. In my
+        opinion, coming up with creative ideas isn&apos;t sufficient. Acting on
+        them and reflecting on the outcome is where the{' '}
         <strong>learning and self-improvement</strong> really take place.
       </p>
       <div className={styles.about}>
@@ -39,7 +39,7 @@ const HomeAbout = () => {
           I am currently a <strong>Computer Science student</strong> at the
           University of Ottawa. I come from the province of Quebec in Canada
           and, due to differences in educational institutions, I was allowed to
-          enroll in university one year early. I've always had difficulty
+          enroll in university one year early. I&apos;ve always had difficulty
           dealing with the rate at which students are expected to learn, and so
           this leap proved very helpful.
         </p>
@@ -63,12 +63,12 @@ const HomeAbout = () => {
         <p className={marked}>
           I am a very <strong>curious and dedicated</strong> person who has
           always loved tinkering in my free time. I taught myself programming at
-          the age of 11, and I've since fallen in love with it. Other hobbies
-          and interests of mine include playing the piano and the trumpet,
-          building and flying FPV drones, 3D design and 3D printing, electronics
-          and robotics, and investing. As for languages, I already speak French
-          and English fluently and Spanish at an intermediate level, and I am
-          currently getting into learning Russian.
+          the age of 11, and I&apos;ve since fallen in love with it. Other
+          hobbies and interests of mine include playing the piano and the
+          trumpet, building and flying FPV drones, 3D design and 3D printing,
+          electronics and robotics, and investing. As for languages, I already
+          speak French and English fluently and Spanish at an intermediate
+          level, and I am currently getting into learning Russian.
         </p>
         <div className={styles.languagesToolsSkills}>
           <div>

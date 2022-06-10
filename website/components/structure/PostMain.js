@@ -15,18 +15,11 @@ const PostMain = (props) => {
   //https://stackoverflow.com/questions/9757625/jquery-how-to-scroll-to-certain-anchor-div-on-page-load
   //https://stackoverflow.com/questions/13905435/javascript-getting-specific-element-of-parent-by-name
   useEffect(() => {
-    // const anchor = parallaxRef.current.querySelector(
-    //   `[name='${window.location.hash.substring(1)}']`
-    // );
-    // anchor && anchor.scrollIntoView(true);
-
     //hacky, but seems to be the easiest way to scroll to location.hash
-    setTimeout(() => {
-      const anchor = document.createElement('a');
-      anchor.href = window.location.hash;
-      window.location.hash !== '' && anchor.click();
-    }, 0);
-  }, [props.info.source, window.location.hash]);
+    const anchor = document.createElement('a');
+    anchor.href = window.location.hash;
+    window.location.hash !== '' && anchor.click();
+  }, [props.info.source]);
 
   return (
     <div ref={parallaxRef} className={styles.PostMain + ' fade-right-3'}>

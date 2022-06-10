@@ -40,7 +40,7 @@ const AutoType = (props) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [props.keywords]);
 
   return (
     <div

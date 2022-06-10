@@ -10,7 +10,7 @@ const useCanvas = (callback) => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     callback([canvas, ctx]);
-  }, []);
+  });
 
   return canvasRef;
 };
@@ -86,7 +86,7 @@ const GameOfLife = (props) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  });
 
   return (
     <canvas

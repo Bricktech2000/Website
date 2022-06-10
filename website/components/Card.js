@@ -18,7 +18,7 @@ const Card = (props) => {
     linkRef.current.addEventListener('touchstart', touchStartHandler);
     linkRef.current.addEventListener('mouseenter', touchStartHandler);
     linkRef.current.addEventListener('mouseleave', touchEndHandler);
-  }, [linkRef.current]);
+  });
   useEffect(() => {
     document.body.addEventListener('touchend', touchEndHandler);
     return () => document.body.removeEventListener('touchend', touchEndHandler);
@@ -48,10 +48,11 @@ const Card = (props) => {
       </div>
     </a>
   ));
+  CardHtml.displayName = 'CardHtml';
 
   return (
-    <Link href={'/' + props.info.id} replace={props.mini}>
-      <CardHtml href={'/' + props.info.id} />
+    <Link href={'/' + props.info.id} replace={props.mini} passHref>
+      <CardHtml />
     </Link>
   );
 };

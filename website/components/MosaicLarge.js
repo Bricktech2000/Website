@@ -33,7 +33,7 @@ const MosaicLarge = (props) => {
       const timeout = setTimeout(() => setHasTimeElapsed(true), 100);
       return () => clearTimeout(timeout);
     }
-  }, [isVisible, hasTimeElapsed]);
+  }, [isVisible, hasTimeElapsed, allLoaded]);
 
   return (
     <div className={styles.container}>

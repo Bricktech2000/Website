@@ -34,6 +34,7 @@ const Button = (props) => {
       </div>
     </a>
   ));
+  ButtonHtml.displayName = 'ButtonHtml';
 
   if (props.onClick) {
     return React.cloneElement(<ButtonHtml />, {
@@ -48,8 +49,8 @@ const Button = (props) => {
     });
   }
   return (
-    <Link href={props.href}>
-      <ButtonHtml href={props.href} />
+    <Link href={props.href} passHref>
+      <ButtonHtml />
     </Link>
   );
 };

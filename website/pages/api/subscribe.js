@@ -6,7 +6,7 @@ const webPushInit = async () => {
     public: (await fs.readFile(process.cwd() + '/public/public_vapid.key'))
       .toString()
       .trim(),
-    private: (await fs.readFile(process.cwd() + '/private/private_vapid.key'))
+    private: (await fs.readFile(process.cwd() + '/records/private_vapid.key'))
       .toString()
       .trim(),
   };
@@ -78,19 +78,19 @@ const setJSON = async (path, data) => {
 };
 
 const getLastPostMap = async () => {
-  return await readJSON('private/lib/lastPostMap.json');
+  return await readJSON('records/lastPostMap.json');
 };
 
 const setLastPostMap = async (data) => {
-  return await setJSON('private/lib/lastPostMap.json', data);
+  return await setJSON('records/lastPostMap.json', data);
 };
 
 const getSubscriptions = async () => {
-  return await readJSON('private/subscriptions.json');
+  return await readJSON('records/subscriptions.json');
 };
 
 const setSusbscriptions = async (data) => {
-  await setJSON('private/subscriptions.json', data);
+  await setJSON('records/subscriptions.json', data);
 };
 
 export default async function subscribe(req, res) {

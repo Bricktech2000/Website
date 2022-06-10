@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NextHead from 'next/head';
+import Script from 'next/script';
 
 const Head = (props) => {
   return (
@@ -22,10 +23,10 @@ const Head = (props) => {
       {/* https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk/related?hl=en */}
       {/* https://developers.google.com/analytics/devguides/collection/gtagjs */}
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <script
-        async
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-163126541-1"
-      ></script>
+        strategy="afterInteractive"
+      />
       <script>
         {/*window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-163126541-1');*/}
       </script>
