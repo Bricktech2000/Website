@@ -1,17 +1,17 @@
 import React, { Component, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import postMap from '../private/lib/postMap';
-import errorMap from '../private/lib/errorMap';
+import postMap from '../records/postMap';
+import errorMap from '../records/errorMap';
 
-import App from '../private/structure/App';
-import Page from '../private/structure/Page';
-import PostHeader from '../private/structure/PostHeader';
-import PostMain from '../private/structure/PostMain';
-import PostRelated from '../private/structure/PostRelated';
-import Error from '../private/structure/Error';
+import App from '../components/structure/App';
+import Page from '../components/structure/Page';
+import PostHeader from '../components/structure/PostHeader';
+import PostMain from '../components/structure/PostMain';
+import PostRelated from '../components/structure/PostRelated';
+import Error from '../components/structure/Error';
 
-import Loading from '../private/components/Loading';
-import useDbGet from '../private/lib/useDbGet';
+import Loading from '../components/Loading';
+import useDbGet from '../hooks/useDbGet';
 
 const Post = (props) => {
   //https://stackoverflow.com/questions/61040790/userouter-withrouter-receive-undefined-on-query-in-first-render

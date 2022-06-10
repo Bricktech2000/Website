@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import useDbGet from '../lib/useDbGet';
-import MosaicLarge from '../components/MosaicLarge';
-import Card from '../components/Card';
-import Loading from '../components/Loading';
-import ToggleSubscribe from '../components/ToggleSubscribe';
+import useDbGet from '../../hooks/useDbGet';
+import MosaicLarge from '../MosaicLarge';
+import Card from '../Card';
+import Loading from '../Loading';
+import ToggleSubscribe from '../ToggleSubscribe';
 
-import { Marked as marked } from '../components/Marked.module.css';
+import { Marked as marked } from '../Marked.module.css';
 import styles from './HomePostList.module.css';
 
 const HomePostList = () => {

@@ -1,5 +1,5 @@
 #subscription
-/website/private/private_vapid.key
+/website/records/private_vapid.key
 /website/public/public_vapid.key
-/website/private/subscriptions.json
-/website/private/lib/lastPostMap.json
+/website/records/subscriptions.json
+/website/records/lastPostMap.json

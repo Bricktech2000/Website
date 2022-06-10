@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import App from '../private/structure/App';
-import Page from '../private/structure/Page';
-import PostMain from '../private/structure/PostMain';
-import PageHeader from '../private/structure/PageHeader';
+import App from '../components/structure/App';
+import Page from '../components/structure/Page';
+import PostMain from '../components/structure/PostMain';
+import PageHeader from '../components/structure/PageHeader';
 
-import Loading from '../private/components/Loading';
-import useDbGet from '../private/lib/useDbGet';
+import Loading from '../components/Loading';
+import useDbGet from '../hooks/useDbGet';
 
-const Legal = (props) => {
+const Legal = () => {
   const id = 'legal';
   const info = useDbGet('exact', id);
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import marked from '../../public/marked.min.js';
-import hljs from '../../public/highlight.min.js';
+import marked from '../public/marked.min.js';
+import hljs from '../public/highlight.min.js';
 
 import styles from './Marked.module.css';
 

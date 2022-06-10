@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import GetInTouch from '../components/GetInTouch';
-import useParallax from '../lib/useParallax';
-import Tag from '../components/Tag';
+import GetInTouch from '../GetInTouch';
+import useParallax from '../../hooks/useParallax';
+import Tag from '../Tag';
 
-import { Marked as marked } from '../components/Marked.module.css';
+import { Marked as marked } from '../Marked.module.css';
 import styles from './HomeAbout.module.css';
 
 const HomeAbout = () => {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import App from '../private/structure/App';
-import HomeHeader from '../private/structure/HomeHeader';
-import Aside from '../private/structure/Aside';
-import Main from '../private/structure/Main';
-import HomePinned from '../private/structure/HomePinned';
-import HomePostList from '../private/structure/HomePostList';
-import Footer from '../private/structure/Footer';
+import App from '../components/structure/App';
+import HomeHeader from '../components/structure/HomeHeader';
+import Aside from '../components/structure/Aside';
+import Main from '../components/structure/Main';
+import HomePinned from '../components/structure/HomePinned';
+import HomePostList from '../components/structure/HomePostList';
+import Footer from '../components/structure/Footer';
 
 const Home = () => {
   return (

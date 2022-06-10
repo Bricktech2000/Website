@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import Head from './Head';
 
-import { language, domain } from '../lib/consts';
+import { language, domain } from '../../records/consts';
 import styles from './App.module.css';
 
 const App = (props) => {

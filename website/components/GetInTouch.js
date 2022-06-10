@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './GetInTouch.module.css';
-import { social } from '../lib/consts';
+import { social } from '../records/consts';
 
 const GetInTouch = () => {
   return (

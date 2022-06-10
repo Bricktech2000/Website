@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Tag from '../components/Tag';
-import Date from '../components/Date';
-import Button from '../components/Button';
-import Marked from '../components/Marked';
+import Tag from '../Tag';
+import Date from '../Date';
+import Button from '../Button';
+import Marked from '../Marked';
 
 import styles from './PostHeader.module.css';
-import { Marked as marked } from '../components/Marked.module.css';
+import { Marked as marked } from '../Marked.module.css';
 
 const PostHeader = (props) => {
   return (

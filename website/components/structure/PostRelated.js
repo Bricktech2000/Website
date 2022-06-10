@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import useDbGet from '../lib/useDbGet';
-import MosaicSmall from '../components/MosaicSmall';
-import Card from '../components/Card';
-import Loading from '../components/Loading';
+import useDbGet from '../../hooks/useDbGet';
+import MosaicSmall from '../MosaicSmall';
+import Card from '../Card';
+import Loading from '../Loading';
 
-import { Marked as marked } from '../components/Marked.module.css';
+import { Marked as marked } from '../Marked.module.css';
 import styles from './PostRelated.module.css';
 
 const PostRelated = (props) => {

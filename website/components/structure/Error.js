@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import errorMap from '../../private/lib/errorMap';
+import errorMap from '../../records/errorMap';
 
-import App from '../../private/structure/App';
-import Aside from '../../private/structure/Aside';
-import Nav from '../../private/structure/Nav';
-import Main from '../../private/structure/Main';
-import ErrorMain from '../../private/structure/ErrorMain';
+import App from './App';
+import Aside from './Aside';
+import Nav from './Nav';
+import Main from './Main';
+import ErrorMain from './ErrorMain';
 
-import Loading from '../../private/components/Loading';
-import useDbGet from '../../private/lib/useDbGet';
+import Loading from '../Loading';
+import useDbGet from '../../hooks/useDbGet';
 
 const Error = (props) => {
   var { status } = props ?? '400';

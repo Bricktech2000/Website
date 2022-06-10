@@ -30,7 +30,7 @@ const checkSubscriptions = async () => {
   };
 
   const lastPostMap = await getLastPostMap();
-  const postMap = (await import('../../private/lib/postMap')).default;
+  const postMap = (await import('../../records/postMap')).default;
 
   if (postMap[0] != lastPostMap[0]) {
     await setLastPostMap(postMap);

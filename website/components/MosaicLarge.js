@@ -1,6 +1,6 @@
 import React, { Component, useState, useRef, useEffect } from 'react';
-import useParallax from '../lib/useParallax';
-import useOnScreen from '../lib/useOnScreen';
+import useParallax from '../hooks/useParallax';
+import useOnScreen from '../hooks/useOnScreen';
 
 import styles from './MosaicLarge.module.css';
 

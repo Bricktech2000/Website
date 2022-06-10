@@ -1,6 +1,6 @@
 import React, { Component, useRef, useEffect } from 'react';
-import AutoType from '../components/AutoType';
-import GameOfLife from '../components/GameOfLife';
+import AutoType from '../AutoType';
+import GameOfLife from '../GameOfLife';
 
 import styles from './HomeHero.module.css';
 

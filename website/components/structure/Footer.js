@@ -1,7 +1,7 @@
-import { /*React, */ Component } from 'react';
-import GetInTouch from '../components/GetInTouch';
+import { /*React,*/ Component } from 'react';
+import GetInTouch from '../GetInTouch';
 import Link from 'next/link';
-import { github } from '../lib/consts';
+import { github } from '../../records/consts';
 
 import React from '../svgs/000-react.svg';
 import NextJS from '../svgs/000-next-js.svg';
@@ -9,7 +9,7 @@ import NodeJS from '../svgs/000-nodejs.svg';
 import Ubuntu from '../svgs/000-ubuntu.svg';
 import Cloudflare from '../svgs/000-cloudflare.svg';
 import styles from './Footer.module.css';
-import { Marked as marked } from '../components/Marked.module.css';
+import { Marked as marked } from '../Marked.module.css';
 
 const Footer = (props) => {
   return (

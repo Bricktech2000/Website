@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from 'react';
-import PostSubHeader from '../structure/PostSubHeader';
-import Marked from '../components/Marked';
-import useParallax from '../lib/useParallax';
+import PostSubHeader from './PostSubHeader';
+import Marked from '../Marked';
+import useParallax from '../../hooks/useParallax';
 
 import styles from './PostMain.module.css';
 

@@ -1,5 +1,5 @@
-import React, { Component, useState, useContext } from 'react';
-import useParallax from '../lib/useParallax';
+import React, { Component } from 'react';
+import useParallax from '../hooks/useParallax';
 
 import styles from './MosaicSmall.module.css';
 
