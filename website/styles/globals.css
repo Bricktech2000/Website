@@ -1,4 +1,3 @@
-/*https://www.w3schools.com/css/css3_variables.asp*/
 :root {
   --black: #000;
   --bg: #111111;
@@ -18,25 +17,26 @@
   --sans: Roboto, sans-serif;
   --mono: 'Fira Code', monospace;
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /*https://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font*/
-  max-height: 999999999px;
   -webkit-tap-highlight-color: transparent;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 html *:not(head *):not(script):not(style) {
   /* https://www.youtube.com/watch?v=bngsrbFI2UY&t=120s */
   display: flex;
 }
+
 body {
   width: 100%;
   overflow-x: hidden;
-  /*https://www.hostinger.com/tutorials/best-html-web-fonts*/
   font-family: var(--sans);
   font-size: clamp(
     calc(calc(100vh + 100vw) / 140),
