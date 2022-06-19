@@ -1,6 +1,6 @@
-.HomePostList {
+.Posts {
   flex-direction: column;
-  margin-bottom: 5em;
+  padding-bottom: 15em;
 }
 
 .header {

@@ -6,15 +6,15 @@ import Loading from '../Loading';
 import ToggleSubscribe from '../ToggleSubscribe';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './HomePostList.module.css';
+import styles from './Posts.module.css';
 
-const HomePostList = () => {
+const Posts = () => {
   const info = useDbGet('all');
 
   if (typeof info === 'undefined') return <Loading height="10000vh" />;
 
   return (
-    <div className={styles.HomePostList}>
+    <div className={styles.Posts}>
       <div className={styles.header}></div>
       <h1 className={marked}>All Projects</h1>
       <ToggleSubscribe />
@@ -30,4 +30,4 @@ const HomePostList = () => {
   );
 };
 
-export default HomePostList;
+export default Posts;

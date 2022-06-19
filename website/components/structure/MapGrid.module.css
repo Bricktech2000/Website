@@ -1,0 +1,62 @@
+.MapGrid {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mapgridContainer {
+  overflow: hidden;
+}
+
+.mapgrid {
+  display: grid;
+  overflow: visible;
+  transition: margin 0.5s ease-in-out;
+}
+
+.mapgrid > * {
+  overflow: auto;
+  padding: 1em 10vw;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .mapgrid > * {
+    padding: 1em 1em;
+  }
+}
+
+.minimapContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1em;
+  overflow: hidden;
+  z-index: 1;
+
+  width: 8em;
+  height: 8em;
+  padding-top: calc(8em / 2 - 2em / 2);
+  padding-left: calc(8em / 2 - 2em / 2);
+
+  border-radius: 100%;
+  border: var(--border);
+  background-color: var(--bg);
+  box-shadow: var(--bs), var(--bs);
+}
+
+.minimap {
+  display: grid;
+  grid-gap: 0.25em;
+  transition: margin 0.5s ease-in-out;
+}
+
+.minimap .child {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  border-color: var(--color-l);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.minimap .child.selected {
+  background-color: var(--color-l);
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeAbout from './HomeAbout';
+import HomeAbout from './About';
 import HomeHero from './HomeHero';
 
 import styles from './HomeHeader.module.css';

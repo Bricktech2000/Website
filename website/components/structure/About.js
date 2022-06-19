@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import GetInTouch from '../GetInTouch';
 import useParallax from '../../hooks/useParallax';
 import Tag from '../Tag';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './HomeAbout.module.css';
+import styles from './About.module.css';
 
-const HomeAbout = () => {
-  const parallaxRef = useParallax((current, value) => {
-    current.style.transform = `translateY(calc(0.5em * ${
-      (value - 0.75) * -16
-    }))`;
-    current.style.opacity = value;
-  });
+const About = () => {
+  // const parallaxRef = useParallax((current, value) => {
+  //   current.style.transform = `translateY(calc(0.5em * ${
+  //     (value - 0.75) * -16
+  //   }))`;
+  //   current.style.opacity = value;
+  // });
+  const parallaxRef = useRef();
 
   return (
-    <div className={styles.HomeAbout} ref={parallaxRef}>
+    <div className={styles.About} ref={parallaxRef}>
       <h1 className={marked}>A Bit More About Me</h1>
       <img src="/picture.jpg" alt="author profile picture" />
       <p className={marked}>
@@ -119,4 +120,4 @@ const HomeAbout = () => {
   );
 };
 
-export default HomeAbout;
+export default About;
