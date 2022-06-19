@@ -6,6 +6,8 @@ import Tag from '../Tag';
 import { Marked as marked } from '../Marked.module.css';
 import styles from './About.module.css';
 
+import Link from 'next/link';
+
 const About = () => {
   // const parallaxRef = useParallax((current, value) => {
   //   current.style.transform = `translateY(calc(0.5em * ${
@@ -48,9 +50,9 @@ const About = () => {
           Even though this seems to be a rarity among university students, I
           view myself as <strong>organized</strong> &mdash; maybe even to the
           point of minimalism. As a few examples, I take class notes{' '}
-          <a href="Conceptual-Note-Taking">conceptually</a> to prevent them from
-          becoming unorganized, and I use Notion for time management, which
-          allows me to lay out tasks and deadlines in a clear and
+          <Link href="Conceptual-Note-Taking">conceptually</Link> to prevent
+          them from becoming unorganized, and I use Notion for time management,
+          which allows me to lay out tasks and deadlines in a clear and
           straightforward manner.
         </p>
         <p className={marked}>
