@@ -5,6 +5,10 @@
   padding-bottom: 20em;
 }
 
-.Posts h1 {
+.Pinned h1 {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  align-self: flex-start;
   text-align: center;
 }

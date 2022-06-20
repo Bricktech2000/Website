@@ -62,14 +62,24 @@
   border-radius: var(--border-radius);
   border-color: var(--color-l);
 
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
 }
 
-.minimap .child.selected {
+.minimap .child:hover,
+.minimap .selected {
   background-color: var(--color-l);
 }
 
-.minimap .child:hover {
-  background-color: var(--color-l);
+.minimap .child i {
+  color: var(--color-l);
+  transition: color 0.25s ease-in-out;
+}
+
+.minimap .child:hover i,
+.minimap .child.selected i {
+  color: var(--bg);
 }

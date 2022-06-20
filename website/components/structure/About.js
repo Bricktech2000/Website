@@ -19,7 +19,9 @@ const About = () => {
 
   return (
     <div className={styles.About} ref={parallaxRef}>
-      <h1 className={marked}>A Bit More About Me</h1>
+      <h1 className={marked}>
+        <i className="fa-xs fas fa-user"></i>A Bit More About Me
+      </h1>
       <img src="/picture.jpg" alt="author profile picture" />
       <p className={marked}>
         {/*

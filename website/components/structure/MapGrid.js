@@ -260,7 +260,17 @@ const MapGrid = (props) => {
                   ])
                 }
                 key={i}
-              />
+              >
+                <i
+                  className={
+                    'fa-xs ' +
+                    props.iconAtPosition([
+                      i % props.size[0],
+                      Math.floor(i / props.size[0]),
+                    ])
+                  }
+                ></i>
+              </div>
             )
           )}
         </div>

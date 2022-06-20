@@ -16,11 +16,20 @@ import pageMap from '../../records/pageMap';
 const BuiltMapGrid = (props) => {
   const positionToRoute = [
     [null, null, null, null, null, null],
-    [null, '/secret', null, null, null, null],
-    [null, null, '/', '/about', '/pinned', null],
-    [null, null, null, '/posts', null, null],
+    [null, 'secret', null, null, null, null],
+    [null, null, '', 'about', 'pinned', null],
+    [null, null, null, 'posts', null, null],
     [null, null, null, null, null, null],
   ];
+
+  const positionToIcon = [
+    [null, null, null, null, null, null],
+    [null, 'fas fa-key', null, null, null, null],
+    [null, 'fas fa-bomb', 'fas fa-home', 'fas fa-user', 'fas fa-th-list', null],
+    [null, null, null, 'fas fa-th', 'fas fa-file', null],
+    [null, null, null, null, null, null],
+  ];
+
   const routeToPosition = {
     ['']: [2, 2],
     about: [3, 2],
@@ -57,10 +66,11 @@ const BuiltMapGrid = (props) => {
       onPositionChange={async (position) => {
         setPosition(position);
         const route = positionToRoute[position[1]][position[0]];
-        if (router.asPath.split('/')[1] == 'secret' && route == '/secret')
+        if (router.asPath.split('/')[1] == 'secret' && route == 'secret')
           setActualSecret(true);
-        else if (route !== null) router.push(route);
+        else if (route !== null) router.push('/' + route);
       }}
+      iconAtPosition={(position) => positionToIcon[position[1]][position[0]]}
     >
       {[
         ...[null, null, null, null, null, null],

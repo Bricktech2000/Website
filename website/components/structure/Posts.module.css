@@ -13,5 +13,9 @@
 }
 
 .Posts h1 {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  align-self: flex-start;
   text-align: center;
 }

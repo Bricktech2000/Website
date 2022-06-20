@@ -13,6 +13,15 @@
   margin-top: 0.5em;
   line-height: 1;
 }
+
+.About h1 {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  align-self: flex-start;
+  text-align: center;
+}
+
 .About > p {
   grid-area: paragraph;
 

@@ -15,7 +15,11 @@ const Pinned = () => {
 
   return (
     <div className={styles.Pinned}>
-      <h1 className={marked}>Pinned Projects</h1>
+      <h1 className={marked}>
+        <i className="fa-xs fas fa-th-list"></i>
+        Pinned Projects
+      </h1>
+      <br />
       <br />
       <MosaicSmall>
         {Object.keys(info)

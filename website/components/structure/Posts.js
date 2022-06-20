@@ -16,8 +16,11 @@ const Posts = () => {
   return (
     <div className={styles.Posts}>
       <div className={styles.header}></div>
-      <h1 className={marked}>All Projects</h1>
-      <ToggleSubscribe />
+      <h1 className={marked}>
+        <i className="fa-xs fas fa-th"></i>
+        All Projects
+      </h1>
+      {/* <ToggleSubscribe /> */}
 
       <br />
       <MosaicLarge>
