@@ -1,6 +1,9 @@
 .MapGrid {
-  width: 100vw;
-  height: 100vh;
+  --screenWidth: 100vw;
+  --screenHeight: 100vh;
+
+  width: var(--screenWidth);
+  height: var(--screenHeight);
 }
 
 .mapgridContainer {
@@ -8,6 +11,9 @@
 }
 
 .mapgrid {
+  width: fit-content;
+  height: fit-content;
+
   display: grid;
   overflow: visible;
   transition: transform 0.25s ease-out;

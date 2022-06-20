@@ -9,11 +9,13 @@ const MapGrid = (props) => {
   const [lives, setLives] = useState(5);
 
   const mapgridStyle = {
-    gridTemplateColumns: `repeat(${props.size[0]}, 100vw)`,
-    gridTemplateRows: `repeat(${props.size[1]}, 100vh)`,
-    transform: `translate(calc(${-props.position[0] * 100}vw + ${
+    gridTemplateColumns: `repeat(${props.size[0]}, var(--screenWidth))`,
+    gridTemplateRows: `repeat(${props.size[1]}, var(--screenHeight))`,
+    transform: `translate(calc(${-props.position[0]} * var(--screenWidth) + ${
       dragPosition[0]
-    }px), calc(${-props.position[1] * 100}vh + ${dragPosition[1]}px))`,
+    }px), calc(${-props.position[1]} * var(--screenHeight) + ${
+      dragPosition[1]
+    }px))`,
   };
 
   const minimapStyle = {
@@ -190,6 +192,27 @@ const MapGrid = (props) => {
       window.removeEventListener('wheel', wheelHandler);
     };
   }, [props]);
+
+  // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+  // useEffect(() => {
+  //   const resizeHandler = () => {
+  //     mapgridRef.current.style.setProperty(
+  //       '--screenWidth',
+  //       window.innerWidth + 'px'
+  //     );
+  //     mapgridRef.current.style.setProperty(
+  //       '--screenHeight',
+  //       window.innerHeight + 'px'
+  //     );
+  //   };
+
+  //   window.addEventListener('resize', resizeHandler);
+  //   // const interval = setInterval(resizeHandler, 100);
+  //   return () => {
+  //     window.removeEventListener('resize', resizeHandler);
+  //     // clearInterval(interval);
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (

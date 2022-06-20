@@ -18,11 +18,13 @@ const Void = (props) => {
       }}
     >
       {lives > 0 ? (
-        <p style={{ textAlign: 'center' }}>Looks like you fell into the void</p>
+        <p className={marked} style={{ textAlign: 'center' }}>
+          Looks like you fell into the void
+        </p>
       ) : (
         <React.Fragment>
           <h2 className={marked}>Game Over!</h2>
-          <p>You ran out of lives</p>
+          <p className={marked}>You ran out of lives</p>
         </React.Fragment>
       )}
       <div>
