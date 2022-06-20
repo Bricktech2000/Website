@@ -1,5 +1,4 @@
 .MapGrid {
-  position: relative;
   width: 100vw;
   height: 100vh;
 }
@@ -11,7 +10,7 @@
 .mapgrid {
   display: grid;
   overflow: visible;
-  transition: margin 0.5s ease-in-out;
+  transition: transform 0.25s ease-out;
 }
 
 .mapgrid > * {
@@ -26,7 +25,7 @@
 }
 
 .minimapContainer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   margin: 1em;
@@ -42,12 +41,14 @@
   border: var(--border);
   background-color: var(--bg);
   box-shadow: var(--bs), var(--bs);
+
+  transition: opacity 0.25s ease-in-out;
 }
 
 .minimap {
   display: grid;
   grid-gap: 0.25em;
-  transition: margin 0.5s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .minimap .child {

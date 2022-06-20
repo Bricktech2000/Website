@@ -1,9 +1,9 @@
 .About {
-  width: 100%;
-
   display: grid;
   grid-template-areas: 'title title' 'image paragraph' 'about about' 'contact contact';
   grid-template-columns: 7.5em 1fr;
+
+  padding-bottom: 10em;
 }
 .About h1 {
   grid-area: title;

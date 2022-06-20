@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import postMap from '../records/postMap';
 import errorMap from '../records/errorMap';
@@ -43,13 +43,20 @@ const Post = (props) => {
 
 const Page = (props) => {
   const positionMap = {
-    [undefined]: [1, 1],
+    ['']: [1, 1],
     about: [2, 1],
-    posts: [3, 1],
+    pinned: [3, 1],
+    posts: [2, 2],
   };
 
   const router = useRouter();
-  const page = ((router.query ?? props).page ?? [])[0];
+  const page = ((router.query ?? props).page ?? [])[0] ?? '';
+
+  const [position, setPosition] = useState(positionMap[page] ?? [3, 2]);
+
+  useEffect(() => {
+    setPosition(positionMap[page] ?? [3, 2]);
+  }, [router]);
 
   return (
     <App
@@ -58,7 +65,18 @@ const Page = (props) => {
       image={props.ogImage}
     >
       <BuiltMapGrid
-        position={positionMap[page] ?? [3, 2]}
+        position={position}
+        onPositionChange={async (position) => {
+          setPosition(position);
+
+          const key = Object.keys(positionMap).find(
+            (key) =>
+              positionMap[key][0] == position[0] &&
+              positionMap[key][1] == position[1]
+          );
+
+          if (key !== undefined) router.push(key + '/');
+        }}
         project={positionMap[page] !== undefined ? null : <Post id={page} />}
       />
     </App>

@@ -37,6 +37,8 @@ html *:not(head *):not(script):not(style) {
 body {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
   font-family: var(--sans);
   font-size: clamp(
     calc(calc(100vh + 100vw) / 140),
