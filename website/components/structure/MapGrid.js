@@ -160,7 +160,6 @@ const MapGrid = (props) => {
     var scrollIntegral = [0, 0];
     var scrollEndTimeout = null;
     const wheelHandler = (e) => {
-      console.log(e);
       if (e.shiftKey) scrollIntegral[0] -= e.deltaY / 2;
       else scrollIntegral[0] -= e.deltaX / 2;
       if (e.shiftKey) scrollIntegral[1] -= e.deltaX / 2;
@@ -204,7 +203,7 @@ const MapGrid = (props) => {
       <div className={styles.mapgridContainer} ref={mapgridRef}>
         <div className={styles.mapgrid} style={mapgridStyle}>
           {children.map((child, i) =>
-            child == null ? <Void lives={lives} key={i} /> : child
+            child === null ? <Void lives={lives} key={i} /> : child
           )}
         </div>
       </div>
@@ -220,7 +219,7 @@ const MapGrid = (props) => {
       >
         <div className={styles.minimap} style={minimapStyle}>
           {children.map((child, i) =>
-            child == null ? (
+            child === null ? (
               <div className={styles.void} key={i} />
             ) : (
               <div
@@ -230,6 +229,12 @@ const MapGrid = (props) => {
                   (i == props.position[0] + props.position[1] * props.size[0]
                     ? styles.selected
                     : null)
+                }
+                onClick={() =>
+                  props.onPositionChange([
+                    i % props.size[0],
+                    Math.floor(i / props.size[0]),
+                  ])
                 }
                 key={i}
               />

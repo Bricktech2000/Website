@@ -55,9 +55,15 @@
   border: var(--border);
   border-radius: var(--border-radius);
   border-color: var(--color-l);
+
+  cursor: pointer;
   transition: background-color 0.25s ease-in-out;
 }
 
 .minimap .child.selected {
+  background-color: var(--color-l);
+}
+
+.minimap .child:hover {
   background-color: var(--color-l);
 }
