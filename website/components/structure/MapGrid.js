@@ -1,14 +1,12 @@
 import React, { Component, useEffect, useState, useRef } from 'react';
-import Void from './Void.js';
+import Void from './Void';
 
 import styles from './MapGrid.module.css';
-import { useRouter } from 'next/router.js';
 
 const MapGrid = (props) => {
   const children = props.children.filter((child) => child !== ' ');
-  const router = useRouter();
   const [dragPosition, setDragPosition] = useState([0, 0]);
-  const [lives, setLives] = useState(3);
+  const [lives, setLives] = useState(5);
 
   const mapgridStyle = {
     gridTemplateColumns: `repeat(${props.size[0]}, 100vw)`,
@@ -26,25 +24,6 @@ const MapGrid = (props) => {
       -props.position[1] * 2.25
     }em)`,
   };
-
-  useEffect(() => {
-    const callback = (e) => {
-      switch (e.key) {
-        case 'a':
-          router.push('/about');
-          break;
-        case 'i':
-          router.push('/');
-          break;
-        case 'p':
-          router.push('/posts');
-          break;
-      }
-    };
-
-    window.addEventListener('keydown', callback);
-    return () => window.removeEventListener('keydown', callback);
-  }, []);
 
   const mapgridRef = useRef();
 
@@ -83,89 +62,109 @@ const MapGrid = (props) => {
       // https://stackoverflow.com/questions/39245488/event-path-is-undefined-running-in-firefox
       if (isHorizontal == true) {
         if (
-          (prePosDelta[0] > 0 &&
+          (posCurrent[0] - posInitial[0] >= 0 &&
             e
               .composedPath()
-              .every((elem) => !elem.scrollLeft || elem.scrollLeft == 0)) ||
-          (prePosDelta[0] < 0 &&
+              .every((elem) => !elem.scrollLeft || elem.scrollLeft <= 2)) ||
+          (posCurrent[0] - posInitial[0] <= 0 &&
             e
               .composedPath()
               .slice(0, e.composedPath().indexOf(mapgridRef.current) - 1)
               .every(
                 (elem) =>
                   elem.scrollLeft === undefined ||
-                  elem.scrollLeft == elem.scrollWidth - elem.clientWidth
+                  elem.scrollLeft >= elem.scrollWidth - elem.clientWidth - 2
               ))
         )
           posDelta = [prePosDelta[0], 0];
-        else posInitial = [posCurrent[0], posCurrent[1]];
+        else isHorizontal = -1; // prevent all scrolling
       }
 
       if (isHorizontal == false) {
         if (
-          (prePosDelta[1] > 0 &&
+          (prePosDelta[1] >= 0 &&
             e
               .composedPath()
-              .every((elem) => !elem.scrollTop || elem.scrollTop == 0)) ||
-          (prePosDelta[1] < 0 &&
+              .every((elem) => !elem.scrollTop || elem.scrollTop <= 2)) ||
+          (prePosDelta[1] <= 0 &&
             e
               .composedPath()
               .slice(0, e.composedPath().indexOf(mapgridRef.current) - 1)
               .every(
                 (elem) =>
                   elem.scrollTop === undefined ||
-                  // -1 below seems to fix a bug on mobile Edge
-                  elem.scrollTop >= elem.scrollHeight - elem.clientHeight - 1
+                  // -2 below seems to fix a bug on mobile Edge
+                  elem.scrollTop >= elem.scrollHeight - elem.clientHeight - 2
               ))
         )
           posDelta = [0, prePosDelta[1]];
-        else posInitial = [posCurrent[0], posCurrent[1]];
+        else isHorizontal = -1; // prevent all scrolling
       }
-      setDragPosition(posDelta);
+
+      // ensure the transition has been applied
+      setTimeout(() => {
+        setDragPosition(posDelta);
+      }, 0);
     };
 
-    const touchEnd = (e) => {
+    const touchEnd = async (e) => {
       const threshold = (window.outerHeight + window.outerWidth) / 2 / 10;
 
       mapgridRef.current.children[0].style.transition = null;
 
-      // https://stackoverflow.com/questions/23253976/how-to-properly-wait-for-browser-reflow-repaint-to-finish
+      if (
+        Math.abs(posDelta[0]) > threshold ||
+        Math.abs(posDelta[1]) > threshold
+      ) {
+        setTimeout(() => {
+          mapgridRef.current.children[0].children[
+            props.position[0] + props.position[1] * props.size[0]
+          ].scrollTo({
+            top: 0,
+            left: 0,
+          });
+        }, 1000 * 0.25);
+      }
 
-      window.requestAnimationFrame(async () => {
-        if (posDelta[0] > threshold)
-          await props.onPositionChange([
-            props.position[0] - 1,
-            props.position[1],
-          ]);
-        if (posDelta[0] < -threshold)
-          await props.onPositionChange([
-            props.position[0] + 1,
-            props.position[1],
-          ]);
-        if (posDelta[1] > threshold)
-          await props.onPositionChange([
-            props.position[0],
-            props.position[1] - 1,
-          ]);
-        if (posDelta[1] < -threshold)
-          await props.onPositionChange([
-            props.position[0],
-            props.position[1] + 1,
-          ]);
+      if (posDelta[0] > threshold)
+        await props.onPositionChange([
+          props.position[0] - 1,
+          props.position[1],
+        ]);
+      if (posDelta[0] < -threshold)
+        await props.onPositionChange([
+          props.position[0] + 1,
+          props.position[1],
+        ]);
+      if (posDelta[1] > threshold)
+        await props.onPositionChange([
+          props.position[0],
+          props.position[1] - 1,
+        ]);
+      if (posDelta[1] < -threshold)
+        await props.onPositionChange([
+          props.position[0],
+          props.position[1] + 1,
+        ]);
 
-        posInitial = null;
-        posDelta = [0, 0];
-        isHorizontal = null;
+      posInitial = null;
+      posDelta = [0, 0];
+      isHorizontal = null;
 
+      // ensure the transition has been applied
+      setTimeout(() => {
         setDragPosition([0, 0]);
-      });
+      }, 0);
     };
 
     var scrollIntegral = [0, 0];
     var scrollEndTimeout = null;
     const wheelHandler = (e) => {
-      scrollIntegral[0] -= e.deltaX / 5;
-      scrollIntegral[1] -= e.deltaY / 5;
+      console.log(e);
+      if (e.shiftKey) scrollIntegral[0] -= e.deltaY / 2;
+      else scrollIntegral[0] -= e.deltaX / 2;
+      if (e.shiftKey) scrollIntegral[1] -= e.deltaX / 2;
+      else scrollIntegral[1] -= e.deltaY / 2;
 
       touchMove({
         touches: [
@@ -179,7 +178,7 @@ const MapGrid = (props) => {
       });
 
       window.clearTimeout(scrollEndTimeout);
-      scrollEndTimeout = window.setTimeout(touchEnd, 50);
+      scrollEndTimeout = window.setTimeout(touchEnd, 100);
     };
 
     window.addEventListener('touchmove', touchMove);
@@ -193,92 +192,11 @@ const MapGrid = (props) => {
     };
   }, [props]);
 
-  // useEffect(() => {
-  //   const initialPosition = [
-  //     props.position[0] * mapgridRef.current.clientWidth,
-  //     props.position[1] * mapgridRef.current.clientHeight,
-  //   ];
-  //   var finalPosition = null;
-  //   mapgridRef.current.scrollTo({
-  //     top: initialPosition[1],
-  //     left: initialPosition[0],
-  //   });
-
-  //   const scrollStartHandler = (e) => {
-  //     finalPosition = null;
-  //   };
-
-  //   // var currentPosition = initialPosition;
-  //   const scrollHandler = (e) => {
-  //     if (
-  //       finalPosition !== null &&
-  //       (finalPosition.top != mapgridRef.current.scrollTop ||
-  //         finalPosition.left != mapgridRef.current.scrollLeft)
-  //     )
-  //       mapgridRef.current.scrollTo(finalPosition);
-
-  //     //   currentPosition = [
-  //     //     mapgridRef.current.scrollLeft,
-  //     //     mapgridRef.current.scrollTop,
-  //     // ];
-  //   };
-
-  //   const scrollEndHandler = (e) => {
-  //     finalPosition = {
-  //       top: mapgridRef.current.scrollTop,
-  //       left: mapgridRef.current.scrollLeft,
-  //     };
-
-  //     props.onPositionChange([
-  //       Math.round(
-  //         mapgridRef.current.scrollLeft / mapgridRef.current.clientWidth
-  //       ),
-  //       Math.round(
-  //         mapgridRef.current.scrollTop / mapgridRef.current.clientHeight
-  //       ),
-  //     ]);
-  //   };
-
-  //   window.addEventListener('touchstart', scrollStartHandler);
-  //   mapgridRef.current.addEventListener('scroll', scrollHandler);
-  //   window.addEventListener('touchend', scrollEndHandler);
-  //   return () => {
-  //     // mapgridRef.current.removeEventListener('scroll', scrollHandler);
-  //     window.removeEventListener('touchend', scrollEndHandler);
-  //   };
-  // }, [props]);
-
-  // useEffect(() => {
-  //   const touchStart = (e) => {
-  //     console.log('touchstart');
-  //   };
-
-  //   const touchMove = (e) => {
-  //     console.log('touchmove');
-  //   };
-
-  //   const touchEnd = (e) => {
-  //     console.log('touchend');
-  //   };
-
-  //   window.addEventListener('touchstart', touchStart, { passive: false });
-  //   window.addEventListener('touchmove', touchMove, { passive: false });
-  //   window.addEventListener('touchend', touchEnd, { passive: false });
-
-  //   return () => {
-  //     window.removeEventListener('touchstart', touchStart);
-  //     window.removeEventListener('touchmove', touchMove);
-  //     window.removeEventListener('touchend', touchEnd);
-  //   };
-  // }, [props]);
-
   useEffect(() => {
     if (
       children[props.position[0] + props.position[1] * props.size[0]] === null
     )
-      setLives(--lives);
-
-    if (lives == -1) setLives(2);
+      setLives((--lives + 5) % 5);
   }, [props.position]);
 
   return (

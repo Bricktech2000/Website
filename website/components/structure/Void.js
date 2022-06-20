@@ -26,7 +26,7 @@ const Void = (props) => {
         </React.Fragment>
       )}
       <div>
-        {new Array(3)
+        {new Array(5)
           .fill(0)
           .map((_, i) =>
             i < lives ? (
