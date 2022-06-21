@@ -1,27 +1,22 @@
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import GetInTouch from '../GetInTouch';
 import useParallax from '../../hooks/useParallax';
 import Tag from '../Tag';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './About.module.css';
+import styles from './HomeAbout.module.css';
 
-import Link from 'next/link';
-
-const About = () => {
-  // const parallaxRef = useParallax((current, value) => {
-  //   current.style.transform = `translateY(calc(0.5em * ${
-  //     (value - 0.75) * -16
-  //   }))`;
-  //   current.style.opacity = value;
-  // });
-  const parallaxRef = useRef();
+const HomeAbout = () => {
+  const parallaxRef = useParallax((current, value) => {
+    current.style.transform = `translateY(calc(0.5em * ${
+      (value - 0.75) * -16
+    }))`;
+    current.style.opacity = value;
+  });
 
   return (
-    <div className={styles.About} ref={parallaxRef}>
-      <h1 className={marked}>
-        <i className="fa-xs fas fa-user"></i>A Bit More About Me
-      </h1>
+    <div className={styles.HomeAbout} ref={parallaxRef}>
+      <h1 className={marked}>A Bit More About Me</h1>
       <img src="/picture.jpg" alt="author profile picture" />
       <p className={marked}>
         {/*
@@ -52,9 +47,9 @@ const About = () => {
           Even though this seems to be a rarity among university students, I
           view myself as <strong>organized</strong> &mdash; maybe even to the
           point of minimalism. As a few examples, I take class notes{' '}
-          <Link href="Conceptual-Note-Taking">conceptually</Link> to prevent
-          them from becoming unorganized, and I use Notion for time management,
-          which allows me to lay out tasks and deadlines in a clear and
+          <a href="Conceptual-Note-Taking">conceptually</a> to prevent them from
+          becoming unorganized, and I use Notion for time management, which
+          allows me to lay out tasks and deadlines in a clear and
           straightforward manner.
         </p>
         <p className={marked}>
@@ -124,4 +119,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default HomeAbout;

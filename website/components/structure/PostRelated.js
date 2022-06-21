@@ -19,7 +19,7 @@ const PostRelated = (props) => {
       <MosaicSmall>
         {Object.keys(info)
           .filter((id) => !info[id].parent)
-          .slice(0, 6)
+          .slice(0, 4)
           .map((id) => (
             <Card key={id} info={info[id]} />
           ))}

@@ -1,11 +1,12 @@
-.About {
+.HomeAbout {
+  width: 100%;
+
   display: grid;
   grid-template-areas: 'title title' 'image paragraph' 'about about' 'contact contact';
   grid-template-columns: 7.5em 1fr;
-
-  padding-bottom: 10em;
+  padding: 3em 10vw;
 }
-.About h1 {
+.HomeAbout h1 {
   grid-area: title;
 
   margin: 0;
@@ -13,45 +14,36 @@
   margin-top: 0.5em;
   line-height: 1;
 }
-
-.About h1 {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  align-self: flex-start;
-  text-align: center;
-}
-
-.About > p {
+.HomeAbout > p {
   grid-area: paragraph;
 
   padding-left: 2em;
 }
-.About .about {
+.HomeAbout .about {
   grid-area: about;
   display: block;
 }
-.About .about .languagesToolsSkills {
+.HomeAbout .about .languagesToolsSkills {
   padding: 1em 0;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1em;
 }
-.About .about .languagesToolsSkills > div {
+.HomeAbout .about .languagesToolsSkills > div {
   display: block;
   flex-direction: column;
   flex: 1;
 }
-.About .about .languagesToolsSkills h2 {
+.HomeAbout .about .languagesToolsSkills h2 {
   white-space: nowrap;
 }
-.About .GetInTouch {
+.HomeAbout .GetInTouch {
   grid-area: contact;
   justify-content: flex-end;
   padding-top: 1em;
 }
 
-.About > img {
+.HomeAbout > img {
   grid-area: image;
   width: 100%;
   justify-self: center;
@@ -65,11 +57,13 @@
 }
 
 @media (max-aspect-ratio: 1/1) {
-  .About {
+  .HomeAbout {
     grid-template-areas: 'title' 'image' 'paragraph' 'about' 'contact';
     grid-template-columns: 1fr;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-  .About > p {
+  .HomeAbout > p {
     padding: 2em 0;
     font-size: 1em;
   }

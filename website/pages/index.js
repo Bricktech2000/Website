@@ -4,8 +4,8 @@ import App from '../components/structure/App';
 import HomeHeader from '../components/structure/HomeHeader';
 import Aside from '../components/structure/Aside';
 import Main from '../components/structure/Main';
-import Pinned from '../components/structure/Pinned';
-import Posts from '../components/structure/Posts';
+import HomePinned from '../components/structure/HomePinned';
+import HomePostList from '../components/structure/HomePostList';
 import Footer from '../components/structure/Footer';
 
 const Home = () => {
@@ -18,8 +18,8 @@ const Home = () => {
       <HomeHeader />
       <Aside />
       <Main>
-        <Pinned />
-        <Posts />
+        <HomePinned />
+        <HomePostList />
       </Main>
       <Footer github="pages/index.js" />
     </App>

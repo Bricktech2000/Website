@@ -31,11 +31,9 @@
     margin: 0;
     margin-top: 0.5em;
     justify-self: center;
-    align-self: flex-end;
     font-size: 40vw;
   }
   .content {
     max-width: unset;
-    align-self: flex-start;
   }
 }

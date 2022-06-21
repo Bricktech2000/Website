@@ -6,21 +6,18 @@ import Loading from '../Loading';
 import ToggleSubscribe from '../ToggleSubscribe';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './Posts.module.css';
+import styles from './HomePostList.module.css';
 
-const Posts = () => {
+const HomePostList = () => {
   const info = useDbGet('all');
 
   if (typeof info === 'undefined') return <Loading height="10000vh" />;
 
   return (
-    <div className={styles.Posts}>
+    <div className={styles.HomePostList}>
       <div className={styles.header}></div>
-      <h1 className={marked}>
-        <i className="fa-xs fas fa-th"></i>
-        All Projects
-      </h1>
-      {/* <ToggleSubscribe /> */}
+      <h1 className={marked}>All Projects</h1>
+      <ToggleSubscribe />
 
       <br />
       <MosaicLarge>
@@ -33,4 +30,4 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default HomePostList;

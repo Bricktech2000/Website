@@ -1,0 +1,11 @@
+.HomePostList {
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+
+.header {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}

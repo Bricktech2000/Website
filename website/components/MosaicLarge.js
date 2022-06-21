@@ -1,7 +1,6 @@
 import React, { Component, useState, useRef, useEffect } from 'react';
 import useParallax from '../hooks/useParallax';
 import useOnScreen from '../hooks/useOnScreen';
-import Loading from './Loading';
 
 import styles from './MosaicLarge.module.css';
 
@@ -9,12 +8,11 @@ import styles from './MosaicLarge.module.css';
 var globalClickCount = 3;
 
 const MosaicLarge = (props) => {
-  // const parallaxRef = useParallax((current, value) => {
-  //   current.style.transform = `translateY(calc(0.5em * ${
-  //     (value - 0.75) * -16
-  //   }))`;
-  // });
-  const parallaxRef = useRef();
+  const parallaxRef = useParallax((current, value) => {
+    current.style.transform = `translateY(calc(0.5em * ${
+      (value - 0.75) * -16
+    }))`;
+  });
 
   const [clickCount, setClickCount] = useState(globalClickCount);
 
@@ -37,20 +35,13 @@ const MosaicLarge = (props) => {
     }
   }, [isVisible, hasTimeElapsed, allLoaded]);
 
-  const mosaicRef = useRef();
-  const isMosaicVisible = useOnScreen(mosaicRef);
-
   return (
-    <div className={styles.container} ref={mosaicRef}>
-      {!isMosaicVisible ? (
-        <Loading height="10000vh" />
-      ) : (
-        <div className={styles.MosaicLarge} ref={parallaxRef}>
-          {props.children
-            .slice(0, loadCount)
-            .map((child) => React.cloneElement(child))}
-        </div>
-      )}
+    <div className={styles.container}>
+      <div className={styles.MosaicLarge} ref={parallaxRef}>
+        {props.children
+          .slice(0, loadCount)
+          .map((child) => React.cloneElement(child))}
+      </div>
       <p ref={ref}>{!allLoaded && ''}</p>
     </div>
   );

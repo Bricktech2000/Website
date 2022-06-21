@@ -5,37 +5,26 @@ import Card from '../Card';
 import Loading from '../Loading';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './Pinned.module.css';
-import Button from '../Button';
+import styles from './HomePinned.module.css';
 
-const Pinned = () => {
+const HomePinned = () => {
   const info = useDbGet('pinned');
 
   if (typeof info === 'undefined') return <Loading height="400vh" />;
 
   return (
-    <div className={styles.Pinned}>
-      <h1 className={marked}>
-        <i className="fa-xs fas fa-th-list"></i>
-        Pinned Projects
-      </h1>
-      <br />
+    <div className={styles.HomePinned}>
+      <h1 className={marked}>Pinned Projects</h1>
       <br />
       <MosaicSmall>
         {Object.keys(info)
-          .slice(0, 6)
+          .slice(0, 4)
           .map((id) => (
             <Card key={id} info={info[id]} />
           ))}
       </MosaicSmall>
-      <Button
-        className={styles.button}
-        label="See All Projects"
-        blank={false}
-        href="/posts"
-      />
     </div>
   );
 };
 
-export default Pinned;
+export default HomePinned;
