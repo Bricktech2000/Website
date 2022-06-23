@@ -1,4 +1,5 @@
 export default [
+  '3D-Printed-Wallet',
   'uOttawa-Website-Patch',
   'RateMyProf-Extension',
   'Fish-Shell-Setup',

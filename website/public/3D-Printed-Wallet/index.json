@@ -1,0 +1,21 @@
+{
+  "title": "3D-Printed Wallet",
+  "date": "2022-06-23",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Hardware",
+    "3D Printing",
+    "Demo",
+    "Modular",
+    "Organization",
+    "Fusion 360",
+    "Cura"
+  ],
+  "btns": {
+    "Download STLs": "./3D%20Printed%20Wallet.zip",
+    "Wallet Images": "#img",
+    "Demo Video": "#demo"
+  },
+  "desc": "A compact modular wallet for taking care of pocket clutter. Writing about the way I came up with the design and how you can build your own!"
+}
