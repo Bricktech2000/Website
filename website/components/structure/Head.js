@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import NextHead from 'next/head';
+import { language } from '../../records/consts';
 
 const Head = (props) => {
+  // https://stackoverflow.com/questions/61310847/how-to-set-html-lang-attribute-dynamically-on-nextjs-document
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, []);
+
   return (
     <NextHead>
       <meta charSet="UTF-8" />

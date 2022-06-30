@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import Head from './Head';
 
-import { language, domain } from '../../records/consts';
+import { domain } from '../../records/consts';
 import styles from './App.module.css';
 
 const App = (props) => {
@@ -11,14 +11,9 @@ const App = (props) => {
     changePalette({ preventDefault: () => {} });
   }, []);
 
-  //https://stackoverflow.com/questions/61310847/how-to-set-html-lang-attribute-dynamically-on-nextjs-document
-  useEffect(() => {
-    document.documentElement.lang = language;
-  }, []);
-
   const changePalette = (e) => {
     e.preventDefault();
-    //https://stackoverflow.com/questions/49411796/how-do-i-detect-i-am-on-server-vs-client-in-next-js
+    // https://stackoverflow.com/questions/49411796/how-do-i-detect-i-am-on-server-vs-client-in-next-js
     if (!process.browser) return;
 
     var colorHue;
