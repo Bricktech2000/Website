@@ -132,6 +132,7 @@ ul.Marked {
 .Marked ol,
 ul.Marked,
 ol.Marked {
+  text-align: justify;
   margin: 1em 10%;
 }
 .Marked li,
