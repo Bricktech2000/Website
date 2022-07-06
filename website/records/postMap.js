@@ -1,10 +1,10 @@
 export default [
+  'DBLess-Password-Manager',
   '3D-Printed-Wallet',
   'uOttawa-Website-Patch',
   'RateMyProf-Extension',
   'Fish-Shell-Setup',
   'Conceptual-Note-Taking',
-  'DBLess-Password-Manager',
   'Modular-Containers-2-0',
   'Lecture-Speedup',
   'LED-Strip-Lighting',

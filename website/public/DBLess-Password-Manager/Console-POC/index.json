@@ -1,0 +1,24 @@
+{
+  "title": "Console PoC",
+  "date": "2022-03-16",
+  "type": "software",
+  "tags": [
+    "Software",
+    "Python",
+    "Git",
+    "Web",
+    "Hacking",
+    "Security",
+    "Data Processing",
+    "Hashing",
+    "Scripting",
+    "VS Code",
+    "Vim",
+    "Cryptography"
+  ],
+  "btns": {
+    "Try Console PoC": "#try",
+    "Github": "https://github.com/Bricktech2000/DBLess-Password-Manager"
+  },
+  "desc": "A hash-based, database-less password manager. Writing about how I got the idea to make this PoC, and how it works!"
+}

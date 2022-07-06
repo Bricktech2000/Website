@@ -1,24 +1,9 @@
 {
   "title": "DBLess Password Manager",
-  "date": "2022-03-16",
+  "date": "2022-07-06",
   "type": "software",
-  "tags": [
-    "Software",
-    "Python",
-    "Git",
-    "Web",
-    "Hacking",
-    "Security",
-    "Hashing",
-    "Data Processing",
-    "Scripting",
-    "VS Code",
-    "Vim",
-    "Cryptography"
-  ],
-  "btns": {
-    "Try it!": "#try",
-    "Github": "https://github.com/Bricktech2000/DBLess-Password-Manager"
-  },
-  "desc": "A hash-based, database-less password manager. Writing about how I got the idea to make this PoC, and how it works!"
+  "tags": [],
+  "btns": {},
+  "desc": "A hash-based, database-less password manager. Writing about both versions of this program and explaining how it works.",
+  "children": ["Web-Version", "Console-POC"]
 }
