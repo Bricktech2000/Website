@@ -43,14 +43,15 @@ vim ~/.tmux.conf
 paste:
 set -g default-terminal "xterm-256color"
 set-option -g default-shell /usr/bin/fish
+setw -g xterm-keys off
 
 # Moving window
-bind-key -n S-Left swap-window -t -1 \; previous-window
-bind-key -n S-Right swap-window -t +1 \; next-window
-bind-key -n Left previous-window \; send Escape
-bind-key -n Right next-window \; send Escape
-bind-key -n Up new-window \; send Escape
-bind-key -n Down kill-window \; send Escape
+bind-key -n M-S-y swap-window -t -1 \; previous-window
+bind-key -n M-S-o swap-window -t +1 \; next-window
+bind-key -n M-y previous-window \; send Escape
+bind-key -n M-o next-window \; send Escape
+bind-key -n M-i new-window \; send Escape
+bind-key -n M-u kill-window \; send Escape
 
 set-option -g status-justify "left"
 set-window-option -g mode-keys vi

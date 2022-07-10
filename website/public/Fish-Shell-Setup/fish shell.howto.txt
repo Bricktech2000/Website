@@ -60,6 +60,11 @@ fuck
 // https://fishshell.com/docs/current/interactive.html
 // https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_vi_cursor.fish
 // https://superuser.com/questions/281617/change-default-text-editor-for-crontab-to-vim
+
+// https://www.youtube.com/watch?v=qKpY7t5m35k&ab_channel=devaslife
+// https://coderwall.com/p/euwpig/a-better-git-log
+// https://stackoverflow.com/questions/7736781/how-to-make-git-log-not-prompt-to-continue
+// https://fishshell.com/docs/current/cmds/fish_greeting.html
 vim ~/.config/fish/config.fish
 paste:
 set -g theme_display_user no
@@ -73,14 +78,39 @@ for mode in default insert visual
 end
 set fish_vi_force_cursor
 
-set fish_cursor_default block
-set fish_cursor_insert line
-set fish_cursor_replace_one underscore
-set fish_cursor_visual block
+set -g fish_cursor_default block
+set -g fish_cursor_insert line
+set -g fish_cursor_replace_one underscore
+set -g fish_cursor_visual block
 
 set -g EDITOR vim
 
-(copy bash aliases)
+alias c='clear'
+alias e='exit'
+alias ls='ls -t'
+alias ll='ls -lt'
+alias la='ls -lat'
+alias s='git status'
+alias d='git diff'
+alias a='git add'
+alias m='git commit -m'
+alias g='git --no-pager log -n50 --graph --pretty=format:"%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)" --abbrev-commit'
+alias r='git reset'
+alias p='git push'
+alias l='git pull --rebase'
+alias v='git revert --no-commit'
+alias k='git checkout'
+alias pull='sudo ~/pull.sh'
+alias restart='sudo ~/restart.sh'
+alias server='~/server.sh'
+
+if status is-interactive
+  # Commands to run in interactive sessions can go here
+end
+
+function fish_greeting
+  # empty greeting
+end
 
 thefuck --alias | source
 
@@ -103,17 +133,26 @@ thefuck --alias | source
 
 
 
-// cargo install exa
 
-// alias ls='exa --icons'
-// alias ll='ls -l -g'
-// alias la='ll -a'
-// alias l1='ls --tree --level=1'
-// alias l2='ls --tree --level=2'
-// alias l3='ls --tree --level=3'
-// alias l4='ls --tree --level=4'
-// alias l4='ls --tree --level=4'
-// alias l5='ls --tree --level=5'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
