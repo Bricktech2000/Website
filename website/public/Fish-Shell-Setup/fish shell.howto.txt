@@ -65,6 +65,9 @@ fuck
 // https://coderwall.com/p/euwpig/a-better-git-log
 // https://stackoverflow.com/questions/7736781/how-to-make-git-log-not-prompt-to-continue
 // https://fishshell.com/docs/current/cmds/fish_greeting.html
+// https://askubuntu.com/questions/808377/fish-alias-with-a-variable-in-the-middle
+
+// termux ONLY: remove line thefuck --alias | source
 vim ~/.config/fish/config.fish
 paste:
 set -g theme_display_user no
@@ -90,6 +93,9 @@ alias e='exit'
 alias ls='ls -t'
 alias ll='ls -lt'
 alias la='ls -lat'
+function cs; cd $argv && ls; end;
+function cl; cd $argv && ll; end;
+function ca; cd $argv && la; end;
 alias s='git status'
 alias d='git diff'
 alias a='git add'

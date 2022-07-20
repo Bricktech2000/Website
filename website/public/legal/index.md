@@ -9,12 +9,12 @@ The words of which the initial letter is capitalized have meanings defined under
 
 ## Definitions
 
-- **Website** _"Service"_ refers to the Project Portfolio, accessible from https://emilien.ca/
+- **Website** _"Service"_ refers to the Project Portfolio, accessible from <https://LEGAL_JS_DOMAIN/>
 - **Author** _"We", "Us", "Our"_ refers to an entity that has direct or indirect editorial rights over the Website.
 - **Device** refers to any device that can access the Service such as a computer, a cellphone or a digital tablet.
 - **Terms and Conditions** _"Terms"_ mean these Terms and Conditions that form the entire agreement between You and the Authors regarding the use of the Service.
-- **Cookies** refer to small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.
 - **You** refers to the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+- **Cookies** refer to small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.
 
 ## Acknowledgment
 
@@ -30,13 +30,13 @@ Your access to and use of the Service is also conditioned on Your acceptance of 
 
 ## Copyright Notices
 
-Website design, content and logo subject to **copyright &copy; 2021 Emilien Breton**
+Website design, content and logo subject to **copyright &copy; LEGAL_JS_YEAR Emilien Breton**
 
-Website [source code](https://github.com/Bricktech2000/Website) licensed under the [GNU General Public License v3.0](https://raw.githubusercontent.com/Bricktech2000/Website/master/LICENSE)
+Website [source code](LEGAL_JS_SOURCE) licensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## "AS IS" Disclaimer
 
-The Authors provide no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+The Authors provide no warranty or undertaking, and make no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
 
 ## Links to Other Websites
 

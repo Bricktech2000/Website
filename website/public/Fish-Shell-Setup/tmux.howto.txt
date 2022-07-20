@@ -39,6 +39,7 @@ exit
 // https://github.com/craftzdog/dotfiles-public/blob/master/.tmux.conf
 // https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell
 // https://superuser.com/questions/209437/how-do-i-scroll-in-tmux
+// termux ONLY: change /usr/bin/fish to /data/data/com.termux/files/usr/bin/fish
 vim ~/.tmux.conf
 paste:
 set -g default-terminal "xterm-256color"
