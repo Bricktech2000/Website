@@ -12,7 +12,6 @@ import { domain, github } from '../records/consts';
 const Legal = () => {
   const id = 'legal';
   const info = useDbGet('exact', id);
-  console.log(info && info[id]);
 
   const loading =
     typeof info === 'undefined' || typeof info[id] === 'undefined';
