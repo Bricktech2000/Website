@@ -1,0 +1,28 @@
+{
+  "title": "GPT-3 Chatbot 2.0",
+  "date": "2022-08-15",
+  "type": "software",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Python",
+    "Git",
+    "Artificial Intelligence",
+    "Data Processing",
+    "Hashing",
+    "RegExp",
+    "Learning",
+    "Discord Bot",
+    "VS Code",
+    "Vim",
+    "JSON",
+    "OpenAI"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/GPT-3-Chatbot-2.0",
+    "Sample Training Data": "#sample",
+    "Sample Conversation": "#img"
+  },
+  "desc": "A chatbot based on GPT-3 and DALL-E 2 to replace our friend Grace on Discord. Taking you through the process of designing such a bot."
+}

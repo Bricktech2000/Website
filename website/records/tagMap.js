@@ -87,6 +87,7 @@ export default {
   CSV: 'technology',
   LaTeX: 'technology',
   JSON: 'technology',
+  YAML: 'technology',
   'Fusion 360': 'tool',
   Cura: 'tool',
   Figma: 'tool',
@@ -99,4 +100,5 @@ export default {
   Cryptography: '',
   Chemistry: '',
   'Chrome Extension': '',
+  OpenAI: 'technology',
 };
