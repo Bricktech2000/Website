@@ -22,7 +22,7 @@ const PostMain = (props) => {
   }, [props.info.source]);
 
   return (
-    <div ref={parallaxRef} className={styles.PostMain + ' fade-right-3'}>
+    <div ref={parallaxRef} className={styles.PostMain}>
       {typeof props.info.children !== 'undefined' &&
         Object.values(props.info.children)
           .reverse()

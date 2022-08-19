@@ -15,7 +15,6 @@ const PostHeader = (props) => {
         <img
           src={'/' + props.info.id + '/index.jpg'}
           alt={props.info.title + ' thumbnail image'}
-          className={'fade-right-3'}
         />
       </div>
       <div className={styles.textColumn}>

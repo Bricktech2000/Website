@@ -9,6 +9,8 @@ import Loading from '../components/Loading';
 import useDbGet from '../hooks/useDbGet';
 import { domain, github } from '../records/consts';
 
+// TODO: style legal page from scratch
+
 const Legal = () => {
   const id = 'legal';
   const info = useDbGet('exact', id);

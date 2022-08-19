@@ -48,7 +48,11 @@ const App = (props) => {
         description={props.description}
         image={`https://${domain}/${props.image}`}
       />
-      <div className={styles.App}>{props.children}</div>
+      <div className={styles.App}>
+        <div className={styles.overlay + ' ' + styles.colored} />
+        <div className={styles.overlay + ' ' + styles.grayscale} />
+        {props.children}
+      </div>
     </React.Fragment>
   );
 };
