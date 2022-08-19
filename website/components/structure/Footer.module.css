@@ -1,4 +1,9 @@
 .Footer {
+  flex-direction: column;
+}
+
+/* TODO: */
+._Footer {
   grid-area: footer;
 
   display: grid;

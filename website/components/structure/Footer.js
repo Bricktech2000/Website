@@ -1,18 +1,26 @@
-import { /*React,*/ Component } from 'react';
+import { React, Component } from 'react';
 import GetInTouch from '../GetInTouch';
 import Link from 'next/link';
 import { github } from '../../records/consts';
 
-import React from '../svgs/000-react.svg';
+// TODO:
+import { React as _React } from '../svgs/000-react.svg';
 import NextJS from '../svgs/000-next-js.svg';
 import NodeJS from '../svgs/000-nodejs.svg';
 import Ubuntu from '../svgs/000-ubuntu.svg';
 import Cloudflare from '../svgs/000-cloudflare.svg';
+
 import styles from './Footer.module.css';
 import { Marked as marked } from '../Marked.module.css';
 
 const Footer = (props) => {
-  return 'footer TODO:';
+  return (
+    <div className={styles.Footer}>
+      <hr className={marked} />
+      TODO:
+    </div>
+  );
+
   return (
     <footer className={styles.Footer}>
       <div className={styles.vr}></div>
@@ -20,7 +28,7 @@ const Footer = (props) => {
         <div>
           Created with
           <span>&nbsp;&nbsp;</span>
-          <React />
+          <_React />
           <span>&nbsp;&nbsp;</span>
           <NextJS />
           <span>&nbsp;&nbsp;</span>

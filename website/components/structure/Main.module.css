@@ -1,13 +1,15 @@
 .Main {
   flex-direction: column;
 
-  padding: 0 17.5%;
-  min-height: 50vh;
+  margin: 0 17.5%;
+
+  max-width: 120ch;
+  align-self: center;
 }
 
 @media (max-aspect-ratio: 1/1) {
   .Main {
-    padding-left: 1em;
-    padding-right: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }

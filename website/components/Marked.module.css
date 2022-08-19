@@ -4,7 +4,9 @@
 }
 
 .Marked h1,
-h1.Marked {
+.Marked hr,
+h1.Marked,
+hr.Marked {
   width: 100%;
   text-align: center;
 
@@ -21,6 +23,11 @@ h2.Marked {
   letter-spacing: -0.08ch;
 }
 
+.Marked hr,
+hr.Marked {
+  border: none;
+}
+
 .Marked h1::before,
 h1.Marked::before {
   content: '# ';
@@ -31,23 +38,31 @@ h2.Marked::before {
   content: '## ';
 }
 
+.Marked hr::before,
+hr.Marked::before {
+  content: '---';
+}
+
 .Marked h1,
 .Marked h2,
+.Marked hr,
 h1.Marked,
-h2.Marked {
+h2.Marked,
+hr.Marked {
   margin-top: 4em;
   margin-bottom: 1.5em;
 
   color: var(--bright);
   font-family: var(--mono);
   font-weight: 400;
-  overflow: visible;
 }
 
 .Marked h1::before,
 .Marked h2::before,
+.Marked hr::before,
 h1.Marked::before,
-h2.Marked::before {
+h2.Marked::before,
+hr.Marked::before {
   white-space: pre;
   color: var(--color-l);
   font-weight: 400;
