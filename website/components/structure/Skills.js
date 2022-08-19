@@ -8,7 +8,11 @@ const Skills = () => {
     <div className={styles.Skills}>
       <h1 className={marked}>Skills</h1>
       {/* TODO: */}
-      <div className={styles.graph} />
+      <img
+        className={styles.graph}
+        src="skills-graph-placeholder.png"
+        alt="skills graph placeholder"
+      />
     </div>
   );
 };

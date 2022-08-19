@@ -3,8 +3,7 @@
 }
 
 .Skills .graph {
-  height: 40em;
-  border: var(--border);
-  border-color: var(--dark);
+  width: 100%;
+  padding: 0 10em;
   border-radius: var(--br);
 }
