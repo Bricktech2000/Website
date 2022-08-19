@@ -12,6 +12,7 @@ import styles from './Footer.module.css';
 import { Marked as marked } from '../Marked.module.css';
 
 const Footer = (props) => {
+  return 'footer TODO:';
   return (
     <footer className={styles.Footer}>
       <div className={styles.vr}></div>

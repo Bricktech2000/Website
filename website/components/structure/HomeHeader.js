@@ -5,6 +5,7 @@ import HomeHero from './HomeHero';
 import styles from './HomeHeader.module.css';
 
 const HomeHeader = () => {
+  return 'header TODO:';
   return (
     <header className={styles.HomeHeader}>
       <HomeHero />

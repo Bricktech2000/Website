@@ -1,8 +1,7 @@
 .Main {
-  grid-area: main;
   flex-direction: column;
 
-  padding: 1.5em;
+  padding: 20em;
   min-height: 50vh;
 }
 
