@@ -1,7 +1,8 @@
 :root {
-  --black: #000;
   --bg: #000;
-  --bg-l: #18181a;
+  --bg-l: #111;
+
+  /* TODO: remove all --card-bg and --card-bg-l from project */
   --card-bg: #28282b;
   --card-bg-l: #38383b;
 
@@ -11,8 +12,8 @@
 
   --TODO: #f00;
 
-  /* TODO: */
-  --bs: 0 0 0.5em var(--black);
+  /* TODO: remove all --bs from comments */
+  /* TODO: remove all --border from comments and from Card.js */
   --border: 0.125em solid var(--card-bg-l);
   --br: 1.5em;
   --br-s: 0.5em;

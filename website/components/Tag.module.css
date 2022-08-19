@@ -4,18 +4,14 @@
   text-decoration: none;
   white-space: nowrap;
 
-  font-size: 0.5em;
+  font-size: 0.625em;
   font-weight: inherit;
-  margin: 0.25em;
   padding: 0.0625em 0.5em;
-  text-shadow: var(--bs);
 }
 .off {
-  /* background: var(--bg); */
   color: var(--light);
 }
 .on {
-  /* background: var(--bg); */
   color: var(--color-l);
 }
 

@@ -73,7 +73,6 @@
   letter-spacing: -0.08ch;
   font-size: 8vw;
   font-weight: lighter;
-  text-shadow: 0 0 0.125em var(--black), 0 0 0.125em var(--black);
 
   animation: fade-right-animation 1s cubic-bezier(0, 0.5, 0.5, 1);
 }

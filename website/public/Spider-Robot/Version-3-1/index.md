@@ -39,7 +39,6 @@ As some of the 3D-printed parts and the program were modified in this new versio
 - [Radio Transmitter](https://www.banggood.com/Flysky-i6X-FS-i6X-2_4GHz-10CH-AFHDS-2A-RC-Radio-Transmitter-With-X6B-or-IA6B-or-A8S-Receiver-for-FPV-RC-Drone-p-1090406.html?cur_warehouse=CN&ID=53081742482&rmmds=search) and [Compatible Receiver](https://www.banggood.com/Flysky-X6B-2_4G-6CH-i-BUS-PPM-PWM-Receiver-for-AFHDS-i10-i6s-i6-i6x-i4x-Transmitter-p-1101513.html?cur_warehouse=CN&rmmds=search) &mdash; You can use any transmitter-receiver combo, as long as the receiver supports the PPM protocol. Otherwise, you will have to implement your own hardware interrupt to handle receiver signals.
 
 #3-1-demo
-
 Here is a demo of version `V3.1` of my hexapod robot, which uses the new voltage regulator along with some replacement servos. Enjoy!
 
 ![youtube](dVLcFW495Oo)

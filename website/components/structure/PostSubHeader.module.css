@@ -1,17 +1,20 @@
 .PostSubHeader {
-  grid-area: header;
-
-  height: auto;
   align-items: center;
   flex-direction: column;
 
-  padding-bottom: 1em;
-
   color: var(--light);
 }
+
+.PostSubHeader h1 {
+  /* (duplicate) */
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
 .PostSubHeader p {
   max-width: 40ch;
 }
+
 @media (max-aspect-ratio: 1/1) {
   .PostSubHeader {
     padding-left: 0.5em;

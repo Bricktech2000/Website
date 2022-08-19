@@ -50,7 +50,7 @@
   max-width: 7.5em;
 
   border-radius: 100vh;
-  box-shadow: var(--bs);
+  /* box-shadow: var(--bs); */
   /* https://stackoverflow.com/questions/23490320/gap-between-border-and-image-when-border-radius-is-added */
   background: var(--color-d);
   background-clip: border-box;

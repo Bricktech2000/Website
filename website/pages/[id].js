@@ -42,8 +42,10 @@ const Post = (props) => {
       ) : (
         <React.Fragment>
           <PostHeader info={info[currentId]} />
+          {/* TODO: fix "Page" inconsistency with index.js */}
           <Page github={`public/${currentId}/index.md`}>
             <PostMain info={info[currentId]} />
+            {/* TODO: rename PostRelated */}
             <PostRelated info={info[currentId]} />
           </Page>
         </React.Fragment>

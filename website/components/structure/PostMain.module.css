@@ -1,19 +1,12 @@
 .PostMain {
   flex-direction: column;
-  margin: 3em 7.5vw;
 }
 .PostMain > span {
+  /* TODO: */
   column-width: 50em;
   column-gap: 7.5em;
   column-rule: 0.1em solid var(--card-bg-l);
 }
 .PostMain .spacer {
-  height: 5em;
-}
-
-@media (max-aspect-ratio: 1/1) {
-  .PostMain {
-    margin-left: 0;
-    margin-right: 0;
-  }
+  height: 10em;
 }

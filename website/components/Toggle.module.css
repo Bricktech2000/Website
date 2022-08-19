@@ -13,7 +13,7 @@
   height: 1.25em;
   border-radius: 100vh;
   background: var(--card-bg-l);
-  box-shadow: var(--bs);
+  /* box-shadow: var(--bs); */
   transition: background-color 0.125s ease-in-out;
 }
 .thumb {
@@ -21,7 +21,7 @@
   height: 1.25em;
   border-radius: 100vh;
   background: var(--bright);
-  box-shadow: var(--bs);
+  /* box-shadow: var(--bs); */
   transition: margin-left 0.125s ease-in-out;
 }
 .Toggle.active .thumb {

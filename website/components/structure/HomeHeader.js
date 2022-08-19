@@ -7,7 +7,7 @@ import styles from './HomeHeader.module.css';
 
 const HomeHeader = () => {
   return (
-    <div className={styles.HomeHeader}>
+    <header className={styles.HomeHeader}>
       <div />
       <div className={styles.textColumn}>
         <h1>Emilien Breton</h1>
@@ -35,7 +35,7 @@ const HomeHeader = () => {
         />
       </div>
       <div />
-    </div>
+    </header>
   );
 };
 

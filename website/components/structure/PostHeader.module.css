@@ -1,63 +1,53 @@
 .PostHeader {
-  grid-area: header;
+  /* (duplicate) */
+  display: grid;
+  gap: 3em;
+  grid-template-columns: 1fr 30em 35em 1fr;
+  padding-top: 10em;
+  padding-bottom: 5em;
+}
+
+.PostHeader .textColumn {
+  /* (duplicate) */
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.PostParentHeader {
-  display: block;
-  width: 100%;
-  padding: 2em;
+.PostHeader .textColumn h1 {
+  text-align: left;
+  /* (duplicate) */
+  margin-top: 0;
+  margin-bottom: 0.25em;
 }
 
-.PostDataHeader {
-  display: block;
-  justify-self: center;
-  width: 100%;
-  max-width: 75em;
-  height: auto;
-
-  column-width: 25em;
-  column-gap: 2em;
-  column-count: 2;
-
-  padding: 2em 7.5vw;
-  color: var(--light);
+.PostHeader .textColumn .tags {
+  /* almost (triplicate) */
+  flex-direction: row;
+  /* TODO: */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2em;
+  gap: 0.5em;
 }
-.PostDataHeader img {
+
+.PostHeader .imageColumn img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-bottom: 2em;
-  border-radius: 0.25em;
-  box-shadow: var(--bs), var(--bs);
-}
-.PostDataHeader .container {
-  flex-direction: column;
-  break-inside: avoid;
-}
-.PostDataHeader .container h1 {
-  margin-top: 0;
-}
-.PostDataHeader .container .tags,
-.PostDataHeader .container .buttons {
-  flex-wrap: wrap;
-  margin: 0.5em 0;
+  border-radius: var(--br);
 }
 
-@media (max-aspect-ratio: 2/1) {
-  .PostDataHeader {
-    padding-right: 2em;
-    padding-left: 2em;
-  }
-}
-@media (max-aspect-ratio: 1/1) {
-  .PostDataHeader {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    column-count: 1;
-  }
-  .PostParentHeader {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
+.PostHeader .buttons {
+  flex-wrap: wrap;
+  max-width: 40em;
+  justify-self: center;
+
+  /* almost (triplicate) */
+  grid-column: 2 / 4;
+  justify-content: center;
+
+  flex-direction: row;
+  padding-top: 2em;
+  gap: 1em;
 }
