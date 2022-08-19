@@ -1,28 +1,47 @@
-.Marked,
-.Marked * {
-  display: block;
+.Marked {
+  flex-direction: column;
+  width: 100%;
 }
 
-.Marked h2,
-h2.Marked {
-  font-size: 1.74em;
-  letter-spacing: -0.08ch;
-}
 .Marked h1,
 h1.Marked {
   font-size: 2.5em;
+  /* TODO: */
   letter-spacing: 0.05ch;
   line-height: 1.25;
+  align-self: center;
+}
+.Marked h2,
+h2.Marked {
+  font-size: 1.74em;
+  /* TODO: */
+  letter-spacing: -0.08ch;
+}
+.Marked h1::before,
+h1.Marked::before {
+  content: '# ';
+}
+.Marked h2::before,
+h2.Marked::before {
+  content: '## ';
 }
 .Marked h1,
 .Marked h2,
 h1.Marked,
 h2.Marked {
   color: var(--title);
-  font-weight: lighter;
+  font-family: var(--mono);
+  font-weight: 500;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   overflow: visible;
+}
+.Marked h1::before,
+.Marked h2::before,
+h1.Marked::before,
+h2.Marked::before {
+  white-space: pre;
+  color: var(--color-l);
 }
 .Marked em,
 em.Marked {

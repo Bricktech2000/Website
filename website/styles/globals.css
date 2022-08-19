@@ -1,6 +1,6 @@
 :root {
   --black: #000;
-  --bg: #111111;
+  --bg: #000;
   --bg-l: #18181a;
   --card-bg: #28282b;
   --card-bg-l: #38383b;
@@ -10,6 +10,7 @@
 
   --TODO: #f00;
 
+  /* TODO: */
   --bs: 0 0 0.5em var(--black);
   --border: 0.05em solid var(--card-bg-l);
   --border-radius: 0.25em;

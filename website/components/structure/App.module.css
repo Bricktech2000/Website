@@ -8,6 +8,7 @@
     'nav main aside'
     'nav footer footer'; */
   flex-direction: column;
+  width: 100vw;
 }
 
 @media (max-aspect-ratio: 1/1) {

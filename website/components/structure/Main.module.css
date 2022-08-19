@@ -1,7 +1,7 @@
 .Main {
   flex-direction: column;
 
-  padding: 20em;
+  padding: 0 20%;
   min-height: 50vh;
 }
 
