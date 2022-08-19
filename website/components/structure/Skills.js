@@ -6,6 +6,7 @@ import { Marked as marked } from '../Marked.module.css';
 const Skills = () => {
   return (
     <div className={styles.Skills}>
+      <a className={marked} name="skills" />
       <h1 className={marked}>Skills</h1>
       {/* TODO: */}
       <img

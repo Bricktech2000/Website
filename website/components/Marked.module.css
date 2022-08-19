@@ -272,7 +272,8 @@ a.Marked:hover::after {
   opacity: 0.25;
 }
 
-.Marked a[name] {
+.Marked a[name],
+a[name].Marked {
   pointer-events: none;
   text-decoration: none;
   position: relative;

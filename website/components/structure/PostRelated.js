@@ -7,6 +7,8 @@ import Loading from '../Loading';
 import { Marked as marked } from '../Marked.module.css';
 import styles from './PostRelated.module.css';
 
+// TODO: refactor this whole file
+
 const PostRelated = (props) => {
   const id = props.info.id;
   const info = useDbGet('like', id);

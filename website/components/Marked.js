@@ -13,7 +13,7 @@ const Marked = (props) => {
     //https://github.com/highlightjs/highlight.js/
     return {
       __html: marked(
-        text.replace(/\n#([^ #][^\n]+)\n/g, (a, b) => `\n<a name="${b}"></a>`),
+        text.replace(/\n#([^ #][^\n]+)/g, (a, b) => `\n<a name="${b}"></a>`),
         {
           sanitize: false,
           highlight: function (code, lang) {

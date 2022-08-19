@@ -9,6 +9,7 @@ import { Marked as marked } from '../Marked.module.css';
 const Projects = () => {
   return (
     <div className={styles.Projects}>
+      <a className={marked} name="projects" />
       <h1 className={marked}>Projects</h1>
       <h2 className={marked}>Pinned</h2>
       <ProjectsPinned />

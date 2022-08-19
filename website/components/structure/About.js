@@ -5,10 +5,12 @@ import Button from '../Button';
 
 import styles from './About.module.css';
 import { Marked as marked } from '../Marked.module.css';
+import { social, resume } from '../../records/consts';
 
 const About = () => {
   return (
     <div className={styles.About}>
+      <a className={marked} name="about" />
       <h1 className={marked}>About</h1>
       <div className={styles.row}>
         <img src="/picture.jpg" alt="author profile picture" />
@@ -37,11 +39,11 @@ ipsum.
         />
       </div>
       <div className={styles.buttons}>
-        <Button blank={true} href="#TODO:">
+        <Button blank href={social.github}>
           <i className="fa-lg fab fa-github" />
           GitHub
         </Button>
-        <Button blank={true} href="#TODO:">
+        <Button blank href={resume}>
           <i className="fa-lg fas fa-file-lines" />
           Resume
         </Button>

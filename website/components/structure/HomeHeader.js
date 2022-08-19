@@ -17,11 +17,11 @@ const HomeHeader = () => {
           imperdiet suscipit.
         </p>
         <div className={styles.buttons}>
-          <Button blank={true} href="#TODO:">
+          <Button href="#projects">
             <i className="fa-lg fas fa-grip-vertical" />
             View Projects
           </Button>
-          <Button blank={true} href="#TODO:">
+          <Button href="#contact">
             <i className="fa-lg fas fa-envelope" />
             Get in Touch
           </Button>

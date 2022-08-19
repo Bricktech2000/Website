@@ -7,7 +7,7 @@ import Aside from '../components/structure/Aside';
 import Skills from '../components/structure/Skills';
 import About from '../components/structure/About';
 import Projects from '../components/structure/Projects';
-import GetInTouch from '../components/structure/GetInTouch';
+import Contact from '../components/structure/Contact';
 import Main from '../components/structure/Main';
 import HomePinned from '../components/structure/HomePinned';
 import HomePostList from '../components/structure/HomePostList';
@@ -27,7 +27,7 @@ const Home = () => {
         <Projects />
         {/* <HomePinned /> */}
         {/* <HomePostList /> */}
-        <GetInTouch />
+        <Contact />
       </Main>
       <Footer github="pages/index.js" />
     </App>
