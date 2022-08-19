@@ -19,6 +19,7 @@ const MosaicLarge = (props) => {
   const loadCount = Math.pow(1.5, clickCount);
   const allLoaded = loadCount >= props.children.length;
 
+  // TODO: "load more" button
   const ref = useRef();
   const isVisible = useOnScreen(ref);
   const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
