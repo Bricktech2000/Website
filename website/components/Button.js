@@ -20,17 +20,18 @@ const Button = (props) => {
       Previous: '012-arrow-2',
     };
     for (var icon of Object.keys(icons))
-      if (props.label.includes(icon)) return icons[icon];
+      if (props.children.includes(icon)) return icons[icon];
   };
 
   const ButtonHtml = React.forwardRef((props2, ref) => (
     <a className={styles['button-container']} {...props2}>
+      {props.icon && <img src={'svgs/' + props.icon} />}
       <div
         className={
           styles.button + ' ' + (props.blank ? '' : styles['button-on'])
         }
       >
-        {props.label}
+        {props.children}
       </div>
     </a>
   ));

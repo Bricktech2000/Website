@@ -27,7 +27,7 @@ It turns out that it is fairly simple. The password manager takes in 4 parameter
 3. The previously generated digest is then hashed again using `SHA-256`, a cryptographically secure hashing algorithm, which would produce the following output when represented as hexadecimal: **d1c3<wbr>f43b<wbr>b4fc<wbr>0727<wbr>fff7<wbr>31e1<wbr>e3d3<wbr>0199<wbr>994b<wbr>6f7d<wbr>b748<wbr>4b54<wbr>7c71<wbr>2776<wbr>f654<wbr>40da**.
 4. The newly generated digest is mutated through a [Base-85](https://en.wikipedia.org/wiki/Ascii85) encoder to reduce its length before being copied to the user's clipboard. The final password would look something like this: **zLPrWepdR%mXnb<i[3%Nm?EDW[6d>D#QJS{eBrh**.
 
-As you can clearly see, the generated password is derived from well-known data and a secret. For this reason, it will be different for every service and for every username used. The generated password will be completely wrong if the **master password** isn't exactly the same, which is ideal in this scenario.
+As you can clearly see, the generated password is derived from well-known data and a secret. For this reason, it will be different for every service and for every username used. The generated password will be **completely wrong** if the master password isn't exactly the same, which is ideal in this scenario.
 
 #try
 

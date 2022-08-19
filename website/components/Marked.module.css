@@ -1,70 +1,104 @@
-.Marked {
-  flex-direction: column;
-  width: 100%;
+.Marked,
+.Marked * {
+  display: block;
 }
 
 .Marked h1,
 h1.Marked {
-  font-size: 2.5em;
+  width: 100%;
+  text-align: center;
+
+  font-size: 2.25em;
   /* TODO: */
   letter-spacing: 0.05ch;
   line-height: 1.25;
-  align-self: center;
 }
+
 .Marked h2,
 h2.Marked {
-  font-size: 1.74em;
+  font-size: 1.5em;
   /* TODO: */
   letter-spacing: -0.08ch;
 }
+
 .Marked h1::before,
 h1.Marked::before {
   content: '# ';
 }
+
 .Marked h2::before,
 h2.Marked::before {
   content: '## ';
 }
+
 .Marked h1,
 .Marked h2,
 h1.Marked,
 h2.Marked {
-  color: var(--title);
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+
+  color: var(--bright);
   font-family: var(--mono);
-  font-weight: 500;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  font-weight: 400;
   overflow: visible;
 }
+
 .Marked h1::before,
 .Marked h2::before,
 h1.Marked::before,
 h2.Marked::before {
   white-space: pre;
   color: var(--color-l);
+  font-weight: 400;
 }
+
+/* remove margin when h2 follows h1 */
+.Marked h1 + .Marked h2,
+h1.Marked + h2.Marked {
+  margin-top: 0;
+}
+
 .Marked em,
 em.Marked {
   display: inline;
   font-style: italic;
 }
+
+/* TODO:*/
 .Marked strong,
 strong.Marked {
   display: inline;
-  font-weight: normal;
-  color: var(--title);
+  color: var(--bright);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.8em;
 }
+
+.Marked strong::before,
+.Marked strong::after,
+strong.Marked::before,
+strong.Marked::after {
+  content: '*';
+  display: inline;
+  white-space: pre;
+  color: var(--color-l);
+  font-weight: 400;
+}
+
 .Marked p,
 p.Marked {
-  margin: 0.5em 0;
+  margin-bottom: 1em;
   text-align: justify;
 }
+
 .Marked section {
   position: relative;
   width: 80%;
   margin: 1em 10%;
   padding-top: calc(9 / 16 * 80%); /*16:9 aspect ratio*/
 }
+
 .Marked section > iframe {
   position: absolute;
   top: 0;
@@ -76,25 +110,30 @@ p.Marked {
   height: 100%;
   box-shadow: var(--bs);
 }
+
 .Marked table {
   margin: 2em 10%;
 }
+
 .Marked table thead tr {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr));
   grid-gap: 1em;
   break-inside: avoid;
 }
+
 .Marked table tbody tr {
   display: flex;
   flex-direction: row;
   gap: 0.5em;
 }
+
 .Marked table tbody {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
+
 .Marked table img,
 .Marked table iframe,
 .Marked table video {
@@ -104,6 +143,7 @@ p.Marked {
   height: 100%;
   object-fit: cover;
 }
+
 .Marked code,
 .Marked pre code,
 code.Marked,
@@ -111,19 +151,21 @@ pre.Marked code {
   font-style: normal;
   font-family: var(--mono);
   font-weight: normal;
-  font-size: 0.6em; /* 3/5 of normal */
+  font-size: 0.8em; /* 4/5 of normal */
   border: var(--border);
-  border-radius: var(--border-radius);
+  border-radius: var(--br);
   border-width: 0.08333em; /* divided by (3/5) */
   box-shadow: var(--bs);
 }
+
 .Marked code,
 code.Marked {
   display: inline-block;
   vertical-align: middle;
   padding: 0.25em 1em;
-  border-radius: var(--border-radius);
+  border-radius: var(--br-s);
 }
+
 .Marked pre code,
 pre.Marked code {
   display: block;
@@ -132,10 +174,12 @@ pre.Marked code {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .Marked pre code *,
 pre.Marked code * {
   display: inline;
 }
+
 .Marked sub,
 .Marked sup,
 sub.Marked,
@@ -143,10 +187,12 @@ sup.Marked {
   font-size: 0.6em;
   font-weight: bold;
 }
+
 .Marked ul,
 ul.Marked {
   list-style-type: square;
 }
+
 .Marked ul,
 .Marked ol,
 ul.Marked,
@@ -154,13 +200,16 @@ ol.Marked {
   text-align: justify;
   margin: 1em 10%;
 }
+
 .Marked li,
 li.Marked {
   display: list-item;
 }
+
 .Marked ::marker {
-  color: var(--title);
+  color: var(--bright);
 }
+
 .Marked blockquote,
 blockquote.Marked {
   font-style: italic;
@@ -169,6 +218,7 @@ blockquote.Marked {
   border-left: 0.1em solid var(--color);
   margin: 2em 10%;
 }
+
 .Marked a,
 a.Marked {
   display: inline-block;
@@ -179,6 +229,7 @@ a.Marked {
   transition: top 0.25s ease-in-out;
   -webkit-tap-highlight-color: transparent;
 }
+
 /*https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline*/
 .Marked a::after,
 a.Marked::after {
@@ -189,7 +240,7 @@ a.Marked::after {
   right: -0.75em;
   bottom: -0.125em;
   left: -0.75em;
-  border-radius: var(--border-radius);
+  border-radius: var(--br-s);
   z-index: -1;
 
   opacity: 0;
@@ -197,10 +248,12 @@ a.Marked::after {
   border-color: var(--color);
   transition: opacity 0.125s ease-in-out;
 }
+
 .Marked a:hover,
 a.Marked:hover {
   top: -0.125em;
 }
+
 .Marked a:hover::after,
 a.Marked:hover::after {
   opacity: 0.5;
@@ -212,6 +265,7 @@ a.Marked:hover::after {
   position: relative;
   top: -7.5em;
 }
+
 .Marked img,
 .Marked video,
 img.Marked,
@@ -221,7 +275,7 @@ video.Marked {
   max-height: 75vh;
   max-width: 80%;
   margin: 1em 10%;
-  border-radius: var(--border-radius);
+  border-radius: var(--br);
   box-shadow: var(--bs), var(--bs);
 }
 
@@ -236,12 +290,14 @@ video.Marked {
     margin-right: 0;
     margin-left: 0;
   }
+
   .Marked ul,
   .Marked ol,
   ul.Marked,
   ol.Marked {
     margin: 1em 2ch;
   }
+
   .Marked img,
   .Marked video,
   img.Marked,
@@ -250,12 +306,14 @@ video.Marked {
     margin-right: auto;
     margin-left: auto;
   }
+
   .Marked section {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
     padding-top: calc(9 / 16 * 100%); /*16:9 aspect ratio*/
   }
+
   .Marked table tbody tr {
     flex-direction: column;
   }

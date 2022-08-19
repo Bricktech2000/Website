@@ -1,5 +1,5 @@
 .Tag {
-  color: var(--text);
+  color: var(--light);
   display: inline-block;
   text-decoration: none;
   white-space: nowrap;
@@ -12,7 +12,7 @@
 }
 .off {
   /* background: var(--bg); */
-  color: var(--text);
+  color: var(--light);
 }
 .on {
   /* background: var(--bg); */

@@ -13,7 +13,7 @@
   /* https://stackoverflow.com/questions/39451178/css3-change-z-index-after-css3-transition-ends/39453884 */
   transition: top 0.25s ease-in-out;
   text-decoration: none;
-  color: var(--text);
+  color: var(--light);
   white-space: initial;
   cursor: pointer;
 }

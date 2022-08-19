@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import Marked from '../Marked';
 
 import ProjectsPinned from './ProjectsPinned';
 import ProjectsAll from './ProjectsAll';
 
 import styles from './Projects.module.css';
+import { Marked as marked } from '../Marked.module.css';
 
 const Projects = () => {
   return (
     <div className={styles.Projects}>
-      <Marked source="# Projects" />
-      <Marked source="## Pinned" />
+      <h1 className={marked}>Projects</h1>
+      <h2 className={marked}>Pinned</h2>
       <ProjectsPinned />
-      <Marked source="## All" />
+      <h2 className={marked}>All</h2>
       <ProjectsAll />
     </div>
   );

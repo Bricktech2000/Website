@@ -20,7 +20,7 @@
   width: 1.25em;
   height: 1.25em;
   border-radius: 100vh;
-  background: var(--title);
+  background: var(--bright);
   box-shadow: var(--bs);
   transition: margin-left 0.125s ease-in-out;
 }

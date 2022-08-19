@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import Marked from '../Marked';
 
 import styles from './Skills.module.css';
+import { Marked as marked } from '../Marked.module.css';
 
 const Skills = () => {
   return (
     <div className={styles.Skills}>
-      <Marked
-        source={`
-# Skills
-
-TODO:
-        `}
-      />
+      <h1 className={marked}>Skills</h1>
+      {/* TODO: */}
+      <div className={styles.graph} />
     </div>
   );
 };

@@ -1,99 +1,102 @@
-.markup{
+.markup {
   display: inline-block;
   /*white-space: pre-wrap;*/
 }
-.markup-italic{
+.markup-italic {
   font-style: italic;
 }
-.markup-bold{
+.markup-bold {
   font-weight: bold;
-  color: var(--title);
+  color: var(--bright);
 }
-.markup-h1{
+.markup-h1 {
   font-size: calc(var(--smart-res-unit) * 4.5);
 }
-.markup-h2{
+.markup-h2 {
   font-size: calc(var(--smart-res-unit) * 3);
 }
-.markup-h1, .markup-h2{
-  color: var(--title);
+.markup-h1,
+.markup-h2 {
+  color: var(--bright);
   font-weight: lighter;
   /*font-style: italic;*/
   margin-top: calc(var(--smart-unit) * 5);
 }
-li{
+li {
   display: list-item; /*default*/
 }
-.markup-code, .markup-code-block{
-  transition: background-color .25s ease-in-out;
+.markup-code,
+.markup-code-block {
+  transition: background-color 0.25s ease-in-out;
   font-family: monospace;
   background: var(--card-bg);
-  border-radius: calc(.5 * var(--smart-unit));
+  border-radius: calc(0.5 * var(--smart-unit));
   box-shadow: var(--bs);
 }
-.markup-code{
+.markup-code {
   /*white-space: nowrap;*/
-  padding: calc(var(--vh) * .5) .5vw;
-  border-radius: calc(var(--smart-unit) * .5);
+  padding: calc(var(--vh) * 0.5) 0.5vw;
+  border-radius: calc(var(--smart-unit) * 0.5);
 }
-.markup-code-block{
+.markup-code-block {
   padding: calc(1 * var(--smart-unit));
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-.markup-code-keyword{
+.markup-code-keyword {
   color: var(--color);
   font-style: italic;
 }
-.markup-code-operator{
+.markup-code-operator {
   color: #555;
   font-weight: bold;
 }
-.markup-code-value{
+.markup-code-value {
   color: var(--color);
 }
-.markup-quote{
+.markup-quote {
   font-style: italic;
   padding: calc(var(--vh) * 1) 2vw;
   padding-left: 2.5vw;
-  border-left: .375vw solid var(--color);
-  box-shadow: calc(var(--smart-unit) * .5) calc(var(--smart-unit) * .5) calc(var(--smart-unit) * 1) var(--black);
+  border-left: 0.375vw solid var(--color);
+  box-shadow: calc(var(--smart-unit) * 0.5) calc(var(--smart-unit) * 0.5)
+    calc(var(--smart-unit) * 1) var(--black);
 }
-.markup-link{
+.markup-link {
   color: var(--color);
   transition: color 0.125s ease-in-out;
   text-decoration: underline;
-  -webkit-tap-highlight-color: rgba(255, 143, 14, .25);
+  -webkit-tap-highlight-color: rgba(255, 143, 14, 0.25);
 }
-.markup-anchor{
+.markup-anchor {
   pointer-events: none;
   text-decoration: none;
   position: relative;
 }
-@media <<<yield consts.portrait>>>{
-  .markup-anchor{
+@media <<<yield consts.portrait>>> {
+  .markup-anchor {
     top: calc(var(--smart-unit) * -10);
   }
 }
-.markup-link:hover{
-  color: var(--title);
+.markup-link:hover {
+  color: var(--bright);
   /*animation-name: link-hover;
   animation-duration: .25s;
   animation-timing-function: ease-in-out;*/
   text-decoration: underline;
 }
-.markup-block{
+.markup-block {
   padding: calc(1 * var(--smart-unit)) 10%;
 }
-.markup-object{
+.markup-object {
   width: 100%;
   height: auto;
-  border-radius: calc(var(--smart-unit) * .5);
+  border-radius: calc(var(--smart-unit) * 0.5);
   box-shadow: var(--bs);
   /*min-height: 25vw;*/
 }
-.iframe-container{
+.iframe-container {
   display: block;
   position: relative;
   width: 100%;
@@ -111,21 +114,21 @@ li{
   height: 100%;
 }
 /*Portrait*/
-@media <<<yield consts.portrait>>>{
-  .markup-block{
+@media <<<yield consts.portrait>>> {
+  .markup-block {
     padding: 1vw 5vw;
   }
-  .markup-quote{
-    border-left-width: .5vw;
+  .markup-quote {
+    border-left-width: 0.5vw;
   }
 }
 /*.markup *:not(li){
   display: inline-block;
 }*/
-.markup-inline{
+.markup-inline {
   display: inline;
 }
-.markup-code-block *{
+.markup-code-block * {
   display: inline-block;
   white-space: nowrap;
 }
@@ -138,7 +141,10 @@ li{
 /*.markup *:not(.markup-italic):not(.markup-bold):not(.markup-quote):not(.markup-h2):not(.markup-h1):not(.markup-link):not(.markup-code){
   width: 100%;
 }*/
-.markup-code-block, .markup-object, .markup-block, .markup-span{
+.markup-code-block,
+.markup-object,
+.markup-block,
+.markup-span {
   width: 100%;
 }
 /*.markup *{

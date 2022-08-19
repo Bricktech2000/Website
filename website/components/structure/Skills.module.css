@@ -1,3 +1,10 @@
 .Skills {
-  background-color: var(--TODO);
+  flex-direction: column;
+}
+
+.Skills .graph {
+  height: 40em;
+  border: var(--border);
+  border-color: var(--dark);
+  border-radius: var(--br);
 }

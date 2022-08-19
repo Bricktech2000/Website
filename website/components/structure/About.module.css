@@ -1,3 +1,39 @@
 .About {
-  background-color: var(--TODO);
+  flex-direction: column;
+}
+
+.About .row {
+  flex-direction: row;
+  gap: 3em;
+}
+
+.About .row img {
+  border-radius: var(--br);
+  filter: grayscale(1);
+  width: 11.125em;
+  height: auto;
+  align-self: flex-start;
+
+  transition: filter 0.125s ease-in-out;
+}
+
+.About .row img:hover {
+  filter: grayscale(0);
+}
+
+.About .buttons {
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 2em;
+  gap: 1em;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .About .row {
+    flex-direction: column;
+  }
+
+  .About .row img {
+    align-self: center;
+  }
 }

@@ -10,7 +10,7 @@
   padding: 3em 5vw;
   padding-left: 7.5vw;
 
-  color: var(--text);
+  color: var(--light);
 }
 .PageHeader > * {
   width: auto;

@@ -11,6 +11,7 @@ const GetInTouch = () => {
         <p className={styles.vr}></p>
       </div>
       {/*https://css-tricks.com/snippets/html/mailto-links/*/}
+      {/* TODO: */}
       <div className={styles.icons}>
         <a target="_blank" href={social.github} rel="noreferrer">
           <span>Github</span>

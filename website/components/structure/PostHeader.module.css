@@ -21,7 +21,7 @@
   column-count: 2;
 
   padding: 2em 7.5vw;
-  color: var(--text);
+  color: var(--light);
 }
 .PostDataHeader img {
   width: 100%;
