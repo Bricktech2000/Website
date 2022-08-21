@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 import App from '../components/structure/App';
-import Page from '../components/structure/Page';
 import PostMain from '../components/structure/PostMain';
-import PageHeader from '../components/structure/PageHeader';
 import Main from '../components/structure/Main';
 import Footer from '../components/structure/Footer';
 import Nav from '../components/structure/Nav';

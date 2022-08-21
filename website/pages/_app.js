@@ -7,7 +7,11 @@ import '../styles/fade-animation.css';
 //https://stackoverflow.com/questions/52455614/install-font-awesome-5-with-npm (for discord logo)
 import '@fortawesome/fontawesome-free/css/all.css';
 
+import React, { Component, useEffect } from 'react';
+import scrollToHash from '../hooks/scrollToHash';
+
 function App({ Component, pageProps }) {
+  useEffect(scrollToHash, []);
   return <Component {...pageProps} />;
 }
 

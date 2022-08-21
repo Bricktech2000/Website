@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import errorMap from '../../records/errorMap';
 
 import App from './App';
-import Aside from './Aside';
 import Nav from './Nav';
 import Main from './Main';
 import ErrorMain from './ErrorMain';

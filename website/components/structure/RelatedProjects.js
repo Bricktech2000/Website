@@ -5,16 +5,16 @@ import Card from '../Card';
 import Loading from '../Loading';
 
 import { Marked as marked } from '../Marked.module.css';
-import styles from './PostRelated.module.css';
+import styles from './RelatedProjects.module.css';
 
-const PostRelated = (props) => {
+const RelatedProjects = (props) => {
   const id = props.info.id;
   const info = useDbGet('like', id);
 
   if (typeof info === 'undefined') return <Loading height="400vh" />;
 
   return (
-    <div className={styles.PostRelated}>
+    <div className={styles.RelatedProjects}>
       <h1 className={marked}>Related Projects</h1>
       <MosaicSmall>
         {Object.keys(info)
@@ -28,4 +28,4 @@ const PostRelated = (props) => {
   );
 };
 
-export default PostRelated;
+export default RelatedProjects;

@@ -2,6 +2,7 @@ import React, { Component, useEffect } from 'react';
 import PostSubHeader from './PostSubHeader';
 import Marked from '../Marked';
 import useParallax from '../../hooks/useParallax';
+import scrollToHash from '../../hooks/scrollToHash';
 
 import styles from './PostMain.module.css';
 
@@ -12,14 +13,9 @@ const PostMain = (props) => {
     }))`;
   });
 
-  //https://stackoverflow.com/questions/9757625/jquery-how-to-scroll-to-certain-anchor-div-on-page-load
-  //https://stackoverflow.com/questions/13905435/javascript-getting-specific-element-of-parent-by-name
-  useEffect(() => {
-    //hacky, but seems to be the easiest way to scroll to location.hash
-    const anchor = document.createElement('a');
-    anchor.href = window.location.hash;
-    window.location.hash !== '' && anchor.click();
-  }, [props.info.source]);
+  // https://stackoverflow.com/questions/9757625/jquery-how-to-scroll-to-certain-anchor-div-on-page-load
+  // https://stackoverflow.com/questions/13905435/javascript-getting-specific-element-of-parent-by-name
+  useEffect(scrollToHash, [props.info.source]);
 
   return (
     <div ref={parallaxRef} className={styles.PostMain}>

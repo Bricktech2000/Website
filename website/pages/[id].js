@@ -4,10 +4,9 @@ import postMap from '../records/postMap';
 import errorMap from '../records/errorMap';
 
 import App from '../components/structure/App';
-import Page from '../components/structure/Page';
 import PostHeader from '../components/structure/PostHeader';
 import PostMain from '../components/structure/PostMain';
-import PostRelated from '../components/structure/PostRelated';
+import RelatedProjects from '../components/structure/RelatedProjects';
 import Error from '../components/structure/Error';
 import Main from '../components/structure/Main';
 import Footer from '../components/structure/Footer';
@@ -39,16 +38,19 @@ const Post = (props) => {
       image={props.ogImage}
     >
       {loading ? (
-        <Page github={`public/${currentId}/index.md`}>
-          <Loading height="1000vh" />
-        </Page>
+        <React.Fragment>
+          <Main>
+            <Loading height="1000vh" />
+          </Main>
+          <Footer github={props.github} />
+          <Nav />
+        </React.Fragment>
       ) : (
         <React.Fragment>
           <PostHeader info={info[currentId]} />
-          {/* TODO: fix "Page" inconsistency with index.js */}
           <Main>
             <PostMain info={info[currentId]} />
-            <PostRelated info={info[currentId]} />
+            <RelatedProjects info={info[currentId]} />
           </Main>
           <Footer github={`public/${currentId}/index.md`} />
           <Nav />
@@ -58,10 +60,9 @@ const Post = (props) => {
   );
 };
 
-//https://nextjs.org/docs/basic-features/data-fetching
 import { promises as fs } from 'fs';
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const id = params.id;
   const info = JSON.parse(
     await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
@@ -73,26 +74,6 @@ export async function getStaticProps({ params }) {
       ogDescription: info.desc,
       ogImage: `${id}/index.jpg`,
     },
-  };
-}
-
-//next js scroll restoration not working with getserversideprops
-//https://github.com/vercel/next.js/issues/12530
-
-export async function getStaticPaths() {
-  //https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
-  //necessary to prevent `Conflicting paths returned from getStaticPaths` error
-  const errorMapModified = errorMap.filter(
-    (item) => !['404', '500'].includes(item)
-  );
-  const paths = postMap.concat(errorMapModified).map((id) => ({
-    params: {
-      id: id,
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
   };
 }
 
