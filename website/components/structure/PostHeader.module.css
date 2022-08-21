@@ -32,6 +32,13 @@
   gap: 0.25em;
 }
 
+/* https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
+/* (duplicate) */
+.PostHeader .textColumn .tags::after {
+  content: '';
+  flex: auto;
+}
+
 .PostHeader .imageColumn img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -41,17 +48,14 @@
 
 .PostHeader .buttons {
   flex-wrap: wrap;
-  max-width: 40em;
-  justify-self: center;
 
   grid-column: 2 / 4;
-  justify-content: center;
 
   /* almost (triplicate) */
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 2em;
+  justify-content: flex-start;
+  padding-top: 0em;
   gap: 1em;
 }
 

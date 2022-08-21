@@ -15,7 +15,7 @@
 }
 
 .HomeHeader .textColumn h1 {
-  font-size: 3.5em;
+  font-size: 3.25em;
   line-height: 1;
   padding-bottom: 0.5em;
   color: var(--bright);
@@ -53,10 +53,16 @@
   }
   .HomeHeader .textColumn {
     align-items: center;
+    text-align: justify;
+  }
+  .HomeHeader .textColumn h1 {
     text-align: center;
+    font-size: 2em;
+    padding-bottom: 2em;
   }
   .HomeHeader .imageColumn {
     justify-content: center;
+    grid-row: 2;
   }
   .HomeHeader .textColumn p {
     width: min(80vw, 25em);

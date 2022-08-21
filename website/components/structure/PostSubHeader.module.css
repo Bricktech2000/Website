@@ -12,7 +12,19 @@
 }
 
 .PostSubHeader p {
+  display: block;
   max-width: 40ch;
+  text-align: justify;
+}
+
+.PostSubHeader p * {
+  display: inline;
+  vertical-align: middle;
+  padding-left: 0;
+}
+
+.PostSubHeader .tags {
+  align-self: flex-end;
 }
 
 @media (max-aspect-ratio: 1/1) {
