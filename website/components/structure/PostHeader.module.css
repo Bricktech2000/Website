@@ -2,7 +2,7 @@
   /* (duplicate) */
   display: grid;
   gap: 3em;
-  grid-template-columns: 1fr 30em 35em 1fr;
+  grid-template-columns: 1fr min(40vw, 30em) min(40vw, 35em) 1fr;
   padding-top: 10em;
   padding-bottom: 5em;
 }
@@ -15,8 +15,9 @@
 }
 
 .PostHeader .textColumn h1 {
+  /* almost (duplicate) with ErrorMain */
   text-align: left;
-  /* (duplicate) */
+  /* (triplicate) */
   margin-top: 0;
   margin-bottom: 0.25em;
 }
@@ -43,11 +44,24 @@
   max-width: 40em;
   justify-self: center;
 
-  /* almost (triplicate) */
   grid-column: 2 / 4;
   justify-content: center;
 
+  /* almost (triplicate) */
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-top: 2em;
   gap: 1em;
+}
+
+@media (max-width: 60em) {
+  .PostHeader {
+    grid-template-columns: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .PostHeader .buttons {
+    grid-column: auto;
+  }
 }

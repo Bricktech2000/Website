@@ -22,8 +22,6 @@ const Error = (props) => {
     typeof info === 'undefined' || typeof info[status] === 'undefined';
   return (
     <App title={'Error'} description={''} image={''}>
-      <Aside />
-      <Nav />
       <Main>
         {loading ? (
           <Loading height="1000vh" />
@@ -31,6 +29,7 @@ const Error = (props) => {
           <ErrorMain info={info[status]} />
         )}
       </Main>
+      <Nav />
     </App>
   );
 };

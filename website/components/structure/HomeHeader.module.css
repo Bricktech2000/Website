@@ -2,7 +2,7 @@
   /* (duplicate) */
   display: grid;
   gap: 3em;
-  grid-template-columns: 1fr 30em auto 1fr;
+  grid-template-columns: 1fr min(40vw, 30em) auto 1fr;
   padding-top: 10em;
   padding-bottom: 5em;
 }
@@ -21,8 +21,7 @@
 }
 
 .HomeHeader .textColumn p {
-  /* (duplicate) */
-  width: 25em;
+  width: min(40vw, 25em);
 }
 
 .HomeHeader .editor {
@@ -33,6 +32,33 @@
 .HomeHeader .textColumn .buttons {
   /* almost (triplicate) */
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   padding-top: 2em;
   gap: 1em;
+}
+
+.HomeHeader .imageColumn {
+  align-items: center;
+}
+
+@media (max-width: 60em) {
+  .HomeHeader {
+    grid-template-columns: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .HomeHeader .textColumn {
+    align-items: center;
+    text-align: center;
+  }
+  .HomeHeader .imageColumn {
+    justify-content: center;
+  }
+  .HomeHeader .textColumn p {
+    width: min(80vw, 25em);
+  }
+  .HomeHeader .textColumn .buttons {
+    justify-content: center;
+  }
 }

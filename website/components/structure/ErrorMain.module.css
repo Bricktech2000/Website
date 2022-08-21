@@ -1,39 +1,41 @@
-.container {
+.ErrorMain {
   display: grid;
-  grid-template-columns: 1fr auto auto 1fr;
+  gap: 3em;
+  grid-template-columns: 1fr auto min(40vw, 25em) 1fr;
+
   align-items: center;
+  justify-content: center;
 }
 
-.header {
-  margin: 0 0.125em;
-  line-height: 30vw;
+.ErrorMain .imageColumn {
   padding: 0;
   font-family: var(--mono);
   font-size: min(20vw, 11.25em);
   white-space: nowrap;
+  justify-content: center;
 }
 
-.content {
-  display: block;
-  max-width: min(40vw, 25em);
+.ErrorMain .textColumn {
+  flex-direction: column;
 }
 
-.buttons {
-  margin-top: 1em;
+.ErrorMain .textColumn h1 {
+  /* almost (duplicate) with PostHeader */
+  text-align: left;
+  /* (triplicate) */
+  margin-top: 0;
+  margin-bottom: 0.25em;
 }
 
-@media (max-width: 1000px) {
-  .container {
-    grid-template-columns: initial;
-    grid-template-rows: 0 auto auto;
+.ErrorMain .buttons {
+  padding-top: 2em;
+}
+
+@media (max-width: 60em) {
+  .ErrorMain {
+    grid-template-columns: auto;
   }
-  .header {
-    margin: 0;
-    margin-top: 0.5em;
-    justify-self: center;
-    font-size: 40vw;
-  }
-  .content {
-    max-width: unset;
+  .ErrorMain .imageColumn {
+    font-size: min(40vw, 11.25em);
   }
 }

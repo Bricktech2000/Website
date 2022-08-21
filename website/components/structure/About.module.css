@@ -22,7 +22,9 @@
 }
 
 .About .buttons {
+  /* almost (triplicate) */
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-end;
   padding-top: 2em;
   gap: 1em;
