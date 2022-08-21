@@ -15,7 +15,7 @@
   /* TODO: remove all --bs from comments */
   /* TODO: remove all --border from comments and from Card.js */
   --border: 0.125em solid var(--card-bg-l);
-  --br: 1.5em;
+  --br: 1.25em;
   --br-s: 0.5em;
 
   --sans: Roboto, sans-serif;

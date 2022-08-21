@@ -11,16 +11,12 @@ hr.Marked {
   text-align: center;
 
   font-size: 2.25em;
-  /* TODO: */
-  letter-spacing: 0.05ch;
   line-height: 1.25;
 }
 
 .Marked h2,
 h2.Marked {
   font-size: 1.5em;
-  /* TODO: */
-  letter-spacing: -0.08ch;
 }
 
 .Marked hr,
