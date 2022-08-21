@@ -31,25 +31,21 @@ const Card = (props) => {
   }, []);
 
   const CardHtml = React.forwardRef((props2, ref) => (
-    <a ref={linkRef} className={styles.card} {...props2}>
+    <a ref={linkRef} className={styles.Card} {...props2}>
       <img
         src={'/' + props.info.id + '/index.jpg'}
         alt={props.info.title + ' thumbnail image'}
       />
-      <div className={styles.title}>
-        <h2 className={marked}>{props.info.title}</h2>
-      </div>
-      <div className={styles.popupContainer}>
-        <div className={styles.popup}>
-          <div className={styles.desc}>
-            <Marked source={props.info.desc} />
-          </div>
-          <div className={styles.tags}>
-            <Date date={props.info.date} className={styles.date} />
-            {props.info.tags.map((tag) => (
-              <Tag key={tag} label={tag} />
-            ))}
-          </div>
+      <div className={styles.details}>
+        <strong className={marked}>{props.info.title}</strong>
+        <div className={styles.desc}>
+          <Marked source={props.info.desc} />
+        </div>
+        <div className={styles.tags}>
+          <Date date={props.info.date} className={styles.date} />
+          {props.info.tags.map((tag) => (
+            <Tag key={tag} label={tag} />
+          ))}
         </div>
       </div>
     </a>
