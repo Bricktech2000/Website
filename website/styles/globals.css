@@ -76,24 +76,3 @@ body {
   background: var(--color-d);
   color: var(--bright);
 }
-
-.outline {
-  /* https://stackoverflow.com/questions/4919076/outline-effect-to-text */
-  /* sometimes, I just wonder: why? */
-  --shadow: var(--color-l) 0 0 0.05em;
-  text-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow),
-    var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow);
-  color: var(--bg);
-  -webkit-font-smoothing: antialiased;
-}

@@ -10,14 +10,14 @@ const Nav = () => {
   //https://nextjs.org/docs/api-reference/next/router
   return (
     <div
-      className={'outline ' + styles.Nav}
+      className={styles.Nav}
       onClick={() =>
         typeof window !== 'undefined' && window.history.length <= 2
           ? router.push('/')
           : router.back()
       }
     >
-      <i className="fas fa-3x fa-angle-double-left"></i>
+      <i className="fas fa-3x fa-play"></i>
     </div>
   );
 };
