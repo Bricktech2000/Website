@@ -16,6 +16,8 @@
 
 .HomeHeader .textColumn h1 {
   font-size: 3.5em;
+  line-height: 1;
+  padding-bottom: 0.5em;
   color: var(--bright);
   text-transform: uppercase;
 }
@@ -47,6 +49,7 @@
     grid-template-columns: auto;
     margin-left: 1em;
     margin-right: 1em;
+    padding-top: 0;
   }
   .HomeHeader .textColumn {
     align-items: center;

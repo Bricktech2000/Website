@@ -3,6 +3,7 @@
 
   margin: 0 17.5%;
 
+  width: calc(100% - 2 * 17.5%);
   max-width: 120ch;
   align-self: center;
 }
@@ -11,5 +12,6 @@
   .Main {
     margin-left: 1em;
     margin-right: 1em;
+    width: calc(100% - 2 * 1em);
   }
 }

@@ -1,6 +1,6 @@
 .App {
-  flex-direction: column;
   width: 100vw;
+  flex-direction: column;
 
   animation: background 5s linear forwards;
 }
@@ -16,7 +16,7 @@
 
 .App .overlay.colored {
   background-color: var(--color-d);
-  animation: overlay-slide-up 0.5s ease-in-out forwards;
+  animation: overlay-slide-up 0.375s ease-in-out forwards;
   animation-delay: 1.125s;
 }
 

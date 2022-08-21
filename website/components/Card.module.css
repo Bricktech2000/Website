@@ -19,11 +19,15 @@
   right: 0;
 
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1em;
 
   opacity: 0;
   transition: opacity 0.125s ease-in-out;
+}
+
+.Card .details strong {
+  text-align: center;
 }
 
 .Card img {

@@ -165,7 +165,6 @@ pre.Marked code {
   font-size: 0.8em; /* 4/5 of normal */
   background-color: var(--bg-l);
   border-radius: var(--br);
-  border-width: 0.08333em; /* divided by (3/5) */
 }
 
 .Marked code,

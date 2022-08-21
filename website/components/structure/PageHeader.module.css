@@ -26,7 +26,7 @@
 }
 @media (max-aspect-ratio: 1/1) {
   .PageHeader {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
 }

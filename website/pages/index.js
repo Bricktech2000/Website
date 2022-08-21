@@ -25,8 +25,6 @@ const Home = () => {
         <About />
         <Skills />
         <Projects />
-        {/* <HomePinned /> */}
-        {/* <HomePostList /> */}
         <Contact />
       </Main>
       <Footer github="pages/index.js" />

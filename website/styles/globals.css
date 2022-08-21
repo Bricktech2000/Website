@@ -43,7 +43,7 @@ body {
   overflow-x: hidden;
   font-family: var(--sans);
   /* TODO: */
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   /* t-size: clamp(
     calc(calc(100vh + 100vw) / 140),
     1.5rem,

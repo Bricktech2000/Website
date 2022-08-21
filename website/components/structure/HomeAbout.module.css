@@ -60,8 +60,8 @@
   .HomeAbout {
     grid-template-areas: 'title' 'image' 'paragraph' 'about' 'contact';
     grid-template-columns: 1fr;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   .HomeAbout > p {
     padding: 2em 0;

@@ -11,9 +11,9 @@ After discussing that situation with a friend, I decided I would find a way to f
 After some thinking around, I ended up building [a proxy](https://uottawa.emilien.ca/) to the new website on my server, patching requests by injecting some custom JavaScript and CSS. You can check it out [here](hhttps://uottawa.emilien.ca/re). As an example, below is what a course sequence page looks like on [the patched website](https://uottawa.emilien.ca/faculty-engineering/undergraduate-studies/programs/computer-science/course-sequence) compared to [their new one](https://www2.uottawa.ca/faculty-engineering/undergraduate-studies/programs/computer-science/course-sequence). Among other changes, the headers are now reasonably sized, unnecessary padding has been removed and the course sequence table is now usable on mobile devices.
 #img
 
-|                         |                         |
-| ----------------------- | ----------------------- |
-| ![](20220607220458.png) | ![](20220607220330.png) |
+|                                                                  |                                                                  |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![screenshot of the patched uOttawa website](20220607220458.png) | ![screenshot of the patched uOttawa website](20220607220330.png) |
 
 ## How it Works
 
