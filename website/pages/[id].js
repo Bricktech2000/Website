@@ -9,6 +9,9 @@ import PostHeader from '../components/structure/PostHeader';
 import PostMain from '../components/structure/PostMain';
 import PostRelated from '../components/structure/PostRelated';
 import Error from '../components/structure/Error';
+import Main from '../components/structure/Main';
+import Footer from '../components/structure/Footer';
+import Nav from '../components/structure/Nav';
 
 import Loading from '../components/Loading';
 import useDbGet from '../hooks/useDbGet';
@@ -43,11 +46,12 @@ const Post = (props) => {
         <React.Fragment>
           <PostHeader info={info[currentId]} />
           {/* TODO: fix "Page" inconsistency with index.js */}
-          <Page github={`public/${currentId}/index.md`}>
+          <Main>
             <PostMain info={info[currentId]} />
-            {/* TODO: rename PostRelated */}
             <PostRelated info={info[currentId]} />
-          </Page>
+          </Main>
+          <Footer github={`public/${currentId}/index.md`} />
+          <Nav />
         </React.Fragment>
       )}
     </App>

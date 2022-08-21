@@ -8,7 +8,6 @@ import Nav from './Nav';
 const Page = (props) => {
   return (
     <React.Fragment>
-      <Aside />
       <Main>{props.children}</Main>
       <Footer github={props.github} />
       <Nav />

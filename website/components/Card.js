@@ -7,6 +7,8 @@ import Link from 'next/link';
 import styles from './Card.module.css';
 import { Marked as marked } from './Marked.module.css';
 
+// TODO: tags sometimes overflow the card
+
 const Card = (props) => {
   const linkRef = useRef();
 

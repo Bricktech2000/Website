@@ -4,10 +4,14 @@ import App from '../components/structure/App';
 import Page from '../components/structure/Page';
 import PostMain from '../components/structure/PostMain';
 import PageHeader from '../components/structure/PageHeader';
+import Main from '../components/structure/Main';
+import Footer from '../components/structure/Footer';
+import Nav from '../components/structure/Nav';
 
 import Loading from '../components/Loading';
 import useDbGet from '../hooks/useDbGet';
 import { domain, github } from '../records/consts';
+import PostSubHeader from '../components/structure/PostSubHeader';
 
 // TODO: style legal page from scratch
 
@@ -30,15 +34,24 @@ const Legal = () => {
       <br />
       <br />
       {loading ? (
-        <Page github={`public/${id}/index.md`}>
-          <Loading height="1000vh" />
-        </Page>
+        <React.Fragment>
+          <Main>
+            <Loading height="1000vh" />
+          </Main>
+          <Footer github={`public/${id}/index.md`} />
+          <Nav />
+        </React.Fragment>
       ) : (
         <React.Fragment>
-          <PageHeader info={info[id]} />
-          <Page github={`public/${id}/index.md`}>
+          <PostSubHeader info={info[id]} />
+          <br />
+          <br />
+          <br />
+          <Main>
             <PostMain info={info[id]} />
-          </Page>
+          </Main>
+          <Footer github={`public/${id}/index.md`} />
+          <Nav />
         </React.Fragment>
       )}
     </App>

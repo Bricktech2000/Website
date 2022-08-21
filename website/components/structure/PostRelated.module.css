@@ -1,4 +1,12 @@
+/* (triplicate) */
+
 .PostRelated {
   flex-direction: column;
-  margin-bottom: 7.5em;
+  margin: 0 -12.5%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .PostRelated {
+    margin: 0;
+  }
 }
