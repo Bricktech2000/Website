@@ -53,6 +53,8 @@ const VimEditor = () => {
       .slice(1);
 
   const set_editor_content = async (content, mode) => {
+    if (editorRef.current == null) return;
+
     // dangerouslySetInnerHTML
     editorRef.current.innerHTML = highlight(
       // use tabs for delays in type_out
@@ -63,6 +65,8 @@ const VimEditor = () => {
   };
 
   useEffect(() => {
+    var mounted = true;
+
     (async () => {
       set_editor_content('', 'normal');
       await sleep(2000);
@@ -84,7 +88,7 @@ const VimEditor = () => {
       ];
       await type_out('', header);
       await sleep(1000);
-      while (true) {
+      while (mounted) {
         for (var content of contents) {
           await sleep(250);
           await type_out(header, content);
@@ -100,6 +104,10 @@ const VimEditor = () => {
         await set_editor_content(header, 'insert');
       }
     })();
+
+    return () => {
+      mounted = false;
+    };
   }, [editorRef.current]);
 
   return <div className={styles.VimEditor} ref={editorRef} />;
