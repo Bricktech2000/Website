@@ -165,7 +165,7 @@ code.Marked,
 pre.Marked code {
   font-style: normal;
   font-family: var(--mono);
-  font-weight: normal;
+  font-weight: 400;
   font-size: 0.8em; /* 4/5 of normal */
   background-color: var(--bg-l);
   border-radius: var(--br);
@@ -199,7 +199,7 @@ pre.Marked code * {
 sub.Marked,
 sup.Marked {
   font-size: 0.6em;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .Marked ul,
@@ -227,7 +227,7 @@ li.Marked {
 .Marked blockquote,
 blockquote.Marked {
   font-style: italic;
-  font-weight: normal;
+  font-weight: 400;
   padding-left: 1em;
   border-left: 0.1em solid var(--color);
   margin: 2em 10%;

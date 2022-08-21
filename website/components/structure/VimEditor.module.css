@@ -1,0 +1,36 @@
+.VimEditor,
+.VimEditor * {
+  display: inline-block;
+  white-space: pre;
+}
+
+.VimEditor {
+  padding: 1em;
+  border-radius: var(--br);
+  background: var(--bg-l);
+  font-family: var(--mono);
+  line-height: 1.25;
+}
+
+/* operator */
+.VimEditor u {
+  color: var(--color-l);
+  text-decoration: none;
+}
+
+/* bold */
+.VimEditor b {
+  font-weight: 600;
+  color: var(--bright);
+}
+
+/* cursor */
+.VimEditor span {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* visual line */
+.VimEditor div {
+  background-color: #444;
+}

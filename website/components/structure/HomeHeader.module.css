@@ -2,7 +2,7 @@
   /* (duplicate) */
   display: grid;
   gap: 3em;
-  grid-template-columns: 1fr 30em 35em 1fr;
+  grid-template-columns: 1fr 30em auto 1fr;
   padding-top: 10em;
   padding-bottom: 5em;
 }
