@@ -82,7 +82,7 @@ const VimEditor = () => {
 
       const header = '# \tWhat I Do\t\t\n\t\t\n';
       const contents = [
-        '*\t\t\t\t\tprogram\t\tming\t\t*',
+        '*\t\t\t\t\tpro\t\tgram\tming\t\t*',
         '*\telectronics\t\t\t\t*',
         '*\tengine\ter\ting\t\t*',
       ];
