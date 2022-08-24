@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Marked from '../Marked';
-
+import useParallax from '../../hooks/useParallax';
 import Button from '../Button';
 
 import styles from './About.module.css';
@@ -8,8 +8,14 @@ import { Marked as marked } from '../Marked.module.css';
 import { social, resume } from '../../records/consts';
 
 const About = () => {
+  const parallaxRef = useParallax((current, value) => {
+    current.style.transform = `translateY(calc(0.5em * ${
+      (value - 0.75) * -16
+    }))`;
+  });
+
   return (
-    <div className={styles.About}>
+    <div className={styles.About} ref={parallaxRef}>
       <a className={marked} name="about" style={{ fontSize: 0 }} />
       <h1 className={marked}>About</h1>
       <div className={styles.row}>
