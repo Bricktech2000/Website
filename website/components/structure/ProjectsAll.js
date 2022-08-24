@@ -13,13 +13,11 @@ const ProjectsAll = () => {
 
   return (
     <div className={styles.ProjectsAll}>
-      <br />
       <MosaicLarge>
         {Object.keys(info).map((id) => (
           <Card key={id} info={info[id]} />
         ))}
       </MosaicLarge>
-      <br />
     </div>
   );
 };
