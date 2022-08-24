@@ -8,6 +8,7 @@ import Projects from '../components/structure/Projects';
 import Contact from '../components/structure/Contact';
 import Main from '../components/structure/Main';
 import Footer from '../components/structure/Footer';
+import Nav from '../components/structure/Nav';
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <Projects />
         <Contact />
       </Main>
+      <Nav />
       <Footer github="pages/index.js" />
     </App>
   );
