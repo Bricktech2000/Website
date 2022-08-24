@@ -14,6 +14,7 @@ const ToggleSubscribe = () => {
     })();
 
   const [currentError, setCurrentError] = useState(null);
+  const [subscribed, setSubscribed] = useState(false);
 
   const fail = (err) => {
     setCurrentError(err);
@@ -91,6 +92,7 @@ const ToggleSubscribe = () => {
     } else return fail('Service workers not supported');
 
     localStorage.setItem('subscription', isActive ? 'true' : 'false');
+    setSubscribed(isActive);
     setActive(isActive);
     setCurrentError(null);
   };
@@ -101,20 +103,22 @@ const ToggleSubscribe = () => {
   return (
     <div className={styles.ToggleSubscribe}>
       <div className={styles.toggleContainer}>
-        <Toggle
-          onClick={toggleOnClick}
-          active={
-            process.browser && localStorage.getItem('subscription') == 'true'
-          }
-        />
+        <Toggle onClick={toggleOnClick} active={subscribed} />
         {currentError && (
-          <div className={styles.errorContainer}>
-            An error occurred while subscribing to notifications. Please try
-            again later. <br />
-            Error Code: <code className={marked}>{currentError}</code>
+          <div className={styles.errorContainer + ' ' + marked}>
+            <p>
+              An error occurred while subscribing to notifications. Please try
+              again later.
+            </p>
+            <p>
+              <strong>Error Code</strong>: {currentError}
+            </p>
           </div>
         )}
-        {!currentError && 'Receive Notifications'}
+        {!currentError &&
+          (subscribed
+            ? "You'll receive notifications when new projects are published."
+            : 'Stay Updated')}
       </div>
     </div>
   );

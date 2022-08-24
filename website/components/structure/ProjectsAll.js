@@ -3,7 +3,6 @@ import useDbGet from '../../hooks/useDbGet';
 import MosaicLarge from '../MosaicLarge';
 import Card from '../Card';
 import Loading from '../Loading';
-import ToggleSubscribe from '../ToggleSubscribe';
 
 import styles from './ProjectsAll.module.css';
 
@@ -14,9 +13,6 @@ const ProjectsAll = () => {
 
   return (
     <div className={styles.ProjectsAll}>
-      {/* TODO: find spot for subscribe toggle */}
-      {/* <ToggleSubscribe /> */}
-
       <br />
       <MosaicLarge>
         {Object.keys(info).map((id) => (

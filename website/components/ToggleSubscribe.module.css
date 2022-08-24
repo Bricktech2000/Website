@@ -5,8 +5,8 @@
 }
 
 .toggleContainer {
-  display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
+  line-height: 1.25;
   gap: 1em;
 }
 
