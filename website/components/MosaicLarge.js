@@ -1,11 +1,13 @@
 import React, { Component, useState, useRef, useEffect } from 'react';
+import Button from './Button';
 import useParallax from '../hooks/useParallax';
 import useOnScreen from '../hooks/useOnScreen';
 
 import styles from './MosaicLarge.module.css';
 
 //https://www.emgoto.com/storing-values-with-useref/
-var globalClickCount = 3;
+var globalClickCount = 4;
+var globalUpdate = false;
 
 const MosaicLarge = (props) => {
   const parallaxRef = useParallax((current, value) => {
@@ -15,18 +17,18 @@ const MosaicLarge = (props) => {
   });
 
   const [clickCount, setClickCount] = useState(globalClickCount);
+  const [update, setUpdate] = useState(globalUpdate);
 
-  const loadCount = Math.pow(1.5, clickCount);
+  const loadCount = Math.pow(1.6, clickCount);
   const allLoaded = loadCount >= props.children.length;
 
-  // TODO: "load more" button
-  const ref = useRef();
+  const ref = useRef(null);
   const isVisible = useOnScreen(ref);
   const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
   useEffect(() => {
     if (allLoaded) return;
 
-    if (isVisible && hasTimeElapsed) {
+    if (isVisible && hasTimeElapsed && update) {
       setHasTimeElapsed(false);
       setClickCount((c) => c + 1);
       globalClickCount++;
@@ -34,7 +36,7 @@ const MosaicLarge = (props) => {
       const timeout = setTimeout(() => setHasTimeElapsed(true), 100);
       return () => clearTimeout(timeout);
     }
-  }, [isVisible, hasTimeElapsed, allLoaded]);
+  }, [isVisible, hasTimeElapsed, allLoaded, update]);
 
   return (
     <div className={styles.container}>
@@ -44,6 +46,17 @@ const MosaicLarge = (props) => {
           .map((child) => React.cloneElement(child))}
       </div>
       <p ref={ref}>{!allLoaded && ''}</p>
+      {!update && (
+        <Button
+          onClick={() => {
+            setUpdate(true);
+            globalUpdate = true;
+          }}
+        >
+          <i className="fas fa-lg fa-play" />
+          Load More
+        </Button>
+      )}
     </div>
   );
 };
