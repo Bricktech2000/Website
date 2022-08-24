@@ -1,12 +1,12 @@
 /* (triplicate) */
 
-.ProjectsAll {
+.ProjectsLatest {
   flex-direction: column;
   margin: 0 -12.5%;
 }
 
 @media (max-aspect-ratio: 1/1) {
-  .ProjectsAll {
+  .ProjectsLatest {
     margin: 0;
   }
 }

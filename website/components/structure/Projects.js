@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectsPinned from './ProjectsPinned';
-import ProjectsAll from './ProjectsAll';
+import ProjectsLatest from './ProjectsLatest';
 import ToggleSubscribe from '../ToggleSubscribe';
 
 import styles from './Projects.module.css';
@@ -13,9 +13,9 @@ const Projects = () => {
       <h1 className={marked}>Projects</h1>
       <h2 className={marked}>Pinned Projects</h2>
       <ProjectsPinned />
-      <h2 className={marked}>All Projects</h2>
+      <h2 className={marked}>Latest Projects</h2>
       <ToggleSubscribe /> <br />
-      <ProjectsAll />
+      <ProjectsLatest />
     </div>
   );
 };

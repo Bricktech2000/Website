@@ -4,15 +4,15 @@ import MosaicLarge from '../MosaicLarge';
 import Card from '../Card';
 import Loading from '../Loading';
 
-import styles from './ProjectsAll.module.css';
+import styles from './ProjectsLatest.module.css';
 
-const ProjectsAll = () => {
+const ProjectsLatest = () => {
   const info = useDbGet('all');
 
   if (typeof info === 'undefined') return <Loading height="10000vh" />;
 
   return (
-    <div className={styles.ProjectsAll}>
+    <div className={styles.ProjectsLatest}>
       <MosaicLarge>
         {Object.keys(info).map((id) => (
           <Card key={id} info={info[id]} />
@@ -22,4 +22,4 @@ const ProjectsAll = () => {
   );
 };
 
-export default ProjectsAll;
+export default ProjectsLatest;
