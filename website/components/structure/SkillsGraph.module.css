@@ -1,0 +1,12 @@
+.SkillsGraph {
+  height: 100vh;
+  width: 100vh;
+  max-width: 100vw;
+  max-height: 100vw;
+  align-self: center;
+}
+
+.SkillsGraph canvas {
+  width: 100%;
+  height: 100%;
+}

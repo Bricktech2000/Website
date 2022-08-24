@@ -6,7 +6,7 @@ import { Marked as marked } from '../Marked.module.css';
 const Contact = () => {
   return (
     <div className={styles.Contact}>
-      <a className={marked} name="contact" />
+      <a className={marked} name="contact" style={{ fontSize: 0 }} />
       <h1 className={marked}>Get in Touch!</h1>
       TODO:
     </div>

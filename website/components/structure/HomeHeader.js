@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import HomeAbout from './HomeAbout';
-import HomeHero from './HomeHero';
 import VimEditor from './VimEditor';
 import Button from '../Button';
 
@@ -30,7 +28,6 @@ const HomeHeader = () => {
       </div>
       <div className={styles.imageColumn}>
         <VimEditor />
-        {/* TODO: remove */}
         {/* <img
           className={styles.editor}
           src="vim-editor-placeholder.png"

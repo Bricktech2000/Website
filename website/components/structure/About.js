@@ -10,7 +10,7 @@ import { social, resume } from '../../records/consts';
 const About = () => {
   return (
     <div className={styles.About}>
-      <a className={marked} name="about" />
+      <a className={marked} name="about" style={{ fontSize: 0 }} />
       <h1 className={marked}>About</h1>
       <div className={styles.row}>
         <img src="/picture.jpg" alt="author profile picture" />

@@ -1,11 +1,11 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component, useRef, useEffect } from 'react';
 
 import styles from './VimEditor.module.css';
 
 const VimEditor = () => {
   const width = 50;
   const height = 12;
-  const editorRef = React.useRef(null);
+  const editorRef = useRef(null);
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
