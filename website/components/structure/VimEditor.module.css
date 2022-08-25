@@ -8,7 +8,7 @@
   padding: 1em;
   border-radius: var(--br);
   background: var(--bg-l);
-  font-size: min(1.25vw, 1em);
+  font-size: min(1.5vw, 1em);
   font-family: var(--mono);
   line-height: 1.25;
 }
@@ -38,6 +38,6 @@
 
 @media (max-width: 60em) {
   .VimEditor {
-    font-size: min(2.5vw, 1em);
+    font-size: min(2.75vw, 1em);
   }
 }
