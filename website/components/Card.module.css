@@ -64,6 +64,13 @@
   opacity: 1;
 }
 
+/* light mode */
+/* .Card.hover strong,
+.Card.hover p,
+.Card.hover div:not(:first-child) {
+  color: #fff;
+} */
+
 .Card.hover img {
   filter: brightness(0.125);
 }

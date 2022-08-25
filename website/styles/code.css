@@ -2,15 +2,18 @@ code .hljs-keyword {
   color: var(--color);
   font-weight: bold;
 }
+
 code .hljs-operator,
 code .hljs-comment {
-  color: #555;
+  color: var(--medium);
   font-weight: bold;
 }
+
 code .hljs-attr,
 code .hljs-built_in {
   font-weight: bold;
 }
+
 code .hljs-string,
 code .hljs-number {
   color: var(--color);

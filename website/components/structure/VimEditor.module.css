@@ -33,7 +33,7 @@
 
 /* visual line */
 .VimEditor div {
-  background-color: #444;
+  background-color: var(--medium);
 }
 
 @media (max-width: 60em) {

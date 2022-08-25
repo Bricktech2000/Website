@@ -4,13 +4,16 @@
 
   --bright: #fff;
   --light: #ccc;
+  --medium: #444;
   --dark: #222;
 
+  /* light mode */
   /* --bg: #fff;
   --bg-l: #ddd;
 
   --bright: #000;
   --light: #222;
+  --medium: #ccc;
   --dark: #fff; */
 
   --TODO: #f00;
