@@ -41,7 +41,7 @@ const SkillsGraph = () => {
         'Other Technologies',
         'Programming Languages',
         'Frameworks',
-        'Other',
+        'Other Interests',
         'Hardware',
       ],
       'Programming Languages': ['C++', 'Rust', 'JavaScript', 'Python'],
@@ -69,16 +69,14 @@ const SkillsGraph = () => {
         // 'Fusion 360',
         // 'Cura',
         // 'Figma',
-        'Other',
+        'Other Interests',
         'Software',
       ],
-      Other: [
-        'Artificial Intelligence',
+      'Other Interests': [
         'UI Design',
         'Security',
-        'Drone',
-        'RC',
-        'Security',
+        'Drones',
+        'Finance',
         'Electronics',
         'Robotics',
         'Software',
@@ -92,12 +90,12 @@ const SkillsGraph = () => {
       'Frameworks',
       'Software',
       'Hardware',
-      'Other',
+      'Other Interests',
     ];
     var bolded = [
       'Software',
       'Hardware',
-      'Other',
+      'Other Interests',
       //
     ];
 

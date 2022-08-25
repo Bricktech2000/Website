@@ -4,6 +4,7 @@ import GameOfLife from '../GameOfLife';
 
 import styles from './Contact.module.css';
 import { Marked as marked } from '../Marked.module.css';
+import { social } from '../../records/consts';
 
 const Contact = () => {
   return (
@@ -14,19 +15,25 @@ const Contact = () => {
       <div className={styles.row}>
         <Marked
           source={`
+If you have **any questions** about this website or any other project, or if
+you just want to say hi, [my inbox](mailto:${social.mail}) is always open.
+For the people who find e-mail a bit outdated, other ways to contact me are
+available [here](https://edgie.emilien.ca/).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-nunc et mi **consequat** porta a vel neque. Etiam dictum, elit a
-elementum malesuada, sem [tortor commodo tortor](#), vitae pellentesque
-turpis magna nec diam.
+I am currently looking for my **first position as a software engineer** and
+I am open to anything that will challenge me and teach me useful skills. If
+that sounds promising, let's [get in touch](https://edgie.emilien.ca/)!
 
-Nunc sed mi augue. Proin egestas tellus elit. Sed tincidunt eleifend
-metus vel efficitur. Fusce **sollicitudin**, diam sit amet **sollicitudin
-euismod**, ligula lorem porttitor nisl, vel lacinia leo lorem ut
-ipsum.
+\`\`\`rust
+let job_type = match opinion {
+  "boring"       => None,
+  "impressive"   => Some("internship"),
+  "breathtaking" => Some("full-time"),
+}
+\`\`\`
       `}
         />
-        <GameOfLife size={32} />
+        {/* <GameOfLife size={32} /> */}
       </div>
     </div>
   );
