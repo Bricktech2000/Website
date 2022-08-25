@@ -25,21 +25,26 @@ const SkillsGraph = () => {
     };
   }, []);
 
-  const centerForce = 0.01;
-  const repelForce = 0.00002;
-  const linkForce = 0.4;
+  const centerForce = 0.025;
+  const repelForce = 0.00004;
+  const linkForce = 0.25;
   const dragForce = 0.25;
-  const linkDistance = 0.15;
+  const linkDistance = 0.05;
 
   useEffect(() => {
     var links = {
-      Skills: [
+      // Skills: ['Software', 'Hardware', 'Design'],
+      Software: [
         'Development Tools',
         'Other Technologies',
         'Programming Languages',
         'Frameworks',
+        'Other',
+        'Hardware',
       ],
-      'Development Tools': ['Linux', 'Git', 'GitHub', 'Vim'],
+      'Programming Languages': ['C++', 'Rust', 'JavaScript', 'Python'],
+      Frameworks: ['React', 'Express.js', 'Node.js', 'Next.js'],
+      'Development Tools': ['Linux', 'Git', 'GitHub', 'VS Code', 'Vim'],
       'Other Technologies': [
         'LaTeX',
         'Assembly',
@@ -52,15 +57,46 @@ const SkillsGraph = () => {
         'JSON',
         'Markdown',
       ],
-      'Programming Languages': ['C++', 'Rust', 'JavaScript', 'Python'],
-      Frameworks: ['React', 'Express.js', 'Node.js', 'Next.js'],
+      Hardware: [
+        'Electronics',
+        '3D Printing',
+        'Raspberry Pi',
+        'Arduino',
+        '3D Design',
+        'Robotics',
+        // 'Fusion 360',
+        // 'Cura',
+        // 'Figma',
+        'Other',
+        'Software',
+      ],
+      Other: [
+        'Artificial Intelligence',
+        'UI Design',
+        'Security',
+        'Drone',
+        'RC',
+        'Security',
+        'Electronics',
+        'Robotics',
+        'Software',
+        'Hardware',
+      ],
     };
     var highlighted = [
-      'Skills',
       'Development Tools',
       'Other Technologies',
       'Programming Languages',
       'Frameworks',
+      'Software',
+      'Hardware',
+      'Other',
+    ];
+    var bolded = [
+      'Software',
+      'Hardware',
+      'Other',
+      //
     ];
 
     const ctx = canvasRef.current.getContext('2d');
@@ -76,7 +112,9 @@ const SkillsGraph = () => {
         vx: 0,
         vy: 0,
         text: text,
+
         highlighted: highlighted.includes(text),
+        bolded: bolded.includes(text),
       };
     };
 
@@ -103,7 +141,6 @@ const SkillsGraph = () => {
 
       // https://stackoverflow.com/questions/39294065/vertical-alignment-of-canvas-text
       ctx.lineWidth = size(0.125);
-      ctx.font = `min(2em, 5vw) sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseLine = 'middle';
 
@@ -161,7 +198,13 @@ const SkillsGraph = () => {
         node.y += node.vy;
       }
 
-      const setColors = (highlighted) => {
+      const setColors = (highlighted, bolded) => {
+        if (bolded) {
+          ctx.font = 'bold calc(min(2em, 5vw, 5vh) * 1.25) sans-serif';
+        } else {
+          ctx.font = 'min(2em, 5vw, 5vh) sans-serif';
+        }
+
         if (highlighted) {
           ctx.fillStyle = '#fff';
           ctx.strokeStyle = '#aaa';
@@ -173,10 +216,13 @@ const SkillsGraph = () => {
 
       // draw edges
       for (var node of Object.values(nodes)) {
-        ctx.beginPath();
-        setColors(node.highlighted);
         if (links[node.text] !== undefined) {
           for (var child of links[node.text]) {
+            setColors(
+              node.highlighted && nodes[child].highlighted,
+              node.bolded
+            );
+
             ctx.beginPath();
             ctx.moveTo(xToCoord(node.x), yToCoord(node.y));
             ctx.lineTo(xToCoord(nodes[child].x), yToCoord(nodes[child].y));
@@ -188,7 +234,7 @@ const SkillsGraph = () => {
 
       // draw nodes
       for (var node of Object.values(nodes)) {
-        setColors(node.highlighted);
+        setColors(node.highlighted, node.bolded);
 
         ctx.beginPath();
         ctx.arc(xToCoord(node.x), yToCoord(node.y), size(0.5), 0, 2 * Math.PI);
@@ -198,10 +244,14 @@ const SkillsGraph = () => {
 
       // draw text
       for (var node of Object.values(nodes)) {
-        setColors(node.highlighted);
+        setColors(node.highlighted, node.bolded);
 
         ctx.beginPath();
-        ctx.fillText(node.text, xToCoord(node.x), yToCoord(node.y) - size(2));
+        ctx.fillText(
+          node.text,
+          xToCoord(node.x),
+          yToCoord(node.y) - size(1.25)
+        );
         ctx.closePath();
       }
 
