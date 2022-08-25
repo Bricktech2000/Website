@@ -45,7 +45,7 @@ hr.Marked::before {
 h1.Marked,
 h2.Marked,
 hr.Marked {
-  margin-top: 4em;
+  margin-top: 5em;
   margin-bottom: 1.5em;
 
   color: var(--bright);

@@ -17,7 +17,7 @@ const SkillsGraph = () => {
       if (canvasRef.current === null) return;
 
       canvasRef.current.width = containerRef.current.clientWidth * 2;
-      canvasRef.current.height = containerRef.current.clientHeight * 2;
+      canvasRef.current.height = containerRef.current.clientWidth * 2;
     };
     const listener = window.addEventListener('resize', resizeHandler);
     resizeHandler();
@@ -31,7 +31,7 @@ const SkillsGraph = () => {
   const repelForce = 0.00004;
   const linkForce = 0.25;
   const dragForce = 0.25;
-  const linkDistance = 0.05;
+  const linkDistance = 0.025;
 
   useEffect(() => {
     var links = {
@@ -41,7 +41,7 @@ const SkillsGraph = () => {
         'Other Technologies',
         'Programming Languages',
         'Frameworks',
-        'Other Interests',
+        'Interests',
         'Hardware',
       ],
       'Programming Languages': ['C++', 'Rust', 'JavaScript', 'Python'],
@@ -51,37 +51,32 @@ const SkillsGraph = () => {
         'LaTeX',
         'Assembly',
         'CSS',
-        'Arduino',
         'YAML',
         'HTML',
         'C',
-        'Raspberry Pi',
         'JSON',
         'Markdown',
       ],
       Hardware: [
         'Electronics',
         '3D Printing',
-        'Raspberry Pi',
         'Arduino',
         '3D Design',
         'Robotics',
-        // 'Fusion 360',
-        // 'Cura',
-        // 'Figma',
-        'Other Interests',
+        'Interests',
         'Software',
       ],
-      'Other Interests': [
+      '3D Design': ['Fusion 360', 'Cura'],
+      Interests: [
         'UI Design',
         'Security',
-        'Drones',
+        'Drone Building',
         'Finance',
-        'Electronics',
-        'Robotics',
+        'Music',
         'Software',
         'Hardware',
       ],
+      'UI Design': ['Figma', 'Material UI'],
     };
     var highlighted = [
       'Development Tools',
@@ -90,12 +85,12 @@ const SkillsGraph = () => {
       'Frameworks',
       'Software',
       'Hardware',
-      'Other Interests',
+      'Interests',
     ];
     var bolded = [
       'Software',
       'Hardware',
-      'Other Interests',
+      'Interests',
       //
     ];
 
@@ -140,7 +135,6 @@ const SkillsGraph = () => {
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
       // https://stackoverflow.com/questions/39294065/vertical-alignment-of-canvas-text
-      ctx.lineWidth = size(0.125);
       ctx.textAlign = 'center';
       ctx.textBaseLine = 'middle';
 
@@ -201,8 +195,10 @@ const SkillsGraph = () => {
       const setColors = (highlighted, bolded) => {
         if (bolded) {
           ctx.font = 'bold calc(min(2em, 5vw, 5vh) * 1.25) sans-serif';
+          ctx.lineWidth = size(0.125 * 2);
         } else {
           ctx.font = 'min(2em, 5vw, 5vh) sans-serif';
+          ctx.lineWidth = size(0.125);
         }
 
         if (highlighted) {
@@ -220,7 +216,7 @@ const SkillsGraph = () => {
           for (var child of links[node.text]) {
             setColors(
               node.highlighted && nodes[child].highlighted,
-              node.bolded
+              node.bolded && nodes[child].bolded
             );
 
             ctx.beginPath();
