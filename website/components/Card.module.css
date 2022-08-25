@@ -44,7 +44,6 @@
 .Card .tags {
   /* almost (triplicate) */
   flex-direction: row;
-  /* TODO: */
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.25em;

@@ -10,12 +10,6 @@ const Skills = () => {
       <a className={marked} name="skills" style={{ fontSize: 0 }} />
       <h1 className={marked}>Skills</h1>
       <SkillsGraph />
-      {/* TODO: remove */}
-      {/* <img
-        className={styles.graph}
-        src="skills-graph-placeholder.png"
-        alt="skills graph placeholder"
-      /> */}
     </div>
   );
 };

@@ -11,8 +11,6 @@ import useDbGet from '../hooks/useDbGet';
 import { domain, github } from '../records/consts';
 import PostSubHeader from '../components/structure/PostSubHeader';
 
-// TODO: style legal page from scratch
-
 const Legal = () => {
   const id = 'legal';
   const info = useDbGet('exact', id);

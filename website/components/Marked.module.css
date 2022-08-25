@@ -76,7 +76,6 @@ em.Marked {
   font-style: italic;
 }
 
-/* TODO:*/
 .Marked strong,
 strong.Marked {
   display: inline;

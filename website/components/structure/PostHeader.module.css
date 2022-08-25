@@ -25,7 +25,6 @@
 .PostHeader .textColumn .tags {
   /* almost (triplicate) */
   flex-direction: row;
-  /* TODO: */
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 2em;

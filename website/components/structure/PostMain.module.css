@@ -1,12 +1,7 @@
 .PostMain {
   flex-direction: column;
 }
-.PostMain > span {
-  /* TODO: */
-  column-width: 50em;
-  column-gap: 7.5em;
-  column-rule: 0.1em solid var(--card-bg-l);
-}
+
 .PostMain .spacer {
   height: 10em;
 }
