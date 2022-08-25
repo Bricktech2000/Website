@@ -3,6 +3,8 @@ import useOnScreen from '../../hooks/useOnScreen';
 
 import styles from './SkillsGraph.module.css';
 
+// TODO: use `useCanvas` hook, see GameOfLife
+
 var isOnScreen = false;
 
 const SkillsGraph = () => {

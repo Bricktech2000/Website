@@ -1,6 +1,9 @@
 import React, { Component, useRef, useEffect } from 'react';
+import useOnScreen from '../hooks/useOnScreen';
 
 import styles from './GameOfLife.module.css';
+
+var isOnScreen = false;
 
 // https://stackoverflow.com/questions/57530728/react-canvas-with-ref-omitting-calling-ref-current-and-ctx
 const useCanvas = (callback) => {
@@ -10,7 +13,7 @@ const useCanvas = (callback) => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     callback([canvas, ctx]);
-  });
+  }, []);
 
   return canvasRef;
 };
@@ -21,7 +24,7 @@ const GameOfLife = (props) => {
 
   const canvasRef = useCanvas(([canvas, ctx]) => {
     const style = getComputedStyle(document.documentElement);
-    ctx.fillStyle = style.getPropertyValue('--bg');
+    ctx.fillStyle = style.getPropertyValue('--bg-l');
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     class Cell {
@@ -34,6 +37,7 @@ const GameOfLife = (props) => {
         this.nextAlive = (Math.random() < 1 / 8) * 2;
         this.neighbours = neighbours;
       };
+
       update = () => {
         const states = 2;
         // https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Variations
@@ -45,10 +49,11 @@ const GameOfLife = (props) => {
         else if (count == 3) this.nextAlive = states;
         else this.nextAlive = Math.max(0, this.alive - 1);
       };
+
       draw = () => {
         if (this.alive != this.nextAlive) {
           ctx.fillStyle = style.getPropertyValue(
-            ['--bg', '--color-d', '--color-l'][this.nextAlive]
+            ['--bg-l', '--color-d', '--color-l'][this.nextAlive]
           );
           ctx.fillRect(this.x, this.y, this.s, this.s);
         }
@@ -76,17 +81,22 @@ const GameOfLife = (props) => {
     }
   });
 
+  isOnScreen = process.browser && useOnScreen(canvasRef);
+
   const draw = () => {
+    if (!isOnScreen) return;
+
     grid.forEach((row) => row.forEach((cell) => cell.draw()));
     grid.forEach((row) => row.forEach((cell) => cell.update()));
   };
+
   useEffect(() => {
     const interval = setInterval(draw, 1000 / 20);
 
     return () => {
       clearInterval(interval);
     };
-  });
+  }, []);
 
   return (
     <canvas

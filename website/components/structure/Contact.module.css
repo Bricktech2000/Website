@@ -1,3 +1,27 @@
+/* (duplicate) with About */
+
 .Contact {
   flex-direction: column;
+}
+
+.Contact .row {
+  flex-direction: row;
+  gap: 3em;
+}
+
+.Contact .row canvas {
+  border-radius: var(--br);
+  width: 11.125em;
+  height: 11.125em;
+  align-self: flex-start;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .Contact .row {
+    flex-direction: column;
+  }
+
+  .Contact .row canvas {
+    align-self: center;
+  }
 }
