@@ -1,83 +1,35 @@
 .Footer {
+  font-size: 0.75em;
+  flex-direction: column;
+  margin: 0 1em;
+  margin-bottom: 5em;
+}
+
+.Footer .content {
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Footer .content .row {
   flex-direction: column;
 }
 
-/* TODO: */
-._Footer {
-  grid-area: footer;
-
-  display: grid;
-  grid-template-areas: 'center vr contact';
-  grid-gap: 1em;
-  align-items: center;
-
-  width: 100%;
-  padding: 3em 10%;
-  /* display: grid; */
-  grid-template-columns: 3fr auto 3fr;
-  grid-template-rows: auto;
-  justify-items: center;
-  font-size: min(0.66em, 4vw);
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.Footer .vr {
-  grid-area: vr;
-
-  background: var(--card-bg-l);
-  width: 0.05em;
-  height: 100%;
-}
-.Footer .issue {
+.Footer .content .row:last-child {
+  align-items: flex-end;
   text-align: right;
-  margin: 0 0.75em;
-  flex-wrap: wrap;
-  justify-content: center;
 }
-.Footer .issue,
-.Footer .issue a {
-  white-space: pre-wrap;
-}
-.Footer span {
+
+.Footer .content .row .item {
   display: block;
 }
-.Footer .center {
-  grid-area: center;
-  align-items: center;
-  flex-direction: column;
-}
-.Footer .contact {
-  grid-area: contact;
-  flex-direction: column;
-}
-/* prevent GetInTouch from wrapping */
-.Footer .contact > * {
-  flex-wrap: nowrap;
-}
-/*
-https://css-tricks.com/almanac/properties/f/fill/
-https://stackoverflow.com/questions/39743161/svg-fill-color-not-working
-https://stackoverflow.com/questions/28652648/how-to-use-external-svg-in-html
-yeah just using reUpdate's `yield include`
-*/
-.Footer div svg {
-  height: 1.25em;
-  width: auto;
-  align-self: center;
-}
-.Footer div svg path[fill='#000000'] {
-  fill: #dddddd;
+
+.Footer .content .row .item i {
+  display: inline-block;
+  margin-right: 0.75ch;
 }
 
-@media (max-aspect-ratio: 1/1) {
-  .Footer {
-    grid-template-areas: 'vr' 'center' 'contact';
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-  .Footer .vr {
-    width: 75%;
-    height: 0.05em;
-    margin-bottom: 2em;
-  }
+.Footer .content .row .item i:first-child {
+  margin-left: 0.75ch;
 }
