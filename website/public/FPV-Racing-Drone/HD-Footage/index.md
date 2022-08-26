@@ -14,7 +14,7 @@ Essentially, the FPV camera on the drone sends live video to VR-like goggles on 
 
 #hd-parts
 
-On a side note, here is a list of the parts I used to install an FPV system on [my 5-inch drone](../98772/):
+On a side note, here is a list of the parts I used to install an FPV system on my 5-inch drone:
 
 - [Foxeer Razer Mini 1/3 CMOS Camera](https://www.banggood.com/Foxeer-Razer-Mini-13-CMOS-HD-5MP-2_1mm-M12-Lens-1200TVL-43169-NTSCPAL-Switchable-FPV-Camera-For-RC-Drone-p-1578759.html?akmClientCountry=CA&rmmds=cart_middle_products&ID=6269620530498522237&cur_warehouse=USA)
 - [Eachine TX805 5.8GHz RP-SMA Female](https://www.banggood.com/Eachine-TX805-5_8G-40CH-25-or-200-or-600-or-800mW-FPV-Transmitter-TX-LED-Display-Support-OSD-or-Pitmode-or-Smart-Audio-p-1333984.html?rmmds=search&ID=512671&cur_warehouse=USA)

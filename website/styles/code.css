@@ -18,3 +18,8 @@ code .hljs-string,
 code .hljs-number {
   color: var(--color);
 }
+
+code .hljs-string .hljs-operator {
+  color: unset;
+  font-weight: unset;
+}

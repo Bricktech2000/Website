@@ -6,11 +6,11 @@ import styles from './Marked.module.css';
 
 const Marked = (props) => {
   const getMarkdown = (text) => {
-    //https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
-    //https://marked.js.org/using_advanced
-    //https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown
-    //https://forum.freecodecamp.org/t/links-rendered-by-marked-js-open-in-new-tab-markdown-previewer-project/197250/4
-    //https://github.com/highlightjs/highlight.js/
+    // https://stackoverflow.com/questions/39758136/render-html-string-as-real-html-in-a-react-component
+    // https://marked.js.org/using_advanced
+    // https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown
+    // https://forum.freecodecamp.org/t/links-rendered-by-marked-js-open-in-new-tab-markdown-previewer-project/197250/4
+    // https://github.com/highlightjs/highlight.js/
     return {
       __html: marked(
         text.replace(/\n#([^ #][^\n]+)/g, (a, b) => `\n<a name="${b}"></a>`),

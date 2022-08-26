@@ -13,12 +13,12 @@ A few changes were made to the password manager to make it more user-friendly.
 The first change is fairly obvious: it now runs on a browser, which means that it can be access by any device from anywhere in the world. I had never used cryptographic functions in JavaScript before, and they're just about as terrible as one would expect. Below are two equivalent samples so that you can admire the difference between the original Python implementation and the new JavaScript implementation.
 
 ```python
-# Python Version: short and to the point
+# Python Version: short and to-the-point
 
-def  join(*args):
- def  xor(bytes1, bytes2):
-   return  bytes(a ^ b for a, b in  zip(bytes1, bytes2))
- return  reduce(xor, [sha1(arg.encode('utf-8')).digest() for arg in args])
+def join(*args):
+  def xor(bytes1, bytes2):
+    return bytes(a ^ b for a, b in  zip(bytes1, bytes2))
+  return reduce(xor, [sha1(arg.encode('utf-8')).digest() for arg in args])
 
 digest = sha256(join(name, user, master, token)).digest()
 password = encode(digest)
