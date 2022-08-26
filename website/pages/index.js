@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <App
       title="Project Portfolio"
-      description="A portfolio for sharing various projects"
+      description="Emilien Breton &mdash; Computer Science student at the University of Ottawa. Official portfolio website, for sharing various personal projects."
       image="picture.jpg"
     >
       <HomeHeader />
