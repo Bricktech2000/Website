@@ -72,5 +72,5 @@
 } */
 
 .Card.hover img {
-  filter: brightness(0.125);
+  filter: grayscale() brightness(0.1875) blur(0.25em);
 }

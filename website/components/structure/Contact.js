@@ -27,8 +27,8 @@ that sounds promising, let's [get in touch](https://edgie.emilien.ca/)!
 \`\`\`rust
 let job_type = match opinion {
   "boring"       => None,
-  "impressive"   => Some("internship"),
-  "breathtaking" => Some("full-time"),
+  "impressive"   => Some(Job::Internship),
+  "breathtaking" => Some(Job::FullTime),
 }
 \`\`\`
       `}

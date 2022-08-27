@@ -102,8 +102,9 @@ const SkillsGraph = () => {
     var nodes = {};
     const randomNode = (text) => {
       return {
-        x: Math.random(),
-        y: Math.random(),
+        // spawn in 0.5 x 0.5 centered square with 0.25 margin
+        x: Math.random() * 0.5 + 0.25,
+        y: Math.random() * 0.5 + 0.25,
         vx: 0,
         vy: 0,
         text: text,
