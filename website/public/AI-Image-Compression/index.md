@@ -54,15 +54,17 @@ However, there are a few problems with this approach. First, a neural network ca
 
 #code
 
-> with `inp` as an input value...  
-> initialize a `global loss` variable to `0`  
-> set `enc` to the encoder prediction using `inp`  
-> for `n` from `1` to the input size:  
-> &emsp;keep the `n` first neuron values from `enc` and write `0` to the rest  
-> &emsp;set `dec` to the decoder prediction using `enc`  
-> &emsp;set `loss` to the loss function applied to `inp` and `dec`  
-> &emsp;add `loss` multiplied by `n` to the `global loss` variable  
-> calculate the gradients and apply them to the network's weights using the `global loss` variable
+```python
+with `inp` as an input value...
+initialize a `global loss` variable to `0`
+set `enc` to the encoder prediction using `inp`
+for `n` from `1` to the input size:
+  keep the `n` first neuron values from `enc` and write `0` to the rest
+  set `dec` to the decoder prediction using `enc`
+  set `loss` to the loss function applied to `inp` and `dec`
+  add `loss` multiplied by `n` to the `global loss` variable
+calculate the gradients and apply them to the network weights using the `global loss` variable
+```
 
 Long story short, this way of training forces the AI to give more _importance_ to the first neurons in the latent representation, which means that the bottom neurons will only be used to encode smaller details in the source image. If we want a larger [compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) in order to save more space, the program can simply ignore some of the bottom neurons when compressing. Of course, the image will lose some of its sharpness, but the resulting file will be significantly smaller.
 
