@@ -81,7 +81,7 @@ const GameOfLife = (props) => {
     }
   });
 
-  isOnScreen = process.browser && useOnScreen(canvasRef);
+  isOnScreen = useOnScreen(canvasRef);
 
   const draw = () => {
     if (!isOnScreen) return;

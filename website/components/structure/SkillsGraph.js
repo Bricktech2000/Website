@@ -10,7 +10,7 @@ var isOnScreen = false;
 const SkillsGraph = () => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
-  isOnScreen = process.browser && useOnScreen(containerRef);
+  isOnScreen = useOnScreen(containerRef);
 
   useEffect(() => {
     const resizeHandler = () => {
