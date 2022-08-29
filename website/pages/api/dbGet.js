@@ -101,7 +101,7 @@ async function get(id) {
   return data;
 }
 
-async function getSafe(id) {
+export async function getSafe(id) {
   try {
     return await get(id);
   } catch (e) {

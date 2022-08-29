@@ -60,13 +60,11 @@ const Post = (props) => {
   );
 };
 
-import { promises as fs } from 'fs';
+import { getSafe } from './api/dbGet';
 
 export async function getServerSideProps({ params }) {
   const id = params.id;
-  const info = JSON.parse(
-    await fs.readFile(process.cwd() + '/public/' + id + '/index.json')
-  );
+  const info = await getSafe(id);
 
   return {
     props: {
