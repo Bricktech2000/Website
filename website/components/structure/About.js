@@ -22,25 +22,12 @@ const About = () => {
         <img src="/picture.jpg" alt="author profile picture" />
         <Marked
           source={`
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-nunc et mi **consequat** porta a vel neque. Etiam dictum, elit a
-elementum malesuada, sem [tortor commodo tortor](#), vitae pellentesque
-turpis magna nec diam.
+**Problem-solving** and **critical thinking** are two of my most prominent skills. I love exploring new hobbies and interests to find out where they take me. With that said, I often become unmotivated when not challenged; I can't stand inefficiency. In my opinion, coming up with creative ideas isn't sufficient. Acting on them and reflecting on the outcome is where the **learning and self-improvement** really take place.
 
-Proin congue orci vitae magna rutrum bibendum. Nulla eleifend non
-nisi sed congue. Pellentesque habitant **morbi tristique senectus** et
-netus et malesuada fames ac turpis egestas. Aenean elit turpis,
-pellentesque vel ante vitae, rutrum tincidunt nisi. Nunc molestie,
-nulla at rhoncus molestie, dolor est gravida sem, a sollicitudin leo
-orci sed turpis. Mauris vel ornare nulla, nec **efficitur eros**. Sed
-commodo, odio aliquam [pretium blandit](#), ligula est lacinia eros, sit
-amet ullamcorper leo risus sed metus.
+I view myself as **organized and highly efficient**, from the way I [take notes](./Conceptual-Note-Taking/) conceptually in Markdown and [organize parts](./Modular-Containers-2-0/) in a modular manner to how I [write code](./Learning-Vim-Key-Bindings/) efficiently using Vim. I generally have **high standards** and strong opinions, which can lead to some friction &mdash; like that one day I got so fed up with math notation I [built my own](${social.github}/Notes/blob/master/notes/math-notation.pdf) from scratch. I have never looked back since.
 
-Nunc sed mi augue. Proin egestas tellus elit. Sed tincidunt eleifend
-metus vel efficitur. Fusce **sollicitudin**, diam sit amet **sollicitudin
-euismod**, ligula lorem porttitor nisl, vel lacinia leo lorem ut
-ipsum.
-        `}
+I am **curious, dedicated and independent** &mdash; the three traits that have enabled me to teach myself most of what I know. My interests range from software, hardware and mathematics to philosophy, psychology, language, finance and business. I **love to help** people, but rarely depend on others; I run my own race at my own pace.
+          `}
         />
       </div>
       <div className={styles.buttons}>

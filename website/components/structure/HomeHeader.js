@@ -3,6 +3,7 @@ import VimEditor from './VimEditor';
 import Button from '../Button';
 
 import styles from './HomeHeader.module.css';
+import Marked from '../Marked';
 
 const HomeHeader = () => {
   return (
@@ -10,11 +11,11 @@ const HomeHeader = () => {
       <div />
       <div className={styles.textColumn}>
         <h1>Emilien Breton</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          interdum ornare magna et maximus. Maecenas pellentesque nisi in
-          imperdiet suscipit.
-        </p>
+        <Marked
+          source={`
+Self-taught software developer and autonomous learning machine based in Ottawa, Canada. Currently seeking my first position as a software engineer.
+          `}
+        />
         <div className={styles.buttons}>
           <Button href="#projects">
             <i className="fa-lg fas fa-grip-vertical" />
