@@ -35,6 +35,10 @@ I am **curious, dedicated and independent** &mdash; the three traits that have e
           <i className="fa-lg fab fa-github" />
           GitHub
         </Button>
+        <Button blank href={social.linkedin}>
+          <i className="fa-lg fab fa-linkedin" />
+          LinkedIn
+        </Button>
         <Button blank href={resume}>
           <i className="fa-lg fas fa-file-lines" />
           My Resume
