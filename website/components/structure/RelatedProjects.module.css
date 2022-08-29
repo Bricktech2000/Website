@@ -2,7 +2,7 @@
 
 .RelatedProjects {
   flex-direction: column;
-  margin: 0 -12.5%;
+  margin: 0 -17.5%;
 }
 
 @media (max-aspect-ratio: 1/1) {
