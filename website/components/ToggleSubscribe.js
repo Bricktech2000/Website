@@ -117,7 +117,7 @@ const ToggleSubscribe = () => {
         )}
         {!currentError &&
           (subscribed
-            ? "You'll receive notifications when new projects are published."
+            ? "You'll receive notifications when new projects are published"
             : 'Stay Updated')}
       </div>
     </div>

@@ -15,14 +15,9 @@ const Contact = () => {
       <div className={styles.row}>
         <Marked
           source={`
-If you have **any questions** about this website or any other project, or if
-you just want to say hi, [my inbox](mailto:${social.mail}) is always open.
-For the people who find e-mail a bit outdated, other ways to contact me are
-available [here](https://edgie.emilien.ca/).
+If you have **any questions** about this website or any other project, or if you just want to say hi, [my inbox](mailto:${social.mail}) is always open. For the people who find e-mail a bit outdated, other ways to contact me are available [here](https://edgie.emilien.ca/).
 
-I am currently looking for my **first position as a software engineer** and
-I am open to anything that will challenge me and teach me useful skills. If
-that sounds promising, let's [get in touch](https://edgie.emilien.ca/)!
+I am currently looking for my **first internship as a software engineer** and am open to anything that will challenge me and allow me to learn new skills and grow as a person. If that sounds promising, let's [get in touch](https://edgie.emilien.ca/)!
 
 \`\`\`rust
 let job_type = match opinion {
@@ -31,7 +26,7 @@ let job_type = match opinion {
   "breathtaking" => Some(Job::FullTime),
 }
 \`\`\`
-      `}
+          `}
         />
         {/* <GameOfLife size={32} /> */}
       </div>
