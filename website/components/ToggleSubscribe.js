@@ -16,6 +16,10 @@ const ToggleSubscribe = () => {
   const [currentError, setCurrentError] = useState(null);
   const [subscribed, setSubscribed] = useState(false);
 
+  useEffect(() => {
+    setSubscribed(localStorage.getItem('subscription') == 'true');
+  }, []);
+
   const fail = (err) => {
     setCurrentError(err);
   };
@@ -37,11 +41,11 @@ const ToggleSubscribe = () => {
     };
 
     if ('serviceWorker' in navigator && 'Notification' in window) {
-      if (!isActive) {
+      if (!subscribed) {
         //subscribe
 
         if (Notification.permission === 'denied')
-          return fail('Notification permission denied');
+          return fail('Notification permission denied by user');
 
         try {
           const register = await navigator.serviceWorker.register('/sw.js', {
@@ -51,7 +55,9 @@ const ToggleSubscribe = () => {
           //https://stackoverflow.com/questions/39624676/uncaught-in-promise-domexception-subscription-failed-no-active-service-work/39673915
           await new Promise((resolve) => setTimeout(resolve, 100)); // wait for service worker to activate (breaks on Chromium Edge otherwise)
           if (!register.active)
-            return fail('Registered service worker but did not activate');
+            return fail(
+              'Registered service worker but worker was not activated'
+            );
 
           const subscription = await register.pushManager.subscribe({
             userVisibleOnly: true,
@@ -65,15 +71,15 @@ const ToggleSubscribe = () => {
             });
 
             if (!response.ok)
-              return fail('Subscribe API failed to register subscription');
+              return fail('Subscription API failed to register subscription');
           } catch (e) {
-            return fail('Failed to call subscribe API');
+            return fail('Failed to call subscription API');
           }
         } catch (e) {
           return fail('Failed to register service worker');
         }
 
-        isActive = !isActive;
+        subscribed = !subscribed;
       } else {
         //unsubscribe
 
@@ -87,13 +93,12 @@ const ToggleSubscribe = () => {
           fail('Failed to unregister service worker');
         }
 
-        isActive = !isActive;
+        subscribed = !subscribed;
       }
     } else return fail('Service workers not supported');
 
-    localStorage.setItem('subscription', isActive ? 'true' : 'false');
-    setSubscribed(isActive);
-    setActive(isActive);
+    localStorage.setItem('subscription', subscribed ? 'true' : 'false');
+    setSubscribed(subscribed);
     setCurrentError(null);
   };
 
