@@ -37,7 +37,7 @@ I am **curious, dedicated and independent** &mdash; the three traits that have e
         </Button>
         <Button blank href={resume}>
           <i className="fa-lg fas fa-file-lines" />
-          Resume
+          My Resume
         </Button>
       </div>
     </div>
