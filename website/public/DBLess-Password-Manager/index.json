@@ -5,5 +5,5 @@
   "tags": [],
   "btns": {},
   "desc": "A hash-based, database-less password manager. Writing about both versions of this program and explaining how it works.",
-  "children": ["Web-Version", "Console-POC"]
+  "children": ["Console-POC", "Web-Version"]
 }

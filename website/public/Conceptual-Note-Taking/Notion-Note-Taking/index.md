@@ -1,3 +1,9 @@
+> **This post is outdated**
+>
+> Since writing this post, I have switched to using VS Code for note-taking. With that said, it is a good way to get your feet wet as it goes over the advantages of conceptual note-taking and explains how to take notes more efficiently.
+
+&nbsp;
+
 &nbsp;
 
 A few months ago, I got enrolled into university at [uOttawa](https://www2.uottawa.ca/en). I quickly discovered the importance of note-taking, a skill I hadn't had the chance to develop during highschool. For this reason, I had to find an efficient way to take notes that would have the ability to grow over time. After [a bit of research](https://www.youtube.com/watch?v=MYJsGksojms), I stumbled upon a strategy known as _conceptual note-taking_.
@@ -29,24 +35,6 @@ Even though the teacher is giving you a story in a lecture, look for concepts in
 Writing atomically also allows for easy reorganization of your notes during the lecture itself. Paper notes are almost always taken sequentially, as it is not possible to reorganize information efficiently as it is flying by during lectures.
 
 Taking notes conceptually allows you to build on top of your older notes and make them grow and evolve instead of letting them slowly decay over time.
-
-## Note Format
-
-The conventions I use to take notes are outlined below.
-
-- **Capitalized** headers are for concepts
-- **Lowercase** headers are for general titles
-- **Quotes** are used for factual information and definitions
-- **Italics** are used for tricks or personal definitions
-- **Bold** is used for emphasis
-- **see ...** statements are for prerequisites
-- Notion **backlinks** are for applications of a concept
-- **&mdash; ...** statements are used for citing sources
-- **LaTeX** syntax for all equations
-- variables for equations are defined in separate lines
-- no first-level headings are used as they break in Markdown exports
-- blank lines are avoided as much as possible
-- page names are all _-ing_ verbal groups or singular nominal groups
 
 ## Notion Shortcuts
 

@@ -5,5 +5,5 @@
   "tags": [],
   "btns": {},
   "desc": "Full build documentation of my beetleweight combat robot, from the CAD to the completion of the project!",
-  "children": ["Design-Update", "Initial-Design"]
+  "children": ["Initial-Design", "Design-Update"]
 }

@@ -6,12 +6,12 @@
   "btns": {},
   "desc": "Full build documentation of my 5-inch racing drone, from a virtual prototype to the completion of the project!",
   "children": [
-    "Final-Version",
-    "Frame-Upgrade",
-    "HD-Footage",
-    "Demo-on-6S",
-    "Drone-Build",
+    "Virtual-Prototype",
     "Drone-Parts",
-    "Virtual-Prototype"
+    "Drone-Build",
+    "Demo-on-6S",
+    "HD-Footage",
+    "Frame-Upgrade",
+    "Final-Version"
   ]
 }
