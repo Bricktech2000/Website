@@ -16,9 +16,14 @@ const App = (props) => {
     // https://stackoverflow.com/questions/49411796/how-do-i-detect-i-am-on-server-vs-client-in-next-js
     if (!process.browser) return;
 
+    // reset hues that were previously used as the default hue in older versions of the site
+    const oldHues = ['216', '203'];
+    if (oldHues.includes(localStorage.getItem('colorHue')))
+      localStorage.removeItem('colorHue');
+
     var colorHue;
     var timeout;
-    const defaultHue = '203'; //greenish blue
+    const defaultHue = '210'; // greenish blue
     const storageHue = localStorage.getItem('colorHue');
     if (count == 0) colorHue = storageHue ?? defaultHue;
     else if (count == 1 && storageHue !== defaultHue) colorHue = defaultHue;
