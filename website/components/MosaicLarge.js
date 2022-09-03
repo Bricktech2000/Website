@@ -6,7 +6,7 @@ import useOnScreen from '../hooks/useOnScreen';
 import styles from './MosaicLarge.module.css';
 
 //https://www.emgoto.com/storing-values-with-useref/
-var globalClickCount = 4;
+var globalClickCount = 6;
 var globalUpdate = false;
 
 const MosaicLarge = (props) => {
@@ -19,7 +19,7 @@ const MosaicLarge = (props) => {
   const [clickCount, setClickCount] = useState(globalClickCount);
   const [update, setUpdate] = useState(globalUpdate);
 
-  const loadCount = Math.pow(1.6, clickCount);
+  const loadCount = Math.pow(Math.pow(2, 1 / 2), clickCount);
   const allLoaded = loadCount >= props.children.length;
 
   const ref = useRef(null);
