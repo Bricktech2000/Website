@@ -165,7 +165,7 @@ After a few days of experimenting with different extensions, I decided to settle
   },
   {
     "key": "alt+i",
-    "command": "workbench.action.files.newUntitledFile",
+    "command": "workbench.action.quickOpen",
     "when": "editorTextFocus || editorIsOpen"
   },
   {
