@@ -42,13 +42,15 @@ const Button = (props) => {
       onClick: props.onClick,
     });
   }
+
   if (props.blank) {
     return React.cloneElement(<ButtonHtml />, {
       href: props.href,
       target: '_blank',
-      rel: 'noreferer',
+      rel: 'noreferrer',
     });
   }
+
   return (
     <Link href={props.href} passHref>
       <ButtonHtml />

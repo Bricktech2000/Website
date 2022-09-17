@@ -8,10 +8,16 @@ import '../styles/fade-animation.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import React, { Component, useEffect } from 'react';
-import scrollToHash from '../hooks/scrollToHash';
+import { useRouter } from 'next/router';
 
 function App({ Component, pageProps }) {
-  useEffect(scrollToHash, []);
+  const router = useRouter();
+
+  // hacky scroll to top when hash is empty
+  useEffect(() => {
+    if (window.location.hash === '') window.scrollTo(0, 0);
+  }, [router.asPath]);
+
   return <Component {...pageProps} />;
 }
 

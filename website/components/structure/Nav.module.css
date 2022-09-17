@@ -11,12 +11,27 @@
   color: var(--color);
   transform: rotate(180deg);
 
-  transition: color 0.125s ease-in-out, left 0.25s ease-in-out;
   position: relative;
+  top: 0;
   left: 0;
+  transition: color 0.125s ease-in-out, left 0.25s ease-in-out,
+    top 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
-.Nav:hover i {
+.Nav.rotate i {
+  transform: rotate(270deg);
+}
+
+.Nav:not(.display) i {
+  color: transparent;
+}
+
+.Nav.display:not(.rotate):hover i {
   color: var(--color-l);
   left: -0.1em;
+}
+
+.Nav.display.rotate:hover i {
+  color: var(--color-l);
+  top: -0.1em;
 }
