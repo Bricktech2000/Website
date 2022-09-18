@@ -13,10 +13,16 @@ import { useRouter } from 'next/router';
 function App({ Component, pageProps }) {
   const router = useRouter();
 
-  // hacky scroll to top when hash is empty
+  // hacky restore scroll when hash is empty
   useEffect(() => {
-    if (window.location.hash === '') window.scrollTo(0, 0);
-  }, [router.asPath]);
+    const hashChangeHandler = (url) => {
+      const [href, hash] = url.split('#');
+      if (!hash) window.scrollTo(0, 0);
+    };
+
+    router.events.on('hashChangeComplete', hashChangeHandler);
+    return () => router.events.off('hashChangeComplete', hashChangeHandler);
+  }, []);
 
   return <Component {...pageProps} />;
 }
