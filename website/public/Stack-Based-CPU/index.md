@@ -42,13 +42,13 @@ sub # subtract (2 + 3) from 9
 
 As can be seen above, the `add` instruction pops two values from the top of the stack, adds them, and pushes the result back onto the stack. Apart from the _load 8-bit immediate_ and _load 16-bit immediate_ instructions, all operations operate on operands directly on the stack. For this reason, no registers or flags are required.
 
-Even though raw access to memmory are allowed through specific instructions (`ldo`, `sto`, `lda`, `sta`, `ldb`, `stb`, `ldp`), those memory regions are not intended to store temporary data. However, those instructions are still available for accessing I/O, program ROM, the display buffer, the heap, and so on.
+Even though raw memory access is allowed through specific instructions (namely `ldo`, `sto`, `lda`, `sta`, `ldb`, `stb` and `ldp`), those memory regions are not intended to store temporary data. However, those instructions are still available for accessing I/O, program ROM, the display buffer, the heap, and so on.
 
 Granted, this type of architecture is not very practical for a real-world CPU, but it is an interesting challenge nontheless.
 
 ## Bitwise and Logical Operators
 
-As `true` is represented as `1` in most programming languages, [bitwise operators](https://en.wikipedia.org/wiki/Bitwise_operation) are fundementally different from [logical operators](https://press.rebus.community/programmingfundamentals/chapter/logical-operators/). In this CPU, however, [bitwise operators](https://en.wikipedia.org/wiki/Bitwise_operation) and [logical operators](https://press.rebus.community/programmingfundamentals/chapter/logical-operators/) are one and the same. This is possible as the boolean `true` is represented as the two's complement of the integer `1` (aka unsigned `-1`, `0xFF`, or `0b11111111`).
+As `true` is represented as `1` in most programming languages, [bitwise operators](https://en.wikipedia.org/wiki/Bitwise_operation) are fundementally different from [logical operators](https://press.rebus.community/programmingfundamentals/chapter/logical-operators/). In this CPU, however, [bitwise operators](https://en.wikipedia.org/wiki/Bitwise_operation) and [logical operators](https://press.rebus.community/programmingfundamentals/chapter/logical-operators/) are one and the same. This is possible as the boolean `true` is represented as the two's complement of the integer `1` (equivalent to unsigned `-1`, `0xFF`, or `0b11111111`).
 
 Unfortunately, this system can be a pain to deal with, which is why two of the CPU instructions can be used to convert back and forth between conventional booleans and booleans that the CPU will understand. The `nez` instruction (_not equal to zero_ or _is non-zero_) can be used to convert a value to a boolean. Conversely, the `neg` instruction (_negate_) can be used to convert a boolean to a `0` or a `1`.
 
