@@ -13,9 +13,6 @@
     "Vim",
     "Key Bindings"
   ],
-  "btns": {
-    "Tmux Howto": "tmux.howto.txt",
-    "Fish Shell Howto": "fish%20shell.howto.txt"
-  },
+  "btns": {},
   "desc": "My current shell setup for productivity. Showcasing what it can do and explaining the motivation behind the decisions I took."
 }
