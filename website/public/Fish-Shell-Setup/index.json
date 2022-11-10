@@ -13,6 +13,8 @@
     "Vim",
     "Key Bindings"
   ],
-  "btns": {},
+  "btns": {
+    "My Dotfiles": "https://github.com/Bricktech2000/dotfiles"
+  },
   "desc": "My current shell setup for productivity. Showcasing what it can do and explaining the motivation behind the decisions I took."
 }

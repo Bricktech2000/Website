@@ -2,7 +2,7 @@
 
 8 months ago, I created a [custom prompt](../Clean-Bash-Prompt/) for my bash shell. As `bash` was a bit too limiting for my liking, I figured I would look for an alternative. After a bit of research, I stumbled upon a shell called [Fish Shell](https://fishshell.com/), which seemed to offer all the customization I was after right out of the box.
 
-This post is mainly about the final result of this project and won't cover the details of the setup process. If you wish to customize your shell in a similar way, you can check out the `howto` files I created.
+This post is mainly about the final result of this project and won't cover the details of the setup process. If you wish to customize your shell in a similar way, you can check out [my dotfiles](https://github.com/Bricktech2000/dotfiles) on GitHub.
 
 ## Fish and tmux
 
