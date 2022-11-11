@@ -1,4 +1,5 @@
 export default [
+  'Dotfiles',
   'GPT-3-Chatbot-2-0',
   'DBLess-Password-Manager',
   '3D-Printed-Wallet',

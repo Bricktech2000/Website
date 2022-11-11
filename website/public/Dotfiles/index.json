@@ -1,0 +1,26 @@
+{
+  "title": "Dotfiles",
+  "date": "2022-11-10",
+  "type": "software",
+  "tags": [
+    "Try it Now",
+    "Blog",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "Python",
+    "Git",
+    "RegExp",
+    "Scripting",
+    "Linux",
+    "Bash",
+    "Organization",
+    "Vim",
+    "LaTeX",
+    "Key Bindings"
+  ],
+  "btns": {
+    "Github": "https://github.com/Bricktech2000/dotfiles"
+  },
+  "desc": "A repository of my configuration files for my development setup. Writing about how I used a Git bare repository to manage my dotfiles across multiple machines."
+}
