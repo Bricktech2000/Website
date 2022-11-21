@@ -1,4 +1,5 @@
 export default [
+  'Beetleweight-Combat-Robot',
   'Dotfiles',
   'GPT-3-Chatbot-2-0',
   'DBLess-Password-Manager',
@@ -26,7 +27,6 @@ export default [
   'User-Tracker',
   'Clean-Bash-Prompt',
   'Mini-DIY-Flamethrower',
-  'Beetleweight-Combat-Robot',
   'Spider-Robot',
   'Sequre-SQ-D60',
   'Markdown-Inline-Formatter',

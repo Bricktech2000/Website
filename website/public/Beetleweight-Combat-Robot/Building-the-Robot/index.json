@@ -1,0 +1,26 @@
+{
+  "title": "Building the Robot",
+  "date": "2022-11-20",
+  "type": "hardware",
+  "tags": [
+    "Showcase",
+    "Work in Progress",
+    "Hardware",
+    "Electronics",
+    "3D Printing",
+    "Soldering",
+    "Demo",
+    "3D Design",
+    "Physics Calculations",
+    "Robotics",
+    "RC",
+    "Fusion 360",
+    "Cura"
+  ],
+  "btns": {
+    "Demo Video": "#build-demo",
+    "Build Process Images": "#build-images",
+    "Final Parts List": "#build-parts"
+  },
+  "desc": "Showcasing the entire build process of my beetleweight combat robot, including molding the polyeurethane wheels and machining the side plates and weapon."
+}

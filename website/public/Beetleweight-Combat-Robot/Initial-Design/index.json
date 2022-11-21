@@ -17,7 +17,7 @@
   "btns": {
     "Version 1 Render": "#initial-first",
     "Version 2 Render": "#initial-second",
-    "Parts List": "#initial-parts"
+    "Initial Parts List": "#initial-parts"
   },
   "desc": "Taking you through the design and build process of my 3lb combat robot! Even though it is only CAD, I plan on building it in the near future..."
 }
