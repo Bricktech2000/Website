@@ -9,7 +9,7 @@ const PostSubHeader = (props) => {
   return (
     <header className={styles.PostSubHeader}>
       <h1 className={marked}>{props.info.title}</h1>
-      <div>
+      <div className={styles.desc}>
         <Date date={props.info.date} />
         <Marked source={props.info.desc} />
       </div>

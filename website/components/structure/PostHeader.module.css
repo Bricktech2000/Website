@@ -31,8 +31,6 @@
   gap: 0.25em;
 }
 
-/* https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
-/* (duplicate) */
 .PostHeader .textColumn .tags::after {
   content: '';
   flex: auto;

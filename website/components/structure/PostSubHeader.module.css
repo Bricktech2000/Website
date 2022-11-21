@@ -11,15 +11,13 @@
   margin-bottom: 0.25em;
 }
 
-.PostSubHeader div {
+.PostSubHeader .desc {
   display: block;
-  max-width: 40ch;
   text-align: justify;
+  max-width: 40ch;
 }
 
-.PostSubHeader div * {
-  display: inline;
-  vertical-align: middle;
+.PostSubHeader .desc * {
   padding-left: 0;
 }
 

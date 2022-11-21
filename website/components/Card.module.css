@@ -31,6 +31,15 @@
   margin-bottom: 1em;
 }
 
+.Card .details .desc {
+  display: block;
+  text-align: justify;
+}
+
+.Card .details .desc * {
+  padding-left: 0;
+}
+
 .Card img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -39,21 +48,6 @@
 
   filter: grayscale();
   transition: filter 0.125s ease-in-out;
-}
-
-.Card .tags {
-  /* almost (triplicate) */
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.25em;
-}
-
-/* https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
-/* (duplicate) */
-.Card .tags::after {
-  content: '';
-  flex: auto;
 }
 
 .Card.hover {

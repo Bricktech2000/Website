@@ -39,13 +39,8 @@ const Card = (props) => {
       <div className={styles.details}>
         <strong className={marked}>{props.info.title}</strong>
         <div className={styles.desc}>
-          <Marked source={props.info.desc} />
-        </div>
-        <div className={styles.tags}>
           <Date date={props.info.date} className={styles.date} />
-          {props.info.tags.map((tag) => (
-            <Tag key={tag} label={tag} />
-          ))}
+          <Marked source={props.info.desc} />
         </div>
       </div>
     </a>
