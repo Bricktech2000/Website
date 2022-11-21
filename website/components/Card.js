@@ -36,6 +36,11 @@ const Card = (props) => {
         src={'/' + props.info.id + '/index.jpg'}
         alt={props.info.title + ' thumbnail image'}
       />
+      {props.pinned && (
+        <div className={styles.pin}>
+          <i className="fas fa-thumbtack"></i>
+        </div>
+      )}
       <div className={styles.details}>
         <strong className={marked}>{props.info.title}</strong>
         <div className={styles.desc}>

@@ -11,10 +11,8 @@ const Projects = () => {
     <div className={styles.Projects}>
       <a className={marked} name="projects" style={{ fontSize: 0 }} />
       <h1 className={marked}>Personal Projects</h1>
-      <h2 className={marked}>Pinned Projects</h2>
-      <ProjectsPinned />
-      <h2 className={marked}>Latest Projects</h2>
       <ToggleSubscribe /> <br />
+      <ProjectsPinned />
       <ProjectsLatest />
     </div>
   );

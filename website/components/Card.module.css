@@ -40,6 +40,25 @@
   padding-left: 0;
 }
 
+.Card .pin {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  width: 2em;
+  height: 2em;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--light);
+  border-radius: 100%;
+  background-color: var(--bg);
+  transition: background-color 0.125s ease-in-out, color 0.125s ease-in-out;
+}
+
+.Card .pin i {
+}
+
 .Card img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -56,6 +75,11 @@
 
 .Card.hover .details {
   opacity: 1;
+}
+
+.Card.hover .pin {
+  background-color: transparent;
+  color: var(--color);
 }
 
 /* light mode */

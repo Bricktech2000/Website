@@ -17,7 +17,7 @@ const ProjectsPinned = () => {
         {Object.keys(info)
           .slice(0, 6)
           .map((id) => (
-            <Card key={id} info={info[id]} />
+            <Card key={id} info={info[id]} pinned />
           ))}
       </MosaicSmall>
     </div>
