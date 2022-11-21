@@ -116,7 +116,7 @@ const ToggleSubscribe = () => {
               again later.
             </p>
             <p>
-              <strong>Error Code</strong>: {currentError}
+              <strong>Error Code</strong> {currentError}
             </p>
           </div>
         )}
