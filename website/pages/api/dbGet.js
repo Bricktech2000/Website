@@ -30,7 +30,9 @@ export default async function dbGet(req, res) {
       //https://stackoverflow.com/questions/1069666/sorting-object-property-by-values
 
       response = Object.fromEntries(
-        Object.entries(output).sort(([, a], [, b]) => b.score - a.score)
+        Object.entries(output)
+          .sort(([, a], [, b]) => b.score - a.score)
+          .slice(0, 8)
       );
       break;
     case 'all':
