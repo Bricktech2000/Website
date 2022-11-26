@@ -5,7 +5,7 @@ import Button from '../Button';
 
 import styles from './About.module.css';
 import { Marked as marked } from '../Marked.module.css';
-import { social, resume } from '../../records/consts';
+import { social, resume, domain } from '../../records/consts';
 
 const About = () => {
   const parallaxRef = useParallax((current, value) => {
@@ -24,7 +24,7 @@ const About = () => {
           source={`
 **Problem-solving** and **critical thinking** are two of my most prominent skills. I love exploring new hobbies and interests to find out where they take me. With that said, I often become unmotivated when not challenged; I can't stand inefficiency. In my opinion, coming up with creative ideas isn't sufficient. Acting on them and reflecting on the outcome is where the **learning and self-improvement** really take place.
 
-I view myself as **organized and highly efficient**, from the way I [take notes](./Conceptual-Note-Taking/) conceptually in Markdown and [organize parts](./Modular-Containers-2-0/) in a modular manner to how I [write code](./Learning-Vim-Key-Bindings/) efficiently using Vim. I generally have **high standards** and strong opinions, which can lead to some friction &mdash; like that one day I got so fed up with math notation I [built my own](${social.github}/Notes/blob/master/notes/math%20notation.pdf) from scratch. With that said, I enjoy getting my opinions challenged because that's what allows me to improve.
+I view myself as **organized and highly efficient**, from the way I [take notes](./Conceptual-Note-Taking/) conceptually in Markdown and [organize parts](./Modular-Containers-2-0/) in a modular manner to how I [write code](./Learning-Vim-Key-Bindings/) efficiently using Vim. I generally have **high standards** and strong opinions, which can lead to some friction &mdash; like that one day I got so fed up with math notation I [built my own](https://notes.${domain}/math%20notation/) from scratch. With that said, I enjoy getting my opinions challenged because that's what allows me to improve.
 
 I am **curious, dedicated and independent** &mdash; the three traits that have enabled me to teach myself most of what I know. My interests range from software, hardware and mathematics to psychology, language, finance and business. I also **love to help** people and learn from those with more experience than myself.
           `}
