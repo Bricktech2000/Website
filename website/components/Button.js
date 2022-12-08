@@ -39,7 +39,11 @@ const Button = (props) => {
 
   if (props.onClick) {
     return React.cloneElement(<ButtonHtml />, {
-      onClick: props.onClick,
+      onClick: (...args) => {
+        args[0].preventDefault();
+        props.onClick(...args);
+      },
+      href: '#',
     });
   }
 

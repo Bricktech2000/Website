@@ -11,7 +11,7 @@ I used to think that _combat robots_ were enourmous machines that cost thousands
 #initial-first
 
 The design goal of the first version of the robot was very simple: **maximize mobility**. Here is a `3D render` of it:
-![render of first version of combat robot](Initial-Design/Assembly_1_2021-Feb-02_03-24-59PM-000_CustomizedView22055540780_png.png)
+![render of first version of combat robot](Initial-Design/Assembly_1_2021-Feb-02_03-24-59PM-000_CustomizedView22055540780_png.min.png)
 
 I had previously identified that the lack of mobility of some bots caused them to loose matches. In order to combat this, the first version of my combat robot was reversible, meaning it could drive both **right side up** and **up side down**. Moreover, I decided to use omnidirectional wheels to make it as nimble as possible.
 
@@ -27,15 +27,15 @@ This first version looked very promising, but the design was flawed in many ways
 
 The design goals of this second version were completely different from the initial ones: **use a simple and robust chassis to support a huge weapon**. Here is that second version:
 
-![render of second version of combat robot](Initial-Design/Assembly_2_2021-Mar-09_09-47-44PM-000_CustomizedView17152833616.png)
+![render of second version of combat robot](Initial-Design/Assembly_2_2021-Mar-09_09-47-44PM-000_CustomizedView17152833616.min.png)
 
 I started the design with `68 x 36 mm` rubber tires, offering great traction. Then, I designed a completely custom wheel hub to accomodate said tires along with huge `30 x 42 x 7` ball bearings. Whereas most robots of this weight class use the motor shaft as a wheel axle, this assembly ensures that the wheel hubs are supported very effectively on both sides. Here is a `3D render` of it:
 
-![render of second version wheel assembly](Initial-Design/Wheel_Assembly_2021-Mar-10_12-47-48AM-000_CustomizedView1437219039.png)
+![render of second version wheel assembly](Initial-Design/Wheel_Assembly_2021-Mar-10_12-47-48AM-000_CustomizedView1437219039.min.png)
 
 After having designed the wheels, I immediately started prototyping the weapon. A few drafts and I landed on a design that is both robust and easy to manufacture. It consists of `24` steel bolts screwed into an aluminium tube, inside of which the motor bells press fit:
 
-![render of econd version weapon](Initial-Design/Weapon_Assembly_2_2021-Mar-09_11-24-16PM-000_CustomizedView40034001050.png)
+![render of econd version weapon](Initial-Design/Weapon_Assembly_2_2021-Mar-09_11-24-16PM-000_CustomizedView40034001050.min.png)
 
 This design also improves the moment of inertia of the weapon, which is crucial for such a drum spinner.
 
@@ -47,7 +47,7 @@ In essence, by concentrating the mass of the weapon on its outer perimeter, the 
 
 All of the required components were then encapsulated within a very robust chassis. It is made of an `8 mm` thick aluminium exoskeleton with a symmetrical `3D printed` body. It consists of two completely identical halves which are then assembled together using _plastic pins_, facilitating their replacement if one of them ever breaks. Here is a render of the whole body assembly containing all necessary electrical components:
 
-![render of second version top view without cover](Initial-Design/869d4e23-790c-478a-9c14-9575de76ab20.PNG)
+![render of second version top view without cover](Initial-Design/869d4e23-790c-478a-9c14-9575de76ab20.min.png)
 
 #initial-parts
 
