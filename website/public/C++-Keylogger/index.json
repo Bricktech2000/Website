@@ -3,6 +3,10 @@
   "date": "2020-05-23",
   "type": "software",
   "tags": ["Software", "C++", "Hacking", "Windows API", "Low-level", "VS Code"],
-  "btns": { "Download Code": "New/main.cpp", "Sample Code": "#code" },
-  "desc": "Want an easy way to steal passwords? Use a Keylogger! Writing about what is a keylogger, how it works under the hood and how to try it out for yourself."
+  "btns": {
+    "Download Code": "New/main.cpp",
+    "Sample Pseudocode": "#code",
+    "Sample Log": "log.txt"
+  },
+  "desc": "Want an easy way to steal passwords? Use a Keylogger! Writing about what a keylogger is, how it works under the hood and how to try this keylogger out for yourself."
 }

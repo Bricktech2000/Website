@@ -6,17 +6,15 @@ A _keylogger_ is a relatively simple hardware or software device that logs the k
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Keystroke_logging)
 
-In my opinion, _software keyloggers_ are way better than [hardware ones](https://en.wikipedia.org/wiki/Hardware_keylogger) for a few reasons, which is why I decided to make one. Here are some of the reasons why I decided to make a software keylogger:
+In my opinion, in most cases, _software keyloggers_ are better than [hardware ones](https://en.wikipedia.org/wiki/Hardware_keylogger) for a few reasons, which is why I opted for the former. Here are some of the reasons why I decided to make a software keylogger:
 
 - They do not require physical access to a computer
 - They can be used without [specialized hardware](https://en.wikipedia.org/wiki/Hardware_keylogger)
-- They have way more options when it comes to retrieving the logs
-- They can easily steal passwords, so...
-  If you woud like to see how the logs of this keylogger look, you can [click here](./log.txt)!
+- They have way more options when it comes to retrieving their logs
 
 ## How it Works
 
-The keylogger I made is very simple: it works in 3 easy steps.
+The keylogger I made is very simple; it works in 3 main steps.
 
 First, the keylogger listens for key presses. It does so with the following lines of code:
 
@@ -27,9 +25,9 @@ if(keyState == -32767){
 }
 ```
 
-It loops through every key on the keyboard and verifies if it has been pressed using the [`GetAsyncKeyState`](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getasynckeystate) function. If the function returns `-32767`, it means that the key that was passed in as a parameter was pressed once since the last call to the function. However, this only allows us to know the `key code` of the key.
+It loops through every key on the keyboard and checks whether it has been pressed using the [`GetAsyncKeyState`](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getasynckeystate) function. If the function returns `-32767`, it means that the key it was passed as a parameter was pressed once since the last call to the function. However, this only allows us to know the `key code` of the key.
 
-Second, the keylogger needs to take the `key code` of the key that was pressed and transform it into the corresponding [`ASCII`](http://www.asciitable.com/) character, so that we can see which character was typed insted of its `key code`. In order to do so, the keylogger uses the following code:
+Second, the keylogger needs to take the `key code` of the key that was pressed and transform it into the corresponding [`ASCII`](http://www.asciitable.com/) character, so that we can retrieve the actual character that was typed insted of its `key code`. In order to do so, the keylogger uses the following code:
 #code
 
 ```C++
@@ -39,25 +37,25 @@ else if(ret == 2) str = "?";
 else str = "[" + std::to_string((unsigned char)k) + "]";
 ```
 
-The first part of the code calls the [`ToAsciiEx`](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-toasciiex) function, which transforms `key codes` into `ASCII` characters using the current keyboard layout. The second part of the code is for error handling: if `ToAsciiEx` throws an error, the `key code` is displayed inside of square brackets instead (`[` and `]`) to still be able to see that a key was pressed.
+The first part of the code calls the [`ToAsciiEx`](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-toasciiex) function, which transforms `key codes` into `ASCII` characters using the current keyboard layout. The second part of the code is for error handling: if `ToAsciiEx` throws an error, the `key code` is displayed inside of square brackets instead (i.e. `[116]`) to still be able to see that a key was pressed.
 
-Third, the keylogger logs the keys using the `log` function:
+Third, the keylogger logs the characters it has just decoded using the `log` function:
 
 ```C++
 std::cout << str;
 log(str, "log.txt");
 ```
 
-It simply appends the key that was pressed to a file called _log.txt_. [Click here](./log.txt) to see how the logs look! I didn't implement any complicated logging system so that it could be modified easily. If you really want, you could modify this keylogger to send the key strokes to a remote server, just like my Raspberry Pi server. You can [click here](../Raspberry-Pi-server) to read about how it works!
+It simply appends the key that was pressed to a file called _log.txt_. [Click here](./log.txt) to see what the logs look like! I didn't implement any complicated logging system so that it could be modified easily. If you wanted, you could modify this keylogger to send the key strokes to a remote server, such as my [Raspberry Pi server](../Raspberry-Pi-Server).
 
 ## How to Get it
 
 You might be wondering at this point...
 
-> How can I get such an awesome and advanced piece of matrix-like technology for myself???
+> How can I get such an awesome program for myself?
 
-Actually, it isn't that simple... You can [click here](./New/main.cpp) to see the source code of the keylogger, but you will have to compile it for yourself using a `C++` compiler, like _[g++](https://www.cs.bu.edu/fac/gkollios/cs113/Usingg++.html)_ for example. Moreover, it is illegal to use a keylogger without the victim's consent in most countries, so I am not responsible for any trouble that this program might cause.
+You can [click here](./New/main.cpp) to download the source code of the keylogger, but you will have to compile it yourself using a `C++` compiler, such as _[g++](https://www.cs.bu.edu/fac/gkollios/cs113/Usingg++.html)_. With that said, keep in mind that it is illegal to use a keylogger without the victim's consent in most countries; use this program at your own risk and make sure to do your own research before using it.
 
 ## Conclusion
 
-I had already programmed a keylogger before, but it wasn't as good as this one. For example, it wasn't able to register capital letters or symbols made using the `Shift` key, or any other symbols for that matter. I learned a lot about how to translate key codes to actual `ASCII` characters using windows libraries, which is certainely going to be very useful in the future. This wasn't an easy journey, but I am very happy with the result!
+I had already programmed a keylogger before, but it was way worse that this one. For instance, it wasn't able to register capital letters or symbols made using the `Shift` key, or any other symbols for that matter. I learned a lot about how to translate key codes to actual `ASCII` characters using the Windows API, which is certainely going to be very useful in the future. This wasn't an easy journey, but I am very happy with the result!
