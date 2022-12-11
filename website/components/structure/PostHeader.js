@@ -34,9 +34,22 @@ const PostHeader = (props) => {
         {Object.keys(props.info.btns).map((key) => {
           var href = props.info.btns[key];
           const blank = !href.match(/^[\.#]/);
+          const anchor = !!href.match(/^#/);
+          const relative = !!href.match(/^\./);
           if (!blank) href = '/' + props.info.id + '/' + href;
           return (
             <Button key={key} blank={blank} href={href}>
+              {anchor && (
+                <i
+                  className="fas fa-lg fa-play"
+                  style={{ transform: 'rotate(90deg)' }}
+                />
+              )}
+              {relative && <i className="fas fa-file" />}
+              {!anchor && !relative && (
+                <i className="fas fa-lg fa-external-link-alt" />
+              )}
+
               {key}
             </Button>
           );

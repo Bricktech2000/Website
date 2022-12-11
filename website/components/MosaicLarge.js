@@ -53,7 +53,10 @@ const MosaicLarge = (props) => {
             globalUpdate = true;
           }}
         >
-          <i className="fas fa-lg fa-play" />
+          <i
+            className="fas fa-lg fa-play"
+            style={{ transform: 'rotate(90deg)' }}
+          />
           Load More
         </Button>
       )}

@@ -13,7 +13,3 @@
   align-items: center;
   gap: 2em;
 }
-
-.container i {
-  transform: rotate(90deg);
-}
