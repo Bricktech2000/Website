@@ -41,7 +41,7 @@ This is ideal, but it means that a special _LiPo_ charger is necessary to charge
 
 ![arduino nano](Version-3-0/arduino_m.jpg)
 
-The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./13_sketch_mar04a.html), which is a total of `886` lines of code.
+The battery then sends power to the arduino board, in this case an _arduino nano_. I chose it because it has enough digital pins to interface with the _servomotors_, while also being compact enough to fit in the body of the spider. It acts like the brain of a real spider: it takes the input from the transmitter and tells the motors how to move in order to achieve the requested movement. It executes [the program](./Version-3-0/13_sketch_mar04a.html), which is a total of `886` lines of code.
 
 ![9g servo](Version-3-0/servo.jpg)
 

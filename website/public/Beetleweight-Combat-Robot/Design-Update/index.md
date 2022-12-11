@@ -47,4 +47,4 @@ I had to run some very complex math to figure all of this out. First, I divided 
 
 ## Conclusion
 
-At this point in time, I am basically ready to start building the robot. I know how to mold the wheels, how to laser cut the side armor plates and how to machine the weapon disk. I will keep [staring at the design](./staring.html) for a little while to make sure it will work as intended, after which I should start building it!
+At this point in time, I am basically ready to start building the robot. I know how to mold the wheels, how to laser cut the side armor plates and how to machine the weapon disk. I will keep [staring at the design](./Design-Update/staring.html) for a little while to make sure it will work as intended, after which I should start building it!

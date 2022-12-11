@@ -75,4 +75,4 @@ Because of this robust chassis and its powerful weapon, I believe that this bot 
 
 ## Updates Coming Soon!
 
-> When I get around to buying all the parts needed (totalling about `300 CAD`), I will update this post for you to follow along!
+> When I get around to buying all the parts needed, totalling around `300 CAD`, I will update this post for you to follow along!
