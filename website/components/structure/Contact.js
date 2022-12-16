@@ -15,20 +15,12 @@ const Contact = () => {
       <div className={styles.row}>
         <Marked
           source={`
-If you have **any questions** about this website or any other project, or if you just want to say hi, [my inbox](mailto:${social.mail}) is always open. For the people who find e-mail a bit outdated, there are [other ways to contact me](https://edgie.emilien.ca/).
+If you have **questions or feedback** about this website or any other project, or if you just want to say hi, [my inbox](mailto:${social.mail}) is always open. For the people who find e-mail a bit outdated, there are other ways to [contact me](https://edgie.emilien.ca/).
 
-I am currently looking for my **first internship as a software engineer** and am open to anything that will challenge me and allow me to learn new skills and grow as a person. If that sounds promising, let's [get in touch](https://edgie.emilien.ca/)!
-
-\`\`\`rust
-let job_type = match opinion {
-  "boring"       => None,
-  "impressive"   => Some(Job::Internship),
-  "breathtaking" => Some(Job::FullTime),
-}
-\`\`\`
+I am currently employed as a software engineer at [Zeptile Software](https://www.linkedin.com/company/zeptile-software-inc/) and am not actively seeking new job opportunities at this time. With that said, I am always interested in expanding my professional network and connecting with people who can offer valuable insights and learning opportunities. If you'd like to connect, don't hesitate to [reach out](https://edgie.emilien.ca/)!
           `}
         />
-        {/* <GameOfLife size={32} /> */}
+        <GameOfLife size={32} />
       </div>
     </div>
   );

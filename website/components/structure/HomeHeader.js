@@ -13,7 +13,7 @@ const HomeHeader = () => {
         <h1>Emilien Breton</h1>
         <Marked
           source={`
-Self-taught software developer and autonomous learning machine based in Ottawa, Canada. Currently seeking my first position as a software engineer.
+Self-taught software engineer and autonomous learning machine based in Ottawa, Canada
           `}
         />
         <div className={styles.buttons}>
