@@ -12,9 +12,9 @@ With a few years of lectures ahead of me, I knew I had to find some way to make 
 
 [Lecture Speedup](https://github.com/Bricktech2000/Lecture-Speedup) is a quick extension I made that injects key bindings onto any webpage containing a HTML `video` element through the JavaScript console. It works on [YouTube](https://www.youtube.com/), [Zoom](https://zoom.us/), [Dropbox](https://www.dropbox.com/) and many websites, which makes it ideal for blazing through lecture recordings. Here is a list of the key bindings it implements:
 
-- Up and down arrow increase and decrease the playback rate, respectively
-- While paused, left and right arrows move the playhead a set number of seconds
-- While playing, left and right arrows increase the playback rate while held down
+- Up and down arrows increase and decrease the playback rate, respectively
+- Left and right arrows move the playhead a set number of seconds
+- Right control key increases the playback rate while held down
 - Right shift key plays and pauses the video
 
 Even though this extension only solves the first two of the three issues I set out to resolve, it has proven extremely useful for learning concepts quicker. After a bit of self-promo on a Discord server for a programming class, other students even told me they used [Lecture Speedup](https://github.com/Bricktech2000/Lecture-Speedup) to study more efficiently before exams.
