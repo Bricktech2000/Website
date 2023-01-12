@@ -5,7 +5,7 @@ import styles from './SkillsGraph.module.css';
 
 // TODO: use `useCanvas` hook, see GameOfLife
 
-var isOnScreen = false;
+let isOnScreen = false;
 
 const SkillsGraph = () => {
   const canvasRef = useRef(null);
@@ -34,7 +34,7 @@ const SkillsGraph = () => {
   const linkDistance = 0.025;
 
   useEffect(() => {
-    var links = {
+    let links = {
       // Skills: ['Software', 'Hardware', 'Design'],
       Software: [
         'Development Tools',
@@ -78,7 +78,7 @@ const SkillsGraph = () => {
       ],
       'UI Design': ['Figma', 'Material UI'],
     };
-    var highlighted = [
+    let highlighted = [
       'Development Tools',
       'Other Technologies',
       'Programming Languages',
@@ -87,7 +87,7 @@ const SkillsGraph = () => {
       'Hardware',
       'Interests',
     ];
-    var bolded = [
+    let bolded = [
       'Software',
       'Hardware',
       'Interests',
@@ -99,7 +99,7 @@ const SkillsGraph = () => {
     const gravity = (d) => 1 / d;
     const dampen = (d) => Math.pow(d, 3);
 
-    var nodes = {};
+    let nodes = {};
     const randomNode = (text) => {
       return {
         // spawn in 0.5 x 0.5 centered square with 0.25 margin
@@ -114,9 +114,9 @@ const SkillsGraph = () => {
       };
     };
 
-    for (var name in links) {
+    for (let name in links) {
       nodes[name] = randomNode(name);
-      for (var child of links[name]) {
+      for (let child of links[name]) {
         nodes[child] = randomNode(child);
         if (!links[child]) links[child] = [];
         links[child].push(name);
@@ -140,17 +140,17 @@ const SkillsGraph = () => {
       ctx.textBaseLine = 'middle';
 
       // update
-      for (var node of Object.values(nodes)) {
+      for (let node of Object.values(nodes)) {
         // center force
-        var dvx = 0;
-        var dvy = 0;
+        let dvx = 0;
+        let dvy = 0;
         dvx -= dampen(node.x - 0.5) * centerForce;
         dvy -= dampen(node.y - 0.5) * centerForce;
 
         // repel force
-        var dx = 0;
-        var dy = 0;
-        for (var other of Object.values(nodes)) {
+        let dx = 0;
+        let dy = 0;
+        for (let other of Object.values(nodes)) {
           if (other === node) continue;
           // if (links[node.text].includes(other.text)) continue;
           // if (links[other.text].includes(node.text)) continue;
@@ -166,9 +166,9 @@ const SkillsGraph = () => {
         dvy += dy * repelForce;
 
         // link force
-        var dx = 0;
-        var dy = 0;
-        for (var other of Object.values(links[node.text])) {
+        /* let */ dx = 0;
+        /* let */ dy = 0;
+        for (let other of Object.values(links[node.text])) {
           other = nodes[other];
           if (other === node) continue;
           const x = node.x - other.x;
@@ -212,9 +212,9 @@ const SkillsGraph = () => {
       };
 
       // draw edges
-      for (var node of Object.values(nodes)) {
+      for (let node of Object.values(nodes)) {
         if (links[node.text] !== undefined) {
-          for (var child of links[node.text]) {
+          for (let child of links[node.text]) {
             setColors(
               node.highlighted && nodes[child].highlighted,
               node.bolded && nodes[child].bolded
@@ -230,7 +230,7 @@ const SkillsGraph = () => {
       }
 
       // draw nodes
-      for (var node of Object.values(nodes)) {
+      for (let node of Object.values(nodes)) {
         setColors(node.highlighted, node.bolded);
 
         ctx.beginPath();
@@ -240,7 +240,7 @@ const SkillsGraph = () => {
       }
 
       // draw text
-      for (var node of Object.values(nodes)) {
+      for (let node of Object.values(nodes)) {
         setColors(node.highlighted, node.bolded);
 
         ctx.beginPath();

@@ -21,8 +21,8 @@ const App = (props) => {
     if (oldHues.includes(localStorage.getItem('colorHue')))
       localStorage.removeItem('colorHue');
 
-    var colorHue;
-    var timeout;
+    let colorHue;
+    let timeout;
     const defaultHue = '210'; // greenish blue
     const storageHue = localStorage.getItem('colorHue');
     if (count == 0) colorHue = storageHue ?? defaultHue;
@@ -36,7 +36,7 @@ const App = (props) => {
       '--color-h': `hsl(${parseInt(colorHue) + 15}, 75%, 50%)`,
     };
 
-    for (var cssName in cssColors)
+    for (let cssName in cssColors)
       document.documentElement.style.setProperty(cssName, cssColors[cssName]);
     clearTimeout(timeout);
     timeout = setTimeout(() => {

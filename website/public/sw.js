@@ -16,7 +16,7 @@ self.onnotificationclick = function (event) {
         type: 'window',
       })
       .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
+        for (let i = 0; i < clientList.length; i++) {
           const client = clientList[i];
           if (client.url == '/' + data.id + '/' && 'focus' in client)
             return client.focus();

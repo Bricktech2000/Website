@@ -3,7 +3,7 @@ import useOnScreen from '../hooks/useOnScreen';
 
 import styles from './GameOfLife.module.css';
 
-var isOnScreen = false;
+let isOnScreen = false;
 
 // https://stackoverflow.com/questions/57530728/react-canvas-with-ref-omitting-calling-ref-current-and-ctx
 const useCanvas = (callback) => {
@@ -20,7 +20,7 @@ const useCanvas = (callback) => {
 
 const GameOfLife = (props) => {
   const gridSize = props.size;
-  var grid;
+  let grid;
 
   const canvasRef = useCanvas(([canvas, ctx]) => {
     const style = getComputedStyle(document.documentElement);
@@ -65,11 +65,11 @@ const GameOfLife = (props) => {
       .fill(null)
       .map(() => new Array(gridSize).fill(null).map(() => new Cell()));
 
-    for (var x = 0; x < gridSize; x++) {
-      for (var y = 0; y < gridSize; y++) {
-        var neighbours = [];
-        for (var dx = -1; dx <= 1; dx++)
-          for (var dy = -1; dy <= 1; dy++)
+    for (let x = 0; x < gridSize; x++) {
+      for (let y = 0; y < gridSize; y++) {
+        let neighbours = [];
+        for (let dx = -1; dx <= 1; dx++)
+          for (let dy = -1; dy <= 1; dy++)
             neighbours.push(
               grid[(x + dx + gridSize) % gridSize][
                 (y + dy + gridSize) % gridSize

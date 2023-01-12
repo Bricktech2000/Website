@@ -23,7 +23,7 @@ const checkSubscriptions = async () => {
     const subscriptions = await getSubscriptions();
     const payload = JSON.stringify(data);
 
-    for (var key of Object.keys(subscriptions))
+    for (let key of Object.keys(subscriptions))
       webPush.sendNotification(subscriptions[key], payload).catch((err) => {
         // console.log(err);
       });

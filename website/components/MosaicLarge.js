@@ -6,8 +6,8 @@ import useOnScreen from '../hooks/useOnScreen';
 import styles from './MosaicLarge.module.css';
 
 //https://www.emgoto.com/storing-values-with-useref/
-var globalClickCount = 6;
-var globalUpdate = false;
+let globalClickCount = 6;
+let globalUpdate = false;
 
 const MosaicLarge = (props) => {
   const parallaxRef = useParallax((current, value) => {

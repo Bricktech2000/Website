@@ -5,7 +5,7 @@ import styles from './ToggleSubscribe.module.css';
 import { Marked as marked } from './Marked.module.css';
 
 const ToggleSubscribe = () => {
-  var vapidDetails = {};
+  let vapidDetails = {};
   process.browser &&
     (async () => {
       vapidDetails.public = (

@@ -14,7 +14,7 @@ const VimEditor = () => {
       .fill(null)
       .map(() => new Array(width).fill(' '));
 
-    var cursor = [0, 0];
+    let cursor = [0, 0];
     const type = (text) => {
       const type_char = (char) => {
         if (char == '\n') cursor = [0, ++cursor[1]];
@@ -26,7 +26,7 @@ const VimEditor = () => {
     type(content);
     const position = `${cursor[1] + 1},${cursor[0] + 1}`;
 
-    var x = cursor[0];
+    let x = cursor[0];
     if (mode != 'insert') x = Math.max(0, x - 1);
     grid[cursor[1]][x] += 'CURSOR';
     if (mode == 'visual line') grid[cursor[1]][x] += 'VISUAL_LINE';
@@ -65,7 +65,7 @@ const VimEditor = () => {
   };
 
   useEffect(() => {
-    var mounted = true;
+    let mounted = true;
 
     (async () => {
       set_editor_content('', 'normal');
@@ -74,7 +74,7 @@ const VimEditor = () => {
       await sleep(1000);
 
       const type_out = async (header, content) => {
-        for (var i = 0; i < content.length; i++) {
+        for (let i = 0; i < content.length; i++) {
           await sleep(50);
           set_editor_content(header + content.slice(0, i + 1), 'insert');
         }
@@ -89,7 +89,7 @@ const VimEditor = () => {
       await type_out('', header);
       await sleep(1000);
       while (mounted) {
-        for (var content of contents) {
+        for (let content of contents) {
           await sleep(250);
           await type_out(header, content);
           await sleep(250);

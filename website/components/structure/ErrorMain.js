@@ -15,7 +15,7 @@ const ErrorMain = (props) => {
         <p>{props.info.desc}</p>
         <div className={styles.buttons}>
           {Object.keys(props.info.btns).map((key) => {
-            var href = props.info.btns[key];
+            let href = props.info.btns[key];
             return (
               <Button key={key} href={href}>
                 {key}

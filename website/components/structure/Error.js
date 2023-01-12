@@ -10,7 +10,7 @@ import Loading from '../Loading';
 import useDbGet from '../../hooks/useDbGet';
 
 const Error = (props) => {
-  var { status } = props ?? '400';
+  const { status } = props ?? '400';
 
   const isError = errorMap.includes(status);
   if (!isError) status = '400';

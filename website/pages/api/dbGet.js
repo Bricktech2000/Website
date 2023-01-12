@@ -7,7 +7,7 @@ export default async function dbGet(req, res) {
   //https://nextjs.org/docs/api-routes/dynamic-api-routes
   //https://nextjs.org/docs/api-routes/response-helpers
   const { type, id } = JSON.parse(req.body);
-  var response = {};
+  let response = {};
 
   switch (type) {
     case 'exact':
@@ -15,8 +15,8 @@ export default async function dbGet(req, res) {
       break;
     case 'like':
       const info = await getSafe(id);
-      var output = {};
-      for (var id2 of postMap) {
+      let output = {};
+      for (let id2 of postMap) {
         output[id2] = await getSafe(id2);
 
         //https://stackoverflow.com/questions/1885557/simplest-code-for-array-intersection-in-javascript
@@ -37,14 +37,14 @@ export default async function dbGet(req, res) {
       break;
     case 'all':
       if (typeof id === 'undefined') {
-        for (var id2 of postMap) {
+        for (let id2 of postMap) {
           response[id2] = await getSafe(id2);
         }
       } else response[id] = await getSafe('502');
       break;
     case 'pinned':
       if (typeof id === 'undefined') {
-        for (var id2 of pinnedMap) {
+        for (let id2 of pinnedMap) {
           response[id2] = await getSafe(id2);
           response[id2].pinned = pinnedMap[id2];
         }

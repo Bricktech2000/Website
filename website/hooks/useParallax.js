@@ -5,7 +5,7 @@ const useParallax = (callback, constrain = true) => {
 
   const scrollHandler = () => {
     if (!parallaxRef.current) return;
-    var percentage =
+    let percentage =
       1 -
       parallaxRef.current.getBoundingClientRect().top /
         document.documentElement.clientHeight;

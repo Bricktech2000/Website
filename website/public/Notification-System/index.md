@@ -24,7 +24,7 @@ First, the client makes an `HTTP POST` request to `/subscribe` in order to tell 
 
 ```javascript
 self.addEventListener('push', (event) => {
-  var data = event.data.json();
+  const data = event.data.json();
   self.registration.showNotification(data.title, data);
 });
 ```
@@ -34,8 +34,8 @@ For anyone interested, below is the code used to send a notification to the clie
 ```javascript
 if (pages != lastPages) {
   /*...*/
-  var parsed = JSON.parse(pages);
-  var info = JSON.parse(
+  const parsed = JSON.parse(pages);
+  const info = JSON.parse(
     (
       await include(
         '../../pages/' + parsed[Object.keys(parsed)[0]] + '/info.json'

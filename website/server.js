@@ -11,15 +11,15 @@ const fs = require('fs');
 const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
-var p = `/etc/letsencrypt/live/${domain}/`;
-var credentials = {
+let p = `/etc/letsencrypt/live/${domain}/`;
+let credentials = {
   key: https && fs.readFileSync(p + 'privkey.pem'),
   cert: https && fs.readFileSync(p + 'fullchain.pem'),
 };
 
 //start an HTTP redirect server
 if (https) {
-  var httpServer = http.createServer(function (req, res) {
+  let httpServer = http.createServer(function (req, res) {
     res.writeHead(301, {
       Location: `https://${req.headers['host']}${req.url}`,
     });
@@ -29,14 +29,14 @@ if (https) {
 }
 
 //start the server and log to the console
-var port = https ? 443 : 80;
+let port = https ? 443 : 80;
 app.prepare().then(() => {
   createServer(credentials, (req, res) => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
   }).listen(port, (err) => {
     if (err) throw err;
-    var host = 'localhost';
+    let host = 'localhost';
     console.log(`listening on ${host}:${port}\n`);
   });
 });

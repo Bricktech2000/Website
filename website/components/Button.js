@@ -19,7 +19,7 @@ const Button = (props) => {
       Update: '048-next',
       Previous: '012-arrow-2',
     };
-    for (var icon of Object.keys(icons))
+    for (let icon of Object.keys(icons))
       if (props.children.includes(icon)) return icons[icon];
   };
 

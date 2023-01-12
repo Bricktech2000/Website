@@ -29,9 +29,9 @@ It turns out, it is incredibly easy to implement DoS protection on a NodeJS serv
 #code
 
 ```javascript
-var Ddos = require('ddos');
+const Ddos = require('ddos');
 //...
-var ddos = new Ddos({
+const ddos = new Ddos({
   burst: 25, // req
   limit: 75, // req
   maxcount: 100, // req

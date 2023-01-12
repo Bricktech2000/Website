@@ -32,7 +32,7 @@ const PostHeader = (props) => {
       <div />
       <div className={styles.buttons}>
         {Object.keys(props.info.btns).map((key) => {
-          var href = props.info.btns[key];
+          let href = props.info.btns[key];
           const blank = !href.match(/^[\.#]/);
           const anchor = !!href.match(/^#/);
           const relative = !!href.match(/^\./);
