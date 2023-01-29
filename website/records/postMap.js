@@ -1,4 +1,5 @@
 export default [
+  'Conceptual-Note-Taking',
   'Beetleweight-Combat-Robot',
   'Dotfiles',
   'GPT-3-Chatbot-2-0',
@@ -7,7 +8,6 @@ export default [
   'uOttawa-Website-Patch',
   'RateMyProf-Extension',
   'Fish-Shell-Setup',
-  'Conceptual-Note-Taking',
   'Modular-Containers-2-0',
   'Lecture-Speedup',
   'LED-Strip-Lighting',

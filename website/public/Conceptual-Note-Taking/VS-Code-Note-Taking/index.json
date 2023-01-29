@@ -21,7 +21,6 @@
     "Key Bindings"
   ],
   "btns": {
-    "Published Notes": "https://notes.emilien.ca/",
     "Github": "https://github.com/Bricktech2000/Notes",
     "Note Tree View": "#tree",
     "Markdown Preview Screenshot": "#img"

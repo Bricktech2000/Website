@@ -1,0 +1,27 @@
+{
+  "title": "Vim Note-Taking",
+  "date": "2023-01-28",
+  "type": "blog",
+  "tags": [
+    "Blog",
+    "Showcase",
+    "Work in Progress",
+    "Software",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Git",
+    "Web",
+    "Demo",
+    "RegExp",
+    "Markdown",
+    "Linux",
+    "Vim",
+    "LaTeX",
+    "Key Bindings"
+  ],
+  "btns": {
+    "Published Notes": "https://notes.emilien.ca/"
+  },
+  "desc": "Description"
+}

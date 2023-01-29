@@ -1,3 +1,7 @@
+> **This post is outdated**
+>
+> Since writing this post, I have switched to using Neovim for note-taking. This post was preserved nonetheless.
+
 ## Preface
 
 A few months ago, I started taking notes conceptually using [Notion](https://www.notion.so/product). Even though choosing conceptual note-taking was definitely the right way to go, I felt like Notion was holding me back somewhat. It did offer a lot of features, but it lacked the customization I was after.
