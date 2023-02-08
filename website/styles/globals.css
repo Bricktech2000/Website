@@ -22,7 +22,9 @@
   --br-s: 0.5em;
 
   --sans: Roboto, sans-serif;
-  --mono: 'Fira Code', monospace;
+  --mono: 'Fira Code VF', monospace;
+  --stylistic-sets: 'zero', 'onum', 'cv01', 'cv02', 'cv06', 'ss01', 'cv14',
+    'ss04', 'cv18', 'ss07';
 }
 
 * {

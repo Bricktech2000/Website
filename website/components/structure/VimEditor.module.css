@@ -10,6 +10,7 @@
   background: var(--bg-l);
   font-size: min(1.5vw, 1em);
   font-family: var(--mono);
+  font-feature-settings: var(--stylistic-sets);
   line-height: 1.25;
 }
 

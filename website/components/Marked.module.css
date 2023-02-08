@@ -50,6 +50,7 @@ hr.Marked {
 
   color: var(--bright);
   font-family: var(--mono);
+  font-feature-settings: var(--stylistic-sets);
   font-weight: 400;
 }
 
@@ -81,6 +82,7 @@ strong.Marked {
   display: inline;
   color: var(--bright);
   font-family: var(--mono);
+  font-feature-settings: var(--stylistic-sets);
   font-weight: 600;
   font-size: 0.8em;
 }
@@ -160,6 +162,7 @@ code.Marked,
 pre.Marked code {
   font-style: normal;
   font-family: var(--mono);
+  font-feature-settings: var(--stylistic-sets);
   font-weight: 400;
   font-size: 0.8em; /* 4/5 of normal */
   background-color: var(--bg-l);
