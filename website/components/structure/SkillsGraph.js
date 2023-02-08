@@ -27,10 +27,44 @@ const SkillsGraph = () => {
     };
   }, []);
 
+  let cursorX = null;
+  let cursorY = null;
+
+  useEffect(() => {
+    const track = (e) => {
+      e.preventDefault();
+
+      var rect = canvasRef.current.getBoundingClientRect();
+      cursorX =
+        ((e.clientX || e.touches[0].clientX) - rect.left) /
+        (rect.right - rect.left);
+      cursorY =
+        ((e.clientY || e.touches[0].clientY) - rect.top) /
+        (rect.bottom - rect.top);
+    };
+    const stop = () => {
+      cursorX = null;
+      cursorY = null;
+    };
+
+    canvasRef.current.addEventListener('mousemove', track);
+    canvasRef.current.addEventListener('mouseleave', stop);
+    canvasRef.current.addEventListener('touchmove', track);
+    canvasRef.current.addEventListener('touchend', stop);
+
+    return () => {
+      window.removeEventListener('mousemove', track);
+      window.removeEventListener('mouseleave', stop);
+      window.removeEventListener('touchmove', track);
+      window.removeEventListener('touchend', stop);
+    };
+  });
+
   const centerForce = 0.025;
   const repelForce = 0.00004;
   const linkForce = 0.25;
   const dragForce = 0.25;
+  const cursorForce = 0.0001;
   const linkDistance = 0.025;
 
   useEffect(() => {
@@ -186,6 +220,19 @@ const SkillsGraph = () => {
         // drag force
         node.vx *= 1 - dragForce;
         node.vy *= 1 - dragForce;
+
+        // cursor force
+        if (cursorX !== null && cursorY !== null) {
+          const threshold = (d) => (Math.abs(d) < 0.1 ? Math.sign(d) * 0.1 : d);
+
+          const x = cursorX - node.x;
+          const y = cursorY - node.y;
+          const distance = Math.hypot(x, y);
+          const angle = Math.atan2(y, x);
+
+          dvx -= Math.cos(angle) * gravity(distance) * cursorForce;
+          dvy -= Math.sin(angle) * gravity(distance) * cursorForce;
+        }
 
         node.vx += dvx;
         node.vy += dvy;
