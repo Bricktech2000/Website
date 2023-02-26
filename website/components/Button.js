@@ -10,7 +10,7 @@ const Button = (props) => {
       Code: '047-coding',
       Demo: '019-play',
       View: '019-play',
-      Github: '045-cat',
+      GitHub: '045-cat',
       List: '022-list',
       Image: '008-document',
       Photo: '008-document',

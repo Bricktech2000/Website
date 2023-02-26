@@ -16,7 +16,7 @@ Well, I am happy to tell you that I found the solution! _Caps Hotkeys_ is a soft
 
 ## How to Use it
 
-If you intend to use this software on a Windows computer, you can directly download the program by [clicking here](./Caps%20Hotkeys.exe). However, I have not compiled the code to run under Linux since it uses `Win32` libraries to work. If you would like to take a look at the code for yourself, you can [click here](https://github.com/Bricktech2000/Caps-Hotkeys-V2) to see its Github repository!
+If you intend to use this software on a Windows computer, you can directly download the program by [clicking here](./Caps%20Hotkeys.exe). However, I have not compiled the code to run under Linux since it uses `Win32` libraries to work. If you would like to take a look at the code for yourself, you can [click here](https://github.com/Bricktech2000/Caps-Hotkeys-V2) to see its GitHub repository!
 
 > And how do on earth do I use it?
 

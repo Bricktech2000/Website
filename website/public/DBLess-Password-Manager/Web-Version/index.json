@@ -22,7 +22,7 @@
   ],
   "btns": {
     "Live Web Version": "https://dbless.emilien.ca/",
-    "Github": "https://github.com/Bricktech2000/DBLess-Password-Manager"
+    "GitHub": "https://github.com/Bricktech2000/DBLess-Password-Manager"
   },
   "desc": "A hash-based, database-less password manager. Writing about the web version of this program and telling you how you can try it out."
 }

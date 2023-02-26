@@ -16,7 +16,7 @@ This program is extremely simple, only consisting of about `50` source lines of 
 
 Well, turns out this was the easiest part. I thought I'd have to make the program move the mouse in a human-like manner, click on UI elements in the Messenger website, interact with many items in the webpage to complete a [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)... In reality, the only thing I need the program to do to fool Messenger is to refresh the page every couple of minutes.
 
-If you would like to see how this bot is programmed or would like to try it for yourself, don't forget to check its [Github](https://github.com/Bricktech2000/Messenger-Always-Active)!
+If you would like to see how this bot is programmed or would like to try it for yourself, don't forget to check its [GitHub](https://github.com/Bricktech2000/Messenger-Always-Active)!
 
 #demo
 

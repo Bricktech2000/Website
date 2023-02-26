@@ -22,7 +22,7 @@ After reading that, **I was hooked**. I already had my social media links on [my
 
 I could've simply used a website such as [Linktree](https://linktr.ee/) to list all my social media links and be done in `10` minutes, but you know me. That wasn't happening.
 
-I wanted to create my very own version of that website so that I could customize it exactly how I wanted it. It was `22:00` when I had the great idea to try and make the whole thing in one sitting. Fortunately, a few hours later at `2:18` the next morning, I was done! I somehow managed to create the project, initialize a [Github repo](https://github.com/Bricktech2000/Edgie), copy the whole thing on my server through `SSH` and get a subdomain registered in [Cloudflare](https://www.cloudflare.com/) in less than 5 hours. Yes, I am flexing. If you wish to checkout the live webpage for yourself, [click here](https://edgie.emilien.ca/)!
+I wanted to create my very own version of that website so that I could customize it exactly how I wanted it. It was `22:00` when I had the great idea to try and make the whole thing in one sitting. Fortunately, a few hours later at `2:18` the next morning, I was done! I somehow managed to create the project, initialize a [GitHub repo](https://github.com/Bricktech2000/Edgie), copy the whole thing on my server through `SSH` and get a subdomain registered in [Cloudflare](https://www.cloudflare.com/) in less than 5 hours. Yes, I am flexing. If you wish to checkout the live webpage for yourself, [click here](https://edgie.emilien.ca/)!
 
 ## Conclusion
 

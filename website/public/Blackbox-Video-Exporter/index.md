@@ -26,7 +26,7 @@ Solving this problem was pretty easy. I found a way to take a `BFL` file from th
 
 ## How You Can Try it
 
-If you would like to try this program for yourself, you can [click here](./Blackbox%20Video%20Exporter/index.html). The interface isn't that great, so feel free to read the `README.md` on [this project's Github](https://github.com/Bricktech2000/Blackbox-Video-Exporter) to get more information about the way to use it.
+If you would like to try this program for yourself, you can [click here](./Blackbox%20Video%20Exporter/index.html). The interface isn't that great, so feel free to read the `README.md` on [this project's GitHub](https://github.com/Bricktech2000/Blackbox-Video-Exporter) to get more information about the way to use it.
 
 ## Conclusion
 

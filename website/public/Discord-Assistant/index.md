@@ -38,7 +38,7 @@ The bulk of the processing is done on [Wolfram|Alpha](https://www.wolframalpha.c
 
 ## Adding This Bot to Your Server
 
-If all of that sounds interesting, you can [click here](https://discord.com/api/oauth2/authorize?client_id=888313324444463144&permissions=0&scope=bot) to invite [Discord Assistant](https://github.com/Bricktech2000/Discord-Assistant) to one of your servers. However, if you wish to host the bot yourself to have complete control over its functionality, you should take a look at the `README.md` in [the project's Github](https://github.com/Bricktech2000/Discord-Assistant).
+If all of that sounds interesting, you can [click here](https://discord.com/api/oauth2/authorize?client_id=888313324444463144&permissions=0&scope=bot) to invite [Discord Assistant](https://github.com/Bricktech2000/Discord-Assistant) to one of your servers. However, if you wish to host the bot yourself to have complete control over its functionality, you should take a look at the `README.md` in [the project's GitHub](https://github.com/Bricktech2000/Discord-Assistant).
 
 ## What I Learned
 

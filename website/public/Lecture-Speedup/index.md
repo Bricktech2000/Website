@@ -22,7 +22,7 @@ Even though this extension only solves the first two of the three issues I set o
 ## Trying it Out
 
 #try
-If all that sounds appealing, you can give [Lecture Speedup](https://github.com/Bricktech2000/Lecture-Speedup) a go by following the instructions in the `README.md` on [the project's Github](https://github.com/Bricktech2000/Lecture-Speedup).
+If all that sounds appealing, you can give [Lecture Speedup](https://github.com/Bricktech2000/Lecture-Speedup) a go by following the instructions in the `README.md` on [the project's GitHub](https://github.com/Bricktech2000/Lecture-Speedup).
 
 #demo
 As a quick demo of the extension, below is a video of me blazing through a lecture recording and taking notes on the material covered. Enjoy!

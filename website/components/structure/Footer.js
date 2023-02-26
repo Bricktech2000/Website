@@ -45,7 +45,7 @@ const Footer = (props) => {
               rel="noreferrer"
               className={marked}
             >
-              Fix it on Github
+              Fix it on GitHub
             </a>
           </div>
         </div>

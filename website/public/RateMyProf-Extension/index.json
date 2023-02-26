@@ -21,7 +21,7 @@
     "Chrome Extension"
   ],
   "btns": {
-    "Github": "https://github.com/Bricktech2000/RateMyProf-Extension",
+    "GitHub": "https://github.com/Bricktech2000/RateMyProf-Extension",
     "Extension Screenshots": "#img"
   },
   "desc": "A Chromium extension to automatically underline professor names with their Rate My Professor ratings!"

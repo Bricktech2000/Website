@@ -52,7 +52,7 @@ As another goal was getting the bot to understand conversation lifespan and cont
 - It likely means that the previous message in the conversation was the end of a conversation.
 - It ties together the previous conversation with the current one in case context is actually relevant.
 
-A [custom GPT-3 model](https://beta.openai.com/docs/guides/fine-tuning) was then trained on a set of prompts generated from the conversation data. Once that was done, the only thing left to do was writing the actual bot. I won't focus on that here as it was just a matter of glueing [DALL-E 2](https://openai.com/dall-e-2/), [GPT-3](https://beta.openai.com/docs/guides/completion), [Discord](https://discordpy.readthedocs.io/en/stable/api.html) and some logic together using Python. The code is available on [Github](https://github.com/Bricktech2000/GPT-3-Chatbot-2.0) if you want to check it out!
+A [custom GPT-3 model](https://beta.openai.com/docs/guides/fine-tuning) was then trained on a set of prompts generated from the conversation data. Once that was done, the only thing left to do was writing the actual bot. I won't focus on that here as it was just a matter of glueing [DALL-E 2](https://openai.com/dall-e-2/), [GPT-3](https://beta.openai.com/docs/guides/completion), [Discord](https://discordpy.readthedocs.io/en/stable/api.html) and some logic together using Python. The code is available on [GitHub](https://github.com/Bricktech2000/GPT-3-Chatbot-2.0) if you want to check it out!
 
 ## The Result
 

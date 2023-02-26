@@ -1,6 +1,6 @@
 ## Preface
 
-About one year ago, I got interested in _racing drones_. Youtubers such as [UAVfutures](https://www.youtube.com/channel/UC3ioIOr3tH6Yz8qzr418R-g), [Joshua Bardwell](https://www.youtube.com/user/loraan), [Mr Steele](https://www.youtube.com/user/MrSteeledavis), [Rotor Riot](https://www.youtube.com/channel/UCemG3VoNCmjP8ucHR2YY7hw) and many more make videos about this kind of drones, and I got hooked into it. They are very powerful machines that can go faster than `200 km/h`... and so I wondered,
+About one year ago, I got interested in _racing drones_. YouTubers such as [UAVfutures](https://www.youtube.com/channel/UC3ioIOr3tH6Yz8qzr418R-g), [Joshua Bardwell](https://www.youtube.com/user/loraan), [Mr Steele](https://www.youtube.com/user/MrSteeledavis), [Rotor Riot](https://www.youtube.com/channel/UCemG3VoNCmjP8ucHR2YY7hw) and many more make videos about this kind of drones, and I got hooked into it. They are very powerful machines that can go faster than `200 km/h`... and so I wondered,
 
 > Why wouldn't I make one myself?
 

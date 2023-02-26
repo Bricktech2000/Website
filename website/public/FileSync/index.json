@@ -21,7 +21,7 @@
     "JSON"
   ],
   "btns": {
-    "Github": "https://github.com/Bricktech2000/FileSync",
+    "GitHub": "https://github.com/Bricktech2000/FileSync",
     "How it Works": "#works"
   },
   "desc": "A symmetrical decentralized file syncing system. Explaining how this program allows me to synchronize my files accross different machines anywhere in the world."

@@ -19,7 +19,7 @@
     "VS Code"
   ],
   "btns": {
-    "Github": "https://github.com/Bricktech2000/User-Tracker",
+    "GitHub": "https://github.com/Bricktech2000/User-Tracker",
     "Try it": "https://track.emilien.ca/"
   },
   "desc": "An aggressive user tracker without any client-side logic. Explaining how it works and telling you how you can try to bypass it."
