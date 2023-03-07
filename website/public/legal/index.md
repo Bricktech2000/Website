@@ -1,7 +1,9 @@
-[//]: # 'https://www.freeprivacypolicy.com/live/56a09f9b-0d10-4273-a70a-b50ce2209ddf'
-[//]: # 'https://www.freeprivacypolicy.com/live/25024dac-a7ae-4195-a7f4-0af5a3746302'
-[//]: # 'https://fireship.io/privacy-policy/'
-[//]: # 'https://fireship.io/terms/'
+<?
+https://www.freeprivacypolicy.com/live/56a09f9b-0d10-4273-a70a-b50ce2209ddf
+https://www.freeprivacypolicy.com/live/25024dac-a7ae-4195-a7f4-0af5a3746302
+https://fireship.io/privacy-policy/
+https://fireship.io/terms/
+?>
 
 ## Interpretation
 

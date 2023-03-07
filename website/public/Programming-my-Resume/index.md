@@ -22,7 +22,9 @@ There are numerous advantages of using a markup language to design a resume as o
 - The global presentation can be changed in a few seconds by modifying the stylesheet directly
 - They can be parsed by text processing tools such as version control software
 
-[//]: # 'https://dev.to/practicalprogramming/advantages-of-document-markup-languages-vs-wysiwyg-editors-9f6'
+<?
+https://dev.to/practicalprogramming/advantages-of-document-markup-languages-vs-wysiwyg-editors-9f6
+?>
 
 ## Because!
 

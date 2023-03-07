@@ -11,10 +11,6 @@ When I saw this video for the first time, I new I had to build one. I immediatel
 
 The principle behind such a machine is very simple. Water consists of [_hydrogen_](https://en.wikipedia.org/wiki/Hydrogen) and [_oxygen_](https://en.wikipedia.org/wiki/Oxygen), which are tightly bonded together. However, with a lot of energy, one can seperate water molecules into a very explosive gas, consisting of _dihydrogen_ and _dioxygen_. Here is the chemical formula for this reaction, called [_water electrolysis_](https://en.wikipedia.org/wiki/Electrolysis_of_water):
 
-[//]: # 'https://lingojam.com/SubscriptGenerator'
-[//]: # 'https://smalltext.io/'
-[//]: # '2 H₂O₍ₗ₎ → 2 H₂₍₉₎ + O₂₍₉₎'
-
 <pre><code>2 H<sub>2</sub>O<sub>(l)</sub> → 2 H<sub>2 (g)</sub> + O<sub>2 (g)</sub></code></pre>
 
 Then, when a tiny amount of energy is transfered to this [HHO](https://en.wikipedia.org/wiki/Oxyhydrogen) gas, it releases way more energy in a very short amount of time, which in turn causes its distictive [powerful explosion](#demo).

@@ -16,7 +16,9 @@ As a little challenge, try to read the following:
 CN0 R6 74 LU 74 01 N5! 0LNY 4 54M LL F4R 7C 01N 0F P03 LP3 C4N R43D 71H5 M53 45 63!
 ```
 
-[//]: # 'congratulations! only a small fraction of people can read this message!'
+<?
+congratulations! only a small fraction of people can read this message!
+?>
 
 If you wish to try it for yourself, simply [click here](./Encoder.html)!
 

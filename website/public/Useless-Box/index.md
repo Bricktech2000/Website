@@ -28,12 +28,14 @@ Through clever code, it has **60 different ways** to turn the switch back off on
 
 In order to work, this machine uses 2 [servo motors](https://en.wikipedia.org/wiki/Servomotor). They allow an [arduino](https://en.wikipedia.org/wiki/Arduino) board to precicely control the position of both the arm and of the lid, which allows the machine to have a complex behaviour. You can [click here](./Useless_Box_1.zip) to download the code for yourself! It also uses some paper clips as metal rods, which is a simple but effective way to actuate the joints. Finally, all of those pieces get installed into a _3D-printed_ box, which keeps everything tidy ([click here](./Useless%20Box%20STLs.zip) to download the STLs!). Here are some pictures of the parts used to make it work:
 
-[//]: # '...'
-[//]: # 'servos'
-[//]: # 'arduino'
-[//]: # 'jumpers'
-[//]: # 'box, cover, lid'
-[//]: # 'battery'
+<?
+...
+servos
+arduino
+jumpers
+box, cover, lid
+battery
+?>
 
 #parts
 

@@ -29,7 +29,9 @@ Another goal of mine was to get the bot to use more of Discord's features. I cam
 To make sense of this better, below is a sample conversation using the aforementioned command structure that could have been used used as part of the fine-tuning data.
 #sample
 
-[//]: # '(duplicate with project readme)'
+<?
+(duplicate with project readme)
+?>
 
 ```text
 emilien: INIT;

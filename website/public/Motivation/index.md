@@ -1,5 +1,7 @@
-[//]: # 'src: Noah do Régo'
-[//]: # "That's an awesome name. Just putting that out there."
+<?
+src: Noah do Régo
+That's an awesome name. Just putting that out there.
+?>
 
 &nbsp;
 
@@ -36,7 +38,9 @@ Somehow, that's the truth. All the stars just happened to be aligned. I can't ex
 
 I hadn't realized that before, but I seem to unconsciously lower my dopamine baseline by not engaging in those types of highly stimulating, low-effort behaviors. And, as explained in the previous section, I believe that a lower dopamine baseline directly correlates with higher levels of motivation and focus.
 
-[//]: # "One could say I live in a world in which I don't really have to look for motivation, as it just finds me; a world in which I don't really have to put in any effort, as I just enjoy what I do."
+<?
+One could say I live in a world in which I don't really have to look for motivation, as it just finds me; a world in which I don't really have to put in any effort, as I just enjoy what I do.
+?>
 
 ## My Recommendations
 

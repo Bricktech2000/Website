@@ -78,4 +78,6 @@ After a dissolving a few grams of nonivamide in our chili pepper extract using t
 
 ## Updates Coming Soon!
 
-[//]: # "It's almost midnight and I'm incredibly tired, so the rest of the story will have to wait for another day..."
+<?
+It's almost midnight and I'm incredibly tired, so the rest of the story will have to wait for another day...
+?>

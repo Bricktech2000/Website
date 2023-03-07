@@ -28,8 +28,10 @@ As soon as I saw how amazing it was to fly, I immediately ordered an action came
 | ![caddx orca camera](HD-Footage/IMG_20210310_185350_5.min.jpg)                       | ![caddx orca mount on frame top plate](HD-Footage/IMG_20210310_185247_8.min.jpg) |
 | ![close up of caddx orca mounted on drone](HD-Footage/IMG_20210310_185720_6.min.jpg) | ![caddx orca mounted on drone](HD-Footage/IMG_20210310_185705_8.min.jpg)         |
 
-[//]: # 'https://stackoverflow.com/questions/4823468/comments-in-markdown'
-[//]: # 'Finally, I created {a special program:: ./Music Offset Generator/index.html} which allows me to fly the drone synchronized to the music. To do so, it plays the music [8 beats] earlier in the left ear, meaning I can predict what the music will sound like.'
+<?
+https://stackoverflow.com/questions/4823468/comments-in-markdown
+Finally, I created {a special program:: ./Music Offset Generator/index.html} which allows me to fly the drone synchronized to the music. To do so, it plays the music [8 beats] earlier in the left ear, meaning I can predict what the music will sound like.
+?>
 
 ## Demo Footage
 
