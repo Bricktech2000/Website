@@ -1,6 +1,6 @@
 ## Intro
 
-In Febuary this year, I really wanted to create an android app, and I started to get really interested in games such as [Fruit Ninja](https://fruitninja.com/) and [Beat Saber](https://store.steampowered.com/app/620980/Beat_Saber/). I had just got my new andoid phone, the [Umidigi F2](https://www.umidigi.com/page-umidigi_f2_overview.html), so I decided I would program a game in `HTML`, `Javascript` and `CSS` right on my phone. After only one week of coding, I had a fully-working web game that looked really cool! I then ported it into [Android Studio](https://developer.android.com/studio), and I created an app out of it.
+In Febuary this year, I really wanted to create an android app, and I started to get really interested in games such as [Fruit Ninja](https://fruitninja.com/) and [Beat Saber](https://store.steampowered.com/app/620980/Beat_Saber/). I had just got my new andoid phone, the [Umidigi F2](https://www.umidigi.com/page-umidigi_f2_overview.html), so I decided I would program a game in `HTML`, `JavaScript` and `CSS` right on my phone. After only one week of coding, I had a fully-working web game that looked really cool! I then ported it into [Android Studio](https://developer.android.com/studio), and I created an app out of it.
 
 If you want to download the APK file to try it yourself, simply [click here](app-release%20Geometry%20Ninja%206.apk)! If you do not own an android device and would still want to try it out, you can [click here](./index2.html) for the web version!
 

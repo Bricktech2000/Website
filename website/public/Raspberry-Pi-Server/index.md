@@ -28,7 +28,7 @@ As you can see, it is a single-board computer, meaning that all the necessary co
 
 > And such a tiny computer can be used as a server?
 
-Actually, it can do way more that what you might think. Obviously, it doesn't have a lot of computing power, but it is the server that is currently serving this very website to you! It uses NodeJS as its backend framework, which means that the back-end code is written in `Javascript`, the exact same language as the front-end. This makes server-side programming way easier.
+Actually, it can do way more that what you might think. Obviously, it doesn't have a lot of computing power, but it is the server that is currently serving this very website to you! It uses NodeJS as its backend framework, which means that the back-end code is written in `JavaScript`, the exact same language as the front-end. This makes server-side programming way easier.
 
 I also wanted it to look a bit better than just a random PCB plugged into a power outlet, so I decided to print a case for it using my 3D printer, the [Ender 3](https://www.creality3d.shop/products/creality3d-ender-3-pro-high-precision-3d-printer). It is divided into two parts, which each take about half an hour to print. You can [click here](https://www.thingiverse.com/thing:2962386) if you would like to download the files for yourself! However, make sure to use `PiZeroCase_Bottom.STL` as the bottom piece and `PiZeroCase_Top_Pins.STL` (with or without a logo) for the top plate, otherwise you will need to supply your own screws to assemble the case.
 

@@ -2,7 +2,7 @@
   "title": "Edge Legacy: The New IE",
   "date": "2020-08-25",
   "type": "blog",
-  "tags": ["Blog", "Software", "Javascript", "Web"],
+  "tags": ["Blog", "Software", "JavaScript", "Web"],
   "btns": { "IE Demo": "#demo-ie", "Edge Demo": "#demo-edge" },
   "desc": "Writing about how, in my opinion, Edge Legacy will become the new Internet Explorer in a few years. Hoping that it doesn't ever happen!"
 }
