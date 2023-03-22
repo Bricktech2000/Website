@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from 'react';
 import NextHead from 'next/head';
 import { language } from '../../records/consts';
+import Script from 'next/script';
 
 const Head = (props) => {
   // https://stackoverflow.com/questions/61310847/how-to-set-html-lang-attribute-dynamically-on-nextjs-document
@@ -43,6 +44,22 @@ const Head = (props) => {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
       />
+
+      {/* https://nextjs.org/docs/messages/next-script-for-ga */}
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-LSL84L2ERM"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-LSL84L2ERM');
+        `}
+      </Script>
     </NextHead>
   );
 };
