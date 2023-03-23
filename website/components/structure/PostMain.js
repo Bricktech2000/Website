@@ -21,11 +21,11 @@ const PostMain = (props) => {
     <div ref={parallaxRef} className={styles.PostMain}>
       {typeof props.info.children !== 'undefined' &&
         Object.values(props.info.children).map((child) => (
-          <React.Fragment key={child.id}>
+          <>
             <div className={styles.spacer}></div>
             <PostSubHeader info={child} />
             <Marked source={child.source} />
-          </React.Fragment>
+          </>
         ))}
       <Marked source={props.info.source} />
     </div>

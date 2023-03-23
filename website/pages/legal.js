@@ -30,15 +30,15 @@ const Legal = () => {
       <br />
       <br />
       {loading ? (
-        <React.Fragment>
+        <>
           <Main>
             <Loading height="1000vh" />
           </Main>
           <Footer github={`public/${id}/index.md`} />
           <Nav />
-        </React.Fragment>
+        </>
       ) : (
-        <React.Fragment>
+        <>
           <PostSubHeader info={info[id]} />
           <br />
           <br />
@@ -48,7 +48,7 @@ const Legal = () => {
           </Main>
           <Footer github={`public/${id}/index.md`} />
           <Nav />
-        </React.Fragment>
+        </>
       )}
     </App>
   );

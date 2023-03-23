@@ -44,7 +44,7 @@ const App = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <Head
         title={`Emilien Breton | ${props.title}`}
         description={props.description}
@@ -55,7 +55,7 @@ const App = (props) => {
         <div className={styles.overlay + ' ' + styles.grayscale} />
         {props.children}
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -38,15 +38,15 @@ const Post = (props) => {
       image={props.ogImage}
     >
       {loading ? (
-        <React.Fragment>
+        <>
           <Main>
             <Loading height="1000vh" />
           </Main>
           <Footer github={props.github} />
           <Nav />
-        </React.Fragment>
+        </>
       ) : (
-        <React.Fragment>
+        <>
           <PostHeader info={info[currentId]} />
           <Main>
             <PostMain info={info[currentId]} />
@@ -54,7 +54,7 @@ const Post = (props) => {
           </Main>
           <Footer github={`public/${currentId}/index.md`} />
           <Nav />
-        </React.Fragment>
+        </>
       )}
     </App>
   );
