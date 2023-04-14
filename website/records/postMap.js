@@ -3,7 +3,7 @@ export default [
   'Beetleweight-Combat-Robot',
   'Dotfiles',
   'GPT-3-Chatbot-2-0',
-  'DBLess-Password-Manager',
+  'DBLess',
   '3D-Printed-Wallet',
   'uOttawa-Website-Patch',
   'RateMyProf-Extension',

@@ -1,6 +1,6 @@
 ## The idea
 
-I first had the idea to create [this password manager](https://github.com/Bricktech2000/DBLess-Password-Manager) when I heard about a website that stored secret information using a user-provided password as a symmetric encryption key.
+I first had the idea to create [this password manager](https://github.com/Bricktech2000/DBLess) when I heard about a website that stored secret information using a user-provided password as a symmetric encryption key.
 
 > A password manager is a computer program that allows users to store, generate, and manage their passwords for local applications and online services. A password manager assists in generating and retrieving complex passwords, storing such passwords in an encrypted database or calculating them on demand.
 >
@@ -31,7 +31,7 @@ As you can clearly see, the generated password is derived from well-known data a
 
 #try
 
-If you would like to try this program for yourself, refer to the `README` on the [project's github](https://github.com/Bricktech2000/DBLess-Password-Manager). Clone the repo, install `pyperclip` and run the program!
+If you would like to try this program for yourself, refer to the `README` on the [project's github](https://github.com/Bricktech2000/DBLess). Clone the repo, install `pyperclip` and run the program!
 
 ## Conclusion
 

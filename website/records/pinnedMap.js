@@ -1,6 +1,6 @@
 export default [
   'Beetleweight-Combat-Robot',
-  'DBLess-Password-Manager',
+  'DBLess',
   'Stack-Based-CPU',
   'FPV-Racing-Drone',
   'Spider-Robot',
