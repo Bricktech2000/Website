@@ -16,7 +16,7 @@ As soon as I saw this script, I was amazed at how awesome it looked. I knew had 
 
 At this point, you are probably wondering what _shorthand_ even is. Here is a very nice definition of it:
 
-> Shorthand is an abbreviated symbolic writing method that increases speed and brevity of writing as compared to longhand, a more common method of writing a language. The process of writing in shorthand is called stenography `...`.
+> Shorthand is an abbreviated symbolic writing method that increases speed and brevity of writing as compared to longhand, a more common method of writing a language. The process of writing in shorthand is called stenography [...].
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Shorthand)
 

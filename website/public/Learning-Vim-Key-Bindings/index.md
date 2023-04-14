@@ -2,7 +2,7 @@
 
 About one and a half years ago, I created a program called [Caps Hotkeys](../Caps-Hotkeys/). In short, it is a system of key bindings that would remap common navigation operations such as the arrow keys or the `Page Up` and `Page Down` keys to more convenient shortcuts. But then a few months ago, when exploring alternatives to my program, I stumbled upon the set of key bindings used by the Vim editor.
 
-> The underlying principle of Vim is the operator-motion pair. `...` For Vim, `d` is the delete operator, and `_` is the line motion. So, typing `d_` will delete a line.
+> The underlying principle of Vim is the operator-motion pair. [...] For Vim, `d` is the delete operator, and `_` is the line motion. So, typing `d_` will delete a line.
 > This is the essence of Vim. Instead of trying to memorize hundreds of commands, you learn the verbs and nouns that make up the language, and then combine together.
 >
 > [Marcus Kazmierczak](https://mkaz.blog/working-with-vim/the-tao-of-vim/)

@@ -22,7 +22,7 @@ The easiest way to do so is to soak chili peppers in a solvent such as [acetone]
 
 Instead, my father and I opted for a vastly more efficient method: the use of a [soxhlet extractor](https://en.wikipedia.org/wiki/Soxhlet_extractor).
 
-> A **Soxhlet extractor** is a piece of laboratory apparatus `...`. Typically, Soxhlet extraction is used when the desired compound has a limited solubility in a solvent, and the impurity is insoluble in that solvent. It allows for unmonitored and unmanaged operation while efficiently recycling a small amount of solvent to dissolve a larger amount of material.
+> A **Soxhlet extractor** is a piece of laboratory apparatus [...]. Typically, Soxhlet extraction is used when the desired compound has a limited solubility in a solvent, and the impurity is insoluble in that solvent. It allows for unmonitored and unmanaged operation while efficiently recycling a small amount of solvent to dissolve a larger amount of material.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Soxhlet_extractor)
 
@@ -68,7 +68,7 @@ As it turns out, this is the perfect solution! We would use our **barely spicy**
 
 After some research, my father stumbled upon a chemical called [nonivamide](https://en.wikipedia.org/wiki/Nonivamide).
 
-> **Nonivamide**, also called pelargonic acid vanillylamide or PAVA, is an organic compound and a capsaicinoid. `...` It is present in chili peppers, but is commonly manufactured synthetically. `...` It is used in the pharmaceutical industry in some formulations as a cheaper alternative to capsaicin.
+> **Nonivamide**, also called pelargonic acid vanillylamide or PAVA, is an organic compound and a capsaicinoid. [...] It is present in chili peppers, but is commonly manufactured synthetically. [...] It is used in the pharmaceutical industry in some formulations as a cheaper alternative to capsaicin.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Nonivamide)
 

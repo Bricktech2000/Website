@@ -18,7 +18,7 @@ After a bunch of hassle, I managed to get a song to work! Here's a short video o
 
 In [the YouTube video](https://www.youtube.com/watch?v=Bdf9NHAuO0w) that got me interested in all this, Devin mentions [this _midi2gcode_ website](https://www.ultimatesolver.com/en/midi2gcode) to encode a `MIDI` file automatically into `gcode`, but for some reason decides to do the `gcode` encoding by hand. However, I decided to use it anyway to save time. However, I still needed a `MIDI` file to use as a base melody.
 
-> Advantages of MIDI include small file size, ease of modification and manipulation and a wide choice of electronic instruments and synthesizer or digitally-sampled sounds. A MIDI recording of a performance on a keyboard could sound like a piano or other keyboard instrument; however, since MIDI records the messages and information about their notes and not the specific sounds, this recording could be changed to many other sounds `...`.
+> Advantages of MIDI include small file size, ease of modification and manipulation and a wide choice of electronic instruments and synthesizer or digitally-sampled sounds. A MIDI recording of a performance on a keyboard could sound like a piano or other keyboard instrument; however, since MIDI records the messages and information about their notes and not the specific sounds, this recording could be changed to many other sounds [...].
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/MIDI#Extensions)
 

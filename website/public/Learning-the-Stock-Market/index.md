@@ -67,7 +67,7 @@ At about 10 o'clock, I successfully predicted that the stock was going to go up 
 
 Last evening, I was starting to question [Stock Fetcher](https://stockfetcher.com). When using the filter I made (`show stocks where Average Day Range(20) is largest`), I noticed that the `Average Day Range` was not actually that large. In fact, it ranged from `5%` to `10%`, which is not that impressive. Because of that, I decided to go take a read in the [Stock Fetcher User Guide](https://www3.stockfetcher.com/download/sfuserguide2_0.pdf) to see if there is an official way to sort the stocks it gives as an output. I found the following:
 
-> By default StockFetcher returns stock screen results in order of highest to lowest volume. `...` Additionally, using the sort column feature, you can have the initial filter results arrive using the sorting you want.
+> By default StockFetcher returns stock screen results in order of highest to lowest volume. [...] Additionally, using the sort column feature, you can have the initial filter results arrive using the sorting you want.
 
 So basically, my last two [Stock Fetcher](https://stockfetcher.com) filters were totally useless... This is why I decided to create a new one! Here it is:
 

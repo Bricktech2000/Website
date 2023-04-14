@@ -10,7 +10,7 @@
 
 A Raspberry Pi server is simply a server running off of a Raspberry Pi.
 
-> The Raspberry Pi is a series of small single-board computers developed in the United Kingdom `...`. It now is widely used even in research projects, such as for weather monitoring because of its low cost and portability. It does not include peripherals (such as keyboards and mice) or cases. However, some accessories have been included in several official and unofficial bundles.
+> The Raspberry Pi is a series of small single-board computers developed in the United Kingdom [...]. It now is widely used even in research projects, such as for weather monitoring because of its low cost and portability. It does not include peripherals (such as keyboards and mice) or cases. However, some accessories have been included in several official and unofficial bundles.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Raspberry_Pi)
 

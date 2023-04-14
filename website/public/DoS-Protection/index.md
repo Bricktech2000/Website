@@ -14,7 +14,7 @@ When I ported this website to a Raspberry Pi (which you can see a post about [he
 
 I ignored the fact that it took that long to load pages because I figured the traffic on the website was low enough that it wouldn't cause any problems. I knew that a [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack could be performed very easily, but I was too lazy to implement a protection.
 
-> In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable `...`. Denial of service is typically accomplished by flooding the targeted machine or resource with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled.
+> In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable [...]. Denial of service is typically accomplished by flooding the targeted machine or resource with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Denial-of-service_attack)
 

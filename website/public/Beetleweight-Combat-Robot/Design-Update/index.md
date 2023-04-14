@@ -29,7 +29,7 @@ In addition, the wheels were designed in a way that prevents the tires from peel
 
 Since the whole robot was now narrower, the weapon wasn't as wide as before. Since its mass was now way lower, it could be thickened substantially to keep its moment of inertia similar.
 
-> The moment of inertia `...` of a rigid body is a quantity that determines the torque needed for a desired angular acceleration about a rotational axis `...`. It depends on the body's mass distribution and the axis chosen, with larger moments requiring more torque to change the body's rate of rotation.
+> The moment of inertia [...] of a rigid body is a quantity that determines the torque needed for a desired angular acceleration about a rotational axis [...]. It depends on the body's mass distribution and the axis chosen, with larger moments requiring more torque to change the body's rate of rotation.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Moment_of_inertia)
 

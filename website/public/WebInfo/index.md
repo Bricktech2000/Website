@@ -10,7 +10,7 @@
 
 One night, I was casually watching a YouTube video... when sudently, it started buffering. I didn't think too much of what had just happened. However, a few minutes later, my whole WiFi network started to lag very badly. The router was working fine, the internet connection was randomly dropping, the _ping_ command was timing out from time to time... After a bit of investigation, I finally figured out what was going on: someone was running a [DDoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack on me.
 
-> In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable `...`. Denial of service is typically accomplished by flooding the targeted machine or resource with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled.
+> In computing, a denial-of-service attack (DoS attack) is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable [...]. Denial of service is typically accomplished by flooding the targeted machine or resource with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Denial-of-service_attack)
 

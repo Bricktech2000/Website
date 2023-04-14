@@ -15,7 +15,7 @@ The design goal of the first version of the robot was very simple: **maximize mo
 
 I had previously identified that the lack of mobility of some bots caused them to loose matches. In order to combat this, the first version of my combat robot was reversible, meaning it could drive both **right side up** and **up side down**. Moreover, I decided to use omnidirectional wheels to make it as nimble as possible.
 
-> The Mecanum wheel is based on a tireless wheel, with a series of rubberized external rollers obliquely attached to the whole circumference of its rim. These rollers typically each have an axis of rotation at `45°` to the wheel plane and at `45°` to the axle line. Each Mecanum wheel is an independent non-steering drive wheel with its own powertrain `...`.
+> The Mecanum wheel is based on a tireless wheel, with a series of rubberized external rollers obliquely attached to the whole circumference of its rim. These rollers typically each have an axis of rotation at `45°` to the wheel plane and at `45°` to the axle line. Each Mecanum wheel is an independent non-steering drive wheel with its own powertrain [...].
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Mecanum_wheel)
 
@@ -39,7 +39,7 @@ After having designed the wheels, I immediately started prototyping the weapon. 
 
 This design also improves the moment of inertia of the weapon, which is crucial for such a drum spinner.
 
-> The moment of inertia is a quantity that determines the torque needed for a desired angular acceleration about a rotational axis `...`. It depends on the body's mass distribution and the axis chosen, with larger moments requiring more torque to change the body's rate of rotation.
+> The moment of inertia is a quantity that determines the torque needed for a desired angular acceleration about a rotational axis [...]. It depends on the body's mass distribution and the axis chosen, with larger moments requiring more torque to change the body's rate of rotation.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Moment_of_inertia)
 

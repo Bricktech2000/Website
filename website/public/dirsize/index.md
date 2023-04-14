@@ -10,7 +10,7 @@ As you can see, it is very easy to see which folders take up alot of space. My `
 
 In order to work, this program uses a feature called [recursion](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>).
 
-> In computer science, recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem `...`. Recursion solves such recursive problems by using functions that call themselves from within their own code. The approach can be applied to many types of problems, and recursion is one of the central ideas of computer science.
+> In computer science, recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem [...]. Recursion solves such recursive problems by using functions that call themselves from within their own code. The approach can be applied to many types of problems, and recursion is one of the central ideas of computer science.
 >
 > [Wikipedia](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>)
 

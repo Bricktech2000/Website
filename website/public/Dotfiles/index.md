@@ -2,7 +2,7 @@
 
 Syncing configuration across multiple devices wasn't hard back when I used [VS Code](https://code.visualstudio.com/) and the default terminal on my Linux installation. However, since switching to [kitty](https://sw.kovidgoyal.net/kitty/), [tmux](https://github.com/tmux/tmux/wiki) and [Neovim](https://neovim.io/), syncing dotfiles across my laptop, server and phone became somewhat of a hassle. This was a perfect opportunity for me to finally create a Git repository to track them.
 
-> Dotfiles are plain text configuration files on Unix like systems `...`. Dotfiles store settings of almost every application, service and tool running on your system. These files control the behavior of applications from boot to termination and everything in between.
+> Dotfiles are plain text configuration files on Unix like systems [...]. Dotfiles store settings of almost every application, service and tool running on your system. These files control the behavior of applications from boot to termination and everything in between.
 >
 > &mdash; [SE-EDU](https://se-education.org/learningresources/contents/dotfiles/Dotfiles.html)
 

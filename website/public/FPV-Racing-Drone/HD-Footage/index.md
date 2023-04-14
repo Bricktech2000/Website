@@ -2,7 +2,7 @@
 
 A few weeks ago, I installed an FPV camera to my 5-inch drone.
 
-> First-person view `...` is a method used to control a radio-controlled vehicle from the driver or pilot's view point. Most commonly it is used to pilot a radio-controlled aircraft or other type of unmanned aerial vehicle.
+> First-person view [...] is a method used to control a radio-controlled vehicle from the driver or pilot's view point. Most commonly it is used to pilot a radio-controlled aircraft or other type of unmanned aerial vehicle.
 >
 > [Wikipedia](<https://en.wikipedia.org/wiki/First-person_view_(radio_control)>)
 
