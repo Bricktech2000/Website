@@ -14,7 +14,7 @@ This post will focus on the strategies I use to take conceptual class notes effi
 
 ## Taking Notes
 
-Notes are a way to have quick access to lots of relevant information. We don't care about the notes themselves, we care about the information.
+Notes are a way to have quick access to lots of relevant information. We don't care about the notes themselves; we care about the information.
 
 During lectures, don't take notes for U-S-E information:
 
