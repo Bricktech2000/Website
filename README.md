@@ -2,7 +2,7 @@
 
 # Website
 
-A portfolio for sharing various projects
+_A portfolio for sharing various projects_
 
 ## Overview
 
