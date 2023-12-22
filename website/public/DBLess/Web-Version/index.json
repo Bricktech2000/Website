@@ -15,6 +15,7 @@
     "Data Processing",
     "Hashing",
     "UI Design",
+    "Outdated",
     "NextJS",
     "VS Code",
     "Vim",
@@ -22,7 +23,7 @@
   ],
   "btns": {
     "Live Web Version": "https://dbless.emilien.ca/",
-    "GitHub": "https://github.com/Bricktech2000/DBLess"
+    "GitHub": "https://github.com/Bricktech2000/DBLess-Legacy"
   },
   "desc": "A hash-based, database-less password manager. Writing about the web version of this program and telling you how you can try it out."
 }

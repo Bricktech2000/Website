@@ -12,13 +12,14 @@
     "Data Processing",
     "Hashing",
     "Scripting",
+    "Outdated",
     "VS Code",
     "Vim",
     "Cryptography"
   ],
   "btns": {
     "Try Console PoC": "#try",
-    "GitHub": "https://github.com/Bricktech2000/DBLess"
+    "GitHub": "https://github.com/Bricktech2000/DBLess-Legacy"
   },
   "desc": "A hash-based, database-less password manager. Writing about how I got the idea to make this PoC, and how it works!"
 }

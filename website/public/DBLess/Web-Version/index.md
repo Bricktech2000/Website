@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> DBLess has since been rewritten from scratch. The rewrite is available [here](https://github.com/Bricktech2000/DBLess); the program discussed below is archived [here](https://github.com/Bricktech2000/DBLess-Legacy). This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## Motivation
 
 I concluded the previous post by stating that
@@ -55,7 +63,7 @@ Both of these changes, along with the fact that the password manager can now be 
 ## Try It
 
 #try
-If all that sounds appealing and you would like to give this password manager a try, head over to [dbless.emilien.ca](https://dbless.emilien.ca/). For more detailed instructions on how to use the software, refer to the `README` on the project's [GitHub repository](https://github.com/Bricktech2000/DBLess).
+If all that sounds appealing and you would like to give this password manager a try, head over to [dbless.emilien.ca](https://dbless.emilien.ca/). For more detailed instructions on how to use the software, refer to the `README` on the project's [GitHub repository](https://github.com/Bricktech2000/DBLess-Legacy).
 
 ## Final Words
 
