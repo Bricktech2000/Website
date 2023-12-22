@@ -1,3 +1,11 @@
+> **This post is outdated**
+>
+> This project is archived and has been abandoned in favor of the [Atto-8](https://github.com/Bricktech2000/Atto-8). This post was preserved nonetheless.
+
+&nbsp;
+
+&nbsp;
+
 ## The Goal
 
 Usually, when I want to learn a new programming language, I prefer naturally using that language in a project that needs it over coming up with a project that could be a good fit for that language. I have been wanting to learn [Rust](https://www.rust-lang.org/) for a little while now, but didn't have any projects I could use it in.
